@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korbots</title>
+    <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+        crossorigin="anonymous">
+
+    <style>
+        .row-height {
+            height: 94vh;
+        }
+
+        .row-height .col-2,
+        .row-height .col-10 {
+            overflow-y: scroll;
+            height: 100%;
+        }
+
+        * {
+            -ms-overflow-style: none !important;
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav class="nav justify-content-center bg-dark text-light">
+        <h1>Korbots</h1>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row row-height">
+            <div class="col-2 border-right">
+                <h3 class="my-2">Modules</h3>
+                <ul class="list-group">
+                    <li class="list-group-item"><i
+                            class="fas fa-chart-area"></i> Covid-19 Info</li>
+                    <li class="list-group-item"><i class="fas fa-music"></i>
+                        Music Player</li>
+                    <li class="list-group-item"><i
+                            class="fas fa-cloud-moon-rain"></i> Meteo</li>
+                    <li class="list-group-item"><i class="fas fa-list-ul"></i>
+                        TODO List</li>
+                    <li class="list-group-item"><i class="far fa-newspaper"></i>
+                        News</li>
+                    <li class="list-group-item"><i class="fas fa-inbox"></i>
+                        Mails</li>
+                    <li class="list-group-item"><i
+                            class="far fa-calendar-alt"></i> Calendar</li>
+                    <li class="list-group-item"><i
+                            class="fas fa-map-marked-alt"></i> Google Maps</li>
+                    <li class="list-group-item text-center"><i
+                            class="fas fa-arrow-down"></i></li>
+                </ul>
+
+                <h3 class="my-2 mt-3">User</h3>
+                <img src="https://i.imgur.com/anTmbGJ.png" alt="Avatar"
+                    class="img-thumbnail">
+
+                <ul class="nav flex-column mb-2">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-bell"></i> Notifications
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-user-tag"></i> User info
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-cog"></i> Settings
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-sign-out-alt"></i> Disconnect
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-10">
+
+                <div
+                    class="display-4 font-italic font-weight-light text-center my-3 mb-5">
+                    Bonjour l'ami !
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <div class="card mx-2 my-2">
+                            <div class="card-body">
+                                <h4 class="card-title">COVID-19 Info</h4>
+                                <img
+                                    src="https://mk0gomet3vhlwol4683.kinstacdn.com/wp-content/uploads/2020/03/graph-2903.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card mx-2 my-2">
+                            <div class="card-body">
+                                <h4 class="card-title">Mails</h4>
+                                <ul class="list-group">
+                                    <li class="list-group-item"><i
+                                            class="fas fa-inbox"></i>
+                                        Yncrea Inbox <span
+                                            class="badge badge-primary">3</span>
+                                    </li>
+                                    <li class="list-group-item"><i
+                                            class="fas fa-inbox"></i>
+                                        Personnal Inbox <span
+                                            class="badge badge-primary">7</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="card mx-2 my-2">
+                            <div class="card-body">
+                                <h4 class="card-title">Google</h4>
+                                <ul class="list-group">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text"><i class="fas fa-search"></i> </div>
+                                          </div>
+                                          <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="What do you want to search ?">
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="card mx-2 my-2">
+                            <div class="card-body">
+                                <h4 class="card-title">Quotes of the day</h4>
+                                <blockquote class="blockquote">
+                                    <p class="mb-0">"Avec une valeur aussi précise,  totalement fausse et sans aucune explication, cela ne peut passer inaperçu."</p>
+                                    <footer class="blockquote-footer"><cite title="Source Title">Bruno Stefanelli</cite></footer>
+                                  </blockquote>
+
+                                  <blockquote class="blockquote">
+                                    <p class="mb-0">"St'une joke."</p>
+                                    <footer class="blockquote-footer"><cite title="Source Title">Gabriel Chênevert</cite></footer>
+                                  </blockquote>
+
+                                  <blockquote class="blockquote">
+                                    <p class="mb-0">"Quasiment tous les nombres sont multiples d'autres nombres, sauf les nombres entiers."</p>
+                                    <footer class="blockquote-footer"><cite title="Source Title">Goat (anonyme)</cite></footer>
+                                  </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js">
+    </script>
+</body>
+
+</html>
