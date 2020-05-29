@@ -20,4 +20,4 @@ ReactDOM.render(
 // Update the time/date each seconds in the store
 setInterval(() => {
     store.dispatch(dateUpdate())
-}, 10000)
+}, 1000)
