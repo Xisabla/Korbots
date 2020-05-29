@@ -7,7 +7,10 @@ import App from './components/App'
 import { dateUpdate } from './actions'
 
 // Create a global store for our date
-const store = createStore(reducer)
+const store = createStore(
+    reducer,
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+)
 
 // Render the App with the store provided
 ReactDOM.render(
