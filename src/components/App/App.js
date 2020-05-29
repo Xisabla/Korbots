@@ -1,16 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { userSet } from '../actions'
+import { userSet } from '../../actions'
+import { Jumbotron, Form } from 'react-bootstrap'
 import PropTypes from 'prop-types'
 import './App.scss'
-
-function mapState(state) {
-    return state
-}
-
-const mapDispatch = {
-    userSet
-}
 
 class App extends Component {
     constructor(props) {
@@ -35,20 +28,25 @@ class App extends Component {
         const { date, locale, user } = this.props
 
         return (
-            <div className="App">
+            <Jumbotron className="App">
                 <h1>
-                    Hello <i>{user.username}</i>
+                    Hello <i>{user.username} !</i>
                 </h1>
-                <h2>It is {date.toLocaleTimeString(locale ?? 'en-US')}</h2>
-                <input
-                    type="text"
-                    placeholder="Your name here"
-                    onChange={this.handleChange}></input>
-            </div>
+                <h4>It is {date.toLocaleTimeString(locale ?? 'en-US')}</h4>
+
+                <Form.Group>
+                    <Form.Control
+                        type="text"
+                        placeholder="Not your name ? Change it ! ;)"
+                        onChange={this.handleChange}
+                    />
+                </Form.Group>
+            </Jumbotron>
         )
     }
 }
 
+// Proptypes
 App.propTypes = {
     date: PropTypes.instanceOf(Date).isRequired,
     locale: PropTypes.string,
@@ -56,6 +54,15 @@ App.propTypes = {
         username: PropTypes.string.isRequired
     }).isRequired,
     userSet: PropTypes.func.isRequired
+}
+
+// Redux
+function mapState(state) {
+    return state
+}
+
+const mapDispatch = {
+    userSet
 }
 
 export default connect(mapState, mapDispatch)(App)

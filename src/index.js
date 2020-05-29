@@ -3,8 +3,12 @@ import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 import reducer from './reducers'
-import App from './components/App'
+import { App, Footer } from './components/'
 import { dateUpdate } from './actions'
+
+// Import bootstrap css (makes everything more beautiful)
+import 'bootstrap/dist/js/bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 // Create a global store for our date
 const store = createStore(
@@ -16,6 +20,7 @@ const store = createStore(
 ReactDOM.render(
     <Provider store={store}>
         <App />
+        <Footer />
     </Provider>,
     document.getElementById('root')
 )
