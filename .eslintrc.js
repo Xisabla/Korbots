@@ -13,10 +13,6 @@ module.exports = {
         'plugin:react/recommended'
     ],
 
-    rules: {
-        indent: ['error', 4]
-    },
-
     settings: {
         react: {
             version: 'detect'
