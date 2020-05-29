@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { userSet } from '../actions'
+import PropTypes from 'prop-types'
 import './App.scss'
 
 function mapState(state) {
@@ -38,7 +39,7 @@ class App extends Component {
                 <h1>
                     Hello <i>{user.username}</i>
                 </h1>
-                <h2>It is {date.toLocaleTimeString(locale)}</h2>
+                <h2>It is {date.toLocaleTimeString(locale ?? 'en-US')}</h2>
                 <input
                     type="text"
                     placeholder="Your name here"
@@ -46,6 +47,15 @@ class App extends Component {
             </div>
         )
     }
+}
+
+App.propTypes = {
+    date: PropTypes.instanceOf(Date).isRequired,
+    locale: PropTypes.string,
+    user: PropTypes.exact({
+        username: PropTypes.string.isRequired
+    }).isRequired,
+    userSet: PropTypes.func.isRequired
 }
 
 export default connect(mapState, mapDispatch)(App)
