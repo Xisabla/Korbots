@@ -7,11 +7,13 @@
     "react-dom": "^16.13.1"
   },
   "scripts": {
+    "start": "npm run serve",
     "build": "webpack --mode production",
     "clean": "rimraf ./coverage ./public/dist",
     "lint": "eslint ./ --fix",
     "serve": "node ./server.js",
-    "serve-dev": "webpack-dev-server --progress"
+    "serve-dev": "webpack-dev-server --progress",
+    "prestart": "npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
