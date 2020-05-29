@@ -1,12 +1,19 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { userSet } from '../actions'
 import './App.scss'
+
+function mapState(state) {
+    return state
+}
+
+const mapDispatch = {
+    userSet
+}
 
 class App extends Component {
     constructor(props) {
         super(props)
-
-        // Init state
-        this.state = { name: 'you' }
 
         // Bind handlers
         this.handleChange = this.handleChange.bind(this)
@@ -18,16 +25,20 @@ class App extends Component {
         // Default value if empty
         if (!name || /^\s*$ /.test(name)) name = 'you'
 
-        this.setState({ name })
+        // Update the username and dispatch
+        this.props.userSet(name)
     }
 
     render() {
+        // Get data from the props (global store) instead of the internal state
+        const { date, locale, user } = this.props
+
         return (
             <div className="App">
                 <h1>
-                    Hello <i>{this.state.name}</i>
+                    Hello <i>{user.username}</i>
                 </h1>
-                <h2>It is {new Date().toLocaleTimeString()}</h2>
+                <h2>It is {date.toLocaleTimeString(locale)}</h2>
                 <input
                     type="text"
                     placeholder="Your name here"
@@ -37,4 +48,4 @@ class App extends Component {
     }
 }
 
-export default App
+export default connect(mapState, mapDispatch)(App)
