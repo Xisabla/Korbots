@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
+import { inject, observer, PropTypes } from 'mobx-react'
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
-import PropTypes from 'prop-types'
-import { localeSet } from '../../actions'
+import './Footer.scss'
 
+@inject('store')
+@observer
 class Footer extends Component {
     constructor(props) {
         super(props)
@@ -12,16 +13,20 @@ class Footer extends Component {
         this.handleClick = this.handleClick.bind(this)
     }
 
+    static propTypes = {
+        store: PropTypes.objectOrObservableObject
+    }
+
     handleClick(event) {
         // Get the selected locale
         const locale = event.target.text
 
         // Change the locale (will change the time format in the other Component)
-        this.props.localeSet(locale)
+        this.props.store.setLocale(locale)
     }
 
     render() {
-        const { user, locale } = this.props
+        const { user, locale } = this.props.store
 
         // Automatically show the current locale on the dropdown title
         const localeTitle = { title: `Locale: ${locale}` }
@@ -44,25 +49,4 @@ class Footer extends Component {
     }
 }
 
-// Proptypes
-Footer.propTypes = {
-    locale: PropTypes.string.isRequired,
-    user: PropTypes.exact({
-        username: PropTypes.string.isRequired
-    }).isRequired,
-    localeSet: PropTypes.func.isRequired
-}
-
-// Redux
-function mapState(state) {
-    return {
-        user: state.user,
-        locale: state.locale
-    }
-}
-
-const mapDispatch = {
-    localeSet
-}
-
-export default connect(mapState, mapDispatch)(Footer)
+export default Footer

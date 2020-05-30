@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import { userSet } from '../../actions'
+import { observer, PropTypes, inject } from 'mobx-react'
 import { Jumbotron, Form } from 'react-bootstrap'
-import PropTypes from 'prop-types'
 import './App.scss'
 
+@inject('store')
+@observer
 class App extends Component {
     constructor(props) {
         super(props)
@@ -13,19 +13,23 @@ class App extends Component {
         this.handleChange = this.handleChange.bind(this)
     }
 
+    static propTypes = {
+        store: PropTypes.objectOrObservableObject
+    }
+
     handleChange(event) {
         let name = event.target.value
 
         // Default value if empty
         if (!name || /^\s*$ /.test(name)) name = 'you'
 
-        // Update the username and dispatch
-        this.props.userSet(name)
+        // Update the username
+        this.props.store.setUsername(name)
     }
 
     render() {
         // Get data from the props (global store) instead of the internal state
-        const { date, locale, user } = this.props
+        const { date, locale, user } = this.props.store
 
         return (
             <Jumbotron className="App">
@@ -46,23 +50,4 @@ class App extends Component {
     }
 }
 
-// Proptypes
-App.propTypes = {
-    date: PropTypes.instanceOf(Date).isRequired,
-    locale: PropTypes.string,
-    user: PropTypes.exact({
-        username: PropTypes.string.isRequired
-    }).isRequired,
-    userSet: PropTypes.func.isRequired
-}
-
-// Redux
-function mapState(state) {
-    return state
-}
-
-const mapDispatch = {
-    userSet
-}
-
-export default connect(mapState, mapDispatch)(App)
+export default App
