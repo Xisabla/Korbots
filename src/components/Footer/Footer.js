@@ -3,7 +3,8 @@ import { inject, observer, PropTypes } from 'mobx-react'
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
 import './Footer.scss'
 
-@inject('store')
+@inject('date') // Inject the "date" store to the props from the Provider
+@inject('user') // Inject the "user" store to the props from the Provider
 @observer
 class Footer extends Component {
     constructor(props) {
@@ -13,8 +14,10 @@ class Footer extends Component {
         this.handleClick = this.handleClick.bind(this)
     }
 
+    // Set the proptypes
     static propTypes = {
-        store: PropTypes.objectOrObservableObject
+        date: PropTypes.objectOrObservableObject,
+        user: PropTypes.objectOrObservableObject
     }
 
     handleClick(event) {
@@ -22,11 +25,13 @@ class Footer extends Component {
         const locale = event.target.text
 
         // Change the locale (will change the time format in the other Component)
-        this.props.store.setLocale(locale)
+        this.props.date.setLocale(locale)
     }
 
     render() {
-        const { user, locale } = this.props.store
+        // Get data from the props (stores) instead of the internal state
+        const { locale } = this.props.date
+        const { user } = this.props
 
         // Automatically show the current locale on the dropdown title
         const localeTitle = { title: `Locale: ${locale}` }

@@ -3,7 +3,8 @@ import { observer, PropTypes, inject } from 'mobx-react'
 import { Jumbotron, Form } from 'react-bootstrap'
 import './App.scss'
 
-@inject('store')
+@inject('date') // Inject the "date" store to the props from the Provider
+@inject('user') // Inject the "user" store to the props from the Provider
 @observer
 class App extends Component {
     constructor(props) {
@@ -13,8 +14,10 @@ class App extends Component {
         this.handleChange = this.handleChange.bind(this)
     }
 
+    // Set the proptypes
     static propTypes = {
-        store: PropTypes.objectOrObservableObject
+        date: PropTypes.objectOrObservableObject,
+        user: PropTypes.objectOrObservableObject
     }
 
     handleChange(event) {
@@ -24,12 +27,13 @@ class App extends Component {
         if (!name || /^\s*$ /.test(name)) name = 'you'
 
         // Update the username
-        this.props.store.setUsername(name)
+        this.props.user.setUsername(name)
     }
 
     render() {
-        // Get data from the props (global store) instead of the internal state
-        const { date, locale, user } = this.props.store
+        // Get data from the props (stores) instead of the internal state
+        const { date, locale } = this.props.date
+        const { user } = this.props
 
         return (
             <Jumbotron className="App">
