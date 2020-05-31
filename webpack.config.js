@@ -17,7 +17,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.js$/i,
                 loader: 'eslint-loader',
                 enforce: 'pre',
                 include: [path.resolve(__dirname, 'src')],
@@ -27,15 +27,15 @@ module.exports = {
                 }
             },
             {
-                test: /\.(js|jsx)$/,
+                test: /\.(js|jsx)$/i,
                 loader: 'babel-loader'
             },
             {
-                test: /\.css$/,
+                test: /\.css$/i,
                 use: [MiniCssExtractPlugin.loader, 'css-loader']
             },
             {
-                test: /\.s[ac]ss$/,
+                test: /\.s[ac]ss$/i,
                 use: [
                     { loader: MiniCssExtractPlugin.loader },
                     { loader: 'css-loader' },
@@ -51,6 +51,22 @@ module.exports = {
                         }
                     },
                     { loader: 'sass-loader' }
+                ]
+            },
+            {
+                test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/i,
+                loader: 'file-loader'
+            },
+            {
+                test: /\.(png|jpg|gif|svg)$/i,
+                use: [
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            limit: 8192,
+                            name: 'img/[name].[ext]'
+                        }
+                    }
                 ]
             }
         ]
