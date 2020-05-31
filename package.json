@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "scripts": {
     "start": "npm run serve",
-    "build": "webpack --mode production",
+    "build": "webpack --mode production --progress",
     "clean": "rimraf ./coverage ./public/dist",
     "lint": "eslint ./ --fix",
     "serve": "node ./server.js",
