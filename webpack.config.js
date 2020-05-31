@@ -1,4 +1,5 @@
 const path = require('path')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
     mode: 'development',
@@ -7,9 +8,11 @@ module.exports = {
     context: path.resolve(__dirname),
     output: {
         path: path.resolve(__dirname, 'public', 'dist'),
-        filename: 'app.js',
+        filename: 'js/app.js',
         publicPath: '/dist/'
     },
+
+    devtool: 'cheap-module-eval-source-map',
 
     module: {
         rules: [
@@ -29,14 +32,38 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: ['style-loader', 'css-loader']
+                use: [MiniCssExtractPlugin.loader, 'css-loader']
             },
             {
-                // It could be nice to use sass variables feature (variables inside css)
                 test: /\.s[ac]ss$/,
-                use: ['style-loader', 'css-loader', 'sass-loader']
+                use: [
+                    { loader: MiniCssExtractPlugin.loader },
+                    { loader: 'css-loader' },
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            plugins: function () {
+                                return [
+                                    require('precss'),
+                                    require('autoprefixer')
+                                ]
+                            }
+                        }
+                    },
+                    { loader: 'sass-loader' }
+                ]
             }
         ]
+    },
+
+    plugins: [
+        new MiniCssExtractPlugin({
+            filename: 'css/app.css'
+        })
+    ],
+
+    performance: {
+        hints: false
     },
 
     devServer: {
