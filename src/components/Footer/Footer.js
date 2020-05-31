@@ -1,7 +1,8 @@
-import React, { Component } from 'react'
-import { inject, observer, PropTypes } from 'mobx-react'
-import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
 import './Footer.scss'
+
+import { inject, observer, PropTypes } from 'mobx-react'
+import React, { Component } from 'react'
+import { Nav, Navbar, NavDropdown } from 'react-bootstrap'
 
 @inject('date') // Inject the "date" store to the props from the Provider
 @inject('user') // Inject the "user" store to the props from the Provider

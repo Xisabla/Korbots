@@ -1,7 +1,8 @@
-import React, { Component } from 'react'
-import { observer, PropTypes, inject } from 'mobx-react'
-import { Jumbotron, Form } from 'react-bootstrap'
 import './App.scss'
+
+import { inject, observer, PropTypes } from 'mobx-react'
+import React, { Component } from 'react'
+import { Form, Jumbotron } from 'react-bootstrap'
 
 @inject('date') // Inject the "date" store to the props from the Provider
 @inject('user') // Inject the "user" store to the props from the Provider
