@@ -4,7 +4,7 @@ class ObservableUser {
     // About the id: just an example to illustrate that not all the attributes needs to be observable
     id = Math.random()
 
-    @observable username = 'you'
+    @observable username = 'me'
 
     @action
     setUsername(username) {
