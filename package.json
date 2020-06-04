@@ -2,11 +2,10 @@
   "name": "korbots",
   "version": "0.1.0",
   "scripts": {
-    "start": "npm run serve",
+    "start": "npm run serve-dev",
     "build": "webpack --mode production --progress",
     "clean": "rimraf ./coverage ./public/dist",
     "lint": "eslint ./ --fix",
-    "serve": "node ./server.js",
     "serve-dev": "webpack-dev-server --progress",
     "prestart": "npm run build"
   },

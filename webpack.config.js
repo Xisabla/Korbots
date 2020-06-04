@@ -127,7 +127,7 @@ module.exports = {
         // Locate the public folder
         contentBase: path.join(__dirname, 'public'),
         // Listen on http://localhost:3001
-        port: 3001,
+        port: 3000,
         // Watch changes from the public folder too (eg: index.html changes also needs to reload the server)
         watchContentBase: true
     }
