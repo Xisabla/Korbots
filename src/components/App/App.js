@@ -25,7 +25,7 @@ class App extends Component {
         let name = event.target.value
 
         // Default value if empty
-        if (!name || /^\s*$ /.test(name)) name = 'you'
+        if (!name || /^\s*$ /.test(name)) name = 'me'
 
         // Update the username
         this.props.user.setUsername(name)
