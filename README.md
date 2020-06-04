@@ -16,7 +16,7 @@ git commit -m "my commit description"
 ```
 3 - Push your changes
 ```bash
-git pull
+git push
 ```
 
 ## Contributors
