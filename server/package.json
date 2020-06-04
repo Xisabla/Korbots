@@ -2,14 +2,26 @@
   "name": "korbots-server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "tsc --project ./tsconfig.json",
+    "start": "node dist/index.js",
+    "prestart": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Xisabla",
   "license": "MIT",
   "devDependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.6",
+    "@types/mongoose": "^5.7.21",
+    "@types/node-fetch": "^2.5.7",
     "typescript": "^3.9.3"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.17",
+    "node-fetch": "^2.6.0"
   }
 }
