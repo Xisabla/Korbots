@@ -6,6 +6,50 @@
     <title>Document</title>
 </head>
 <body>
+
+    <ul id="list">
+
+    </ul>
+
+    <input type="text" id="username" placeholder="Username">
+    <input type="submit" id="submit">
+
+    <script src="socket.io.js"></script>
     <script src="client.js"></script>
+
+    <script>
+
+        const socket = io()
+
+        socket.on('error', console.log)
+
+        const userInput = document.querySelector('input#username')
+        const userSubmit = document.querySelector('input#submit')
+
+        userSubmit.addEventListener('click', () => {
+            const username = userInput.value
+
+            socket.emit('setUsername', username)
+        })
+
+        function updateUsers(users) {
+
+            const ul = document.querySelector('ul#list')
+
+            ul.innerHTML = ''
+
+            users.forEach((user) => {
+                const li = document.createElement('li')
+
+                li.textContent = user.username
+                
+                ul.appendChild(li)
+            })
+        }
+
+        updateUsers([])
+
+        socket.on('users', updateUsers)
+    </script>
 </body>
 </html>
