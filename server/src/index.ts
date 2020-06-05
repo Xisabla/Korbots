@@ -1,6 +1,6 @@
 import { config } from 'dotenv'
 import express from 'express'
-import mongoose from 'mongoose'
+import mongoose, { Document } from 'mongoose'
 import fetch from 'node-fetch'
 import path from 'path'
 
@@ -30,6 +30,7 @@ app.use(express.static(publicPath))
 
 mongoose
     .connect(mongoUrl, {
+        useCreateIndex: true,
         useUnifiedTopology: true,
         useNewUrlParser: true,
         user: mongoUser,
@@ -48,23 +49,32 @@ mongoose
 
         const userSchema = new mongoose.Schema(
             {
-                name: { type: String, unique: true, required: true }
+                name: { type: String, unique: true, required: true },
+                surname: String
             },
             { collection: 'accounts' }
         )
 
-        const User = mongoose.model('User', userSchema)
+        interface IUserSchema extends Document {
+            name: string
+            surname: string
+        }
 
-        User.findOne({ name: 'Uranium32' }).then((user) => {
+        const User = mongoose.model<IUserSchema>('User', userSchema)
+
+        User.findOne({ name: 'Gautier' }).then((user) => {
             console.log(user.toObject())
         })
 
         /*
-        const Uranium32 = new User({ name: 'Uranium32'})
-
-        Uranium32.save()
-            .then(() => { console.log('saved') })
-            .catch((err) => { console.log(err.code) })
+        User.updateOne(
+            { name: 'Gautieezar' },
+            {
+                $set: { surname: 'Miquet' }
+            }
+        )
+            .then((elem) => console.log(elem))
+            .catch((err) => console.log(err))
         */
     })
     .catch(() => {
