@@ -29,7 +29,13 @@ const app = express()
 const server = http.createServer(app)
 const io = socketIO(server)
 
-const publicPath: string = path.join(__dirname, '../', 'public')
+const publicPath: string = path.join(
+    __dirname,
+    '../',
+    '../',
+    'client/',
+    'public'
+)
 
 app.use(express.static(publicPath))
 
@@ -62,6 +68,13 @@ mongoose
             console.log('http://localhost:3000')
         })
 
+        io.on('connect', (socket) => {
+            console.log('Socket connected:', socket.id)
+
+            socket.emit('connected', socket.id)
+        })
+
+        /*
         // START EXAMPLE #1 MAIN BEHAVIOR
 
         io.on('connection', (socket) => {
@@ -143,6 +156,8 @@ mongoose
         })
 
         // END EXAMPLE #1 MAIN BEHAVIOR
+
+        */
     })
     .catch(() => {
         console.log(
