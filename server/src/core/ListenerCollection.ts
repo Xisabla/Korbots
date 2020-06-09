@@ -48,8 +48,12 @@ export default class ListenerCollection {
         this.filter(selector).listeners.forEach((listener) => {
             listener
                 .handle(data)
-                .then((...args: any[]) => cbSuccess(args))
-                .catch((err) => cbError(err))
+                .then((...args: any[]) => {
+                    return cbSuccess ? cbSuccess(args) : args
+                })
+                .catch((err) => {
+                    if (cbError) return cbError(err)
+                })
         })
     }
 
