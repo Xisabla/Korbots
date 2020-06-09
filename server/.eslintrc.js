@@ -17,6 +17,7 @@ module.exports = {
     rules: {
         'sort-imports': 'off',
         'import/order': 'off',
-        'simple-import-sort/sort': 'error'
+        'simple-import-sort/sort': 'error',
+        '@typescript-eslint/no-explicit-any': 'off'
     }
 }
