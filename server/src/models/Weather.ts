@@ -72,6 +72,8 @@ export interface IWeather extends Model<IWeatherSchema> {
     ): Promise<IWeatherSchema>
 
     fetchCurrent(latitude: number, longitude: number): Promise<IWeatherSchema>
+
+    removeOld(): void
 }
 
 // ---- Statics ----------------------------------
@@ -142,14 +144,15 @@ WeatherSchema.methods.fetchUpdate = function () {
     //
 
     // fetch new data from api
-    fetch(url)
+    return fetch(url)
         .then((res) => res.json())
-        .then((data) => {
+        .then((data: OpenweatherCurrentAPIResponse) => {
             // modify document with updated data
             this.temperature = data.main.temp
             this.wind = data.wind.speed
             this.humidity = data.main.humidity
-            this.weather = data.weather.main
+            this.weather = data.weather[0].main
+            this.date = new Date(data.dt)
             this.lastUpdate = new Date()
 
             // save modifications in database
@@ -172,7 +175,7 @@ WeatherSchema.methods.checkLastUpdate = function () {
 // delete 1 day old weather documents
 WeatherSchema.statics.removeOld = function () {
     const tMax = new Date()
-    tMax.setTime(tMax.getTime() - 24 * 1000) // in hours (* 1000)
+    tMax.setTime(tMax.getTime() - 24 * 3600 * 1000) // in hours (* 1000)
 
     Weather.deleteMany({ date: { $lte: tMax } }).catch((err) =>
         console.error(err)
