@@ -5,31 +5,46 @@ import http from 'http'
 import mongoose, { Mongoose } from 'mongoose'
 import { ConnectionOptions } from 'mongoose'
 import path from 'path'
-import socketIO from 'socket.io'
+import socketIO, { Socket } from 'socket.io'
+
+import Listener from './Listener'
+import ListenerCollection from './ListenerCollection'
+import Module from './Module'
 
 const log = debug('core:Application')
 
 // ---- Interfaces -------------------------------
 
 export interface ApplicationOptions {
+    /** Absolute path to the folder containing server statics files */
     server?: string
+    /** Public path of the server (absolute please), default: path.join(server, 'public') */
     public?: string
+    /** Port on which the server will listen */
     port?: number
+    /** If set on true, will look un into .env file to load important configuration */
     useEnv?: boolean
+    /** mongoose connection base configuration */
     mongo?: DatabaseConfiguration
 }
 
 export interface DatabaseConfiguration {
+    /** Connect URL of Mongo database */
     url: string
+    /** "user" for the Mongoose options */
     user?: string
+    /** "pass" for the Mongoose options */
     pass?: string
+    /** "dbname" for the Mongoose options */
     dbname?: string
 }
 
 /**
  * TODO:
- *  - Implement modules registering
- *  - Implement tasks registering
+ *  - Add a API provider that:
+ *      - Allow API registering (name, baseUrl, keyEntry)
+ *      - Fetch the key from the .env file on registering
+ *      - Allow Modules & Models to get API data (use static functions ?)
  */
 
 /**
@@ -38,14 +53,30 @@ export interface DatabaseConfiguration {
 export default class Application {
     // ---- Attributes -------------------------------
 
+    // Options
     options: ApplicationOptions
 
+    // Server
+    /** Express internal server */
     app: express.Application
+    /** HTTP server from express server */
     server: http.Server
+    /** SocketIO server linked  with the HTTP server */
     io: SocketIO.Server
 
+    // Mongo
+    /** Promise returned on Mongoose connection,
+     * allows to synchronize after DB connection, null if no database connection
+     */
     dbPending?: Promise<Mongoose>
+    /** Result of the resolve from Mongoose Connection, null if no database connection */
     db?: Mongoose
+
+    // Modules
+    /** Module store */
+    modules: Module[]
+    /** Listener store */
+    listeners: ListenerCollection
 
     // ---- Configuration ----------------------------
 
@@ -76,14 +107,23 @@ export default class Application {
         if (!this.options.mongo) this.options.mongo = { url: 'none' }
         if (options.useEnv) this.loadEnv()
 
-        // Initialize servers
+        // Initialize server and data
         this.init()
+
+        // Fix event handlers scope
+        this.onSocketJoin = this.onSocketJoin.bind(this)
     }
 
     /**
      * Initialize internal data, http and socket.io server
      */
     init(): void {
+        this.dbPending = null
+        this.db = null
+
+        this.modules = []
+        this.listeners = new ListenerCollection()
+
         this.app = express()
         this.server = http.createServer(this.app)
         this.io = socketIO(this.server)
@@ -125,9 +165,9 @@ export default class Application {
                 useUnifiedTopology: true
             }
 
-            if (user) options.user = configuration.user
-            if (pass) options.pass = configuration.pass
-            if (dbname) options.dbName = configuration.dbname
+            if (user) options.user = user
+            if (pass) options.pass = pass
+            if (dbname) options.dbName = dbname
 
             log('Attempting to connect to mongodb server:', url)
 
@@ -146,6 +186,65 @@ export default class Application {
         }))
     }
 
+    // ---- Modules ----------------------------------
+
+    /**
+     * Register a Module inside the Application, run the internal "register" method of the Module
+     * @param module The Module to register
+     */
+    registerModule(module: Module): void {
+        // If needs the database
+        if (module.waitForDatabase) {
+            // And there is a dbPending
+            if (this.dbPending) {
+                // Wait for it to end and register
+                this.dbPending.then(() => {
+                    module.register(this)
+                    this.modules.push(module)
+                })
+            } else {
+                // Otherwise, don't register the module and dump an error
+                // TODO: Maybe give a name to modules (and id ?) to show it on the error log
+                console.error(
+                    `Unable to register module, Module.waitForDatabase is set on true while there is no database connection in the Application`
+                )
+            }
+        } else {
+            module.register(this)
+            this.modules.push(module)
+        }
+    }
+
+    /**
+     * Register a Listener inside the Application
+     * @param listener The Listener to register
+     */
+    registerListener(listener: Listener): void {
+        this.listeners.add(listener)
+    }
+
+    // ---- Sockets ----------------------------------
+
+    /**
+     * Triggers all connection listeners, also wait for disconnection to trigger disconnection listeners
+     * @param socket
+     */
+    onSocketJoin(socket: Socket): void {
+        const { id } = socket
+
+        log(`Socket connected: ${id}`)
+        this.listeners.triggerAll({ action: 'connection' }, null, null, socket)
+
+        socket.on('disconnect', () => {
+            this.listeners.triggerAll(
+                { action: 'disconnection' },
+                null,
+                null,
+                socket
+            )
+        })
+    }
+
     // ---- Running ----------------------------------
 
     /**
@@ -153,12 +252,16 @@ export default class Application {
      */
     startServer(): Promise<http.Server> {
         return new Promise((resolve) => {
-            const { app, server, options } = this
+            const { app, io, server, options } = this
             const { port } = options
 
             // Use the public path defined in the options
             if (options.public) app.use(express.static(options.public))
 
+            // Triggers "onSocketJoin" on a socket.io connection
+            io.on('connection', this.onSocketJoin)
+
+            // Start the server
             resolve(
                 server.listen(port, () => {
                     log(`Server started on port ${port}`)
