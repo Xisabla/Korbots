@@ -10,7 +10,6 @@ const WeatherModule = ({ onMouseDown, onMouseUp, style, index, ref }) => (
         ref={ref}
         style={style}
         className="module"
-        draggable
         onMouseDown={(ev) => {
             onMouseDown(ev, index)
         }}
