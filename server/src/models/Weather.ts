@@ -54,6 +54,10 @@ export interface IWeatherSchema extends Document {
     name?: string
     date: Date
     lastUpdate: Date
+
+    // Methods
+    fetchUpdate(): Promise<IWeatherSchema>
+    checkLastUpdate(): Promise<IWeatherSchema>
 }
 
 export interface IWeather extends Model<IWeatherSchema> {
@@ -85,7 +89,7 @@ WeatherSchema.statics.getData = (
     // Note: mongodb query: https://docs.mongodb.com/manual/reference/operator/query/
     // Note²: mongoose sort: https://mongoosejs.com/docs/api.html#query_Query-sort
 
-    // Initialize time interval (tMax could only be "date" as we are note that much in the past)
+    // Initialize time interval (tMax could only be "date" as we are not that much in the past)
     const tMin = new Date(date)
     const tMax = new Date(date)
     tMin.setTime(tMin.getTime() - dtQueryOffset)
@@ -124,6 +128,54 @@ WeatherSchema.statics.getData = (
                 // Otherwise, no or no recent one found, so fetch one from the API
                 return Weather.fetchCurrent(latitude, longitude)
             })
+            .then((document) => document.checkLastUpdate())
+            .catch((err) => console.error(err))
+    )
+}
+
+// update existing weather object (data and last update)
+WeatherSchema.methods.fetchUpdate = function () {
+    // FOR CURRENT DATE ONLY : cases to do
+    const { baseUrl, envKeyEntry } = provider
+    const api_key = process.env[envKeyEntry]
+    const url = `${baseUrl}?lat=${this.latitude}&lon=${this.longitude}&appid=${api_key}`
+    //
+
+    // fetch new data from api
+    fetch(url)
+        .then((res) => res.json())
+        .then((data) => {
+            // modify document with updated data
+            this.temperature = data.main.temp
+            this.wind = data.wind.speed
+            this.humidity = data.main.humidity
+            this.weather = data.weather.main
+            this.lastUpdate = new Date()
+
+            // save modifications in database
+            return this.save()
+        })
+        .catch((err) => console.error(err))
+}
+
+// check if updated in the last hour
+WeatherSchema.methods.checkLastUpdate = function () {
+    const OneHourBefore = new Date()
+    OneHourBefore.setHours(OneHourBefore.getHours() - 1)
+
+    // last update too late
+    if (this.lastUpdate <= OneHourBefore) return this.fetchUpdate() // update values
+
+    return Promise.resolve(this)
+}
+
+// delete 1 day old weather documents
+WeatherSchema.statics.removeOld = function () {
+    const tMax = new Date()
+    tMax.setTime(tMax.getTime() - 24 * 1000) // in hours (* 1000)
+
+    Weather.deleteMany({ date: { $lte: tMax } }).catch((err) =>
+        console.error(err)
     )
 }
 
