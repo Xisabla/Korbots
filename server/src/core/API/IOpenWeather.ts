@@ -1,5 +1,8 @@
 // ---- Error Response ---------------------------
 
+/**
+ * Content of an Error Response from Openweather API
+ */
 export interface OpenweatherAPIError {
     cod: string
     message: string
@@ -7,6 +10,9 @@ export interface OpenweatherAPIError {
 
 // ---- Success Response -------------------------
 
+/**
+ * Content of a Current Response from OpenWeather API
+ */
 export interface OpenweatherCurrentAPIResponse {
     coord: {
         lon: number
@@ -56,25 +62,36 @@ export interface OpenweatherCurrentAPIResponse {
     cod: number
 }
 
-export interface OpenweatherDailyForecastAPIResponse {
-    message: string | number
-    cod: number
-    count: number
-    city?: {
-        geoname_id?: number
-        name?: string
-        lat?: number
-        lon?: number
-        country?: string
-        iso2?: string
-        type?: string
-        population?: number
-    }
-    list: OpenweatherDailyForecastListElement[]
+// ---- Onecall ----------------------------------
+
+/**
+ * Content of a One-Call Response from OpenWeather API
+ */
+export interface OpenweatherOnecallAPIResponse {
+    lat: number
+    lon: number
+    timezone: string
+    timezone_offset: number
+    daily?: OpenweatherOnecallAPIDailyElement[]
 }
 
-export interface OpenweatherDailyForecastListElement {
+// ---- Onecall: Current -------------------------
+
+// TODO: Make interface only if needed (use of one-call current request instead of classic current request)
+
+// ---- Onecall: Hourly --------------------------
+
+// TODO: Make interface only if needed (use of the hourly request)
+
+// ---- Onecall: Daily ---------------------------
+
+/**
+ * Content of the "daily" element of a One-Call Response
+ */
+export interface OpenweatherOnecallAPIDailyElement {
     dt: number
+    sunrise: number
+    sunset: number
     temp: {
         day: number
         min: number
@@ -91,16 +108,22 @@ export interface OpenweatherDailyForecastListElement {
     }
     pressure: number
     humidity: number
-    weather: OpenweatherAPIWeatherStatus[]
-    speed: number
-    deg: number
-    cloud: number
+    dew_point?: number
+    wind_speed: number
+    wind_deg?: number
     rain?: number
     snow?: number
+    visibility?: number
+    weather: OpenweatherAPIWeatherStatus[]
+    clouds: number
+    uvi: number
 }
 
 // ---- Helpers ----------------------------------
 
+/**
+ * Content of a "weather" element
+ */
 export interface OpenweatherAPIWeatherStatus {
     id: number
     main: string
