@@ -1,7 +1,11 @@
 import { Document, Model, model, Schema } from 'mongoose'
 import fetch from 'node-fetch'
 
-import { OpenweatherCurrentAPIResponse } from '../core/API/IOpenWeather'
+import {
+    OpenweatherCurrentAPIResponse,
+    OpenweatherOnecallAPIResponse
+} from '../core/API/IOpenWeather'
+import Application from '../core/Application'
 
 // ---- Temp things ------------------------------
 
@@ -58,6 +62,7 @@ export interface IWeatherSchema extends Document {
     // Methods
     fetchUpdate(): Promise<IWeatherSchema>
     checkLastUpdate(): Promise<IWeatherSchema>
+    foundCity(): Promise<IWeatherSchema>
 }
 
 export interface IWeather extends Model<IWeatherSchema> {
@@ -72,6 +77,12 @@ export interface IWeather extends Model<IWeatherSchema> {
     ): Promise<IWeatherSchema>
 
     fetchCurrent(latitude: number, longitude: number): Promise<IWeatherSchema>
+
+    fromOpenWeatherOnecall(
+        data: OpenweatherOnecallAPIResponse
+    ): Promise<IWeatherSchema[]>
+
+    fetchOnecall(latitude: number, longitude: number): Promise<IWeatherSchema[]>
 
     removeOld(): void
 }
@@ -135,53 +146,6 @@ WeatherSchema.statics.getData = (
     )
 }
 
-// update existing weather object (data and last update)
-WeatherSchema.methods.fetchUpdate = function () {
-    // FOR CURRENT DATE ONLY : cases to do
-    const { baseUrl, envKeyEntry } = provider
-    const api_key = process.env[envKeyEntry]
-    const url = `${baseUrl}?lat=${this.latitude}&lon=${this.longitude}&appid=${api_key}`
-    //
-
-    // fetch new data from api
-    return fetch(url)
-        .then((res) => res.json())
-        .then((data: OpenweatherCurrentAPIResponse) => {
-            // modify document with updated data
-            this.temperature = data.main.temp
-            this.wind = data.wind.speed
-            this.humidity = data.main.humidity
-            this.weather = data.weather[0].main
-            this.date = new Date(data.dt)
-            this.lastUpdate = new Date()
-
-            // save modifications in database
-            return this.save()
-        })
-        .catch((err) => console.error(err))
-}
-
-// check if updated in the last hour
-WeatherSchema.methods.checkLastUpdate = function () {
-    const OneHourBefore = new Date()
-    OneHourBefore.setHours(OneHourBefore.getHours() - 1)
-
-    // last update too late
-    if (this.lastUpdate <= OneHourBefore) return this.fetchUpdate() // update values
-
-    return Promise.resolve(this)
-}
-
-// delete 1 day old weather documents
-WeatherSchema.statics.removeOld = function () {
-    const tMax = new Date()
-    tMax.setTime(tMax.getTime() - 24 * 3600 * 1000) // in hours (* 1000)
-
-    Weather.deleteMany({ date: { $lte: tMax } }).catch((err) =>
-        console.error(err)
-    )
-}
-
 /**
  * Get a Weather document from OpenWeather API "Current" fetch
  */
@@ -212,8 +176,8 @@ WeatherSchema.statics.fetchCurrent = function (
     latitude: number,
     longitude: number
 ) {
-    const { baseUrl, envKeyEntry } = provider
-    const api_key = process.env[envKeyEntry]
+    const baseUrl = Application.getAPIBaseUrl('openweather:current')
+    const api_key = Application.getAPIKey('openweather:current')
 
     const url = `${baseUrl}?lat=${latitude}&lon=${longitude}&appid=${api_key}`
 
@@ -221,6 +185,110 @@ WeatherSchema.statics.fetchCurrent = function (
         .then((res) => res.json())
         .then((data) => Weather.fromOpenweatherCurrent(data))
         .then((doc) => doc.save())
+        .catch((err) => console.error(err))
+}
+
+// forecast documents creation
+WeatherSchema.statics.fromOpenWeatherOnecall = function (
+    data: OpenweatherOnecallAPIResponse
+) {
+    const weathers: IWeatherSchema[] = []
+
+    for (let i = 1; i < 5; i++) {
+        // 4 days forecast
+        const weather = new Weather({
+            temperature: data.daily[i].temp.day,
+            humidity: data.daily[i].humidity,
+            wind: data.daily[i].wind_speed,
+            weather: data.daily[i].weather[0].main,
+            latitude: data.lat,
+            longitude: data.lon,
+            date: new Date(data.daily[i].dt * 1000),
+            lastUpdate: new Date()
+        })
+
+        // found name of city/country with current
+
+        weathers.push(weather)
+    }
+    return weathers
+}
+
+// Forecast fetch from api
+WeatherSchema.statics.fetchOnecall = function (
+    latitude: number,
+    longitude: number
+) {
+    const baseUrl = Application.getAPIBaseUrl('openweather:onecall')
+    const api_key = Application.getAPIKey('openweather:onecall')
+
+    const url = `${baseUrl}?lat=${latitude}&lon=${longitude}&appid=${api_key}`
+
+    return fetch(url)
+        .then((res) => res.json())
+        .then((data) => Weather.fromOpenWeatherOnecall(data))
+        .then((doc) => doc.forEach((element) => element.save()))
+        .catch((err) => console.error(err))
+}
+
+// delete 1 day old weather documents
+WeatherSchema.statics.removeOld = function () {
+    const tMax = new Date()
+    tMax.setTime(tMax.getTime() - 24 * 3600 * 1000) // in hours (* 1000)
+
+    Weather.deleteMany({ date: { $lte: tMax } }).catch((err) =>
+        console.error(err)
+    )
+}
+
+// ---- Methods ----------------------------------
+// check if updated in the last hour
+WeatherSchema.methods.checkLastUpdate = function () {
+    const OneHourBefore = new Date()
+    OneHourBefore.setHours(OneHourBefore.getHours() - 1)
+
+    // last update too late
+    if (this.lastUpdate <= OneHourBefore) return this.fetchUpdate() // update values
+
+    return Promise.resolve(this)
+}
+
+// update existing weather object (data and last update)
+WeatherSchema.methods.fetchUpdate = function () {
+    // FOR CURRENT DATE ONLY : cases to do
+    const { baseUrl, envKeyEntry } = provider
+    const api_key = process.env[envKeyEntry]
+    const url = `${baseUrl}?lat=${this.latitude}&lon=${this.longitude}&appid=${api_key}`
+    //
+
+    // fetch new data from api
+    return fetch(url)
+        .then((res) => res.json())
+        .then((data: OpenweatherCurrentAPIResponse) => {
+            // modify document with updated data
+            this.temperature = data.main.temp
+            this.wind = data.wind.speed
+            this.humidity = data.main.humidity
+            this.weather = data.weather[0].main
+            this.date = new Date(data.dt)
+            this.lastUpdate = new Date()
+
+            // save modifications in database
+            return this.save()
+        })
+        .catch((err) => console.error(err))
+}
+
+// Found city/country if exist according to coordinates
+WeatherSchema.methods.foundCity = function () {
+    return Weather.fetchCurrent(this.latitude, this.longitude)
+        .then((document) => {
+            if (document.name != '') {
+                this.name = document.name
+                this.country = document.country
+            }
+            return document
+        })
         .catch((err) => console.error(err))
 }
 
