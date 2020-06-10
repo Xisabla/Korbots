@@ -74,43 +74,29 @@ export interface OpenweatherDailyForecastAPIResponse {
 }
 
 export interface OpenweatherDailyForecastListElement {
-    id: number
-    name: string
-    coord: {
-        lat: number
-        long: number
-    }
-    main: {
-        temp: number
-        feels_like: number
-        pressure: number
-        humidity: number
-        temp_min: number
-        temp_max: number
-        sea_level?: number
-        grnd_level?: number
-    }
     dt: number
-    wind: {
-        speed: number
-        deg: number
-        gust?: number
+    temp: {
+        day: number
+        min: number
+        max: number
+        night: number
+        eve: number
+        morn: number
     }
-    sys: {
-        country?: string
+    feels_like?: {
+        day: number
+        night: number
+        eve: number
+        morn: number
     }
-    rain?: {
-        '1h'?: number
-        '3h'?: number
-    }
-    snow?: {
-        '1h'?: number
-        '3h'?: number
-    }
-    clouds: {
-        all: number
-    }
+    pressure: number
+    humidity: number
     weather: OpenweatherAPIWeatherStatus[]
+    speed: number
+    deg: number
+    cloud: number
+    rain?: number
+    snow?: number
 }
 
 // ---- Helpers ----------------------------------
