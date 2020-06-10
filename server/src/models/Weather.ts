@@ -224,8 +224,6 @@ WeatherSchema.statics.fetchCurrent = function (
         .catch((err) => console.error(err))
 }
 
-// TODO: Create a dumpOld/clear/removeOld static method to remove old entries from the database (dt <= now - x * dtQueryOffset, just need to define a 'x' value)
-
 // ---- Model ------------------------------------
 
 export const Weather = model<IWeatherSchema, IWeather>('Weather', WeatherSchema)

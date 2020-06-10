@@ -56,6 +56,63 @@ export interface OpenweatherCurrentAPIResponse {
     cod: number
 }
 
+export interface OpenweatherDailyForecastAPIResponse {
+    message: string | number
+    cod: number
+    count: number
+    city?: {
+        geoname_id?: number
+        name?: string
+        lat?: number
+        lon?: number
+        country?: string
+        iso2?: string
+        type?: string
+        population?: number
+    }
+    list: OpenweatherDailyForecastListElement[]
+}
+
+export interface OpenweatherDailyForecastListElement {
+    id: number
+    name: string
+    coord: {
+        lat: number
+        long: number
+    }
+    main: {
+        temp: number
+        feels_like: number
+        pressure: number
+        humidity: number
+        temp_min: number
+        temp_max: number
+        sea_level?: number
+        grnd_level?: number
+    }
+    dt: number
+    wind: {
+        speed: number
+        deg: number
+        gust?: number
+    }
+    sys: {
+        country?: string
+    }
+    rain?: {
+        '1h'?: number
+        '3h'?: number
+    }
+    snow?: {
+        '1h'?: number
+        '3h'?: number
+    }
+    clouds: {
+        all: number
+    }
+    weather: OpenweatherAPIWeatherStatus[]
+}
+
 // ---- Helpers ----------------------------------
 
 export interface OpenweatherAPIWeatherStatus {
