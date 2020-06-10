@@ -190,11 +190,12 @@ WeatherSchema.statics.fetchCurrent = function (
 
 // forecast documents creation
 WeatherSchema.statics.fromOpenWeatherOnecall = function (
-    data: OpenweatherOnecallAPIResponse
+    data: OpenweatherOnecallAPIResponse,
+    dayNumber = 5
 ) {
     const weathers: IWeatherSchema[] = []
 
-    for (let i = 1; i < 5; i++) {
+    for (let i = 1; i <= dayNumber; i++) {
         // 4 days forecast
         const weather = new Weather({
             temperature: data.daily[i].temp.day,
