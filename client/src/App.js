@@ -9,49 +9,13 @@ class App extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            offset: 10,
+            pixelStep: 10,
             holding: -1,
             grabbing: false,
             mouse: { x: 314, y: 163 },
             modules: modules,
-            moduleStyles: [
-                {
-                    //Covid
-                    width: '600px',
-                    height: 'auto',
-                    paddingBottom: '0%',
-                    minWidth: '300px',
-                    minHeight: '300px',
-                    maxWidth: '800px',
-                    maxHeight: '800px',
-                    left: '0px',
-                    top: '0px'
-                },
-                {
-                    //Weather
-                    width: '300px',
-                    height: 'auto',
-                    paddingBottom: '0%',
-                    minWidth: '300px',
-                    minHeight: '300px',
-                    maxWidth: '600px',
-                    maxHeight: '600px',
-                    left: '610px',
-                    top: '0px'
-                },
-                {
-                    //Weather
-                    width: '300px',
-                    height: 'auto',
-                    paddingBottom: '0%',
-                    minWidth: '300px',
-                    minHeight: '300px',
-                    maxWidth: '600px',
-                    maxHeight: '600px',
-                    left: '610px',
-                    top: '400px'
-                }
-            ]
+            modulesRefs: [],
+            modulesRatios: []
         }
     }
 
@@ -105,132 +69,155 @@ class App extends Component {
         this.setState(() => input)
     }
 
-    handleMouseUp = (ev, index) => {
-        const { modules, moduleStyles, holding, grabbing, offset } = this.state
-        if (holding === -1 || grabbing) return
+    keepBetween(value, min, max) {
+        return value < min ? min : value > max ? max : value
+    }
+
+    updateModules = () => {
+        const { modulesRefs, pixelStep, holding, modulesRatios } = this.state
+        if (holding === -1) return
         let rects = []
 
-        let tmp = modules[0]
-        modules[0] = modules[index]
-        modules[index] = tmp
-        tmp = moduleStyles[0]
-        moduleStyles[0] = moduleStyles[index]
-        moduleStyles[index] = tmp
-
-        for (let i = 0; i < modules.length; i++) {
+        for (let i = 0; i < modulesRefs.length; i++) {
             rects.push({
-                left: parseInt(moduleStyles[i].left, 10),
+                left: parseInt(modulesRefs[i].current.style.left, 10),
                 right:
-                    parseInt(moduleStyles[i].left, 10) +
-                    parseInt(moduleStyles[i].width, 10) +
-                    offset,
-                top: parseInt(moduleStyles[i].top, 10),
+                    parseInt(modulesRefs[i].current.style.left, 10) +
+                    parseInt(modulesRefs[i].current.style.width, 10) +
+                    pixelStep,
+                top: parseInt(modulesRefs[i].current.style.top, 10),
                 bottom:
-                    parseInt(moduleStyles[i].top, 10) +
-                    parseInt(moduleStyles[i].height, 10) +
-                    offset
+                    parseInt(modulesRefs[i].current.style.top, 10) +
+                    parseInt(modulesRefs[i].current.style.height, 10) +
+                    pixelStep
             })
         }
-        rects[index] = {
-            left: rects[index].left,
-            right: rects[index].left + ev.target.offsetWidth,
-            top: rects[index].top,
-            bottom: rects[index].top + ev.target.offsetHeight
-        }
 
-        for (let i = 0; i < modules.length; i++) {
+        let itemWidth = parseInt(modulesRefs[holding].current.style.width, 10)
+        itemWidth = this.keepBetween(
+            itemWidth,
+            parseInt(modulesRefs[holding].current.style.minWidth, 10),
+            parseInt(modulesRefs[holding].current.style.maxWidth, 10)
+        )
+        itemWidth =
+            itemWidth % pixelStep < pixelStep / 2
+                ? itemWidth - (itemWidth % pixelStep)
+                : itemWidth + pixelStep - (itemWidth % pixelStep)
+
+        let itemHeight = itemWidth * modulesRatios[holding]
+        itemHeight = this.keepBetween(
+            itemHeight,
+            parseInt(modulesRefs[holding].current.style.minHeight, 10),
+            parseInt(modulesRefs[holding].current.style.maxHeight, 10)
+        )
+        itemHeight =
+            itemHeight % pixelStep < pixelStep / 2
+                ? itemHeight - (itemHeight % pixelStep)
+                : itemHeight + pixelStep - (itemHeight % pixelStep)
+
+        rects[holding].right = rects[holding].left + itemWidth
+        rects[holding].bottom = rects[holding].top + itemHeight
+
+        for (let i = 0; i < modulesRefs.length; i++) {
             for (let j = 0; j < modules.length; j++) {
-                if (i !== j) {
-                    while (
-                        this.isOver(rects[i], rects[j]) ||
-                        this.isOver(rects[j], rects[i])
-                    ) {
+                if (i !== j && j !== holding) {
+                    while (this.isOver(rects[i], rects[j])) {
                         //TODO : More cases
-                        if (rects[i].right >= rects[j].left) {
-                            rects[j].left += offset
-                            rects[j].right += offset
+                        if (
+                            rects[i].left <= rects[j].right &&
+                            rects[i].right > rects[j].right &&
+                            rects[j].left - pixelStep >= 0
+                        ) {
+                            rects[j].left -= pixelStep
+                            rects[j].right -= pixelStep
+                        } else if (
+                            rects[i].left <= rects[j].right &&
+                            rects[i].right > rects[j].right &&
+                            rects[j].left - pixelStep < 0
+                        ) {
+                            rects[i].left += pixelStep
+                            rects[i].right += pixelStep
+                        } else if (rects[i].right >= rects[j].left) {
+                            rects[j].left += pixelStep
+                            rects[j].right += pixelStep
                         }
                     }
                 }
             }
         }
 
-        let buffer = moduleStyles
-        let itemWidth = parseInt(moduleStyles[index].width, 10)
-        itemWidth =
-            itemWidth % offset < offset / 2
-                ? itemWidth - (itemWidth % offset)
-                : itemWidth + (itemWidth % offset)
-
         for (let i = 0; i < modules.length; i++) {
-            let tempWidth = rects[i].right - rects[i].left - offset
-            tempWidth -= tempWidth % offset
-            buffer[i] = {
-                left: rects[i].left + 'px',
-                width: `${i === index ? itemWidth : tempWidth}px`,
-                height: 'auto',
-                top: rects[i].top + 'px',
-                paddingBottom: '0%',
-                minWidth: '300px',
-                minHeight: '300px',
-                maxWidth: '800px',
-                maxHeight: '800px'
+            modulesRefs[i].current.style.left = `${rects[i].left}px`
+            modulesRefs[i].current.style.top = `${rects[i].top}px`
+            if (i === holding) {
+                modulesRefs[i].current.style.width = `${itemWidth}px`
+                modulesRefs[i].current.style.height = `${itemHeight}px`
             }
         }
+    }
+
+    handleMouseUp = () => {
+        const { holding, grabbing } = this.state
+        if (holding === -1 || grabbing) return
+        this.updateModules()
         this.setState(() => ({
-            moduleStyles: buffer,
             holding: -1,
             grabbing: false
         }))
     }
 
     moveModule = (ev) => {
-        const { grabbing, holding, moduleStyles, mouse, offset } = this.state
-        if (!grabbing) return
+        const { grabbing, holding, mouse, pixelStep, modulesRefs } = this.state
+        this.updateModules()
+        if (holding === -1 || !grabbing) return
+
         //let eRect = ev.target.getBoundingClientRect()
         let x = ev.clientX - mouse.x // - eRect.left //x position within the element.
         let y = ev.clientY - mouse.y // - eRect.top //y position within the element.
 
+        let currentStyle = modulesRefs[holding].current.style
+
         if (
-            (x >= parseInt(moduleStyles[holding].left, 10) &&
-                x <= parseInt(moduleStyles[holding].left, 10) + offset) ||
-            (x <= parseInt(moduleStyles[holding].left, 10) &&
-                x >= parseInt(moduleStyles[holding].left, 10) - offset)
+            (x >= parseInt(currentStyle.left, 10) &&
+                x <= parseInt(currentStyle.left, 10) + pixelStep) ||
+            (x <= parseInt(currentStyle.left, 10) &&
+                x >= parseInt(currentStyle.left, 10) - pixelStep)
         )
-            x = parseInt(moduleStyles[holding].left, 10)
+            x = parseInt(currentStyle.left, 10)
         if (
-            (y >= parseInt(moduleStyles[holding].top, 10) &&
-                y <= parseInt(moduleStyles[holding].top, 10) + offset) ||
-            (y <= parseInt(moduleStyles[holding].top, 10) &&
-                y >= parseInt(moduleStyles[holding].top, 10) - offset)
+            (y >= parseInt(currentStyle.top, 10) &&
+                y <= parseInt(currentStyle.top, 10) + pixelStep) ||
+            (y <= parseInt(currentStyle.top, 10) &&
+                y >= parseInt(currentStyle.top, 10) - pixelStep)
         )
-            y = parseInt(moduleStyles[holding].top, 10)
+            y = parseInt(currentStyle.top, 10)
 
         if (x < 0) {
             x = 0
-        } else x -= x % offset
+        } else x -= x % pixelStep
         if (y < 0) {
             y = 0
-        } else y -= y % offset
-        console.log(x, y)
+        } else y -= y % pixelStep
 
-        let buffer = moduleStyles
+        modulesRefs[holding].current.style.top = `${y}px`
+        modulesRefs[holding].current.style.left = `${x}px`
+        this.updateModules()
+    }
 
-        buffer[holding] = {
-            left: x + 'px',
-            width: moduleStyles[holding].width,
-            top: y + 'px',
-            paddingBottom: moduleStyles[holding].paddingBottom,
-            minWidth: moduleStyles[holding].minWidth,
-            minHeight: moduleStyles[holding].minHeight,
-            maxWidth: moduleStyles[holding].maxWidth,
-            maxHeight: moduleStyles[holding].maxHeight
-        }
-        this.setState(() => ({ moduleStyles: buffer }))
+    handleModuleLoading = (ref) => {
+        const { modulesRefs, modulesRatios } = this.state
+        modulesRefs.push(ref)
+        modulesRatios.push(
+            parseInt(ref.current.style.height, 10) /
+                parseInt(ref.current.style.width, 10)
+        )
+        this.setState(() => ({
+            modulesRefs: modulesRefs,
+            modulesRatios: modulesRatios
+        }))
     }
 
     render() {
-        const { moduleStyles } = this.state
         return (
             <div
                 onMouseMove={(ev) => this.moveModule(ev)}
@@ -252,9 +239,9 @@ class App extends Component {
                                     <Module
                                         key={index}
                                         index={index}
-                                        style={moduleStyles[index]}
                                         onMouseDown={this.handleMouseDown}
                                         onMouseUp={this.handleMouseUp}
+                                        onload={this.handleModuleLoading}
                                     />
                                 ))}
                             </div>
