@@ -78,7 +78,7 @@ export default class Application {
     /** Listener store */
     listeners: ListenerCollection
     /** API store */
-    apis: APIwk[]
+    static apis: APIwk[]
 
     // ---- Configuration ----------------------------
 
@@ -125,7 +125,7 @@ export default class Application {
 
         this.modules = []
         this.listeners = new ListenerCollection()
-        this.apis = []
+        if (!Application.apis) Application.apis = []
 
         this.app = express()
         this.server = http.createServer(this.app)
@@ -136,6 +136,7 @@ export default class Application {
      * Load options from the .env file
      */
     loadEnv(): void {
+        log('Loading environnement resources')
         config()
 
         if (process.env.MONGO_URL)
@@ -196,6 +197,8 @@ export default class Application {
      * @param module The Module to register
      */
     registerModule(module: Module): void {
+        // TODO: Maybe give a name to modules (and id ?) to show it on logging
+
         // If needs the database
         if (module.waitForDatabase) {
             // And there is a dbPending
@@ -204,10 +207,10 @@ export default class Application {
                 this.dbPending.then(() => {
                     module.register(this)
                     this.modules.push(module)
+                    log('Module registered')
                 })
             } else {
                 // Otherwise, don't register the module and dump an error
-                // TODO: Maybe give a name to modules (and id ?) to show it on the error log
                 console.error(
                     `Unable to register module, Module.waitForDatabase is set on true while there is no database connection in the Application`
                 )
@@ -215,6 +218,7 @@ export default class Application {
         } else {
             module.register(this)
             this.modules.push(module)
+            log('Module registered')
         }
     }
 
@@ -224,6 +228,7 @@ export default class Application {
      */
     registerListener(listener: Listener): void {
         this.listeners.add(listener)
+        log(`Registered new listener on action: "${listener.action}"`)
     }
 
     // ---- API --------------------------------------
@@ -232,15 +237,22 @@ export default class Application {
      * Register a API inside the Application, erase API with the same name, will automatically retrieve the api_key from .env file it the entry exists
      * @param api The API to register
      */
-    registerAPI(api: API): void {
+    static registerAPI(api: API): void {
         // Erase API if it already exists
         if (this.apis.find((elem) => elem.name === api.name)) {
+            log(`Erased existing API: "${api.name}"`)
             this.apis = this.apis.filter((elem) => elem.name !== api.name)
         }
 
         const { name, baseUrl, envKeyEntry } = api
 
-        const key = process.env[envKeyEntry] || ''
+        let key = ''
+        let foundKey: string
+
+        if ((foundKey = process.env[envKeyEntry])) {
+            key = foundKey
+            log(`Key found for API: "${api.name}"`)
+        }
 
         const apiwk: APIwk = {
             name,
@@ -250,13 +262,15 @@ export default class Application {
         }
 
         this.apis.push(apiwk)
+
+        log(`Registered new API: "${apiwk.name}"`)
     }
 
     /**
      * Register multiple APIs, if any API has the same name as an existing it will erase
      * @param apis APIs to register
      */
-    registerAPIs(apis: API[]): void {
+    static registerAPIs(apis: API[]): void {
         apis.forEach((api) => this.registerAPI(api))
     }
 
@@ -264,7 +278,7 @@ export default class Application {
      * Get an API from it's name, null if not found
      * @param name The API name
      */
-    getAPI(name: string): APIwk | null {
+    static getAPI(name: string): APIwk | null {
         return this.apis.find((api) => api.name === name)
     }
 
@@ -272,7 +286,7 @@ export default class Application {
      * Get the key of an API from it's name, empty if not found
      * @param name The API name
      */
-    getAPIKey(name: string): string {
+    static getAPIKey(name: string): string {
         const api = this.getAPI(name)
 
         return api ? api.key : ''
@@ -282,7 +296,7 @@ export default class Application {
      * Get the baseUrl of an API from it's name, empty if not found
      * @param name The API name
      */
-    getAPIBaseUrl(name: string): string {
+    static getAPIBaseUrl(name: string): string {
         const api = this.getAPI(name)
 
         return api ? api.baseUrl : ''
