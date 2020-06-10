@@ -157,8 +157,8 @@ class App extends Component {
     }
 
     handleMouseUp = () => {
-        const { holding, grabbing } = this.state
-        if (holding === -1 || grabbing) return
+        const { holding } = this.state
+        if (holding === -1) return
         this.updateModules()
         this.setState(() => ({
             holding: -1,
