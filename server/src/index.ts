@@ -13,6 +13,7 @@ app.connectDB()
 Application.registerAPIs([OpenweatherCurrentAPI, OpenweatherOnecallAPI])
 
 console.log(Application.getAPIKey('openweather:current'))
+console.log(Application.getAPIBaseUrl('openweather:current'))
 
 process.exit()
 

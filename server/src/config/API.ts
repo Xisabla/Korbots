@@ -6,6 +6,6 @@ export const OpenweatherCurrentAPI: API = {
 
 export const OpenweatherOnecallAPI: API = {
     name: 'openweather:onecall',
-    baseUrl: 'https://api.openweathermap.org/data/2.5/weather',
+    baseUrl: 'https://api.openweathermap.org/data/2.5/onecall',
     envKeyEntry: 'API_OPENWEATHERMAP_KEY'
 }
