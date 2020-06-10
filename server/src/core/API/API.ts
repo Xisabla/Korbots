@@ -7,3 +7,10 @@ interface API {
     /** The entry of the api key inside the .env file eg: API_KEY_OPENWEATHER */
     envKeyEntry: string
 }
+
+/**
+ * Same as API but with the key inside
+ */
+interface APIwk extends API {
+    key: string
+}

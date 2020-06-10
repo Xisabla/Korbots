@@ -77,6 +77,8 @@ export default class Application {
     modules: Module[]
     /** Listener store */
     listeners: ListenerCollection
+    /** API store */
+    apis: APIwk[]
 
     // ---- Configuration ----------------------------
 
@@ -123,6 +125,7 @@ export default class Application {
 
         this.modules = []
         this.listeners = new ListenerCollection()
+        this.apis = []
 
         this.app = express()
         this.server = http.createServer(this.app)
@@ -221,6 +224,68 @@ export default class Application {
      */
     registerListener(listener: Listener): void {
         this.listeners.add(listener)
+    }
+
+    // ---- API --------------------------------------
+
+    /**
+     * Register a API inside the Application, erase API with the same name, will automatically retrieve the api_key from .env file it the entry exists
+     * @param api The API to register
+     */
+    registerAPI(api: API): void {
+        // Erase API if it already exists
+        if (this.apis.find((elem) => elem.name === api.name)) {
+            this.apis = this.apis.filter((elem) => elem.name !== api.name)
+        }
+
+        const { name, baseUrl, envKeyEntry } = api
+
+        const key = process.env[envKeyEntry] || ''
+
+        const apiwk: APIwk = {
+            name,
+            baseUrl,
+            envKeyEntry,
+            key
+        }
+
+        this.apis.push(apiwk)
+    }
+
+    /**
+     * Register multiple APIs, if any API has the same name as an existing it will erase
+     * @param apis APIs to register
+     */
+    registerAPIs(apis: API[]): void {
+        apis.forEach((api) => this.registerAPI(api))
+    }
+
+    /**
+     * Get an API from it's name, null if not found
+     * @param name The API name
+     */
+    getAPI(name: string): APIwk | null {
+        return this.apis.find((api) => api.name === name)
+    }
+
+    /**
+     * Get the key of an API from it's name, empty if not found
+     * @param name The API name
+     */
+    getAPIKey(name: string): string {
+        const api = this.getAPI(name)
+
+        return api ? api.key : ''
+    }
+
+    /**
+     * Get the baseUrl of an API from it's name, empty if not found
+     * @param name The API name
+     */
+    getAPIBaseUrl(name: string): string {
+        const api = this.getAPI(name)
+
+        return api ? api.baseUrl : ''
     }
 
     // ---- Sockets ----------------------------------
