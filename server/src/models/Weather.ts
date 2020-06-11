@@ -10,12 +10,16 @@ import Application from '../core/Application'
 
 // ---- Schema -----------------------------------
 
+/**
+ * Mongoose Schema of the Weather Model Document, works in the "weather" collection
+ */
 export const WeatherSchema = new Schema(
     {
         temperature: { type: Number, required: true },
         humidity: { type: Number, required: true },
         wind: { type: Number, required: true },
         weather: { type: String, required: true },
+        weatherDescription: { type: String, required: true },
         latitude: { type: Number, required: true },
         longitude: { type: Number, required: true },
         country: String,
@@ -26,11 +30,17 @@ export const WeatherSchema = new Schema(
     { collection: 'weather' }
 )
 
+/**
+ * Detailed Weather Document (WeatherSchema) interface
+ */
 export interface IWeatherSchema extends Document {
+    /** Temperature in Kelvin */
     temperature: number
+    /** Humidity in percentage */
     humidity: number
     wind: number
     weather: string
+    weatherDescription: string
     latitude: number
     longitude: number
     country?: string
@@ -275,6 +285,7 @@ WeatherSchema.statics.fromCurrent = function (
                 humidity: data.main.humidity,
                 wind: data.wind.speed,
                 weather: data.weather[0].main,
+                weatherDescription: data.weather[0].description,
                 latitude: data.coord.lat,
                 longitude: data.coord.lon,
                 date: new Date(data.dt * 1000),
@@ -297,6 +308,7 @@ WeatherSchema.statics.fromDaily = function (
                     humidity: day.humidity,
                     wind: day.wind_speed,
                     weather: day.weather[0].main,
+                    weatherDescription: day.weather[0].description,
                     latitude: data.lat,
                     longitude: data.lon,
                     date: new Date(day.dt * 1000),
