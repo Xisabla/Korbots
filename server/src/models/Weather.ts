@@ -12,6 +12,7 @@ import Application from '../core/Application'
 
 /**
  * Mongoose Schema of the Weather Model Document, works in the "weather" collection
+ * See "Document" inside all the documentation of this file as instance of this Schema
  */
 export const WeatherSchema = new Schema(
     {
@@ -34,29 +35,90 @@ export const WeatherSchema = new Schema(
  * Detailed Weather Document (WeatherSchema) interface
  */
 export interface IWeatherSchema extends Document {
-    /** Temperature in Kelvin */
+    /** Temperature in Ke */
     temperature: number
-    /** Humidity in percentage */
+    /** Humidity in % */
     humidity: number
+    /** Wind speed in m/s */
     wind: number
+    /** Weather short description */
     weather: string
+    /** Weather complete description */
     weatherDescription: string
+    /** Latitude of the location */
     latitude: number
+    /** Longitude of the location */
     longitude: number
+    /** Country of the location */
     country?: string
+    /** City name of the location */
     name?: string
+    /** Date of the forecast */
     date: Date
+    /** Last update from the internal database */
     lastUpdate: Date
 
     // Methods: Checkers
+
+    /**
+     * @returns True if the current Document needs to be updated from the API data
+     *
+     *
+     *```typescript
+     * if entry.needsUpdate() {
+     *      entry.updateCurrent().then(...)
+     * }
+     *```
+     */
     needsUpdate(): boolean
+    /**
+     * @returns True if the current Document name of country fields are empty and needs to be updated
+     *
+     * ```typescript
+     * if entry.needsLocationFieldsUpdate() {
+     *      entry.updateLocationFields().then(...)
+     * }
+     * ```
+     */
     needsLocationFieldsUpdate(): boolean
+    /**
+     * Check if the the Document needs to be updated and update it if needed (calls updateCurrent/updateDaily if needsUpdate returns true)
+     * @param isDaily Set on true if the Document is a Daily Forecast
+     * @returns The updated Document (save Promise) or the same Document as before if no update performed
+     *
+     * For a Current entry:
+     * ```typescript
+     * entry.checkUpdate().then(...)
+     * ```
+     *
+     * For a Daily entry:
+     * ```typescript
+     * entry.checkUpdate(true).then(...)
+     * ```
+     */
     checkUpdate(isDaily?: boolean): Promise<IWeatherSchema>
+    /**
+     * Check if the Documents needs to have it's location fields updated and update them if needed (calls updateLocationFields if needsLocationFieldsUpdate returns true)
+     * @returns The updated Document (save Promise) or the same Document as before if no update performed
+     */
     checkLocationFieldsUpdate(): Promise<IWeatherSchema>
 
     // Methods: Updaters
+
+    /**
+     * Update the main fields of the Document dealing with Current Weather data
+     * @returns The updated Document (save Promise)
+     */
     updateCurrent(): Promise<IWeatherSchema>
+    /**
+     * Update the main fields of the Document dealing with Daily Weather data
+     * @returns The updated Document (save Promise)
+     */
     updateDaily(): Promise<IWeatherSchema>
+    /**
+     * Update the location fields of the Document, will look for the name and country fields on a Current Weather API call
+     * @returns The updated Document (save Promise)
+     */
     updateLocationFields(): Promise<IWeatherSchema>
 }
 
@@ -64,8 +126,51 @@ export interface IWeatherSchema extends Document {
 
 export interface IWeather extends Model<IWeatherSchema> {
     // Getters
+
+    /**
+     * Look for existing Document or create a new one for the Current weather at the given location
+     * Also perform update actions if needed
+     * @param lat Latitude of the location
+     * @param lon Longitude of the location
+     * @returns A promise of the Document
+     *
+     * ```typescript
+     * Weather.getCurrent(51.51, -0.13).then((doc) => {
+     *      console.log('London temperature:', doc.temperature)
+     * })
+     * ```
+     */
     getCurrent(lat: number, lon: number): Promise<IWeatherSchema>
+
+    /**
+     * Look for existing Document or create a new one for the Daily weather at the given location and date
+     * @param lat Latitude of the location
+     * @param lon Longitude of the location
+     * @param date A promise of the Document
+     *
+     * ```typescript
+     * const tomorrow = moment().add(1, 'days').toDate()
+     *
+     * Weather.getDaily(51.51, -0.13, tomorrow).then((doc) => {
+     *      console.log('London temperature tomorrow:', doc.temperature)
+     * })
+     * ```
+     */
     getDaily(lat: number, lon: number, date: Date): Promise<IWeatherSchema>
+
+    /**
+     * Get all (look for or create if needed) the Daily weather Documents for next further days (begin: tomorrow) at the given location
+     * @param lat Latitude of the location
+     * @param lon Longitude of the location
+     * @param further Number of further days (1 means only tomorrow) (default: 4)
+     * @returns A promise of an Array of the Documents
+     *
+     * ```typescript
+     * Weather.getDailyAll(51.51, -0.13).then((docs) => {
+     *      console.log('London temperature tomorrow:', docs[0].temperature)
+     * })
+     * ```
+     */
     getDailyAll(
         lat: number,
         lon: number,
@@ -73,10 +178,50 @@ export interface IWeather extends Model<IWeatherSchema> {
     ): Promise<IWeatherSchema[]>
 
     // Finders
+
+    /**
+     * Look for Documents inside the Database for the Current weather at a specific location
+     * Time interval: [now - 30 minutes; now + 2 minutes]
+     * @param lat Latitude of the location (+/- 0.1 from the API)
+     * @param long Longitude of the location (+/- 0.1 from the API)
+     * @returns All of the Documents found inside a Promise
+     */
     findCurrent(lat: number, long: number): Promise<IWeatherSchema[]>
+
+    /**
+     * Same as findCurrent but only returns the first entry
+     * @param lat Latitude of the location (+/- 0.1 from the API)
+     * @param long  Longitude of the location (+/- 0.1 from the API)
+     * @returns A Promise of the Document
+     */
     findCurrentOne(lat: number, long: number): Promise<IWeatherSchema>
+
+    /**
+     * Look for Documents inside the Database for the Daily weather at a specific location and date
+     * Time interval: Same day as date
+     * @param lat Latitude of the location (+/- 0.1 from the API)
+     * @param long Longitude of the location (+/- 0.1 from the API)
+     * @param date Day of the weather entry to look for
+     * @returns A Promise of all the Documents (Array)
+     */
     findDaily(lat: number, long: number, date: Date): Promise<IWeatherSchema[]>
+
+    /**
+     * Same as findDaily but only returns the first entry
+     * @param lat Latitude of the location (+/- 0.1 from the API)
+     * @param long  Longitude of the location (+/- 0.1 from the API)
+     * @param date Day of the weather entry to look for
+     * @returns A Promise of the Document
+     */
     findDailyOne(lat: number, long: number, date: Date): Promise<IWeatherSchema>
+
+    /**
+     * Look for all Daily weather entries for next further days (begin: tomorrow) at the given location
+     * @param lat Latitude of the location (+/- 0.1 from the API)
+     * @param long  Longitude of the location (+/- 0.1 from the API)
+     * @param further Number of further days (1 means only tomorrow) (default: 4)
+     * @returns A Promise of an Array of Document
+     */
     findDailyAll(
         lat: number,
         lon: number,
@@ -84,17 +229,49 @@ export interface IWeather extends Model<IWeatherSchema> {
     ): Promise<IWeatherSchema[]>
 
     // Document
+
+    /**
+     * Run a fetch call to the API for the Current entry of a location and create a Document for it
+     * @param lat Latitude of the location
+     * @param lon Longitude of the location
+     * @returns A Promise of a Document
+     */
     fromCurrent(lat: number, lon: number): Promise<IWeatherSchema>
+
+    /**
+     * Run a fetch call to the API for the Daily entries of a location and create a Document for each entry
+     * @param lat Latitude of the location
+     * @param lon Longitude of the location
+     * @returns A Promise of a Document Array
+     */
     fromDaily(lat: number, long: number): Promise<IWeatherSchema[]>
 
     // Fetch
+
+    /**
+     * Run a fetch call to the API to get the Current entry of the given location
+     * @param lat Latitude of the location
+     * @param lon Longitude of the location
+     * @returns An Object of all the data queried from the API inside a Promise
+     */
     fetchCurrent(
         lat: number,
         lon: number
     ): Promise<OpenweatherCurrentAPIResponse>
+
+    /**
+     * Run a fetch call to the API to get the Daily entries of the given location from today
+     * @param lat Latitude of the location
+     * @param lon Longitude of the location
+     * @returns An Object of all the data queried from the API inside a Promise
+     */
     fetchDaily(lat: number, lon: number): Promise<OpenweatherDailyAPIResponse>
 
     // Remove
+
+    /**
+     * Will remove all Documents older than 24 hours to avoid useless entries in the Database
+     */
     removeOld(): Promise<any>
 }
 
@@ -317,6 +494,7 @@ WeatherSchema.statics.fromDaily = function (
             )
         })
 
+        // Resolve all documents location fields
         return Promise.all(docs.map((doc) => doc.updateLocationFields()))
     })
 }
@@ -348,6 +526,7 @@ WeatherSchema.statics.fetchDaily = function (
 // ---- Statics: Remove --------------------------
 
 WeatherSchema.statics.removeOld = function (): Promise<any> {
+    // Remove all entries older than 24 hours
     return this.deleteMany({
         date: {
             $lte: moment().add(-24, 'hours').toDate()
@@ -372,6 +551,7 @@ WeatherSchema.methods.needsLocationFieldsUpdate = function (): boolean {
 WeatherSchema.methods.checkUpdate = function (
     isDaily = false
 ): Promise<IWeatherSchema> {
+    // Check if we are updating a Daily entry
     if (isDaily) this.needsUpdate() ? this.updateDaily() : this
 
     return this.needsUpdate() ? this.updateCurrent() : this
@@ -412,6 +592,7 @@ WeatherSchema.methods.updateDaily = function (): Promise<IWeatherSchema> {
             return this.save()
         }
 
+        // If no entry found just return the Document
         return this
     })
 }
@@ -429,4 +610,26 @@ WeatherSchema.methods.updateLocationFields = function (): Promise<
 
 // ---- Main export ------------------------------
 
+/**
+ * Weather Model, allow to create, manipulate and save weather entries
+ *
+ * ```typescript
+ * const weatherEntry: IWeatherSchema = new Weather({
+ *      temperature: 189,
+ *      latitude: 12,
+ *      longitude: 14,
+ *      humidity: 18,
+ *      weather: "sunny",
+ *      weatherDescription: "Really sunny"
+ *      wind: 1.2
+ *      date: new Date(),
+ *      lastUpdate: new Date()
+ * })
+ *
+ * weatherEntry.updateCurrent()
+ *  .then((entry) => {
+ *      entry.save()
+ * })
+ * ```
+ */
 export const Weather = model<IWeatherSchema, IWeather>('Weather', WeatherSchema)
