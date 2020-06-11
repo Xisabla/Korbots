@@ -66,6 +66,14 @@ class App extends Component {
         }
         if (ev.target.className !== 'module' && input.grabbing !== true) return
         input.holding = index
+        input.mouse = {
+            x:
+                ev.clientX -
+                parseInt(this.state.modulesRefs[index].current.style.left, 10),
+            y:
+                ev.clientY -
+                parseInt(this.state.modulesRefs[index].current.style.top, 10)
+        }
         this.setState(() => input)
     }
 
@@ -168,9 +176,10 @@ class App extends Component {
 
     moveModule = (ev) => {
         const { grabbing, holding, mouse, pixelStep, modulesRefs } = this.state
-        this.updateModules()
+        if (holding !== -1) this.updateModules()
         if (holding === -1 || !grabbing) return
 
+        ev.preventDefault()
         //let eRect = ev.target.getBoundingClientRect()
         let x = ev.clientX - mouse.x // - eRect.left //x position within the element.
         let y = ev.clientY - mouse.y // - eRect.top //y position within the element.

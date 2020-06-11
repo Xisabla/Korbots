@@ -27,10 +27,6 @@ body {
 	margin-left: -15px;
 }
 
-.row-height {
-	height: 90.5vh;
-}
-
 .row-height .col-2, .row-height .col-10 {
     overflow-y: scroll;
     height: 100%;
@@ -108,16 +104,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .col-2 {
-    flex: 0 0 35vh;
-    max-width: 35vh;
+    flex: 0 0 16%;
+    /*max-width: 35vh;*/
 	padding-right: 1%;
 	padding-left: 1%;
 }
 
 .col-10 {
-    flex: 0 0 171vh;
-    max-width: 171vh;
-	padding-left: 1%;
+    flex: 0 0 79%;
+    /*max-width: 171vh;*/
+    padding-left: 1%;
+}
+
+.row-height {
+    height: 91.15vh;
+}
+
+@-moz-document url-prefix() {
+    .row-height {
+        height: 90.5vh;
+    }
 }
 
 .my-2 {
@@ -175,7 +181,6 @@ nav {
     position: absolute;
     resize: horizontal;
     overflow: hidden;
-    
 }
 
 .module-body {

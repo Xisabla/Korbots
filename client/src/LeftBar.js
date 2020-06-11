@@ -6,13 +6,13 @@ const LeftBar = () => (
 
         <ul className="list-group">
             <li className="list-group-item">
-                <i className="fas fa-chart-area"></i> Covid-19 Info
+                <i className="fas fa-chart-area"></i> Covid-19 News
             </li>
             <li className="list-group-item">
                 <i className="fas fa-music"></i> Music Player
             </li>
             <li className="list-group-item">
-                <i className="fas fa-cloud-moon-rain"></i> Meteo
+                <i className="fas fa-cloud-moon-rain"></i> Weather
             </li>
             <li className="list-group-item">
                 <i className="fas fa-list-ul"></i> TODO List
