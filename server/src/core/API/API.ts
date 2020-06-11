@@ -12,5 +12,6 @@ interface API {
  * Same as API but with the key inside
  */
 interface APIwk extends API {
+    /** Key of the API */
     key: string
 }
