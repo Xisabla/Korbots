@@ -65,9 +65,7 @@ export default class Application {
     io: SocketIO.Server
 
     // Mongo
-    /** Promise returned on Mongoose connection,
-     * allows to synchronize after DB connection, null if no database connection
-     */
+    /** Promise returned on Mongoose connection, allows to synchronize after DB connection, null if no database connection */
     dbPending?: Promise<Mongoose>
     /** Result of the resolve from Mongoose Connection, null if no database connection */
     db?: Mongoose
