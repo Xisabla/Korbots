@@ -1,6 +1,7 @@
+import PropTypes from 'prop-types'
 import React from 'react'
 
-const LeftBar = () => (
+const LeftBar = ({ settingsOnClick, settings }) => (
     <div className="col-2 border-right">
         <h3 className="my-2">Modules</h3>
 
@@ -44,26 +45,49 @@ const LeftBar = () => (
         <ul className="nav flex-column mb-2">
             <li className="nav-item">
                 <a href="#" className="nav-link">
-                    <i className="fas fa-bell"></i> Notifications
+                    <i className="fas fa-bell"></i>
+                    {(settings.language === 'french' ||
+                        settings.language === 'english') &&
+                        ' Notifications'}
+                    {settings.language === 'german' && ' Benachrichtigungen'}
                 </a>
             </li>
             <li className="nav-item">
                 <a href="#" className="nav-link">
-                    <i className="fas fa-user-tag"></i> User info
+                    <i className="fas fa-user-tag"></i>
+                    {settings.language === 'french' &&
+                        ' Informations utilisateur'}
+                    {settings.language === 'english' && ' User info'}
+                    {settings.language === 'german' && ' Nutzerinformation'}
+                </a>
+            </li>
+            <li className="nav-item">
+                <a
+                    href="#"
+                    className="nav-link"
+                    onClick={() => {
+                        settingsOnClick(true)
+                    }}>
+                    <i className="fas fa-cog"></i>
+                    {settings.language === 'french' && ' Paramètres'}
+                    {settings.language === 'english' && ' Settings'}
+                    {settings.language === 'german' && ' Einstellungen'}
                 </a>
             </li>
             <li className="nav-item">
                 <a href="#" className="nav-link">
-                    <i className="fas fa-cog"></i> Settings
-                </a>
-            </li>
-            <li className="nav-item">
-                <a href="#" className="nav-link">
-                    <i className="fas fa-sign-out-alt"></i> Disconnect
+                    <i className="fas fa-sign-out-alt"></i>
+                    {settings.language === 'french' && ' Se déconnecter'}
+                    {settings.language === 'english' && ' Log out'}
+                    {settings.language === 'german' && ' Ausloggen'}
                 </a>
             </li>
         </ul>
     </div>
 )
 
+LeftBar.propTypes = {
+    settingsOnClick: PropTypes.func,
+    settings: PropTypes.object
+}
 export default LeftBar

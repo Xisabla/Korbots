@@ -4,6 +4,7 @@ import React, { Component } from 'react'
 
 import LeftBar from './LeftBar'
 import modules from './Modules'
+import Settings from './Settings'
 
 class App extends Component {
     constructor(props) {
@@ -11,14 +12,23 @@ class App extends Component {
         this.state = {
             pixelStep: 10,
             holding: -1,
+            settingsRef: undefined,
+            settings: {
+                language: 'french'
+            },
             grabbing: false,
-            mouse: { x: 314, y: 163 },
+            mouse: {},
             modules: modules,
             modulesRefs: [],
             modulesRatios: []
         }
     }
 
+    /**
+     * Check if rectA overlaps rectB
+     * @param {{left:number, right:number, top:number, bottom:number}} rectA
+     * @param {{left:number, right:number, top:number, bottom:number}} rectB
+     */
     isOver(rectA, rectB) {
         return (
             (rectA.right >= rectB.left &&
@@ -56,13 +66,16 @@ class App extends Component {
         )
     }
 
+    /**
+     * Keep the targetted module in memory
+     * @param {Event} ev The event
+     * @param {number} index The index of the targetted module
+     */
     handleMouseDown = (ev, index) => {
         let input = {}
-        console.log(ev.target.className)
+
         if (ev.target.className === 'fas fa-arrows-alt dragTarget') {
             input.grabbing = true
-            //input.mouse = { x: ev.clientX, y: ev.clientY }
-            //console.log(input.mouse)
         }
         if (ev.target.className !== 'module' && input.grabbing !== true) return
         input.holding = index
@@ -77,10 +90,18 @@ class App extends Component {
         this.setState(() => input)
     }
 
+    /**
+     * @param {number} value
+     * @param {number} min
+     * @param {number} max
+     * @returns {number} The value modified to stay between min and max
+     */
     keepBetween(value, min, max) {
         return value < min ? min : value > max ? max : value
     }
-
+    /**
+     * Prevent the modules from overlapping while dragging or resizing
+     */
     updateModules = () => {
         const { modulesRefs, pixelStep, holding, modulesRatios } = this.state
         if (holding === -1) return
@@ -164,6 +185,9 @@ class App extends Component {
         }
     }
 
+    /**
+     * Remove the targetted module from memory
+     */
     handleMouseUp = () => {
         const { holding } = this.state
         if (holding === -1) return
@@ -174,6 +198,10 @@ class App extends Component {
         }))
     }
 
+    /**
+     * Move the module according to mouse position
+     * @param {Event} ev
+     */
     moveModule = (ev) => {
         const { grabbing, holding, mouse, pixelStep, modulesRefs } = this.state
         if (holding !== -1) this.updateModules()
@@ -213,6 +241,10 @@ class App extends Component {
         this.updateModules()
     }
 
+    /**
+     * Save module references in memory after loading
+     * @param {*} ref
+     */
     handleModuleLoading = (ref) => {
         const { modulesRefs, modulesRatios } = this.state
         modulesRefs.push(ref)
@@ -226,22 +258,56 @@ class App extends Component {
         }))
     }
 
+    /**
+     * Show the settings window if bool equals true, hide it otherwise
+     * @param {boolean} bool
+     */
+    settingsOnClick = (bool) => {
+        const { settingsRef } = this.state
+        settingsRef.current.style.display = bool ? 'initial' : 'none'
+        this.setState(() => ({ settingsRef: settingsRef }))
+    }
+
+    /**
+     * Get settings from the settings window
+     * @param {{language:string}} settings
+     */
+    getSettings = (settings) => {
+        this.setState(() => ({ settings: settings }))
+    }
+
     render() {
+        const { settings } = this.state
         return (
             <div
                 onMouseMove={(ev) => this.moveModule(ev)}
                 onMouseUp={() => {
                     this.setState({ grabbing: false })
                 }}>
+                <Settings
+                    onload={(ref) => {
+                        this.setState(() => ({ settingsRef: ref }))
+                    }}
+                    close={this.settingsOnClick}
+                    update={this.getSettings}
+                />
                 <nav className="nav justify-content-center bg-dark text-light">
                     <h1>Korbots</h1>
                 </nav>
                 <div className="container-fluid">
                     <div className="row row-height">
-                        <LeftBar></LeftBar>
+                        <LeftBar
+                            settingsOnClick={this.settingsOnClick}
+                            settings={settings}
+                        />
                         <div className="col-10">
                             <div className="display-4 font-italic font-weight-light text-center my-2">
-                                {"Bonjour l'ami !"}
+                                {settings.language === 'french' &&
+                                    "Bonjour l'ami !"}
+                                {settings.language === 'english' &&
+                                    'Hello my friend !'}
+                                {settings.language === 'german' &&
+                                    'Hallo mein Freund !'}
                             </div>
                             <div className="modules">
                                 {modules.map((Module, index) => (

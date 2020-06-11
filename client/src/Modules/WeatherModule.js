@@ -26,10 +26,6 @@ class WeatherModule extends React.Component {
         }
     }
 
-    componentDidUpdate() {
-        //console.log(this.state.ref.current)
-    }
-
     componentDidMount() {
         this.state.onload(this.state.ref)
     }
