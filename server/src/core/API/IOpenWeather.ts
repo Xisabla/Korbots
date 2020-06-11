@@ -75,13 +75,13 @@ export interface OpenweatherOnecallAPIResponse {
     daily?: OpenweatherOnecallAPIDailyElement[]
 }
 
-// ---- Onecall: Current -------------------------
-
-// TODO: Make interface only if needed (use of one-call current request instead of classic current request)
-
-// ---- Onecall: Hourly --------------------------
-
-// TODO: Make interface only if needed (use of the hourly request)
+/**
+ * Content of a One-Call Response fetching daily data from OpenWeather API
+ */
+export interface OpenweatherDailyAPIResponse
+    extends OpenweatherOnecallAPIResponse {
+    daily: OpenweatherOnecallAPIDailyElement[]
+}
 
 // ---- Onecall: Daily ---------------------------
 
