@@ -10,23 +10,26 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master   # Checkout
+    - name: Checkout master
+      uses: actions/checkout@master
       with:
         persist-credentials: false
         fetch-depth: 0
-    - name: Build documentation
-      uses: actions/setup-node@v1     # Node.js
+    - name: Use Node.js 12
+      uses: actions/setup-node@v1
       with:
         node-version: 12.x
-    - run: npm install                # Install dependencies
-    - run: npm run doc                # Build the doc
+    - name: Install dependencies
+      run: npm install
+    - name: Build the doc
+      run: npm run doc
     - name: Commit        
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add doc/server -f
         git commit -m "generate documentation"
-    - name: Push changes              # Push
+    - name: Push
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
