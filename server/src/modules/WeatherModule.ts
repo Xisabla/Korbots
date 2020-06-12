@@ -69,9 +69,9 @@ export class WeatherModule extends Module {
 
         Weather.getDailyAll(lat, lon, further)
             .then((docs) => {
-                log(`Entries found, responding with weather:dailyDataAll`)
+                log(`Entries found, responding with weather:dailyAllData`)
                 socket.emit(
-                    'weather:dailyData',
+                    'weather:dailyAllData',
                     docs.map((doc) => doc.toJSON())
                 )
             })
@@ -90,8 +90,8 @@ export class WeatherModule extends Module {
         Weather.getDailyAll(lat, lon, 4)
             .then((daily) => {
                 return Weather.getCurrent(lat, lon).then((current) => {
-                    log(`Entries found, responding with weather:dataAll`)
-                    socket.emit('weather:dataAll', {
+                    log(`Entries found, responding with weather:allData`)
+                    socket.emit('weather:allData', {
                         current,
                         daily
                     })
