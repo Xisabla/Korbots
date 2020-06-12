@@ -322,7 +322,7 @@ WeatherSchema.statics.getDailyAll = function (
                 .then(() => Weather.findDailyAll(lat, lon, further))
         })
         .then((docs) => {
-            return Promise.all(docs.map((doc) => doc.checkUpdate()))
+            return Promise.all(docs.map((doc) => doc.checkUpdate(true)))
         })
         .then((docs) =>
             Promise.all(docs.map((doc) => doc.checkLocationFieldsUpdate()))
@@ -420,7 +420,9 @@ WeatherSchema.statics.findDailyAll = function (
 ): Promise<IWeatherSchema[]> {
     const coordinatesQueryOffset = 0.1
 
-    const tMax = moment().add(further, 'days').toDate()
+    const tMax = moment()
+        .add(further + 1, 'days')
+        .toDate()
     const tMin = moment().toDate()
 
     return Weather.find({
