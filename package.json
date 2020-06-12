@@ -5,14 +5,17 @@
     "start": "npm run client-build && npm run server-start",
     "build": "npm run client-build && npm run server-build",
     "clean": "npm run client-clean && npm run server-clean",
+    "doc": "npm run server-doc",
+    "install": "npm run client-install && npm run server-install",
+
     "client-install": "npm install --prefix=./client && npm install --save-dev --prefix=./client",
-    "server-install": "npm install --prefix=./server && npm install --save-dev --prefix=./server",
     "client-build": "npm run build --prefix=./client",
     "client-clean": "npm run clean --prefix=./client",
+    "server-install": "npm install --prefix=./server && npm install --save-dev --prefix=./server",
     "server-build": "npm run build --prefix=./server",
     "server-clean": "npm run clean --prefix=./server",
     "server-start": "npm run start --prefix=./server",
-    "install": "npm run client-install && npm run server-install"
+    "server-doc": "npm run doc --prefix=./server"
   },
   "repository": {
     "type": "git",

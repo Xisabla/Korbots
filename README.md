@@ -2,6 +2,11 @@
 
 TODO: Requirements, install, run and doc
 
+## Documentation
+
+See:
+- [doc/server](doc/markdown/server/globals.md)
+
 ## Contributors
 
 - BAJEUX Oregane
