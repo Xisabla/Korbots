@@ -6,7 +6,7 @@
     "start": "cross-env DEBUG=core:Application node dist/index.js",
     "dev": "cross-env DEBUG=core:*,model:*,module:*,task:* node dist/index.js",
     "build": "tsc --project ./tsconfig.json",
-    "clean": "rimraf ./coverage ./dist ../doc/html/server ../doc/markdown/server",
+    "clean": "rimraf ./coverage ./dist ../doc/server",
     "lint": "eslint ./ --fix",
     "doc": "typedoc --out ../doc/server --plugin typedoc-plugin-markdown",
     "prestart": "npm run lint && npm run build"
