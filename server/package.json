@@ -5,9 +5,9 @@
   "scripts": {
     "start": "node dist/index.js",
     "build": "tsc --project ./tsconfig.json",
-    "clean": "rimraf ./coverage ./dist ./doc",
+    "clean": "rimraf ./coverage ./dist ../doc/html/server ../doc/markdown/server",
     "lint": "eslint ./ --fix",
-    "doc": "typedoc --out ../doc/",
+    "doc": "typedoc --out ../doc/html/server && typedoc --out ../doc/markdown/server --plugin typedoc-plugin-markdown",
     "prestart": "npm run lint && npm run build"
   },
   "author": "Xisabla",
@@ -31,6 +31,8 @@
     "prettier": "^2.0.5",
     "rimraf": "^3.0.2",
     "socket.io-client": "^2.3.0",
+    "typedoc": "^0.17.7",
+    "typedoc-plugin-markdown": "^2.3.1",
     "typescript": "^3.9.3"
   },
   "dependencies": {
