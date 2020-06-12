@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 
-import weatherimg from '../../public/meteo.png'
+/* import weatherimg from '../../public/meteo.png' */
 class WeatherModule extends React.Component {
     constructor(props) {
         super(props)
@@ -46,22 +46,31 @@ class WeatherModule extends React.Component {
                 }}>
                 <i className="fas fa-arrows-alt dragTarget"></i>
                 <div className="module-body">
-                    <svg viewBox="0 0 400 15" className="module-title">
-                        <text x="0" y="15">
-                            Météo
-                        </text>
-                    </svg>
-                    <img
-                        src={weatherimg}
-                        alt="Meteo"
-                        width="90%"
-                        height="70%"
-                    />
+                    <div className="col-xs-12 col-md-5 title-container">
+                        <Titles />
+                    </div>
+                    <div className="col-xs-12 col-md-7 form-container">
+                        <Form /* getWeather={this.getWeather}  */ />
+                    </div>
                 </div>
             </div>
         )
     }
 }
+
+const Titles = () => (
+    <div>
+        <text className="title-container__title">Météo</text>
+    </div>
+)
+
+const Form = () => (
+    <form /* onSubmit={props.getWeather} */>
+        <input type="text" name="latitude" placeholder="Latitude..." />
+        <input type="text" name="longitude" placeholder="Longitude..." />
+        <button>Rechercher</button>
+    </form>
+)
 
 WeatherModule.propTypes = {
     onMouseDown: PropTypes.func,
