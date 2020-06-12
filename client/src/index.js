@@ -15,4 +15,4 @@ socket.on('connected', (id) => {
 window.socket = socket
 
 // App Rendering
-render(<App />, document.getElementById('root'))
+render(<App socket={socket} />, document.getElementById('root'))

@@ -22,12 +22,40 @@ class WeatherModule extends React.Component {
                 maxHeight: '710px',
                 left: '810px',
                 top: '0px'
-            }
+            },
+            longitude: 0,
+            latitude: 0
         }
+
+        this.getWeather = this.getWeather.bind(this)
+        this.handleChangeLatitude = this.handleChangeLatitude.bind(this)
+        this.handleChangeLongitude = this.handleChangeLongitude.bind(this)
+
+        this.props.socket.on('weather:currentData', (data) => {
+            console.log(data)
+        })
     }
 
     componentDidMount() {
         this.state.onload(this.state.ref)
+    }
+
+    handleChangeLatitude(event) {
+        if (event && event.target)
+            this.setState({ latitude: parseFloat(event.target.value) })
+    }
+
+    handleChangeLongitude(event) {
+        if (event && event.target)
+            this.setState({ longitude: parseFloat(event.target.value) })
+    }
+
+    getWeather(event) {
+        const { latitude, longitude } = this.state
+
+        this.props.socket.emit('weather:getCurrent', { latitude, longitude })
+
+        event.preventDefault()
     }
 
     render() {
@@ -50,7 +78,23 @@ class WeatherModule extends React.Component {
                         <Titles />
                     </div>
                     <div className="col-xs-12 col-md-7 form-container">
-                        <Form /* getWeather={this.getWeather}  */ />
+                        <form onSubmit={this.getWeather}>
+                            <input
+                                type="number"
+                                name="latitude"
+                                placeholder="Latitude..."
+                                onChange={this.handleChangeLatitude}
+                                value={this.state.latitude}
+                            />
+                            <input
+                                type="number"
+                                name="longitude"
+                                placeholder="Longitude..."
+                                onChange={this.handleChangeLongitude}
+                                value={this.state.longitude}
+                            />
+                            <button type="submit">Rechercher</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -64,20 +108,15 @@ const Titles = () => (
     </div>
 )
 
-const Form = () => (
-    <form /* onSubmit={props.getWeather} */>
-        <input type="text" name="latitude" placeholder="Latitude..." />
-        <input type="text" name="longitude" placeholder="Longitude..." />
-        <button>Rechercher</button>
-    </form>
-)
-
 WeatherModule.propTypes = {
+    handleChangeLatitude: PropTypes.fun,
+    handleChangeLongitude: PropTypes.fun,
     onMouseDown: PropTypes.func,
     onMouseUp: PropTypes.func,
     index: PropTypes.number,
     ref: PropTypes.string,
-    onload: PropTypes.fun
+    onload: PropTypes.fun,
+    socket: PropTypes.object
 }
 
 export default WeatherModule

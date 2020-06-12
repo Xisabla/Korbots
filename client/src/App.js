@@ -1,5 +1,6 @@
 import './App.scss'
 
+import { PropTypes } from 'mobx-react'
 import React, { Component } from 'react'
 
 import LeftBar from './LeftBar'
@@ -317,6 +318,7 @@ class App extends Component {
                                         onMouseDown={this.handleMouseDown}
                                         onMouseUp={this.handleMouseUp}
                                         onload={this.handleModuleLoading}
+                                        socket={this.props.socket}
                                     />
                                 ))}
                             </div>
@@ -326,6 +328,10 @@ class App extends Component {
             </div>
         )
     }
+}
+
+App.propTypes = {
+    socket: PropTypes.object
 }
 
 export default App
