@@ -123,4 +123,4 @@ public/dist
 .vscode
 
 # Documentation
-doc
+doc/server
