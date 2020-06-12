@@ -1,6 +1,6 @@
 # Building
 
-**Note about dependencies**: As the [`/client`](client) and [`/server`](server) folders are working like 2 different npm projects, the dependency installation process should be performed once in each folder. However you can just perform `npm install` into the root folder, this will do all the job.
+**Note about dependencies**: As the [`/client`](/client) and [`/server`](/server) folders are working like 2 different npm projects, the dependency installation process should be performed once in each folder. However you can just perform `npm install` into the root folder, this will do all the job.
 
 ## Client
 
@@ -12,7 +12,7 @@ This process can be performed inside the root folder using:
 npm run client-build
 ```
 
-or into the [`/client`](client) folder using `npm run build`
+or into the [`/client`](/client) folder using `npm run build`
 
 You can also run the build in watching mode, it will rebuild every time that the code under [`/client/src`](/client/src/) will be modified:
 
@@ -20,7 +20,7 @@ You can also run the build in watching mode, it will rebuild every time that the
 npm run client-dev
 ```
 
-or in the [`/client`](client) folder using `npm run dev`
+or in the [`/client`](/client) folder using `npm run dev`
 
 ## Server
 
@@ -32,17 +32,17 @@ This process can be performed in the root folder using:
 npm run server-build
 ```
 
-or in the [`/server`](client) folder using `npm run build`
+or in the [`/server`](/server) folder using `npm run build`
 
 ## Performing from root folder
 
 Each (useful) command of the building and running process can be performed under the root folder
 
-- **Client only commands** (➡️ *commands under [`/client`](client) folder*)
+- **Client only commands** (➡️ *commands under [`/client`](/client) folder*)
     - `client-build` ➡️ `npm run build`
     - `client-clean` ➡️ `npm run clean`
     - `client-dev` ➡️ `npm run dev`
-- **Server only commands** (➡️ *commands under [`/server`](server) folder*)
+- **Server only commands** (➡️ *commands under [`/server`](/server) folder*)
     - `server-build` ➡️ `npm run build`
     - `server-clean` ➡️ `npm run clean`
     - `server-start` ➡️ `npm run start`
@@ -57,9 +57,9 @@ Each (useful) command of the building and running process can be performed under
 
 ## Cleaning
 
-All built and bundled files under [`/client`](client) and [`/server`](server) can be cleaned running:
+All built and bundled files under [`/client`](/client) and [`/server`](/server) can be cleaned running:
 
-- Under [`/client`](client) or [`/server`](server) folder
+- Under [`/client`](/client) or [`/server`](/server) folder
   - `npm run clean`
 - Under the root folder
   - `npm run clean` - Cleans all
