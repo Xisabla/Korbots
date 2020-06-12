@@ -18,4 +18,4 @@
 
 • **log**: *Debugger* = debug('module:weather')
 
-*Defined in [src/modules/WeatherModule.ts:8](https://github.com/Xisabla/Korbots/blob/934e198/server/src/modules/WeatherModule.ts#L8)*
+*Defined in [src/modules/WeatherModule.ts:8](https://github.com/Xisabla/Korbots/blob/312334d/server/src/modules/WeatherModule.ts#L8)*
