@@ -44,29 +44,29 @@ export default class Application {
     // ---- Attributes -------------------------------
 
     // Options
-    options: ApplicationOptions
+    private _options: ApplicationOptions
 
     // Server
     /** Express internal server */
-    app: express.Application
+    private _app: express.Application
     /** HTTP server from express server */
-    server: http.Server
+    private _server: http.Server
     /** SocketIO server linked  with the HTTP server */
-    io: SocketIO.Server
+    private _io: SocketIO.Server
 
     // Mongo
     /** Promise returned on Mongoose connection, allows to synchronize after DB connection, null if no database connection */
-    dbPending?: Promise<Mongoose>
+    private dbPending?: Promise<Mongoose>
     /** Result of the resolve from Mongoose Connection, null if no database connection */
-    db?: Mongoose
+    private db?: Mongoose
 
     // Modules
     /** Module store */
-    modules: Module[]
+    private _modules: Module[]
     /** Socket store */
-    sockets: Socket[]
+    private _sockets: Socket[]
     /** API store */
-    static apis: APIwk[]
+    public static apis: APIwk[]
 
     // ---- Configuration ----------------------------
 
@@ -83,18 +83,18 @@ export default class Application {
         log(`Using server path: ${server}`)
 
         // Default options
-        this.options = {
+        this._options = {
             server,
             public: path.join(server, 'public'),
             port: 3000
         }
 
-        log(`Using port ${this.options.port}`)
+        log(`Using port ${this._options.port}`)
 
         // Load given options
-        Object.assign(this.options, options)
+        Object.assign(this._options, options)
 
-        if (!this.options.mongo) this.options.mongo = { url: 'none' }
+        if (!this._options.mongo) this._options.mongo = { url: 'none' }
         if (options.useEnv) this.loadEnv()
 
         // Initialize server and data
@@ -107,34 +107,34 @@ export default class Application {
     /**
      * Initialize internal data, http and socket.io server
      */
-    init(): void {
+    private init(): void {
         this.dbPending = null
         this.db = null
 
-        this.modules = []
-        this.sockets = []
+        this._modules = []
+        this._sockets = []
         if (!Application.apis) Application.apis = []
 
-        this.app = express()
-        this.server = http.createServer(this.app)
-        this.io = socketIO(this.server)
+        this._app = express()
+        this._server = http.createServer(this._app)
+        this._io = socketIO(this._server)
     }
 
     /**
      * Load options from the .env file
      */
-    loadEnv(): void {
+    private loadEnv(): void {
         log('Loading environnement resources')
         config()
 
         if (process.env.MONGO_URL)
-            this.options.mongo.url = process.env.MONGO_URL
+            this._options.mongo.url = process.env.MONGO_URL
         if (process.env.MONGO_USER)
-            this.options.mongo.user = process.env.MONGO_USER
+            this._options.mongo.user = process.env.MONGO_USER
         if (process.env.MONGO_PASS)
-            this.options.mongo.pass = process.env.MONGO_PASS
+            this._options.mongo.pass = process.env.MONGO_PASS
         if (process.env.MONGO_DB)
-            this.options.mongo.dbname = process.env.MONGO_DB
+            this._options.mongo.dbname = process.env.MONGO_DB
     }
 
     // ---- Database ---------------------------------
@@ -143,9 +143,9 @@ export default class Application {
      * Try to connect to the database, updates internal dbPending promise
      * @param configuration Database configuration (user, password, dbname)
      */
-    connectDB(configuration?: DatabaseConfiguration): Promise<Mongoose> {
+    public connectDB(configuration?: DatabaseConfiguration): Promise<Mongoose> {
         // Use the global configuration if no one given
-        if (!configuration) configuration = this.options.mongo
+        if (!configuration) configuration = this._options.mongo
 
         // Create a promise to define the dbPending attribute early
         return (this.dbPending = new Promise((resolve, reject) => {
@@ -184,7 +184,7 @@ export default class Application {
      * Register a Module inside the Application, run the internal "register" method of the Module
      * @param module The Module to register
      */
-    registerModule(module: Module): void {
+    public registerModule(module: Module): void {
         // TODO: Maybe give a name to modules (and id ?) to show it on logging
 
         // If needs the database
@@ -194,7 +194,7 @@ export default class Application {
                 // Wait for it to end and register
                 this.dbPending.then(() => {
                     module.register(this)
-                    this.modules.push(module)
+                    this._modules.push(module)
                     log('Module registered')
                 })
             } else {
@@ -205,7 +205,7 @@ export default class Application {
             }
         } else {
             module.register(this)
-            this.modules.push(module)
+            this._modules.push(module)
             log('Module registered')
         }
     }
@@ -216,7 +216,7 @@ export default class Application {
      * Register a API inside the Application, erase API with the same name, will automatically retrieve the api_key from .env file it the entry exists
      * @param api The API to register
      */
-    static registerAPI(api: API): void {
+    public static registerAPI(api: API): void {
         // Erase API if it already exists
         if (this.apis.find((elem) => elem.name === api.name)) {
             log(`Erased existing API: "${api.name}"`)
@@ -249,7 +249,7 @@ export default class Application {
      * Register multiple APIs, if any API has the same name as an existing it will erase
      * @param apis APIs to register
      */
-    static registerAPIs(apis: API[]): void {
+    public static registerAPIs(apis: API[]): void {
         apis.forEach((api) => this.registerAPI(api))
     }
 
@@ -257,7 +257,7 @@ export default class Application {
      * Get an API from it's name, null if not found
      * @param name The API name
      */
-    static getAPI(name: string): APIwk | null {
+    public static getAPI(name: string): APIwk | null {
         return this.apis.find((api) => api.name === name)
     }
 
@@ -265,7 +265,7 @@ export default class Application {
      * Get the key of an API from it's name, empty if not found
      * @param name The API name
      */
-    static getAPIKey(name: string): string {
+    public static getAPIKey(name: string): string {
         const api = this.getAPI(name)
 
         return api ? api.key : ''
@@ -275,7 +275,7 @@ export default class Application {
      * Get the baseUrl of an API from it's name, empty if not found
      * @param name The API name
      */
-    static getAPIBaseUrl(name: string): string {
+    public static getAPIBaseUrl(name: string): string {
         const api = this.getAPI(name)
 
         return api ? api.baseUrl : ''
@@ -287,16 +287,16 @@ export default class Application {
      * Triggers all connection listeners, also wait for disconnection to trigger disconnection listeners
      * @param socket
      */
-    onSocketJoin(socket: Socket): void {
+    private onSocketJoin(socket: Socket): void {
         const { id } = socket
 
-        this.sockets.push(socket)
+        this._sockets.push(socket)
         log(`Socket connected: ${id}, stored`)
 
-        this.modules.forEach((module) => module.onSocketJoin(socket))
+        this._modules.forEach((module) => module.onSocketJoin(socket))
 
         socket.on('disconnect', () => {
-            this.sockets = this.sockets.filter((s) => s.id !== id)
+            this._sockets = this._sockets.filter((s) => s.id !== id)
 
             log(`Socket disconnected: ${id}, removed`)
         })
@@ -307,9 +307,14 @@ export default class Application {
     /**
      * Start the server, returns a Promise to keep the promise pipe
      */
-    startServer(): Promise<http.Server> {
+    private startServer(): Promise<http.Server> {
         return new Promise((resolve) => {
-            const { app, io, server, options } = this
+            const {
+                _app: app,
+                _io: io,
+                _server: server,
+                _options: options
+            } = this
             const { port } = options
 
             // Use the public path defined in the options
@@ -331,7 +336,7 @@ export default class Application {
     /**
      * Start the server, if there is a pending connection try to the database, wait for it to end
      */
-    run(): Promise<http.Server> {
+    public run(): Promise<http.Server> {
         return new Promise((resolve) => {
             if (this.dbPending) {
                 // Wait for the promise to end
@@ -340,5 +345,11 @@ export default class Application {
                 resolve(this.startServer())
             }
         })
+    }
+
+    // ---- Getters ----------------------------------
+
+    get sockets(): Socket[] {
+        return this._sockets
     }
 }
