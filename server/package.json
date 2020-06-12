@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "main": "dist/index.js",
   "scripts": {
-    "start": "node dist/index.js",
+    "start": "cross-env DEBUG=core:Application node dist/index.js",
+    "dev": "cross-env DEBUG=core:*,model:*,module:*,task:* node dist/index.js",
     "build": "tsc --project ./tsconfig.json",
     "clean": "rimraf ./coverage ./dist ../doc/html/server ../doc/markdown/server",
     "lint": "eslint ./ --fix",
-    "doc": "typedoc --out ../doc/html/server && typedoc --out ../doc/markdown/server --plugin typedoc-plugin-markdown",
+    "doc": "typedoc --out ../doc/server --plugin typedoc-plugin-markdown",
     "prestart": "npm run lint && npm run build"
   },
   "author": "Xisabla",
@@ -23,6 +24,7 @@
     "@types/socket.io-client": "^1.4.33",
     "@typescript-eslint/eslint-plugin": "^3.1.0",
     "@typescript-eslint/parser": "^3.1.0",
+    "cross-env": "^7.0.2",
     "debug": "^4.1.1",
     "eslint": "^7.1.0",
     "eslint-config-prettier": "^6.11.0",
