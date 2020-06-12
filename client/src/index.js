@@ -12,5 +12,7 @@ socket.on('connected', (id) => {
     if (id === socket.id) console.log('Socket connected')
 })
 
+window.socket = socket
+
 // App Rendering
-render(<App />, document.getElementById('root'))
+render(<App socket={socket} />, document.getElementById('root'))

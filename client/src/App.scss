@@ -1,3 +1,269 @@
-html {
-    background: grey;
+body {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+	overflow: hidden;
+	box-sizing: border-box;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+	margin-top: -3vh;
+}
+
+.container-fluid {
+    width: 100%;
+    height: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin: auto;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: -15px;
+	margin-left: -15px;
+}
+
+.row-height .col-2, .row-height .col-10 {
+    overflow-y: scroll;
+    height: 100%;
+}
+
+.border-right {
+    border-right: 1px solid #dee2e6;
+}
+
+.list-group {
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: column;
+	padding-left: 0;
+	margin-bottom: 0;
+	border-radius: .25rem;
+}
+
+.list-group-item:first-child {
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: .75rem 1.25rem;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+}
+
+.text-center {
+	text-align: center;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+.text-light {
+    color: #f8f9fa;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.bg-dark {
+    background-color: #343a40;
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+	list-style: none;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;	
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.col-2 {
+    flex: 0 0 16%;
+    /*max-width: 35vh;*/
+	padding-right: 1%;
+	padding-left: 1%;
+}
+
+.col-10 {
+    flex: 0 0 79%;
+    /*max-width: 171vh;*/
+    padding-left: 1%;
+}
+
+.row-height {
+    height: 91.15vh;
+}
+
+@-moz-document url-prefix() {
+    .row-height {
+        height: 90.5vh;
+    }
+}
+
+.my-2 {
+    margin-top: .5rem;
+}
+
+.mb-2, .my-2 {
+    margin-bottom: .5rem;
+}
+
+.flex-column {
+    flex-direction: column !important;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.nav-link {
+    display: block;
+    padding: .5rem 1rem;
+}
+
+nav {
+	margin-top: 0px;
+	left:0;
+	top:0px;
+	width: 100%;
+	vertical-align: middle;
+}
+
+.font-italic {
+    font-style: italic !important;
+}
+
+.font-weight-light {
+    font-weight: 300 !important;
+}
+
+.display-4 {
+    font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.modules {
+	position: relative;
+}
+
+.module {
+    border: 1px solid rgba(0,0,0,.125);
+	border-radius: .25rem;
+    position: absolute;
+    resize: horizontal;
+    overflow: hidden;
+}
+
+.module-body {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.25rem;
+}
+
+.module-title {
+    margin-bottom: .75rem;
+}
+
+.title-container {
+    background-size: cover;
+    display: flex;
+    text-align: center;
+    color: #fff;
+    flex-direction: column;
+}
+
+.title-container__title {
+    font-size: 50px;
+    letter-spacing: 2px;
+    line-height: 1.3;
+    font-family: 'Roboto Slab', serif;
+    padding-top: 2px;
+}
+
+.dragTarget {
+	border-right: 1px solid rgba(0,0,0,.125);
+	border-bottom: 1px solid rgba(0,0,0,.125);
+	padding: 3px;
+	cursor: move;
+}
+
+#module-weather{
+    background: linear-gradient(35deg, #000077, #00bbee);
+}
+
+.form-container {
+    z-index: 1;
+    position: relative;
+    padding-top: 10px;
+    padding-left: 50px;
+}
+
+input[type="text"], input[type="number"] {
+    background-color: transparent;
+    border: 0;
+    border-bottom: solid 1px #ffbb11;
+    width: 30%;
+    padding-bottom: 4px;
+    color: #fff !important;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+input[type="text"], input[type="number"] { 
+    outline: none;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px #2c3e50 inset;
+    -webkit-text-fill-color: #fff !important;
+}
+
+button {
+    border: 0;
+    padding: 8px 20px;
+    margin: 0 2px;
+    border-radius: 2px;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: #ffbb11;
+    color: #fff;
+    font-weight: 100;
+}
+
+button:active {
+    outline: none;
 }
