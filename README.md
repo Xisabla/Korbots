@@ -1,4 +1,4 @@
-# Korbots ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Xisabla/Korbots/Build?style=for-the-badge)
+# Korbots ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Xisabla/Korbots/Build?style=for-the-badge) ![GitHub last commit](https://img.shields.io/github/last-commit/Xisabla/Korbots?style=for-the-badge)
 
 ## What is *Korbots* ?
 
