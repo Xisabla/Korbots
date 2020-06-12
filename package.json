@@ -1,0 +1,24 @@
+{
+  "name": "korbots",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "npm run client-build && npm run server-start",
+    "build": "npm run client-build && npm run server-build",
+    "clean": "npm run client-clean && npm run server-clean",
+    "client-build": "npm run build --prefix=./client",
+    "client-clean": "npm run clean --prefix=./client",
+    "server-build": "npm run build --prefix=./server",
+    "server-clean": "npm run clean --prefix=./server",
+    "server-start": "npm run start --prefix=./server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xisabla/Korbots.git"
+  },
+  "author": "Xisabla",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Xisabla/Korbots/issues"
+  },
+  "homepage": "https://github.com/Xisabla/Korbots#readme"
+}

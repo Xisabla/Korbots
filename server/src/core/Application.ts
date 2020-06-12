@@ -7,8 +7,6 @@ import { ConnectionOptions } from 'mongoose'
 import path from 'path'
 import socketIO, { Socket } from 'socket.io'
 
-import Listener from './Listener'
-import ListenerCollection from './ListenerCollection'
 import Module from './Module'
 
 const log = debug('core:Application')
@@ -40,14 +38,6 @@ export interface DatabaseConfiguration {
 }
 
 /**
- * TODO:
- *  - Add a API provider that:
- *      - Allow API registering (name, baseUrl, keyEntry)
- *      - Fetch the key from the .env file on registering
- *      - Allow Modules & Models to get API data (use static functions ?)
- */
-
-/**
  * Main application Object, registers components, starts the server
  */
 export default class Application {
@@ -73,8 +63,8 @@ export default class Application {
     // Modules
     /** Module store */
     modules: Module[]
-    /** Listener store */
-    listeners: ListenerCollection
+    /** Socket store */
+    sockets: Socket[]
     /** API store */
     static apis: APIwk[]
 
@@ -122,7 +112,7 @@ export default class Application {
         this.db = null
 
         this.modules = []
-        this.listeners = new ListenerCollection()
+        this.sockets = []
         if (!Application.apis) Application.apis = []
 
         this.app = express()
@@ -220,15 +210,6 @@ export default class Application {
         }
     }
 
-    /**
-     * Register a Listener inside the Application
-     * @param listener The Listener to register
-     */
-    registerListener(listener: Listener): void {
-        this.listeners.add(listener)
-        log(`Registered new listener on action: "${listener.action}"`)
-    }
-
     // ---- API --------------------------------------
 
     /**
@@ -309,16 +290,15 @@ export default class Application {
     onSocketJoin(socket: Socket): void {
         const { id } = socket
 
-        log(`Socket connected: ${id}`)
-        this.listeners.triggerAll({ action: 'connection' }, null, null, socket)
+        this.sockets.push(socket)
+        log(`Socket connected: ${id}, stored`)
+
+        this.modules.forEach((module) => module.onSocketJoin(socket))
 
         socket.on('disconnect', () => {
-            this.listeners.triggerAll(
-                { action: 'disconnection' },
-                null,
-                null,
-                socket
-            )
+            this.sockets = this.sockets.filter((s) => s.id !== id)
+
+            log(`Socket disconnected: ${id}, removed`)
         })
     }
 
