@@ -8,14 +8,18 @@ import { Weather } from '../models/Weather'
 const log = debug('module:weather')
 
 export class WeatherModule extends Module {
-    register(app: Application): void {
+    public register(app: Application): void {
         super.register(app)
 
         log('Registered')
     }
 
-    onSocketJoin(socket: Socket): void {
+    // ---- Sockets ----------------------------------
+
+    public onSocketJoin(socket: Socket): void {
         super.onSocketJoin(socket)
+
+        log(`Socket joined: ${socket.id}`)
 
         socket.on('weather:getCurrent', (data) => this.getCurrent(socket, data))
         socket.on('weather:getDaily', (data) => this.getDaily(socket, data))
@@ -25,7 +29,14 @@ export class WeatherModule extends Module {
         socket.on('weather:getAll', (data) => this.getAll(socket, data))
     }
 
-    getCurrent(socket: Socket, data: any): void {
+    // ---- Methods ----------------------------------
+
+    /**
+     * Get the Current entry from Weather according to the data provided by the Socket, then send one event to the Socket
+     * @param socket Client Socket
+     * @param data Provided data
+     */
+    private getCurrent(socket: Socket, data: any): void {
         log(`Received getCurrent event from ${socket.id}`)
 
         const lat: number = data.latitude
@@ -42,7 +53,12 @@ export class WeatherModule extends Module {
             })
     }
 
-    getDaily(socket: Socket, data: any): void {
+    /**
+     * Get the Daily entry from Weather according to the data provided by the Socket, then send one event to the Socket
+     * @param socket Client Socket
+     * @param data Provided data
+     */
+    private getDaily(socket: Socket, data: any): void {
         log(`Received getDaily event from ${socket.id}`)
 
         const lat: number = data.latitude
@@ -60,7 +76,12 @@ export class WeatherModule extends Module {
             })
     }
 
-    getDailyAll(socket: Socket, data: any): void {
+    /**
+     * Get the Daily entries from Weather according to the data provided by the Socket, then send one event to the Socket
+     * @param socket Client Socket
+     * @param data Provided data
+     */
+    private getDailyAll(socket: Socket, data: any): void {
         log(`Received getDailyAll event from ${socket.id}`)
 
         const lat: number = data.latitude
@@ -81,7 +102,12 @@ export class WeatherModule extends Module {
             })
     }
 
-    getAll(socket: Socket, data: any): void {
+    /**
+     * Get the Current entry and the Daily entries from Weather according to the data provided by the Socket, then send one event to the Socket
+     * @param socket Client Socket
+     * @param data Provided data
+     */
+    private getAll(socket: Socket, data: any): void {
         log(`Received getAll event from ${socket.id}`)
 
         const lat: number = data.latitude
@@ -103,7 +129,15 @@ export class WeatherModule extends Module {
             })
     }
 
+    // ---- Getters ----------------------------------
+
+    get name(): string {
+        // Module name is 'weather'
+        return 'weather'
+    }
+
     get waitForDatabase(): boolean {
+        // We do need to wait for the database
         return true
     }
 }

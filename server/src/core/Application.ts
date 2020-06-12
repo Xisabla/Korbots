@@ -185,8 +185,6 @@ export default class Application {
      * @param module The Module to register
      */
     public registerModule(module: Module): void {
-        // TODO: Maybe give a name to modules (and id ?) to show it on logging
-
         // If needs the database
         if (module.waitForDatabase) {
             // And there is a dbPending
@@ -195,18 +193,14 @@ export default class Application {
                 this.dbPending.then(() => {
                     module.register(this)
                     this._modules.push(module)
-                    log('Module registered')
                 })
             } else {
                 // Otherwise, don't register the module and dump an error
-                console.error(
-                    `Unable to register module, Module.waitForDatabase is set on true while there is no database connection in the Application`
-                )
+                log(`Unable to register ${module.name}, needs database while no database connection running`)
             }
         } else {
             module.register(this)
             this._modules.push(module)
-            log('Module registered')
         }
     }
 
@@ -293,10 +287,16 @@ export default class Application {
         this._sockets.push(socket)
         log(`Socket connected: ${id}, stored`)
 
-        this._modules.forEach((module) => module.onSocketJoin(socket))
+        this._modules.forEach((module) => {
+            module.onSocketJoin(socket)
+        })
 
         socket.on('disconnect', () => {
             this._sockets = this._sockets.filter((s) => s.id !== id)
+
+            this._modules.forEach((module) => {
+                module.onSocketLeave(socket)
+            })
 
             log(`Socket disconnected: ${id}, removed`)
         })
