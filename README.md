@@ -1,26 +1,16 @@
 # Korbots
 
-## How to contribute
-
-0 - Pull !
-```bash
-git pull
-```
-1 - Code your changes
-Do your stuff :)
-
-2 - Commit your changes
-```bash
-git add . # or git add myfile.ext myfolder/
-git commit -m "my commit description"
-```
-3 - Push your changes
-```bash
-git push
-```
+TODO: Requirements, install, run and doc
 
 ## Contributors
 
-- DALMAS Eugénie
+- BAJEUX Oregane
+- BUCAMP Charles
+- DALMAS Eugenie
+- DEFOORT Nicolas
 - DELEFORGE Charles
 - MIQUET Gautier
+
+## LICENSE
+
+This project is under the [MIT License](LICENSE)
