@@ -196,7 +196,9 @@ export default class Application {
                 })
             } else {
                 // Otherwise, don't register the module and dump an error
-                log(`Unable to register ${module.name}, needs database while no database connection running`)
+                log(
+                    `Unable to register ${module.name}, needs database while no database connection running`
+                )
             }
         } else {
             module.register(this)
