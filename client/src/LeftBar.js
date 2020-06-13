@@ -1,18 +1,28 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 
-const LeftBar = ({ settingsOnClick, settings }) => (
+import { CovidModule, WeatherModule } from './Modules'
+
+const LeftBar = ({ settingsOnClick, settings, onAddModule }) => (
     <div className="col-2 border-right">
         <h3 className="my-2">Modules</h3>
 
         <ul className="list-group">
-            <li className="list-group-item">
+            <li
+                className="list-group-item"
+                onClick={() => {
+                    onAddModule(CovidModule)
+                }}>
                 <i className="fas fa-chart-area"></i> Covid-19 News
             </li>
             <li className="list-group-item">
                 <i className="fas fa-music"></i> Music Player
             </li>
-            <li className="list-group-item">
+            <li
+                className="list-group-item"
+                onClick={() => {
+                    onAddModule(WeatherModule)
+                }}>
                 <i className="fas fa-cloud-moon-rain"></i> Weather
             </li>
             <li className="list-group-item">
@@ -88,6 +98,7 @@ const LeftBar = ({ settingsOnClick, settings }) => (
 
 LeftBar.propTypes = {
     settingsOnClick: PropTypes.func,
-    settings: PropTypes.object
+    settings: PropTypes.object,
+    onAddModule: PropTypes.func
 }
 export default LeftBar
