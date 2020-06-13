@@ -8,6 +8,22 @@ import {
 } from '../core/API/IOpenWeather'
 import Application from '../core/Application'
 
+// ---- Input Interfaces -------------------------
+
+export interface LocationCoordinates {
+    /** Latitude */
+    lat: number
+    /** Longitude */
+    lon: number
+}
+
+/** Location can be coordinates or city name or "city_name,country_code", which are strings */
+export type Location = LocationCoordinates | string
+
+// TODO: Use 'Location' instead of 'lat' and 'lon', also make a method to find coordinates from city name for Daily entries (they only work with coordinate)
+//  However, use city name (if it is a string) for Current
+//  Change only the content of fetching methods, and only declaration of the others
+
 // ---- Schema -----------------------------------
 
 /**
