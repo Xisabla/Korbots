@@ -26,7 +26,7 @@ Content of a One-Call Response from OpenWeather API
 
 • **daily**? : *[OpenweatherOnecallAPIDailyElement](_core_api_iopenweather_.openweatheronecallapidailyelement.md)[]*
 
-*Defined in [src/core/API/IOpenWeather.ts:116](https://github.com/Xisabla/Korbots/blob/c8927cf/server/src/core/API/IOpenWeather.ts#L116)*
+*Defined in [src/core/API/IOpenWeather.ts:116](https://github.com/Xisabla/Korbots/blob/2d9c1bf/server/src/core/API/IOpenWeather.ts#L116)*
 
 Daily measurements of next 8 following days
 
@@ -36,7 +36,7 @@ ___
 
 • **lat**: *number*
 
-*Defined in [src/core/API/IOpenWeather.ts:108](https://github.com/Xisabla/Korbots/blob/c8927cf/server/src/core/API/IOpenWeather.ts#L108)*
+*Defined in [src/core/API/IOpenWeather.ts:108](https://github.com/Xisabla/Korbots/blob/2d9c1bf/server/src/core/API/IOpenWeather.ts#L108)*
 
 Latitude of the location
 
@@ -46,7 +46,7 @@ ___
 
 • **lon**: *number*
 
-*Defined in [src/core/API/IOpenWeather.ts:110](https://github.com/Xisabla/Korbots/blob/c8927cf/server/src/core/API/IOpenWeather.ts#L110)*
+*Defined in [src/core/API/IOpenWeather.ts:110](https://github.com/Xisabla/Korbots/blob/2d9c1bf/server/src/core/API/IOpenWeather.ts#L110)*
 
 Longitude of the location
 
@@ -56,7 +56,7 @@ ___
 
 • **timezone**: *string*
 
-*Defined in [src/core/API/IOpenWeather.ts:112](https://github.com/Xisabla/Korbots/blob/c8927cf/server/src/core/API/IOpenWeather.ts#L112)*
+*Defined in [src/core/API/IOpenWeather.ts:112](https://github.com/Xisabla/Korbots/blob/2d9c1bf/server/src/core/API/IOpenWeather.ts#L112)*
 
 Timezone for the location
 
@@ -66,6 +66,6 @@ ___
 
 • **timezone_offset**: *number*
 
-*Defined in [src/core/API/IOpenWeather.ts:114](https://github.com/Xisabla/Korbots/blob/c8927cf/server/src/core/API/IOpenWeather.ts#L114)*
+*Defined in [src/core/API/IOpenWeather.ts:114](https://github.com/Xisabla/Korbots/blob/2d9c1bf/server/src/core/API/IOpenWeather.ts#L114)*
 
 Timezone offset: shift in secondes from UTC

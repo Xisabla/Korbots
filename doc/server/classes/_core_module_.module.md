@@ -31,7 +31,7 @@
 
 • **app**: *[Application](_core_application_.application.md)*
 
-*Defined in [src/core/Module.ts:9](https://github.com/Xisabla/Korbots/blob/c8927cf/server/src/core/Module.ts#L9)*
+*Defined in [src/core/Module.ts:9](https://github.com/Xisabla/Korbots/blob/2d9c1bf/server/src/core/Module.ts#L9)*
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 • **sockets**: *Socket[]*
 
-*Defined in [src/core/Module.ts:10](https://github.com/Xisabla/Korbots/blob/c8927cf/server/src/core/Module.ts#L10)*
+*Defined in [src/core/Module.ts:10](https://github.com/Xisabla/Korbots/blob/2d9c1bf/server/src/core/Module.ts#L10)*
 
 ## Accessors
 
@@ -47,7 +47,7 @@ ___
 
 • **get waitForDatabase**(): *boolean*
 
-*Defined in [src/core/Module.ts:27](https://github.com/Xisabla/Korbots/blob/c8927cf/server/src/core/Module.ts#L27)*
+*Defined in [src/core/Module.ts:27](https://github.com/Xisabla/Korbots/blob/2d9c1bf/server/src/core/Module.ts#L27)*
 
 **Returns:** *boolean*
 
@@ -57,7 +57,7 @@ ___
 
 ▸ **onSocketJoin**(`socket`: Socket): *void*
 
-*Defined in [src/core/Module.ts:17](https://github.com/Xisabla/Korbots/blob/c8927cf/server/src/core/Module.ts#L17)*
+*Defined in [src/core/Module.ts:17](https://github.com/Xisabla/Korbots/blob/2d9c1bf/server/src/core/Module.ts#L17)*
 
 **Parameters:**
 
@@ -73,7 +73,7 @@ ___
 
 ▸ **onSocketLeave**(`socket`: Socket): *void*
 
-*Defined in [src/core/Module.ts:22](https://github.com/Xisabla/Korbots/blob/c8927cf/server/src/core/Module.ts#L22)*
+*Defined in [src/core/Module.ts:22](https://github.com/Xisabla/Korbots/blob/2d9c1bf/server/src/core/Module.ts#L22)*
 
 **Parameters:**
 
@@ -89,7 +89,7 @@ ___
 
 ▸ **register**(`app`: [Application](_core_application_.application.md)): *void*
 
-*Defined in [src/core/Module.ts:12](https://github.com/Xisabla/Korbots/blob/c8927cf/server/src/core/Module.ts#L12)*
+*Defined in [src/core/Module.ts:12](https://github.com/Xisabla/Korbots/blob/2d9c1bf/server/src/core/Module.ts#L12)*
 
 **Parameters:**
 

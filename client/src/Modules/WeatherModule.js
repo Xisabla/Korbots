@@ -5,7 +5,6 @@ import React from 'react'
 class WeatherModule extends React.Component {
     constructor(props) {
         super(props)
-        console.log('WeatherModule.props.onload = ', props.onload)
         this.state = {
             ref: React.createRef(),
             index: props.index,
@@ -20,7 +19,7 @@ class WeatherModule extends React.Component {
                 minHeight: '300px',
                 maxWidth: '800px',
                 maxHeight: '710px',
-                left: '810px',
+                left: '0px',
                 top: '0px'
             },
             longitude: 0,
@@ -73,6 +72,7 @@ class WeatherModule extends React.Component {
                     onMouseUp(ev, index)
                 }}>
                 <i className="fas fa-arrows-alt dragTarget"></i>
+                <i className="fas fa-lock-open lockTarget"></i>
                 <div className="module-body">
                     <div className="col-xs-12 col-md-5 title-container">
                         <Titles />
@@ -104,18 +104,18 @@ class WeatherModule extends React.Component {
 
 const Titles = () => (
     <div>
-        <text className="title-container__title">Météo</text>
+        <p className="title-container__title">Météo</p>
     </div>
 )
 
 WeatherModule.propTypes = {
-    handleChangeLatitude: PropTypes.fun,
-    handleChangeLongitude: PropTypes.fun,
+    handleChangeLatitude: PropTypes.func,
+    handleChangeLongitude: PropTypes.func,
     onMouseDown: PropTypes.func,
     onMouseUp: PropTypes.func,
     index: PropTypes.number,
     ref: PropTypes.string,
-    onload: PropTypes.fun,
+    onload: PropTypes.func,
     socket: PropTypes.object
 }
 

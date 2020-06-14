@@ -1,10 +1,10 @@
 import './App.scss'
 
-import { PropTypes } from 'mobx-react'
+import { PropTypes } from 'prop-types'
 import React, { Component } from 'react'
 
 import LeftBar from './LeftBar'
-import modules from './Modules'
+//import { CovidModule, WeatherModule } from './Modules'
 import Settings from './Settings'
 
 class App extends Component {
@@ -19,8 +19,9 @@ class App extends Component {
             },
             grabbing: false,
             mouse: {},
-            modules: modules,
+            modules: [],
             modulesRefs: [],
+            modulesLocked: [],
             modulesRatios: []
         }
     }
@@ -74,12 +75,23 @@ class App extends Component {
      */
     handleMouseDown = (ev, index) => {
         let input = {}
-
-        if (ev.target.className === 'fas fa-arrows-alt dragTarget') {
-            input.grabbing = true
-        }
-        if (ev.target.className !== 'module' && input.grabbing !== true) return
         input.holding = index
+        if (ev.target.className.includes('dragTarget')) {
+            input.grabbing = true
+        } else if (ev.target.className.includes('lockTarget')) {
+            input.modulesLocked = this.state.modulesLocked
+            input.modulesLocked[index] = !input.modulesLocked[index]
+            ev.target.className = `fas fa-lock${
+                input.modulesLocked[index] ? '' : '-open'
+            } lockTarget`
+            input.holding = input.modulesLocked[index] ? index : 0
+        }
+        if (
+            !ev.target.className.includes('module') &&
+            input.grabbing !== true &&
+            !ev.target.className.includes('lockTarget')
+        )
+            return
         input.mouse = {
             x:
                 ev.clientX -
@@ -104,22 +116,25 @@ class App extends Component {
      * Prevent the modules from overlapping while dragging or resizing
      */
     updateModules = () => {
-        const { modulesRefs, pixelStep, holding, modulesRatios } = this.state
+        const {
+            modulesRefs,
+            pixelStep,
+            holding,
+            modulesRatios,
+            modulesLocked
+        } = this.state
         if (holding === -1) return
         let rects = []
-
         for (let i = 0; i < modulesRefs.length; i++) {
             rects.push({
                 left: parseInt(modulesRefs[i].current.style.left, 10),
                 right:
                     parseInt(modulesRefs[i].current.style.left, 10) +
-                    parseInt(modulesRefs[i].current.style.width, 10) +
-                    pixelStep,
+                    parseInt(modulesRefs[i].current.style.width, 10),
                 top: parseInt(modulesRefs[i].current.style.top, 10),
                 bottom:
                     parseInt(modulesRefs[i].current.style.top, 10) +
-                    parseInt(modulesRefs[i].current.style.height, 10) +
-                    pixelStep
+                    parseInt(modulesRefs[i].current.style.height, 10)
             })
         }
 
@@ -149,8 +164,20 @@ class App extends Component {
         rects[holding].bottom = rects[holding].top + itemHeight
 
         for (let i = 0; i < modulesRefs.length; i++) {
-            for (let j = 0; j < modules.length; j++) {
+            for (let j = 0; j < modulesRefs.length; j++) {
                 if (i !== j && j !== holding) {
+                    while (
+                        !this.isOver(rects[i], rects[j]) &&
+                        rects[j].left > 0 &&
+                        !modulesLocked[j]
+                    ) {
+                        rects[j].left -= pixelStep
+                        rects[j].right -= pixelStep
+                        if (rects[j].left < 0) {
+                            rects[j].left = 0
+                            rects[j].right += pixelStep + rects[j].left
+                        }
+                    }
                     while (this.isOver(rects[i], rects[j])) {
                         //TODO : More cases
                         if (
@@ -158,8 +185,16 @@ class App extends Component {
                             rects[i].right > rects[j].right &&
                             rects[j].left - pixelStep >= 0
                         ) {
-                            rects[j].left -= pixelStep
-                            rects[j].right -= pixelStep
+                            if (
+                                (!modulesLocked[j] && !modulesLocked[i]) ||
+                                (modulesLocked[j] && modulesLocked[i])
+                            ) {
+                                rects[j].left -= pixelStep
+                                rects[j].right -= pixelStep
+                            } else {
+                                rects[i].left += pixelStep
+                                rects[i].right += pixelStep
+                            }
                         } else if (
                             rects[i].left <= rects[j].right &&
                             rects[i].right > rects[j].right &&
@@ -176,7 +211,7 @@ class App extends Component {
             }
         }
 
-        for (let i = 0; i < modules.length; i++) {
+        for (let i = 0; i < modulesRefs.length; i++) {
             modulesRefs[i].current.style.left = `${rects[i].left}px`
             modulesRefs[i].current.style.top = `${rects[i].top}px`
             if (i === holding) {
@@ -247,16 +282,36 @@ class App extends Component {
      * @param {*} ref
      */
     handleModuleLoading = (ref) => {
-        const { modulesRefs, modulesRatios } = this.state
+        const { modulesRefs, modulesRatios, modulesLocked } = this.state
         modulesRefs.push(ref)
         modulesRatios.push(
             parseInt(ref.current.style.height, 10) /
                 parseInt(ref.current.style.width, 10)
         )
+        modulesLocked.push(false)
         this.setState(() => ({
             modulesRefs: modulesRefs,
             modulesRatios: modulesRatios
         }))
+    }
+
+    handleAddModule = (Module) => {
+        const { modules } = this.state
+        if (modules.includes(Module)) {
+            alert('Module already loaded')
+            return
+        }
+        modules.push(Module)
+        this.setState(() => {
+            setTimeout(() => {
+                this.updateModules()
+                this.setState(() => ({ holding: -1 }))
+            }, 50)
+            return {
+                modules: modules,
+                holding: modules.length - 1
+            }
+        })
     }
 
     /**
@@ -278,7 +333,7 @@ class App extends Component {
     }
 
     render() {
-        const { settings } = this.state
+        const { settings, modules } = this.state
         return (
             <div
                 onMouseMove={(ev) => this.moveModule(ev)}
@@ -300,6 +355,7 @@ class App extends Component {
                         <LeftBar
                             settingsOnClick={this.settingsOnClick}
                             settings={settings}
+                            onAddModule={this.handleAddModule}
                         />
                         <div className="col-10">
                             <div className="display-4 font-italic font-weight-light text-center my-2">
