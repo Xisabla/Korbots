@@ -25,13 +25,9 @@ Check the [build workflow details](#build-workflow) and the [running commands de
 
 ## Documentation
 
-### Build workflow
-
-See [here](doc/build.md)
-
-### Source documentation
-
-See [here](doc/server/globals.md)
+- Build workflow [here](doc/build.md)
+- Server documentation [here](doc/server/README.md)
+- Socket.IO events [here](doc/socket-events.md)
 
 ## Technologies and main libraries
 

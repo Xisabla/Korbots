@@ -8,7 +8,7 @@
     "build": "tsc --project ./tsconfig.json",
     "clean": "rimraf ./coverage ./dist ../doc/server",
     "lint": "eslint ./ --fix",
-    "doc": "typedoc --out ../doc/server --plugin typedoc-plugin-markdown",
+    "doc": "typedoc --out ../doc/server --plugin typedoc-plugin-markdown --readme none",
     "prestart": "npm run lint && npm run build"
   },
   "author": "Xisabla",

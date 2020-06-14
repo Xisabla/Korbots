@@ -19,8 +19,10 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 12.x
-    - name: Install dependencies
-      run: npm install
+    - name: Install dependencies and clean
+      run: |
+        npm install
+        npm run clean
     - name: Build the doc
       run: npm run doc
     - name: Commit        
