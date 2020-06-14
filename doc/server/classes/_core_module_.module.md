@@ -36,7 +36,7 @@ All Modules extends from this Object, it's working like a Controller registered 
 
 • **app**: *[Application](_core_application_.application.md)*
 
-*Defined in [src/core/Module.ts:15](https://github.com/Xisabla/Korbots/blob/f6d7359/server/src/core/Module.ts#L15)*
+*Defined in [src/core/Module.ts:15](https://github.com/Xisabla/Korbots/blob/e566151/server/src/core/Module.ts#L15)*
 
 Application instance
 
@@ -46,7 +46,7 @@ ___
 
 • **sockets**: *Socket[]*
 
-*Defined in [src/core/Module.ts:17](https://github.com/Xisabla/Korbots/blob/f6d7359/server/src/core/Module.ts#L17)*
+*Defined in [src/core/Module.ts:17](https://github.com/Xisabla/Korbots/blob/e566151/server/src/core/Module.ts#L17)*
 
 Internal sockets store, updated on SocketJoin and on SocketLeave
 
@@ -56,7 +56,7 @@ Internal sockets store, updated on SocketJoin and on SocketLeave
 
 • **get name**(): *string*
 
-*Defined in [src/core/Module.ts:51](https://github.com/Xisabla/Korbots/blob/f6d7359/server/src/core/Module.ts#L51)*
+*Defined in [src/core/Module.ts:51](https://github.com/Xisabla/Korbots/blob/e566151/server/src/core/Module.ts#L51)*
 
 Name of the Module (default: 'name')
 
@@ -68,7 +68,7 @@ ___
 
 • **get waitForDatabase**(): *boolean*
 
-*Defined in [src/core/Module.ts:56](https://github.com/Xisabla/Korbots/blob/f6d7359/server/src/core/Module.ts#L56)*
+*Defined in [src/core/Module.ts:56](https://github.com/Xisabla/Korbots/blob/e566151/server/src/core/Module.ts#L56)*
 
 Does the Module need to wait for the Database to be connected ? (default : false)
 
@@ -80,7 +80,7 @@ Does the Module need to wait for the Database to be connected ? (default : false
 
 ▸ **onSocketJoin**(`socket`: Socket): *void*
 
-*Defined in [src/core/Module.ts:34](https://github.com/Xisabla/Korbots/blob/f6d7359/server/src/core/Module.ts#L34)*
+*Defined in [src/core/Module.ts:34](https://github.com/Xisabla/Korbots/blob/e566151/server/src/core/Module.ts#L34)*
 
 Function called once a Socket is connected
 
@@ -98,7 +98,7 @@ ___
 
 ▸ **onSocketLeave**(`socket`: Socket): *void*
 
-*Defined in [src/core/Module.ts:43](https://github.com/Xisabla/Korbots/blob/f6d7359/server/src/core/Module.ts#L43)*
+*Defined in [src/core/Module.ts:43](https://github.com/Xisabla/Korbots/blob/e566151/server/src/core/Module.ts#L43)*
 
 Function called once a Socket is disconnected
 
@@ -116,7 +116,7 @@ ___
 
 ▸ **register**(`app`: [Application](_core_application_.application.md)): *void*
 
-*Defined in [src/core/Module.ts:23](https://github.com/Xisabla/Korbots/blob/f6d7359/server/src/core/Module.ts#L23)*
+*Defined in [src/core/Module.ts:23](https://github.com/Xisabla/Korbots/blob/e566151/server/src/core/Module.ts#L23)*
 
 Register the Module inside the Application
 

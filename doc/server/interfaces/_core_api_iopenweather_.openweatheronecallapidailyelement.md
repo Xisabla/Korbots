@@ -35,7 +35,7 @@ Content of the "daily" element of a One-Call Response
 
 • **clouds**: *number*
 
-*Defined in [src/core/API/IOpenWeather.ts:184](https://github.com/Xisabla/Korbots/blob/f6d7359/server/src/core/API/IOpenWeather.ts#L184)*
+*Defined in [src/core/API/IOpenWeather.ts:184](https://github.com/Xisabla/Korbots/blob/e566151/server/src/core/API/IOpenWeather.ts#L184)*
 
 Cloudiness in %
 
@@ -45,7 +45,7 @@ ___
 
 • **dew_point**? : *number*
 
-*Defined in [src/core/API/IOpenWeather.ts:170](https://github.com/Xisabla/Korbots/blob/f6d7359/server/src/core/API/IOpenWeather.ts#L170)*
+*Defined in [src/core/API/IOpenWeather.ts:170](https://github.com/Xisabla/Korbots/blob/e566151/server/src/core/API/IOpenWeather.ts#L170)*
 
 Atmospheric temperature in K
 
@@ -55,7 +55,7 @@ ___
 
 • **dt**: *number*
 
-*Defined in [src/core/API/IOpenWeather.ts:134](https://github.com/Xisabla/Korbots/blob/f6d7359/server/src/core/API/IOpenWeather.ts#L134)*
+*Defined in [src/core/API/IOpenWeather.ts:134](https://github.com/Xisabla/Korbots/blob/e566151/server/src/core/API/IOpenWeather.ts#L134)*
 
 Time of the forecasted data, unix UTC
 
@@ -65,7 +65,7 @@ ___
 
 • **feels_like**? : *object*
 
-*Defined in [src/core/API/IOpenWeather.ts:155](https://github.com/Xisabla/Korbots/blob/f6d7359/server/src/core/API/IOpenWeather.ts#L155)*
+*Defined in [src/core/API/IOpenWeather.ts:155](https://github.com/Xisabla/Korbots/blob/e566151/server/src/core/API/IOpenWeather.ts#L155)*
 
 Temperature feels like
 
@@ -85,7 +85,7 @@ ___
 
 • **humidity**: *number*
 
-*Defined in [src/core/API/IOpenWeather.ts:168](https://github.com/Xisabla/Korbots/blob/f6d7359/server/src/core/API/IOpenWeather.ts#L168)*
+*Defined in [src/core/API/IOpenWeather.ts:168](https://github.com/Xisabla/Korbots/blob/e566151/server/src/core/API/IOpenWeather.ts#L168)*
 
 Humidity in %
 
@@ -95,7 +95,7 @@ ___
 
 • **pressure**: *number*
 
-*Defined in [src/core/API/IOpenWeather.ts:166](https://github.com/Xisabla/Korbots/blob/f6d7359/server/src/core/API/IOpenWeather.ts#L166)*
+*Defined in [src/core/API/IOpenWeather.ts:166](https://github.com/Xisabla/Korbots/blob/e566151/server/src/core/API/IOpenWeather.ts#L166)*
 
 Pressure on the sea level in hPa
 
@@ -105,7 +105,7 @@ ___
 
 • **rain**? : *number*
 
-*Defined in [src/core/API/IOpenWeather.ts:176](https://github.com/Xisabla/Korbots/blob/f6d7359/server/src/core/API/IOpenWeather.ts#L176)*
+*Defined in [src/core/API/IOpenWeather.ts:176](https://github.com/Xisabla/Korbots/blob/e566151/server/src/core/API/IOpenWeather.ts#L176)*
 
 Rain precipitation in mm
 
@@ -115,7 +115,7 @@ ___
 
 • **snow**? : *number*
 
-*Defined in [src/core/API/IOpenWeather.ts:178](https://github.com/Xisabla/Korbots/blob/f6d7359/server/src/core/API/IOpenWeather.ts#L178)*
+*Defined in [src/core/API/IOpenWeather.ts:178](https://github.com/Xisabla/Korbots/blob/e566151/server/src/core/API/IOpenWeather.ts#L178)*
 
 Snow volume in mm
 
@@ -125,7 +125,7 @@ ___
 
 • **sunrise**: *number*
 
-*Defined in [src/core/API/IOpenWeather.ts:136](https://github.com/Xisabla/Korbots/blob/f6d7359/server/src/core/API/IOpenWeather.ts#L136)*
+*Defined in [src/core/API/IOpenWeather.ts:136](https://github.com/Xisabla/Korbots/blob/e566151/server/src/core/API/IOpenWeather.ts#L136)*
 
 Sunrise time, unix UTC
 
@@ -135,7 +135,7 @@ ___
 
 • **sunset**: *number*
 
-*Defined in [src/core/API/IOpenWeather.ts:138](https://github.com/Xisabla/Korbots/blob/f6d7359/server/src/core/API/IOpenWeather.ts#L138)*
+*Defined in [src/core/API/IOpenWeather.ts:138](https://github.com/Xisabla/Korbots/blob/e566151/server/src/core/API/IOpenWeather.ts#L138)*
 
 Sunset time, unix UTC
 
@@ -145,7 +145,7 @@ ___
 
 • **temp**: *object*
 
-*Defined in [src/core/API/IOpenWeather.ts:140](https://github.com/Xisabla/Korbots/blob/f6d7359/server/src/core/API/IOpenWeather.ts#L140)*
+*Defined in [src/core/API/IOpenWeather.ts:140](https://github.com/Xisabla/Korbots/blob/e566151/server/src/core/API/IOpenWeather.ts#L140)*
 
 Temperature
 
@@ -169,7 +169,7 @@ ___
 
 • **uvi**: *number*
 
-*Defined in [src/core/API/IOpenWeather.ts:186](https://github.com/Xisabla/Korbots/blob/f6d7359/server/src/core/API/IOpenWeather.ts#L186)*
+*Defined in [src/core/API/IOpenWeather.ts:186](https://github.com/Xisabla/Korbots/blob/e566151/server/src/core/API/IOpenWeather.ts#L186)*
 
 UV index
 
@@ -179,7 +179,7 @@ ___
 
 • **visibility**? : *number*
 
-*Defined in [src/core/API/IOpenWeather.ts:180](https://github.com/Xisabla/Korbots/blob/f6d7359/server/src/core/API/IOpenWeather.ts#L180)*
+*Defined in [src/core/API/IOpenWeather.ts:180](https://github.com/Xisabla/Korbots/blob/e566151/server/src/core/API/IOpenWeather.ts#L180)*
 
 Average visibility in m
 
@@ -189,7 +189,7 @@ ___
 
 • **weather**: *[OpenweatherAPIWeatherStatus](_core_api_iopenweather_.openweatherapiweatherstatus.md)[]*
 
-*Defined in [src/core/API/IOpenWeather.ts:182](https://github.com/Xisabla/Korbots/blob/f6d7359/server/src/core/API/IOpenWeather.ts#L182)*
+*Defined in [src/core/API/IOpenWeather.ts:182](https://github.com/Xisabla/Korbots/blob/e566151/server/src/core/API/IOpenWeather.ts#L182)*
 
 Weather status
 
@@ -199,7 +199,7 @@ ___
 
 • **wind_deg**? : *number*
 
-*Defined in [src/core/API/IOpenWeather.ts:174](https://github.com/Xisabla/Korbots/blob/f6d7359/server/src/core/API/IOpenWeather.ts#L174)*
+*Defined in [src/core/API/IOpenWeather.ts:174](https://github.com/Xisabla/Korbots/blob/e566151/server/src/core/API/IOpenWeather.ts#L174)*
 
 Wind direction in degrees
 
@@ -209,6 +209,6 @@ ___
 
 • **wind_speed**: *number*
 
-*Defined in [src/core/API/IOpenWeather.ts:172](https://github.com/Xisabla/Korbots/blob/f6d7359/server/src/core/API/IOpenWeather.ts#L172)*
+*Defined in [src/core/API/IOpenWeather.ts:172](https://github.com/Xisabla/Korbots/blob/e566151/server/src/core/API/IOpenWeather.ts#L172)*
 
 Wind speed in m/s

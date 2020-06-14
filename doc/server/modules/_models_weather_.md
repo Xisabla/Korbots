@@ -25,7 +25,7 @@
 
 Ƭ **Location**: *[LocationCoordinates](../interfaces/_models_weather_.locationcoordinates.md) | string*
 
-*Defined in [src/models/Weather.ts:21](https://github.com/Xisabla/Korbots/blob/f6d7359/server/src/models/Weather.ts#L21)*
+*Defined in [src/models/Weather.ts:21](https://github.com/Xisabla/Korbots/blob/e566151/server/src/models/Weather.ts#L21)*
 
 Location can be coordinates or city name or "city_name,country_code", which are strings
 
@@ -35,7 +35,7 @@ Location can be coordinates or city name or "city_name,country_code", which are 
 
 • **Weather**: *[IWeather](../interfaces/_models_weather_.iweather.md)‹›* = model<IWeatherSchema, IWeather>('Weather', WeatherSchema)
 
-*Defined in [src/models/Weather.ts:653](https://github.com/Xisabla/Korbots/blob/f6d7359/server/src/models/Weather.ts#L653)*
+*Defined in [src/models/Weather.ts:653](https://github.com/Xisabla/Korbots/blob/e566151/server/src/models/Weather.ts#L653)*
 
 Weather Model, allow to create, manipulate and save weather entries
 
@@ -79,7 +79,7 @@ ___
     { collection: 'weather' }
 )
 
-*Defined in [src/models/Weather.ts:33](https://github.com/Xisabla/Korbots/blob/f6d7359/server/src/models/Weather.ts#L33)*
+*Defined in [src/models/Weather.ts:33](https://github.com/Xisabla/Korbots/blob/e566151/server/src/models/Weather.ts#L33)*
 
 Mongoose Schema of the Weather Model Document, works in the "weather" collection
 See "Document" inside all the documentation of this file as instance of this Schema
