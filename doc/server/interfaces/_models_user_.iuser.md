@@ -1,4 +1,4 @@
-[korbots-server](../README.md) › [Globals](../globals.md) › ["models/User"](../modules/_models_user_.md) › [IUser](_models_user_.iuser.md)
+[korbots-server](../README.md) › ["models/User"](../modules/_models_user_.md) › [IUser](_models_user_.iuser.md)
 
 # Interface: IUser ‹**QueryHelpers**›
 
@@ -850,7 +850,7 @@ ___
 
 ▸ **doesExists**(`username`: string): *Promise‹boolean›*
 
-*Defined in [src/models/User.ts:19](https://github.com/Xisabla/Korbots/blob/2d9c1bf/server/src/models/User.ts#L19)*
+*Defined in [src/models/User.ts:19](https://github.com/Xisabla/Korbots/blob/f6d7359/server/src/models/User.ts#L19)*
 
 **Parameters:**
 

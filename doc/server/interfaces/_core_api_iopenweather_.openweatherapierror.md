@@ -1,4 +1,4 @@
-[korbots-server](../README.md) › [Globals](../globals.md) › ["core/API/IOpenWeather"](../modules/_core_api_iopenweather_.md) › [OpenweatherAPIError](_core_api_iopenweather_.openweatherapierror.md)
+[korbots-server](../README.md) › ["core/API/IOpenWeather"](../modules/_core_api_iopenweather_.md) › [OpenweatherAPIError](_core_api_iopenweather_.openweatherapierror.md)
 
 # Interface: OpenweatherAPIError
 
@@ -21,7 +21,7 @@ Content of an Error Response from Openweather API
 
 • **cod**: *string*
 
-*Defined in [src/core/API/IOpenWeather.ts:8](https://github.com/Xisabla/Korbots/blob/2d9c1bf/server/src/core/API/IOpenWeather.ts#L8)*
+*Defined in [src/core/API/IOpenWeather.ts:8](https://github.com/Xisabla/Korbots/blob/f6d7359/server/src/core/API/IOpenWeather.ts#L8)*
 
 Error code
 
@@ -31,6 +31,6 @@ ___
 
 • **message**: *string*
 
-*Defined in [src/core/API/IOpenWeather.ts:10](https://github.com/Xisabla/Korbots/blob/2d9c1bf/server/src/core/API/IOpenWeather.ts#L10)*
+*Defined in [src/core/API/IOpenWeather.ts:10](https://github.com/Xisabla/Korbots/blob/f6d7359/server/src/core/API/IOpenWeather.ts#L10)*
 
 Error details

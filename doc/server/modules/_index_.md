@@ -1,4 +1,4 @@
-[korbots-server](../README.md) › [Globals](../globals.md) › ["index"](_index_.md)
+[korbots-server](../README.md) › ["index"](_index_.md)
 
 # Module: "index"
 
@@ -14,4 +14,4 @@
 
 • **app**: *[Application](../classes/_core_application_.application.md)‹›* = new Application({ useEnv: true })
 
-*Defined in [src/index.ts:5](https://github.com/Xisabla/Korbots/blob/2d9c1bf/server/src/index.ts#L5)*
+*Defined in [src/index.ts:5](https://github.com/Xisabla/Korbots/blob/f6d7359/server/src/index.ts#L5)*

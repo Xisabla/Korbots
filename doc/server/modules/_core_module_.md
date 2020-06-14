@@ -1,4 +1,4 @@
-[korbots-server](../README.md) › [Globals](../globals.md) › ["core/Module"](_core_module_.md)
+[korbots-server](../README.md) › ["core/Module"](_core_module_.md)
 
 # Module: "core/Module"
 

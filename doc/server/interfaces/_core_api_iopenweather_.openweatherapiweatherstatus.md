@@ -1,4 +1,4 @@
-[korbots-server](../README.md) › [Globals](../globals.md) › ["core/API/IOpenWeather"](../modules/_core_api_iopenweather_.md) › [OpenweatherAPIWeatherStatus](_core_api_iopenweather_.openweatherapiweatherstatus.md)
+[korbots-server](../README.md) › ["core/API/IOpenWeather"](../modules/_core_api_iopenweather_.md) › [OpenweatherAPIWeatherStatus](_core_api_iopenweather_.openweatherapiweatherstatus.md)
 
 # Interface: OpenweatherAPIWeatherStatus
 
@@ -23,7 +23,7 @@ Content of a "weather" element
 
 • **description**: *string*
 
-*Defined in [src/core/API/IOpenWeather.ts:200](https://github.com/Xisabla/Korbots/blob/2d9c1bf/server/src/core/API/IOpenWeather.ts#L200)*
+*Defined in [src/core/API/IOpenWeather.ts:200](https://github.com/Xisabla/Korbots/blob/f6d7359/server/src/core/API/IOpenWeather.ts#L200)*
 
 Weather status complete description
 
@@ -33,7 +33,7 @@ ___
 
 • **icon**: *string*
 
-*Defined in [src/core/API/IOpenWeather.ts:202](https://github.com/Xisabla/Korbots/blob/2d9c1bf/server/src/core/API/IOpenWeather.ts#L202)*
+*Defined in [src/core/API/IOpenWeather.ts:202](https://github.com/Xisabla/Korbots/blob/f6d7359/server/src/core/API/IOpenWeather.ts#L202)*
 
 Weather status icon name from Openweather site
 
@@ -43,7 +43,7 @@ ___
 
 • **id**: *number*
 
-*Defined in [src/core/API/IOpenWeather.ts:196](https://github.com/Xisabla/Korbots/blob/2d9c1bf/server/src/core/API/IOpenWeather.ts#L196)*
+*Defined in [src/core/API/IOpenWeather.ts:196](https://github.com/Xisabla/Korbots/blob/f6d7359/server/src/core/API/IOpenWeather.ts#L196)*
 
 ID of the weather status
 
@@ -53,6 +53,6 @@ ___
 
 • **main**: *string*
 
-*Defined in [src/core/API/IOpenWeather.ts:198](https://github.com/Xisabla/Korbots/blob/2d9c1bf/server/src/core/API/IOpenWeather.ts#L198)*
+*Defined in [src/core/API/IOpenWeather.ts:198](https://github.com/Xisabla/Korbots/blob/f6d7359/server/src/core/API/IOpenWeather.ts#L198)*
 
 Status name (short description)

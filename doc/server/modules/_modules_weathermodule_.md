@@ -1,4 +1,4 @@
-[korbots-server](../README.md) › [Globals](../globals.md) › ["modules/WeatherModule"](_modules_weathermodule_.md)
+[korbots-server](../README.md) › ["modules/WeatherModule"](_modules_weathermodule_.md)
 
 # Module: "modules/WeatherModule"
 
@@ -18,4 +18,4 @@
 
 • **log**: *Debugger* = debug('module:weather')
 
-*Defined in [src/modules/WeatherModule.ts:8](https://github.com/Xisabla/Korbots/blob/2d9c1bf/server/src/modules/WeatherModule.ts#L8)*
+*Defined in [src/modules/WeatherModule.ts:8](https://github.com/Xisabla/Korbots/blob/f6d7359/server/src/modules/WeatherModule.ts#L8)*

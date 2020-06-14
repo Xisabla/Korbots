@@ -1,4 +1,4 @@
-[korbots-server](../README.md) › [Globals](../globals.md) › ["core/API/API"](../modules/_core_api_api_.md) › [APIwk](_core_api_api_.apiwk.md)
+[korbots-server](../README.md) › ["core/API/API"](../modules/_core_api_api_.md) › [APIwk](_core_api_api_.apiwk.md)
 
 # Interface: APIwk
 
@@ -27,7 +27,7 @@ Same as API but with the key inside
 
 *Inherited from [API](_core_api_api_.api.md).[baseUrl](_core_api_api_.api.md#baseurl)*
 
-*Defined in [src/core/API/API.ts:6](https://github.com/Xisabla/Korbots/blob/2d9c1bf/server/src/core/API/API.ts#L6)*
+*Defined in [src/core/API/API.ts:6](https://github.com/Xisabla/Korbots/blob/f6d7359/server/src/core/API/API.ts#L6)*
 
 Base url of the API for fetching
 
@@ -39,7 +39,7 @@ ___
 
 *Inherited from [API](_core_api_api_.api.md).[envKeyEntry](_core_api_api_.api.md#envkeyentry)*
 
-*Defined in [src/core/API/API.ts:8](https://github.com/Xisabla/Korbots/blob/2d9c1bf/server/src/core/API/API.ts#L8)*
+*Defined in [src/core/API/API.ts:8](https://github.com/Xisabla/Korbots/blob/f6d7359/server/src/core/API/API.ts#L8)*
 
 The entry of the api key inside the .env file eg: API_KEY_OPENWEATHER
 
@@ -49,7 +49,7 @@ ___
 
 • **key**: *string*
 
-*Defined in [src/core/API/API.ts:16](https://github.com/Xisabla/Korbots/blob/2d9c1bf/server/src/core/API/API.ts#L16)*
+*Defined in [src/core/API/API.ts:16](https://github.com/Xisabla/Korbots/blob/f6d7359/server/src/core/API/API.ts#L16)*
 
 Key of the API
 
@@ -61,6 +61,6 @@ ___
 
 *Inherited from [API](_core_api_api_.api.md).[name](_core_api_api_.api.md#name)*
 
-*Defined in [src/core/API/API.ts:4](https://github.com/Xisabla/Korbots/blob/2d9c1bf/server/src/core/API/API.ts#L4)*
+*Defined in [src/core/API/API.ts:4](https://github.com/Xisabla/Korbots/blob/f6d7359/server/src/core/API/API.ts#L4)*
 
 The name of the API, required to store it into the Application API Store

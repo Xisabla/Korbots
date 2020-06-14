@@ -1,4 +1,4 @@
-[korbots-server](../README.md) › [Globals](../globals.md) › ["core/API/IOpenWeather"](_core_api_iopenweather_.md)
+[korbots-server](../README.md) › ["core/API/IOpenWeather"](_core_api_iopenweather_.md)
 
 # Module: "core/API/IOpenWeather"
 

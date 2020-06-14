@@ -1,4 +1,4 @@
-[korbots-server](../README.md) › [Globals](../globals.md) › ["models/User"](_models_user_.md)
+[korbots-server](../README.md) › ["models/User"](_models_user_.md)
 
 # Module: "models/User"
 
@@ -20,7 +20,7 @@
 
 • **User**: *[IUser](../interfaces/_models_user_.iuser.md)‹›* = model<IUserSchema, IUser>('User', UserSchema)
 
-*Defined in [src/models/User.ts:26](https://github.com/Xisabla/Korbots/blob/2d9c1bf/server/src/models/User.ts#L26)*
+*Defined in [src/models/User.ts:26](https://github.com/Xisabla/Korbots/blob/f6d7359/server/src/models/User.ts#L26)*
 
 ___
 
@@ -35,4 +35,4 @@ ___
     { collection: 'users-socket' }
 )
 
-*Defined in [src/models/User.ts:3](https://github.com/Xisabla/Korbots/blob/2d9c1bf/server/src/models/User.ts#L3)*
+*Defined in [src/models/User.ts:3](https://github.com/Xisabla/Korbots/blob/f6d7359/server/src/models/User.ts#L3)*

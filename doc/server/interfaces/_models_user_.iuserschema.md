@@ -1,4 +1,4 @@
-[korbots-server](../README.md) › [Globals](../globals.md) › ["models/User"](../modules/_models_user_.md) › [IUserSchema](_models_user_.iuserschema.md)
+[korbots-server](../README.md) › ["models/User"](../modules/_models_user_.md) › [IUserSchema](_models_user_.iuserschema.md)
 
 # Interface: IUserSchema
 
@@ -75,7 +75,7 @@ ___
 
 • **connected**? : *boolean*
 
-*Defined in [src/models/User.ts:14](https://github.com/Xisabla/Korbots/blob/2d9c1bf/server/src/models/User.ts#L14)*
+*Defined in [src/models/User.ts:14](https://github.com/Xisabla/Korbots/blob/f6d7359/server/src/models/User.ts#L14)*
 
 ___
 
@@ -122,7 +122,7 @@ ___
 
 • **socketId**? : *string*
 
-*Defined in [src/models/User.ts:15](https://github.com/Xisabla/Korbots/blob/2d9c1bf/server/src/models/User.ts#L15)*
+*Defined in [src/models/User.ts:15](https://github.com/Xisabla/Korbots/blob/f6d7359/server/src/models/User.ts#L15)*
 
 ___
 
@@ -130,7 +130,7 @@ ___
 
 • **username**: *string*
 
-*Defined in [src/models/User.ts:13](https://github.com/Xisabla/Korbots/blob/2d9c1bf/server/src/models/User.ts#L13)*
+*Defined in [src/models/User.ts:13](https://github.com/Xisabla/Korbots/blob/f6d7359/server/src/models/User.ts#L13)*
 
 ## Methods
 

@@ -1,4 +1,4 @@
-[korbots-server](../README.md) › [Globals](../globals.md) › ["core/API/API"](_core_api_api_.md)
+[korbots-server](../README.md) › ["core/API/API"](_core_api_api_.md)
 
 # Module: "core/API/API"
 
