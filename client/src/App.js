@@ -75,6 +75,13 @@ class App extends Component {
      */
     handleMouseDown = (ev, index) => {
         let input = {}
+        if (
+            !ev.target.className.includes('module') &&
+            !ev.target.className.includes('dragTarget') &&
+            !ev.target.className.includes('lockTarget') &&
+            !ev.target.className.includes('closeTarget')
+        )
+            return
         input.holding = index
         if (ev.target.className.includes('dragTarget')) {
             input.grabbing = true
@@ -84,14 +91,19 @@ class App extends Component {
             ev.target.className = `fas fa-lock${
                 input.modulesLocked[index] ? '' : '-open'
             } lockTarget`
-            input.holding = input.modulesLocked[index] ? index : 0
+            input.holding = input.modulesLocked[index]
+                ? index
+                : index == 0 && input.modulesLocked.length > 1
+                ? 1
+                : 0
+        } else if (ev.target.className.includes('closeTarget')) {
+            this.handleRemoveModule(index)
+            //input.holding = -1
+            setTimeout(() => {
+                this.updateModules()
+                this.setState(() => ({ holding: -1 }))
+            })
         }
-        if (
-            !ev.target.className.includes('module') &&
-            input.grabbing !== true &&
-            !ev.target.className.includes('lockTarget')
-        )
-            return
         input.mouse = {
             x:
                 ev.clientX -
@@ -167,10 +179,28 @@ class App extends Component {
             for (let j = 0; j < modulesRefs.length; j++) {
                 if (i !== j && j !== holding) {
                     while (
-                        !this.isOver(rects[i], rects[j]) &&
+                        (!this.isOver(rects[i], rects[j]) ||
+                            modulesRefs[j].current.style.display === 'none' ||
+                            modulesRefs[i].current.style.display === 'none') &&
+                        rects[j].top > 0 &&
+                        !modulesLocked[j]
+                    ) {
+                        //put every module as close as possible to the top
+                        rects[j].top -= pixelStep
+                        rects[j].bottom -= pixelStep
+                        if (rects[j].top < 0) {
+                            rects[j].top = 0
+                            rects[j].bottom += pixelStep + rects[j].top
+                        }
+                    }
+                    while (
+                        (!this.isOver(rects[i], rects[j]) ||
+                            modulesRefs[j].current.style.display === 'none' ||
+                            modulesRefs[i].current.style.display === 'none') &&
                         rects[j].left > 0 &&
                         !modulesLocked[j]
                     ) {
+                        //put every module as close as possible to the left
                         rects[j].left -= pixelStep
                         rects[j].right -= pixelStep
                         if (rects[j].left < 0) {
@@ -178,33 +208,51 @@ class App extends Component {
                             rects[j].right += pixelStep + rects[j].left
                         }
                     }
-                    while (this.isOver(rects[i], rects[j])) {
+                    while (
+                        this.isOver(rects[i], rects[j]) &&
+                        modulesRefs[j].current.style.display !== 'none' &&
+                        modulesRefs[i].current.style.display !== 'none'
+                    ) {
                         //TODO : More cases
-                        if (
-                            rects[i].left <= rects[j].right &&
-                            rects[i].right > rects[j].right &&
-                            rects[j].left - pixelStep >= 0
-                        ) {
+                        if (rects[i].right > rects[j].right) {
+                            //i overlaps j on the right
                             if (
-                                (!modulesLocked[j] && !modulesLocked[i]) ||
-                                (modulesLocked[j] && modulesLocked[i])
+                                ((!modulesLocked[j] && !modulesLocked[i]) ||
+                                    modulesLocked[i]) &&
+                                rects[j].left - pixelStep >= 0 //i is more or equally locked and possiblity to push j on the left
                             ) {
+                                //then push j on the left
                                 rects[j].left -= pixelStep
                                 rects[j].right -= pixelStep
+                                //console.log(1)
                             } else {
+                                //else keep i where it is on the x axis
+                                rects[i].left += pixelStep
+                                rects[i].right += pixelStep
+                                //console.log(2)
+                            }
+                        } else if (rects[i].right >= rects[j].left) {
+                            //i overlaps j on the left
+                            if (
+                                (!modulesLocked[j] && !modulesLocked[i]) ||
+                                modulesLocked[i] //i is more or equally locked
+                            ) {
+                                //then push j on the right
+                                rects[j].left += pixelStep
+                                rects[j].right += pixelStep
+                            } else if (
+                                modulesLocked[j] &&
+                                rects[j].left - itemWidth >= 0 //j is more locked and i can be pushed on the left
+                            ) {
+                                //then keep i where it is on the x axis
+                                rects[i].left -= pixelStep
+                                rects[i].right -= pixelStep
+                            } else {
+                                //else push i on the right
                                 rects[i].left += pixelStep
                                 rects[i].right += pixelStep
                             }
-                        } else if (
-                            rects[i].left <= rects[j].right &&
-                            rects[i].right > rects[j].right &&
-                            rects[j].left - pixelStep < 0
-                        ) {
-                            rects[i].left += pixelStep
-                            rects[i].right += pixelStep
-                        } else if (rects[i].right >= rects[j].left) {
-                            rects[j].left += pixelStep
-                            rects[j].right += pixelStep
+                            //console.log(3)
                         }
                     }
                 }
@@ -228,6 +276,7 @@ class App extends Component {
         const { holding } = this.state
         if (holding === -1) return
         this.updateModules()
+        console.log(holding)
         this.setState(() => ({
             holding: -1,
             grabbing: false
@@ -279,7 +328,7 @@ class App extends Component {
 
     /**
      * Save module references in memory after loading
-     * @param {*} ref
+     * @param {React.RefObject} ref
      */
     handleModuleLoading = (ref) => {
         const { modulesRefs, modulesRatios, modulesLocked } = this.state
@@ -295,21 +344,61 @@ class App extends Component {
         }))
     }
 
+    /**
+     * Remove a module by not displaying it
+     * @param {number} index
+     */
+    handleRemoveModule = (index) => {
+        const { modulesRefs } = this.state
+        modulesRefs[index].current.style.display = 'none'
+        modulesRefs[index].current.style.left = '0px'
+        modulesRefs[index].current.style.top = '0px'
+        this.setState(() => ({ modulesRefs: modulesRefs }))
+    }
+
+    /**
+     * Load a module or display it again
+     * @param {React.Component} Module
+     */
     handleAddModule = (Module) => {
-        const { modules } = this.state
+        let { modules, modulesRefs } = this.state
+
+        //existing Module
         if (modules.includes(Module)) {
-            alert('Module already loaded')
+            let i = 0
+            for (i = 0; i < modules.length; i++) {
+                if (modules[i] === Module) {
+                    if (modulesRefs[i].current.style.display === 'none')
+                        modulesRefs[i].current.style.display = 'initial'
+                    else {
+                        alert('Module already loaded !')
+                    }
+                    break
+                }
+            }
+            this.setState(() => {
+                setTimeout(() => {
+                    this.updateModules()
+                    this.setState(() => ({ holding: -1 }))
+                })
+                return {
+                    holding: i
+                }
+            })
             return
         }
+
+        //new Module
         modules.push(Module)
         this.setState(() => {
             setTimeout(() => {
                 this.updateModules()
                 this.setState(() => ({ holding: -1 }))
-            }, 50)
+            })
             return {
                 modules: modules,
-                holding: modules.length - 1
+                holding: modules.length - 1,
+                modulesRefs: modulesRefs
             }
         })
     }

@@ -214,17 +214,37 @@ nav {
 	border-right: 1px solid rgba(0,0,0,.125);
 	border-bottom: 1px solid rgba(0,0,0,.125);
 	padding: 3px;
+    width: 17px;
+    height: 17px;
 	cursor: move;
 }
 
 .lockTarget {
     position: absolute;
+	border-right: 1px solid rgba(0,0,0,.125);
+	border-bottom: 1px solid rgba(0,0,0,.125);
+    left: 23px;
+    padding: 3px;
+    width: 17px;
+    height: 17.5px;
+    cursor: pointer;
+}
+
+.closeTarget {
+    position: absolute;
 	border-left: 1px solid rgba(0,0,0,.125);
 	border-bottom: 1px solid rgba(0,0,0,.125);
     right: 0px;
     padding: 3px;
-    width: 18px;
+    padding-right: 1px;
+    padding-left: 5px;
+    width: 17px;
+    height: 17.5px;
     cursor: pointer;
+}
+
+.closeTarget:hover {
+    color: rgb(250, 21, 21);
 }
 
 #module-weather{

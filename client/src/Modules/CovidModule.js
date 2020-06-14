@@ -44,6 +44,7 @@ class CovidModule extends React.Component {
                 }}>
                 <i className="fas fa-arrows-alt dragTarget"></i>
                 <i className="fas fa-lock-open lockTarget"></i>
+                <i className="fas fa-times closeTarget"></i>
                 <div className="module-body">
                     <svg viewBox="0 0 400 15" className="module-title">
                         <text x="0" y="15">

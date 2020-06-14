@@ -73,6 +73,7 @@ class WeatherModule extends React.Component {
                 }}>
                 <i className="fas fa-arrows-alt dragTarget"></i>
                 <i className="fas fa-lock-open lockTarget"></i>
+                <i className="fas fa-times closeTarget"></i>
                 <div className="module-body">
                     <div className="col-xs-12 col-md-5 title-container">
                         <Titles />
@@ -85,6 +86,9 @@ class WeatherModule extends React.Component {
                                 placeholder="Latitude..."
                                 onChange={this.handleChangeLatitude}
                                 value={this.state.latitude}
+                                max={90}
+                                min={-90}
+                                step={0.01}
                             />
                             <input
                                 type="number"
@@ -92,6 +96,9 @@ class WeatherModule extends React.Component {
                                 placeholder="Longitude..."
                                 onChange={this.handleChangeLongitude}
                                 value={this.state.longitude}
+                                max={180}
+                                min={-180}
+                                step={0.01}
                             />
                             <button type="submit">Rechercher</button>
                         </form>
