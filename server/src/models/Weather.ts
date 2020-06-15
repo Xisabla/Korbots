@@ -8,22 +8,6 @@ import {
 } from '../core/API/IOpenWeather'
 import Application from '../core/Application'
 
-// ---- Input Interfaces -------------------------
-
-export interface LocationCoordinates {
-    /** Latitude */
-    lat: number
-    /** Longitude */
-    lon: number
-}
-
-/** Location can be coordinates or city name or "city_name,country_code", which are strings */
-export type Location = LocationCoordinates | string
-
-// TODO: Use 'Location' instead of 'lat' and 'lon', also make a method to find coordinates from city name for Daily entries (they only work with coordinate)
-//  However, use city name (if it is a string) for Current
-//  Change only the content of fetching methods, and only declaration of the others
-
 // ---- Schema -----------------------------------
 
 /**
@@ -37,6 +21,7 @@ export const WeatherSchema = new Schema(
         wind: { type: Number, required: true },
         weather: { type: String, required: true },
         weatherDescription: { type: String, required: true },
+        weatherIcon: { type: String, required: true },
         latitude: { type: Number, required: true },
         longitude: { type: Number, required: true },
         country: String,
@@ -62,6 +47,8 @@ export interface IWeatherSchema extends Document {
     weather: string
     /** Weather complete description */
     weatherDescription: string
+    /** Weahter icon ID from Openweather API */
+    weatherIcon: string
     /** Latitude of the location */
     latitude: number
     /** Longitude of the location */
@@ -364,7 +351,7 @@ WeatherSchema.statics.getDailyAll = function (
 ): Promise<IWeatherSchema[]> {
     return Weather.findDailyAll(lat, lon, further)
         .then((docs) => {
-            if (docs.length >= further) return Promise.resolve(docs)
+            if (docs.length >= further) return docs
 
             return Weather.fromDaily(lat, lon)
                 .then((docs) => Promise.all(docs.map((doc) => doc.save())))
@@ -493,7 +480,6 @@ WeatherSchema.statics.findDailyAll = function (
             docs.filter(
                 (doc) =>
                     doc.date.getDate() > new Date().getDate() &&
-                    doc.date.getUTCHours() === 12 &&
                     doc.date.getUTCMinutes() === 0 &&
                     doc.date.getUTCSeconds() === 0
             )
@@ -532,6 +518,7 @@ WeatherSchema.statics.fromCurrent = function (
                 wind: data.wind.speed,
                 weather: data.weather[0].main,
                 weatherDescription: data.weather[0].description,
+                weatherIcon: data.weather[0].icon,
                 latitude: data.coord.lat,
                 longitude: data.coord.lon,
                 date: new Date(data.dt * 1000),
@@ -556,6 +543,7 @@ WeatherSchema.statics.fromDaily = function (
                     wind: day.wind_speed,
                     weather: day.weather[0].main,
                     weatherDescription: day.weather[0].description,
+                    weatherIcon: day.weather[0].icon,
                     latitude: data.lat,
                     longitude: data.lon,
                     date: new Date(day.dt * 1000),
