@@ -31,7 +31,7 @@ class WeatherModule extends React.Component {
         this.handleChangeLongitude = this.handleChangeLongitude.bind(this)
 
         this.props.socket.on('weather:currentData', (data) => {
-            console.log(data)
+            this.state.data = data
         })
     }
 
@@ -41,17 +41,18 @@ class WeatherModule extends React.Component {
 
     handleChangeLatitude(event) {
         if (event && event.target)
-            this.setState({ latitude: parseFloat(event.target.value) })
+            this.setState({ latitude: event.target.value })
     }
 
     handleChangeLongitude(event) {
         if (event && event.target)
-            this.setState({ longitude: parseFloat(event.target.value) })
+            this.setState({ longitude: event.target.value })
     }
 
     getWeather(event) {
-        const { latitude, longitude } = this.state
-
+        const latitude = parseFloat(this.state.latitude)
+        const longitude = parseFloat(this.state.longitude)
+        console.log(this.state.latitude, this.state.longitude)
         this.props.socket.emit('weather:getCurrent', { latitude, longitude })
 
         event.preventDefault()
@@ -103,6 +104,9 @@ class WeatherModule extends React.Component {
                             <button type="submit">Rechercher</button>
                         </form>
                     </div>
+                    <div className="col-xs-15 col-md-7 weather-container">
+                        <Weather data={this.state.data} />
+                    </div>
                 </div>
             </div>
         )
@@ -114,6 +118,48 @@ const Titles = () => (
         <p className="title-container__title">Météo</p>
     </div>
 )
+
+const Weather = (props) => {
+    const data = props.data
+    return (
+        <div className="weather__info">
+            {data && data.name && (
+                <span className="weather__value">
+                    {' '}
+                    {data.name} <br />{' '}
+                </span>
+            )}
+            {data && data.temperature && (
+                <span className="weather__value">
+                    <br /> {Math.round(data.temperature - 273, 15)}°C{' '}
+                </span>
+            )}
+            {data && data.humidity && (
+                <p className="weather__key">
+                    {' '}
+                    Humidite:
+                    <span className="weather__value"> {data.humidity}% </span>
+                </p>
+            )}
+            {data && data.description && (
+                <p className="weather__key">
+                    {' '}
+                    Conditions:
+                    <span className="weather__value"> {data.description} </span>
+                </p>
+            )}
+            {data && data.wind && (
+                <p className="weather__key">
+                    Vent:
+                    <span className="weather__value"> {data.wind}m/s </span>
+                </p>
+            )}
+            {data && data.error && (
+                <p className="weather__error">{data.error}</p>
+            )}
+        </div>
+    )
+}
 
 WeatherModule.propTypes = {
     handleChangeLatitude: PropTypes.func,
