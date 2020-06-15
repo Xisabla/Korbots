@@ -42,7 +42,7 @@
 
 *Inherited from [Module](_core_module_.module.md).[app](_core_module_.module.md#protected-app)*
 
-*Defined in [src/core/Module.ts:16](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/core/Module.ts#L16)*
+*Defined in [src/core/Module.ts:16](https://github.com/Xisabla/Korbots/blob/23513ea/server/src/core/Module.ts#L16)*
 
 Application instance
 
@@ -54,7 +54,7 @@ ___
 
 *Inherited from [Module](_core_module_.module.md).[sockets](_core_module_.module.md#protected-sockets)*
 
-*Defined in [src/core/Module.ts:18](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/core/Module.ts#L18)*
+*Defined in [src/core/Module.ts:18](https://github.com/Xisabla/Korbots/blob/23513ea/server/src/core/Module.ts#L18)*
 
 Internal sockets store, updated on SocketJoin and on SocketLeave
 
@@ -66,7 +66,7 @@ Internal sockets store, updated on SocketJoin and on SocketLeave
 
 *Overrides [Module](_core_module_.module.md).[name](_core_module_.module.md#name)*
 
-*Defined in [src/modules/WeatherModule.ts:215](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/modules/WeatherModule.ts#L215)*
+*Defined in [src/modules/WeatherModule.ts:215](https://github.com/Xisabla/Korbots/blob/23513ea/server/src/modules/WeatherModule.ts#L215)*
 
 **Returns:** *string*
 
@@ -78,7 +78,7 @@ ___
 
 *Overrides [Module](_core_module_.module.md).[waitForDatabase](_core_module_.module.md#waitfordatabase)*
 
-*Defined in [src/modules/WeatherModule.ts:220](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/modules/WeatherModule.ts#L220)*
+*Defined in [src/modules/WeatherModule.ts:220](https://github.com/Xisabla/Korbots/blob/23513ea/server/src/modules/WeatherModule.ts#L220)*
 
 **Returns:** *boolean*
 
@@ -88,7 +88,7 @@ ___
 
 ▸ **getAll**(`socket`: Socket, `data`: any): *void*
 
-*Defined in [src/modules/WeatherModule.ts:134](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/modules/WeatherModule.ts#L134)*
+*Defined in [src/modules/WeatherModule.ts:134](https://github.com/Xisabla/Korbots/blob/23513ea/server/src/modules/WeatherModule.ts#L134)*
 
 Get the Current entry and the Daily entries from Weather according to the data provided by the Socket, then send one event to the Socket
 
@@ -107,7 +107,7 @@ ___
 
 ▸ **getCoordinates**(`data`: any): *Promise‹[Coordinates](../interfaces/_models_location_.coordinates.md)›*
 
-*Defined in [src/modules/WeatherModule.ts:190](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/modules/WeatherModule.ts#L190)*
+*Defined in [src/modules/WeatherModule.ts:190](https://github.com/Xisabla/Korbots/blob/23513ea/server/src/modules/WeatherModule.ts#L190)*
 
 **Parameters:**
 
@@ -123,7 +123,7 @@ ___
 
 ▸ **getCurrent**(`socket`: Socket, `data`: any): *void*
 
-*Defined in [src/modules/WeatherModule.ts:56](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/modules/WeatherModule.ts#L56)*
+*Defined in [src/modules/WeatherModule.ts:56](https://github.com/Xisabla/Korbots/blob/23513ea/server/src/modules/WeatherModule.ts#L56)*
 
 Get the Current entry from Weather according to the data provided by the Socket, then send one event to the Socket
 
@@ -142,7 +142,7 @@ ___
 
 ▸ **getDaily**(`socket`: Socket, `data`: any): *void*
 
-*Defined in [src/modules/WeatherModule.ts:79](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/modules/WeatherModule.ts#L79)*
+*Defined in [src/modules/WeatherModule.ts:79](https://github.com/Xisabla/Korbots/blob/23513ea/server/src/modules/WeatherModule.ts#L79)*
 
 Get the Daily entry from Weather according to the data provided by the Socket, then send one event to the Socket
 
@@ -161,7 +161,7 @@ ___
 
 ▸ **getDailyAll**(`socket`: Socket, `data`: any): *void*
 
-*Defined in [src/modules/WeatherModule.ts:105](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/modules/WeatherModule.ts#L105)*
+*Defined in [src/modules/WeatherModule.ts:105](https://github.com/Xisabla/Korbots/blob/23513ea/server/src/modules/WeatherModule.ts#L105)*
 
 Get the Daily entries from Weather according to the data provided by the Socket, then send one event to the Socket
 
@@ -182,7 +182,7 @@ ___
 
 *Overrides [Module](_core_module_.module.md).[onSocketJoin](_core_module_.module.md#onsocketjoin)*
 
-*Defined in [src/modules/WeatherModule.ts:20](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/modules/WeatherModule.ts#L20)*
+*Defined in [src/modules/WeatherModule.ts:20](https://github.com/Xisabla/Korbots/blob/23513ea/server/src/modules/WeatherModule.ts#L20)*
 
 **Parameters:**
 
@@ -200,7 +200,7 @@ ___
 
 *Inherited from [Module](_core_module_.module.md).[onSocketLeave](_core_module_.module.md#onsocketleave)*
 
-*Defined in [src/core/Module.ts:45](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/core/Module.ts#L45)*
+*Defined in [src/core/Module.ts:45](https://github.com/Xisabla/Korbots/blob/23513ea/server/src/core/Module.ts#L45)*
 
 Function called once a Socket is disconnected
 
@@ -220,7 +220,7 @@ ___
 
 *Overrides [Module](_core_module_.module.md).[register](_core_module_.module.md#register)*
 
-*Defined in [src/modules/WeatherModule.ts:12](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/modules/WeatherModule.ts#L12)*
+*Defined in [src/modules/WeatherModule.ts:12](https://github.com/Xisabla/Korbots/blob/23513ea/server/src/modules/WeatherModule.ts#L12)*
 
 **Parameters:**
 
@@ -238,7 +238,7 @@ ___
 
 *Inherited from [Module](_core_module_.module.md).[registerTask](_core_module_.module.md#protected-registertask)*
 
-*Defined in [src/core/Module.ts:61](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/core/Module.ts#L61)*
+*Defined in [src/core/Module.ts:61](https://github.com/Xisabla/Korbots/blob/23513ea/server/src/core/Module.ts#L61)*
 
 A shortcut to register a Task into the Task Manager of the Application
 Will fill the field "origin" with the name of the Module
@@ -264,7 +264,7 @@ ___
 
 *Overrides [Module](_core_module_.module.md).[registerTasks](_core_module_.module.md#protected-abstract-registertasks)*
 
-*Defined in [src/modules/WeatherModule.ts:35](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/modules/WeatherModule.ts#L35)*
+*Defined in [src/modules/WeatherModule.ts:35](https://github.com/Xisabla/Korbots/blob/23513ea/server/src/modules/WeatherModule.ts#L35)*
 
 **Returns:** *number[]*
 
@@ -274,6 +274,6 @@ ___
 
 ▸ **updateCurrentEntries**(): *Promise‹any›*
 
-*Defined in [src/modules/WeatherModule.ts:159](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/modules/WeatherModule.ts#L159)*
+*Defined in [src/modules/WeatherModule.ts:159](https://github.com/Xisabla/Korbots/blob/23513ea/server/src/modules/WeatherModule.ts#L159)*
 
 **Returns:** *Promise‹any›*

@@ -18,7 +18,7 @@
 
 • **results**: *object*
 
-*Defined in [src/core/API/IGeocoding.ts:2](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/core/API/IGeocoding.ts#L2)*
+*Defined in [src/core/API/IGeocoding.ts:2](https://github.com/Xisabla/Korbots/blob/23513ea/server/src/core/API/IGeocoding.ts#L2)*
 
 #### Type declaration:
 
