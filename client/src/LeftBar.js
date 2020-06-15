@@ -3,10 +3,16 @@ import React from 'react'
 
 import { CovidModule, CovidModule2, WeatherModule } from './Modules'
 
-const LeftBar = ({ settingsOnClick, settings, onAddModule }) => (
+const LeftBar = ({ settingsOnClick, settings, onAddModule, modulesUpdate }) => (
     <div className="col-2 border-right">
         <h3 className="my-2">Modules</h3>
-
+        <button
+            type="button"
+            onClick={() => {
+                modulesUpdate(true)
+            }}>
+            Rearrange
+        </button>
         <ul className="list-group">
             <li
                 className="list-group-item"
@@ -103,6 +109,7 @@ const LeftBar = ({ settingsOnClick, settings, onAddModule }) => (
 LeftBar.propTypes = {
     settingsOnClick: PropTypes.func,
     settings: PropTypes.object,
-    onAddModule: PropTypes.func
+    onAddModule: PropTypes.func,
+    modulesUpdate: PropTypes.func
 }
 export default LeftBar
