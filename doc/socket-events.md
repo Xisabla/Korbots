@@ -12,4 +12,5 @@
 | weather:dailyData    | server → client | Give to the client the Daily weather information for a specific date                | IWeatherSchema                                         |
 | weather:dailyAllData | server → client | Give to the client some Daily weather information for multiple days                 | IWeatherSchema[]                                       |
 | weather:allData      | server → client | Give to the client the Current and multiple Daily weather information               | { current: IWeatherSchema[], daily: IWeatherSchema[] } |
+| weather:autoUpdateCurrent | server → client | Give to the client all the Current entries updated                             | IWeatherSchema[], |
 | weather:error        | server → client | Tell to the client that something went wrong                                        | ?                                                      |

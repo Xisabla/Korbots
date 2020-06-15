@@ -355,6 +355,10 @@ export default class Application {
 
     // ---- Getters ----------------------------------
 
+    get io(): SocketIO.Server {
+        return this._io
+    }
+
     get sockets(): Socket[] {
         return this._sockets
     }
