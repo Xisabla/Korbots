@@ -1,4 +1,4 @@
-import { OpenweatherCurrentAPI, OpenweatherOnecallAPI } from './config/API'
+import * as APIs from './config/API'
 import Application from './core/Application'
 import { WeatherModule } from './modules/WeatherModule'
 
@@ -8,7 +8,7 @@ app.connectDB()
 
 // ---- API Registering --------------------------
 
-Application.registerAPIs([OpenweatherCurrentAPI, OpenweatherOnecallAPI])
+Application.registerAPIs(Object.values(APIs))
 
 // ---- Modules Registering ----------------------
 app.registerModule(new WeatherModule())

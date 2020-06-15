@@ -9,3 +9,9 @@ export const OpenweatherOnecallAPI: API = {
     baseUrl: 'https://api.openweathermap.org/data/2.5/onecall',
     envKeyEntry: 'API_OPENWEATHERMAP_KEY'
 }
+
+export const MapquestGeocodingAPI: API = {
+    name: 'mapquest:geoconding',
+    baseUrl: 'http://open.mapquestapi.com/geocoding/v1/address',
+    envKeyEntry: 'API_MAPQUEST_KEY'
+}
