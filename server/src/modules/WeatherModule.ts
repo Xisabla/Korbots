@@ -3,6 +3,7 @@ import { Socket } from 'socket.io'
 
 import Application from '../core/Application'
 import Module from '../core/Module'
+import { Coordinates, Location } from '../models/Location'
 import { IWeatherSchema, Weather } from '../models/Weather'
 
 const log = debug('module:weather')
@@ -55,21 +56,19 @@ export class WeatherModule extends Module {
     private getCurrent(socket: Socket, data: any): void {
         log(`Received getCurrent event from ${socket.id}`)
 
-        const lat: number = data.latitude
-        const lon: number = data.longitude
-
-        // Get Current
-        Weather.getCurrent(lat, lon)
-            .then((doc) => {
-                log(`Entry found, responding with weather:currentData`)
-
-                // Send
-                socket.emit('weather:currentData', doc.toJSON())
-            })
-            .catch((err) => {
-                log(`Error in the process, responding with weather:error`)
-                socket.emit('weather:error', err)
-            })
+        this.getCoordinates(data).then(({ lat, lon }) => {
+            // Get Current
+            Weather.getCurrent(lat, lon)
+                .then((doc) => {
+                    log(`Entry found, responding with weather:currentData`)
+                    // Send
+                    socket.emit('weather:currentData', doc.toJSON())
+                })
+                .catch((err) => {
+                    log(`Error in the process, responding with weather:error`)
+                    socket.emit('weather:error', err)
+                })
+        })
     }
 
     /**
@@ -80,22 +79,22 @@ export class WeatherModule extends Module {
     private getDaily(socket: Socket, data: any): void {
         log(`Received getDaily event from ${socket.id}`)
 
-        const lat: number = data.latitude
-        const lon: number = data.longitude
         const date = new Date(data.date)
 
-        // Get Daily
-        Weather.getDaily(lat, lon, date)
-            .then((doc) => {
-                log(`Entry found, responding with weather:dailyData`)
+        this.getCoordinates(data).then(({ lat, lon }) => {
+            // Get Daily
+            Weather.getDaily(lat, lon, date)
+                .then((doc) => {
+                    log(`Entry found, responding with weather:dailyData`)
 
-                // Send
-                socket.emit('weather:dailyData', doc.toJSON())
-            })
-            .catch((err) => {
-                log(`Error in the process, responding with weather:error`)
-                socket.emit('weather:error', err)
-            })
+                    // Send
+                    socket.emit('weather:dailyData', doc.toJSON())
+                })
+                .catch((err) => {
+                    log(`Error in the process, responding with weather:error`)
+                    socket.emit('weather:error', err)
+                })
+        })
     }
 
     /**
@@ -106,25 +105,25 @@ export class WeatherModule extends Module {
     private getDailyAll(socket: Socket, data: any): void {
         log(`Received getDailyAll event from ${socket.id}`)
 
-        const lat: number = data.latitude
-        const lon: number = data.longitude
-        const further: number = data.further
+        const further: number = data.further || 4
 
-        // Get daily
-        Weather.getDailyAll(lat, lon, further)
-            .then((docs) => {
-                log(`Entries found, responding with weather:dailyAllData`)
+        this.getCoordinates(data).then(({ lat, lon }) => {
+            // Get daily
+            Weather.getDailyAll(lat, lon, further)
+                .then((docs) => {
+                    log(`Entries found, responding with weather:dailyAllData`)
 
-                // Send
-                socket.emit(
-                    'weather:dailyAllData',
-                    docs.map((doc) => doc.toJSON())
-                )
-            })
-            .catch((err) => {
-                log(`Error in the process, responding with weather:error`)
-                socket.emit('weather:error', err)
-            })
+                    // Send
+                    socket.emit(
+                        'weather:dailyAllData',
+                        docs.map((doc) => doc.toJSON())
+                    )
+                })
+                .catch((err) => {
+                    log(`Error in the process, responding with weather:error`)
+                    socket.emit('weather:error', err)
+                })
+        })
     }
 
     /**
@@ -135,27 +134,26 @@ export class WeatherModule extends Module {
     private getAll(socket: Socket, data: any): void {
         log(`Received getAll event from ${socket.id}`)
 
-        const lat: number = data.latitude
-        const lon: number = data.longitude
+        this.getCoordinates(data).then(({ lat, lon }) => {
+            // Get daily
+            Weather.getDailyAll(lat, lon, 4)
+                // Get current
+                .then((daily) => {
+                    return Weather.getCurrent(lat, lon).then((current) => {
+                        log(`Entries found, responding with weather:allData`)
 
-        // Get daily
-        Weather.getDailyAll(lat, lon, 4)
-            // Get current
-            .then((daily) => {
-                return Weather.getCurrent(lat, lon).then((current) => {
-                    log(`Entries found, responding with weather:allData`)
-
-                    // Send
-                    socket.emit('weather:allData', {
-                        current,
-                        daily
+                        // Send
+                        socket.emit('weather:allData', {
+                            current,
+                            daily
+                        })
                     })
                 })
-            })
-            .catch((err) => {
-                log(`Error in the process, responding with weather:error`)
-                socket.emit('weather:error', err)
-            })
+                .catch((err) => {
+                    log(`Error in the process, responding with weather:error`)
+                    socket.emit('weather:error', err)
+                })
+        })
     }
 
     private updateCurrentEntries(): Promise<any> {
@@ -187,6 +185,29 @@ export class WeatherModule extends Module {
                     log(`Unable to update current outdated entries: ${err}`)
                 })
         )
+    }
+
+    private getCoordinates(data: any): Promise<Coordinates> {
+        // Check for a string
+        if (typeof data === 'string') {
+            const [city, country] = data.split(',')
+            return Location.getCoordinates(city, country)
+        }
+
+        // Check for data.latitude, data.longitude
+        if (data.latitude && data.longitude) {
+            return Promise.resolve({
+                lat: data.latitude,
+                lon: data.longitude
+            } as Coordinates)
+        }
+
+        // Check for data.city and fetch
+        if (data.city) {
+            return Location.getCoordinates(data.city, data.country)
+        }
+        // Reject
+        return Promise.reject('Bad fields')
     }
 
     // ---- Getters ----------------------------------
