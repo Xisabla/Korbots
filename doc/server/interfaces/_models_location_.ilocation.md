@@ -1014,7 +1014,7 @@ ___
 
 ▸ **fetchLocation**(`city`: string, `country?`: string): *Promise‹[MapquestGeocodingAPIResponse](_core_api_igeocoding_.mapquestgeocodingapiresponse.md)›*
 
-*Defined in [src/models/Location.ts:40](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Location.ts#L40)*
+*Defined in [src/models/Location.ts:40](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/models/Location.ts#L40)*
 
 **Parameters:**
 
@@ -1636,7 +1636,7 @@ ___
 
 ▸ **findLocation**(`city`: string, `country?`: string): *Promise‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
-*Defined in [src/models/Location.ts:39](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Location.ts#L39)*
+*Defined in [src/models/Location.ts:39](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/models/Location.ts#L39)*
 
 **Parameters:**
 
@@ -2179,7 +2179,7 @@ ___
 
 ▸ **getCoordinates**(`city`: string, `country?`: string): *Promise‹[Coordinates](_models_location_.coordinates.md)›*
 
-*Defined in [src/models/Location.ts:38](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Location.ts#L38)*
+*Defined in [src/models/Location.ts:38](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/models/Location.ts#L38)*
 
 **Parameters:**
 

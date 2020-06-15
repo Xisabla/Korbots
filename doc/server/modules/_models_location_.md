@@ -24,7 +24,7 @@
     LocationSchema
 )
 
-*Defined in [src/models/Location.ts:99](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Location.ts#L99)*
+*Defined in [src/models/Location.ts:99](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/models/Location.ts#L99)*
 
 ___
 
@@ -40,4 +40,4 @@ ___
     { collection: 'location' }
 )
 
-*Defined in [src/models/Location.ts:16](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Location.ts#L16)*
+*Defined in [src/models/Location.ts:16](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/models/Location.ts#L16)*

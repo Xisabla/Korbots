@@ -1026,7 +1026,7 @@ ___
 
 ▸ **fetchCurrent**(`lat`: number, `lon`: number): *Promise‹[OpenweatherCurrentAPIResponse](_core_api_iopenweather_.openweathercurrentapiresponse.md)›*
 
-*Defined in [src/models/Weather.ts:283](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L283)*
+*Defined in [src/models/Weather.ts:283](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/models/Weather.ts#L283)*
 
 Run a fetch call to the API to get the Current entry of the given location
 
@@ -1047,7 +1047,7 @@ ___
 
 ▸ **fetchDaily**(`lat`: number, `lon`: number): *Promise‹[OpenweatherDailyAPIResponse](_core_api_iopenweather_.openweatherdailyapiresponse.md)›*
 
-*Defined in [src/models/Weather.ts:294](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L294)*
+*Defined in [src/models/Weather.ts:294](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/models/Weather.ts#L294)*
 
 Run a fetch call to the API to get the Daily entries of the given location from today
 
@@ -1673,7 +1673,7 @@ ___
 
 ▸ **findCurrent**(`lat`: number, `long`: number): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)[]›*
 
-*Defined in [src/models/Weather.ts:209](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L209)*
+*Defined in [src/models/Weather.ts:209](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/models/Weather.ts#L209)*
 
 Look for Documents inside the Database for the Current weather at a specific location
 Time interval: [now - 30 minutes; now + 2 minutes]
@@ -1695,7 +1695,7 @@ ___
 
 ▸ **findCurrentOne**(`lat`: number, `long`: number): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
 
-*Defined in [src/models/Weather.ts:217](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L217)*
+*Defined in [src/models/Weather.ts:217](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/models/Weather.ts#L217)*
 
 Same as findCurrent but only returns the first entry
 
@@ -1716,7 +1716,7 @@ ___
 
 ▸ **findDaily**(`lat`: number, `long`: number, `date`: Date): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)[]›*
 
-*Defined in [src/models/Weather.ts:227](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L227)*
+*Defined in [src/models/Weather.ts:227](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/models/Weather.ts#L227)*
 
 Look for Documents inside the Database for the Daily weather at a specific location and date
 Time interval: Same day as date
@@ -1739,7 +1739,7 @@ ___
 
 ▸ **findDailyAll**(`lat`: number, `lon`: number, `further?`: number): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)[]›*
 
-*Defined in [src/models/Weather.ts:245](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L245)*
+*Defined in [src/models/Weather.ts:245](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/models/Weather.ts#L245)*
 
 Look for all Daily weather entries for next further days (begin: tomorrow) at the given location
 
@@ -1761,7 +1761,7 @@ ___
 
 ▸ **findDailyOne**(`lat`: number, `long`: number, `date`: Date): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
 
-*Defined in [src/models/Weather.ts:236](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L236)*
+*Defined in [src/models/Weather.ts:236](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/models/Weather.ts#L236)*
 
 Same as findDaily but only returns the first entry
 
@@ -2265,7 +2265,7 @@ ___
 
 ▸ **findOutdatedCurrent**(): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)[]›*
 
-*Defined in [src/models/Weather.ts:255](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L255)*
+*Defined in [src/models/Weather.ts:255](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/models/Weather.ts#L255)*
 
 Look for all the Current entries that can be updated
 
@@ -2279,7 +2279,7 @@ ___
 
 ▸ **fromCurrent**(`lat`: number, `lon`: number): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
 
-*Defined in [src/models/Weather.ts:265](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L265)*
+*Defined in [src/models/Weather.ts:265](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/models/Weather.ts#L265)*
 
 Run a fetch call to the API for the Current entry of a location and create a Document for it
 
@@ -2300,7 +2300,7 @@ ___
 
 ▸ **fromDaily**(`lat`: number, `long`: number): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)[]›*
 
-*Defined in [src/models/Weather.ts:273](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L273)*
+*Defined in [src/models/Weather.ts:273](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/models/Weather.ts#L273)*
 
 Run a fetch call to the API for the Daily entries of a location and create a Document for each entry
 
@@ -2365,7 +2365,7 @@ ___
 
 ▸ **getCurrent**(`lat`: number, `lon`: number): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
 
-*Defined in [src/models/Weather.ts:163](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L163)*
+*Defined in [src/models/Weather.ts:163](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/models/Weather.ts#L163)*
 
 Look for existing Document or create a new one for the Current weather at the given location
 Also perform update actions if needed
@@ -2393,7 +2393,7 @@ ___
 
 ▸ **getDaily**(`lat`: number, `lon`: number, `date`: Date): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
 
-*Defined in [src/models/Weather.ts:179](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L179)*
+*Defined in [src/models/Weather.ts:179](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/models/Weather.ts#L179)*
 
 Look for existing Document or create a new one for the Daily weather at the given location and date
 
@@ -2413,7 +2413,7 @@ ___
 
 ▸ **getDailyAll**(`lat`: number, `lon`: number, `further?`: number): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)[]›*
 
-*Defined in [src/models/Weather.ts:194](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L194)*
+*Defined in [src/models/Weather.ts:194](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/models/Weather.ts#L194)*
 
 Get all (look for or create if needed) the Daily weather Documents for next further days (begin: tomorrow) at the given location
 
@@ -3035,7 +3035,7 @@ ___
 
 ▸ **removeLowScored**(): *Promise‹any›*
 
-*Defined in [src/models/Weather.ts:306](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L306)*
+*Defined in [src/models/Weather.ts:306](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/models/Weather.ts#L306)*
 
 Will remove all Documents with a low updateScore
 
@@ -3047,7 +3047,7 @@ ___
 
 ▸ **removeOld**(): *Promise‹any›*
 
-*Defined in [src/models/Weather.ts:301](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L301)*
+*Defined in [src/models/Weather.ts:301](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/models/Weather.ts#L301)*
 
 Will remove all Documents older than 24 hours to avoid useless entries in the Database
 
