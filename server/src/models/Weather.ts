@@ -42,7 +42,8 @@ export const WeatherSchema = new Schema(
         country: String,
         name: String,
         date: { type: Date, required: true },
-        lastUpdate: { type: Date, required: true }
+        lastUpdate: { type: Date, required: true },
+        updateScore: { type: Number, required: true }
     },
     { collection: 'weather' }
 )
@@ -73,8 +74,24 @@ export interface IWeatherSchema extends Document {
     date: Date
     /** Last update from the internal database */
     lastUpdate: Date
+    /** Score that increase on update checking, decrease on cron update */
+    updateScore: number
 
-    // Methods: Checkers
+    // ---- Methods: Modifiers -----------------------
+
+    /**
+     * Decrement the value of updateScore
+     * @param value Value to subtract to the current updateScore(default: 0.2)
+     */
+    decrementUpdateScore(value?: number): Promise<IWeatherSchema>
+
+    /**
+     * Increment the value of updateScore
+     * @param value Value to add to the current updateScore (default: 1)
+     */
+    incrementUpdateScore(value?: number): Promise<IWeatherSchema>
+
+    // ---- Methods: Checkers ------------------------
 
     /**
      * @returns True if the current Document needs to be updated from the API data
@@ -141,7 +158,7 @@ export interface IWeatherSchema extends Document {
 // ---- Model ------------------------------------
 
 export interface IWeather extends Model<IWeatherSchema> {
-    // Getters
+    // ---- Getters ----------------------------------
 
     /**
      * Look for existing Document or create a new one for the Current weather at the given location
@@ -193,7 +210,7 @@ export interface IWeather extends Model<IWeatherSchema> {
         further?: number
     ): Promise<IWeatherSchema[]>
 
-    // Finders
+    // ---- Finders ----------------------------------
 
     /**
      * Look for Documents inside the Database for the Current weather at a specific location
@@ -244,7 +261,13 @@ export interface IWeather extends Model<IWeatherSchema> {
         further?: number
     ): Promise<IWeatherSchema[]>
 
-    // Document
+    /**
+     * Look for all the Current entries that can be updated
+     * @returns A Promise of an Array of Document
+     */
+    findOutdatedCurrent(): Promise<IWeatherSchema[]>
+
+    // ---- Document ---------------------------------
 
     /**
      * Run a fetch call to the API for the Current entry of a location and create a Document for it
@@ -262,7 +285,7 @@ export interface IWeather extends Model<IWeatherSchema> {
      */
     fromDaily(lat: number, long: number): Promise<IWeatherSchema[]>
 
-    // Fetch
+    // ---- Fetch ------------------------------------
 
     /**
      * Run a fetch call to the API to get the Current entry of the given location
@@ -283,12 +306,22 @@ export interface IWeather extends Model<IWeatherSchema> {
      */
     fetchDaily(lat: number, lon: number): Promise<OpenweatherDailyAPIResponse>
 
-    // Remove
+    // ---- Remove -----------------------------------
 
     /**
      * Will remove all Documents older than 24 hours to avoid useless entries in the Database
      */
     removeOld(): Promise<any>
+
+    /**
+     * Will remove all Documents with a low updateScore
+     */
+    removeLowScored(): Promise<any>
+
+    /**
+     * Will remove all duplicated entries
+     */
+    // TODO: removeDuplicated(): Promise<any>
 }
 
 // ---- Statics ----------------------------------
@@ -467,6 +500,24 @@ WeatherSchema.statics.findDailyAll = function (
         )
 }
 
+WeatherSchema.statics.findOutdatedCurrent = function (): Promise<
+    IWeatherSchema[]
+> {
+    const tMax = moment().add(2, 'minutes').toDate()
+    const tMin = moment().add(-12, 'hours').toDate()
+
+    return Weather.find({
+        date: {
+            $gte: tMin,
+            $lte: tMax
+        },
+        // Don't look for the ones that are more updated than prompted
+        updateScore: {
+            $gte: 0
+        }
+    }).then((docs) => docs)
+}
+
 // ---- Statics: Document ------------------------
 
 WeatherSchema.statics.fromCurrent = function (
@@ -484,7 +535,8 @@ WeatherSchema.statics.fromCurrent = function (
                 latitude: data.coord.lat,
                 longitude: data.coord.lon,
                 date: new Date(data.dt * 1000),
-                lastUpdate: new Date()
+                lastUpdate: new Date(),
+                updateScore: 0
             })
     )
 }
@@ -507,7 +559,8 @@ WeatherSchema.statics.fromDaily = function (
                     latitude: data.lat,
                     longitude: data.lon,
                     date: new Date(day.dt * 1000),
-                    lastUpdate: new Date()
+                    lastUpdate: new Date(),
+                    updateScore: 0
                 })
             )
         })
@@ -544,7 +597,6 @@ WeatherSchema.statics.fetchDaily = function (
 // ---- Statics: Remove --------------------------
 
 WeatherSchema.statics.removeOld = function (): Promise<any> {
-    // Remove all entries older than 24 hours
     return this.deleteMany({
         date: {
             $lte: moment().add(-24, 'hours').toDate()
@@ -552,7 +604,31 @@ WeatherSchema.statics.removeOld = function (): Promise<any> {
     })
 }
 
-// ---- Methods ----------------------------------
+WeatherSchema.statics.removeLowScored = function (): Promise<any> {
+    return this.deleteMany({
+        updateScore: {
+            $lte: -10
+        }
+    })
+}
+
+// ---- Methods: Modifiers -----------------------
+
+WeatherSchema.methods.decrementUpdateScore = function (
+    value = 0.2
+): Promise<IWeatherSchema> {
+    return this.incrementUpdateScore(-value)
+}
+
+WeatherSchema.methods.incrementUpdateScore = function (
+    value = 1
+): Promise<IWeatherSchema> {
+    this.updateScore += value
+
+    return this.save()
+}
+
+// ---- Methods: Checkers ------------------------
 
 WeatherSchema.methods.needsUpdate = function (): boolean {
     const diff = Math.abs(moment().diff(this.lastUpdate))
@@ -569,10 +645,12 @@ WeatherSchema.methods.needsLocationFieldsUpdate = function (): boolean {
 WeatherSchema.methods.checkUpdate = function (
     isDaily = false
 ): Promise<IWeatherSchema> {
-    // Check if we are updating a Daily entry
-    if (isDaily) this.needsUpdate() ? this.updateDaily() : this
+    return this.incrementUpdateScore().then((doc: IWeatherSchema) => {
+        // Check if we are updating a Daily entry
+        if (isDaily) doc.needsUpdate() ? doc.updateDaily() : doc
 
-    return this.needsUpdate() ? this.updateCurrent() : this
+        return doc.needsUpdate() ? doc.updateCurrent() : doc
+    })
 }
 
 WeatherSchema.methods.checkLocationFieldsUpdate = function (): Promise<
