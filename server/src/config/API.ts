@@ -9,3 +9,9 @@ export const OpenweatherOnecallAPI: API = {
     baseUrl: 'https://api.openweathermap.org/data/2.5/onecall',
     envKeyEntry: 'API_OPENWEATHERMAP_KEY'
 }
+
+export const AztroAPI: API = {
+    name: 'aztro',
+    baseUrl: 'https://aztro.sameerkumar.website',
+    envKeyEntry: ''
+}
