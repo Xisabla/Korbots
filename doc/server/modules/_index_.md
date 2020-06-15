@@ -14,4 +14,4 @@
 
 • **app**: *[Application](../classes/_core_application_.application.md)‹›* = new Application({ useEnv: true })
 
-*Defined in [src/index.ts:5](https://github.com/Xisabla/Korbots/blob/e566151/server/src/index.ts#L5)*
+*Defined in [src/index.ts:5](https://github.com/Xisabla/Korbots/blob/c7d0b2c/server/src/index.ts#L5)*

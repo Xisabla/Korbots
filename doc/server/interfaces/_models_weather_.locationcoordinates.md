@@ -19,7 +19,7 @@
 
 • **lat**: *number*
 
-*Defined in [src/models/Weather.ts:15](https://github.com/Xisabla/Korbots/blob/e566151/server/src/models/Weather.ts#L15)*
+*Defined in [src/models/Weather.ts:15](https://github.com/Xisabla/Korbots/blob/c7d0b2c/server/src/models/Weather.ts#L15)*
 
 Latitude
 
@@ -29,6 +29,6 @@ ___
 
 • **lon**: *number*
 
-*Defined in [src/models/Weather.ts:17](https://github.com/Xisabla/Korbots/blob/e566151/server/src/models/Weather.ts#L17)*
+*Defined in [src/models/Weather.ts:17](https://github.com/Xisabla/Korbots/blob/c7d0b2c/server/src/models/Weather.ts#L17)*
 
 Longitude

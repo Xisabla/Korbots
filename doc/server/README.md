@@ -11,6 +11,8 @@
 * ["core/API/IOpenWeather"](modules/_core_api_iopenweather_.md)
 * ["core/Application"](modules/_core_application_.md)
 * ["core/Module"](modules/_core_module_.md)
+* ["core/Task"](modules/_core_task_.md)
+* ["core/TaskManager"](modules/_core_taskmanager_.md)
 * ["index"](modules/_index_.md)
 * ["models/User"](modules/_models_user_.md)
 * ["models/Weather"](modules/_models_weather_.md)
