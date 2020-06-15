@@ -8,6 +8,7 @@ import path from 'path'
 import socketIO, { Socket } from 'socket.io'
 
 import Module from './Module'
+import TaskManager from './TaskManager'
 
 const log = debug('core:Application')
 
@@ -65,6 +66,8 @@ export default class Application {
     private _modules: Module[]
     /** Socket store */
     private _sockets: Socket[]
+    /** Tasks store */
+    private _tasks: TaskManager
     /** API store */
     public static apis: APIwk[]
 
@@ -113,6 +116,7 @@ export default class Application {
 
         this._modules = []
         this._sockets = []
+        this._tasks = new TaskManager()
         if (!Application.apis) Application.apis = []
 
         this._app = express()
@@ -353,5 +357,9 @@ export default class Application {
 
     get sockets(): Socket[] {
         return this._sockets
+    }
+
+    get tasks(): TaskManager {
+        return this._tasks
     }
 }

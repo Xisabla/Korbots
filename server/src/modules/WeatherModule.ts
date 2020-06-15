@@ -1,4 +1,5 @@
 import debug from 'debug'
+import moment from 'moment'
 import { Socket } from 'socket.io'
 
 import Application from '../core/Application'
@@ -10,6 +11,8 @@ const log = debug('module:weather')
 export class WeatherModule extends Module {
     public register(app: Application): void {
         super.register(app)
+
+        this.helloWorldTask = this.helloWorldTask.bind(this)
 
         log('Registered')
     }
@@ -27,6 +30,24 @@ export class WeatherModule extends Module {
             this.getDailyAll(socket, data)
         )
         socket.on('weather:getAll', (data) => this.getAll(socket, data))
+    }
+
+    // ---- Tasks ------------------------------------
+
+    protected registerTasks(): number[] {
+        const ids: number[] = [
+            this.registerTask(() => this.helloWorldTask(), '*/5 * * * * *')
+        ]
+
+        log(`Registered ${ids.length} tasks`)
+
+        return ids
+    }
+
+    private helloWorldTask() {
+        return new Promise((resolve) => {
+            resolve(log('Hello from helloWorldTask', moment()))
+        })
     }
 
     // ---- Methods ----------------------------------
