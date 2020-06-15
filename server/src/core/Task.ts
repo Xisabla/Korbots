@@ -1,5 +1,5 @@
 import { CronJob } from 'cron'
-import debug from 'debug'
+import debug, { Debugger } from 'debug'
 import moment, { Moment } from 'moment'
 
 export interface TaskSettings {
@@ -121,6 +121,13 @@ export class Task {
      */
     get id(): number {
         return this._id
+    }
+
+    /**
+     * Get the task logger
+     */
+    get log(): Debugger {
+        return this._log
     }
 
     /**
