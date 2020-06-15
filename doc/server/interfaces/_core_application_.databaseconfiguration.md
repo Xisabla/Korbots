@@ -21,7 +21,7 @@
 
 • **dbname**? : *string*
 
-*Defined in [src/core/Application.ts:38](https://github.com/Xisabla/Korbots/blob/2fc3376/server/src/core/Application.ts#L38)*
+*Defined in [src/core/Application.ts:38](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/core/Application.ts#L38)*
 
 "dbname" for the Mongoose options
 
@@ -31,7 +31,7 @@ ___
 
 • **pass**? : *string*
 
-*Defined in [src/core/Application.ts:36](https://github.com/Xisabla/Korbots/blob/2fc3376/server/src/core/Application.ts#L36)*
+*Defined in [src/core/Application.ts:36](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/core/Application.ts#L36)*
 
 "pass" for the Mongoose options
 
@@ -41,7 +41,7 @@ ___
 
 • **url**: *string*
 
-*Defined in [src/core/Application.ts:32](https://github.com/Xisabla/Korbots/blob/2fc3376/server/src/core/Application.ts#L32)*
+*Defined in [src/core/Application.ts:32](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/core/Application.ts#L32)*
 
 Connect URL of Mongo database
 
@@ -51,6 +51,6 @@ ___
 
 • **user**? : *string*
 
-*Defined in [src/core/Application.ts:34](https://github.com/Xisabla/Korbots/blob/2fc3376/server/src/core/Application.ts#L34)*
+*Defined in [src/core/Application.ts:34](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/core/Application.ts#L34)*
 
 "user" for the Mongoose options

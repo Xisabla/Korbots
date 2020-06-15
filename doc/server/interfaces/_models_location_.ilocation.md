@@ -1,6 +1,6 @@
-[korbots-server](../README.md) › ["models/User"](../modules/_models_user_.md) › [IUser](_models_user_.iuser.md)
+[korbots-server](../README.md) › ["models/Location"](../modules/_models_location_.md) › [ILocation](_models_location_.ilocation.md)
 
-# Interface: IUser ‹**QueryHelpers**›
+# Interface: ILocation ‹**QueryHelpers**›
 
 ## Type parameters
 
@@ -8,92 +8,94 @@
 
 ## Hierarchy
 
-* [Model](_models_location_.ilocation.md#model)‹[IUserSchema](_models_user_.iuserschema.md)›
+* [Model](_models_location_.ilocation.md#model)‹[ILocationSchema](_models_location_.ilocationschema.md)›
 
-  ↳ **IUser**
+  ↳ **ILocation**
 
 ## Index
 
 ### Events
 
-* [constructor](_models_user_.iuser.md#constructor)
+* [constructor](_models_location_.ilocation.md#constructor)
 
 ### Properties
 
-* [Model](_models_user_.iuser.md#model)
-* [base](_models_user_.iuser.md#base)
-* [baseModelName](_models_user_.iuser.md#basemodelname)
-* [collection](_models_user_.iuser.md#collection)
-* [db](_models_user_.iuser.md#db)
-* [discriminators](_models_user_.iuser.md#discriminators)
-* [modelName](_models_user_.iuser.md#modelname)
-* [schema](_models_user_.iuser.md#schema)
+* [Model](_models_location_.ilocation.md#model)
+* [base](_models_location_.ilocation.md#base)
+* [baseModelName](_models_location_.ilocation.md#basemodelname)
+* [collection](_models_location_.ilocation.md#collection)
+* [db](_models_location_.ilocation.md#db)
+* [discriminators](_models_location_.ilocation.md#discriminators)
+* [modelName](_models_location_.ilocation.md#modelname)
+* [schema](_models_location_.ilocation.md#schema)
 
 ### Methods
 
-* [$where](_models_user_.iuser.md#where)
-* [addListener](_models_user_.iuser.md#addlistener)
-* [aggregate](_models_user_.iuser.md#aggregate)
-* [bulkWrite](_models_user_.iuser.md#bulkwrite)
-* [count](_models_user_.iuser.md#count)
-* [countDocuments](_models_user_.iuser.md#countdocuments)
-* [create](_models_user_.iuser.md#create)
-* [createCollection](_models_user_.iuser.md#createcollection)
-* [createIndexes](_models_user_.iuser.md#createindexes)
-* [deleteMany](_models_user_.iuser.md#deletemany)
-* [deleteOne](_models_user_.iuser.md#deleteone)
-* [discriminator](_models_user_.iuser.md#discriminator)
-* [distinct](_models_user_.iuser.md#distinct)
-* [doesExists](_models_user_.iuser.md#doesexists)
-* [emit](_models_user_.iuser.md#emit)
-* [ensureIndexes](_models_user_.iuser.md#ensureindexes)
-* [estimatedDocumentCount](_models_user_.iuser.md#estimateddocumentcount)
-* [eventNames](_models_user_.iuser.md#eventnames)
-* [exists](_models_user_.iuser.md#exists)
-* [find](_models_user_.iuser.md#find)
-* [findById](_models_user_.iuser.md#findbyid)
-* [findByIdAndDelete](_models_user_.iuser.md#findbyidanddelete)
-* [findByIdAndRemove](_models_user_.iuser.md#findbyidandremove)
-* [findByIdAndUpdate](_models_user_.iuser.md#findbyidandupdate)
-* [findOne](_models_user_.iuser.md#findone)
-* [findOneAndDelete](_models_user_.iuser.md#findoneanddelete)
-* [findOneAndRemove](_models_user_.iuser.md#findoneandremove)
-* [findOneAndUpdate](_models_user_.iuser.md#findoneandupdate)
-* [geoSearch](_models_user_.iuser.md#geosearch)
-* [getMaxListeners](_models_user_.iuser.md#getmaxlisteners)
-* [hydrate](_models_user_.iuser.md#hydrate)
-* [init](_models_user_.iuser.md#init)
-* [insertMany](_models_user_.iuser.md#insertmany)
-* [listIndexes](_models_user_.iuser.md#listindexes)
-* [listenerCount](_models_user_.iuser.md#listenercount)
-* [listeners](_models_user_.iuser.md#listeners)
-* [mapReduce](_models_user_.iuser.md#mapreduce)
-* [model](_models_user_.iuser.md#model)
-* [off](_models_user_.iuser.md#off)
-* [on](_models_user_.iuser.md#on)
-* [once](_models_user_.iuser.md#once)
-* [populate](_models_user_.iuser.md#populate)
-* [prependListener](_models_user_.iuser.md#prependlistener)
-* [prependOnceListener](_models_user_.iuser.md#prependoncelistener)
-* [rawListeners](_models_user_.iuser.md#rawlisteners)
-* [remove](_models_user_.iuser.md#remove)
-* [removeAllListeners](_models_user_.iuser.md#removealllisteners)
-* [removeListener](_models_user_.iuser.md#removelistener)
-* [replaceOne](_models_user_.iuser.md#replaceone)
-* [setMaxListeners](_models_user_.iuser.md#setmaxlisteners)
-* [syncIndexes](_models_user_.iuser.md#syncindexes)
-* [translateAliases](_models_user_.iuser.md#translatealiases)
-* [update](_models_user_.iuser.md#update)
-* [updateMany](_models_user_.iuser.md#updatemany)
-* [updateOne](_models_user_.iuser.md#updateone)
-* [watch](_models_user_.iuser.md#watch)
-* [where](_models_user_.iuser.md#where)
+* [$where](_models_location_.ilocation.md#where)
+* [addListener](_models_location_.ilocation.md#addlistener)
+* [aggregate](_models_location_.ilocation.md#aggregate)
+* [bulkWrite](_models_location_.ilocation.md#bulkwrite)
+* [count](_models_location_.ilocation.md#count)
+* [countDocuments](_models_location_.ilocation.md#countdocuments)
+* [create](_models_location_.ilocation.md#create)
+* [createCollection](_models_location_.ilocation.md#createcollection)
+* [createIndexes](_models_location_.ilocation.md#createindexes)
+* [deleteMany](_models_location_.ilocation.md#deletemany)
+* [deleteOne](_models_location_.ilocation.md#deleteone)
+* [discriminator](_models_location_.ilocation.md#discriminator)
+* [distinct](_models_location_.ilocation.md#distinct)
+* [emit](_models_location_.ilocation.md#emit)
+* [ensureIndexes](_models_location_.ilocation.md#ensureindexes)
+* [estimatedDocumentCount](_models_location_.ilocation.md#estimateddocumentcount)
+* [eventNames](_models_location_.ilocation.md#eventnames)
+* [exists](_models_location_.ilocation.md#exists)
+* [fetchLocation](_models_location_.ilocation.md#fetchlocation)
+* [find](_models_location_.ilocation.md#find)
+* [findById](_models_location_.ilocation.md#findbyid)
+* [findByIdAndDelete](_models_location_.ilocation.md#findbyidanddelete)
+* [findByIdAndRemove](_models_location_.ilocation.md#findbyidandremove)
+* [findByIdAndUpdate](_models_location_.ilocation.md#findbyidandupdate)
+* [findLocation](_models_location_.ilocation.md#findlocation)
+* [findOne](_models_location_.ilocation.md#findone)
+* [findOneAndDelete](_models_location_.ilocation.md#findoneanddelete)
+* [findOneAndRemove](_models_location_.ilocation.md#findoneandremove)
+* [findOneAndUpdate](_models_location_.ilocation.md#findoneandupdate)
+* [geoSearch](_models_location_.ilocation.md#geosearch)
+* [getCoordinates](_models_location_.ilocation.md#getcoordinates)
+* [getMaxListeners](_models_location_.ilocation.md#getmaxlisteners)
+* [hydrate](_models_location_.ilocation.md#hydrate)
+* [init](_models_location_.ilocation.md#init)
+* [insertMany](_models_location_.ilocation.md#insertmany)
+* [listIndexes](_models_location_.ilocation.md#listindexes)
+* [listenerCount](_models_location_.ilocation.md#listenercount)
+* [listeners](_models_location_.ilocation.md#listeners)
+* [mapReduce](_models_location_.ilocation.md#mapreduce)
+* [model](_models_location_.ilocation.md#model)
+* [off](_models_location_.ilocation.md#off)
+* [on](_models_location_.ilocation.md#on)
+* [once](_models_location_.ilocation.md#once)
+* [populate](_models_location_.ilocation.md#populate)
+* [prependListener](_models_location_.ilocation.md#prependlistener)
+* [prependOnceListener](_models_location_.ilocation.md#prependoncelistener)
+* [rawListeners](_models_location_.ilocation.md#rawlisteners)
+* [remove](_models_location_.ilocation.md#remove)
+* [removeAllListeners](_models_location_.ilocation.md#removealllisteners)
+* [removeListener](_models_location_.ilocation.md#removelistener)
+* [replaceOne](_models_location_.ilocation.md#replaceone)
+* [setMaxListeners](_models_location_.ilocation.md#setmaxlisteners)
+* [syncIndexes](_models_location_.ilocation.md#syncindexes)
+* [translateAliases](_models_location_.ilocation.md#translatealiases)
+* [update](_models_location_.ilocation.md#update)
+* [updateMany](_models_location_.ilocation.md#updatemany)
+* [updateOne](_models_location_.ilocation.md#updateone)
+* [watch](_models_location_.ilocation.md#watch)
+* [where](_models_location_.ilocation.md#where)
 
 ## Events
 
 ###  constructor
 
-• **new IUser**(`doc?`: any): *[IUserSchema](_models_user_.iuserschema.md)*
+• **new ILocation**(`doc?`: any): *[ILocationSchema](_models_location_.ilocationschema.md)*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[constructor](_models_location_.ilocation.md#constructor)*
 
@@ -108,7 +110,7 @@ Name | Type | Description |
 ------ | ------ | ------ |
 `doc?` | any | values with which to create the document |
 
-**Returns:** *[IUserSchema](_models_user_.iuserschema.md)*
+**Returns:** *[ILocationSchema](_models_location_.ilocationschema.md)*
 
 ## Properties
 
@@ -207,7 +209,7 @@ Schema the model uses.
 
 ###  $where
 
-▸ **$where**(`argument`: string | Function): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md), [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **$where**(`argument`: string | Function): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md), [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[$where](_models_location_.ilocation.md#where)*
 
@@ -221,7 +223,7 @@ Name | Type | Description |
 ------ | ------ | ------ |
 `argument` | string &#124; Function | is a javascript string or anonymous function  |
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md), [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md), [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
 ___
 
@@ -375,7 +377,7 @@ ___
 
 ###  count
 
-▸ **count**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `callback?`: function): *Query‹number› & QueryHelpers*
+▸ **count**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `callback?`: function): *Query‹number› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[count](_models_location_.ilocation.md#count)*
 
@@ -385,7 +387,7 @@ Counts number of matching documents in a database collection.
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
 ▪`Optional`  **callback**: *function*
 
@@ -432,7 +434,7 @@ Name | Type |
 
 **Returns:** *Query‹number› & QueryHelpers*
 
-▸ **countDocuments**(`criteria`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `callback?`: function): *Query‹number› & QueryHelpers*
+▸ **countDocuments**(`criteria`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `callback?`: function): *Query‹number› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[countDocuments](_models_location_.ilocation.md#countdocuments)*
 
@@ -440,7 +442,7 @@ Defined in node_modules/@types/mongoose/index.d.ts:3219
 
 **Parameters:**
 
-▪ **criteria**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **criteria**: *FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
 ▪`Optional`  **callback**: *function*
 
@@ -459,7 +461,7 @@ ___
 
 ###  create
 
-▸ **create**‹**TCreate**›(`doc`: CreateQuery‹TCreate›, `options?`: SaveOptions): *Promise‹[IUserSchema](_models_user_.iuserschema.md)›*
+▸ **create**‹**TCreate**›(`doc`: CreateQuery‹TCreate›, `options?`: SaveOptions): *Promise‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[create](_models_location_.ilocation.md#create)*
 
@@ -480,9 +482,9 @@ Name | Type |
 `doc` | CreateQuery‹TCreate› |
 `options?` | SaveOptions |
 
-**Returns:** *Promise‹[IUserSchema](_models_user_.iuserschema.md)›*
+**Returns:** *Promise‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
-▸ **create**‹**TCreate**›(`doc`: CreateQuery‹TCreate›, `callback?`: function): *Promise‹[IUserSchema](_models_user_.iuserschema.md)›*
+▸ **create**‹**TCreate**›(`doc`: CreateQuery‹TCreate›, `callback?`: function): *Promise‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[create](_models_location_.ilocation.md#create)*
 
@@ -498,18 +500,18 @@ Defined in node_modules/@types/mongoose/index.d.ts:3240
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md)[]): *void*
+▸ (`err`: any, `res`: [ILocationSchema](_models_location_.ilocationschema.md)[]): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md)[] |
+`res` | [ILocationSchema](_models_location_.ilocationschema.md)[] |
 
-**Returns:** *Promise‹[IUserSchema](_models_user_.iuserschema.md)›*
+**Returns:** *Promise‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
-▸ **create**‹**TCreate**›(`docs`: CreateQuery‹TCreate›[], `callback?`: function): *Promise‹[IUserSchema](_models_user_.iuserschema.md)[]›*
+▸ **create**‹**TCreate**›(`docs`: CreateQuery‹TCreate›[], `callback?`: function): *Promise‹[ILocationSchema](_models_location_.ilocationschema.md)[]›*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[create](_models_location_.ilocation.md#create)*
 
@@ -525,18 +527,18 @@ Defined in node_modules/@types/mongoose/index.d.ts:3241
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md)[]): *void*
+▸ (`err`: any, `res`: [ILocationSchema](_models_location_.ilocationschema.md)[]): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md)[] |
+`res` | [ILocationSchema](_models_location_.ilocationschema.md)[] |
 
-**Returns:** *Promise‹[IUserSchema](_models_user_.iuserschema.md)[]›*
+**Returns:** *Promise‹[ILocationSchema](_models_location_.ilocationschema.md)[]›*
 
-▸ **create**‹**TCreate**›(`docs`: CreateQuery‹TCreate›[], `options?`: SaveOptions, `callback?`: function): *Promise‹[IUserSchema](_models_user_.iuserschema.md)[]›*
+▸ **create**‹**TCreate**›(`docs`: CreateQuery‹TCreate›[], `options?`: SaveOptions, `callback?`: function): *Promise‹[ILocationSchema](_models_location_.ilocationschema.md)[]›*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[create](_models_location_.ilocation.md#create)*
 
@@ -554,18 +556,18 @@ Defined in node_modules/@types/mongoose/index.d.ts:3242
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md)[]): *void*
+▸ (`err`: any, `res`: [ILocationSchema](_models_location_.ilocationschema.md)[]): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md)[] |
+`res` | [ILocationSchema](_models_location_.ilocationschema.md)[] |
 
-**Returns:** *Promise‹[IUserSchema](_models_user_.iuserschema.md)[]›*
+**Returns:** *Promise‹[ILocationSchema](_models_location_.ilocationschema.md)[]›*
 
-▸ **create**‹**TCreate**›(...`docs`: CreateQuery‹TCreate›[]): *Promise‹[IUserSchema](_models_user_.iuserschema.md)›*
+▸ **create**‹**TCreate**›(...`docs`: CreateQuery‹TCreate›[]): *Promise‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[create](_models_location_.ilocation.md#create)*
 
@@ -581,7 +583,7 @@ Name | Type |
 ------ | ------ |
 `...docs` | CreateQuery‹TCreate›[] |
 
-**Returns:** *Promise‹[IUserSchema](_models_user_.iuserschema.md)›*
+**Returns:** *Promise‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
 ___
 
@@ -644,7 +646,7 @@ ___
 
 ###  deleteMany
 
-▸ **deleteMany**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `callback?`: function): *Query‹DeleteWriteOpResultObject["result"] & object› & QueryHelpers*
+▸ **deleteMany**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `callback?`: function): *Query‹DeleteWriteOpResultObject["result"] & object› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[deleteMany](_models_location_.ilocation.md#deletemany)*
 
@@ -652,7 +654,7 @@ Defined in node_modules/@types/mongoose/index.d.ts:3570
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
 ▪`Optional`  **callback**: *function*
 
@@ -666,7 +668,7 @@ Name | Type |
 
 **Returns:** *Query‹DeleteWriteOpResultObject["result"] & object› & QueryHelpers*
 
-▸ **deleteMany**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `options`: ModelOptions, `callback?`: function): *Query‹DeleteWriteOpResultObject["result"] & object› & QueryHelpers*
+▸ **deleteMany**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `options`: ModelOptions, `callback?`: function): *Query‹DeleteWriteOpResultObject["result"] & object› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[deleteMany](_models_location_.ilocation.md#deletemany)*
 
@@ -674,7 +676,7 @@ Defined in node_modules/@types/mongoose/index.d.ts:3571
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
 ▪ **options**: *ModelOptions*
 
@@ -694,7 +696,7 @@ ___
 
 ###  deleteOne
 
-▸ **deleteOne**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `callback?`: function): *Query‹DeleteWriteOpResultObject["result"] & object› & QueryHelpers*
+▸ **deleteOne**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `callback?`: function): *Query‹DeleteWriteOpResultObject["result"] & object› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[deleteOne](_models_location_.ilocation.md#deleteone)*
 
@@ -702,7 +704,7 @@ Defined in node_modules/@types/mongoose/index.d.ts:3568
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
 ▪`Optional`  **callback**: *function*
 
@@ -716,7 +718,7 @@ Name | Type |
 
 **Returns:** *Query‹DeleteWriteOpResultObject["result"] & object› & QueryHelpers*
 
-▸ **deleteOne**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `options`: ModelOptions, `callback?`: function): *Query‹DeleteWriteOpResultObject["result"] & object› & QueryHelpers*
+▸ **deleteOne**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `options`: ModelOptions, `callback?`: function): *Query‹DeleteWriteOpResultObject["result"] & object› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[deleteOne](_models_location_.ilocation.md#deleteone)*
 
@@ -724,7 +726,7 @@ Defined in node_modules/@types/mongoose/index.d.ts:3569
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
 ▪ **options**: *ModelOptions*
 
@@ -843,22 +845,6 @@ Name | Type |
 `res` | any[] |
 
 **Returns:** *Query‹any[]› & QueryHelpers*
-
-___
-
-###  doesExists
-
-▸ **doesExists**(`username`: string): *Promise‹boolean›*
-
-*Defined in [src/models/User.ts:19](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/User.ts#L19)*
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`username` | string |
-
-**Returns:** *Promise‹boolean›*
 
 ___
 
@@ -996,7 +982,7 @@ ___
 
 ###  exists
 
-▸ **exists**(`filter`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `callback?`: function): *Promise‹boolean›*
+▸ **exists**(`filter`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `callback?`: function): *Promise‹boolean›*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[exists](_models_location_.ilocation.md#exists)*
 
@@ -1007,7 +993,7 @@ the given `filter`, and false otherwise.
 
 **Parameters:**
 
-▪ **filter**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **filter**: *FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
 ▪`Optional`  **callback**: *function*
 
@@ -1024,9 +1010,26 @@ Name | Type |
 
 ___
 
+###  fetchLocation
+
+▸ **fetchLocation**(`city`: string, `country?`: string): *Promise‹[MapquestGeocodingAPIResponse](_core_api_igeocoding_.mapquestgeocodingapiresponse.md)›*
+
+*Defined in [src/models/Location.ts:40](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Location.ts#L40)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`city` | string |
+`country?` | string |
+
+**Returns:** *Promise‹[MapquestGeocodingAPIResponse](_core_api_igeocoding_.mapquestgeocodingapiresponse.md)›*
+
+___
+
 ###  find
 
-▸ **find**(`callback?`: function): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md)[], [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **find**(`callback?`: function): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md)[], [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[find](_models_location_.ilocation.md#find)*
 
@@ -1038,18 +1041,18 @@ Finds documents.
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md)[]): *void*
+▸ (`err`: any, `res`: [ILocationSchema](_models_location_.ilocationschema.md)[]): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md)[] |
+`res` | [ILocationSchema](_models_location_.ilocationschema.md)[] |
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md)[], [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md)[], [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **find**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `callback?`: function): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md)[], [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **find**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `callback?`: function): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md)[], [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[find](_models_location_.ilocation.md#find)*
 
@@ -1057,22 +1060,22 @@ Defined in node_modules/@types/mongoose/index.d.ts:3319
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md)[]): *void*
+▸ (`err`: any, `res`: [ILocationSchema](_models_location_.ilocationschema.md)[]): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md)[] |
+`res` | [ILocationSchema](_models_location_.ilocationschema.md)[] |
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md)[], [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md)[], [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **find**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `projection?`: any | null, `callback?`: function): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md)[], [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **find**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `projection?`: any | null, `callback?`: function): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md)[], [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[find](_models_location_.ilocation.md#find)*
 
@@ -1080,24 +1083,24 @@ Defined in node_modules/@types/mongoose/index.d.ts:3320
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
 ▪`Optional`  **projection**: *any | null*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md)[]): *void*
+▸ (`err`: any, `res`: [ILocationSchema](_models_location_.ilocationschema.md)[]): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md)[] |
+`res` | [ILocationSchema](_models_location_.ilocationschema.md)[] |
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md)[], [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md)[], [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **find**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `projection?`: any | null, `options?`: object & Omit‹QueryFindOptions, "lean"›, `callback?`: function): *Query‹DocumentDefinition‹[IUserSchema](_models_user_.iuserschema.md)›[]› & QueryHelpers*
+▸ **find**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `projection?`: any | null, `options?`: object & Omit‹QueryFindOptions, "lean"›, `callback?`: function): *Query‹DocumentDefinition‹[ILocationSchema](_models_location_.ilocationschema.md)›[]› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[find](_models_location_.ilocation.md#find)*
 
@@ -1105,7 +1108,7 @@ Defined in node_modules/@types/mongoose/index.d.ts:3322
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
 ▪`Optional`  **projection**: *any | null*
 
@@ -1113,18 +1116,18 @@ Defined in node_modules/@types/mongoose/index.d.ts:3322
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md)[]): *void*
+▸ (`err`: any, `res`: [ILocationSchema](_models_location_.ilocationschema.md)[]): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md)[] |
+`res` | [ILocationSchema](_models_location_.ilocationschema.md)[] |
 
-**Returns:** *Query‹DocumentDefinition‹[IUserSchema](_models_user_.iuserschema.md)›[]› & QueryHelpers*
+**Returns:** *Query‹DocumentDefinition‹[ILocationSchema](_models_location_.ilocationschema.md)›[]› & QueryHelpers*
 
-▸ **find**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `projection?`: any | null, `options?`: QueryFindOptions, `callback?`: function): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md)[], [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **find**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `projection?`: any | null, `options?`: QueryFindOptions, `callback?`: function): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md)[], [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[find](_models_location_.ilocation.md#find)*
 
@@ -1132,7 +1135,7 @@ Defined in node_modules/@types/mongoose/index.d.ts:3324
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
 ▪`Optional`  **projection**: *any | null*
 
@@ -1140,22 +1143,22 @@ Defined in node_modules/@types/mongoose/index.d.ts:3324
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md)[]): *void*
+▸ (`err`: any, `res`: [ILocationSchema](_models_location_.ilocationschema.md)[]): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md)[] |
+`res` | [ILocationSchema](_models_location_.ilocationschema.md)[] |
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md)[], [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md)[], [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
 ___
 
 ###  findById
 
-▸ **findById**(`id`: any | string | number, `callback?`: function): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **findById**(`id`: any | string | number, `callback?`: function): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[findById](_models_location_.ilocation.md#findbyid)*
 
@@ -1172,18 +1175,18 @@ value of _id to query by
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md) | null): *void*
+▸ (`err`: any, `res`: [ILocationSchema](_models_location_.ilocationschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md) &#124; null |
+`res` | [ILocationSchema](_models_location_.ilocationschema.md) &#124; null |
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findById**(`id`: any | string | number, `projection`: any, `callback?`: function): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **findById**(`id`: any | string | number, `projection`: any, `callback?`: function): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[findById](_models_location_.ilocation.md#findbyid)*
 
@@ -1197,18 +1200,18 @@ Defined in node_modules/@types/mongoose/index.d.ts:3335
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md) | null): *void*
+▸ (`err`: any, `res`: [ILocationSchema](_models_location_.ilocationschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md) &#124; null |
+`res` | [ILocationSchema](_models_location_.ilocationschema.md) &#124; null |
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findById**(`id`: any | string | number, `projection`: any, `options`: object & Omit‹QueryFindBaseOptions, "lean"›, `callback?`: function): *Query‹DocumentDefinition‹[IUserSchema](_models_user_.iuserschema.md)›› & QueryHelpers*
+▸ **findById**(`id`: any | string | number, `projection`: any, `options`: object & Omit‹QueryFindBaseOptions, "lean"›, `callback?`: function): *Query‹DocumentDefinition‹[ILocationSchema](_models_location_.ilocationschema.md)›› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[findById](_models_location_.ilocation.md#findbyid)*
 
@@ -1224,18 +1227,18 @@ Defined in node_modules/@types/mongoose/index.d.ts:3337
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md) | null): *void*
+▸ (`err`: any, `res`: [ILocationSchema](_models_location_.ilocationschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md) &#124; null |
+`res` | [ILocationSchema](_models_location_.ilocationschema.md) &#124; null |
 
-**Returns:** *Query‹DocumentDefinition‹[IUserSchema](_models_user_.iuserschema.md)›› & QueryHelpers*
+**Returns:** *Query‹DocumentDefinition‹[ILocationSchema](_models_location_.ilocationschema.md)›› & QueryHelpers*
 
-▸ **findById**(`id`: any | string | number, `projection`: any, `options`: QueryFindBaseOptions, `callback?`: function): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **findById**(`id`: any | string | number, `projection`: any, `options`: QueryFindBaseOptions, `callback?`: function): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[findById](_models_location_.ilocation.md#findbyid)*
 
@@ -1251,22 +1254,22 @@ Defined in node_modules/@types/mongoose/index.d.ts:3339
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md) | null): *void*
+▸ (`err`: any, `res`: [ILocationSchema](_models_location_.ilocationschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md) &#124; null |
+`res` | [ILocationSchema](_models_location_.ilocationschema.md) &#124; null |
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
 ___
 
 ###  findByIdAndDelete
 
-▸ **findByIdAndDelete**(): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **findByIdAndDelete**(): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[findByIdAndDelete](_models_location_.ilocation.md#findbyidanddelete)*
 
@@ -1279,9 +1282,9 @@ Executes immediately if callback is passed, else a Query object is returned.
 
 Note: same signatures as findByIdAndRemove
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findByIdAndDelete**(`id`: any | number | string, `callback?`: function): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **findByIdAndDelete**(`id`: any | number | string, `callback?`: function): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[findByIdAndDelete](_models_location_.ilocation.md#findbyidanddelete)*
 
@@ -1293,18 +1296,18 @@ Defined in node_modules/@types/mongoose/index.d.ts:3375
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md) | null): *void*
+▸ (`err`: any, `res`: [ILocationSchema](_models_location_.ilocationschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md) &#124; null |
+`res` | [ILocationSchema](_models_location_.ilocationschema.md) &#124; null |
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findByIdAndDelete**(`id`: any | number | string, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md) | null›› & QueryHelpers*
+▸ **findByIdAndDelete**(`id`: any | number | string, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[ILocationSchema](_models_location_.ilocationschema.md) | null›› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[findByIdAndDelete](_models_location_.ilocation.md#findbyidanddelete)*
 
@@ -1318,18 +1321,18 @@ Defined in node_modules/@types/mongoose/index.d.ts:3377
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md) | null›): *void*
+▸ (`err`: any, `res`: FindAndModifyWriteOpResultObject‹[ILocationSchema](_models_location_.ilocationschema.md) | null›): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md) &#124; null› |
+`res` | FindAndModifyWriteOpResultObject‹[ILocationSchema](_models_location_.ilocationschema.md) &#124; null› |
 
-**Returns:** *Query‹FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md) | null›› & QueryHelpers*
+**Returns:** *Query‹FindAndModifyWriteOpResultObject‹[ILocationSchema](_models_location_.ilocationschema.md) | null›› & QueryHelpers*
 
-▸ **findByIdAndDelete**(`id`: any | number | string, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **findByIdAndDelete**(`id`: any | number | string, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[findByIdAndDelete](_models_location_.ilocation.md#findbyidanddelete)*
 
@@ -1343,22 +1346,22 @@ Defined in node_modules/@types/mongoose/index.d.ts:3380
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md) | null): *void*
+▸ (`err`: any, `res`: [ILocationSchema](_models_location_.ilocationschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md) &#124; null |
+`res` | [ILocationSchema](_models_location_.ilocationschema.md) &#124; null |
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
 ___
 
 ###  findByIdAndRemove
 
-▸ **findByIdAndRemove**(): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **findByIdAndRemove**(): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[findByIdAndRemove](_models_location_.ilocation.md#findbyidandremove)*
 
@@ -1374,9 +1377,9 @@ https://mongoosejs.com/docs/api.html#mongoose_Mongoose-set
 
 Note: same signatures as findByIdAndDelete
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findByIdAndRemove**(`id`: any | number | string, `callback?`: function): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **findByIdAndRemove**(`id`: any | number | string, `callback?`: function): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[findByIdAndRemove](_models_location_.ilocation.md#findbyidandremove)*
 
@@ -1388,18 +1391,18 @@ Defined in node_modules/@types/mongoose/index.d.ts:3356
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md) | null): *void*
+▸ (`err`: any, `res`: [ILocationSchema](_models_location_.ilocationschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md) &#124; null |
+`res` | [ILocationSchema](_models_location_.ilocationschema.md) &#124; null |
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findByIdAndRemove**(`id`: any | number | string, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md) | null›› & QueryHelpers*
+▸ **findByIdAndRemove**(`id`: any | number | string, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[ILocationSchema](_models_location_.ilocationschema.md) | null›› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[findByIdAndRemove](_models_location_.ilocation.md#findbyidandremove)*
 
@@ -1413,18 +1416,18 @@ Defined in node_modules/@types/mongoose/index.d.ts:3358
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md) | null›): *void*
+▸ (`err`: any, `res`: FindAndModifyWriteOpResultObject‹[ILocationSchema](_models_location_.ilocationschema.md) | null›): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md) &#124; null› |
+`res` | FindAndModifyWriteOpResultObject‹[ILocationSchema](_models_location_.ilocationschema.md) &#124; null› |
 
-**Returns:** *Query‹FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md) | null›› & QueryHelpers*
+**Returns:** *Query‹FindAndModifyWriteOpResultObject‹[ILocationSchema](_models_location_.ilocationschema.md) | null›› & QueryHelpers*
 
-▸ **findByIdAndRemove**(`id`: any | number | string, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **findByIdAndRemove**(`id`: any | number | string, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[findByIdAndRemove](_models_location_.ilocation.md#findbyidandremove)*
 
@@ -1438,22 +1441,22 @@ Defined in node_modules/@types/mongoose/index.d.ts:3361
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md) | null): *void*
+▸ (`err`: any, `res`: [ILocationSchema](_models_location_.ilocationschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md) &#124; null |
+`res` | [ILocationSchema](_models_location_.ilocationschema.md) &#124; null |
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
 ___
 
 ###  findByIdAndUpdate
 
-▸ **findByIdAndUpdate**(): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **findByIdAndUpdate**(): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[findByIdAndUpdate](_models_location_.ilocation.md#findbyidandupdate)*
 
@@ -1465,9 +1468,9 @@ is equivalent to findOneAndUpdate({ _id: id }, ...).
 If mongoose option 'useFindAndModify': set to false it uses native findOneAndUpdate() rather than deprecated findAndModify().
 https://mongoosejs.com/docs/api.html#mongoose_Mongoose-set
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `callback?`: function): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `callback?`: function): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[findByIdAndUpdate](_models_location_.ilocation.md#findbyidandupdate)*
 
@@ -1477,22 +1480,22 @@ Defined in node_modules/@types/mongoose/index.d.ts:3392
 
 ▪ **id**: *any | number | string*
 
-▪ **update**: *UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **update**: *UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md) | null): *void*
+▸ (`err`: any, `res`: [ILocationSchema](_models_location_.ilocationschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md) &#124; null |
+`res` | [ILocationSchema](_models_location_.ilocationschema.md) &#124; null |
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `options`: object & object & object & QueryFindOneAndUpdateOptions, `callback?`: function): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md), [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `options`: object & object & object & QueryFindOneAndUpdateOptions, `callback?`: function): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md), [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[findByIdAndUpdate](_models_location_.ilocation.md#findbyidandupdate)*
 
@@ -1502,24 +1505,24 @@ Defined in node_modules/@types/mongoose/index.d.ts:3394
 
 ▪ **id**: *any | number | string*
 
-▪ **update**: *UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **update**: *UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
 ▪ **options**: *object & object & object & QueryFindOneAndUpdateOptions*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md)): *void*
+▸ (`err`: any, `res`: [ILocationSchema](_models_location_.ilocationschema.md)): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md) |
+`res` | [ILocationSchema](_models_location_.ilocationschema.md) |
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md), [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md), [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `options`: object & QueryFindOneAndUpdateOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md)›› & QueryHelpers*
+▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `options`: object & QueryFindOneAndUpdateOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[ILocationSchema](_models_location_.ilocationschema.md)›› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[findByIdAndUpdate](_models_location_.ilocation.md#findbyidandupdate)*
 
@@ -1529,24 +1532,24 @@ Defined in node_modules/@types/mongoose/index.d.ts:3397
 
 ▪ **id**: *any | number | string*
 
-▪ **update**: *UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **update**: *UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
 ▪ **options**: *object & QueryFindOneAndUpdateOptions*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md)›): *void*
+▸ (`err`: any, `res`: FindAndModifyWriteOpResultObject‹[ILocationSchema](_models_location_.ilocationschema.md)›): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md)› |
+`res` | FindAndModifyWriteOpResultObject‹[ILocationSchema](_models_location_.ilocationschema.md)› |
 
-**Returns:** *Query‹FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md)›› & QueryHelpers*
+**Returns:** *Query‹FindAndModifyWriteOpResultObject‹[ILocationSchema](_models_location_.ilocationschema.md)›› & QueryHelpers*
 
-▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `options`: object & QueryFindOneAndUpdateOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md) | null›› & QueryHelpers*
+▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `options`: object & QueryFindOneAndUpdateOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[ILocationSchema](_models_location_.ilocationschema.md) | null›› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[findByIdAndUpdate](_models_location_.ilocation.md#findbyidandupdate)*
 
@@ -1556,24 +1559,24 @@ Defined in node_modules/@types/mongoose/index.d.ts:3401
 
 ▪ **id**: *any | number | string*
 
-▪ **update**: *UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **update**: *UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
 ▪ **options**: *object & QueryFindOneAndUpdateOptions*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md) | null›): *void*
+▸ (`err`: any, `res`: FindAndModifyWriteOpResultObject‹[ILocationSchema](_models_location_.ilocationschema.md) | null›): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md) &#124; null› |
+`res` | FindAndModifyWriteOpResultObject‹[ILocationSchema](_models_location_.ilocationschema.md) &#124; null› |
 
-**Returns:** *Query‹FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md) | null›› & QueryHelpers*
+**Returns:** *Query‹FindAndModifyWriteOpResultObject‹[ILocationSchema](_models_location_.ilocationschema.md) | null›› & QueryHelpers*
 
-▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `options`: object & Omit‹QueryFindOneAndUpdateOptions, "lean"›, `callback?`: function): *Query‹DocumentDefinition‹[IUserSchema](_models_user_.iuserschema.md)›› & QueryHelpers*
+▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `options`: object & Omit‹QueryFindOneAndUpdateOptions, "lean"›, `callback?`: function): *Query‹DocumentDefinition‹[ILocationSchema](_models_location_.ilocationschema.md)›› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[findByIdAndUpdate](_models_location_.ilocation.md#findbyidandupdate)*
 
@@ -1583,24 +1586,24 @@ Defined in node_modules/@types/mongoose/index.d.ts:3405
 
 ▪ **id**: *any | number | string*
 
-▪ **update**: *UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **update**: *UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
 ▪ **options**: *object & Omit‹QueryFindOneAndUpdateOptions, "lean"›*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: DocumentDefinition‹[IUserSchema](_models_user_.iuserschema.md)›): *void*
+▸ (`err`: any, `res`: DocumentDefinition‹[ILocationSchema](_models_location_.ilocationschema.md)›): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | DocumentDefinition‹[IUserSchema](_models_user_.iuserschema.md)› |
+`res` | DocumentDefinition‹[ILocationSchema](_models_location_.ilocationschema.md)› |
 
-**Returns:** *Query‹DocumentDefinition‹[IUserSchema](_models_user_.iuserschema.md)›› & QueryHelpers*
+**Returns:** *Query‹DocumentDefinition‹[ILocationSchema](_models_location_.ilocationschema.md)›› & QueryHelpers*
 
-▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `options`: QueryFindOneAndUpdateOptions, `callback?`: function): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `options`: QueryFindOneAndUpdateOptions, `callback?`: function): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[findByIdAndUpdate](_models_location_.ilocation.md#findbyidandupdate)*
 
@@ -1610,28 +1613,45 @@ Defined in node_modules/@types/mongoose/index.d.ts:3409
 
 ▪ **id**: *any | number | string*
 
-▪ **update**: *UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **update**: *UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
 ▪ **options**: *QueryFindOneAndUpdateOptions*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md) | null): *void*
+▸ (`err`: any, `res`: [ILocationSchema](_models_location_.ilocationschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md) &#124; null |
+`res` | [ILocationSchema](_models_location_.ilocationschema.md) &#124; null |
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
+
+___
+
+###  findLocation
+
+▸ **findLocation**(`city`: string, `country?`: string): *Promise‹[ILocationSchema](_models_location_.ilocationschema.md)›*
+
+*Defined in [src/models/Location.ts:39](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Location.ts#L39)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`city` | string |
+`country?` | string |
+
+**Returns:** *Promise‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
 ___
 
 ###  findOne
 
-▸ **findOne**(`conditions?`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `callback?`: function): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **findOne**(`conditions?`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `callback?`: function): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[findOne](_models_location_.ilocation.md#findone)*
 
@@ -1642,22 +1662,22 @@ The conditions are cast to their respective SchemaTypes before the command is se
 
 **Parameters:**
 
-▪`Optional`  **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪`Optional`  **conditions**: *FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md) | null): *void*
+▸ (`err`: any, `res`: [ILocationSchema](_models_location_.ilocationschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md) &#124; null |
+`res` | [ILocationSchema](_models_location_.ilocationschema.md) &#124; null |
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findOne**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `projection`: any, `callback?`: function): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **findOne**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `projection`: any, `callback?`: function): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[findOne](_models_location_.ilocation.md#findone)*
 
@@ -1665,24 +1685,24 @@ Defined in node_modules/@types/mongoose/index.d.ts:3420
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
 ▪ **projection**: *any*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md) | null): *void*
+▸ (`err`: any, `res`: [ILocationSchema](_models_location_.ilocationschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md) &#124; null |
+`res` | [ILocationSchema](_models_location_.ilocationschema.md) &#124; null |
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findOne**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `projection`: any, `options`: object & Omit‹QueryFindBaseOptions, "lean"›, `callback?`: function): *Query‹DocumentDefinition‹[IUserSchema](_models_user_.iuserschema.md)›› & QueryHelpers*
+▸ **findOne**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `projection`: any, `options`: object & Omit‹QueryFindBaseOptions, "lean"›, `callback?`: function): *Query‹DocumentDefinition‹[ILocationSchema](_models_location_.ilocationschema.md)›› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[findOne](_models_location_.ilocation.md#findone)*
 
@@ -1690,7 +1710,7 @@ Defined in node_modules/@types/mongoose/index.d.ts:3422
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
 ▪ **projection**: *any*
 
@@ -1698,18 +1718,18 @@ Defined in node_modules/@types/mongoose/index.d.ts:3422
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md) | null): *void*
+▸ (`err`: any, `res`: [ILocationSchema](_models_location_.ilocationschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md) &#124; null |
+`res` | [ILocationSchema](_models_location_.ilocationschema.md) &#124; null |
 
-**Returns:** *Query‹DocumentDefinition‹[IUserSchema](_models_user_.iuserschema.md)›› & QueryHelpers*
+**Returns:** *Query‹DocumentDefinition‹[ILocationSchema](_models_location_.ilocationschema.md)›› & QueryHelpers*
 
-▸ **findOne**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `projection`: any, `options`: QueryFindBaseOptions, `callback?`: function): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **findOne**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `projection`: any, `options`: QueryFindBaseOptions, `callback?`: function): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[findOne](_models_location_.ilocation.md#findone)*
 
@@ -1717,7 +1737,7 @@ Defined in node_modules/@types/mongoose/index.d.ts:3424
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
 ▪ **projection**: *any*
 
@@ -1725,22 +1745,22 @@ Defined in node_modules/@types/mongoose/index.d.ts:3424
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md) | null): *void*
+▸ (`err`: any, `res`: [ILocationSchema](_models_location_.ilocationschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md) &#124; null |
+`res` | [ILocationSchema](_models_location_.ilocationschema.md) &#124; null |
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
 ___
 
 ###  findOneAndDelete
 
-▸ **findOneAndDelete**(): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **findOneAndDelete**(): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[findOneAndDelete](_models_location_.ilocation.md#findoneanddelete)*
 
@@ -1752,9 +1772,9 @@ callback. Executes immediately if callback is passed.
 
 Note: same signatures as findOneAndRemove
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findOneAndDelete**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `callback?`: function): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **findOneAndDelete**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `callback?`: function): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[findOneAndDelete](_models_location_.ilocation.md#findoneanddelete)*
 
@@ -1762,22 +1782,22 @@ Defined in node_modules/@types/mongoose/index.d.ts:3455
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md) | null): *void*
+▸ (`err`: any, `res`: [ILocationSchema](_models_location_.ilocationschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md) &#124; null |
+`res` | [ILocationSchema](_models_location_.ilocationschema.md) &#124; null |
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findOneAndDelete**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `options`: object & QueryFindOneAndRemoveOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md) | null›› & QueryHelpers*
+▸ **findOneAndDelete**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `options`: object & QueryFindOneAndRemoveOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[ILocationSchema](_models_location_.ilocationschema.md) | null›› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[findOneAndDelete](_models_location_.ilocation.md#findoneanddelete)*
 
@@ -1785,25 +1805,25 @@ Defined in node_modules/@types/mongoose/index.d.ts:3457
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
 ▪ **options**: *object & QueryFindOneAndRemoveOptions*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `doc`: FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md) | null›, `res`: any): *void*
+▸ (`err`: any, `doc`: FindAndModifyWriteOpResultObject‹[ILocationSchema](_models_location_.ilocationschema.md) | null›, `res`: any): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`doc` | FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md) &#124; null› |
+`doc` | FindAndModifyWriteOpResultObject‹[ILocationSchema](_models_location_.ilocationschema.md) &#124; null› |
 `res` | any |
 
-**Returns:** *Query‹FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md) | null›› & QueryHelpers*
+**Returns:** *Query‹FindAndModifyWriteOpResultObject‹[ILocationSchema](_models_location_.ilocationschema.md) | null›› & QueryHelpers*
 
-▸ **findOneAndDelete**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **findOneAndDelete**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[findOneAndDelete](_models_location_.ilocation.md#findoneanddelete)*
 
@@ -1811,28 +1831,28 @@ Defined in node_modules/@types/mongoose/index.d.ts:3460
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
 ▪ **options**: *QueryFindOneAndRemoveOptions*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md) | null): *void*
+▸ (`err`: any, `res`: [ILocationSchema](_models_location_.ilocationschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md) &#124; null |
+`res` | [ILocationSchema](_models_location_.ilocationschema.md) &#124; null |
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
 ___
 
 ###  findOneAndRemove
 
-▸ **findOneAndRemove**(): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **findOneAndRemove**(): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[findOneAndRemove](_models_location_.ilocation.md#findoneandremove)*
 
@@ -1847,9 +1867,9 @@ https://mongoosejs.com/docs/api.html#mongoose_Mongoose-set
 
 Note: same signatures as findOneAndDelete
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findOneAndRemove**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `callback?`: function): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **findOneAndRemove**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `callback?`: function): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[findOneAndRemove](_models_location_.ilocation.md#findoneandremove)*
 
@@ -1857,22 +1877,22 @@ Defined in node_modules/@types/mongoose/index.d.ts:3439
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md) | null): *void*
+▸ (`err`: any, `res`: [ILocationSchema](_models_location_.ilocationschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md) &#124; null |
+`res` | [ILocationSchema](_models_location_.ilocationschema.md) &#124; null |
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findOneAndRemove**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `options`: object & QueryFindOneAndRemoveOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md) | null›› & QueryHelpers*
+▸ **findOneAndRemove**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `options`: object & QueryFindOneAndRemoveOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[ILocationSchema](_models_location_.ilocationschema.md) | null›› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[findOneAndRemove](_models_location_.ilocation.md#findoneandremove)*
 
@@ -1880,25 +1900,25 @@ Defined in node_modules/@types/mongoose/index.d.ts:3441
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
 ▪ **options**: *object & QueryFindOneAndRemoveOptions*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `doc`: FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md) | null›, `res`: any): *void*
+▸ (`err`: any, `doc`: FindAndModifyWriteOpResultObject‹[ILocationSchema](_models_location_.ilocationschema.md) | null›, `res`: any): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`doc` | FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md) &#124; null› |
+`doc` | FindAndModifyWriteOpResultObject‹[ILocationSchema](_models_location_.ilocationschema.md) &#124; null› |
 `res` | any |
 
-**Returns:** *Query‹FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md) | null›› & QueryHelpers*
+**Returns:** *Query‹FindAndModifyWriteOpResultObject‹[ILocationSchema](_models_location_.ilocationschema.md) | null›› & QueryHelpers*
 
-▸ **findOneAndRemove**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **findOneAndRemove**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[findOneAndRemove](_models_location_.ilocation.md#findoneandremove)*
 
@@ -1906,28 +1926,28 @@ Defined in node_modules/@types/mongoose/index.d.ts:3444
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
 ▪ **options**: *QueryFindOneAndRemoveOptions*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md) | null): *void*
+▸ (`err`: any, `res`: [ILocationSchema](_models_location_.ilocationschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md) &#124; null |
+`res` | [ILocationSchema](_models_location_.ilocationschema.md) &#124; null |
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
 ___
 
 ###  findOneAndUpdate
 
-▸ **findOneAndUpdate**(): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **findOneAndUpdate**(): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[findOneAndUpdate](_models_location_.ilocation.md#findoneandupdate)*
 
@@ -1941,9 +1961,9 @@ if callback is passed else a Query object is returned.
 If mongoose option 'useFindAndModify': set to false it uses native findOneAndUpdate() rather than the deprecated findAndModify().
 https://mongoosejs.com/docs/api.html#mongoose_Mongoose-set
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `update`: UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `callback?`: function): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `update`: UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `callback?`: function): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[findOneAndUpdate](_models_location_.ilocation.md#findoneandupdate)*
 
@@ -1951,25 +1971,25 @@ Defined in node_modules/@types/mongoose/index.d.ts:3472
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
-▪ **update**: *UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **update**: *UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `doc`: [IUserSchema](_models_user_.iuserschema.md) | null, `res`: any): *void*
+▸ (`err`: any, `doc`: [ILocationSchema](_models_location_.ilocationschema.md) | null, `res`: any): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`doc` | [IUserSchema](_models_user_.iuserschema.md) &#124; null |
+`doc` | [ILocationSchema](_models_location_.ilocationschema.md) &#124; null |
 `res` | any |
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `update`: UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `options`: object & object & QueryFindOneAndUpdateOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md)›› & QueryHelpers*
+▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `update`: UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `options`: object & object & QueryFindOneAndUpdateOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[ILocationSchema](_models_location_.ilocationschema.md)›› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[findOneAndUpdate](_models_location_.ilocation.md#findoneandupdate)*
 
@@ -1977,27 +1997,27 @@ Defined in node_modules/@types/mongoose/index.d.ts:3474
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
-▪ **update**: *UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **update**: *UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
 ▪ **options**: *object & object & QueryFindOneAndUpdateOptions*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `doc`: FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md)›, `res`: any): *void*
+▸ (`err`: any, `doc`: FindAndModifyWriteOpResultObject‹[ILocationSchema](_models_location_.ilocationschema.md)›, `res`: any): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`doc` | FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md)› |
+`doc` | FindAndModifyWriteOpResultObject‹[ILocationSchema](_models_location_.ilocationschema.md)› |
 `res` | any |
 
-**Returns:** *Query‹FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md)›› & QueryHelpers*
+**Returns:** *Query‹FindAndModifyWriteOpResultObject‹[ILocationSchema](_models_location_.ilocationschema.md)›› & QueryHelpers*
 
-▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `update`: UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `options`: object & QueryFindOneAndUpdateOptions, `callback?`: function): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md), [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `update`: UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `options`: object & QueryFindOneAndUpdateOptions, `callback?`: function): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md), [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[findOneAndUpdate](_models_location_.ilocation.md#findoneandupdate)*
 
@@ -2005,27 +2025,27 @@ Defined in node_modules/@types/mongoose/index.d.ts:3478
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
-▪ **update**: *UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **update**: *UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
 ▪ **options**: *object & QueryFindOneAndUpdateOptions*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `doc`: [IUserSchema](_models_user_.iuserschema.md), `res`: any): *void*
+▸ (`err`: any, `doc`: [ILocationSchema](_models_location_.ilocationschema.md), `res`: any): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`doc` | [IUserSchema](_models_user_.iuserschema.md) |
+`doc` | [ILocationSchema](_models_location_.ilocationschema.md) |
 `res` | any |
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md), [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md), [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `update`: UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `options`: object & QueryFindOneAndUpdateOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md) | null›› & QueryHelpers*
+▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `update`: UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `options`: object & QueryFindOneAndUpdateOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[ILocationSchema](_models_location_.ilocationschema.md) | null›› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[findOneAndUpdate](_models_location_.ilocation.md#findoneandupdate)*
 
@@ -2033,27 +2053,27 @@ Defined in node_modules/@types/mongoose/index.d.ts:3481
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
-▪ **update**: *UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **update**: *UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
 ▪ **options**: *object & QueryFindOneAndUpdateOptions*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `doc`: FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md) | null›, `res`: any): *void*
+▸ (`err`: any, `doc`: FindAndModifyWriteOpResultObject‹[ILocationSchema](_models_location_.ilocationschema.md) | null›, `res`: any): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`doc` | FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md) &#124; null› |
+`doc` | FindAndModifyWriteOpResultObject‹[ILocationSchema](_models_location_.ilocationschema.md) &#124; null› |
 `res` | any |
 
-**Returns:** *Query‹FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md) | null›› & QueryHelpers*
+**Returns:** *Query‹FindAndModifyWriteOpResultObject‹[ILocationSchema](_models_location_.ilocationschema.md) | null›› & QueryHelpers*
 
-▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `update`: UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `options`: object & Omit‹QueryFindOneAndUpdateOptions, "lean"›, `callback?`: function): *Query‹DocumentDefinition‹[IUserSchema](_models_user_.iuserschema.md)›› & QueryHelpers*
+▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `update`: UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `options`: object & Omit‹QueryFindOneAndUpdateOptions, "lean"›, `callback?`: function): *Query‹DocumentDefinition‹[ILocationSchema](_models_location_.ilocationschema.md)›› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[findOneAndUpdate](_models_location_.ilocation.md#findoneandupdate)*
 
@@ -2061,27 +2081,27 @@ Defined in node_modules/@types/mongoose/index.d.ts:3485
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
-▪ **update**: *UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **update**: *UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
 ▪ **options**: *object & Omit‹QueryFindOneAndUpdateOptions, "lean"›*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `doc`: DocumentDefinition‹[IUserSchema](_models_user_.iuserschema.md)›, `res`: any): *void*
+▸ (`err`: any, `doc`: DocumentDefinition‹[ILocationSchema](_models_location_.ilocationschema.md)›, `res`: any): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`doc` | DocumentDefinition‹[IUserSchema](_models_user_.iuserschema.md)› |
+`doc` | DocumentDefinition‹[ILocationSchema](_models_location_.ilocationschema.md)› |
 `res` | any |
 
-**Returns:** *Query‹DocumentDefinition‹[IUserSchema](_models_user_.iuserschema.md)›› & QueryHelpers*
+**Returns:** *Query‹DocumentDefinition‹[ILocationSchema](_models_location_.ilocationschema.md)›› & QueryHelpers*
 
-▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `update`: UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `options`: QueryFindOneAndUpdateOptions, `callback?`: function): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `update`: UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `options`: QueryFindOneAndUpdateOptions, `callback?`: function): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[findOneAndUpdate](_models_location_.ilocation.md#findoneandupdate)*
 
@@ -2089,31 +2109,31 @@ Defined in node_modules/@types/mongoose/index.d.ts:3488
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
-▪ **update**: *UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **update**: *UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
 ▪ **options**: *QueryFindOneAndUpdateOptions*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `doc`: [IUserSchema](_models_user_.iuserschema.md) | null, `res`: any): *void*
+▸ (`err`: any, `doc`: [ILocationSchema](_models_location_.ilocationschema.md) | null, `res`: any): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`doc` | [IUserSchema](_models_user_.iuserschema.md) &#124; null |
+`doc` | [ILocationSchema](_models_location_.ilocationschema.md) &#124; null |
 `res` | any |
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
 ___
 
 ###  geoSearch
 
-▸ **geoSearch**(`conditions`: any, `options`: object, `callback?`: function): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md)[], [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **geoSearch**(`conditions`: any, `options`: object, `callback?`: function): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md)[], [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[geoSearch](_models_location_.ilocation.md#geosearch)*
 
@@ -2142,16 +2162,33 @@ Name | Type | Description |
 
 optional callback
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md)[]): *void*
+▸ (`err`: any, `res`: [ILocationSchema](_models_location_.ilocationschema.md)[]): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md)[] |
+`res` | [ILocationSchema](_models_location_.ilocationschema.md)[] |
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md)[], [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md)[], [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
+
+___
+
+###  getCoordinates
+
+▸ **getCoordinates**(`city`: string, `country?`: string): *Promise‹[Coordinates](_models_location_.coordinates.md)›*
+
+*Defined in [src/models/Location.ts:38](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Location.ts#L38)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`city` | string |
+`country?` | string |
+
+**Returns:** *Promise‹[Coordinates](_models_location_.coordinates.md)›*
 
 ___
 
@@ -2169,7 +2206,7 @@ ___
 
 ###  hydrate
 
-▸ **hydrate**(`obj`: any): *[IUserSchema](_models_user_.iuserschema.md)*
+▸ **hydrate**(`obj`: any): *[ILocationSchema](_models_location_.ilocationschema.md)*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[hydrate](_models_location_.ilocation.md#hydrate)*
 
@@ -2185,13 +2222,13 @@ Name | Type |
 ------ | ------ |
 `obj` | any |
 
-**Returns:** *[IUserSchema](_models_user_.iuserschema.md)*
+**Returns:** *[ILocationSchema](_models_location_.ilocationschema.md)*
 
 ___
 
 ###  init
 
-▸ **init**(`callback?`: function): *Promise‹[IUserSchema](_models_user_.iuserschema.md)›*
+▸ **init**(`callback?`: function): *Promise‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[init](_models_location_.ilocation.md#init)*
 
@@ -2217,13 +2254,13 @@ Name | Type |
 ------ | ------ |
 `err` | any |
 
-**Returns:** *Promise‹[IUserSchema](_models_user_.iuserschema.md)›*
+**Returns:** *Promise‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
 ___
 
 ###  insertMany
 
-▸ **insertMany**(`docs`: any[], `callback?`: function): *Promise‹[IUserSchema](_models_user_.iuserschema.md)[]›*
+▸ **insertMany**(`docs`: any[], `callback?`: function): *Promise‹[ILocationSchema](_models_location_.ilocationschema.md)[]›*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[insertMany](_models_location_.ilocation.md#insertmany)*
 
@@ -2243,18 +2280,18 @@ Documents to insert.
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`error`: any, `docs`: [IUserSchema](_models_user_.iuserschema.md)[]): *void*
+▸ (`error`: any, `docs`: [ILocationSchema](_models_location_.ilocationschema.md)[]): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `error` | any |
-`docs` | [IUserSchema](_models_user_.iuserschema.md)[] |
+`docs` | [ILocationSchema](_models_location_.ilocationschema.md)[] |
 
-**Returns:** *Promise‹[IUserSchema](_models_user_.iuserschema.md)[]›*
+**Returns:** *Promise‹[ILocationSchema](_models_location_.ilocationschema.md)[]›*
 
-▸ **insertMany**(`docs`: any[], `options?`: object & ModelOptions, `callback?`: function): *Promise‹[IUserSchema](_models_user_.iuserschema.md)[]›*
+▸ **insertMany**(`docs`: any[], `options?`: object & ModelOptions, `callback?`: function): *Promise‹[ILocationSchema](_models_location_.ilocationschema.md)[]›*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[insertMany](_models_location_.ilocation.md#insertmany)*
 
@@ -2268,18 +2305,18 @@ Defined in node_modules/@types/mongoose/index.d.ts:3531
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`error`: any, `docs`: [IUserSchema](_models_user_.iuserschema.md)[]): *void*
+▸ (`error`: any, `docs`: [ILocationSchema](_models_location_.ilocationschema.md)[]): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `error` | any |
-`docs` | [IUserSchema](_models_user_.iuserschema.md)[] |
+`docs` | [ILocationSchema](_models_location_.ilocationschema.md)[] |
 
-**Returns:** *Promise‹[IUserSchema](_models_user_.iuserschema.md)[]›*
+**Returns:** *Promise‹[ILocationSchema](_models_location_.ilocationschema.md)[]›*
 
-▸ **insertMany**(`doc`: any, `callback?`: function): *Promise‹[IUserSchema](_models_user_.iuserschema.md)›*
+▸ **insertMany**(`doc`: any, `callback?`: function): *Promise‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[insertMany](_models_location_.ilocation.md#insertmany)*
 
@@ -2291,18 +2328,18 @@ Defined in node_modules/@types/mongoose/index.d.ts:3532
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`error`: any, `doc`: [IUserSchema](_models_user_.iuserschema.md)): *void*
+▸ (`error`: any, `doc`: [ILocationSchema](_models_location_.ilocationschema.md)): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `error` | any |
-`doc` | [IUserSchema](_models_user_.iuserschema.md) |
+`doc` | [ILocationSchema](_models_location_.ilocationschema.md) |
 
-**Returns:** *Promise‹[IUserSchema](_models_user_.iuserschema.md)›*
+**Returns:** *Promise‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
-▸ **insertMany**(`doc`: any, `options?`: object & ModelOptions, `callback?`: function): *Promise‹[IUserSchema](_models_user_.iuserschema.md)›*
+▸ **insertMany**(`doc`: any, `options?`: object & ModelOptions, `callback?`: function): *Promise‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[insertMany](_models_location_.ilocation.md#insertmany)*
 
@@ -2316,16 +2353,16 @@ Defined in node_modules/@types/mongoose/index.d.ts:3533
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`error`: any, `doc`: [IUserSchema](_models_user_.iuserschema.md)): *void*
+▸ (`error`: any, `doc`: [ILocationSchema](_models_location_.ilocationschema.md)): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `error` | any |
-`doc` | [IUserSchema](_models_user_.iuserschema.md) |
+`doc` | [ILocationSchema](_models_location_.ilocationschema.md) |
 
-**Returns:** *Promise‹[IUserSchema](_models_user_.iuserschema.md)›*
+**Returns:** *Promise‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
 ___
 
@@ -2406,7 +2443,7 @@ ___
 
 ###  mapReduce
 
-▸ **mapReduce**‹**Key**, **Value**›(`o`: ModelMapReduceOption‹[IUserSchema](_models_user_.iuserschema.md), Key, Value›, `callback?`: function): *Promise‹any›*
+▸ **mapReduce**‹**Key**, **Value**›(`o`: ModelMapReduceOption‹[ILocationSchema](_models_location_.ilocationschema.md), Key, Value›, `callback?`: function): *Promise‹any›*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[mapReduce](_models_location_.ilocation.md#mapreduce)*
 
@@ -2422,7 +2459,7 @@ Executes a mapReduce command.
 
 **Parameters:**
 
-▪ **o**: *ModelMapReduceOption‹[IUserSchema](_models_user_.iuserschema.md), Key, Value›*
+▪ **o**: *ModelMapReduceOption‹[ILocationSchema](_models_location_.ilocationschema.md), Key, Value›*
 
 an object specifying map-reduce options
 
@@ -2543,7 +2580,7 @@ ___
 
 ###  populate
 
-▸ **populate**(`docs`: any[], `options`: ModelPopulateOptions | ModelPopulateOptions[], `callback?`: function): *Promise‹[IUserSchema](_models_user_.iuserschema.md)[]›*
+▸ **populate**(`docs`: any[], `options`: ModelPopulateOptions | ModelPopulateOptions[], `callback?`: function): *Promise‹[ILocationSchema](_models_location_.ilocationschema.md)[]›*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[populate](_models_location_.ilocation.md#populate)*
 
@@ -2565,16 +2602,16 @@ A hash of key/val (path, options) used for population.
 
 Optional callback, executed upon completion. Receives err and the doc(s).
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md)[]): *void*
+▸ (`err`: any, `res`: [ILocationSchema](_models_location_.ilocationschema.md)[]): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md)[] |
+`res` | [ILocationSchema](_models_location_.ilocationschema.md)[] |
 
-**Returns:** *Promise‹[IUserSchema](_models_user_.iuserschema.md)[]›*
+**Returns:** *Promise‹[ILocationSchema](_models_location_.ilocationschema.md)[]›*
 
 ▸ **populate**‹**T**›(`docs`: any, `options`: ModelPopulateOptions | ModelPopulateOptions[], `callback?`: function): *Promise‹T›*
 
@@ -2679,7 +2716,7 @@ ___
 
 ###  remove
 
-▸ **remove**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `callback?`: function): *Query‹DeleteWriteOpResultObject["result"] & object› & QueryHelpers*
+▸ **remove**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `callback?`: function): *Query‹DeleteWriteOpResultObject["result"] & object› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[remove](_models_location_.ilocation.md#remove)*
 
@@ -2689,7 +2726,7 @@ Removes documents from the collection.
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
 ▪`Optional`  **callback**: *function*
 
@@ -2751,7 +2788,7 @@ ___
 
 ###  replaceOne
 
-▸ **replaceOne**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `replacement`: any, `callback?`: function): *Query‹any› & QueryHelpers*
+▸ **replaceOne**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `replacement`: any, `callback?`: function): *Query‹any› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[replaceOne](_models_location_.ilocation.md#replaceone)*
 
@@ -2762,7 +2799,7 @@ This function triggers the following middleware: replaceOne
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
 ▪ **replacement**: *any*
 
@@ -2874,7 +2911,7 @@ ___
 
 ###  update
 
-▸ **update**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `doc`: UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `callback?`: function): *Query‹any› & QueryHelpers*
+▸ **update**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `doc`: UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `callback?`: function): *Query‹any› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[update](_models_location_.ilocation.md#update)*
 
@@ -2885,9 +2922,9 @@ All update values are cast to their appropriate SchemaTypes before being sent.
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
-▪ **doc**: *UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **doc**: *UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
 ▪`Optional`  **callback**: *function*
 
@@ -2902,7 +2939,7 @@ Name | Type |
 
 **Returns:** *Query‹any› & QueryHelpers*
 
-▸ **update**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `doc`: UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `options`: ModelUpdateOptions, `callback?`: function): *Query‹any› & QueryHelpers*
+▸ **update**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `doc`: UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `options`: ModelUpdateOptions, `callback?`: function): *Query‹any› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[update](_models_location_.ilocation.md#update)*
 
@@ -2910,9 +2947,9 @@ Defined in node_modules/@types/mongoose/index.d.ts:3585
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
-▪ **doc**: *UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **doc**: *UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
 ▪ **options**: *ModelUpdateOptions*
 
@@ -2933,7 +2970,7 @@ ___
 
 ###  updateMany
 
-▸ **updateMany**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `doc`: UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `callback?`: function): *Query‹any› & QueryHelpers*
+▸ **updateMany**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `doc`: UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `callback?`: function): *Query‹any› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[updateMany](_models_location_.ilocation.md#updatemany)*
 
@@ -2941,9 +2978,9 @@ Defined in node_modules/@types/mongoose/index.d.ts:3591
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
-▪ **doc**: *UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **doc**: *UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
 ▪`Optional`  **callback**: *function*
 
@@ -2958,7 +2995,7 @@ Name | Type |
 
 **Returns:** *Query‹any› & QueryHelpers*
 
-▸ **updateMany**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `doc`: UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `options`: ModelUpdateOptions, `callback?`: function): *Query‹any› & QueryHelpers*
+▸ **updateMany**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `doc`: UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `options`: ModelUpdateOptions, `callback?`: function): *Query‹any› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[updateMany](_models_location_.ilocation.md#updatemany)*
 
@@ -2966,9 +3003,9 @@ Defined in node_modules/@types/mongoose/index.d.ts:3593
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
-▪ **doc**: *UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **doc**: *UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
 ▪ **options**: *ModelUpdateOptions*
 
@@ -2989,7 +3026,7 @@ ___
 
 ###  updateOne
 
-▸ **updateOne**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `doc`: UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `callback?`: function): *Query‹any› & QueryHelpers*
+▸ **updateOne**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `doc`: UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `callback?`: function): *Query‹any› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[updateOne](_models_location_.ilocation.md#updateone)*
 
@@ -2997,9 +3034,9 @@ Defined in node_modules/@types/mongoose/index.d.ts:3587
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
-▪ **doc**: *UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **doc**: *UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
 ▪`Optional`  **callback**: *function*
 
@@ -3014,7 +3051,7 @@ Name | Type |
 
 **Returns:** *Query‹any› & QueryHelpers*
 
-▸ **updateOne**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `doc`: UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `options`: ModelUpdateOptions, `callback?`: function): *Query‹any› & QueryHelpers*
+▸ **updateOne**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `doc`: UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `options`: ModelUpdateOptions, `callback?`: function): *Query‹any› & QueryHelpers*
 
 *Inherited from [ILocation](_models_location_.ilocation.md).[updateOne](_models_location_.ilocation.md#updateone)*
 
@@ -3022,9 +3059,9 @@ Defined in node_modules/@types/mongoose/index.d.ts:3589
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
-▪ **doc**: *UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **doc**: *UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
 ▪ **options**: *ModelUpdateOptions*
 

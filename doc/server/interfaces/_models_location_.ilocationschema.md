@@ -1,69 +1,49 @@
-[korbots-server](../README.md) › ["models/Weather"](../modules/_models_weather_.md) › [IWeatherSchema](_models_weather_.iweatherschema.md)
+[korbots-server](../README.md) › ["models/Location"](../modules/_models_location_.md) › [ILocationSchema](_models_location_.ilocationschema.md)
 
-# Interface: IWeatherSchema
-
-Detailed Weather Document (WeatherSchema) interface
+# Interface: ILocationSchema
 
 ## Hierarchy
 
 * Document
 
-  ↳ **IWeatherSchema**
+  ↳ **ILocationSchema**
 
 ## Index
 
 ### Properties
 
-* [__v](_models_weather_.iweatherschema.md#optional-__v)
-* [collection](_models_weather_.iweatherschema.md#collection)
-* [country](_models_weather_.iweatherschema.md#optional-country)
-* [date](_models_weather_.iweatherschema.md#date)
-* [db](_models_weather_.iweatherschema.md#db)
-* [humidity](_models_weather_.iweatherschema.md#humidity)
-* [id](_models_weather_.iweatherschema.md#optional-id)
-* [lastUpdate](_models_weather_.iweatherschema.md#lastupdate)
-* [latitude](_models_weather_.iweatherschema.md#latitude)
-* [longitude](_models_weather_.iweatherschema.md#longitude)
-* [name](_models_weather_.iweatherschema.md#optional-name)
-* [schema](_models_weather_.iweatherschema.md#schema)
-* [temperature](_models_weather_.iweatherschema.md#temperature)
-* [updateScore](_models_weather_.iweatherschema.md#updatescore)
-* [weather](_models_weather_.iweatherschema.md#weather)
-* [weatherDescription](_models_weather_.iweatherschema.md#weatherdescription)
-* [weatherIcon](_models_weather_.iweatherschema.md#weathericon)
-* [wind](_models_weather_.iweatherschema.md#wind)
+* [__v](_models_location_.ilocationschema.md#optional-__v)
+* [city](_models_location_.ilocationschema.md#city)
+* [collection](_models_location_.ilocationschema.md#collection)
+* [country](_models_location_.ilocationschema.md#country)
+* [db](_models_location_.ilocationschema.md#db)
+* [id](_models_location_.ilocationschema.md#optional-id)
+* [latitude](_models_location_.ilocationschema.md#latitude)
+* [longitude](_models_location_.ilocationschema.md#longitude)
+* [schema](_models_location_.ilocationschema.md#schema)
 
 ### Methods
 
-* [$isDeleted](_models_weather_.iweatherschema.md#isdeleted)
-* [addListener](_models_weather_.iweatherschema.md#addlistener)
-* [checkLocationFieldsUpdate](_models_weather_.iweatherschema.md#checklocationfieldsupdate)
-* [checkUpdate](_models_weather_.iweatherschema.md#checkupdate)
-* [decrementUpdateScore](_models_weather_.iweatherschema.md#decrementupdatescore)
-* [emit](_models_weather_.iweatherschema.md#emit)
-* [eventNames](_models_weather_.iweatherschema.md#eventnames)
-* [getMaxListeners](_models_weather_.iweatherschema.md#getmaxlisteners)
-* [increment](_models_weather_.iweatherschema.md#increment)
-* [incrementUpdateScore](_models_weather_.iweatherschema.md#incrementupdatescore)
-* [listenerCount](_models_weather_.iweatherschema.md#listenercount)
-* [listeners](_models_weather_.iweatherschema.md#listeners)
-* [model](_models_weather_.iweatherschema.md#model)
-* [needsLocationFieldsUpdate](_models_weather_.iweatherschema.md#needslocationfieldsupdate)
-* [needsUpdate](_models_weather_.iweatherschema.md#needsupdate)
-* [off](_models_weather_.iweatherschema.md#off)
-* [on](_models_weather_.iweatherschema.md#on)
-* [once](_models_weather_.iweatherschema.md#once)
-* [prependListener](_models_weather_.iweatherschema.md#prependlistener)
-* [prependOnceListener](_models_weather_.iweatherschema.md#prependoncelistener)
-* [rawListeners](_models_weather_.iweatherschema.md#rawlisteners)
-* [remove](_models_weather_.iweatherschema.md#remove)
-* [removeAllListeners](_models_weather_.iweatherschema.md#removealllisteners)
-* [removeListener](_models_weather_.iweatherschema.md#removelistener)
-* [save](_models_weather_.iweatherschema.md#save)
-* [setMaxListeners](_models_weather_.iweatherschema.md#setmaxlisteners)
-* [updateCurrent](_models_weather_.iweatherschema.md#updatecurrent)
-* [updateDaily](_models_weather_.iweatherschema.md#updatedaily)
-* [updateLocationFields](_models_weather_.iweatherschema.md#updatelocationfields)
+* [$isDeleted](_models_location_.ilocationschema.md#isdeleted)
+* [addListener](_models_location_.ilocationschema.md#addlistener)
+* [emit](_models_location_.ilocationschema.md#emit)
+* [eventNames](_models_location_.ilocationschema.md#eventnames)
+* [getMaxListeners](_models_location_.ilocationschema.md#getmaxlisteners)
+* [increment](_models_location_.ilocationschema.md#increment)
+* [listenerCount](_models_location_.ilocationschema.md#listenercount)
+* [listeners](_models_location_.ilocationschema.md#listeners)
+* [model](_models_location_.ilocationschema.md#model)
+* [off](_models_location_.ilocationschema.md#off)
+* [on](_models_location_.ilocationschema.md#on)
+* [once](_models_location_.ilocationschema.md#once)
+* [prependListener](_models_location_.ilocationschema.md#prependlistener)
+* [prependOnceListener](_models_location_.ilocationschema.md#prependoncelistener)
+* [rawListeners](_models_location_.ilocationschema.md#rawlisteners)
+* [remove](_models_location_.ilocationschema.md#remove)
+* [removeAllListeners](_models_location_.ilocationschema.md#removealllisteners)
+* [removeListener](_models_location_.ilocationschema.md#removelistener)
+* [save](_models_location_.ilocationschema.md#save)
+* [setMaxListeners](_models_location_.ilocationschema.md#setmaxlisteners)
 
 ## Properties
 
@@ -80,6 +60,14 @@ If you're using another key, you will have to access it using []: doc[_myVersion
 
 ___
 
+###  city
+
+• **city**: *string*
+
+*Defined in [src/models/Location.ts:29](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Location.ts#L29)*
+
+___
+
 ###  collection
 
 • **collection**: *Collection*
@@ -92,23 +80,11 @@ Collection the model uses.
 
 ___
 
-### `Optional` country
+###  country
 
-• **country**? : *string*
+• **country**: *string*
 
-*Defined in [src/models/Weather.ts:57](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L57)*
-
-Country of the location
-
-___
-
-###  date
-
-• **date**: *Date*
-
-*Defined in [src/models/Weather.ts:61](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L61)*
-
-Date of the forecast
+*Defined in [src/models/Location.ts:30](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Location.ts#L30)*
 
 ___
 
@@ -121,16 +97,6 @@ ___
 Defined in node_modules/@types/mongoose/index.d.ts:3660
 
 Connection the model uses.
-
-___
-
-###  humidity
-
-• **humidity**: *number*
-
-*Defined in [src/models/Weather.ts:43](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L43)*
-
-Humidity in %
 
 ___
 
@@ -149,23 +115,11 @@ behaves like any other field on a document and can be assigned any value.
 
 ___
 
-###  lastUpdate
-
-• **lastUpdate**: *Date*
-
-*Defined in [src/models/Weather.ts:63](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L63)*
-
-Last update from the internal database
-
-___
-
 ###  latitude
 
 • **latitude**: *number*
 
-*Defined in [src/models/Weather.ts:53](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L53)*
-
-Latitude of the location
+*Defined in [src/models/Location.ts:27](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Location.ts#L27)*
 
 ___
 
@@ -173,19 +127,7 @@ ___
 
 • **longitude**: *number*
 
-*Defined in [src/models/Weather.ts:55](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L55)*
-
-Longitude of the location
-
-___
-
-### `Optional` name
-
-• **name**? : *string*
-
-*Defined in [src/models/Weather.ts:59](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L59)*
-
-City name of the location
+*Defined in [src/models/Location.ts:28](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Location.ts#L28)*
 
 ___
 
@@ -198,66 +140,6 @@ ___
 Defined in node_modules/@types/mongoose/index.d.ts:3663
 
 Schema the model uses.
-
-___
-
-###  temperature
-
-• **temperature**: *number*
-
-*Defined in [src/models/Weather.ts:41](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L41)*
-
-Temperature in Ke
-
-___
-
-###  updateScore
-
-• **updateScore**: *number*
-
-*Defined in [src/models/Weather.ts:65](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L65)*
-
-Score that increase on update checking, decrease on cron update
-
-___
-
-###  weather
-
-• **weather**: *string*
-
-*Defined in [src/models/Weather.ts:47](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L47)*
-
-Weather short description
-
-___
-
-###  weatherDescription
-
-• **weatherDescription**: *string*
-
-*Defined in [src/models/Weather.ts:49](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L49)*
-
-Weather complete description
-
-___
-
-###  weatherIcon
-
-• **weatherIcon**: *string*
-
-*Defined in [src/models/Weather.ts:51](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L51)*
-
-Weahter icon ID from Openweather API
-
-___
-
-###  wind
-
-• **wind**: *number*
-
-*Defined in [src/models/Weather.ts:45](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L45)*
-
-Wind speed in m/s
 
 ## Methods
 
@@ -314,68 +196,6 @@ Name | Type |
 `...args` | any[] |
 
 **Returns:** *this*
-
-___
-
-###  checkLocationFieldsUpdate
-
-▸ **checkLocationFieldsUpdate**(): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
-
-*Defined in [src/models/Weather.ts:124](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L124)*
-
-Check if the Documents needs to have it's location fields updated and update them if needed (calls updateLocationFields if needsLocationFieldsUpdate returns true)
-
-**Returns:** *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
-
-The updated Document (save Promise) or the same Document as before if no update performed
-
-___
-
-###  checkUpdate
-
-▸ **checkUpdate**(`isDaily?`: boolean): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
-
-*Defined in [src/models/Weather.ts:119](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L119)*
-
-Check if the the Document needs to be updated and update it if needed (calls updateCurrent/updateDaily if needsUpdate returns true)
-
-**Parameters:**
-
-Name | Type | Description |
------- | ------ | ------ |
-`isDaily?` | boolean | Set on true if the Document is a Daily Forecast |
-
-**Returns:** *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
-
-The updated Document (save Promise) or the same Document as before if no update performed
-
-For a Current entry:
-```typescript
-entry.checkUpdate().then(...)
-```
-
-For a Daily entry:
-```typescript
-entry.checkUpdate(true).then(...)
-```
-
-___
-
-###  decrementUpdateScore
-
-▸ **decrementUpdateScore**(`value?`: number): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
-
-*Defined in [src/models/Weather.ts:73](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L73)*
-
-Decrement the value of updateScore
-
-**Parameters:**
-
-Name | Type | Description |
------- | ------ | ------ |
-`value?` | number | Value to subtract to the current updateScore(default: 0.2)  |
-
-**Returns:** *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
 
 ___
 
@@ -436,24 +256,6 @@ Signal that we desire an increment of this documents version.
 
 ___
 
-###  incrementUpdateScore
-
-▸ **incrementUpdateScore**(`value?`: number): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
-
-*Defined in [src/models/Weather.ts:79](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L79)*
-
-Increment the value of updateScore
-
-**Parameters:**
-
-Name | Type | Description |
------- | ------ | ------ |
-`value?` | number | Value to add to the current updateScore (default: 1)  |
-
-**Returns:** *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
-
-___
-
 ###  listenerCount
 
 ▸ **listenerCount**(`type`: string | symbol): *number*
@@ -511,42 +313,6 @@ Name | Type | Description |
 `name` | string | model name  |
 
 **Returns:** *[Model](_models_location_.ilocation.md#model)‹T›*
-
-___
-
-###  needsLocationFieldsUpdate
-
-▸ **needsLocationFieldsUpdate**(): *boolean*
-
-*Defined in [src/models/Weather.ts:103](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L103)*
-
-**Returns:** *boolean*
-
-True if the current Document name of country fields are empty and needs to be updated
-
-```typescript
-if entry.needsLocationFieldsUpdate() {
-     entry.updateLocationFields().then(...)
-}
-```
-
-___
-
-###  needsUpdate
-
-▸ **needsUpdate**(): *boolean*
-
-*Defined in [src/models/Weather.ts:93](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L93)*
-
-**Returns:** *boolean*
-
-True if the current Document needs to be updated from the API data
-
-```typescript
-if entry.needsUpdate() {
-     entry.updateCurrent().then(...)
-}
-```
 
 ___
 
@@ -840,45 +606,3 @@ Name | Type |
 `n` | number |
 
 **Returns:** *this*
-
-___
-
-###  updateCurrent
-
-▸ **updateCurrent**(): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
-
-*Defined in [src/models/Weather.ts:132](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L132)*
-
-Update the main fields of the Document dealing with Current Weather data
-
-**Returns:** *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
-
-The updated Document (save Promise)
-
-___
-
-###  updateDaily
-
-▸ **updateDaily**(): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
-
-*Defined in [src/models/Weather.ts:137](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L137)*
-
-Update the main fields of the Document dealing with Daily Weather data
-
-**Returns:** *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
-
-The updated Document (save Promise)
-
-___
-
-###  updateLocationFields
-
-▸ **updateLocationFields**(): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
-
-*Defined in [src/models/Weather.ts:142](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L142)*
-
-Update the location fields of the Document, will look for the name and country fields on a Current Weather API call
-
-**Returns:** *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
-
-The updated Document (save Promise)

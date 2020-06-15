@@ -8,7 +8,7 @@
 
 ## Hierarchy
 
-* [Model](_models_weather_.iweather.md#model)‹[IWeatherSchema](_models_weather_.iweatherschema.md)›
+* [Model](_models_location_.ilocation.md#model)‹[IWeatherSchema](_models_weather_.iweatherschema.md)›
 
   ↳ **IWeather**
 
@@ -109,7 +109,7 @@
 
 • **new IWeather**(`doc?`: any): *[IWeatherSchema](_models_weather_.iweatherschema.md)*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[constructor](_models_weather_.iweather.md#constructor)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[constructor](_models_location_.ilocation.md#constructor)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3135
 
@@ -128,7 +128,7 @@ Name | Type | Description |
 
 ###  Model
 
-• **Model**: *[Model](_models_weather_.iweather.md#model)‹any›*
+• **Model**: *[Model](_models_location_.ilocation.md#model)‹any›*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3120
 
@@ -138,7 +138,7 @@ ___
 
 • **base**: *typeof mongoose*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[base](_models_weather_.iweather.md#base)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[base](_models_location_.ilocation.md#base)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3123
 
@@ -150,7 +150,7 @@ ___
 
 • **baseModelName**: *string | undefined*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[baseModelName](_models_weather_.iweather.md#basemodelname)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[baseModelName](_models_location_.ilocation.md#basemodelname)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3129
 
@@ -163,7 +163,7 @@ ___
 
 • **collection**: *Collection*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[collection](_models_weather_.iweatherschema.md#collection)*
+*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[collection](_models_location_.ilocationschema.md#collection)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3657
 
@@ -175,7 +175,7 @@ ___
 
 • **db**: *Connection*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[db](_models_weather_.iweatherschema.md#db)*
+*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[db](_models_location_.ilocationschema.md#db)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3660
 
@@ -187,7 +187,7 @@ ___
 
 • **discriminators**: *object | undefined*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[discriminators](_models_weather_.iweather.md#discriminators)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[discriminators](_models_location_.ilocation.md#discriminators)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3132
 
@@ -199,7 +199,7 @@ ___
 
 • **modelName**: *string*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[modelName](_models_weather_.iweather.md#modelname)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[modelName](_models_location_.ilocation.md#modelname)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3135
 
@@ -211,7 +211,7 @@ ___
 
 • **schema**: *Schema*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[schema](_models_weather_.iweatherschema.md#schema)*
+*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[schema](_models_location_.ilocationschema.md#schema)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3663
 
@@ -223,7 +223,7 @@ Schema the model uses.
 
 ▸ **$where**(`argument`: string | Function): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md), [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[$where](_models_weather_.iweather.md#where)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[$where](_models_location_.ilocation.md#where)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3192
 
@@ -243,7 +243,7 @@ ___
 
 ▸ **addListener**(`event`: string | symbol, `listener`: function): *this*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[addListener](_models_weather_.iweatherschema.md#addlistener)*
+*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[addListener](_models_location_.ilocationschema.md#addlistener)*
 
 Defined in node_modules/@types/node/globals.d.ts:553
 
@@ -269,7 +269,7 @@ ___
 
 ▸ **aggregate**‹**U**›(`aggregations?`: any[]): *Aggregate‹U[]›*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[aggregate](_models_weather_.iweather.md#aggregate)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[aggregate](_models_location_.ilocation.md#aggregate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3200
 
@@ -291,7 +291,7 @@ Name | Type | Description |
 
 ▸ **aggregate**‹**U**›(`aggregations`: any[], `cb`: Function): *Promise‹U[]›*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[aggregate](_models_weather_.iweather.md#aggregate)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[aggregate](_models_location_.ilocation.md#aggregate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3201
 
@@ -314,7 +314,7 @@ ___
 
 ▸ **bulkWrite**(`writes`: any[], `cb?`: function): *Promise‹BulkWriteOpResultObject›*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[bulkWrite](_models_weather_.iweather.md#bulkwrite)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[bulkWrite](_models_location_.ilocation.md#bulkwrite)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3182
 
@@ -347,7 +347,7 @@ Name | Type |
 
 ▸ **bulkWrite**(`writes`: any[], `options?`: CollectionBulkWriteOptions): *Promise‹BulkWriteOpResultObject›*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[bulkWrite](_models_weather_.iweather.md#bulkwrite)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[bulkWrite](_models_location_.ilocation.md#bulkwrite)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3183
 
@@ -362,7 +362,7 @@ Name | Type |
 
 ▸ **bulkWrite**(`writes`: any[], `options`: CollectionBulkWriteOptions, `cb`: function): *void*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[bulkWrite](_models_weather_.iweather.md#bulkwrite)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[bulkWrite](_models_location_.ilocation.md#bulkwrite)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3184
 
@@ -391,7 +391,7 @@ ___
 
 ▸ **count**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `callback?`: function): *Query‹number› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[count](_models_weather_.iweather.md#count)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[count](_models_location_.ilocation.md#count)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3204
 
@@ -420,7 +420,7 @@ ___
 
 ▸ **countDocuments**(`callback?`: function): *Query‹number› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[countDocuments](_models_weather_.iweather.md#countdocuments)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[countDocuments](_models_location_.ilocation.md#countdocuments)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3218
 
@@ -448,7 +448,7 @@ Name | Type |
 
 ▸ **countDocuments**(`criteria`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `callback?`: function): *Query‹number› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[countDocuments](_models_weather_.iweather.md#countdocuments)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[countDocuments](_models_location_.ilocation.md#countdocuments)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3219
 
@@ -475,7 +475,7 @@ ___
 
 ▸ **create**‹**TCreate**›(`doc`: CreateQuery‹TCreate›, `options?`: SaveOptions): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[create](_models_weather_.iweather.md#create)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[create](_models_location_.ilocation.md#create)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3239
 
@@ -498,7 +498,7 @@ Name | Type |
 
 ▸ **create**‹**TCreate**›(`doc`: CreateQuery‹TCreate›, `callback?`: function): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[create](_models_weather_.iweather.md#create)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[create](_models_location_.ilocation.md#create)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3240
 
@@ -525,7 +525,7 @@ Name | Type |
 
 ▸ **create**‹**TCreate**›(`docs`: CreateQuery‹TCreate›[], `callback?`: function): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)[]›*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[create](_models_weather_.iweather.md#create)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[create](_models_location_.ilocation.md#create)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3241
 
@@ -552,7 +552,7 @@ Name | Type |
 
 ▸ **create**‹**TCreate**›(`docs`: CreateQuery‹TCreate›[], `options?`: SaveOptions, `callback?`: function): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)[]›*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[create](_models_weather_.iweather.md#create)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[create](_models_location_.ilocation.md#create)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3242
 
@@ -581,7 +581,7 @@ Name | Type |
 
 ▸ **create**‹**TCreate**›(...`docs`: CreateQuery‹TCreate›[]): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[create](_models_weather_.iweather.md#create)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[create](_models_location_.ilocation.md#create)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3243
 
@@ -603,7 +603,7 @@ ___
 
 ▸ **createCollection**(`options?`: CollectionCreateOptions, `cb?`: function): *Promise‹void›*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[createCollection](_models_weather_.iweather.md#createcollection)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[createCollection](_models_location_.ilocation.md#createcollection)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3248
 
@@ -632,7 +632,7 @@ ___
 
 ▸ **createIndexes**(`cb?`: function): *Promise‹void›*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[createIndexes](_models_weather_.iweather.md#createindexes)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[createIndexes](_models_location_.ilocation.md#createindexes)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3306
 
@@ -660,7 +660,7 @@ ___
 
 ▸ **deleteMany**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `callback?`: function): *Query‹DeleteWriteOpResultObject["result"] & object› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[deleteMany](_models_weather_.iweather.md#deletemany)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[deleteMany](_models_location_.ilocation.md#deletemany)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3570
 
@@ -682,7 +682,7 @@ Name | Type |
 
 ▸ **deleteMany**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `options`: ModelOptions, `callback?`: function): *Query‹DeleteWriteOpResultObject["result"] & object› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[deleteMany](_models_weather_.iweather.md#deletemany)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[deleteMany](_models_location_.ilocation.md#deletemany)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3571
 
@@ -710,7 +710,7 @@ ___
 
 ▸ **deleteOne**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `callback?`: function): *Query‹DeleteWriteOpResultObject["result"] & object› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[deleteOne](_models_weather_.iweather.md#deleteone)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[deleteOne](_models_location_.ilocation.md#deleteone)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3568
 
@@ -732,7 +732,7 @@ Name | Type |
 
 ▸ **deleteOne**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `options`: ModelOptions, `callback?`: function): *Query‹DeleteWriteOpResultObject["result"] & object› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[deleteOne](_models_weather_.iweather.md#deleteone)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[deleteOne](_models_location_.ilocation.md#deleteone)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3569
 
@@ -758,9 +758,9 @@ ___
 
 ###  discriminator
 
-▸ **discriminator**‹**U**›(`name`: string, `schema`: Schema, `value?`: string): *[Model](_models_weather_.iweather.md#model)‹U›*
+▸ **discriminator**‹**U**›(`name`: string, `schema`: Schema, `value?`: string): *[Model](_models_location_.ilocation.md#model)‹U›*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[discriminator](_models_weather_.iweather.md#discriminator)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[discriminator](_models_location_.ilocation.md#discriminator)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3256
 
@@ -778,11 +778,11 @@ Name | Type | Description |
 `schema` | Schema | discriminator model schema |
 `value?` | string | the string stored in the `discriminatorKey` property  |
 
-**Returns:** *[Model](_models_weather_.iweather.md#model)‹U›*
+**Returns:** *[Model](_models_location_.ilocation.md#model)‹U›*
 
 ▸ **discriminator**‹**U**, **M**›(`name`: string, `schema`: Schema, `value?`: string): *M*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[discriminator](_models_weather_.iweather.md#discriminator)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[discriminator](_models_location_.ilocation.md#discriminator)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3264
 
@@ -792,7 +792,7 @@ Adds a discriminator type.
 
 ▪ **U**: *Document*
 
-▪ **M**: *[Model](_models_weather_.iweather.md#model)‹U›*
+▪ **M**: *[Model](_models_location_.ilocation.md#model)‹U›*
 
 **Parameters:**
 
@@ -810,7 +810,7 @@ ___
 
 ▸ **distinct**(`field`: string, `callback?`: function): *Query‹any[]› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[distinct](_models_weather_.iweather.md#distinct)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[distinct](_models_location_.ilocation.md#distinct)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3267
 
@@ -835,7 +835,7 @@ Name | Type |
 
 ▸ **distinct**(`field`: string, `conditions`: any, `callback?`: function): *Query‹any[]› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[distinct](_models_weather_.iweather.md#distinct)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[distinct](_models_location_.ilocation.md#distinct)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3268
 
@@ -864,7 +864,7 @@ ___
 
 ▸ **emit**(`event`: string | symbol, ...`args`: any[]): *boolean*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[emit](_models_weather_.iweatherschema.md#emit)*
+*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[emit](_models_location_.ilocationschema.md#emit)*
 
 Defined in node_modules/@types/node/globals.d.ts:563
 
@@ -883,7 +883,7 @@ ___
 
 ▸ **ensureIndexes**(`callback?`: function): *Promise‹void›*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[ensureIndexes](_models_weather_.iweather.md#ensureindexes)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[ensureIndexes](_models_location_.ilocation.md#ensureindexes)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3299
 
@@ -905,7 +905,7 @@ Name | Type |
 
 ▸ **ensureIndexes**(`options`: any, `callback?`: function): *Promise‹void›*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[ensureIndexes](_models_weather_.iweather.md#ensureindexes)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[ensureIndexes](_models_location_.ilocation.md#ensureindexes)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3300
 
@@ -931,7 +931,7 @@ ___
 
 ▸ **estimatedDocumentCount**(`callback?`: function): *Query‹number› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[estimatedDocumentCount](_models_weather_.iweather.md#estimateddocumentcount)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[estimatedDocumentCount](_models_location_.ilocation.md#estimateddocumentcount)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3231
 
@@ -957,7 +957,7 @@ Name | Type |
 
 ▸ **estimatedDocumentCount**(`options`: any, `callback?`: function): *Query‹number› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[estimatedDocumentCount](_models_weather_.iweather.md#estimateddocumentcount)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[estimatedDocumentCount](_models_location_.ilocation.md#estimateddocumentcount)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3232
 
@@ -984,7 +984,7 @@ ___
 
 ▸ **eventNames**(): *Array‹string | symbol›*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[eventNames](_models_weather_.iweatherschema.md#eventnames)*
+*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[eventNames](_models_location_.ilocationschema.md#eventnames)*
 
 Defined in node_modules/@types/node/globals.d.ts:568
 
@@ -996,7 +996,7 @@ ___
 
 ▸ **exists**(`filter`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `callback?`: function): *Promise‹boolean›*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[exists](_models_weather_.iweather.md#exists)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[exists](_models_location_.ilocation.md#exists)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3312
 
@@ -1026,7 +1026,7 @@ ___
 
 ▸ **fetchCurrent**(`lat`: number, `lon`: number): *Promise‹[OpenweatherCurrentAPIResponse](_core_api_iopenweather_.openweathercurrentapiresponse.md)›*
 
-*Defined in [src/models/Weather.ts:296](https://github.com/Xisabla/Korbots/blob/2fc3376/server/src/models/Weather.ts#L296)*
+*Defined in [src/models/Weather.ts:283](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L283)*
 
 Run a fetch call to the API to get the Current entry of the given location
 
@@ -1047,7 +1047,7 @@ ___
 
 ▸ **fetchDaily**(`lat`: number, `lon`: number): *Promise‹[OpenweatherDailyAPIResponse](_core_api_iopenweather_.openweatherdailyapiresponse.md)›*
 
-*Defined in [src/models/Weather.ts:307](https://github.com/Xisabla/Korbots/blob/2fc3376/server/src/models/Weather.ts#L307)*
+*Defined in [src/models/Weather.ts:294](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L294)*
 
 Run a fetch call to the API to get the Daily entries of the given location from today
 
@@ -1068,7 +1068,7 @@ ___
 
 ▸ **find**(`callback?`: function): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)[], [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[find](_models_weather_.iweather.md#find)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[find](_models_location_.ilocation.md#find)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3318
 
@@ -1091,7 +1091,7 @@ Name | Type |
 
 ▸ **find**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `callback?`: function): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)[], [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[find](_models_weather_.iweather.md#find)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[find](_models_location_.ilocation.md#find)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3319
 
@@ -1114,7 +1114,7 @@ Name | Type |
 
 ▸ **find**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `projection?`: any | null, `callback?`: function): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)[], [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[find](_models_weather_.iweather.md#find)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[find](_models_location_.ilocation.md#find)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3320
 
@@ -1139,7 +1139,7 @@ Name | Type |
 
 ▸ **find**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `projection?`: any | null, `options?`: object & Omit‹QueryFindOptions, "lean"›, `callback?`: function): *Query‹DocumentDefinition‹[IWeatherSchema](_models_weather_.iweatherschema.md)›[]› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[find](_models_weather_.iweather.md#find)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[find](_models_location_.ilocation.md#find)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3322
 
@@ -1166,7 +1166,7 @@ Name | Type |
 
 ▸ **find**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `projection?`: any | null, `options?`: QueryFindOptions, `callback?`: function): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)[], [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[find](_models_weather_.iweather.md#find)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[find](_models_location_.ilocation.md#find)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3324
 
@@ -1197,7 +1197,7 @@ ___
 
 ▸ **findById**(`id`: any | string | number, `callback?`: function): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[findById](_models_weather_.iweather.md#findbyid)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[findById](_models_location_.ilocation.md#findbyid)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3333
 
@@ -1225,7 +1225,7 @@ Name | Type |
 
 ▸ **findById**(`id`: any | string | number, `projection`: any, `callback?`: function): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[findById](_models_weather_.iweather.md#findbyid)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[findById](_models_location_.ilocation.md#findbyid)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3335
 
@@ -1250,7 +1250,7 @@ Name | Type |
 
 ▸ **findById**(`id`: any | string | number, `projection`: any, `options`: object & Omit‹QueryFindBaseOptions, "lean"›, `callback?`: function): *Query‹DocumentDefinition‹[IWeatherSchema](_models_weather_.iweatherschema.md)›› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[findById](_models_weather_.iweather.md#findbyid)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[findById](_models_location_.ilocation.md#findbyid)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3337
 
@@ -1277,7 +1277,7 @@ Name | Type |
 
 ▸ **findById**(`id`: any | string | number, `projection`: any, `options`: QueryFindBaseOptions, `callback?`: function): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[findById](_models_weather_.iweather.md#findbyid)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[findById](_models_location_.ilocation.md#findbyid)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3339
 
@@ -1308,7 +1308,7 @@ ___
 
 ▸ **findByIdAndDelete**(): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[findByIdAndDelete](_models_weather_.iweather.md#findbyidanddelete)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[findByIdAndDelete](_models_location_.ilocation.md#findbyidanddelete)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3374
 
@@ -1323,7 +1323,7 @@ Note: same signatures as findByIdAndRemove
 
 ▸ **findByIdAndDelete**(`id`: any | number | string, `callback?`: function): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[findByIdAndDelete](_models_weather_.iweather.md#findbyidanddelete)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[findByIdAndDelete](_models_location_.ilocation.md#findbyidanddelete)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3375
 
@@ -1346,7 +1346,7 @@ Name | Type |
 
 ▸ **findByIdAndDelete**(`id`: any | number | string, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null›› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[findByIdAndDelete](_models_weather_.iweather.md#findbyidanddelete)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[findByIdAndDelete](_models_location_.ilocation.md#findbyidanddelete)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3377
 
@@ -1371,7 +1371,7 @@ Name | Type |
 
 ▸ **findByIdAndDelete**(`id`: any | number | string, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[findByIdAndDelete](_models_weather_.iweather.md#findbyidanddelete)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[findByIdAndDelete](_models_location_.ilocation.md#findbyidanddelete)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3380
 
@@ -1400,7 +1400,7 @@ ___
 
 ▸ **findByIdAndRemove**(): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[findByIdAndRemove](_models_weather_.iweather.md#findbyidandremove)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[findByIdAndRemove](_models_location_.ilocation.md#findbyidandremove)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3355
 
@@ -1418,7 +1418,7 @@ Note: same signatures as findByIdAndDelete
 
 ▸ **findByIdAndRemove**(`id`: any | number | string, `callback?`: function): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[findByIdAndRemove](_models_weather_.iweather.md#findbyidandremove)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[findByIdAndRemove](_models_location_.ilocation.md#findbyidandremove)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3356
 
@@ -1441,7 +1441,7 @@ Name | Type |
 
 ▸ **findByIdAndRemove**(`id`: any | number | string, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null›› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[findByIdAndRemove](_models_weather_.iweather.md#findbyidandremove)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[findByIdAndRemove](_models_location_.ilocation.md#findbyidandremove)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3358
 
@@ -1466,7 +1466,7 @@ Name | Type |
 
 ▸ **findByIdAndRemove**(`id`: any | number | string, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[findByIdAndRemove](_models_weather_.iweather.md#findbyidandremove)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[findByIdAndRemove](_models_location_.ilocation.md#findbyidandremove)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3361
 
@@ -1495,7 +1495,7 @@ ___
 
 ▸ **findByIdAndUpdate**(): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[findByIdAndUpdate](_models_weather_.iweather.md#findbyidandupdate)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[findByIdAndUpdate](_models_location_.ilocation.md#findbyidandupdate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3391
 
@@ -1509,7 +1509,7 @@ https://mongoosejs.com/docs/api.html#mongoose_Mongoose-set
 
 ▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `callback?`: function): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[findByIdAndUpdate](_models_weather_.iweather.md#findbyidandupdate)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[findByIdAndUpdate](_models_location_.ilocation.md#findbyidandupdate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3392
 
@@ -1534,7 +1534,7 @@ Name | Type |
 
 ▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `options`: object & object & object & QueryFindOneAndUpdateOptions, `callback?`: function): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md), [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[findByIdAndUpdate](_models_weather_.iweather.md#findbyidandupdate)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[findByIdAndUpdate](_models_location_.ilocation.md#findbyidandupdate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3394
 
@@ -1561,7 +1561,7 @@ Name | Type |
 
 ▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `options`: object & QueryFindOneAndUpdateOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IWeatherSchema](_models_weather_.iweatherschema.md)›› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[findByIdAndUpdate](_models_weather_.iweather.md#findbyidandupdate)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[findByIdAndUpdate](_models_location_.ilocation.md#findbyidandupdate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3397
 
@@ -1588,7 +1588,7 @@ Name | Type |
 
 ▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `options`: object & QueryFindOneAndUpdateOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null›› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[findByIdAndUpdate](_models_weather_.iweather.md#findbyidandupdate)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[findByIdAndUpdate](_models_location_.ilocation.md#findbyidandupdate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3401
 
@@ -1615,7 +1615,7 @@ Name | Type |
 
 ▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `options`: object & Omit‹QueryFindOneAndUpdateOptions, "lean"›, `callback?`: function): *Query‹DocumentDefinition‹[IWeatherSchema](_models_weather_.iweatherschema.md)›› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[findByIdAndUpdate](_models_weather_.iweather.md#findbyidandupdate)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[findByIdAndUpdate](_models_location_.ilocation.md#findbyidandupdate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3405
 
@@ -1642,7 +1642,7 @@ Name | Type |
 
 ▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `options`: QueryFindOneAndUpdateOptions, `callback?`: function): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[findByIdAndUpdate](_models_weather_.iweather.md#findbyidandupdate)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[findByIdAndUpdate](_models_location_.ilocation.md#findbyidandupdate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3409
 
@@ -1673,7 +1673,7 @@ ___
 
 ▸ **findCurrent**(`lat`: number, `long`: number): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)[]›*
 
-*Defined in [src/models/Weather.ts:222](https://github.com/Xisabla/Korbots/blob/2fc3376/server/src/models/Weather.ts#L222)*
+*Defined in [src/models/Weather.ts:209](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L209)*
 
 Look for Documents inside the Database for the Current weather at a specific location
 Time interval: [now - 30 minutes; now + 2 minutes]
@@ -1695,7 +1695,7 @@ ___
 
 ▸ **findCurrentOne**(`lat`: number, `long`: number): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
 
-*Defined in [src/models/Weather.ts:230](https://github.com/Xisabla/Korbots/blob/2fc3376/server/src/models/Weather.ts#L230)*
+*Defined in [src/models/Weather.ts:217](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L217)*
 
 Same as findCurrent but only returns the first entry
 
@@ -1716,7 +1716,7 @@ ___
 
 ▸ **findDaily**(`lat`: number, `long`: number, `date`: Date): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)[]›*
 
-*Defined in [src/models/Weather.ts:240](https://github.com/Xisabla/Korbots/blob/2fc3376/server/src/models/Weather.ts#L240)*
+*Defined in [src/models/Weather.ts:227](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L227)*
 
 Look for Documents inside the Database for the Daily weather at a specific location and date
 Time interval: Same day as date
@@ -1739,7 +1739,7 @@ ___
 
 ▸ **findDailyAll**(`lat`: number, `lon`: number, `further?`: number): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)[]›*
 
-*Defined in [src/models/Weather.ts:258](https://github.com/Xisabla/Korbots/blob/2fc3376/server/src/models/Weather.ts#L258)*
+*Defined in [src/models/Weather.ts:245](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L245)*
 
 Look for all Daily weather entries for next further days (begin: tomorrow) at the given location
 
@@ -1761,7 +1761,7 @@ ___
 
 ▸ **findDailyOne**(`lat`: number, `long`: number, `date`: Date): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
 
-*Defined in [src/models/Weather.ts:249](https://github.com/Xisabla/Korbots/blob/2fc3376/server/src/models/Weather.ts#L249)*
+*Defined in [src/models/Weather.ts:236](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L236)*
 
 Same as findDaily but only returns the first entry
 
@@ -1783,7 +1783,7 @@ ___
 
 ▸ **findOne**(`conditions?`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `callback?`: function): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[findOne](_models_weather_.iweather.md#findone)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[findOne](_models_location_.ilocation.md#findone)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3418
 
@@ -1809,7 +1809,7 @@ Name | Type |
 
 ▸ **findOne**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `projection`: any, `callback?`: function): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[findOne](_models_weather_.iweather.md#findone)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[findOne](_models_location_.ilocation.md#findone)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3420
 
@@ -1834,7 +1834,7 @@ Name | Type |
 
 ▸ **findOne**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `projection`: any, `options`: object & Omit‹QueryFindBaseOptions, "lean"›, `callback?`: function): *Query‹DocumentDefinition‹[IWeatherSchema](_models_weather_.iweatherschema.md)›› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[findOne](_models_weather_.iweather.md#findone)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[findOne](_models_location_.ilocation.md#findone)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3422
 
@@ -1861,7 +1861,7 @@ Name | Type |
 
 ▸ **findOne**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `projection`: any, `options`: QueryFindBaseOptions, `callback?`: function): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[findOne](_models_weather_.iweather.md#findone)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[findOne](_models_location_.ilocation.md#findone)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3424
 
@@ -1892,7 +1892,7 @@ ___
 
 ▸ **findOneAndDelete**(): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[findOneAndDelete](_models_weather_.iweather.md#findoneanddelete)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[findOneAndDelete](_models_location_.ilocation.md#findoneanddelete)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3454
 
@@ -1906,7 +1906,7 @@ Note: same signatures as findOneAndRemove
 
 ▸ **findOneAndDelete**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `callback?`: function): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[findOneAndDelete](_models_weather_.iweather.md#findoneanddelete)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[findOneAndDelete](_models_location_.ilocation.md#findoneanddelete)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3455
 
@@ -1929,7 +1929,7 @@ Name | Type |
 
 ▸ **findOneAndDelete**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `options`: object & QueryFindOneAndRemoveOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null›› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[findOneAndDelete](_models_weather_.iweather.md#findoneanddelete)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[findOneAndDelete](_models_location_.ilocation.md#findoneanddelete)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3457
 
@@ -1955,7 +1955,7 @@ Name | Type |
 
 ▸ **findOneAndDelete**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[findOneAndDelete](_models_weather_.iweather.md#findoneanddelete)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[findOneAndDelete](_models_location_.ilocation.md#findoneanddelete)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3460
 
@@ -1984,7 +1984,7 @@ ___
 
 ▸ **findOneAndRemove**(): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[findOneAndRemove](_models_weather_.iweather.md#findoneandremove)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[findOneAndRemove](_models_location_.ilocation.md#findoneandremove)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3438
 
@@ -2001,7 +2001,7 @@ Note: same signatures as findOneAndDelete
 
 ▸ **findOneAndRemove**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `callback?`: function): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[findOneAndRemove](_models_weather_.iweather.md#findoneandremove)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[findOneAndRemove](_models_location_.ilocation.md#findoneandremove)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3439
 
@@ -2024,7 +2024,7 @@ Name | Type |
 
 ▸ **findOneAndRemove**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `options`: object & QueryFindOneAndRemoveOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null›› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[findOneAndRemove](_models_weather_.iweather.md#findoneandremove)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[findOneAndRemove](_models_location_.ilocation.md#findoneandremove)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3441
 
@@ -2050,7 +2050,7 @@ Name | Type |
 
 ▸ **findOneAndRemove**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[findOneAndRemove](_models_weather_.iweather.md#findoneandremove)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[findOneAndRemove](_models_location_.ilocation.md#findoneandremove)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3444
 
@@ -2079,7 +2079,7 @@ ___
 
 ▸ **findOneAndUpdate**(): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[findOneAndUpdate](_models_weather_.iweather.md#findoneandupdate)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[findOneAndUpdate](_models_location_.ilocation.md#findoneandupdate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3471
 
@@ -2095,7 +2095,7 @@ https://mongoosejs.com/docs/api.html#mongoose_Mongoose-set
 
 ▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `update`: UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `callback?`: function): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[findOneAndUpdate](_models_weather_.iweather.md#findoneandupdate)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[findOneAndUpdate](_models_location_.ilocation.md#findoneandupdate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3472
 
@@ -2121,7 +2121,7 @@ Name | Type |
 
 ▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `update`: UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `options`: object & object & QueryFindOneAndUpdateOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IWeatherSchema](_models_weather_.iweatherschema.md)›› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[findOneAndUpdate](_models_weather_.iweather.md#findoneandupdate)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[findOneAndUpdate](_models_location_.ilocation.md#findoneandupdate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3474
 
@@ -2149,7 +2149,7 @@ Name | Type |
 
 ▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `update`: UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `options`: object & QueryFindOneAndUpdateOptions, `callback?`: function): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md), [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[findOneAndUpdate](_models_weather_.iweather.md#findoneandupdate)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[findOneAndUpdate](_models_location_.ilocation.md#findoneandupdate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3478
 
@@ -2177,7 +2177,7 @@ Name | Type |
 
 ▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `update`: UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `options`: object & QueryFindOneAndUpdateOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null›› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[findOneAndUpdate](_models_weather_.iweather.md#findoneandupdate)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[findOneAndUpdate](_models_location_.ilocation.md#findoneandupdate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3481
 
@@ -2205,7 +2205,7 @@ Name | Type |
 
 ▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `update`: UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `options`: object & Omit‹QueryFindOneAndUpdateOptions, "lean"›, `callback?`: function): *Query‹DocumentDefinition‹[IWeatherSchema](_models_weather_.iweatherschema.md)›› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[findOneAndUpdate](_models_weather_.iweather.md#findoneandupdate)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[findOneAndUpdate](_models_location_.ilocation.md#findoneandupdate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3485
 
@@ -2233,7 +2233,7 @@ Name | Type |
 
 ▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `update`: UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `options`: QueryFindOneAndUpdateOptions, `callback?`: function): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[findOneAndUpdate](_models_weather_.iweather.md#findoneandupdate)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[findOneAndUpdate](_models_location_.ilocation.md#findoneandupdate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3488
 
@@ -2265,7 +2265,7 @@ ___
 
 ▸ **findOutdatedCurrent**(): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)[]›*
 
-*Defined in [src/models/Weather.ts:268](https://github.com/Xisabla/Korbots/blob/2fc3376/server/src/models/Weather.ts#L268)*
+*Defined in [src/models/Weather.ts:255](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L255)*
 
 Look for all the Current entries that can be updated
 
@@ -2279,7 +2279,7 @@ ___
 
 ▸ **fromCurrent**(`lat`: number, `lon`: number): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
 
-*Defined in [src/models/Weather.ts:278](https://github.com/Xisabla/Korbots/blob/2fc3376/server/src/models/Weather.ts#L278)*
+*Defined in [src/models/Weather.ts:265](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L265)*
 
 Run a fetch call to the API for the Current entry of a location and create a Document for it
 
@@ -2300,7 +2300,7 @@ ___
 
 ▸ **fromDaily**(`lat`: number, `long`: number): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)[]›*
 
-*Defined in [src/models/Weather.ts:286](https://github.com/Xisabla/Korbots/blob/2fc3376/server/src/models/Weather.ts#L286)*
+*Defined in [src/models/Weather.ts:273](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L273)*
 
 Run a fetch call to the API for the Daily entries of a location and create a Document for each entry
 
@@ -2321,7 +2321,7 @@ ___
 
 ▸ **geoSearch**(`conditions`: any, `options`: object, `callback?`: function): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)[], [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[geoSearch](_models_weather_.iweather.md#geosearch)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[geoSearch](_models_location_.ilocation.md#geosearch)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3498
 
@@ -2365,7 +2365,7 @@ ___
 
 ▸ **getCurrent**(`lat`: number, `lon`: number): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
 
-*Defined in [src/models/Weather.ts:176](https://github.com/Xisabla/Korbots/blob/2fc3376/server/src/models/Weather.ts#L176)*
+*Defined in [src/models/Weather.ts:163](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L163)*
 
 Look for existing Document or create a new one for the Current weather at the given location
 Also perform update actions if needed
@@ -2393,7 +2393,7 @@ ___
 
 ▸ **getDaily**(`lat`: number, `lon`: number, `date`: Date): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
 
-*Defined in [src/models/Weather.ts:192](https://github.com/Xisabla/Korbots/blob/2fc3376/server/src/models/Weather.ts#L192)*
+*Defined in [src/models/Weather.ts:179](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L179)*
 
 Look for existing Document or create a new one for the Daily weather at the given location and date
 
@@ -2413,7 +2413,7 @@ ___
 
 ▸ **getDailyAll**(`lat`: number, `lon`: number, `further?`: number): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)[]›*
 
-*Defined in [src/models/Weather.ts:207](https://github.com/Xisabla/Korbots/blob/2fc3376/server/src/models/Weather.ts#L207)*
+*Defined in [src/models/Weather.ts:194](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L194)*
 
 Get all (look for or create if needed) the Daily weather Documents for next further days (begin: tomorrow) at the given location
 
@@ -2441,7 +2441,7 @@ ___
 
 ▸ **getMaxListeners**(): *number*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[getMaxListeners](_models_weather_.iweatherschema.md#getmaxlisteners)*
+*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[getMaxListeners](_models_location_.ilocationschema.md#getmaxlisteners)*
 
 Defined in node_modules/@types/node/globals.d.ts:560
 
@@ -2453,7 +2453,7 @@ ___
 
 ▸ **hydrate**(`obj`: any): *[IWeatherSchema](_models_weather_.iweatherschema.md)*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[hydrate](_models_weather_.iweather.md#hydrate)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[hydrate](_models_location_.ilocation.md#hydrate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3514
 
@@ -2475,7 +2475,7 @@ ___
 
 ▸ **init**(`callback?`: function): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[init](_models_weather_.iweather.md#init)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[init](_models_location_.ilocation.md#init)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3543
 
@@ -2507,7 +2507,7 @@ ___
 
 ▸ **insertMany**(`docs`: any[], `callback?`: function): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)[]›*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[insertMany](_models_weather_.iweather.md#insertmany)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[insertMany](_models_location_.ilocation.md#insertmany)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3530
 
@@ -2538,7 +2538,7 @@ Name | Type |
 
 ▸ **insertMany**(`docs`: any[], `options?`: object & ModelOptions, `callback?`: function): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)[]›*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[insertMany](_models_weather_.iweather.md#insertmany)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[insertMany](_models_location_.ilocation.md#insertmany)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3531
 
@@ -2563,7 +2563,7 @@ Name | Type |
 
 ▸ **insertMany**(`doc`: any, `callback?`: function): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[insertMany](_models_weather_.iweather.md#insertmany)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[insertMany](_models_location_.ilocation.md#insertmany)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3532
 
@@ -2586,7 +2586,7 @@ Name | Type |
 
 ▸ **insertMany**(`doc`: any, `options?`: object & ModelOptions, `callback?`: function): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[insertMany](_models_weather_.iweather.md#insertmany)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[insertMany](_models_location_.ilocation.md#insertmany)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3533
 
@@ -2615,7 +2615,7 @@ ___
 
 ▸ **listIndexes**(`callback`: function): *void*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[listIndexes](_models_weather_.iweather.md#listindexes)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[listIndexes](_models_location_.ilocation.md#listindexes)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3291
 
@@ -2642,7 +2642,7 @@ Returns `undefined` if callback is specified, returns a promise if no callback.
 
 ▸ **listIndexes**(): *Promise‹void›*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[listIndexes](_models_weather_.iweather.md#listindexes)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[listIndexes](_models_location_.ilocation.md#listindexes)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3292
 
@@ -2654,7 +2654,7 @@ ___
 
 ▸ **listenerCount**(`type`: string | symbol): *number*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[listenerCount](_models_weather_.iweatherschema.md#listenercount)*
+*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[listenerCount](_models_location_.ilocationschema.md#listenercount)*
 
 Defined in node_modules/@types/node/globals.d.ts:564
 
@@ -2672,7 +2672,7 @@ ___
 
 ▸ **listeners**(`event`: string | symbol): *Function[]*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[listeners](_models_weather_.iweatherschema.md#listeners)*
+*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[listeners](_models_location_.ilocationschema.md#listeners)*
 
 Defined in node_modules/@types/node/globals.d.ts:561
 
@@ -2690,7 +2690,7 @@ ___
 
 ▸ **mapReduce**‹**Key**, **Value**›(`o`: ModelMapReduceOption‹[IWeatherSchema](_models_weather_.iweatherschema.md), Key, Value›, `callback?`: function): *Promise‹any›*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[mapReduce](_models_weather_.iweather.md#mapreduce)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[mapReduce](_models_location_.ilocation.md#mapreduce)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3550
 
@@ -2725,9 +2725,9 @@ ___
 
 ###  model
 
-▸ **model**‹**U**›(`name`: string): *[Model](_models_weather_.iweather.md#model)‹U›*
+▸ **model**‹**U**›(`name`: string): *[Model](_models_location_.ilocation.md#model)‹U›*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[model](_models_weather_.iweather.md#model)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[model](_models_location_.ilocation.md#model)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3186
 
@@ -2741,7 +2741,7 @@ Name | Type |
 ------ | ------ |
 `name` | string |
 
-**Returns:** *[Model](_models_weather_.iweather.md#model)‹U›*
+**Returns:** *[Model](_models_location_.ilocation.md#model)‹U›*
 
 ___
 
@@ -2749,7 +2749,7 @@ ___
 
 ▸ **off**(`event`: string | symbol, `listener`: function): *this*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[off](_models_weather_.iweatherschema.md#off)*
+*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[off](_models_location_.ilocationschema.md#off)*
 
 Defined in node_modules/@types/node/globals.d.ts:557
 
@@ -2775,7 +2775,7 @@ ___
 
 ▸ **on**(`event`: string | symbol, `listener`: function): *this*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[on](_models_weather_.iweatherschema.md#on)*
+*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[on](_models_location_.ilocationschema.md#on)*
 
 Defined in node_modules/@types/node/globals.d.ts:554
 
@@ -2801,7 +2801,7 @@ ___
 
 ▸ **once**(`event`: string | symbol, `listener`: function): *this*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[once](_models_weather_.iweatherschema.md#once)*
+*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[once](_models_location_.ilocationschema.md#once)*
 
 Defined in node_modules/@types/node/globals.d.ts:555
 
@@ -2827,7 +2827,7 @@ ___
 
 ▸ **populate**(`docs`: any[], `options`: ModelPopulateOptions | ModelPopulateOptions[], `callback?`: function): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)[]›*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[populate](_models_weather_.iweather.md#populate)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[populate](_models_location_.ilocation.md#populate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3561
 
@@ -2860,7 +2860,7 @@ Name | Type |
 
 ▸ **populate**‹**T**›(`docs`: any, `options`: ModelPopulateOptions | ModelPopulateOptions[], `callback?`: function): *Promise‹T›*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[populate](_models_weather_.iweather.md#populate)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[populate](_models_location_.ilocation.md#populate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3563
 
@@ -2893,7 +2893,7 @@ ___
 
 ▸ **prependListener**(`event`: string | symbol, `listener`: function): *this*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[prependListener](_models_weather_.iweatherschema.md#prependlistener)*
+*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[prependListener](_models_location_.ilocationschema.md#prependlistener)*
 
 Defined in node_modules/@types/node/globals.d.ts:566
 
@@ -2919,7 +2919,7 @@ ___
 
 ▸ **prependOnceListener**(`event`: string | symbol, `listener`: function): *this*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[prependOnceListener](_models_weather_.iweatherschema.md#prependoncelistener)*
+*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[prependOnceListener](_models_location_.ilocationschema.md#prependoncelistener)*
 
 Defined in node_modules/@types/node/globals.d.ts:567
 
@@ -2945,7 +2945,7 @@ ___
 
 ▸ **rawListeners**(`event`: string | symbol): *Function[]*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[rawListeners](_models_weather_.iweatherschema.md#rawlisteners)*
+*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[rawListeners](_models_location_.ilocationschema.md#rawlisteners)*
 
 Defined in node_modules/@types/node/globals.d.ts:562
 
@@ -2963,7 +2963,7 @@ ___
 
 ▸ **remove**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `callback?`: function): *Query‹DeleteWriteOpResultObject["result"] & object› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[remove](_models_weather_.iweather.md#remove)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[remove](_models_location_.ilocation.md#remove)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3567
 
@@ -2991,7 +2991,7 @@ ___
 
 ▸ **removeAllListeners**(`event?`: string | symbol): *this*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[removeAllListeners](_models_weather_.iweatherschema.md#removealllisteners)*
+*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[removeAllListeners](_models_location_.ilocationschema.md#removealllisteners)*
 
 Defined in node_modules/@types/node/globals.d.ts:558
 
@@ -3009,7 +3009,7 @@ ___
 
 ▸ **removeListener**(`event`: string | symbol, `listener`: function): *this*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[removeListener](_models_weather_.iweatherschema.md#removelistener)*
+*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[removeListener](_models_location_.ilocationschema.md#removelistener)*
 
 Defined in node_modules/@types/node/globals.d.ts:556
 
@@ -3035,7 +3035,7 @@ ___
 
 ▸ **removeLowScored**(): *Promise‹any›*
 
-*Defined in [src/models/Weather.ts:319](https://github.com/Xisabla/Korbots/blob/2fc3376/server/src/models/Weather.ts#L319)*
+*Defined in [src/models/Weather.ts:306](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L306)*
 
 Will remove all Documents with a low updateScore
 
@@ -3047,7 +3047,7 @@ ___
 
 ▸ **removeOld**(): *Promise‹any›*
 
-*Defined in [src/models/Weather.ts:314](https://github.com/Xisabla/Korbots/blob/2fc3376/server/src/models/Weather.ts#L314)*
+*Defined in [src/models/Weather.ts:301](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L301)*
 
 Will remove all Documents older than 24 hours to avoid useless entries in the Database
 
@@ -3059,7 +3059,7 @@ ___
 
 ▸ **replaceOne**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `replacement`: any, `callback?`: function): *Query‹any› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[replaceOne](_models_weather_.iweather.md#replaceone)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[replaceOne](_models_location_.ilocation.md#replaceone)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3577
 
@@ -3091,7 +3091,7 @@ ___
 
 ▸ **setMaxListeners**(`n`: number): *this*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[setMaxListeners](_models_weather_.iweatherschema.md#setmaxlisteners)*
+*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[setMaxListeners](_models_location_.ilocationschema.md#setmaxlisteners)*
 
 Defined in node_modules/@types/node/globals.d.ts:559
 
@@ -3109,7 +3109,7 @@ ___
 
 ▸ **syncIndexes**(`options`: object | null | undefined, `callback`: function): *void*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[syncIndexes](_models_weather_.iweather.md#syncindexes)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[syncIndexes](_models_location_.ilocation.md#syncindexes)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3280
 
@@ -3142,7 +3142,7 @@ Returns `undefined` if callback is specified, returns a promise if no callback.
 
 ▸ **syncIndexes**(`options?`: object | null): *Promise‹void›*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[syncIndexes](_models_weather_.iweather.md#syncindexes)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[syncIndexes](_models_location_.ilocation.md#syncindexes)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3281
 
@@ -3160,7 +3160,7 @@ ___
 
 ▸ **translateAliases**(`raw`: any): *any*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[translateAliases](_models_weather_.iweather.md#translatealiases)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[translateAliases](_models_location_.ilocation.md#translatealiases)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3171
 
@@ -3182,7 +3182,7 @@ ___
 
 ▸ **update**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `doc`: UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `callback?`: function): *Query‹any› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[update](_models_weather_.iweather.md#update)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[update](_models_location_.ilocation.md#update)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3583
 
@@ -3210,7 +3210,7 @@ Name | Type |
 
 ▸ **update**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `doc`: UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `options`: ModelUpdateOptions, `callback?`: function): *Query‹any› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[update](_models_weather_.iweather.md#update)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[update](_models_location_.ilocation.md#update)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3585
 
@@ -3241,7 +3241,7 @@ ___
 
 ▸ **updateMany**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `doc`: UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `callback?`: function): *Query‹any› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[updateMany](_models_weather_.iweather.md#updatemany)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[updateMany](_models_location_.ilocation.md#updatemany)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3591
 
@@ -3266,7 +3266,7 @@ Name | Type |
 
 ▸ **updateMany**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `doc`: UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `options`: ModelUpdateOptions, `callback?`: function): *Query‹any› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[updateMany](_models_weather_.iweather.md#updatemany)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[updateMany](_models_location_.ilocation.md#updatemany)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3593
 
@@ -3297,7 +3297,7 @@ ___
 
 ▸ **updateOne**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `doc`: UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `callback?`: function): *Query‹any› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[updateOne](_models_weather_.iweather.md#updateone)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[updateOne](_models_location_.ilocation.md#updateone)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3587
 
@@ -3322,7 +3322,7 @@ Name | Type |
 
 ▸ **updateOne**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `doc`: UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `options`: ModelUpdateOptions, `callback?`: function): *Query‹any› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[updateOne](_models_weather_.iweather.md#updateone)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[updateOne](_models_location_.ilocation.md#updateone)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3589
 
@@ -3353,7 +3353,7 @@ ___
 
 ▸ **watch**(`pipeline?`: object[], `options?`: ChangeStreamOptions & object): *ChangeStream*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[watch](_models_weather_.iweather.md#watch)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[watch](_models_location_.ilocation.md#watch)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3161
 
@@ -3375,7 +3375,7 @@ ___
 
 ▸ **where**(`path`: string, `val?`: any): *Query‹any› & QueryHelpers*
 
-*Inherited from [IWeather](_models_weather_.iweather.md).[where](_models_weather_.iweather.md#where)*
+*Inherited from [ILocation](_models_location_.ilocation.md).[where](_models_location_.ilocation.md#where)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3597
 

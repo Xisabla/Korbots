@@ -50,7 +50,7 @@
 
 • **__v**? : *number*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[__v](_models_weather_.iweatherschema.md#optional-__v)*
+*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[__v](_models_location_.ilocationschema.md#optional-__v)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3636
 
@@ -63,7 +63,7 @@ ___
 
 • **collection**: *Collection*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[collection](_models_weather_.iweatherschema.md#collection)*
+*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[collection](_models_location_.ilocationschema.md#collection)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3657
 
@@ -75,7 +75,7 @@ ___
 
 • **connected**? : *boolean*
 
-*Defined in [src/models/User.ts:14](https://github.com/Xisabla/Korbots/blob/2fc3376/server/src/models/User.ts#L14)*
+*Defined in [src/models/User.ts:14](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/User.ts#L14)*
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 • **db**: *Connection*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[db](_models_weather_.iweatherschema.md#db)*
+*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[db](_models_location_.ilocationschema.md#db)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3660
 
@@ -95,7 +95,7 @@ ___
 
 • **id**? : *any*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[id](_models_weather_.iweatherschema.md#optional-id)*
+*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[id](_models_location_.ilocationschema.md#optional-id)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:1624
 
@@ -110,7 +110,7 @@ ___
 
 • **schema**: *Schema*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[schema](_models_weather_.iweatherschema.md#schema)*
+*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[schema](_models_location_.ilocationschema.md#schema)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3663
 
@@ -122,7 +122,7 @@ ___
 
 • **socketId**? : *string*
 
-*Defined in [src/models/User.ts:15](https://github.com/Xisabla/Korbots/blob/2fc3376/server/src/models/User.ts#L15)*
+*Defined in [src/models/User.ts:15](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/User.ts#L15)*
 
 ___
 
@@ -130,7 +130,7 @@ ___
 
 • **username**: *string*
 
-*Defined in [src/models/User.ts:13](https://github.com/Xisabla/Korbots/blob/2fc3376/server/src/models/User.ts#L13)*
+*Defined in [src/models/User.ts:13](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/User.ts#L13)*
 
 ## Methods
 
@@ -138,7 +138,7 @@ ___
 
 ▸ **$isDeleted**(`isDeleted`: boolean): *void*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[$isDeleted](_models_weather_.iweatherschema.md#isdeleted)*
+*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[$isDeleted](_models_location_.ilocationschema.md#isdeleted)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3612
 
@@ -154,7 +154,7 @@ Name | Type |
 
 ▸ **$isDeleted**(): *boolean*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[$isDeleted](_models_weather_.iweatherschema.md#isdeleted)*
+*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[$isDeleted](_models_location_.ilocationschema.md#isdeleted)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3614
 
@@ -168,7 +168,7 @@ ___
 
 ▸ **addListener**(`event`: string | symbol, `listener`: function): *this*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[addListener](_models_weather_.iweatherschema.md#addlistener)*
+*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[addListener](_models_location_.ilocationschema.md#addlistener)*
 
 Defined in node_modules/@types/node/globals.d.ts:553
 
@@ -194,7 +194,7 @@ ___
 
 ▸ **emit**(`event`: string | symbol, ...`args`: any[]): *boolean*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[emit](_models_weather_.iweatherschema.md#emit)*
+*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[emit](_models_location_.ilocationschema.md#emit)*
 
 Defined in node_modules/@types/node/globals.d.ts:563
 
@@ -213,7 +213,7 @@ ___
 
 ▸ **eventNames**(): *Array‹string | symbol›*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[eventNames](_models_weather_.iweatherschema.md#eventnames)*
+*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[eventNames](_models_location_.ilocationschema.md#eventnames)*
 
 Defined in node_modules/@types/node/globals.d.ts:568
 
@@ -225,7 +225,7 @@ ___
 
 ▸ **getMaxListeners**(): *number*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[getMaxListeners](_models_weather_.iweatherschema.md#getmaxlisteners)*
+*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[getMaxListeners](_models_location_.ilocationschema.md#getmaxlisteners)*
 
 Defined in node_modules/@types/node/globals.d.ts:560
 
@@ -237,7 +237,7 @@ ___
 
 ▸ **increment**(): *this*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[increment](_models_weather_.iweatherschema.md#increment)*
+*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[increment](_models_location_.ilocationschema.md#increment)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3603
 
@@ -251,7 +251,7 @@ ___
 
 ▸ **listenerCount**(`type`: string | symbol): *number*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[listenerCount](_models_weather_.iweatherschema.md#listenercount)*
+*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[listenerCount](_models_location_.ilocationschema.md#listenercount)*
 
 Defined in node_modules/@types/node/globals.d.ts:564
 
@@ -269,7 +269,7 @@ ___
 
 ▸ **listeners**(`event`: string | symbol): *Function[]*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[listeners](_models_weather_.iweatherschema.md#listeners)*
+*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[listeners](_models_location_.ilocationschema.md#listeners)*
 
 Defined in node_modules/@types/node/globals.d.ts:561
 
@@ -285,9 +285,9 @@ ___
 
 ###  model
 
-▸ **model**‹**T**›(`name`: string): *[Model](_models_weather_.iweather.md#model)‹T›*
+▸ **model**‹**T**›(`name`: string): *[Model](_models_location_.ilocation.md#model)‹T›*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[model](_models_weather_.iweatherschema.md#model)*
+*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[model](_models_location_.ilocationschema.md#model)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3609
 
@@ -303,7 +303,7 @@ Name | Type | Description |
 ------ | ------ | ------ |
 `name` | string | model name  |
 
-**Returns:** *[Model](_models_weather_.iweather.md#model)‹T›*
+**Returns:** *[Model](_models_location_.ilocation.md#model)‹T›*
 
 ___
 
@@ -311,7 +311,7 @@ ___
 
 ▸ **off**(`event`: string | symbol, `listener`: function): *this*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[off](_models_weather_.iweatherschema.md#off)*
+*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[off](_models_location_.ilocationschema.md#off)*
 
 Defined in node_modules/@types/node/globals.d.ts:557
 
@@ -337,7 +337,7 @@ ___
 
 ▸ **on**(`event`: string | symbol, `listener`: function): *this*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[on](_models_weather_.iweatherschema.md#on)*
+*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[on](_models_location_.ilocationschema.md#on)*
 
 Defined in node_modules/@types/node/globals.d.ts:554
 
@@ -363,7 +363,7 @@ ___
 
 ▸ **once**(`event`: string | symbol, `listener`: function): *this*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[once](_models_weather_.iweatherschema.md#once)*
+*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[once](_models_location_.ilocationschema.md#once)*
 
 Defined in node_modules/@types/node/globals.d.ts:555
 
@@ -389,7 +389,7 @@ ___
 
 ▸ **prependListener**(`event`: string | symbol, `listener`: function): *this*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[prependListener](_models_weather_.iweatherschema.md#prependlistener)*
+*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[prependListener](_models_location_.ilocationschema.md#prependlistener)*
 
 Defined in node_modules/@types/node/globals.d.ts:566
 
@@ -415,7 +415,7 @@ ___
 
 ▸ **prependOnceListener**(`event`: string | symbol, `listener`: function): *this*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[prependOnceListener](_models_weather_.iweatherschema.md#prependoncelistener)*
+*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[prependOnceListener](_models_location_.ilocationschema.md#prependoncelistener)*
 
 Defined in node_modules/@types/node/globals.d.ts:567
 
@@ -441,7 +441,7 @@ ___
 
 ▸ **rawListeners**(`event`: string | symbol): *Function[]*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[rawListeners](_models_weather_.iweatherschema.md#rawlisteners)*
+*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[rawListeners](_models_location_.ilocationschema.md#rawlisteners)*
 
 Defined in node_modules/@types/node/globals.d.ts:562
 
@@ -459,7 +459,7 @@ ___
 
 ▸ **remove**(`fn?`: function): *Promise‹this›*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[remove](_models_weather_.iweatherschema.md#remove)*
+*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[remove](_models_location_.ilocationschema.md#remove)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3620
 
@@ -488,7 +488,7 @@ ___
 
 ▸ **removeAllListeners**(`event?`: string | symbol): *this*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[removeAllListeners](_models_weather_.iweatherschema.md#removealllisteners)*
+*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[removeAllListeners](_models_location_.ilocationschema.md#removealllisteners)*
 
 Defined in node_modules/@types/node/globals.d.ts:558
 
@@ -506,7 +506,7 @@ ___
 
 ▸ **removeListener**(`event`: string | symbol, `listener`: function): *this*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[removeListener](_models_weather_.iweatherschema.md#removelistener)*
+*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[removeListener](_models_location_.ilocationschema.md#removelistener)*
 
 Defined in node_modules/@types/node/globals.d.ts:556
 
@@ -532,7 +532,7 @@ ___
 
 ▸ **save**(`options?`: SaveOptions, `fn?`: function): *Promise‹this›*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[save](_models_weather_.iweatherschema.md#save)*
+*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[save](_models_location_.ilocationschema.md#save)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3629
 
@@ -561,7 +561,7 @@ Name | Type |
 
 ▸ **save**(`fn?`: function): *Promise‹this›*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[save](_models_weather_.iweatherschema.md#save)*
+*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[save](_models_location_.ilocationschema.md#save)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3630
 
@@ -586,7 +586,7 @@ ___
 
 ▸ **setMaxListeners**(`n`: number): *this*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[setMaxListeners](_models_weather_.iweatherschema.md#setmaxlisteners)*
+*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[setMaxListeners](_models_location_.ilocationschema.md#setmaxlisteners)*
 
 Defined in node_modules/@types/node/globals.d.ts:559
 

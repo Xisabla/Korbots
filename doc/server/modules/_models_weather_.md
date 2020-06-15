@@ -8,26 +8,11 @@
 
 * [IWeather](../interfaces/_models_weather_.iweather.md)
 * [IWeatherSchema](../interfaces/_models_weather_.iweatherschema.md)
-* [LocationCoordinates](../interfaces/_models_weather_.locationcoordinates.md)
-
-### Type aliases
-
-* [Location](_models_weather_.md#location)
 
 ### Variables
 
 * [Weather](_models_weather_.md#const-weather)
 * [WeatherSchema](_models_weather_.md#const-weatherschema)
-
-## Type aliases
-
-###  Location
-
-Ƭ **Location**: *[LocationCoordinates](../interfaces/_models_weather_.locationcoordinates.md) | string*
-
-*Defined in [src/models/Weather.ts:21](https://github.com/Xisabla/Korbots/blob/2fc3376/server/src/models/Weather.ts#L21)*
-
-Location can be coordinates or city name or "city_name,country_code", which are strings
 
 ## Variables
 
@@ -35,7 +20,7 @@ Location can be coordinates or city name or "city_name,country_code", which are 
 
 • **Weather**: *[IWeather](../interfaces/_models_weather_.iweather.md)‹›* = model<IWeatherSchema, IWeather>('Weather', WeatherSchema)
 
-*Defined in [src/models/Weather.ts:731](https://github.com/Xisabla/Korbots/blob/2fc3376/server/src/models/Weather.ts#L731)*
+*Defined in [src/models/Weather.ts:719](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L719)*
 
 Weather Model, allow to create, manipulate and save weather entries
 
@@ -69,6 +54,7 @@ ___
         wind: { type: Number, required: true },
         weather: { type: String, required: true },
         weatherDescription: { type: String, required: true },
+        weatherIcon: { type: String, required: true },
         latitude: { type: Number, required: true },
         longitude: { type: Number, required: true },
         country: String,
@@ -80,7 +66,7 @@ ___
     { collection: 'weather' }
 )
 
-*Defined in [src/models/Weather.ts:33](https://github.com/Xisabla/Korbots/blob/2fc3376/server/src/models/Weather.ts#L33)*
+*Defined in [src/models/Weather.ts:17](https://github.com/Xisabla/Korbots/blob/dc72351/server/src/models/Weather.ts#L17)*
 
 Mongoose Schema of the Weather Model Document, works in the "weather" collection
 See "Document" inside all the documentation of this file as instance of this Schema
