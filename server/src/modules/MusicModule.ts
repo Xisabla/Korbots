@@ -12,9 +12,12 @@ const log = debug('module:music')
 
 export class MusicModule extends Module {
     private youtube: YouTube
+    private ytStorage: string
 
     public register(app: Application): void {
         super.register(app)
+
+        this.ytStorage = app.getStorage('youtube')
 
         this.youtube = new YouTube(Application.getAPIKey('google:youtube'))
 

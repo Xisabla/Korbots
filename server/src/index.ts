@@ -1,9 +1,13 @@
+import path from 'path'
+
 import * as APIs from './config/API'
 import Application from './core/Application'
 import { MusicModule } from './modules/MusicModule'
 import { WeatherModule } from './modules/WeatherModule'
 
-const app = new Application({ useEnv: true })
+const storage = path.join(__dirname, '../', 'storage')
+
+const app = new Application({ storage, useEnv: true })
 
 app.connectDB()
 
