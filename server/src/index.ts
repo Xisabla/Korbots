@@ -11,6 +11,7 @@ app.connectDB()
 Application.registerAPIs(Object.values(APIs))
 
 // ---- Modules Registering ----------------------
+
 app.registerModule(new WeatherModule())
 
 app.run()
