@@ -2,6 +2,8 @@
 
 # Interface: ILocationSchema
 
+Detailed Location Document
+
 ## Hierarchy
 
 * Document
@@ -64,7 +66,9 @@ ___
 
 • **city**: *string*
 
-*Defined in [src/models/Location.ts:29](https://github.com/Xisabla/Korbots/blob/23513ea/server/src/models/Location.ts#L29)*
+*Defined in [src/models/Location.ts:38](https://github.com/Xisabla/Korbots/blob/74b797c/server/src/models/Location.ts#L38)*
+
+City of the Location
 
 ___
 
@@ -84,7 +88,9 @@ ___
 
 • **country**: *string*
 
-*Defined in [src/models/Location.ts:30](https://github.com/Xisabla/Korbots/blob/23513ea/server/src/models/Location.ts#L30)*
+*Defined in [src/models/Location.ts:40](https://github.com/Xisabla/Korbots/blob/74b797c/server/src/models/Location.ts#L40)*
+
+Country of the Location
 
 ___
 
@@ -119,7 +125,9 @@ ___
 
 • **latitude**: *number*
 
-*Defined in [src/models/Location.ts:27](https://github.com/Xisabla/Korbots/blob/23513ea/server/src/models/Location.ts#L27)*
+*Defined in [src/models/Location.ts:34](https://github.com/Xisabla/Korbots/blob/74b797c/server/src/models/Location.ts#L34)*
+
+Latitude of the Location
 
 ___
 
@@ -127,7 +135,9 @@ ___
 
 • **longitude**: *number*
 
-*Defined in [src/models/Location.ts:28](https://github.com/Xisabla/Korbots/blob/23513ea/server/src/models/Location.ts#L28)*
+*Defined in [src/models/Location.ts:36](https://github.com/Xisabla/Korbots/blob/74b797c/server/src/models/Location.ts#L36)*
+
+Longitude of the Location
 
 ___
 
