@@ -1014,16 +1014,20 @@ ___
 
 ▸ **fetchLocation**(`city`: string, `country?`: string): *Promise‹[MapquestGeocodingAPIResponse](_core_api_igeocoding_.mapquestgeocodingapiresponse.md)›*
 
-*Defined in [src/models/Location.ts:40](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/models/Location.ts#L40)*
+*Defined in [src/models/Location.ts:68](https://github.com/Xisabla/Korbots/blob/74b797c/server/src/models/Location.ts#L68)*
+
+Call the API for the given City and Country
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`city` | string |
-`country?` | string |
+Name | Type | Description |
+------ | ------ | ------ |
+`city` | string | City of Location |
+`country?` | string | Country where the city is |
 
 **Returns:** *Promise‹[MapquestGeocodingAPIResponse](_core_api_igeocoding_.mapquestgeocodingapiresponse.md)›*
+
+A Promise of a Response of the API
 
 ___
 
@@ -1636,16 +1640,20 @@ ___
 
 ▸ **findLocation**(`city`: string, `country?`: string): *Promise‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
-*Defined in [src/models/Location.ts:39](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/models/Location.ts#L39)*
+*Defined in [src/models/Location.ts:60](https://github.com/Xisabla/Korbots/blob/74b797c/server/src/models/Location.ts#L60)*
+
+Look for a Location in the database
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`city` | string |
-`country?` | string |
+Name | Type | Description |
+------ | ------ | ------ |
+`city` | string | City of Location |
+`country?` | string | Country where the city is |
 
 **Returns:** *Promise‹[ILocationSchema](_models_location_.ilocationschema.md)›*
+
+A Promise with the coordinates (or empty)
 
 ___
 
@@ -2179,16 +2187,20 @@ ___
 
 ▸ **getCoordinates**(`city`: string, `country?`: string): *Promise‹[Coordinates](_models_location_.coordinates.md)›*
 
-*Defined in [src/models/Location.ts:38](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/models/Location.ts#L38)*
+*Defined in [src/models/Location.ts:52](https://github.com/Xisabla/Korbots/blob/74b797c/server/src/models/Location.ts#L52)*
+
+Get the coordinates of a City
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`city` | string |
-`country?` | string |
+Name | Type | Description |
+------ | ------ | ------ |
+`city` | string | City of Location |
+`country?` | string | Country where the city is |
 
 **Returns:** *Promise‹[Coordinates](_models_location_.coordinates.md)›*
+
+A Promise with the coordinates
 
 ___
 

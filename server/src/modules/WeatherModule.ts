@@ -187,6 +187,11 @@ export class WeatherModule extends Module {
         )
     }
 
+    /**
+     * Extracts coordinates from Data, or extract City and use Location to look for the coordinates
+     * @param data The data received from the Socket
+     * @returns A Promise of Coordinates
+     */
     private getCoordinates(data: any): Promise<Coordinates> {
         // Check for a string
         if (typeof data === 'string') {

@@ -13,6 +13,9 @@ export interface Coordinates {
 
 // ---- Schema -----------------------------------
 
+/**
+ * Mongoose Document of the Location Model
+ */
 export const LocationSchema = new Schema(
     {
         latitude: { type: Number, required: true },
@@ -23,20 +26,45 @@ export const LocationSchema = new Schema(
     { collection: 'location' }
 )
 
+/**
+ * Detailed Location Document
+ */
 export interface ILocationSchema extends Document {
+    /** Latitude of the Location */
     latitude: number
+    /** Longitude of the Location */
     longitude: number
+    /** City of the Location */
     city: string
+    /** Country of the Location */
     country: string
-
-    // methods
 }
 
 // ---- Model ------------------------------------
 
 export interface ILocation extends Model<ILocationSchema> {
+    /**
+     * Get the coordinates of a City
+     * @param city City of Location
+     * @param country Country where the city is
+     * @returns A Promise with the coordinates
+     */
     getCoordinates(city: string, country?: string): Promise<Coordinates>
+
+    /**
+     * Look for a Location in the database
+     * @param city City of Location
+     * @param country Country where the city is
+     * @returns A Promise with the coordinates (or empty)
+     */
     findLocation(city: string, country?: string): Promise<ILocationSchema>
+
+    /**
+     * Call the API for the given City and Country
+     * @param city City of Location
+     * @param country Country where the city is
+     * @returns A Promise of a Response of the API
+     */
     fetchLocation(
         city: string,
         country?: string

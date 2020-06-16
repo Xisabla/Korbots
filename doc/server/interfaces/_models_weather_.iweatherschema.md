@@ -96,7 +96,7 @@ ___
 
 • **country**? : *string*
 
-*Defined in [src/models/Weather.ts:57](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/models/Weather.ts#L57)*
+*Defined in [src/models/Weather.ts:57](https://github.com/Xisabla/Korbots/blob/74b797c/server/src/models/Weather.ts#L57)*
 
 Country of the location
 
@@ -106,7 +106,7 @@ ___
 
 • **date**: *Date*
 
-*Defined in [src/models/Weather.ts:61](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/models/Weather.ts#L61)*
+*Defined in [src/models/Weather.ts:61](https://github.com/Xisabla/Korbots/blob/74b797c/server/src/models/Weather.ts#L61)*
 
 Date of the forecast
 
@@ -128,7 +128,7 @@ ___
 
 • **humidity**: *number*
 
-*Defined in [src/models/Weather.ts:43](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/models/Weather.ts#L43)*
+*Defined in [src/models/Weather.ts:43](https://github.com/Xisabla/Korbots/blob/74b797c/server/src/models/Weather.ts#L43)*
 
 Humidity in %
 
@@ -153,7 +153,7 @@ ___
 
 • **lastUpdate**: *Date*
 
-*Defined in [src/models/Weather.ts:63](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/models/Weather.ts#L63)*
+*Defined in [src/models/Weather.ts:63](https://github.com/Xisabla/Korbots/blob/74b797c/server/src/models/Weather.ts#L63)*
 
 Last update from the internal database
 
@@ -163,7 +163,7 @@ ___
 
 • **latitude**: *number*
 
-*Defined in [src/models/Weather.ts:53](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/models/Weather.ts#L53)*
+*Defined in [src/models/Weather.ts:53](https://github.com/Xisabla/Korbots/blob/74b797c/server/src/models/Weather.ts#L53)*
 
 Latitude of the location
 
@@ -173,7 +173,7 @@ ___
 
 • **longitude**: *number*
 
-*Defined in [src/models/Weather.ts:55](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/models/Weather.ts#L55)*
+*Defined in [src/models/Weather.ts:55](https://github.com/Xisabla/Korbots/blob/74b797c/server/src/models/Weather.ts#L55)*
 
 Longitude of the location
 
@@ -183,7 +183,7 @@ ___
 
 • **name**? : *string*
 
-*Defined in [src/models/Weather.ts:59](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/models/Weather.ts#L59)*
+*Defined in [src/models/Weather.ts:59](https://github.com/Xisabla/Korbots/blob/74b797c/server/src/models/Weather.ts#L59)*
 
 City name of the location
 
@@ -205,7 +205,7 @@ ___
 
 • **temperature**: *number*
 
-*Defined in [src/models/Weather.ts:41](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/models/Weather.ts#L41)*
+*Defined in [src/models/Weather.ts:41](https://github.com/Xisabla/Korbots/blob/74b797c/server/src/models/Weather.ts#L41)*
 
 Temperature in Ke
 
@@ -215,7 +215,7 @@ ___
 
 • **updateScore**: *number*
 
-*Defined in [src/models/Weather.ts:65](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/models/Weather.ts#L65)*
+*Defined in [src/models/Weather.ts:65](https://github.com/Xisabla/Korbots/blob/74b797c/server/src/models/Weather.ts#L65)*
 
 Score that increase on update checking, decrease on cron update
 
@@ -225,7 +225,7 @@ ___
 
 • **weather**: *string*
 
-*Defined in [src/models/Weather.ts:47](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/models/Weather.ts#L47)*
+*Defined in [src/models/Weather.ts:47](https://github.com/Xisabla/Korbots/blob/74b797c/server/src/models/Weather.ts#L47)*
 
 Weather short description
 
@@ -235,7 +235,7 @@ ___
 
 • **weatherDescription**: *string*
 
-*Defined in [src/models/Weather.ts:49](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/models/Weather.ts#L49)*
+*Defined in [src/models/Weather.ts:49](https://github.com/Xisabla/Korbots/blob/74b797c/server/src/models/Weather.ts#L49)*
 
 Weather complete description
 
@@ -245,7 +245,7 @@ ___
 
 • **weatherIcon**: *string*
 
-*Defined in [src/models/Weather.ts:51](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/models/Weather.ts#L51)*
+*Defined in [src/models/Weather.ts:51](https://github.com/Xisabla/Korbots/blob/74b797c/server/src/models/Weather.ts#L51)*
 
 Weahter icon ID from Openweather API
 
@@ -255,7 +255,7 @@ ___
 
 • **wind**: *number*
 
-*Defined in [src/models/Weather.ts:45](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/models/Weather.ts#L45)*
+*Defined in [src/models/Weather.ts:45](https://github.com/Xisabla/Korbots/blob/74b797c/server/src/models/Weather.ts#L45)*
 
 Wind speed in m/s
 
@@ -321,7 +321,7 @@ ___
 
 ▸ **checkLocationFieldsUpdate**(): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
 
-*Defined in [src/models/Weather.ts:124](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/models/Weather.ts#L124)*
+*Defined in [src/models/Weather.ts:124](https://github.com/Xisabla/Korbots/blob/74b797c/server/src/models/Weather.ts#L124)*
 
 Check if the Documents needs to have it's location fields updated and update them if needed (calls updateLocationFields if needsLocationFieldsUpdate returns true)
 
@@ -335,7 +335,7 @@ ___
 
 ▸ **checkUpdate**(`isDaily?`: boolean): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
 
-*Defined in [src/models/Weather.ts:119](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/models/Weather.ts#L119)*
+*Defined in [src/models/Weather.ts:119](https://github.com/Xisabla/Korbots/blob/74b797c/server/src/models/Weather.ts#L119)*
 
 Check if the the Document needs to be updated and update it if needed (calls updateCurrent/updateDaily if needsUpdate returns true)
 
@@ -365,7 +365,7 @@ ___
 
 ▸ **decrementUpdateScore**(`value?`: number): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
 
-*Defined in [src/models/Weather.ts:73](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/models/Weather.ts#L73)*
+*Defined in [src/models/Weather.ts:73](https://github.com/Xisabla/Korbots/blob/74b797c/server/src/models/Weather.ts#L73)*
 
 Decrement the value of updateScore
 
@@ -440,7 +440,7 @@ ___
 
 ▸ **incrementUpdateScore**(`value?`: number): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
 
-*Defined in [src/models/Weather.ts:79](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/models/Weather.ts#L79)*
+*Defined in [src/models/Weather.ts:79](https://github.com/Xisabla/Korbots/blob/74b797c/server/src/models/Weather.ts#L79)*
 
 Increment the value of updateScore
 
@@ -518,7 +518,7 @@ ___
 
 ▸ **needsLocationFieldsUpdate**(): *boolean*
 
-*Defined in [src/models/Weather.ts:103](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/models/Weather.ts#L103)*
+*Defined in [src/models/Weather.ts:103](https://github.com/Xisabla/Korbots/blob/74b797c/server/src/models/Weather.ts#L103)*
 
 **Returns:** *boolean*
 
@@ -536,7 +536,7 @@ ___
 
 ▸ **needsUpdate**(): *boolean*
 
-*Defined in [src/models/Weather.ts:93](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/models/Weather.ts#L93)*
+*Defined in [src/models/Weather.ts:93](https://github.com/Xisabla/Korbots/blob/74b797c/server/src/models/Weather.ts#L93)*
 
 **Returns:** *boolean*
 
@@ -847,7 +847,7 @@ ___
 
 ▸ **updateCurrent**(): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
 
-*Defined in [src/models/Weather.ts:132](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/models/Weather.ts#L132)*
+*Defined in [src/models/Weather.ts:132](https://github.com/Xisabla/Korbots/blob/74b797c/server/src/models/Weather.ts#L132)*
 
 Update the main fields of the Document dealing with Current Weather data
 
@@ -861,7 +861,7 @@ ___
 
 ▸ **updateDaily**(): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
 
-*Defined in [src/models/Weather.ts:137](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/models/Weather.ts#L137)*
+*Defined in [src/models/Weather.ts:137](https://github.com/Xisabla/Korbots/blob/74b797c/server/src/models/Weather.ts#L137)*
 
 Update the main fields of the Document dealing with Daily Weather data
 
@@ -875,7 +875,7 @@ ___
 
 ▸ **updateLocationFields**(): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
 
-*Defined in [src/models/Weather.ts:142](https://github.com/Xisabla/Korbots/blob/cba63b6/server/src/models/Weather.ts#L142)*
+*Defined in [src/models/Weather.ts:142](https://github.com/Xisabla/Korbots/blob/74b797c/server/src/models/Weather.ts#L142)*
 
 Update the location fields of the Document, will look for the name and country fields on a Current Weather API call
 
