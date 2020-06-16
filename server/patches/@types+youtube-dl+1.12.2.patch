@@ -1,0 +1,13 @@
+diff --git a/node_modules/@types/youtube-dl/index.d.ts b/node_modules/@types/youtube-dl/index.d.ts
+index aa7a8c4..05d63f1 100644
+--- a/node_modules/@types/youtube-dl/index.d.ts
++++ b/node_modules/@types/youtube-dl/index.d.ts
+@@ -12,7 +12,7 @@ export = youtubedl;
+ declare function youtubedl(url: string, arg: string[], opt: {[key: string]: string}): youtubedl.Youtubedl;
+ declare namespace youtubedl {
+     interface Youtubedl {
+-        on(event: string, func: (info: Info) => void): this;
++        on(event: string, func: (data: Info | Buffer) => void): this;
+         pipe(stream: fs.WriteStream): this;
+     }
+     interface Info {
