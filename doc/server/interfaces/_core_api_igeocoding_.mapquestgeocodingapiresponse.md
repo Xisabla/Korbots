@@ -22,7 +22,7 @@ Content of the Response from a MapquestGeocondingAPI Request
 
 • **info**: *object*
 
-*Defined in [src/core/API/IGeocoding.ts:5](https://github.com/Xisabla/Korbots/blob/74b797c/server/src/core/API/IGeocoding.ts#L5)*
+*Defined in [src/core/API/IGeocoding.ts:5](https://github.com/Xisabla/Korbots/blob/3303bca/server/src/core/API/IGeocoding.ts#L5)*
 
 #### Type declaration:
 
@@ -44,7 +44,7 @@ ___
 
 • **options**: *object*
 
-*Defined in [src/core/API/IGeocoding.ts:14](https://github.com/Xisabla/Korbots/blob/74b797c/server/src/core/API/IGeocoding.ts#L14)*
+*Defined in [src/core/API/IGeocoding.ts:14](https://github.com/Xisabla/Korbots/blob/3303bca/server/src/core/API/IGeocoding.ts#L14)*
 
 #### Type declaration:
 
@@ -60,7 +60,7 @@ ___
 
 • **results**: *object*
 
-*Defined in [src/core/API/IGeocoding.ts:19](https://github.com/Xisabla/Korbots/blob/74b797c/server/src/core/API/IGeocoding.ts#L19)*
+*Defined in [src/core/API/IGeocoding.ts:19](https://github.com/Xisabla/Korbots/blob/3303bca/server/src/core/API/IGeocoding.ts#L19)*
 
 #### Type declaration:
 
