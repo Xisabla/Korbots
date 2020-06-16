@@ -222,6 +222,26 @@ const Weather = (props) => {
                 )}
             </div>
             <div className="weather__info__right col-6">
+                {data && data.longitude && (
+                    <p className="weather__key">
+                        {' '}
+                        Longitude:
+                        <span className="weather__value">
+                            {' '}
+                            {data.longitude}{' '}
+                        </span>
+                    </p>
+                )}
+                {data && data.latitude && (
+                    <p className="weather__key">
+                        {' '}
+                        Latitude:
+                        <span className="weather__value">
+                            {' '}
+                            {data.latitude}{' '}
+                        </span>
+                    </p>
+                )}
                 {data && data.humidity && (
                     <p className="weather__key">
                         {' '}
