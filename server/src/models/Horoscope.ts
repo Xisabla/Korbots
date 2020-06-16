@@ -50,7 +50,7 @@ HoroscopeSchema.methods.needsUpdate = function (): boolean {
     const diff = Math.abs(moment().diff(this.date))
 
     // Updates if difference > 1 day
-    return diff > 10 * 60 * 1000 * 60 * 24
+    return diff > 60 * 1000 * 60 * 24
 }
 
 /** Update by fetching API response */
