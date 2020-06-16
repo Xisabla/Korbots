@@ -23,15 +23,20 @@ class WeatherModule extends React.Component {
                 top: '0px'
             },
             longitude: 0,
-            latitude: 0
+            latitude: 0,
+            localisationMode: false
         }
 
         this.getWeather = this.getWeather.bind(this)
         this.handleChangeLatitude = this.handleChangeLatitude.bind(this)
         this.handleChangeLongitude = this.handleChangeLongitude.bind(this)
+        this.handleChangeLocalisationMode = this.handleChangeLocalisationMode.bind(
+            this
+        )
+        this.handleChangeCityMode = this.handleChangeCityMode.bind(this)
 
         this.props.socket.on('weather:currentData', (data) => {
-            this.state.data = data
+            this.setState({ data: data })
         })
     }
 
@@ -49,13 +54,19 @@ class WeatherModule extends React.Component {
             this.setState({ longitude: event.target.value })
     }
 
-    getWeather(event) {
+    getWeather() {
         const latitude = parseFloat(this.state.latitude)
         const longitude = parseFloat(this.state.longitude)
-        console.log(this.state.latitude, this.state.longitude)
+        console.log('prout')
         this.props.socket.emit('weather:getCurrent', { latitude, longitude })
+    }
 
-        event.preventDefault()
+    handleChangeLocalisationMode() {
+        this.setState({ localisationMode: true })
+    }
+
+    handleChangeCityMode() {
+        this.setState({ localisationMode: false })
     }
 
     render() {
@@ -80,32 +91,68 @@ class WeatherModule extends React.Component {
                         <Titles />
                     </div>
                     <div className="col-xs-12 col-md-7 form-container">
-                        <form onSubmit={this.getWeather}>
-                            <input
-                                type="number"
-                                name="latitude"
-                                placeholder="Latitude..."
-                                onChange={this.handleChangeLatitude}
-                                value={this.state.latitude}
-                                max={90}
-                                min={-90}
-                                step={0.01}
-                            />
-                            <input
-                                type="number"
-                                name="longitude"
-                                placeholder="Longitude..."
-                                onChange={this.handleChangeLongitude}
-                                value={this.state.longitude}
-                                max={180}
-                                min={-180}
-                                step={0.01}
-                            />
-                            <button type="submit">Rechercher</button>
-                        </form>
+                        <div className="col-xs-12">
+                            <div className="search">Rechercher par:</div>
+                        </div>
+                        <div className="col-xs-12">
+                            <button
+                                onClick={this.handleChangeCityMode}
+                                type="button">
+                                Ville
+                            </button>
+                            <button
+                                onClick={this.handleChangeLocalisationMode}
+                                type="button">
+                                Localisation
+                            </button>
+                        </div>
+                        {this.state.localisationMode && (
+                            <form>
+                                <input
+                                    type="number"
+                                    name="latitude"
+                                    placeholder="Latitude..."
+                                    onChange={this.handleChangeLatitude}
+                                    value={this.state.latitude}
+                                    max={90}
+                                    min={-90}
+                                    step={0.01}
+                                />
+                                <input
+                                    type="number"
+                                    name="longitude"
+                                    placeholder="Longitude..."
+                                    onChange={this.handleChangeLongitude}
+                                    value={this.state.longitude}
+                                    max={180}
+                                    min={-180}
+                                    step={0.01}
+                                />
+                                <button onClick={this.getWeather} type="button">
+                                    Rechercher
+                                </button>
+                            </form>
+                        )}
+                        {!this.state.localisationMode && (
+                            <form>
+                                <input
+                                    type="text"
+                                    name="city"
+                                    placeholder="Ville..."
+                                />
+                                <input
+                                    type="text"
+                                    name="country"
+                                    placeholder="Pays..."
+                                />
+                                <button onClick={this.getWeather} type="button">
+                                    Rechercher
+                                </button>
+                            </form>
+                        )}
                     </div>
                     <div className="col-xs-15 col-md-7 weather-container">
-                        <Weather data={this.state.data} />
+                        {this.state.data && <Weather data={this.state.data} />}
                     </div>
                 </div>
             </div>
@@ -120,14 +167,18 @@ const Titles = () => (
 )
 
 const Weather = (props) => {
-    const data = props.data
+    const { data } = props
+    console.log(data)
     return (
         <div className="weather__info">
-            {data && data.name && (
-                <span className="weather__value">
-                    {' '}
-                    {data.name} <br />{' '}
-                </span>
+            {data && data.name && data.country && data.date && (
+                <p className="weather__key">
+                    <span className="weather__value">
+                        {' '}
+                        {data.name}, {data.country} <br />{' '}
+                        {data && data.date && <WeatherDate date={data.date} />}
+                    </span>
+                </p>
             )}
             {data && data.temperature && (
                 <span className="weather__value">
@@ -159,6 +210,31 @@ const Weather = (props) => {
             )}
         </div>
     )
+}
+
+/* const WeatherIcon = (props) => {
+    const data = props.data
+    return (
+        <div className="weather_icon">
+            {data.weatherIcon && (
+                <img
+                    src={`http://openweathermap.org/img/w/${data.weatherIcon}.png`}
+                    alt="icon meteo"
+                />
+            )}
+        </div>
+    )
+} */
+
+const WeatherDate = (props) => {
+    if (props) {
+        const today = new Date(props.date)
+        const day = ('0' + today.getDate()).slice(-2)
+        const month = ('0' + (today.getMonth() + 1)).slice(-2)
+        return <span>{day + '/' + month}</span>
+    } else {
+        return <span></span>
+    }
 }
 
 WeatherModule.propTypes = {
