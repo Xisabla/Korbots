@@ -15,8 +15,8 @@ class WeatherModule extends React.Component {
                 width: '400px',
                 height: '400px',
                 paddingBottom: '0%',
-                minWidth: '300px',
-                minHeight: '300px',
+                minWidth: '540px',
+                minHeight: '610px',
                 maxWidth: '800px',
                 maxHeight: '710px',
                 left: '0px',
@@ -24,19 +24,25 @@ class WeatherModule extends React.Component {
             },
             longitude: 0,
             latitude: 0,
-            localisationMode: false
+            localisationMode: false,
+            city: '',
+            country: ''
         }
 
-        this.getWeather = this.getWeather.bind(this)
+        this.getWeatherbyCoord = this.getWeatherbyCoord.bind(this)
+        this.getWeatherbyCity = this.getWeatherbyCity.bind(this)
         this.handleChangeLatitude = this.handleChangeLatitude.bind(this)
         this.handleChangeLongitude = this.handleChangeLongitude.bind(this)
         this.handleChangeLocalisationMode = this.handleChangeLocalisationMode.bind(
             this
         )
         this.handleChangeCityMode = this.handleChangeCityMode.bind(this)
+        this.handleChangeCity = this.handleChangeCity.bind(this)
+        this.handleChangeCountry = this.handleChangeCountry.bind(this)
 
         this.props.socket.on('weather:currentData', (data) => {
             this.setState({ data: data })
+            console.log(data)
         })
     }
 
@@ -54,11 +60,18 @@ class WeatherModule extends React.Component {
             this.setState({ longitude: event.target.value })
     }
 
-    getWeather() {
+    getWeatherbyCoord() {
         const latitude = parseFloat(this.state.latitude)
         const longitude = parseFloat(this.state.longitude)
-        console.log('prout')
         this.props.socket.emit('weather:getCurrent', { latitude, longitude })
+    }
+
+    getWeatherbyCity() {
+        console.log(this.state.city, this.state.country)
+        this.props.socket.emit(
+            'weather:getCurrent',
+            this.state.city + ',' + this.state.country
+        )
     }
 
     handleChangeLocalisationMode() {
@@ -67,6 +80,15 @@ class WeatherModule extends React.Component {
 
     handleChangeCityMode() {
         this.setState({ localisationMode: false })
+    }
+
+    handleChangeCity(event) {
+        if (event && event.target) this.setState({ city: event.target.value })
+    }
+
+    handleChangeCountry(event) {
+        if (event && event.target)
+            this.setState({ country: event.target.value })
     }
 
     render() {
@@ -87,14 +109,12 @@ class WeatherModule extends React.Component {
                 <i className="fas fa-lock-open lockTarget"></i>
                 <i className="fas fa-times closeTarget"></i>
                 <div className="module-body">
-                    <div className="col-xs-12 col-md-5 title-container">
+                    <div className="col-5 title-container">
                         <Titles />
                     </div>
-                    <div className="col-xs-12 col-md-7 form-container">
-                        <div className="col-xs-12">
+                    <div className="col-7 form-container">
+                        <div className="search_container row">
                             <div className="search">Rechercher par:</div>
-                        </div>
-                        <div className="col-xs-12">
                             <button
                                 onClick={this.handleChangeCityMode}
                                 type="button">
@@ -107,7 +127,7 @@ class WeatherModule extends React.Component {
                             </button>
                         </div>
                         {this.state.localisationMode && (
-                            <form>
+                            <form className="row">
                                 <input
                                     type="number"
                                     name="latitude"
@@ -128,30 +148,38 @@ class WeatherModule extends React.Component {
                                     min={-180}
                                     step={0.01}
                                 />
-                                <button onClick={this.getWeather} type="button">
+                                <button
+                                    onClick={this.getWeatherbyCoord}
+                                    type="button">
                                     Rechercher
                                 </button>
                             </form>
                         )}
                         {!this.state.localisationMode && (
-                            <form>
+                            <form className="row">
                                 <input
                                     type="text"
                                     name="city"
                                     placeholder="Ville..."
+                                    value={this.state.city}
+                                    onChange={this.handleChangeCity}
                                 />
                                 <input
                                     type="text"
                                     name="country"
                                     placeholder="Pays..."
+                                    value={this.state.country}
+                                    onChange={this.handleChangeCountry}
                                 />
-                                <button onClick={this.getWeather} type="button">
+                                <button
+                                    onClick={this.getWeatherbyCity}
+                                    type="button">
                                     Rechercher
                                 </button>
                             </form>
                         )}
                     </div>
-                    <div className="col-xs-15 col-md-7 weather-container">
+                    <div className="col-7 weather-container">
                         {this.state.data && <Weather data={this.state.data} />}
                     </div>
                 </div>
@@ -170,61 +198,66 @@ const Weather = (props) => {
     const { data } = props
     console.log(data)
     return (
-        <div className="weather__info">
-            {data && data.name && data.country && data.date && (
-                <p className="weather__key">
+        <div className="weather__info row">
+            <div className="weather__info__left col-6">
+                {data && data.name && data.country && (
                     <span className="weather__value">
-                        {' '}
-                        {data.name}, {data.country} <br />{' '}
-                        {data && data.date && <WeatherDate date={data.date} />}
+                        {data.name}, {data.country}
                     </span>
-                </p>
-            )}
-            {data && data.temperature && (
-                <span className="weather__value">
-                    <br /> {Math.round(data.temperature - 273, 15)}°C{' '}
-                </span>
-            )}
-            {data && data.humidity && (
-                <p className="weather__key">
-                    {' '}
-                    Humidite:
-                    <span className="weather__value"> {data.humidity}% </span>
-                </p>
-            )}
-            {data && data.description && (
-                <p className="weather__key">
-                    {' '}
-                    Conditions:
-                    <span className="weather__value"> {data.description} </span>
-                </p>
-            )}
-            {data && data.wind && (
-                <p className="weather__key">
-                    Vent:
-                    <span className="weather__value"> {data.wind}m/s </span>
-                </p>
-            )}
-            {data && data.error && (
-                <p className="weather__error">{data.error}</p>
-            )}
+                )}
+                {data && data.date && (
+                    <span className="weather__value">
+                        <WeatherDate date={data.date} />
+                    </span>
+                )}
+                {data && data.weatherIcon && (
+                    <span className="weather__value">
+                        <WeatherIcon weatherIcon={data.weatherIcon} />
+                    </span>
+                )}
+                {data && data.temperature && (
+                    <span className="weather__value">
+                        {Math.round(data.temperature - 273, 15)}°C{' '}
+                    </span>
+                )}
+            </div>
+            <div className="weather__info__right col-6">
+                {data && data.humidity && (
+                    <p className="weather__key">
+                        {' '}
+                        Humidite:
+                        <span className="weather__value">
+                            {' '}
+                            {data.humidity}%{' '}
+                        </span>
+                    </p>
+                )}
+                {data && data.wind && (
+                    <p className="weather__key">
+                        Vent:
+                        <span className="weather__value"> {data.wind}m/s </span>
+                    </p>
+                )}
+                {data && data.error && (
+                    <p className="weather__error">{data.error}</p>
+                )}
+            </div>
         </div>
     )
 }
 
-/* const WeatherIcon = (props) => {
-    const data = props.data
+const WeatherIcon = (props) => {
     return (
-        <div className="weather_icon">
-            {data.weatherIcon && (
+        <span className="weather_icon">
+            {props.weatherIcon && (
                 <img
-                    src={`http://openweathermap.org/img/w/${data.weatherIcon}.png`}
+                    src={`http://openweathermap.org/img/w/${props.weatherIcon}.png`}
                     alt="icon meteo"
                 />
             )}
-        </div>
+        </span>
     )
-} */
+}
 
 const WeatherDate = (props) => {
     if (props) {
