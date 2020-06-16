@@ -15,8 +15,8 @@ class WeatherModule extends React.Component {
                 width: '400px',
                 height: '400px',
                 paddingBottom: '0%',
-                minWidth: '300px',
-                minHeight: '300px',
+                minWidth: '350px',
+                minHeight: '350px',
                 maxWidth: '800px',
                 maxHeight: '710px',
                 left: '0px',
@@ -100,6 +100,7 @@ class WeatherModule extends React.Component {
                                 min={-180}
                                 step={0.01}
                             />
+                            <br />
                             <button type="submit">Rechercher</button>
                         </form>
                     </div>

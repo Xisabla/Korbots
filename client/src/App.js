@@ -253,7 +253,9 @@ class App extends Component {
             modulesRatios,
             modulesLocked
         } = this.state
-        if (rearrange && modulesRefs.length) holding = 0
+        if (rearrange && modulesRefs.length) {
+            holding = 0
+        }
         if (holding === -1) return
 
         let rects = []
@@ -296,47 +298,63 @@ class App extends Component {
         rects[holding].bottom = rects[holding].top + itemHeight
 
         //Computes
-        if (rearrange)
+        if (rearrange) {
+            //order from left to right
+            /*let leftData = []
+            let order = []
             for (let i = 0; i < rects.length; i++) {
-                for (let j = 0; j < rects.length; j++) {
-                    if (i !== j) {
-                        while (
-                            (!this.isOver(rects[i], rects[j]) ||
-                                modulesRefs[j].current.style.display ===
-                                    'none' ||
-                                modulesRefs[i].current.style.display ===
-                                    'none') &&
-                            rects[j].top > 0 &&
-                            !modulesLocked[j]
-                        ) {
-                            //put every module as close as possible to the top
-                            rects[j].top -= pixelStep
-                            rects[j].bottom -= pixelStep
-                            if (rects[j].top < 0) {
-                                rects[j].top = 0
-                                rects[j].bottom += pixelStep + rects[j].top
+                leftData.push(rects[i].left)
+            }
+            let pastLeft = [...leftData]
+            leftData.sort((a, b) => a > b)
+            for (let i = 0; i < pastLeft.length; i++) {
+                for (let j = 0; j < leftData.length; j++) {
+                    if (!order.includes(j) && leftData[j] == pastLeft[i])
+                        order.push(j)
+                }
+            }*/
+            for (let n = 0; n < rects.length; n++)
+                for (let i = 0; i < rects.length; i++) {
+                    for (let j = 0; j < rects.length; j++) {
+                        if (i !== j) {
+                            while (
+                                (!this.isOver(rects[i], rects[j]) ||
+                                    modulesRefs[j].current.style.display ===
+                                        'none' ||
+                                    modulesRefs[i].current.style.display ===
+                                        'none') &&
+                                rects[j].top > 0 &&
+                                !modulesLocked[j]
+                            ) {
+                                //put every module as close as possible to the top
+                                rects[j].top -= pixelStep
+                                rects[j].bottom -= pixelStep
+                                if (rects[j].top < 0) {
+                                    rects[j].top = 0
+                                    rects[j].bottom += pixelStep + rects[j].top
+                                }
                             }
-                        }
-                        while (
-                            (!this.isOver(rects[i], rects[j]) ||
-                                modulesRefs[j].current.style.display ===
-                                    'none' ||
-                                modulesRefs[i].current.style.display ===
-                                    'none') &&
-                            rects[j].left > 0 &&
-                            !modulesLocked[j]
-                        ) {
-                            //put every module as close as possible to the left
-                            rects[j].left -= pixelStep
-                            rects[j].right -= pixelStep
-                            if (rects[j].left < 0) {
-                                rects[j].left = 0
-                                rects[j].right += pixelStep + rects[j].left
+                            while (
+                                (!this.isOver(rects[i], rects[j]) ||
+                                    modulesRefs[j].current.style.display ===
+                                        'none' ||
+                                    modulesRefs[i].current.style.display ===
+                                        'none') &&
+                                rects[j].left > 0 &&
+                                !modulesLocked[j]
+                            ) {
+                                //put every module as close as possible to the left
+                                rects[j].left -= pixelStep
+                                rects[j].right -= pixelStep
+                                if (rects[j].left < 0) {
+                                    rects[j].left = 0
+                                    rects[j].right += pixelStep + rects[j].left
+                                }
                             }
                         }
                     }
                 }
-            }
+        }
         let security = 1000
         while (this.hasOverlaps(rects) && security > 0) {
             //for (let x = 0; x < 100; x++) {

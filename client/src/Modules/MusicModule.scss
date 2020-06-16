@@ -1,0 +1,47 @@
+.music-form {
+    height: 11%;
+}
+
+audio {
+    height: 10%;
+}
+
+.searchResults {
+    overflow-y: scroll;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    border-radius: 5px;
+}
+
+.searchResult {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+$thumbnailHeight:60px;
+.thumbnail {
+    width: $thumbnailHeight/9*16;
+    height: $thumbnailHeight;
+}
+
+.videoTitle {
+    font-size: 18px;
+    margin-left: 5px;
+}
+
+.videoLength {
+    background-color: black;
+    color: white;
+    width: fit-content;
+    height: 25px;
+    padding: 0px 5px 0 5px;
+    position: absolute;
+    top: $thumbnailHeight - 25px;
+}
