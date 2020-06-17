@@ -26,7 +26,7 @@ Global interface of a Downloaded Music
 
 • **duration**: *number*
 
-*Defined in [src/core/IMusic.ts:24](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/core/IMusic.ts#L24)*
+*Defined in [src/core/IMusic.ts:24](https://github.com/Xisabla/Korbots/blob/4d283b9/server/src/core/IMusic.ts#L24)*
 
 Duration of the song
 
@@ -36,7 +36,7 @@ ___
 
 • **id**: *string*
 
-*Defined in [src/core/IMusic.ts:16](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/core/IMusic.ts#L16)*
+*Defined in [src/core/IMusic.ts:16](https://github.com/Xisabla/Korbots/blob/4d283b9/server/src/core/IMusic.ts#L16)*
 
 ID of the source (eg: youtube video id)
 
@@ -46,7 +46,7 @@ ___
 
 • **mp3**: *[File](_core_imusic_.file.md)*
 
-*Defined in [src/core/IMusic.ts:28](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/core/IMusic.ts#L28)*
+*Defined in [src/core/IMusic.ts:28](https://github.com/Xisabla/Korbots/blob/4d283b9/server/src/core/IMusic.ts#L28)*
 
 Server storage information
 
@@ -56,7 +56,7 @@ ___
 
 • **source**: *string*
 
-*Defined in [src/core/IMusic.ts:26](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/core/IMusic.ts#L26)*
+*Defined in [src/core/IMusic.ts:26](https://github.com/Xisabla/Korbots/blob/4d283b9/server/src/core/IMusic.ts#L26)*
 
 Source of the song
 
@@ -66,7 +66,7 @@ ___
 
 • **thumbnail**: *string*
 
-*Defined in [src/core/IMusic.ts:22](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/core/IMusic.ts#L22)*
+*Defined in [src/core/IMusic.ts:22](https://github.com/Xisabla/Korbots/blob/4d283b9/server/src/core/IMusic.ts#L22)*
 
 Thumbnail of the song
 
@@ -76,7 +76,7 @@ ___
 
 • **title**: *string*
 
-*Defined in [src/core/IMusic.ts:18](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/core/IMusic.ts#L18)*
+*Defined in [src/core/IMusic.ts:18](https://github.com/Xisabla/Korbots/blob/4d283b9/server/src/core/IMusic.ts#L18)*
 
 Title of the music
 
@@ -86,6 +86,6 @@ ___
 
 • **url**: *string*
 
-*Defined in [src/core/IMusic.ts:20](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/core/IMusic.ts#L20)*
+*Defined in [src/core/IMusic.ts:20](https://github.com/Xisabla/Korbots/blob/4d283b9/server/src/core/IMusic.ts#L20)*
 
 URL of the original music/video
