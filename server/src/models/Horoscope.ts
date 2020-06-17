@@ -17,43 +17,60 @@ export const HoroscopeSchema = new Schema(
 )
 
 export interface IHoroscopeSchema extends Document {
+    /** astrological sign */
     sign: string
+    /** day of the horoscope telling */
     date: Date
     luckyNumber: number
     mood?: string
+    /** horoscope sentence determined from luckyNumber */
     description: string
 
-    /** check */
+    /** check if it was fetched the right day (today)
+     * @returns true if the difference if bigger than 1 day
+     */
     needsUpdate(): boolean
 
-    /** fetch new properties' values */
+    /** Update by fetching API response
+     * @returns the update document (save Promise) for today
+     */
     updateCurrent(): Promise<IHoroscopeSchema>
 }
 
 export interface IHoroscope extends Model<IHoroscopeSchema> {
-    /** check if in database, then if uptodate return doc : else fetch from API and update found doc */
+    /** Get the current horoscope
+     * @param sign (astrological) of the user or his input
+     * @returns always the updated Document (Promise) either from database or from API call
+     */
     getCurrent(sign: string): Promise<IHoroscopeSchema>
 
-    /** Search in data base an already fetched horoscope for specific sign (without minding the date) */
+    /** Search in data base if document for sign already exist
+     * @param sign (astrological) of the user or his input
+     * @returns the Document for specified sign found in a Promise
+     */
     findAstro(sign: string): Promise<IHoroscopeSchema>
 
-    /** fetch from API and create new horoscope document */
+    /** fetch from API and create new horoscope document for today's horoscope
+     * @param sign (astrological) of the user or his input
+     * @returns a new horoscope Document in a Promise
+     */
     fromCurrent(sign: string): Promise<IHoroscopeSchema>
 
-    /** Get an API response */
-    fetchCurrent(sign: string): Promise<IAztroAPIResponse> // day = 'today' in API url
+    /** Get an API response (json) from Aztro API for today's horoscope
+     * @param sign (astrological) from user or his input
+     * @returns an API response in a Promise
+     */
+    fetchCurrent(sign: string): Promise<IAztroAPIResponse>
 }
 
 // ---- Methods ----------------------------------
-/** check if it was fetched the right day (today) */
+
 HoroscopeSchema.methods.needsUpdate = function (): boolean {
     const diff = Math.abs(moment().diff(this.date))
 
-    // Updates if difference > 1 day
     return diff > 60 * 1000 * 60 * 24
 }
 
-/** Update by fetching API response */
 HoroscopeSchema.methods.updateCurrent = function (): Promise<IHoroscopeSchema> {
     return Horoscope.fetchCurrent(this.sign).then((data) => {
         this.date = data.current_date
@@ -67,7 +84,6 @@ HoroscopeSchema.methods.updateCurrent = function (): Promise<IHoroscopeSchema> {
 
 // ---- Statics ----------------------------------
 
-/** always return the updated horoscope */
 HoroscopeSchema.statics.getCurrent = function (
     sign: string
 ): Promise<IHoroscopeSchema> {
@@ -82,7 +98,6 @@ HoroscopeSchema.statics.getCurrent = function (
     })
 }
 
-/** Search in data base if document for sign already exist */
 HoroscopeSchema.statics.findAstro = function (
     sign: string
 ): Promise<IHoroscopeSchema> {
@@ -91,7 +106,6 @@ HoroscopeSchema.statics.findAstro = function (
     }).then((doc) => doc)
 }
 
-/** For document creation from Aztro API fetch */
 HoroscopeSchema.statics.fromCurrent = function (
     sign: string
 ): Promise<IHoroscopeSchema> {
@@ -105,7 +119,6 @@ HoroscopeSchema.statics.fromCurrent = function (
     })
 }
 
-/** Get information from Aztro API and return a json response */
 HoroscopeSchema.statics.fetchCurrent = function (
     sign: string
 ): Promise<IAztroAPIResponse> {
@@ -116,6 +129,7 @@ HoroscopeSchema.statics.fetchCurrent = function (
 }
 
 // ---- Model ------------------------------------
+
 export const Horoscope = model<IHoroscopeSchema, IHoroscope>(
     'Horoscope',
     HoroscopeSchema
