@@ -21,6 +21,7 @@ class WeatherModule extends React.Component {
                 left: '0px',
                 top: '0px'
             },
+            /* Declaration of initial states */
             longitude: 0,
             latitude: 0,
             localisationMode: false,
@@ -28,6 +29,7 @@ class WeatherModule extends React.Component {
             country: ''
         }
 
+        /* Set the context for the functions to be class object */
         this.getWeatherbyCoord = this.getWeatherbyCoord.bind(this)
         this.getWeatherbyCity = this.getWeatherbyCity.bind(this)
         this.handleChangeLatitude = this.handleChangeLatitude.bind(this)
@@ -39,13 +41,12 @@ class WeatherModule extends React.Component {
         this.handleChangeCity = this.handleChangeCity.bind(this)
         this.handleChangeCountry = this.handleChangeCountry.bind(this)
 
+        /* Data recovery for the current weather */
         this.props.socket.on('weather:currentData', (data) => {
             this.setState({ data: data })
-            console.log(this.state.localisationMode)
             if (!this.state.localisationMode) {
                 const latitude = parseFloat(data.latitude)
                 const longitude = parseFloat(data.longitude)
-                console.log(latitude, longitude)
                 const numberOfDay = 4
                 this.props.socket.emit('weather:getDailyAll', {
                     latitude,
@@ -53,11 +54,10 @@ class WeatherModule extends React.Component {
                     numberOfDay
                 })
             }
-            console.log(data)
         })
+        /* Data recovery for the weather of the week */
         this.props.socket.on('weather:dailyAllData', (data1) => {
             this.setState({ data1: data1 })
-            console.log(data1)
         })
     }
 
@@ -65,16 +65,40 @@ class WeatherModule extends React.Component {
         this.state.onload(this.state.ref)
     }
 
+    /* Function to update the latitude value */
     handleChangeLatitude(event) {
         if (event && event.target)
             this.setState({ latitude: event.target.value })
     }
 
+    /* Function to update the longitude value */
     handleChangeLongitude(event) {
         if (event && event.target)
             this.setState({ longitude: event.target.value })
     }
 
+    /* Function to update the localisation mode value (true) */
+    handleChangeLocalisationMode() {
+        this.setState({ localisationMode: true })
+    }
+
+    /* Function to update the localisation mode value (false) */
+    handleChangeCityMode() {
+        this.setState({ localisationMode: false })
+    }
+
+    /* Function to update the city value */
+    handleChangeCity(event) {
+        if (event && event.target) this.setState({ city: event.target.value })
+    }
+
+    /* Function to update the country value */
+    handleChangeCountry(event) {
+        if (event && event.target)
+            this.setState({ country: event.target.value })
+    }
+
+    /* function to find the weather by the coordinates */
     getWeatherbyCoord() {
         const latitude = parseFloat(this.state.latitude)
         const longitude = parseFloat(this.state.longitude)
@@ -87,28 +111,12 @@ class WeatherModule extends React.Component {
         })
     }
 
+    /* Function to find the weather by the city name */
     getWeatherbyCity() {
         this.props.socket.emit(
             'weather:getCurrent',
             this.state.city + ',' + this.state.country
         )
-    }
-
-    handleChangeLocalisationMode() {
-        this.setState({ localisationMode: true })
-    }
-
-    handleChangeCityMode() {
-        this.setState({ localisationMode: false })
-    }
-
-    handleChangeCity(event) {
-        if (event && event.target) this.setState({ city: event.target.value })
-    }
-
-    handleChangeCountry(event) {
-        if (event && event.target)
-            this.setState({ country: event.target.value })
     }
 
     render() {
@@ -129,10 +137,12 @@ class WeatherModule extends React.Component {
                 <i className="fas fa-lock-open lockTarget"></i>
                 <i className="fas fa-times closeTarget"></i>
                 <div className="module-body">
+                    {/* Display the title of the module */}
                     <div className="title-container">
                         <Titles />
                     </div>
                     <div className="form-container">
+                        {/* Display both options: search by location or by city with buttons*/}
                         <div className="search_container">
                             <div className="search">Rechercher par:</div>
                             <button
@@ -146,6 +156,7 @@ class WeatherModule extends React.Component {
                                 Localisation
                             </button>
                         </div>
+                        {/* If the user chooses "localisation" there are 2 inputs: Latitude and Longitude */}
                         {this.state.localisationMode && (
                             <form className="row">
                                 <input
@@ -168,6 +179,7 @@ class WeatherModule extends React.Component {
                                     min={-180}
                                     step={0.01}
                                 />
+                                {/* Button to search the result with the 2 parameters entered */}
                                 <button
                                     onClick={this.getWeatherbyCoord}
                                     type="button">
@@ -175,6 +187,7 @@ class WeatherModule extends React.Component {
                                 </button>
                             </form>
                         )}
+                        {/* If the user chooses "Ville" there are 2 inputs: Ville and Pays */}
                         {!this.state.localisationMode && (
                             <form className="row">
                                 <input
@@ -191,6 +204,7 @@ class WeatherModule extends React.Component {
                                     value={this.state.country}
                                     onChange={this.handleChangeCountry}
                                 />
+                                {/* Button to search the result with the 2 parameters entered */}
                                 <button
                                     onClick={this.getWeatherbyCity}
                                     type="button">
@@ -199,9 +213,11 @@ class WeatherModule extends React.Component {
                             </form>
                         )}
                     </div>
+                    {/* Display the weather and the conditions of the current day with the "Weather" component*/}
                     <div className="weather-container">
                         {this.state.data && <Weather data={this.state.data} />}
                     </div>
+                    {/* Display the weather and the conditions of next few days with the "WeatherDaily" component*/}
                     <div className="weather-daily-container">
                         {this.state.data1 && (
                             <DailyWeather data1={this.state.data1[0]} />
@@ -222,12 +238,16 @@ class WeatherModule extends React.Component {
     }
 }
 
+/* Title component to display the title Météo */
 const Titles = () => (
     <div>
         <p className="title-container__title">Météo</p>
     </div>
 )
 
+/* Weather component to display the current weather and the conditions (humidite or wind) 
+We display city, country, date, icon and temperature in a box in the left side 
+and the conditions: latitude, longitude, humidity and wind in a box in the right side */
 const Weather = (props) => {
     const { data } = props
     return (
@@ -299,10 +319,10 @@ const Weather = (props) => {
     )
 }
 
+/* Weather component to display the weather of the next few days
+We display city, country, date, icon and temperature in a boxe */
 const DailyWeather = (props) => {
     const { data1 } = props
-    console.log('DailyWeatherAll')
-    console.log(data1)
     return (
         <div className="weather__info">
             <div className="weather__info__left">
@@ -329,6 +349,7 @@ const DailyWeather = (props) => {
     )
 }
 
+/* WeatherIcon component to display the corresponding icon */
 const WeatherIcon = (props) => {
     return (
         <span className="weather_icon">
@@ -342,6 +363,7 @@ const WeatherIcon = (props) => {
     )
 }
 
+/* WeatherDate component to display the current date */
 const WeatherDate = (props) => {
     if (props) {
         const today = new Date(props.date)
