@@ -31,7 +31,7 @@ export interface IPlaylistSchema extends Document {
     /** Playlist creation date */
     creationDate: Date
     /** Songs of the playlist */
-    songs: ISongSchema
+    songs: ISongSchema[]
 
     // ---- Methods ----------------------------------
 
