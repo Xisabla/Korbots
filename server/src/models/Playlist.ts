@@ -6,6 +6,7 @@ import { Music } from './Music'
 
 export const SongSchema = new Schema({
     id: { type: String, required: true },
+    title: { type: String, required: true },
     addingDate: { type: Date, required: true }
 })
 
@@ -21,16 +22,27 @@ export const PlaylistSchema = new Schema(
 )
 
 export interface IPlaylistSchema extends Document {
+    /** Name of the playlist */
     name: string
+    /** Description of the playlist */
     description?: string
+    /** Total duration of the playlist */
     duration: number
+    /** Playlist creation date */
     creationDate: Date
+    /** Songs of the playlist */
     songs: [
         {
             id: string
+            title: string
             addingDate: Date
         }
     ]
+
+    // ---- Methods ----------------------------------
+
+    // TODO: compute the total duration of the playlist
+    // computeDuration(): Promise<IPlaylistSchema>
 
     /**
      * Remove a song from the playlist
