@@ -15,6 +15,7 @@ import {
 import { ConversionStatus, YoutubeDownloadStatus } from '../core/IMusic'
 import Module from '../core/Module'
 import { Music } from '../models/Music'
+import { Playlist } from '../models/Playlist'
 import { mp4ToMp3 } from '../services/ffmpeg'
 
 const log = debug('module:music')
@@ -45,6 +46,16 @@ export class MusicModule extends Module {
 
         socket.on('music:search', (data) => this.search(socket, data))
         socket.on('music:download', (data) => this.download(socket, data))
+
+        socket.on('music:addToPlaylist', (data) =>
+            this.addToPlaylist(socket, data)
+        )
+        socket.on('music:addToPlaylists', (data) =>
+            this.addToPlaylists(socket, data)
+        )
+        socket.on('music:sortPlaylist', (data) =>
+            this.sortPlaylist(socket, data)
+        )
     }
 
     // ---- Tasks ------------------------------------
@@ -61,6 +72,60 @@ export class MusicModule extends Module {
     }
 
     // ---- Methods ----------------------------------
+
+    private addToPlaylist(socket: Socket, data: any): void {
+        log(`Received addToPlaylist event from ${socket.id}`)
+        const { source, sourceId, playlist } = data
+        Music.findOneSong(source, sourceId)
+            .then((doc) => doc.addToPlaylist(playlist))
+            .catch((err) => socket.emit('music:error', err))
+    }
+
+    private addToPlaylists(socket: Socket, data: any): void {
+        log(`Received addToPlaylists event from ${socket.id}`)
+        const { source, sourceId, playlists } = data
+        Music.findOneSong(source, sourceId)
+            .then((doc) => doc.addToPlaylists(playlists))
+            .catch((err) => socket.emit('music:error', err))
+    }
+
+    private sortPlaylist(socket: Socket, data: any): void {
+        const { name, sort } = data
+
+        log(`Received sort by ${sort} event from ${socket.id}`)
+
+        // rearrange playlist.songs[] for play cue
+        Playlist.findOne({ name: name })
+            .then((playlist) => {
+                if (sort == 'name') {
+                    // sort by name
+                    playlist.songs.sort((a, b) =>
+                        a.title.localeCompare(b.title)
+                    )
+
+                    socket.emit('music:sortedByName', playlist)
+                } else if (sort == 'addingDate') {
+                    // sort by date (compare numbers with getTime())
+                    playlist.songs.sort(
+                        (a, b) =>
+                            a.addingDate.getTime() - b.addingDate.getTime()
+                    )
+
+                    socket.emit('music:sortedByAddingDate', playlist)
+                } else if (sort == 'random') {
+                    // shuffling the list for random order
+                    for (let i = 0; i < 5; i++) {
+                        playlist.songs.sort(() => 0.5 - Math.random())
+                    }
+
+                    socket.emit('music:shuffled', playlist)
+                }
+
+                // return the unsorted playlist if no order specified ('' or anything else)
+                socket.emit('music:unsorted', playlist)
+            })
+            .catch((err) => socket.emit('music:error', err))
+    }
 
     // ---- Methods: Search --------------------------
 
