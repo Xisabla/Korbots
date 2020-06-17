@@ -852,7 +852,7 @@ ___
 
 ▸ **doesExist**(`source`: string, `sourceId`: string): *Promise‹boolean›*
 
-*Defined in [src/models/Music.ts:68](https://github.com/Xisabla/Korbots/blob/4d283b9/server/src/models/Music.ts#L68)*
+*Defined in [src/models/Music.ts:68](https://github.com/Xisabla/Korbots/blob/84c1655/server/src/models/Music.ts#L68)*
 
 Search if a Music exists in the DataBase from it's source and sourceId
 
@@ -2122,7 +2122,7 @@ ___
 
 ▸ **findOneSong**(`source`: string, `sourceId`: string): *Promise‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
-*Defined in [src/models/Music.ts:61](https://github.com/Xisabla/Korbots/blob/4d283b9/server/src/models/Music.ts#L61)*
+*Defined in [src/models/Music.ts:61](https://github.com/Xisabla/Korbots/blob/84c1655/server/src/models/Music.ts#L61)*
 
 Get the Music Document for the given source and sourceId
 
@@ -2143,7 +2143,7 @@ ___
 
 ▸ **fromDownloaded**(`audio`: [DownloadedMusic](_core_imusic_.downloadedmusic.md)): *[IMusicSchema](_models_music_.imusicschema.md)*
 
-*Defined in [src/models/Music.ts:52](https://github.com/Xisabla/Korbots/blob/4d283b9/server/src/models/Music.ts#L52)*
+*Defined in [src/models/Music.ts:52](https://github.com/Xisabla/Korbots/blob/84c1655/server/src/models/Music.ts#L52)*
 
 Create a Music Document from a DownloadedMusic
 

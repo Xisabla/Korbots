@@ -15,7 +15,7 @@
 
 • **app**: *[Application](../classes/_core_application_.application.md)‹›* = new Application({ storage, useEnv: true })
 
-*Defined in [src/index.ts:10](https://github.com/Xisabla/Korbots/blob/4d283b9/server/src/index.ts#L10)*
+*Defined in [src/index.ts:10](https://github.com/Xisabla/Korbots/blob/84c1655/server/src/index.ts#L10)*
 
 ___
 
@@ -23,4 +23,4 @@ ___
 
 • **storage**: *string* = path.join(__dirname, '../', 'storage')
 
-*Defined in [src/index.ts:8](https://github.com/Xisabla/Korbots/blob/4d283b9/server/src/index.ts#L8)*
+*Defined in [src/index.ts:8](https://github.com/Xisabla/Korbots/blob/84c1655/server/src/index.ts#L8)*

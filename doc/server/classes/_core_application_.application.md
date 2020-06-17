@@ -56,7 +56,7 @@ Main application Object, registers components, starts the server
 
 \+ **new Application**(`options`: [ApplicationOptions](../interfaces/_core_application_.applicationoptions.md)): *[Application](_core_application_.application.md)*
 
-*Defined in [src/core/Application.ts:75](https://github.com/Xisabla/Korbots/blob/4d283b9/server/src/core/Application.ts#L75)*
+*Defined in [src/core/Application.ts:75](https://github.com/Xisabla/Korbots/blob/84c1655/server/src/core/Application.ts#L75)*
 
 Create an application object that controls the server and the components
 
@@ -74,7 +74,7 @@ Name | Type | Default | Description |
 
 • **_app**: *express.Application*
 
-*Defined in [src/core/Application.ts:55](https://github.com/Xisabla/Korbots/blob/4d283b9/server/src/core/Application.ts#L55)*
+*Defined in [src/core/Application.ts:55](https://github.com/Xisabla/Korbots/blob/84c1655/server/src/core/Application.ts#L55)*
 
 Express internal server
 
@@ -84,7 +84,7 @@ ___
 
 • **_io**: *Server*
 
-*Defined in [src/core/Application.ts:59](https://github.com/Xisabla/Korbots/blob/4d283b9/server/src/core/Application.ts#L59)*
+*Defined in [src/core/Application.ts:59](https://github.com/Xisabla/Korbots/blob/84c1655/server/src/core/Application.ts#L59)*
 
 SocketIO server linked  with the HTTP server
 
@@ -94,7 +94,7 @@ ___
 
 • **_modules**: *[Module](_core_module_.module.md)[]*
 
-*Defined in [src/core/Application.ts:69](https://github.com/Xisabla/Korbots/blob/4d283b9/server/src/core/Application.ts#L69)*
+*Defined in [src/core/Application.ts:69](https://github.com/Xisabla/Korbots/blob/84c1655/server/src/core/Application.ts#L69)*
 
 Module store
 
@@ -104,7 +104,7 @@ ___
 
 • **_options**: *[ApplicationOptions](../interfaces/_core_application_.applicationoptions.md)*
 
-*Defined in [src/core/Application.ts:51](https://github.com/Xisabla/Korbots/blob/4d283b9/server/src/core/Application.ts#L51)*
+*Defined in [src/core/Application.ts:51](https://github.com/Xisabla/Korbots/blob/84c1655/server/src/core/Application.ts#L51)*
 
 ___
 
@@ -112,7 +112,7 @@ ___
 
 • **_server**: *Server*
 
-*Defined in [src/core/Application.ts:57](https://github.com/Xisabla/Korbots/blob/4d283b9/server/src/core/Application.ts#L57)*
+*Defined in [src/core/Application.ts:57](https://github.com/Xisabla/Korbots/blob/84c1655/server/src/core/Application.ts#L57)*
 
 HTTP server from express server
 
@@ -122,7 +122,7 @@ ___
 
 • **_sockets**: *Socket[]*
 
-*Defined in [src/core/Application.ts:71](https://github.com/Xisabla/Korbots/blob/4d283b9/server/src/core/Application.ts#L71)*
+*Defined in [src/core/Application.ts:71](https://github.com/Xisabla/Korbots/blob/84c1655/server/src/core/Application.ts#L71)*
 
 Socket store
 
@@ -132,7 +132,7 @@ ___
 
 • **_tasks**: *[TaskManager](_core_taskmanager_.taskmanager.md)*
 
-*Defined in [src/core/Application.ts:73](https://github.com/Xisabla/Korbots/blob/4d283b9/server/src/core/Application.ts#L73)*
+*Defined in [src/core/Application.ts:73](https://github.com/Xisabla/Korbots/blob/84c1655/server/src/core/Application.ts#L73)*
 
 Tasks store
 
@@ -142,7 +142,7 @@ ___
 
 • **db**? : *Mongoose*
 
-*Defined in [src/core/Application.ts:65](https://github.com/Xisabla/Korbots/blob/4d283b9/server/src/core/Application.ts#L65)*
+*Defined in [src/core/Application.ts:65](https://github.com/Xisabla/Korbots/blob/84c1655/server/src/core/Application.ts#L65)*
 
 Result of the resolve from Mongoose Connection, null if no database connection
 
@@ -152,7 +152,7 @@ ___
 
 • **dbPending**? : *Promise‹Mongoose›*
 
-*Defined in [src/core/Application.ts:63](https://github.com/Xisabla/Korbots/blob/4d283b9/server/src/core/Application.ts#L63)*
+*Defined in [src/core/Application.ts:63](https://github.com/Xisabla/Korbots/blob/84c1655/server/src/core/Application.ts#L63)*
 
 Promise returned on Mongoose connection, allows to synchronize after DB connection, null if no database connection
 
@@ -162,7 +162,7 @@ ___
 
 ▪ **apis**: *[APIwk](../interfaces/_core_api_api_.apiwk.md)[]*
 
-*Defined in [src/core/Application.ts:75](https://github.com/Xisabla/Korbots/blob/4d283b9/server/src/core/Application.ts#L75)*
+*Defined in [src/core/Application.ts:75](https://github.com/Xisabla/Korbots/blob/84c1655/server/src/core/Application.ts#L75)*
 
 API store
 
@@ -172,7 +172,7 @@ API store
 
 • **get io**(): *Server*
 
-*Defined in [src/core/Application.ts:399](https://github.com/Xisabla/Korbots/blob/4d283b9/server/src/core/Application.ts#L399)*
+*Defined in [src/core/Application.ts:399](https://github.com/Xisabla/Korbots/blob/84c1655/server/src/core/Application.ts#L399)*
 
 **Returns:** *Server*
 
@@ -182,7 +182,7 @@ ___
 
 • **get sockets**(): *Socket[]*
 
-*Defined in [src/core/Application.ts:403](https://github.com/Xisabla/Korbots/blob/4d283b9/server/src/core/Application.ts#L403)*
+*Defined in [src/core/Application.ts:403](https://github.com/Xisabla/Korbots/blob/84c1655/server/src/core/Application.ts#L403)*
 
 **Returns:** *Socket[]*
 
@@ -192,7 +192,7 @@ ___
 
 • **get tasks**(): *[TaskManager](_core_taskmanager_.taskmanager.md)*
 
-*Defined in [src/core/Application.ts:407](https://github.com/Xisabla/Korbots/blob/4d283b9/server/src/core/Application.ts#L407)*
+*Defined in [src/core/Application.ts:407](https://github.com/Xisabla/Korbots/blob/84c1655/server/src/core/Application.ts#L407)*
 
 **Returns:** *[TaskManager](_core_taskmanager_.taskmanager.md)*
 
@@ -202,7 +202,7 @@ ___
 
 ▸ **checkStorage**(): *void*
 
-*Defined in [src/core/Application.ts:171](https://github.com/Xisabla/Korbots/blob/4d283b9/server/src/core/Application.ts#L171)*
+*Defined in [src/core/Application.ts:171](https://github.com/Xisabla/Korbots/blob/84c1655/server/src/core/Application.ts#L171)*
 
 Check for existing storage folder
 
@@ -214,7 +214,7 @@ ___
 
 ▸ **connectDB**(`configuration?`: [DatabaseConfiguration](../interfaces/_core_application_.databaseconfiguration.md)): *Promise‹Mongoose›*
 
-*Defined in [src/core/Application.ts:191](https://github.com/Xisabla/Korbots/blob/4d283b9/server/src/core/Application.ts#L191)*
+*Defined in [src/core/Application.ts:191](https://github.com/Xisabla/Korbots/blob/84c1655/server/src/core/Application.ts#L191)*
 
 Try to connect to the database, updates internal dbPending promise
 
@@ -232,7 +232,7 @@ ___
 
 ▸ **getStorage**(`name`: string): *string*
 
-*Defined in [src/core/Application.ts:156](https://github.com/Xisabla/Korbots/blob/4d283b9/server/src/core/Application.ts#L156)*
+*Defined in [src/core/Application.ts:156](https://github.com/Xisabla/Korbots/blob/84c1655/server/src/core/Application.ts#L156)*
 
 Get the path to the sub-storage directory for the given name, create directory if needed
 
@@ -252,7 +252,7 @@ ___
 
 ▸ **init**(): *void*
 
-*Defined in [src/core/Application.ts:118](https://github.com/Xisabla/Korbots/blob/4d283b9/server/src/core/Application.ts#L118)*
+*Defined in [src/core/Application.ts:118](https://github.com/Xisabla/Korbots/blob/84c1655/server/src/core/Application.ts#L118)*
 
 Initialize internal data, http and socket.io server
 
@@ -264,7 +264,7 @@ ___
 
 ▸ **loadEnv**(): *void*
 
-*Defined in [src/core/Application.ts:135](https://github.com/Xisabla/Korbots/blob/4d283b9/server/src/core/Application.ts#L135)*
+*Defined in [src/core/Application.ts:135](https://github.com/Xisabla/Korbots/blob/84c1655/server/src/core/Application.ts#L135)*
 
 Load options from the .env file
 
@@ -276,7 +276,7 @@ ___
 
 ▸ **onSocketJoin**(`socket`: Socket): *void*
 
-*Defined in [src/core/Application.ts:331](https://github.com/Xisabla/Korbots/blob/4d283b9/server/src/core/Application.ts#L331)*
+*Defined in [src/core/Application.ts:331](https://github.com/Xisabla/Korbots/blob/84c1655/server/src/core/Application.ts#L331)*
 
 Triggers all connection listeners, also wait for disconnection to trigger disconnection listeners
 
@@ -294,7 +294,7 @@ ___
 
 ▸ **registerModule**(`module`: [Module](_core_module_.module.md)): *void*
 
-*Defined in [src/core/Application.ts:232](https://github.com/Xisabla/Korbots/blob/4d283b9/server/src/core/Application.ts#L232)*
+*Defined in [src/core/Application.ts:232](https://github.com/Xisabla/Korbots/blob/84c1655/server/src/core/Application.ts#L232)*
 
 Register a Module inside the Application, run the internal "register" method of the Module
 
@@ -312,7 +312,7 @@ ___
 
 ▸ **run**(): *Promise‹Server›*
 
-*Defined in [src/core/Application.ts:386](https://github.com/Xisabla/Korbots/blob/4d283b9/server/src/core/Application.ts#L386)*
+*Defined in [src/core/Application.ts:386](https://github.com/Xisabla/Korbots/blob/84c1655/server/src/core/Application.ts#L386)*
 
 Start the server, if there is a pending connection try to the database, wait for it to end
 
@@ -324,7 +324,7 @@ ___
 
 ▸ **startServer**(): *Promise‹Server›*
 
-*Defined in [src/core/Application.ts:357](https://github.com/Xisabla/Korbots/blob/4d283b9/server/src/core/Application.ts#L357)*
+*Defined in [src/core/Application.ts:357](https://github.com/Xisabla/Korbots/blob/84c1655/server/src/core/Application.ts#L357)*
 
 Start the server, returns a Promise to keep the promise pipe
 
@@ -336,7 +336,7 @@ ___
 
 ▸ **getAPI**(`name`: string): *[APIwk](../interfaces/_core_api_api_.apiwk.md) | null*
 
-*Defined in [src/core/Application.ts:301](https://github.com/Xisabla/Korbots/blob/4d283b9/server/src/core/Application.ts#L301)*
+*Defined in [src/core/Application.ts:301](https://github.com/Xisabla/Korbots/blob/84c1655/server/src/core/Application.ts#L301)*
 
 Get an API from it's name, null if not found
 
@@ -354,7 +354,7 @@ ___
 
 ▸ **getAPIBaseUrl**(`name`: string): *string*
 
-*Defined in [src/core/Application.ts:319](https://github.com/Xisabla/Korbots/blob/4d283b9/server/src/core/Application.ts#L319)*
+*Defined in [src/core/Application.ts:319](https://github.com/Xisabla/Korbots/blob/84c1655/server/src/core/Application.ts#L319)*
 
 Get the baseUrl of an API from it's name, empty if not found
 
@@ -372,7 +372,7 @@ ___
 
 ▸ **getAPIKey**(`name`: string): *string*
 
-*Defined in [src/core/Application.ts:309](https://github.com/Xisabla/Korbots/blob/4d283b9/server/src/core/Application.ts#L309)*
+*Defined in [src/core/Application.ts:309](https://github.com/Xisabla/Korbots/blob/84c1655/server/src/core/Application.ts#L309)*
 
 Get the key of an API from it's name, empty if not found
 
@@ -390,7 +390,7 @@ ___
 
 ▸ **registerAPI**(`api`: [API](../interfaces/_core_api_api_.api.md)): *void*
 
-*Defined in [src/core/Application.ts:260](https://github.com/Xisabla/Korbots/blob/4d283b9/server/src/core/Application.ts#L260)*
+*Defined in [src/core/Application.ts:260](https://github.com/Xisabla/Korbots/blob/84c1655/server/src/core/Application.ts#L260)*
 
 Register a API inside the Application, erase API with the same name, will automatically retrieve the api_key from .env file it the entry exists
 
@@ -408,7 +408,7 @@ ___
 
 ▸ **registerAPIs**(`apis`: [API](../interfaces/_core_api_api_.api.md)[]): *void*
 
-*Defined in [src/core/Application.ts:293](https://github.com/Xisabla/Korbots/blob/4d283b9/server/src/core/Application.ts#L293)*
+*Defined in [src/core/Application.ts:293](https://github.com/Xisabla/Korbots/blob/84c1655/server/src/core/Application.ts#L293)*
 
 Register multiple APIs, if any API has the same name as an existing it will erase
 
