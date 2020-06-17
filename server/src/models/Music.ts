@@ -1,149 +1,134 @@
 import { Document, Model, model, Schema } from 'mongoose'
 
-// MUSIC ----------------------------------------
+import { DownloadedMusic } from '../core/IMusic'
+import { IPlaylistSchema, Playlist } from './Playlist'
+
+// ---- Schema -----------------------------------
+
 export const MusicSchema = new Schema(
     {
-        ytId: String,
-        title: String,
-        // duration: Number,
-        // thumbnail: Image,
-        source: String,
-        path: String
+        title: { type: String, required: true },
+        duration: { type: Number, required: true },
+        thumbnail: { type: String, required: true },
+        sourceId: { type: String, required: true },
+        source: { type: String, required: true },
+        path: { type: String, required: true }
     },
     { collection: 'music' }
 )
 
 export interface IMusicSchema extends Document {
-    ytId: string
+    /**  */
     title: string
-    // duration : number
-    // thumbnail: Image
+    duration: number
+    thumbnail: string
+    sourceId: string
     source: string
     path: string
 
-    /** add its id to a playlist (create a new playlist if does not exit) */
-    addToPlaylist(playlists: [string]): void // : Promise<IPlaylistSchema> ?
+    /**
+     *
+     * @param playlist
+     */
+    addToPlaylist(playlist: string): Promise<IPlaylistSchema>
+    /**
+     *
+     * @param playlist
+     */
+    addToPlaylists(playlist: string[]): Promise<IPlaylistSchema>
 }
 
 export interface IMusic extends Model<IMusicSchema> {
-    /** Return the Music Doc from DB if exits or null object */
-    findOneSong(id: string): Promise<IMusicSchema> // like a get
-    /** Return true if song already ewist in database */
-    doesExist(id: string): boolean
-}
+    /**
+     * Create a Music Document from a DownloadedMusic
+     * @param audio The DownloadedMusic
+     * @returns A Music Document
+     */
+    fromDownloaded(audio: DownloadedMusic): IMusicSchema
 
-// PLAYLIST -------------------------------------
-export const PlaylistSchema = new Schema(
-    {
-        id: String,
-        name: String,
-        // description: String,
-        // duration: Number,
-        creation: Date,
-        songs: [
-            {
-                id: String,
-                addingDate: Date
-            }
-        ] // [ {id, date}, {id, date}, ...]
-    },
-    { collection: 'playlist' }
-)
+    // ---- Getters ----------------------------------
+    /**
+     * Get the Music Document for the given source and sourceId
+     * @param source Name of the source (eg: Youtube)
+     * @param sourceId ID the music from the source
+     * @returns A Promise of the Music Document queried
+     */
+    findOneSong(source: string, sourceId: string): Promise<IMusicSchema>
+    /**
+     * Search if a Music exists in the DataBase from it's source and sourceId
+     * @param source Name of the source (eg: Youtube)
+     * @param sourceId ID of the music from the source
+     * @returns A Promise of true if an entry exists, a Promise of false otherwise
+     */
+    doesExist(source: string, sourceId: string): Promise<boolean>
 
-export interface IPlaylistSchema extends Document {
-    name: string
-    // description?: string
-    // duration: number
-    creation: Date
-    songs: [
-        {
-            ytId: string
-            addingDate: Date
-        }
-    ]
-
-    /** Remove song_id from song_list and song_doc from DB if song not in any other Playlist */
-    removeSong(id: string): void
-}
-
-export interface IPlaylist extends Model<IPlaylistSchema> {
-    /** Create new Playlist Doc with given name + return the new doc */
-    createNew(name: string): Promise<IPlaylistSchema> // creation = new Date() && input not sure...
-    /** True if the song is in any playlist */
-    isInPlaylist(id: string): boolean
+    // ---- Actions ----------------------------------
+    // TODO: For a Task: Check for all entries in the DB if the storage exists, remove the Music from the DB and playlists if
+    //  the file doesn't exist
+    // checkStorage(): Promise<any>
+    // TODO: For a Task: Check for all entries if it belongs in a playlist, if not delete it and delete storage
+    // checkOrphan(): Promise<any>
 }
 
 // ---- Methods : Music ---------------------
 
-/** Add the music id to chosen Playlists, create new playlist if name does not exist (new input from user) */
-MusicSchema.methods.addToPlaylists = function (playlists: [string]): void {
-    for (let i = 0; i < playlists.length; i++) {
-        Playlist.findOne({ name: playlists[i] }).then((doc) => {
-            if (doc != null) {
-                const now = new Date()
-                doc.songs.push({
-                    ytId: this.ytId,
-                    addingDate: now
-                })
-            } else {
-                Playlist.createNew(playlists[i]).then((doc) => {
-                    const now = new Date()
-                    doc.songs.push({
-                        ytId: this.ytId,
-                        addingDate: now
-                    })
-                })
-            }
-        })
-    }
+MusicSchema.methods.addToPlaylist = function (
+    playlist: string
+): Promise<IPlaylistSchema> {
+    return Playlist.getOrCreate(playlist).then((playlist) => {
+        if (!playlist.songs.find((song) => song.id === this.id)) {
+            console.log('add')
+            playlist.songs.push({
+                id: this.id,
+                addingDate: new Date()
+            })
+
+            return playlist.save().then(() => playlist)
+        }
+
+        console.log('skip')
+
+        return playlist
+    })
+}
+
+MusicSchema.methods.addToPlaylists = function (
+    playlists: string[]
+): Promise<IPlaylistSchema[]> {
+    return Promise.all(
+        playlists.map((playlist) => this.addToPlaylist(playlist))
+    )
 }
 
 // ---- Statics : Music ---------------------
 
-/** Return true if a song exists in database */
-MusicSchema.statics.doesExist = function (id: string): boolean {
-    return Music.findOneSong(id) != null
-}
-
-/** Find a document in the database from its id */
-MusicSchema.statics.findOneSong = function (id: string): Promise<IMusicSchema> {
-    return Music.findOne({ ytId: id }).then((doc) => doc)
-}
-
-// ---- Methods : Playlist ------------------
-
-// ---- Statics : Playlist ------------------
-
-/** Create a new Playlist Document with a given name */
-PlaylistSchema.statics.createNew = function (
-    name: string
-): Promise<IPlaylistSchema> {
-    const playlist = new Playlist({
-        name: name,
-        creation: new Date(),
-        songs: []
+MusicSchema.statics.fromDownloaded = function (
+    audio: DownloadedMusic
+): IMusicSchema {
+    return new Music({
+        title: audio.title,
+        duration: audio.duration,
+        thumbnail: audio.thumbnail,
+        sourceId: audio.id,
+        source: audio.source,
+        path: `musics/${audio.mp3.filename}`
     })
-    return playlist.save()
 }
 
-/** Delete the song from playlist songs list and from database is it is not in any other playlist */
-PlaylistSchema.statics.removeSong = function (id: string): void {
-    // delete from songs list
-    for (let i = 0; i < this.songs.length; i++) {
-        if (this.songs[i].ytId == id) this.songs.splice(i, 1)
-    }
+MusicSchema.statics.findOneSong = function (
+    source: string,
+    sourceId: string
+): Promise<IMusicSchema> {
+    return Music.findOne({ source, sourceId }).then((doc) => doc)
+}
 
-    if (!Playlist.isInPlaylist(id)) {
-        // delete from database
-        Music.findOneAndDelete({ ytId: id }).catch((err) => console.error(err)) // to keep ?
-    }
+MusicSchema.statics.doesExist = function (
+    source: string,
+    sourceId: string
+): Promise<boolean> {
+    return Music.findOneSong(source, sourceId).then((doc) => doc !== null)
 }
 
 // ---- Models ------------------------------
 
 export const Music = model<IMusicSchema, IMusic>('Music', MusicSchema)
-
-export const Playlist = model<IPlaylistSchema, IPlaylist>(
-    'Playist',
-    PlaylistSchema
-)
