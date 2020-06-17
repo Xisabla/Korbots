@@ -201,6 +201,7 @@ nav {
 
 .module-title {
     height: 10%;
+    color: white;
 }
 
 .title-container {
@@ -259,6 +260,18 @@ nav {
 }
 
 
+button {
+    border: 0;
+    padding: 0.3rem;
+    margin: 0;
+    border-radius: 0.2rem;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #ffbb11;
+    color: #fff;
+    font-weight: 300;
+}
 //The next 150 lines concerned the weather module
 
 #module-weather{

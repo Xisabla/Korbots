@@ -313,47 +313,46 @@ class App extends Component {
                         order.push(j)
                 }
             }*/
-            for (let n = 0; n < rects.length; n++)
-                for (let i = 0; i < rects.length; i++) {
-                    for (let j = 0; j < rects.length; j++) {
-                        if (i !== j) {
-                            while (
-                                (!this.isOver(rects[i], rects[j]) ||
-                                    modulesRefs[j].current.style.display ===
-                                        'none' ||
-                                    modulesRefs[i].current.style.display ===
-                                        'none') &&
-                                rects[j].top > 0 &&
-                                !modulesLocked[j]
-                            ) {
-                                //put every module as close as possible to the top
-                                rects[j].top -= pixelStep
-                                rects[j].bottom -= pixelStep
-                                if (rects[j].top < 0) {
-                                    rects[j].top = 0
-                                    rects[j].bottom += pixelStep + rects[j].top
-                                }
+            for (let i = 0; i < rects.length; i++) {
+                for (let j = 0; j < rects.length; j++) {
+                    if (i !== j) {
+                        while (
+                            (!this.isOver(rects[i], rects[j]) ||
+                                modulesRefs[j].current.style.display ===
+                                    'none' ||
+                                modulesRefs[i].current.style.display ===
+                                    'none') &&
+                            rects[j].top > 0 &&
+                            !modulesLocked[j]
+                        ) {
+                            //put every module as close as possible to the top
+                            rects[j].top -= pixelStep
+                            rects[j].bottom -= pixelStep
+                            if (rects[j].top < 0) {
+                                rects[j].top = 0
+                                rects[j].bottom += pixelStep + rects[j].top
                             }
-                            while (
-                                (!this.isOver(rects[i], rects[j]) ||
-                                    modulesRefs[j].current.style.display ===
-                                        'none' ||
-                                    modulesRefs[i].current.style.display ===
-                                        'none') &&
-                                rects[j].left > 0 &&
-                                !modulesLocked[j]
-                            ) {
-                                //put every module as close as possible to the left
-                                rects[j].left -= pixelStep
-                                rects[j].right -= pixelStep
-                                if (rects[j].left < 0) {
-                                    rects[j].left = 0
-                                    rects[j].right += pixelStep + rects[j].left
-                                }
+                        }
+                        while (
+                            (!this.isOver(rects[i], rects[j]) ||
+                                modulesRefs[j].current.style.display ===
+                                    'none' ||
+                                modulesRefs[i].current.style.display ===
+                                    'none') &&
+                            rects[j].left > 0 &&
+                            !modulesLocked[j]
+                        ) {
+                            //put every module as close as possible to the left
+                            rects[j].left -= pixelStep
+                            rects[j].right -= pixelStep
+                            if (rects[j].left < 0) {
+                                rects[j].left = 0
+                                rects[j].right += pixelStep + rects[j].left
                             }
                         }
                     }
                 }
+            }
         }
         let security = 1000
         while (this.hasOverlaps(rects) && security > 0) {
@@ -486,7 +485,7 @@ class App extends Component {
             for (i = 0; i < modules.length; i++) {
                 if (modules[i] === Module) {
                     if (modulesRefs[i].current.style.display === 'none')
-                        modulesRefs[i].current.style.display = 'initial'
+                        modulesRefs[i].current.style.display = 'block'
                     else {
                         alert('Module already loaded !')
                     }
