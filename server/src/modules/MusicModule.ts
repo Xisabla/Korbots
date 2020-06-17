@@ -7,10 +7,12 @@ import youtubedl, { Info } from 'youtube-dl'
 
 import Application from '../core/Application'
 import {
-    YoutubeDownload,
-    YoutubeDownloadMusicInfo,
-    YoutubeDownloadStatus
+    DownloadedMusic,
+    DownloadedVideo,
+    dummyDownloadedVideo,
+    SearchResult
 } from '../core/IMusic'
+import { ConversionStatus, YoutubeDownloadStatus } from '../core/IMusic'
 import Module from '../core/Module'
 import { mp4ToMp3 } from '../services/ffmpeg'
 
@@ -20,12 +22,12 @@ export class MusicModule extends Module {
     private youtube: YouTube
 
     private mp3Storage: string
-    private ytStorage: string
+    private youtubeStorage: string
 
     public register(app: Application): void {
         super.register(app)
 
-        this.ytStorage = app.getStorage('youtube')
+        this.youtubeStorage = app.getStorage('youtube')
         this.mp3Storage = app.getStorage('musics')
 
         this.youtube = new YouTube(Application.getAPIKey('google:youtube'))
@@ -59,176 +61,258 @@ export class MusicModule extends Module {
 
     // ---- Methods ----------------------------------
 
-    private search(socket: Socket, data: any): void {
-        const { query } = data
+    // ---- Methods: Search --------------------------
+
+    /**
+     * Search for a music/video
+     * @param socket Client Socket
+     * @param data Provided data
+     */
+    private search(socket: Socket, data: any): any {
+        log(`Received search event from ${socket.id}`)
+
+        const { query, source } = data
         const limit: number = data.limit && data.limit < 5 ? data.limit : 5
 
-        // TODO: Maybe use Youtube-dl here to save API calls
-        // TODO: Make real interfaces for the result
+        // Check for fields
+        if (!query || !source) {
+            socket.emit('music:error', 'Invalid fields')
+            return false
+        }
 
-        this.youtube
-            .searchVideos(query, limit)
-            .then((videos) => {
-                const { results } = videos
-                const searchResults = results.map((result) => ({
-                    id: result.id,
-                    title: result.title,
-                    thumbnails: result.thumbnails.default,
-                    url: result.url
-                }))
+        // Init
+        let search: Promise<SearchResult[]> = Promise.resolve([])
 
-                socket.emit('music:searchResult', searchResults)
+        // Youtube case
+        if (source.toLowerCase() === 'youtube')
+            search = this.searchYoutube(query, limit)
+
+        // Continue
+        search
+            .then((results) => {
+                log(
+                    `Got ${results.length} results, sending music:searchResult event`
+                )
+                socket.emit('music:searchResult', results)
             })
             .catch((err) => socket.emit('music:error', err))
     }
 
-    // ---- Methods: Downloading ---------------------
+    // ---- Search Youtube ---------------------------
+
+    /**
+     * Search for video on Youtube
+     * @param query Search query
+     * @param limit Result limit
+     * @return A Promise of SearchResult Array
+     */
+    searchYoutube(query: string, limit: number): Promise<SearchResult[]> {
+        log(`Searching on youtube for "${query}"`)
+
+        return this.youtube.searchVideos(query, limit).then((videos) => {
+            const { results } = videos
+            const urls = results.map((result) => result.url)
+
+            log(`Found ${urls.length} results for "${query}"`)
+
+            return Promise.all(urls.map((url) => this.fetchYoutubeInfo(url)))
+        })
+    }
+
+    /**
+     * Fetch Youtube data from a Youtube Video url using YoutubeDL
+     * @param url URL of the Youtube Video
+     * @return A Promise of SearchResult
+     */
+    fetchYoutubeInfo(url: string): Promise<SearchResult> {
+        log(`Resolving info for ${url}`)
+        return new Promise((resolve, reject) => {
+            youtubedl.getInfo(url, function (err, info) {
+                if (err) {
+                    log(`Something went wrong while resolving ${url}`)
+                    return reject(err)
+                }
+
+                log(`Resolved for ${url}`)
+                return resolve({
+                    id: info.id,
+                    title: info.title,
+                    url,
+                    duration: info._duration_raw,
+                    thumbnail: info.thumbnails[0].url,
+                    source: 'youtube'
+                })
+            })
+        })
+    }
+
+    // ---- Methods: Download ------------------------
 
     private download(socket: Socket, data: any): any {
         log(`Received download event from ${socket.id}`)
 
         const { url, source } = data
 
+        // Check for fields
         if (!url || !source) {
             socket.emit('music:error', 'Invalid fields')
             return false
         }
 
+        // Init
+        let music: Promise<void | DownloadedMusic> = Promise.resolve()
+
+        // Youtube case
         if (source.toLowerCase() === 'youtube')
-            this.downloadYoutube(socket, url)
-                // TODO: Put the post-processing actions into a "youtubePostProcess" method
-                .then((music) => {
-                    log(
-                        `Download of "${music.basic.id}" completed, post-processing...`
-                    )
-                    socket.emit('music:converting', {
-                        music: music.basic,
-                        status: 'pending'
-                    })
+            music = this.downloadYoutube(socket, url).then((video) =>
+                this.convertVideo(socket, video, 'youtube-')
+            )
 
-                    return mp4ToMp3(music.mp4filepath, music.mp3filepath).then(
-                        () => music
-                    )
-                })
-                .then((music) => {
-                    log(
-                        `Post processing done, output file: ${music.mp3filepath}`
-                    )
-                    socket.emit('music:converting', {
-                        music: music.basic,
-                        status: 'done'
-                    })
-
-                    return music
-                    // TODO: Create a new music model and return it
-                })
-                .catch((err) => socket.emit('music:error', err))
+        // Continue
+        music
+            .then((data) => {
+                if (data) return Promise.resolve(data as DownloadedMusic)
+                return Promise.reject('Invalid source')
+            })
+            // TODO: Create music document from Music model and return it
+            .then(console.log)
+            .catch((err) => socket.emit('music:error', err))
     }
 
     // ---- Youtube Download -------------------------
 
     /**
-     * Download a youtube video from the url
-     * @param socket The asking socket to transmit info
-     * @param url The url of the video
-     * @return A Promise of the video information (downloaded path, duration, title, ...)
+     * Download a video from youtube into the youtube storage
+     * @param socket Client Socket to send download status
+     * @param url URL of the video to download
+     * @returns A Promise of the DownloadedVideo data (id, title, storage, ...)
      */
     private downloadYoutube(
         socket: Socket,
         url: string
-    ): Promise<YoutubeDownload> {
-        log(`Downloading "${url}" from youtube, fetching info...`)
+    ): Promise<DownloadedVideo> {
+        log(`Downloading ${url} video from youtube`)
 
-        // Use Promise to make the post-process easier
         return new Promise((resolve, reject) => {
+            // Initialize empty DownloadedVideo object
+            const video: DownloadedVideo = dummyDownloadedVideo()
+            video.url = url
+            video.source = 'youtube'
+
+            // Download status for the client
+            const download: YoutubeDownloadStatus = {
+                video,
+                status: { current: 0, total: 0, progress: 0 }
+            }
+
+            // Used for logging
+            let lastCheck = -1
+
             try {
-                // Init basic data
-                let outputStream: fs.WriteStream
-
-                const music: YoutubeDownloadMusicInfo = {
-                    id: '',
-                    title: '',
-                    url,
-                    duration: 0
-                }
-
-                const status: YoutubeDownloadStatus = {
-                    current: 0,
-                    total: 0,
-                    progress: 0
-                }
-
-                const dlinfo: YoutubeDownload = {
-                    basic: music,
-                    mp4filename: '',
-                    mp4filepath: '',
-                    mp3filename: '',
-                    mp3filepath: ''
-                }
-
-                let lastCheck = -1
-
-                // Start youtubedl
+                // Start youtubedl for the url, just go for audio
                 const dl = youtubedl(url, ['-f', 'bestaudio'], {})
 
-                // Get basic info and pipe the output stream
+                // First event, fill info fields
                 dl.on('info', (info: Info) => {
-                    log(`Infos fetched for ${url}`)
-
-                    // Update data
-                    status.total = info.size
-                    music.id = info.id
-                    music.title = info.title
-                    music.duration = info._duration_raw
-                    dlinfo.mp4filename = `${music.id}.mp4`
-                    dlinfo.mp4filepath = path.join(
-                        this.ytStorage,
-                        dlinfo.mp4filename
+                    video.id = info.id
+                    video.title = info.title
+                    video.thumbnail = info.thumbnails[0].url
+                    video.duration = info._duration_raw
+                    video.mp4.filename = `${info.id}.mp4`
+                    video.mp4.filepath = path.join(
+                        this.youtubeStorage,
+                        video.mp4.filename
                     )
-                    dlinfo.mp3filename = `yt-${music.id}.mp3`
-                    dlinfo.mp3filepath = path.join(
-                        this.mp3Storage,
-                        dlinfo.mp3filename
+                    download.status.total = info.size
+
+                    // Pipe output stream to the storage
+                    dl.pipe(
+                        fs.createWriteStream(video.mp4.filepath, {
+                            encoding: 'utf-8'
+                        })
                     )
-
-                    outputStream = fs.createWriteStream(dlinfo.mp4filepath, {
-                        encoding: 'utf-8'
-                    })
-
-                    // Pipe stream
-                    dl.pipe(outputStream)
                 })
 
-                // Send client update on data event
+                // Show update on data
                 dl.on('data', (chunk: Buffer) => {
-                    status.current += chunk.length
-                    status.progress = status.current / status.total
+                    download.status.current += chunk.length
+                    download.status.progress =
+                        download.status.current / download.status.total
+                    const { progress } = download.status
 
                     // Log every 10%
-                    if (status.progress * 10 > lastCheck) {
-                        lastCheck = Math.ceil(status.progress * 10)
+                    if (progress * 10 > lastCheck) {
+                        lastCheck = Math.ceil(progress * 10)
                         log(
-                            `Download of "${music.id}"... ${Math.floor(
-                                status.progress * 100
+                            `Download of "${video.id}"... ${Math.floor(
+                                progress * 100
                             )}%`
                         )
                     }
 
-                    socket.emit('music:downloading', {
-                        music,
-                        status
-                    })
+                    socket.emit('music:downloading', download)
                 })
 
-                // On end, resolve the Promise, let's continue with the post-process
+                // Reject error
+                dl.on('error', reject)
+
+                // Resolve when it's downloaded
                 dl.on('end', () => {
-                    log(`Download of "${music.id}" 100%`)
-                    resolve(dlinfo)
+                    log(`Download of ${video.id} 100% - finished`)
+                    return resolve(video)
                 })
-                // Reject on caught error
             } catch (err) {
-                reject(err)
+                return reject(err)
             }
+        })
+    }
+
+    // ---- Video converting -------------------------
+
+    /**
+     * Convert a fresh download video into an audio file in the musics storage
+     * @param socket Client Socket to send converting status
+     * @param video DownloadedVideo data
+     * @param prefix Prefix to add to the converted audio file name (empty by default)
+     * @returns A Promise of the DownloadedAudio data (id, title, storage, ...)
+     */
+    private convertVideo(
+        socket: Socket,
+        video: DownloadedVideo,
+        prefix = ''
+    ): Promise<DownloadedMusic> {
+        log(`Converting video ${video.id}`)
+
+        // Set data
+        const filename = `${prefix}${video.mp4.filename.replace(
+            '.mp4',
+            '.mp3'
+        )}`
+        const filepath = path.join(this.mp3Storage, filename)
+
+        // Create DownloadedMusic object
+        const audio: DownloadedMusic = Object.assign(
+            { mp3: { filename, filepath } },
+            video
+        )
+
+        // Create ConversionStatus
+        const conversion: ConversionStatus = {
+            audio,
+            video,
+            status: { pending: true, done: false }
+        }
+
+        // Tell that we are beginning
+        socket.emit('music:converting', conversion)
+
+        // Let's do it
+        return mp4ToMp3(video.mp4.filepath, audio.mp3.filepath).then(() => {
+            // Update client conversion status
+            conversion.status = { pending: false, done: true }
+            socket.emit('music:converting', conversion)
+
+            return audio
         })
     }
 

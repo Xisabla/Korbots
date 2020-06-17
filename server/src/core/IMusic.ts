@@ -1,35 +1,114 @@
+// ---- Files ------------------------------------
+
 /**
- * Ok, all of this is pretty "draft", let's make it better another day :-)
- *
- * What we will need and what the purpose ?
- *
- * Purpose: Define all interfaces of transiting data between each part of the music (pre/post)processing
- * Wwn: We need to know exactly what goes next step and what is needed for the client socket and then let's build one interface by step
+ * Global interface for a File
  */
+export interface File {
+    filename: string
+    filepath: string
+}
 
-// TODO: Add needed elements by the Model and post-process
+/**
+ * Global interface of a Downloaded Music
+ */
 export interface DownloadedMusic {
-    mp4filename: string
-    mp4filepath: string
-    mp3filename: string
-    mp3filepath: string
-}
-
-export interface YoutubeDownloadMusicInfo {
-    url: string
+    /** ID of the source (eg: youtube video id) */
     id: string
+    /** Title of the music */
     title: string
+    /** URL of the original music/video */
+    url: string
+    /** Thumbnail of the song */
+    thumbnail: string
+    /** Duration of the song */
     duration: number
+    /** Source of the song */
+    source: string
+    /** Server storage information */
+    mp3: File
 }
 
+/**
+ * Global interface of a Downloaded Video
+ */
+export interface DownloadedVideo {
+    /** ID of the source (eg: youtube video id) */
+    id: string
+    /** Title of the music */
+    title: string
+    /** URL of the original music/video */
+    url: string
+    /** Thumbnail of the song */
+    thumbnail: string
+    /** Duration of the song */
+    duration: number
+    /** Source of the song */
+    source: string
+    /** Server storage information */
+    mp4: File
+}
+
+// ---- Search Results ---------------------------
+
+/**
+ * Result of a music search
+ */
+export interface SearchResult {
+    /** ID of the source (eg: youtube video id) */
+    id: string
+    /** Title of the music */
+    title: string
+    /** URL of the original music/video */
+    url: string
+    /** Thumbnail of the song */
+    thumbnail: string
+    /** Duration of the song */
+    duration: number
+    /** Source of the song */
+    source: string
+}
+
+// ---- Converting -------------------------------
+
+export interface ConversionStatus {
+    audio: DownloadedMusic
+    video: DownloadedVideo
+    status: {
+        pending: boolean
+        done: boolean
+    }
+}
+
+// ---- Youtube ----------------------------------
+
+/**
+ * Information about the current download status for a video from Youtube
+ */
 export interface YoutubeDownloadStatus {
-    current: number
-    total: number
-    progress: number
+    video: DownloadedVideo
+    status: {
+        /** Current downloaded size of the download media */
+        current: number
+        /** Total size of the download media */
+        total: number
+        /** Ratio between current and total [0-1] */
+        progress: number
+    }
 }
 
-// TODO: Don't use YoutubeDownload but only DownloadedMusic
-// Let's wait to see what we need to be used by the Model and the post process
-export interface YoutubeDownload extends DownloadedMusic {
-    basic: YoutubeDownloadMusicInfo
+// ---- Generate empty ---------------------------
+
+export function dummyDownloadedVideo(): DownloadedVideo {
+    return {
+        id: '',
+        title: '',
+        url: '',
+        thumbnail: '',
+        duration: 0,
+        source: 'youtube',
+        mp4: {
+            filename: '',
+            filepath: ''
+        }
+    }
 }
