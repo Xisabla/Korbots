@@ -8,6 +8,8 @@ import {
 } from '../core/API/IOpenWeather'
 import Application from '../core/Application'
 
+const coordinatesQueryOffset = 0.025
+
 // ---- Schema -----------------------------------
 
 /**
@@ -371,8 +373,6 @@ WeatherSchema.statics.findCurrent = function (
     lat: number,
     lon: number
 ): Promise<IWeatherSchema[]> {
-    const coordinatesQueryOffset = 0.1
-
     const tMax = moment().add(2, 'minutes').toDate()
     const tMin = moment().add(-30, 'minutes').toDate()
 
@@ -409,8 +409,6 @@ WeatherSchema.statics.findDaily = function (
     lon: number,
     date: Date
 ): Promise<IWeatherSchema[]> {
-    const coordinatesQueryOffset = 0.1
-
     const tMax = moment(date).add(1, 'days').toDate()
     const tMin = moment(date).add(-1, 'days').toDate()
 
@@ -454,8 +452,6 @@ WeatherSchema.statics.findDailyAll = function (
     lon: number,
     further = 4
 ): Promise<IWeatherSchema[]> {
-    const coordinatesQueryOffset = 0.1
-
     const tMax = moment()
         .add(further + 1, 'days')
         .toDate()
