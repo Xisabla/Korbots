@@ -9,7 +9,7 @@
     "clean": "rimraf ./coverage ./dist ../doc/server",
     "lint": "eslint ./ --fix",
     "doc": "typedoc --out ../doc/server --plugin typedoc-plugin-markdown --readme none",
-    "postinstall": "patch-packages",
+    "postinstall": "patch-package",
     "prestart": "npm run lint && npm run build"
   },
   "author": "Xisabla",
