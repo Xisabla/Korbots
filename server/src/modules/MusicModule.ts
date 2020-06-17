@@ -106,7 +106,10 @@ export class MusicModule extends Module {
      * @param limit Result limit
      * @return A Promise of SearchResult Array
      */
-    searchYoutube(query: string, limit: number): Promise<SearchResult[]> {
+    private searchYoutube(
+        query: string,
+        limit: number
+    ): Promise<SearchResult[]> {
         log(`Searching on youtube for "${query}"`)
 
         return this.youtube.searchVideos(query, limit).then((videos) => {
