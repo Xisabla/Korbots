@@ -1,8 +1,8 @@
 diff --git a/node_modules/@types/youtube-dl/index.d.ts b/node_modules/@types/youtube-dl/index.d.ts
-index aa7a8c4..1393560 100644
+index aa7a8c4..1893cfd 100644
 --- a/node_modules/@types/youtube-dl/index.d.ts
 +++ b/node_modules/@types/youtube-dl/index.d.ts
-@@ -12,10 +12,11 @@ export = youtubedl;
+@@ -12,16 +12,27 @@ export = youtubedl;
  declare function youtubedl(url: string, arg: string[], opt: {[key: string]: string}): youtubedl.Youtubedl;
  declare namespace youtubedl {
      interface Youtubedl {
@@ -11,7 +11,23 @@ index aa7a8c4..1393560 100644
          pipe(stream: fs.WriteStream): this;
      }
      interface Info {
-+        id: string
++        id: string;
++        title: string;
          _filename: string;
          filename: string;
          size: number;
+         _duration_raw: number;
+         _duration_hms: string;
+         duration: string;
++        thumbnails: {
++            [index: number]: {
++                url: string;
++                width: number;
++                height: number;
++                resolution: string;
++                id: string
++            }
++        }
+     }
+ 
+     interface Options {
