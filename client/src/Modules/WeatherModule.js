@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 
-/* import weatherimg from '../../public/meteo.png' */
 class WeatherModule extends React.Component {
     constructor(props) {
         super(props)
@@ -42,7 +41,23 @@ class WeatherModule extends React.Component {
 
         this.props.socket.on('weather:currentData', (data) => {
             this.setState({ data: data })
+            console.log(this.state.localisationMode)
+            if (!this.state.localisationMode) {
+                const latitude = parseFloat(data.latitude)
+                const longitude = parseFloat(data.longitude)
+                console.log(latitude, longitude)
+                const numberOfDay = 4
+                this.props.socket.emit('weather:getDailyAll', {
+                    latitude,
+                    longitude,
+                    numberOfDay
+                })
+            }
             console.log(data)
+        })
+        this.props.socket.on('weather:dailyAllData', (data1) => {
+            this.setState({ data1: data1 })
+            console.log(data1)
         })
     }
 
@@ -64,10 +79,15 @@ class WeatherModule extends React.Component {
         const latitude = parseFloat(this.state.latitude)
         const longitude = parseFloat(this.state.longitude)
         this.props.socket.emit('weather:getCurrent', { latitude, longitude })
+        const numberOfDay = 4
+        this.props.socket.emit('weather:getDailyAll', {
+            latitude,
+            longitude,
+            numberOfDay
+        })
     }
 
     getWeatherbyCity() {
-        console.log(this.state.city, this.state.country)
         this.props.socket.emit(
             'weather:getCurrent',
             this.state.city + ',' + this.state.country
@@ -109,11 +129,11 @@ class WeatherModule extends React.Component {
                 <i className="fas fa-lock-open lockTarget"></i>
                 <i className="fas fa-times closeTarget"></i>
                 <div className="module-body">
-                    <div className="col-5 title-container">
+                    <div className="title-container">
                         <Titles />
                     </div>
-                    <div className="col-7 form-container">
-                        <div className="search_container row">
+                    <div className="form-container">
+                        <div className="search_container">
                             <div className="search">Rechercher par:</div>
                             <button
                                 onClick={this.handleChangeCityMode}
@@ -179,8 +199,22 @@ class WeatherModule extends React.Component {
                             </form>
                         )}
                     </div>
-                    <div className="col-7 weather-container">
+                    <div className="weather-container">
                         {this.state.data && <Weather data={this.state.data} />}
+                    </div>
+                    <div className="weather-daily-container">
+                        {this.state.data1 && (
+                            <DailyWeather data1={this.state.data1[0]} />
+                        )}
+                        {this.state.data1 && (
+                            <DailyWeather data1={this.state.data1[1]} />
+                        )}
+                        {this.state.data1 && (
+                            <DailyWeather data1={this.state.data1[2]} />
+                        )}
+                        {this.state.data1 && (
+                            <DailyWeather data1={this.state.data1[3]} />
+                        )}
                     </div>
                 </div>
             </div>
@@ -196,7 +230,6 @@ const Titles = () => (
 
 const Weather = (props) => {
     const { data } = props
-    console.log(data)
     return (
         <div className="weather__info row">
             <div className="weather__info__left col-6">
@@ -222,16 +255,6 @@ const Weather = (props) => {
                 )}
             </div>
             <div className="weather__info__right col-6">
-                {data && data.longitude && (
-                    <p className="weather__key">
-                        {' '}
-                        Longitude:
-                        <span className="weather__value">
-                            {' '}
-                            {data.longitude}{' '}
-                        </span>
-                    </p>
-                )}
                 {data && data.latitude && (
                     <p className="weather__key">
                         {' '}
@@ -239,6 +262,16 @@ const Weather = (props) => {
                         <span className="weather__value">
                             {' '}
                             {data.latitude}{' '}
+                        </span>
+                    </p>
+                )}
+                {data && data.longitude && (
+                    <p className="weather__key">
+                        {' '}
+                        Longitude:
+                        <span className="weather__value">
+                            {' '}
+                            {data.longitude}{' '}
                         </span>
                     </p>
                 )}
@@ -260,6 +293,36 @@ const Weather = (props) => {
                 )}
                 {data && data.error && (
                     <p className="weather__error">{data.error}</p>
+                )}
+            </div>
+        </div>
+    )
+}
+
+const DailyWeather = (props) => {
+    const { data1 } = props
+    console.log('DailyWeatherAll')
+    console.log(data1)
+    return (
+        <div className="weather__info">
+            <div className="weather__info__left">
+                {data1 && data1.date && (
+                    <span className="weather__value">
+                        <WeatherDate date={data1.date} />
+                    </span>
+                )}
+                {data1 && data1.weatherIcon && (
+                    <span className="weather__value">
+                        <WeatherIcon weatherIcon={data1.weatherIcon} />
+                    </span>
+                )}
+                {data1 && data1.temperature && (
+                    <span className="weather__value">
+                        {Math.round(data1.temperature - 273, 15)}°C{' '}
+                    </span>
+                )}
+                {data1 && data1.error && (
+                    <p className="weather__error">{data1.error}</p>
                 )}
             </div>
         </div>

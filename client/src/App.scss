@@ -113,27 +113,6 @@ h1, h2, h3, h4, h5, h6 {
 	padding-left: 1%;
 }
 
-.col-4 {
-    flex: 0 0 32%;
-    /*max-width: 35vh;*/
-	padding-right: 1%;
-	padding-left: 1%;
-}
-
-.col-5 {
-    flex: 0 0 40%;
-    /*max-width: 35vh;*/
-	padding-right: 1%;
-	padding-left: 1%;
-}
-
-.col-7 {
-    flex: 0 0 57%;
-    /*max-width: 35vh;*/
-	padding-right: 1%;
-	padding-left: 1%;
-}
-
 .col-10 {
     flex: 0 0 79%;
     /*max-width: 171vh;*/
@@ -272,8 +251,12 @@ nav {
     color: rgb(250, 21, 21);
 }
 
+
+//The next 150 lines concerned the weather module
+
 #module-weather{
     background: linear-gradient(35deg, #000077, #00bbee);
+    position: relative;
 }
 
 #module-weather .module-body * {
@@ -300,15 +283,11 @@ nav {
         margin-bottom: 0.5rem;
         margin-right: 0.5rem;
         outline: none;
+        width: 10rem;
 
         &::-webkit-input-placeholder {
             color: #ffbb11
         }
-    }
-
-    input:-webkit-autofill {
-        -webkit-box-shadow: 0 0 0 30px #2c3e50 inset;
-        -webkit-text-fill-color: #fff !important;
     }
 
     button {
@@ -329,6 +308,24 @@ nav {
     }
 }
 
+.search_container{
+    display: flex;
+    justify-content: justify;
+    white-space: nowrap;
+    margin-bottom: 1rem;
+
+    button{
+        margin-left: 0.5rem;
+    }
+}
+
+.search {
+    letter-spacing: 1px;
+    font-size: 1.4rem;
+    color: #ffbb11;
+    font-family: 'Roboto', sans-serif;
+}
+
 .weather-container {
     background-color: transparent;
     padding-top: 0px;
@@ -336,7 +333,16 @@ nav {
     justify-content: center;
 }
 
-.weather__info.row {
+.weather-daily-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    left: 0;
+}
+
+.weather__info {
     background-color: #fafafa;
     margin-bottom: 2rem;
     font-size: 20px;
@@ -362,6 +368,7 @@ nav {
     background-color: #eeeeee;
 }
 
+
 .weather__key {
     color: #ffbb11;
     border-bottom: solid 2px rgba(255,255,255,0.06);
@@ -378,13 +385,6 @@ nav {
     font-weight: 200;
 }
 
-.weather__error {
-    color: #ffbb11;
-    font-size: 20px;
-    letter-spacing: 1px;
-    font-weight: 200;
-}
-
 .weather_icon {
     display: flex;
     justify-content: center;
@@ -397,20 +397,9 @@ nav {
     margin: -20%;
 }
 
-.search_container{
-    display: flex;
-    justify-content: justify;
-    white-space: nowrap;
-    margin-bottom: 1rem;
-
-    button{
-        margin-left: 0.5rem;
-    }
-}
-
-.search {
-    letter-spacing: 1px;
-    font-size: 1.4rem;
+.weather__error {
     color: #ffbb11;
-    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: 200;
 }
