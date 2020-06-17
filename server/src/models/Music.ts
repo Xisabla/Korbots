@@ -18,12 +18,17 @@ export const MusicSchema = new Schema(
 )
 
 export interface IMusicSchema extends Document {
-    /**  */
+    /** Title of the music */
     title: string
+    /** Duration of the music */
     duration: number
+    /** Thumbnail of the music */
     thumbnail: string
+    /** ID of the Source of the music */
     sourceId: string
+    /** Source of the music */
     source: string
+    /** Path of the music in the internal storage */
     path: string
 
     /**
@@ -80,6 +85,7 @@ MusicSchema.methods.addToPlaylist = function (
             console.log('add')
             playlist.songs.push({
                 id: this.id,
+                title: this.title,
                 addingDate: new Date()
             })
 

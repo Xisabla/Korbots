@@ -20,9 +20,12 @@ import { mp4ToMp3 } from '../services/ffmpeg'
 const log = debug('module:music')
 
 export class MusicModule extends Module {
+    /** Instance of the youtube API Controller */
     private youtube: YouTube
 
+    /** Audio songs storage path */
     private mp3Storage: string
+    /** Youtube Storage Path (folder for youtube mp4 files) */
     private youtubeStorage: string
 
     public register(app: Application): void {
@@ -53,7 +56,10 @@ export class MusicModule extends Module {
         // Schedules
 
         // Registering
-        const ids: number[] = []
+        const ids: number[] = [
+            // this.registerTask(() => this.checkOrphanMusics())
+            // this.registerTask(() => this.checkNotStoredMusics())
+        ]
 
         log(`Registered ${ids.length} tasks`)
 
