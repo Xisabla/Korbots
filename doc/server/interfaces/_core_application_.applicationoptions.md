@@ -14,6 +14,7 @@
 * [port](_core_application_.applicationoptions.md#optional-port)
 * [public](_core_application_.applicationoptions.md#optional-public)
 * [server](_core_application_.applicationoptions.md#optional-server)
+* [storage](_core_application_.applicationoptions.md#optional-storage)
 * [useEnv](_core_application_.applicationoptions.md#optional-useenv)
 
 ## Properties
@@ -22,7 +23,7 @@
 
 • **mongo**? : *[DatabaseConfiguration](_core_application_.databaseconfiguration.md)*
 
-*Defined in [src/core/Application.ts:27](https://github.com/Xisabla/Korbots/blob/3303bca/server/src/core/Application.ts#L27)*
+*Defined in [src/core/Application.ts:30](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/core/Application.ts#L30)*
 
 mongoose connection base configuration
 
@@ -32,7 +33,7 @@ ___
 
 • **port**? : *number*
 
-*Defined in [src/core/Application.ts:23](https://github.com/Xisabla/Korbots/blob/3303bca/server/src/core/Application.ts#L23)*
+*Defined in [src/core/Application.ts:26](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/core/Application.ts#L26)*
 
 Port on which the server will listen
 
@@ -42,7 +43,7 @@ ___
 
 • **public**? : *string*
 
-*Defined in [src/core/Application.ts:21](https://github.com/Xisabla/Korbots/blob/3303bca/server/src/core/Application.ts#L21)*
+*Defined in [src/core/Application.ts:22](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/core/Application.ts#L22)*
 
 Public path of the server (absolute please), default: path.join(server, 'public')
 
@@ -52,9 +53,19 @@ ___
 
 • **server**? : *string*
 
-*Defined in [src/core/Application.ts:19](https://github.com/Xisabla/Korbots/blob/3303bca/server/src/core/Application.ts#L19)*
+*Defined in [src/core/Application.ts:20](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/core/Application.ts#L20)*
 
 Absolute path to the folder containing server statics files
+
+___
+
+### `Optional` storage
+
+• **storage**? : *string*
+
+*Defined in [src/core/Application.ts:24](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/core/Application.ts#L24)*
+
+Storage directory for server files
 
 ___
 
@@ -62,6 +73,6 @@ ___
 
 • **useEnv**? : *boolean*
 
-*Defined in [src/core/Application.ts:25](https://github.com/Xisabla/Korbots/blob/3303bca/server/src/core/Application.ts#L25)*
+*Defined in [src/core/Application.ts:28](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/core/Application.ts#L28)*
 
 If set on true, will look un into .env file to load important configuration

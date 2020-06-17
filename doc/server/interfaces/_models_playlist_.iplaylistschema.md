@@ -1,48 +1,52 @@
-[korbots-server](../README.md) › ["models/User"](../modules/_models_user_.md) › [IUserSchema](_models_user_.iuserschema.md)
+[korbots-server](../README.md) › ["models/Playlist"](../modules/_models_playlist_.md) › [IPlaylistSchema](_models_playlist_.iplaylistschema.md)
 
-# Interface: IUserSchema
+# Interface: IPlaylistSchema
 
 ## Hierarchy
 
 * Document
 
-  ↳ **IUserSchema**
+  ↳ **IPlaylistSchema**
 
 ## Index
 
 ### Properties
 
-* [__v](_models_user_.iuserschema.md#optional-__v)
-* [collection](_models_user_.iuserschema.md#collection)
-* [connected](_models_user_.iuserschema.md#optional-connected)
-* [db](_models_user_.iuserschema.md#db)
-* [id](_models_user_.iuserschema.md#optional-id)
-* [schema](_models_user_.iuserschema.md#schema)
-* [socketId](_models_user_.iuserschema.md#optional-socketid)
-* [username](_models_user_.iuserschema.md#username)
+* [__v](_models_playlist_.iplaylistschema.md#optional-__v)
+* [collection](_models_playlist_.iplaylistschema.md#collection)
+* [creationDate](_models_playlist_.iplaylistschema.md#creationdate)
+* [db](_models_playlist_.iplaylistschema.md#db)
+* [description](_models_playlist_.iplaylistschema.md#optional-description)
+* [duration](_models_playlist_.iplaylistschema.md#duration)
+* [id](_models_playlist_.iplaylistschema.md#optional-id)
+* [name](_models_playlist_.iplaylistschema.md#name)
+* [schema](_models_playlist_.iplaylistschema.md#schema)
+* [songs](_models_playlist_.iplaylistschema.md#songs)
 
 ### Methods
 
-* [$isDeleted](_models_user_.iuserschema.md#isdeleted)
-* [addListener](_models_user_.iuserschema.md#addlistener)
-* [emit](_models_user_.iuserschema.md#emit)
-* [eventNames](_models_user_.iuserschema.md#eventnames)
-* [getMaxListeners](_models_user_.iuserschema.md#getmaxlisteners)
-* [increment](_models_user_.iuserschema.md#increment)
-* [listenerCount](_models_user_.iuserschema.md#listenercount)
-* [listeners](_models_user_.iuserschema.md#listeners)
-* [model](_models_user_.iuserschema.md#model)
-* [off](_models_user_.iuserschema.md#off)
-* [on](_models_user_.iuserschema.md#on)
-* [once](_models_user_.iuserschema.md#once)
-* [prependListener](_models_user_.iuserschema.md#prependlistener)
-* [prependOnceListener](_models_user_.iuserschema.md#prependoncelistener)
-* [rawListeners](_models_user_.iuserschema.md#rawlisteners)
-* [remove](_models_user_.iuserschema.md#remove)
-* [removeAllListeners](_models_user_.iuserschema.md#removealllisteners)
-* [removeListener](_models_user_.iuserschema.md#removelistener)
-* [save](_models_user_.iuserschema.md#save)
-* [setMaxListeners](_models_user_.iuserschema.md#setmaxlisteners)
+* [$isDeleted](_models_playlist_.iplaylistschema.md#isdeleted)
+* [addListener](_models_playlist_.iplaylistschema.md#addlistener)
+* [emit](_models_playlist_.iplaylistschema.md#emit)
+* [eventNames](_models_playlist_.iplaylistschema.md#eventnames)
+* [getMaxListeners](_models_playlist_.iplaylistschema.md#getmaxlisteners)
+* [increment](_models_playlist_.iplaylistschema.md#increment)
+* [listenerCount](_models_playlist_.iplaylistschema.md#listenercount)
+* [listeners](_models_playlist_.iplaylistschema.md#listeners)
+* [model](_models_playlist_.iplaylistschema.md#model)
+* [off](_models_playlist_.iplaylistschema.md#off)
+* [on](_models_playlist_.iplaylistschema.md#on)
+* [once](_models_playlist_.iplaylistschema.md#once)
+* [prependListener](_models_playlist_.iplaylistschema.md#prependlistener)
+* [prependOnceListener](_models_playlist_.iplaylistschema.md#prependoncelistener)
+* [rawListeners](_models_playlist_.iplaylistschema.md#rawlisteners)
+* [remove](_models_playlist_.iplaylistschema.md#remove)
+* [removeAllListeners](_models_playlist_.iplaylistschema.md#removealllisteners)
+* [removeListener](_models_playlist_.iplaylistschema.md#removelistener)
+* [removeSong](_models_playlist_.iplaylistschema.md#removesong)
+* [removeSongSource](_models_playlist_.iplaylistschema.md#removesongsource)
+* [save](_models_playlist_.iplaylistschema.md#save)
+* [setMaxListeners](_models_playlist_.iplaylistschema.md#setmaxlisteners)
 
 ## Properties
 
@@ -71,11 +75,13 @@ Collection the model uses.
 
 ___
 
-### `Optional` connected
+###  creationDate
 
-• **connected**? : *boolean*
+• **creationDate**: *Date*
 
-*Defined in [src/models/User.ts:14](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/models/User.ts#L14)*
+*Defined in [src/models/Playlist.ts:32](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/models/Playlist.ts#L32)*
+
+Playlist creation date
 
 ___
 
@@ -88,6 +94,26 @@ ___
 Defined in node_modules/@types/mongoose/index.d.ts:3660
 
 Connection the model uses.
+
+___
+
+### `Optional` description
+
+• **description**? : *string*
+
+*Defined in [src/models/Playlist.ts:28](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/models/Playlist.ts#L28)*
+
+Description of the playlist
+
+___
+
+###  duration
+
+• **duration**: *number*
+
+*Defined in [src/models/Playlist.ts:30](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/models/Playlist.ts#L30)*
+
+Total duration of the playlist
 
 ___
 
@@ -106,6 +132,16 @@ behaves like any other field on a document and can be assigned any value.
 
 ___
 
+###  name
+
+• **name**: *string*
+
+*Defined in [src/models/Playlist.ts:26](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/models/Playlist.ts#L26)*
+
+Name of the playlist
+
+___
+
 ###  schema
 
 • **schema**: *Schema*
@@ -118,19 +154,13 @@ Schema the model uses.
 
 ___
 
-### `Optional` socketId
+###  songs
 
-• **socketId**? : *string*
+• **songs**: *[ISongSchema](_models_playlist_.isongschema.md)[]*
 
-*Defined in [src/models/User.ts:15](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/models/User.ts#L15)*
+*Defined in [src/models/Playlist.ts:34](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/models/Playlist.ts#L34)*
 
-___
-
-###  username
-
-• **username**: *string*
-
-*Defined in [src/models/User.ts:13](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/models/User.ts#L13)*
+Songs of the playlist
 
 ## Methods
 
@@ -525,6 +555,47 @@ Name | Type |
 `...args` | any[] |
 
 **Returns:** *this*
+
+___
+
+###  removeSong
+
+▸ **removeSong**(`id`: string): *Promise‹[IPlaylistSchema](_models_playlist_.iplaylistschema.md)›*
+
+*Defined in [src/models/Playlist.ts:46](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/models/Playlist.ts#L46)*
+
+Remove a song from the playlist
+
+**Parameters:**
+
+Name | Type | Description |
+------ | ------ | ------ |
+`id` | string | The ID of the Music |
+
+**Returns:** *Promise‹[IPlaylistSchema](_models_playlist_.iplaylistschema.md)›*
+
+A Promise of the Playlist
+
+___
+
+###  removeSongSource
+
+▸ **removeSongSource**(`source`: string, `sourceId`: string): *Promise‹[IPlaylistSchema](_models_playlist_.iplaylistschema.md)›*
+
+*Defined in [src/models/Playlist.ts:53](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/models/Playlist.ts#L53)*
+
+Remove a song from the playlist
+
+**Parameters:**
+
+Name | Type | Description |
+------ | ------ | ------ |
+`source` | string | The source of the Music |
+`sourceId` | string | The sourceId of the Music |
+
+**Returns:** *Promise‹[IPlaylistSchema](_models_playlist_.iplaylistschema.md)›*
+
+A Promise of the Playlist
 
 ___
 

@@ -1,48 +1,47 @@
-[korbots-server](../README.md) › ["models/User"](../modules/_models_user_.md) › [IUserSchema](_models_user_.iuserschema.md)
+[korbots-server](../README.md) › ["models/Playlist"](../modules/_models_playlist_.md) › [ISongSchema](_models_playlist_.isongschema.md)
 
-# Interface: IUserSchema
+# Interface: ISongSchema
 
 ## Hierarchy
 
 * Document
 
-  ↳ **IUserSchema**
+  ↳ **ISongSchema**
 
 ## Index
 
 ### Properties
 
-* [__v](_models_user_.iuserschema.md#optional-__v)
-* [collection](_models_user_.iuserschema.md#collection)
-* [connected](_models_user_.iuserschema.md#optional-connected)
-* [db](_models_user_.iuserschema.md#db)
-* [id](_models_user_.iuserschema.md#optional-id)
-* [schema](_models_user_.iuserschema.md#schema)
-* [socketId](_models_user_.iuserschema.md#optional-socketid)
-* [username](_models_user_.iuserschema.md#username)
+* [__v](_models_playlist_.isongschema.md#optional-__v)
+* [addingDate](_models_playlist_.isongschema.md#addingdate)
+* [collection](_models_playlist_.isongschema.md#collection)
+* [db](_models_playlist_.isongschema.md#db)
+* [id](_models_playlist_.isongschema.md#id)
+* [schema](_models_playlist_.isongschema.md#schema)
+* [title](_models_playlist_.isongschema.md#title)
 
 ### Methods
 
-* [$isDeleted](_models_user_.iuserschema.md#isdeleted)
-* [addListener](_models_user_.iuserschema.md#addlistener)
-* [emit](_models_user_.iuserschema.md#emit)
-* [eventNames](_models_user_.iuserschema.md#eventnames)
-* [getMaxListeners](_models_user_.iuserschema.md#getmaxlisteners)
-* [increment](_models_user_.iuserschema.md#increment)
-* [listenerCount](_models_user_.iuserschema.md#listenercount)
-* [listeners](_models_user_.iuserschema.md#listeners)
-* [model](_models_user_.iuserschema.md#model)
-* [off](_models_user_.iuserschema.md#off)
-* [on](_models_user_.iuserschema.md#on)
-* [once](_models_user_.iuserschema.md#once)
-* [prependListener](_models_user_.iuserschema.md#prependlistener)
-* [prependOnceListener](_models_user_.iuserschema.md#prependoncelistener)
-* [rawListeners](_models_user_.iuserschema.md#rawlisteners)
-* [remove](_models_user_.iuserschema.md#remove)
-* [removeAllListeners](_models_user_.iuserschema.md#removealllisteners)
-* [removeListener](_models_user_.iuserschema.md#removelistener)
-* [save](_models_user_.iuserschema.md#save)
-* [setMaxListeners](_models_user_.iuserschema.md#setmaxlisteners)
+* [$isDeleted](_models_playlist_.isongschema.md#isdeleted)
+* [addListener](_models_playlist_.isongschema.md#addlistener)
+* [emit](_models_playlist_.isongschema.md#emit)
+* [eventNames](_models_playlist_.isongschema.md#eventnames)
+* [getMaxListeners](_models_playlist_.isongschema.md#getmaxlisteners)
+* [increment](_models_playlist_.isongschema.md#increment)
+* [listenerCount](_models_playlist_.isongschema.md#listenercount)
+* [listeners](_models_playlist_.isongschema.md#listeners)
+* [model](_models_playlist_.isongschema.md#model)
+* [off](_models_playlist_.isongschema.md#off)
+* [on](_models_playlist_.isongschema.md#on)
+* [once](_models_playlist_.isongschema.md#once)
+* [prependListener](_models_playlist_.isongschema.md#prependlistener)
+* [prependOnceListener](_models_playlist_.isongschema.md#prependoncelistener)
+* [rawListeners](_models_playlist_.isongschema.md#rawlisteners)
+* [remove](_models_playlist_.isongschema.md#remove)
+* [removeAllListeners](_models_playlist_.isongschema.md#removealllisteners)
+* [removeListener](_models_playlist_.isongschema.md#removelistener)
+* [save](_models_playlist_.isongschema.md#save)
+* [setMaxListeners](_models_playlist_.isongschema.md#setmaxlisteners)
 
 ## Properties
 
@@ -59,6 +58,14 @@ If you're using another key, you will have to access it using []: doc[_myVersion
 
 ___
 
+###  addingDate
+
+• **addingDate**: *Date*
+
+*Defined in [src/models/Playlist.ts:59](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/models/Playlist.ts#L59)*
+
+___
+
 ###  collection
 
 • **collection**: *Collection*
@@ -68,14 +75,6 @@ ___
 Defined in node_modules/@types/mongoose/index.d.ts:3657
 
 Collection the model uses.
-
-___
-
-### `Optional` connected
-
-• **connected**? : *boolean*
-
-*Defined in [src/models/User.ts:14](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/models/User.ts#L14)*
 
 ___
 
@@ -91,18 +90,13 @@ Connection the model uses.
 
 ___
 
-### `Optional` id
+###  id
 
-• **id**? : *any*
+• **id**: *string*
 
-*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[id](_models_playlist_.iplaylistschema.md#optional-id)*
+*Overrides [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[id](_models_playlist_.iplaylistschema.md#optional-id)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:1624
-
-Virtual getter that by default returns the document's _id field cast to a string,
-or in the case of ObjectIds, its hexString. This id getter may be disabled by
-passing the option { id: false } at schema construction time. If disabled, id
-behaves like any other field on a document and can be assigned any value.
+*Defined in [src/models/Playlist.ts:57](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/models/Playlist.ts#L57)*
 
 ___
 
@@ -118,19 +112,11 @@ Schema the model uses.
 
 ___
 
-### `Optional` socketId
+###  title
 
-• **socketId**? : *string*
+• **title**: *string*
 
-*Defined in [src/models/User.ts:15](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/models/User.ts#L15)*
-
-___
-
-###  username
-
-• **username**: *string*
-
-*Defined in [src/models/User.ts:13](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/models/User.ts#L13)*
+*Defined in [src/models/Playlist.ts:58](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/models/Playlist.ts#L58)*
 
 ## Methods
 

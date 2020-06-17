@@ -1,48 +1,53 @@
-[korbots-server](../README.md) › ["models/User"](../modules/_models_user_.md) › [IUserSchema](_models_user_.iuserschema.md)
+[korbots-server](../README.md) › ["models/Music"](../modules/_models_music_.md) › [IMusicSchema](_models_music_.imusicschema.md)
 
-# Interface: IUserSchema
+# Interface: IMusicSchema
 
 ## Hierarchy
 
 * Document
 
-  ↳ **IUserSchema**
+  ↳ **IMusicSchema**
 
 ## Index
 
 ### Properties
 
-* [__v](_models_user_.iuserschema.md#optional-__v)
-* [collection](_models_user_.iuserschema.md#collection)
-* [connected](_models_user_.iuserschema.md#optional-connected)
-* [db](_models_user_.iuserschema.md#db)
-* [id](_models_user_.iuserschema.md#optional-id)
-* [schema](_models_user_.iuserschema.md#schema)
-* [socketId](_models_user_.iuserschema.md#optional-socketid)
-* [username](_models_user_.iuserschema.md#username)
+* [__v](_models_music_.imusicschema.md#optional-__v)
+* [collection](_models_music_.imusicschema.md#collection)
+* [db](_models_music_.imusicschema.md#db)
+* [duration](_models_music_.imusicschema.md#duration)
+* [id](_models_music_.imusicschema.md#optional-id)
+* [path](_models_music_.imusicschema.md#path)
+* [schema](_models_music_.imusicschema.md#schema)
+* [source](_models_music_.imusicschema.md#source)
+* [sourceId](_models_music_.imusicschema.md#sourceid)
+* [thumbnail](_models_music_.imusicschema.md#thumbnail)
+* [title](_models_music_.imusicschema.md#title)
 
 ### Methods
 
-* [$isDeleted](_models_user_.iuserschema.md#isdeleted)
-* [addListener](_models_user_.iuserschema.md#addlistener)
-* [emit](_models_user_.iuserschema.md#emit)
-* [eventNames](_models_user_.iuserschema.md#eventnames)
-* [getMaxListeners](_models_user_.iuserschema.md#getmaxlisteners)
-* [increment](_models_user_.iuserschema.md#increment)
-* [listenerCount](_models_user_.iuserschema.md#listenercount)
-* [listeners](_models_user_.iuserschema.md#listeners)
-* [model](_models_user_.iuserschema.md#model)
-* [off](_models_user_.iuserschema.md#off)
-* [on](_models_user_.iuserschema.md#on)
-* [once](_models_user_.iuserschema.md#once)
-* [prependListener](_models_user_.iuserschema.md#prependlistener)
-* [prependOnceListener](_models_user_.iuserschema.md#prependoncelistener)
-* [rawListeners](_models_user_.iuserschema.md#rawlisteners)
-* [remove](_models_user_.iuserschema.md#remove)
-* [removeAllListeners](_models_user_.iuserschema.md#removealllisteners)
-* [removeListener](_models_user_.iuserschema.md#removelistener)
-* [save](_models_user_.iuserschema.md#save)
-* [setMaxListeners](_models_user_.iuserschema.md#setmaxlisteners)
+* [$isDeleted](_models_music_.imusicschema.md#isdeleted)
+* [addListener](_models_music_.imusicschema.md#addlistener)
+* [addToPlaylist](_models_music_.imusicschema.md#addtoplaylist)
+* [addToPlaylists](_models_music_.imusicschema.md#addtoplaylists)
+* [emit](_models_music_.imusicschema.md#emit)
+* [eventNames](_models_music_.imusicschema.md#eventnames)
+* [getMaxListeners](_models_music_.imusicschema.md#getmaxlisteners)
+* [increment](_models_music_.imusicschema.md#increment)
+* [listenerCount](_models_music_.imusicschema.md#listenercount)
+* [listeners](_models_music_.imusicschema.md#listeners)
+* [model](_models_music_.imusicschema.md#model)
+* [off](_models_music_.imusicschema.md#off)
+* [on](_models_music_.imusicschema.md#on)
+* [once](_models_music_.imusicschema.md#once)
+* [prependListener](_models_music_.imusicschema.md#prependlistener)
+* [prependOnceListener](_models_music_.imusicschema.md#prependoncelistener)
+* [rawListeners](_models_music_.imusicschema.md#rawlisteners)
+* [remove](_models_music_.imusicschema.md#remove)
+* [removeAllListeners](_models_music_.imusicschema.md#removealllisteners)
+* [removeListener](_models_music_.imusicschema.md#removelistener)
+* [save](_models_music_.imusicschema.md#save)
+* [setMaxListeners](_models_music_.imusicschema.md#setmaxlisteners)
 
 ## Properties
 
@@ -71,14 +76,6 @@ Collection the model uses.
 
 ___
 
-### `Optional` connected
-
-• **connected**? : *boolean*
-
-*Defined in [src/models/User.ts:14](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/models/User.ts#L14)*
-
-___
-
 ###  db
 
 • **db**: *Connection*
@@ -88,6 +85,16 @@ ___
 Defined in node_modules/@types/mongoose/index.d.ts:3660
 
 Connection the model uses.
+
+___
+
+###  duration
+
+• **duration**: *number*
+
+*Defined in [src/models/Music.ts:24](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/models/Music.ts#L24)*
+
+Duration of the music
 
 ___
 
@@ -106,6 +113,16 @@ behaves like any other field on a document and can be assigned any value.
 
 ___
 
+###  path
+
+• **path**: *string*
+
+*Defined in [src/models/Music.ts:32](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/models/Music.ts#L32)*
+
+Path of the music in the internal storage
+
+___
+
 ###  schema
 
 • **schema**: *Schema*
@@ -118,19 +135,43 @@ Schema the model uses.
 
 ___
 
-### `Optional` socketId
+###  source
 
-• **socketId**? : *string*
+• **source**: *string*
 
-*Defined in [src/models/User.ts:15](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/models/User.ts#L15)*
+*Defined in [src/models/Music.ts:30](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/models/Music.ts#L30)*
+
+Source of the music
 
 ___
 
-###  username
+###  sourceId
 
-• **username**: *string*
+• **sourceId**: *string*
 
-*Defined in [src/models/User.ts:13](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/models/User.ts#L13)*
+*Defined in [src/models/Music.ts:28](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/models/Music.ts#L28)*
+
+ID of the Source of the music
+
+___
+
+###  thumbnail
+
+• **thumbnail**: *string*
+
+*Defined in [src/models/Music.ts:26](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/models/Music.ts#L26)*
+
+Thumbnail of the music
+
+___
+
+###  title
+
+• **title**: *string*
+
+*Defined in [src/models/Music.ts:22](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/models/Music.ts#L22)*
+
+Title of the music
 
 ## Methods
 
@@ -187,6 +228,38 @@ Name | Type |
 `...args` | any[] |
 
 **Returns:** *this*
+
+___
+
+###  addToPlaylist
+
+▸ **addToPlaylist**(`playlist`: string): *Promise‹[IPlaylistSchema](_models_playlist_.iplaylistschema.md)›*
+
+*Defined in [src/models/Music.ts:38](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/models/Music.ts#L38)*
+
+**Parameters:**
+
+Name | Type | Description |
+------ | ------ | ------ |
+`playlist` | string |   |
+
+**Returns:** *Promise‹[IPlaylistSchema](_models_playlist_.iplaylistschema.md)›*
+
+___
+
+###  addToPlaylists
+
+▸ **addToPlaylists**(`playlist`: string[]): *Promise‹[IPlaylistSchema](_models_playlist_.iplaylistschema.md)›*
+
+*Defined in [src/models/Music.ts:43](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/models/Music.ts#L43)*
+
+**Parameters:**
+
+Name | Type | Description |
+------ | ------ | ------ |
+`playlist` | string[] |   |
+
+**Returns:** *Promise‹[IPlaylistSchema](_models_playlist_.iplaylistschema.md)›*
 
 ___
 

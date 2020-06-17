@@ -1,6 +1,6 @@
-[korbots-server](../README.md) › ["models/User"](../modules/_models_user_.md) › [IUser](_models_user_.iuser.md)
+[korbots-server](../README.md) › ["models/Music"](../modules/_models_music_.md) › [IMusic](_models_music_.imusic.md)
 
-# Interface: IUser ‹**QueryHelpers**›
+# Interface: IMusic ‹**QueryHelpers**›
 
 ## Type parameters
 
@@ -8,92 +8,94 @@
 
 ## Hierarchy
 
-* [Model](_models_playlist_.iplaylist.md#model)‹[IUserSchema](_models_user_.iuserschema.md)›
+* [Model](_models_playlist_.iplaylist.md#model)‹[IMusicSchema](_models_music_.imusicschema.md)›
 
-  ↳ **IUser**
+  ↳ **IMusic**
 
 ## Index
 
 ### Events
 
-* [constructor](_models_user_.iuser.md#constructor)
+* [constructor](_models_music_.imusic.md#constructor)
 
 ### Properties
 
-* [Model](_models_user_.iuser.md#model)
-* [base](_models_user_.iuser.md#base)
-* [baseModelName](_models_user_.iuser.md#basemodelname)
-* [collection](_models_user_.iuser.md#collection)
-* [db](_models_user_.iuser.md#db)
-* [discriminators](_models_user_.iuser.md#discriminators)
-* [modelName](_models_user_.iuser.md#modelname)
-* [schema](_models_user_.iuser.md#schema)
+* [Model](_models_music_.imusic.md#model)
+* [base](_models_music_.imusic.md#base)
+* [baseModelName](_models_music_.imusic.md#basemodelname)
+* [collection](_models_music_.imusic.md#collection)
+* [db](_models_music_.imusic.md#db)
+* [discriminators](_models_music_.imusic.md#discriminators)
+* [modelName](_models_music_.imusic.md#modelname)
+* [schema](_models_music_.imusic.md#schema)
 
 ### Methods
 
-* [$where](_models_user_.iuser.md#where)
-* [addListener](_models_user_.iuser.md#addlistener)
-* [aggregate](_models_user_.iuser.md#aggregate)
-* [bulkWrite](_models_user_.iuser.md#bulkwrite)
-* [count](_models_user_.iuser.md#count)
-* [countDocuments](_models_user_.iuser.md#countdocuments)
-* [create](_models_user_.iuser.md#create)
-* [createCollection](_models_user_.iuser.md#createcollection)
-* [createIndexes](_models_user_.iuser.md#createindexes)
-* [deleteMany](_models_user_.iuser.md#deletemany)
-* [deleteOne](_models_user_.iuser.md#deleteone)
-* [discriminator](_models_user_.iuser.md#discriminator)
-* [distinct](_models_user_.iuser.md#distinct)
-* [doesExists](_models_user_.iuser.md#doesexists)
-* [emit](_models_user_.iuser.md#emit)
-* [ensureIndexes](_models_user_.iuser.md#ensureindexes)
-* [estimatedDocumentCount](_models_user_.iuser.md#estimateddocumentcount)
-* [eventNames](_models_user_.iuser.md#eventnames)
-* [exists](_models_user_.iuser.md#exists)
-* [find](_models_user_.iuser.md#find)
-* [findById](_models_user_.iuser.md#findbyid)
-* [findByIdAndDelete](_models_user_.iuser.md#findbyidanddelete)
-* [findByIdAndRemove](_models_user_.iuser.md#findbyidandremove)
-* [findByIdAndUpdate](_models_user_.iuser.md#findbyidandupdate)
-* [findOne](_models_user_.iuser.md#findone)
-* [findOneAndDelete](_models_user_.iuser.md#findoneanddelete)
-* [findOneAndRemove](_models_user_.iuser.md#findoneandremove)
-* [findOneAndUpdate](_models_user_.iuser.md#findoneandupdate)
-* [geoSearch](_models_user_.iuser.md#geosearch)
-* [getMaxListeners](_models_user_.iuser.md#getmaxlisteners)
-* [hydrate](_models_user_.iuser.md#hydrate)
-* [init](_models_user_.iuser.md#init)
-* [insertMany](_models_user_.iuser.md#insertmany)
-* [listIndexes](_models_user_.iuser.md#listindexes)
-* [listenerCount](_models_user_.iuser.md#listenercount)
-* [listeners](_models_user_.iuser.md#listeners)
-* [mapReduce](_models_user_.iuser.md#mapreduce)
-* [model](_models_user_.iuser.md#model)
-* [off](_models_user_.iuser.md#off)
-* [on](_models_user_.iuser.md#on)
-* [once](_models_user_.iuser.md#once)
-* [populate](_models_user_.iuser.md#populate)
-* [prependListener](_models_user_.iuser.md#prependlistener)
-* [prependOnceListener](_models_user_.iuser.md#prependoncelistener)
-* [rawListeners](_models_user_.iuser.md#rawlisteners)
-* [remove](_models_user_.iuser.md#remove)
-* [removeAllListeners](_models_user_.iuser.md#removealllisteners)
-* [removeListener](_models_user_.iuser.md#removelistener)
-* [replaceOne](_models_user_.iuser.md#replaceone)
-* [setMaxListeners](_models_user_.iuser.md#setmaxlisteners)
-* [syncIndexes](_models_user_.iuser.md#syncindexes)
-* [translateAliases](_models_user_.iuser.md#translatealiases)
-* [update](_models_user_.iuser.md#update)
-* [updateMany](_models_user_.iuser.md#updatemany)
-* [updateOne](_models_user_.iuser.md#updateone)
-* [watch](_models_user_.iuser.md#watch)
-* [where](_models_user_.iuser.md#where)
+* [$where](_models_music_.imusic.md#where)
+* [addListener](_models_music_.imusic.md#addlistener)
+* [aggregate](_models_music_.imusic.md#aggregate)
+* [bulkWrite](_models_music_.imusic.md#bulkwrite)
+* [count](_models_music_.imusic.md#count)
+* [countDocuments](_models_music_.imusic.md#countdocuments)
+* [create](_models_music_.imusic.md#create)
+* [createCollection](_models_music_.imusic.md#createcollection)
+* [createIndexes](_models_music_.imusic.md#createindexes)
+* [deleteMany](_models_music_.imusic.md#deletemany)
+* [deleteOne](_models_music_.imusic.md#deleteone)
+* [discriminator](_models_music_.imusic.md#discriminator)
+* [distinct](_models_music_.imusic.md#distinct)
+* [doesExist](_models_music_.imusic.md#doesexist)
+* [emit](_models_music_.imusic.md#emit)
+* [ensureIndexes](_models_music_.imusic.md#ensureindexes)
+* [estimatedDocumentCount](_models_music_.imusic.md#estimateddocumentcount)
+* [eventNames](_models_music_.imusic.md#eventnames)
+* [exists](_models_music_.imusic.md#exists)
+* [find](_models_music_.imusic.md#find)
+* [findById](_models_music_.imusic.md#findbyid)
+* [findByIdAndDelete](_models_music_.imusic.md#findbyidanddelete)
+* [findByIdAndRemove](_models_music_.imusic.md#findbyidandremove)
+* [findByIdAndUpdate](_models_music_.imusic.md#findbyidandupdate)
+* [findOne](_models_music_.imusic.md#findone)
+* [findOneAndDelete](_models_music_.imusic.md#findoneanddelete)
+* [findOneAndRemove](_models_music_.imusic.md#findoneandremove)
+* [findOneAndUpdate](_models_music_.imusic.md#findoneandupdate)
+* [findOneSong](_models_music_.imusic.md#findonesong)
+* [fromDownloaded](_models_music_.imusic.md#fromdownloaded)
+* [geoSearch](_models_music_.imusic.md#geosearch)
+* [getMaxListeners](_models_music_.imusic.md#getmaxlisteners)
+* [hydrate](_models_music_.imusic.md#hydrate)
+* [init](_models_music_.imusic.md#init)
+* [insertMany](_models_music_.imusic.md#insertmany)
+* [listIndexes](_models_music_.imusic.md#listindexes)
+* [listenerCount](_models_music_.imusic.md#listenercount)
+* [listeners](_models_music_.imusic.md#listeners)
+* [mapReduce](_models_music_.imusic.md#mapreduce)
+* [model](_models_music_.imusic.md#model)
+* [off](_models_music_.imusic.md#off)
+* [on](_models_music_.imusic.md#on)
+* [once](_models_music_.imusic.md#once)
+* [populate](_models_music_.imusic.md#populate)
+* [prependListener](_models_music_.imusic.md#prependlistener)
+* [prependOnceListener](_models_music_.imusic.md#prependoncelistener)
+* [rawListeners](_models_music_.imusic.md#rawlisteners)
+* [remove](_models_music_.imusic.md#remove)
+* [removeAllListeners](_models_music_.imusic.md#removealllisteners)
+* [removeListener](_models_music_.imusic.md#removelistener)
+* [replaceOne](_models_music_.imusic.md#replaceone)
+* [setMaxListeners](_models_music_.imusic.md#setmaxlisteners)
+* [syncIndexes](_models_music_.imusic.md#syncindexes)
+* [translateAliases](_models_music_.imusic.md#translatealiases)
+* [update](_models_music_.imusic.md#update)
+* [updateMany](_models_music_.imusic.md#updatemany)
+* [updateOne](_models_music_.imusic.md#updateone)
+* [watch](_models_music_.imusic.md#watch)
+* [where](_models_music_.imusic.md#where)
 
 ## Events
 
 ###  constructor
 
-• **new IUser**(`doc?`: any): *[IUserSchema](_models_user_.iuserschema.md)*
+• **new IMusic**(`doc?`: any): *[IMusicSchema](_models_music_.imusicschema.md)*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[constructor](_models_playlist_.iplaylist.md#constructor)*
 
@@ -108,7 +110,7 @@ Name | Type | Description |
 ------ | ------ | ------ |
 `doc?` | any | values with which to create the document |
 
-**Returns:** *[IUserSchema](_models_user_.iuserschema.md)*
+**Returns:** *[IMusicSchema](_models_music_.imusicschema.md)*
 
 ## Properties
 
@@ -207,7 +209,7 @@ Schema the model uses.
 
 ###  $where
 
-▸ **$where**(`argument`: string | Function): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md), [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **$where**(`argument`: string | Function): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md), [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[$where](_models_playlist_.iplaylist.md#where)*
 
@@ -221,7 +223,7 @@ Name | Type | Description |
 ------ | ------ | ------ |
 `argument` | string &#124; Function | is a javascript string or anonymous function  |
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md), [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md), [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
 ___
 
@@ -375,7 +377,7 @@ ___
 
 ###  count
 
-▸ **count**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `callback?`: function): *Query‹number› & QueryHelpers*
+▸ **count**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `callback?`: function): *Query‹number› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[count](_models_playlist_.iplaylist.md#count)*
 
@@ -385,7 +387,7 @@ Counts number of matching documents in a database collection.
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
 ▪`Optional`  **callback**: *function*
 
@@ -432,7 +434,7 @@ Name | Type |
 
 **Returns:** *Query‹number› & QueryHelpers*
 
-▸ **countDocuments**(`criteria`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `callback?`: function): *Query‹number› & QueryHelpers*
+▸ **countDocuments**(`criteria`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `callback?`: function): *Query‹number› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[countDocuments](_models_playlist_.iplaylist.md#countdocuments)*
 
@@ -440,7 +442,7 @@ Defined in node_modules/@types/mongoose/index.d.ts:3219
 
 **Parameters:**
 
-▪ **criteria**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **criteria**: *FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
 ▪`Optional`  **callback**: *function*
 
@@ -459,7 +461,7 @@ ___
 
 ###  create
 
-▸ **create**‹**TCreate**›(`doc`: CreateQuery‹TCreate›, `options?`: SaveOptions): *Promise‹[IUserSchema](_models_user_.iuserschema.md)›*
+▸ **create**‹**TCreate**›(`doc`: CreateQuery‹TCreate›, `options?`: SaveOptions): *Promise‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[create](_models_playlist_.iplaylist.md#create)*
 
@@ -480,9 +482,9 @@ Name | Type |
 `doc` | CreateQuery‹TCreate› |
 `options?` | SaveOptions |
 
-**Returns:** *Promise‹[IUserSchema](_models_user_.iuserschema.md)›*
+**Returns:** *Promise‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
-▸ **create**‹**TCreate**›(`doc`: CreateQuery‹TCreate›, `callback?`: function): *Promise‹[IUserSchema](_models_user_.iuserschema.md)›*
+▸ **create**‹**TCreate**›(`doc`: CreateQuery‹TCreate›, `callback?`: function): *Promise‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[create](_models_playlist_.iplaylist.md#create)*
 
@@ -498,18 +500,18 @@ Defined in node_modules/@types/mongoose/index.d.ts:3240
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md)[]): *void*
+▸ (`err`: any, `res`: [IMusicSchema](_models_music_.imusicschema.md)[]): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md)[] |
+`res` | [IMusicSchema](_models_music_.imusicschema.md)[] |
 
-**Returns:** *Promise‹[IUserSchema](_models_user_.iuserschema.md)›*
+**Returns:** *Promise‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
-▸ **create**‹**TCreate**›(`docs`: CreateQuery‹TCreate›[], `callback?`: function): *Promise‹[IUserSchema](_models_user_.iuserschema.md)[]›*
+▸ **create**‹**TCreate**›(`docs`: CreateQuery‹TCreate›[], `callback?`: function): *Promise‹[IMusicSchema](_models_music_.imusicschema.md)[]›*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[create](_models_playlist_.iplaylist.md#create)*
 
@@ -525,18 +527,18 @@ Defined in node_modules/@types/mongoose/index.d.ts:3241
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md)[]): *void*
+▸ (`err`: any, `res`: [IMusicSchema](_models_music_.imusicschema.md)[]): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md)[] |
+`res` | [IMusicSchema](_models_music_.imusicschema.md)[] |
 
-**Returns:** *Promise‹[IUserSchema](_models_user_.iuserschema.md)[]›*
+**Returns:** *Promise‹[IMusicSchema](_models_music_.imusicschema.md)[]›*
 
-▸ **create**‹**TCreate**›(`docs`: CreateQuery‹TCreate›[], `options?`: SaveOptions, `callback?`: function): *Promise‹[IUserSchema](_models_user_.iuserschema.md)[]›*
+▸ **create**‹**TCreate**›(`docs`: CreateQuery‹TCreate›[], `options?`: SaveOptions, `callback?`: function): *Promise‹[IMusicSchema](_models_music_.imusicschema.md)[]›*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[create](_models_playlist_.iplaylist.md#create)*
 
@@ -554,18 +556,18 @@ Defined in node_modules/@types/mongoose/index.d.ts:3242
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md)[]): *void*
+▸ (`err`: any, `res`: [IMusicSchema](_models_music_.imusicschema.md)[]): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md)[] |
+`res` | [IMusicSchema](_models_music_.imusicschema.md)[] |
 
-**Returns:** *Promise‹[IUserSchema](_models_user_.iuserschema.md)[]›*
+**Returns:** *Promise‹[IMusicSchema](_models_music_.imusicschema.md)[]›*
 
-▸ **create**‹**TCreate**›(...`docs`: CreateQuery‹TCreate›[]): *Promise‹[IUserSchema](_models_user_.iuserschema.md)›*
+▸ **create**‹**TCreate**›(...`docs`: CreateQuery‹TCreate›[]): *Promise‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[create](_models_playlist_.iplaylist.md#create)*
 
@@ -581,7 +583,7 @@ Name | Type |
 ------ | ------ |
 `...docs` | CreateQuery‹TCreate›[] |
 
-**Returns:** *Promise‹[IUserSchema](_models_user_.iuserschema.md)›*
+**Returns:** *Promise‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
 ___
 
@@ -644,7 +646,7 @@ ___
 
 ###  deleteMany
 
-▸ **deleteMany**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `callback?`: function): *Query‹DeleteWriteOpResultObject["result"] & object› & QueryHelpers*
+▸ **deleteMany**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `callback?`: function): *Query‹DeleteWriteOpResultObject["result"] & object› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[deleteMany](_models_playlist_.iplaylist.md#deletemany)*
 
@@ -652,7 +654,7 @@ Defined in node_modules/@types/mongoose/index.d.ts:3570
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
 ▪`Optional`  **callback**: *function*
 
@@ -666,7 +668,7 @@ Name | Type |
 
 **Returns:** *Query‹DeleteWriteOpResultObject["result"] & object› & QueryHelpers*
 
-▸ **deleteMany**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `options`: ModelOptions, `callback?`: function): *Query‹DeleteWriteOpResultObject["result"] & object› & QueryHelpers*
+▸ **deleteMany**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `options`: ModelOptions, `callback?`: function): *Query‹DeleteWriteOpResultObject["result"] & object› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[deleteMany](_models_playlist_.iplaylist.md#deletemany)*
 
@@ -674,7 +676,7 @@ Defined in node_modules/@types/mongoose/index.d.ts:3571
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
 ▪ **options**: *ModelOptions*
 
@@ -694,7 +696,7 @@ ___
 
 ###  deleteOne
 
-▸ **deleteOne**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `callback?`: function): *Query‹DeleteWriteOpResultObject["result"] & object› & QueryHelpers*
+▸ **deleteOne**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `callback?`: function): *Query‹DeleteWriteOpResultObject["result"] & object› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[deleteOne](_models_playlist_.iplaylist.md#deleteone)*
 
@@ -702,7 +704,7 @@ Defined in node_modules/@types/mongoose/index.d.ts:3568
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
 ▪`Optional`  **callback**: *function*
 
@@ -716,7 +718,7 @@ Name | Type |
 
 **Returns:** *Query‹DeleteWriteOpResultObject["result"] & object› & QueryHelpers*
 
-▸ **deleteOne**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `options`: ModelOptions, `callback?`: function): *Query‹DeleteWriteOpResultObject["result"] & object› & QueryHelpers*
+▸ **deleteOne**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `options`: ModelOptions, `callback?`: function): *Query‹DeleteWriteOpResultObject["result"] & object› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[deleteOne](_models_playlist_.iplaylist.md#deleteone)*
 
@@ -724,7 +726,7 @@ Defined in node_modules/@types/mongoose/index.d.ts:3569
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
 ▪ **options**: *ModelOptions*
 
@@ -846,19 +848,24 @@ Name | Type |
 
 ___
 
-###  doesExists
+###  doesExist
 
-▸ **doesExists**(`username`: string): *Promise‹boolean›*
+▸ **doesExist**(`source`: string, `sourceId`: string): *Promise‹boolean›*
 
-*Defined in [src/models/User.ts:19](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/models/User.ts#L19)*
+*Defined in [src/models/Music.ts:68](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/models/Music.ts#L68)*
+
+Search if a Music exists in the DataBase from it's source and sourceId
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`username` | string |
+Name | Type | Description |
+------ | ------ | ------ |
+`source` | string | Name of the source (eg: Youtube) |
+`sourceId` | string | ID of the music from the source |
 
 **Returns:** *Promise‹boolean›*
+
+A Promise of true if an entry exists, a Promise of false otherwise
 
 ___
 
@@ -996,7 +1003,7 @@ ___
 
 ###  exists
 
-▸ **exists**(`filter`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `callback?`: function): *Promise‹boolean›*
+▸ **exists**(`filter`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `callback?`: function): *Promise‹boolean›*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[exists](_models_playlist_.iplaylist.md#exists)*
 
@@ -1007,7 +1014,7 @@ the given `filter`, and false otherwise.
 
 **Parameters:**
 
-▪ **filter**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **filter**: *FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
 ▪`Optional`  **callback**: *function*
 
@@ -1026,7 +1033,7 @@ ___
 
 ###  find
 
-▸ **find**(`callback?`: function): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md)[], [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **find**(`callback?`: function): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md)[], [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[find](_models_playlist_.iplaylist.md#find)*
 
@@ -1038,18 +1045,18 @@ Finds documents.
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md)[]): *void*
+▸ (`err`: any, `res`: [IMusicSchema](_models_music_.imusicschema.md)[]): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md)[] |
+`res` | [IMusicSchema](_models_music_.imusicschema.md)[] |
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md)[], [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md)[], [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **find**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `callback?`: function): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md)[], [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **find**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `callback?`: function): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md)[], [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[find](_models_playlist_.iplaylist.md#find)*
 
@@ -1057,22 +1064,22 @@ Defined in node_modules/@types/mongoose/index.d.ts:3319
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md)[]): *void*
+▸ (`err`: any, `res`: [IMusicSchema](_models_music_.imusicschema.md)[]): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md)[] |
+`res` | [IMusicSchema](_models_music_.imusicschema.md)[] |
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md)[], [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md)[], [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **find**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `projection?`: any | null, `callback?`: function): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md)[], [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **find**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `projection?`: any | null, `callback?`: function): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md)[], [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[find](_models_playlist_.iplaylist.md#find)*
 
@@ -1080,24 +1087,24 @@ Defined in node_modules/@types/mongoose/index.d.ts:3320
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
 ▪`Optional`  **projection**: *any | null*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md)[]): *void*
+▸ (`err`: any, `res`: [IMusicSchema](_models_music_.imusicschema.md)[]): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md)[] |
+`res` | [IMusicSchema](_models_music_.imusicschema.md)[] |
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md)[], [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md)[], [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **find**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `projection?`: any | null, `options?`: object & Omit‹QueryFindOptions, "lean"›, `callback?`: function): *Query‹DocumentDefinition‹[IUserSchema](_models_user_.iuserschema.md)›[]› & QueryHelpers*
+▸ **find**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `projection?`: any | null, `options?`: object & Omit‹QueryFindOptions, "lean"›, `callback?`: function): *Query‹DocumentDefinition‹[IMusicSchema](_models_music_.imusicschema.md)›[]› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[find](_models_playlist_.iplaylist.md#find)*
 
@@ -1105,7 +1112,7 @@ Defined in node_modules/@types/mongoose/index.d.ts:3322
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
 ▪`Optional`  **projection**: *any | null*
 
@@ -1113,18 +1120,18 @@ Defined in node_modules/@types/mongoose/index.d.ts:3322
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md)[]): *void*
+▸ (`err`: any, `res`: [IMusicSchema](_models_music_.imusicschema.md)[]): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md)[] |
+`res` | [IMusicSchema](_models_music_.imusicschema.md)[] |
 
-**Returns:** *Query‹DocumentDefinition‹[IUserSchema](_models_user_.iuserschema.md)›[]› & QueryHelpers*
+**Returns:** *Query‹DocumentDefinition‹[IMusicSchema](_models_music_.imusicschema.md)›[]› & QueryHelpers*
 
-▸ **find**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `projection?`: any | null, `options?`: QueryFindOptions, `callback?`: function): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md)[], [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **find**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `projection?`: any | null, `options?`: QueryFindOptions, `callback?`: function): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md)[], [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[find](_models_playlist_.iplaylist.md#find)*
 
@@ -1132,7 +1139,7 @@ Defined in node_modules/@types/mongoose/index.d.ts:3324
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
 ▪`Optional`  **projection**: *any | null*
 
@@ -1140,22 +1147,22 @@ Defined in node_modules/@types/mongoose/index.d.ts:3324
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md)[]): *void*
+▸ (`err`: any, `res`: [IMusicSchema](_models_music_.imusicschema.md)[]): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md)[] |
+`res` | [IMusicSchema](_models_music_.imusicschema.md)[] |
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md)[], [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md)[], [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
 ___
 
 ###  findById
 
-▸ **findById**(`id`: any | string | number, `callback?`: function): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **findById**(`id`: any | string | number, `callback?`: function): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findById](_models_playlist_.iplaylist.md#findbyid)*
 
@@ -1172,18 +1179,18 @@ value of _id to query by
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md) | null): *void*
+▸ (`err`: any, `res`: [IMusicSchema](_models_music_.imusicschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md) &#124; null |
+`res` | [IMusicSchema](_models_music_.imusicschema.md) &#124; null |
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findById**(`id`: any | string | number, `projection`: any, `callback?`: function): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **findById**(`id`: any | string | number, `projection`: any, `callback?`: function): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findById](_models_playlist_.iplaylist.md#findbyid)*
 
@@ -1197,18 +1204,18 @@ Defined in node_modules/@types/mongoose/index.d.ts:3335
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md) | null): *void*
+▸ (`err`: any, `res`: [IMusicSchema](_models_music_.imusicschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md) &#124; null |
+`res` | [IMusicSchema](_models_music_.imusicschema.md) &#124; null |
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findById**(`id`: any | string | number, `projection`: any, `options`: object & Omit‹QueryFindBaseOptions, "lean"›, `callback?`: function): *Query‹DocumentDefinition‹[IUserSchema](_models_user_.iuserschema.md)›› & QueryHelpers*
+▸ **findById**(`id`: any | string | number, `projection`: any, `options`: object & Omit‹QueryFindBaseOptions, "lean"›, `callback?`: function): *Query‹DocumentDefinition‹[IMusicSchema](_models_music_.imusicschema.md)›› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findById](_models_playlist_.iplaylist.md#findbyid)*
 
@@ -1224,18 +1231,18 @@ Defined in node_modules/@types/mongoose/index.d.ts:3337
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md) | null): *void*
+▸ (`err`: any, `res`: [IMusicSchema](_models_music_.imusicschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md) &#124; null |
+`res` | [IMusicSchema](_models_music_.imusicschema.md) &#124; null |
 
-**Returns:** *Query‹DocumentDefinition‹[IUserSchema](_models_user_.iuserschema.md)›› & QueryHelpers*
+**Returns:** *Query‹DocumentDefinition‹[IMusicSchema](_models_music_.imusicschema.md)›› & QueryHelpers*
 
-▸ **findById**(`id`: any | string | number, `projection`: any, `options`: QueryFindBaseOptions, `callback?`: function): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **findById**(`id`: any | string | number, `projection`: any, `options`: QueryFindBaseOptions, `callback?`: function): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findById](_models_playlist_.iplaylist.md#findbyid)*
 
@@ -1251,22 +1258,22 @@ Defined in node_modules/@types/mongoose/index.d.ts:3339
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md) | null): *void*
+▸ (`err`: any, `res`: [IMusicSchema](_models_music_.imusicschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md) &#124; null |
+`res` | [IMusicSchema](_models_music_.imusicschema.md) &#124; null |
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
 ___
 
 ###  findByIdAndDelete
 
-▸ **findByIdAndDelete**(): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **findByIdAndDelete**(): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findByIdAndDelete](_models_playlist_.iplaylist.md#findbyidanddelete)*
 
@@ -1279,9 +1286,9 @@ Executes immediately if callback is passed, else a Query object is returned.
 
 Note: same signatures as findByIdAndRemove
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findByIdAndDelete**(`id`: any | number | string, `callback?`: function): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **findByIdAndDelete**(`id`: any | number | string, `callback?`: function): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findByIdAndDelete](_models_playlist_.iplaylist.md#findbyidanddelete)*
 
@@ -1293,18 +1300,18 @@ Defined in node_modules/@types/mongoose/index.d.ts:3375
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md) | null): *void*
+▸ (`err`: any, `res`: [IMusicSchema](_models_music_.imusicschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md) &#124; null |
+`res` | [IMusicSchema](_models_music_.imusicschema.md) &#124; null |
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findByIdAndDelete**(`id`: any | number | string, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md) | null›› & QueryHelpers*
+▸ **findByIdAndDelete**(`id`: any | number | string, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IMusicSchema](_models_music_.imusicschema.md) | null›› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findByIdAndDelete](_models_playlist_.iplaylist.md#findbyidanddelete)*
 
@@ -1318,18 +1325,18 @@ Defined in node_modules/@types/mongoose/index.d.ts:3377
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md) | null›): *void*
+▸ (`err`: any, `res`: FindAndModifyWriteOpResultObject‹[IMusicSchema](_models_music_.imusicschema.md) | null›): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md) &#124; null› |
+`res` | FindAndModifyWriteOpResultObject‹[IMusicSchema](_models_music_.imusicschema.md) &#124; null› |
 
-**Returns:** *Query‹FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md) | null›› & QueryHelpers*
+**Returns:** *Query‹FindAndModifyWriteOpResultObject‹[IMusicSchema](_models_music_.imusicschema.md) | null›› & QueryHelpers*
 
-▸ **findByIdAndDelete**(`id`: any | number | string, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **findByIdAndDelete**(`id`: any | number | string, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findByIdAndDelete](_models_playlist_.iplaylist.md#findbyidanddelete)*
 
@@ -1343,22 +1350,22 @@ Defined in node_modules/@types/mongoose/index.d.ts:3380
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md) | null): *void*
+▸ (`err`: any, `res`: [IMusicSchema](_models_music_.imusicschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md) &#124; null |
+`res` | [IMusicSchema](_models_music_.imusicschema.md) &#124; null |
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
 ___
 
 ###  findByIdAndRemove
 
-▸ **findByIdAndRemove**(): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **findByIdAndRemove**(): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findByIdAndRemove](_models_playlist_.iplaylist.md#findbyidandremove)*
 
@@ -1374,9 +1381,9 @@ https://mongoosejs.com/docs/api.html#mongoose_Mongoose-set
 
 Note: same signatures as findByIdAndDelete
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findByIdAndRemove**(`id`: any | number | string, `callback?`: function): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **findByIdAndRemove**(`id`: any | number | string, `callback?`: function): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findByIdAndRemove](_models_playlist_.iplaylist.md#findbyidandremove)*
 
@@ -1388,18 +1395,18 @@ Defined in node_modules/@types/mongoose/index.d.ts:3356
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md) | null): *void*
+▸ (`err`: any, `res`: [IMusicSchema](_models_music_.imusicschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md) &#124; null |
+`res` | [IMusicSchema](_models_music_.imusicschema.md) &#124; null |
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findByIdAndRemove**(`id`: any | number | string, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md) | null›› & QueryHelpers*
+▸ **findByIdAndRemove**(`id`: any | number | string, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IMusicSchema](_models_music_.imusicschema.md) | null›› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findByIdAndRemove](_models_playlist_.iplaylist.md#findbyidandremove)*
 
@@ -1413,18 +1420,18 @@ Defined in node_modules/@types/mongoose/index.d.ts:3358
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md) | null›): *void*
+▸ (`err`: any, `res`: FindAndModifyWriteOpResultObject‹[IMusicSchema](_models_music_.imusicschema.md) | null›): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md) &#124; null› |
+`res` | FindAndModifyWriteOpResultObject‹[IMusicSchema](_models_music_.imusicschema.md) &#124; null› |
 
-**Returns:** *Query‹FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md) | null›› & QueryHelpers*
+**Returns:** *Query‹FindAndModifyWriteOpResultObject‹[IMusicSchema](_models_music_.imusicschema.md) | null›› & QueryHelpers*
 
-▸ **findByIdAndRemove**(`id`: any | number | string, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **findByIdAndRemove**(`id`: any | number | string, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findByIdAndRemove](_models_playlist_.iplaylist.md#findbyidandremove)*
 
@@ -1438,22 +1445,22 @@ Defined in node_modules/@types/mongoose/index.d.ts:3361
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md) | null): *void*
+▸ (`err`: any, `res`: [IMusicSchema](_models_music_.imusicschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md) &#124; null |
+`res` | [IMusicSchema](_models_music_.imusicschema.md) &#124; null |
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
 ___
 
 ###  findByIdAndUpdate
 
-▸ **findByIdAndUpdate**(): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **findByIdAndUpdate**(): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findByIdAndUpdate](_models_playlist_.iplaylist.md#findbyidandupdate)*
 
@@ -1465,9 +1472,9 @@ is equivalent to findOneAndUpdate({ _id: id }, ...).
 If mongoose option 'useFindAndModify': set to false it uses native findOneAndUpdate() rather than deprecated findAndModify().
 https://mongoosejs.com/docs/api.html#mongoose_Mongoose-set
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `callback?`: function): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `callback?`: function): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findByIdAndUpdate](_models_playlist_.iplaylist.md#findbyidandupdate)*
 
@@ -1477,22 +1484,22 @@ Defined in node_modules/@types/mongoose/index.d.ts:3392
 
 ▪ **id**: *any | number | string*
 
-▪ **update**: *UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **update**: *UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md) | null): *void*
+▸ (`err`: any, `res`: [IMusicSchema](_models_music_.imusicschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md) &#124; null |
+`res` | [IMusicSchema](_models_music_.imusicschema.md) &#124; null |
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `options`: object & object & object & QueryFindOneAndUpdateOptions, `callback?`: function): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md), [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `options`: object & object & object & QueryFindOneAndUpdateOptions, `callback?`: function): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md), [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findByIdAndUpdate](_models_playlist_.iplaylist.md#findbyidandupdate)*
 
@@ -1502,24 +1509,24 @@ Defined in node_modules/@types/mongoose/index.d.ts:3394
 
 ▪ **id**: *any | number | string*
 
-▪ **update**: *UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **update**: *UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
 ▪ **options**: *object & object & object & QueryFindOneAndUpdateOptions*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md)): *void*
+▸ (`err`: any, `res`: [IMusicSchema](_models_music_.imusicschema.md)): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md) |
+`res` | [IMusicSchema](_models_music_.imusicschema.md) |
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md), [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md), [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `options`: object & QueryFindOneAndUpdateOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md)›› & QueryHelpers*
+▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `options`: object & QueryFindOneAndUpdateOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IMusicSchema](_models_music_.imusicschema.md)›› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findByIdAndUpdate](_models_playlist_.iplaylist.md#findbyidandupdate)*
 
@@ -1529,24 +1536,24 @@ Defined in node_modules/@types/mongoose/index.d.ts:3397
 
 ▪ **id**: *any | number | string*
 
-▪ **update**: *UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **update**: *UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
 ▪ **options**: *object & QueryFindOneAndUpdateOptions*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md)›): *void*
+▸ (`err`: any, `res`: FindAndModifyWriteOpResultObject‹[IMusicSchema](_models_music_.imusicschema.md)›): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md)› |
+`res` | FindAndModifyWriteOpResultObject‹[IMusicSchema](_models_music_.imusicschema.md)› |
 
-**Returns:** *Query‹FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md)›› & QueryHelpers*
+**Returns:** *Query‹FindAndModifyWriteOpResultObject‹[IMusicSchema](_models_music_.imusicschema.md)›› & QueryHelpers*
 
-▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `options`: object & QueryFindOneAndUpdateOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md) | null›› & QueryHelpers*
+▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `options`: object & QueryFindOneAndUpdateOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IMusicSchema](_models_music_.imusicschema.md) | null›› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findByIdAndUpdate](_models_playlist_.iplaylist.md#findbyidandupdate)*
 
@@ -1556,24 +1563,24 @@ Defined in node_modules/@types/mongoose/index.d.ts:3401
 
 ▪ **id**: *any | number | string*
 
-▪ **update**: *UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **update**: *UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
 ▪ **options**: *object & QueryFindOneAndUpdateOptions*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md) | null›): *void*
+▸ (`err`: any, `res`: FindAndModifyWriteOpResultObject‹[IMusicSchema](_models_music_.imusicschema.md) | null›): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md) &#124; null› |
+`res` | FindAndModifyWriteOpResultObject‹[IMusicSchema](_models_music_.imusicschema.md) &#124; null› |
 
-**Returns:** *Query‹FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md) | null›› & QueryHelpers*
+**Returns:** *Query‹FindAndModifyWriteOpResultObject‹[IMusicSchema](_models_music_.imusicschema.md) | null›› & QueryHelpers*
 
-▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `options`: object & Omit‹QueryFindOneAndUpdateOptions, "lean"›, `callback?`: function): *Query‹DocumentDefinition‹[IUserSchema](_models_user_.iuserschema.md)›› & QueryHelpers*
+▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `options`: object & Omit‹QueryFindOneAndUpdateOptions, "lean"›, `callback?`: function): *Query‹DocumentDefinition‹[IMusicSchema](_models_music_.imusicschema.md)›› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findByIdAndUpdate](_models_playlist_.iplaylist.md#findbyidandupdate)*
 
@@ -1583,24 +1590,24 @@ Defined in node_modules/@types/mongoose/index.d.ts:3405
 
 ▪ **id**: *any | number | string*
 
-▪ **update**: *UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **update**: *UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
 ▪ **options**: *object & Omit‹QueryFindOneAndUpdateOptions, "lean"›*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: DocumentDefinition‹[IUserSchema](_models_user_.iuserschema.md)›): *void*
+▸ (`err`: any, `res`: DocumentDefinition‹[IMusicSchema](_models_music_.imusicschema.md)›): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | DocumentDefinition‹[IUserSchema](_models_user_.iuserschema.md)› |
+`res` | DocumentDefinition‹[IMusicSchema](_models_music_.imusicschema.md)› |
 
-**Returns:** *Query‹DocumentDefinition‹[IUserSchema](_models_user_.iuserschema.md)›› & QueryHelpers*
+**Returns:** *Query‹DocumentDefinition‹[IMusicSchema](_models_music_.imusicschema.md)›› & QueryHelpers*
 
-▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `options`: QueryFindOneAndUpdateOptions, `callback?`: function): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `options`: QueryFindOneAndUpdateOptions, `callback?`: function): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findByIdAndUpdate](_models_playlist_.iplaylist.md#findbyidandupdate)*
 
@@ -1610,28 +1617,28 @@ Defined in node_modules/@types/mongoose/index.d.ts:3409
 
 ▪ **id**: *any | number | string*
 
-▪ **update**: *UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **update**: *UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
 ▪ **options**: *QueryFindOneAndUpdateOptions*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md) | null): *void*
+▸ (`err`: any, `res`: [IMusicSchema](_models_music_.imusicschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md) &#124; null |
+`res` | [IMusicSchema](_models_music_.imusicschema.md) &#124; null |
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
 ___
 
 ###  findOne
 
-▸ **findOne**(`conditions?`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `callback?`: function): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **findOne**(`conditions?`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `callback?`: function): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOne](_models_playlist_.iplaylist.md#findone)*
 
@@ -1642,22 +1649,22 @@ The conditions are cast to their respective SchemaTypes before the command is se
 
 **Parameters:**
 
-▪`Optional`  **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪`Optional`  **conditions**: *FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md) | null): *void*
+▸ (`err`: any, `res`: [IMusicSchema](_models_music_.imusicschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md) &#124; null |
+`res` | [IMusicSchema](_models_music_.imusicschema.md) &#124; null |
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findOne**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `projection`: any, `callback?`: function): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **findOne**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `projection`: any, `callback?`: function): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOne](_models_playlist_.iplaylist.md#findone)*
 
@@ -1665,24 +1672,24 @@ Defined in node_modules/@types/mongoose/index.d.ts:3420
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
 ▪ **projection**: *any*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md) | null): *void*
+▸ (`err`: any, `res`: [IMusicSchema](_models_music_.imusicschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md) &#124; null |
+`res` | [IMusicSchema](_models_music_.imusicschema.md) &#124; null |
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findOne**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `projection`: any, `options`: object & Omit‹QueryFindBaseOptions, "lean"›, `callback?`: function): *Query‹DocumentDefinition‹[IUserSchema](_models_user_.iuserschema.md)›› & QueryHelpers*
+▸ **findOne**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `projection`: any, `options`: object & Omit‹QueryFindBaseOptions, "lean"›, `callback?`: function): *Query‹DocumentDefinition‹[IMusicSchema](_models_music_.imusicschema.md)›› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOne](_models_playlist_.iplaylist.md#findone)*
 
@@ -1690,7 +1697,7 @@ Defined in node_modules/@types/mongoose/index.d.ts:3422
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
 ▪ **projection**: *any*
 
@@ -1698,18 +1705,18 @@ Defined in node_modules/@types/mongoose/index.d.ts:3422
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md) | null): *void*
+▸ (`err`: any, `res`: [IMusicSchema](_models_music_.imusicschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md) &#124; null |
+`res` | [IMusicSchema](_models_music_.imusicschema.md) &#124; null |
 
-**Returns:** *Query‹DocumentDefinition‹[IUserSchema](_models_user_.iuserschema.md)›› & QueryHelpers*
+**Returns:** *Query‹DocumentDefinition‹[IMusicSchema](_models_music_.imusicschema.md)›› & QueryHelpers*
 
-▸ **findOne**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `projection`: any, `options`: QueryFindBaseOptions, `callback?`: function): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **findOne**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `projection`: any, `options`: QueryFindBaseOptions, `callback?`: function): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOne](_models_playlist_.iplaylist.md#findone)*
 
@@ -1717,7 +1724,7 @@ Defined in node_modules/@types/mongoose/index.d.ts:3424
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
 ▪ **projection**: *any*
 
@@ -1725,22 +1732,22 @@ Defined in node_modules/@types/mongoose/index.d.ts:3424
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md) | null): *void*
+▸ (`err`: any, `res`: [IMusicSchema](_models_music_.imusicschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md) &#124; null |
+`res` | [IMusicSchema](_models_music_.imusicschema.md) &#124; null |
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
 ___
 
 ###  findOneAndDelete
 
-▸ **findOneAndDelete**(): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **findOneAndDelete**(): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOneAndDelete](_models_playlist_.iplaylist.md#findoneanddelete)*
 
@@ -1752,9 +1759,9 @@ callback. Executes immediately if callback is passed.
 
 Note: same signatures as findOneAndRemove
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findOneAndDelete**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `callback?`: function): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **findOneAndDelete**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `callback?`: function): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOneAndDelete](_models_playlist_.iplaylist.md#findoneanddelete)*
 
@@ -1762,22 +1769,22 @@ Defined in node_modules/@types/mongoose/index.d.ts:3455
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md) | null): *void*
+▸ (`err`: any, `res`: [IMusicSchema](_models_music_.imusicschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md) &#124; null |
+`res` | [IMusicSchema](_models_music_.imusicschema.md) &#124; null |
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findOneAndDelete**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `options`: object & QueryFindOneAndRemoveOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md) | null›› & QueryHelpers*
+▸ **findOneAndDelete**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `options`: object & QueryFindOneAndRemoveOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IMusicSchema](_models_music_.imusicschema.md) | null›› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOneAndDelete](_models_playlist_.iplaylist.md#findoneanddelete)*
 
@@ -1785,25 +1792,25 @@ Defined in node_modules/@types/mongoose/index.d.ts:3457
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
 ▪ **options**: *object & QueryFindOneAndRemoveOptions*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `doc`: FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md) | null›, `res`: any): *void*
+▸ (`err`: any, `doc`: FindAndModifyWriteOpResultObject‹[IMusicSchema](_models_music_.imusicschema.md) | null›, `res`: any): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`doc` | FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md) &#124; null› |
+`doc` | FindAndModifyWriteOpResultObject‹[IMusicSchema](_models_music_.imusicschema.md) &#124; null› |
 `res` | any |
 
-**Returns:** *Query‹FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md) | null›› & QueryHelpers*
+**Returns:** *Query‹FindAndModifyWriteOpResultObject‹[IMusicSchema](_models_music_.imusicschema.md) | null›› & QueryHelpers*
 
-▸ **findOneAndDelete**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **findOneAndDelete**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOneAndDelete](_models_playlist_.iplaylist.md#findoneanddelete)*
 
@@ -1811,28 +1818,28 @@ Defined in node_modules/@types/mongoose/index.d.ts:3460
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
 ▪ **options**: *QueryFindOneAndRemoveOptions*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md) | null): *void*
+▸ (`err`: any, `res`: [IMusicSchema](_models_music_.imusicschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md) &#124; null |
+`res` | [IMusicSchema](_models_music_.imusicschema.md) &#124; null |
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
 ___
 
 ###  findOneAndRemove
 
-▸ **findOneAndRemove**(): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **findOneAndRemove**(): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOneAndRemove](_models_playlist_.iplaylist.md#findoneandremove)*
 
@@ -1847,9 +1854,9 @@ https://mongoosejs.com/docs/api.html#mongoose_Mongoose-set
 
 Note: same signatures as findOneAndDelete
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findOneAndRemove**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `callback?`: function): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **findOneAndRemove**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `callback?`: function): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOneAndRemove](_models_playlist_.iplaylist.md#findoneandremove)*
 
@@ -1857,22 +1864,22 @@ Defined in node_modules/@types/mongoose/index.d.ts:3439
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md) | null): *void*
+▸ (`err`: any, `res`: [IMusicSchema](_models_music_.imusicschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md) &#124; null |
+`res` | [IMusicSchema](_models_music_.imusicschema.md) &#124; null |
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findOneAndRemove**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `options`: object & QueryFindOneAndRemoveOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md) | null›› & QueryHelpers*
+▸ **findOneAndRemove**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `options`: object & QueryFindOneAndRemoveOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IMusicSchema](_models_music_.imusicschema.md) | null›› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOneAndRemove](_models_playlist_.iplaylist.md#findoneandremove)*
 
@@ -1880,25 +1887,25 @@ Defined in node_modules/@types/mongoose/index.d.ts:3441
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
 ▪ **options**: *object & QueryFindOneAndRemoveOptions*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `doc`: FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md) | null›, `res`: any): *void*
+▸ (`err`: any, `doc`: FindAndModifyWriteOpResultObject‹[IMusicSchema](_models_music_.imusicschema.md) | null›, `res`: any): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`doc` | FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md) &#124; null› |
+`doc` | FindAndModifyWriteOpResultObject‹[IMusicSchema](_models_music_.imusicschema.md) &#124; null› |
 `res` | any |
 
-**Returns:** *Query‹FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md) | null›› & QueryHelpers*
+**Returns:** *Query‹FindAndModifyWriteOpResultObject‹[IMusicSchema](_models_music_.imusicschema.md) | null›› & QueryHelpers*
 
-▸ **findOneAndRemove**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **findOneAndRemove**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOneAndRemove](_models_playlist_.iplaylist.md#findoneandremove)*
 
@@ -1906,28 +1913,28 @@ Defined in node_modules/@types/mongoose/index.d.ts:3444
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
 ▪ **options**: *QueryFindOneAndRemoveOptions*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md) | null): *void*
+▸ (`err`: any, `res`: [IMusicSchema](_models_music_.imusicschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md) &#124; null |
+`res` | [IMusicSchema](_models_music_.imusicschema.md) &#124; null |
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
 ___
 
 ###  findOneAndUpdate
 
-▸ **findOneAndUpdate**(): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **findOneAndUpdate**(): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOneAndUpdate](_models_playlist_.iplaylist.md#findoneandupdate)*
 
@@ -1941,9 +1948,9 @@ if callback is passed else a Query object is returned.
 If mongoose option 'useFindAndModify': set to false it uses native findOneAndUpdate() rather than the deprecated findAndModify().
 https://mongoosejs.com/docs/api.html#mongoose_Mongoose-set
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `update`: UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `callback?`: function): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `update`: UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `callback?`: function): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOneAndUpdate](_models_playlist_.iplaylist.md#findoneandupdate)*
 
@@ -1951,25 +1958,25 @@ Defined in node_modules/@types/mongoose/index.d.ts:3472
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
-▪ **update**: *UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **update**: *UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `doc`: [IUserSchema](_models_user_.iuserschema.md) | null, `res`: any): *void*
+▸ (`err`: any, `doc`: [IMusicSchema](_models_music_.imusicschema.md) | null, `res`: any): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`doc` | [IUserSchema](_models_user_.iuserschema.md) &#124; null |
+`doc` | [IMusicSchema](_models_music_.imusicschema.md) &#124; null |
 `res` | any |
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `update`: UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `options`: object & object & QueryFindOneAndUpdateOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md)›› & QueryHelpers*
+▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `update`: UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `options`: object & object & QueryFindOneAndUpdateOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IMusicSchema](_models_music_.imusicschema.md)›› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOneAndUpdate](_models_playlist_.iplaylist.md#findoneandupdate)*
 
@@ -1977,27 +1984,27 @@ Defined in node_modules/@types/mongoose/index.d.ts:3474
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
-▪ **update**: *UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **update**: *UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
 ▪ **options**: *object & object & QueryFindOneAndUpdateOptions*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `doc`: FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md)›, `res`: any): *void*
+▸ (`err`: any, `doc`: FindAndModifyWriteOpResultObject‹[IMusicSchema](_models_music_.imusicschema.md)›, `res`: any): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`doc` | FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md)› |
+`doc` | FindAndModifyWriteOpResultObject‹[IMusicSchema](_models_music_.imusicschema.md)› |
 `res` | any |
 
-**Returns:** *Query‹FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md)›› & QueryHelpers*
+**Returns:** *Query‹FindAndModifyWriteOpResultObject‹[IMusicSchema](_models_music_.imusicschema.md)›› & QueryHelpers*
 
-▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `update`: UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `options`: object & QueryFindOneAndUpdateOptions, `callback?`: function): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md), [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `update`: UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `options`: object & QueryFindOneAndUpdateOptions, `callback?`: function): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md), [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOneAndUpdate](_models_playlist_.iplaylist.md#findoneandupdate)*
 
@@ -2005,27 +2012,27 @@ Defined in node_modules/@types/mongoose/index.d.ts:3478
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
-▪ **update**: *UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **update**: *UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
 ▪ **options**: *object & QueryFindOneAndUpdateOptions*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `doc`: [IUserSchema](_models_user_.iuserschema.md), `res`: any): *void*
+▸ (`err`: any, `doc`: [IMusicSchema](_models_music_.imusicschema.md), `res`: any): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`doc` | [IUserSchema](_models_user_.iuserschema.md) |
+`doc` | [IMusicSchema](_models_music_.imusicschema.md) |
 `res` | any |
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md), [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md), [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `update`: UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `options`: object & QueryFindOneAndUpdateOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md) | null›› & QueryHelpers*
+▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `update`: UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `options`: object & QueryFindOneAndUpdateOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IMusicSchema](_models_music_.imusicschema.md) | null›› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOneAndUpdate](_models_playlist_.iplaylist.md#findoneandupdate)*
 
@@ -2033,27 +2040,27 @@ Defined in node_modules/@types/mongoose/index.d.ts:3481
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
-▪ **update**: *UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **update**: *UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
 ▪ **options**: *object & QueryFindOneAndUpdateOptions*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `doc`: FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md) | null›, `res`: any): *void*
+▸ (`err`: any, `doc`: FindAndModifyWriteOpResultObject‹[IMusicSchema](_models_music_.imusicschema.md) | null›, `res`: any): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`doc` | FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md) &#124; null› |
+`doc` | FindAndModifyWriteOpResultObject‹[IMusicSchema](_models_music_.imusicschema.md) &#124; null› |
 `res` | any |
 
-**Returns:** *Query‹FindAndModifyWriteOpResultObject‹[IUserSchema](_models_user_.iuserschema.md) | null›› & QueryHelpers*
+**Returns:** *Query‹FindAndModifyWriteOpResultObject‹[IMusicSchema](_models_music_.imusicschema.md) | null›› & QueryHelpers*
 
-▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `update`: UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `options`: object & Omit‹QueryFindOneAndUpdateOptions, "lean"›, `callback?`: function): *Query‹DocumentDefinition‹[IUserSchema](_models_user_.iuserschema.md)›› & QueryHelpers*
+▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `update`: UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `options`: object & Omit‹QueryFindOneAndUpdateOptions, "lean"›, `callback?`: function): *Query‹DocumentDefinition‹[IMusicSchema](_models_music_.imusicschema.md)›› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOneAndUpdate](_models_playlist_.iplaylist.md#findoneandupdate)*
 
@@ -2061,27 +2068,27 @@ Defined in node_modules/@types/mongoose/index.d.ts:3485
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
-▪ **update**: *UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **update**: *UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
 ▪ **options**: *object & Omit‹QueryFindOneAndUpdateOptions, "lean"›*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `doc`: DocumentDefinition‹[IUserSchema](_models_user_.iuserschema.md)›, `res`: any): *void*
+▸ (`err`: any, `doc`: DocumentDefinition‹[IMusicSchema](_models_music_.imusicschema.md)›, `res`: any): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`doc` | DocumentDefinition‹[IUserSchema](_models_user_.iuserschema.md)› |
+`doc` | DocumentDefinition‹[IMusicSchema](_models_music_.imusicschema.md)› |
 `res` | any |
 
-**Returns:** *Query‹DocumentDefinition‹[IUserSchema](_models_user_.iuserschema.md)›› & QueryHelpers*
+**Returns:** *Query‹DocumentDefinition‹[IMusicSchema](_models_music_.imusicschema.md)›› & QueryHelpers*
 
-▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `update`: UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `options`: QueryFindOneAndUpdateOptions, `callback?`: function): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `update`: UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `options`: QueryFindOneAndUpdateOptions, `callback?`: function): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOneAndUpdate](_models_playlist_.iplaylist.md#findoneandupdate)*
 
@@ -2089,31 +2096,72 @@ Defined in node_modules/@types/mongoose/index.d.ts:3488
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
-▪ **update**: *UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **update**: *UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
 ▪ **options**: *QueryFindOneAndUpdateOptions*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `doc`: [IUserSchema](_models_user_.iuserschema.md) | null, `res`: any): *void*
+▸ (`err`: any, `doc`: [IMusicSchema](_models_music_.imusicschema.md) | null, `res`: any): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`doc` | [IUserSchema](_models_user_.iuserschema.md) &#124; null |
+`doc` | [IMusicSchema](_models_music_.imusicschema.md) &#124; null |
 `res` | any |
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md) | null, [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
+
+___
+
+###  findOneSong
+
+▸ **findOneSong**(`source`: string, `sourceId`: string): *Promise‹[IMusicSchema](_models_music_.imusicschema.md)›*
+
+*Defined in [src/models/Music.ts:61](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/models/Music.ts#L61)*
+
+Get the Music Document for the given source and sourceId
+
+**Parameters:**
+
+Name | Type | Description |
+------ | ------ | ------ |
+`source` | string | Name of the source (eg: Youtube) |
+`sourceId` | string | ID the music from the source |
+
+**Returns:** *Promise‹[IMusicSchema](_models_music_.imusicschema.md)›*
+
+A Promise of the Music Document queried
+
+___
+
+###  fromDownloaded
+
+▸ **fromDownloaded**(`audio`: [DownloadedMusic](_core_imusic_.downloadedmusic.md)): *[IMusicSchema](_models_music_.imusicschema.md)*
+
+*Defined in [src/models/Music.ts:52](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/models/Music.ts#L52)*
+
+Create a Music Document from a DownloadedMusic
+
+**Parameters:**
+
+Name | Type | Description |
+------ | ------ | ------ |
+`audio` | [DownloadedMusic](_core_imusic_.downloadedmusic.md) | The DownloadedMusic |
+
+**Returns:** *[IMusicSchema](_models_music_.imusicschema.md)*
+
+A Music Document
 
 ___
 
 ###  geoSearch
 
-▸ **geoSearch**(`conditions`: any, `options`: object, `callback?`: function): *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md)[], [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+▸ **geoSearch**(`conditions`: any, `options`: object, `callback?`: function): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md)[], [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[geoSearch](_models_playlist_.iplaylist.md#geosearch)*
 
@@ -2142,16 +2190,16 @@ Name | Type | Description |
 
 optional callback
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md)[]): *void*
+▸ (`err`: any, `res`: [IMusicSchema](_models_music_.imusicschema.md)[]): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md)[] |
+`res` | [IMusicSchema](_models_music_.imusicschema.md)[] |
 
-**Returns:** *DocumentQuery‹[IUserSchema](_models_user_.iuserschema.md)[], [IUserSchema](_models_user_.iuserschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md)[], [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
 ___
 
@@ -2169,7 +2217,7 @@ ___
 
 ###  hydrate
 
-▸ **hydrate**(`obj`: any): *[IUserSchema](_models_user_.iuserschema.md)*
+▸ **hydrate**(`obj`: any): *[IMusicSchema](_models_music_.imusicschema.md)*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[hydrate](_models_playlist_.iplaylist.md#hydrate)*
 
@@ -2185,13 +2233,13 @@ Name | Type |
 ------ | ------ |
 `obj` | any |
 
-**Returns:** *[IUserSchema](_models_user_.iuserschema.md)*
+**Returns:** *[IMusicSchema](_models_music_.imusicschema.md)*
 
 ___
 
 ###  init
 
-▸ **init**(`callback?`: function): *Promise‹[IUserSchema](_models_user_.iuserschema.md)›*
+▸ **init**(`callback?`: function): *Promise‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[init](_models_playlist_.iplaylist.md#init)*
 
@@ -2217,13 +2265,13 @@ Name | Type |
 ------ | ------ |
 `err` | any |
 
-**Returns:** *Promise‹[IUserSchema](_models_user_.iuserschema.md)›*
+**Returns:** *Promise‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
 ___
 
 ###  insertMany
 
-▸ **insertMany**(`docs`: any[], `callback?`: function): *Promise‹[IUserSchema](_models_user_.iuserschema.md)[]›*
+▸ **insertMany**(`docs`: any[], `callback?`: function): *Promise‹[IMusicSchema](_models_music_.imusicschema.md)[]›*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[insertMany](_models_playlist_.iplaylist.md#insertmany)*
 
@@ -2243,18 +2291,18 @@ Documents to insert.
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`error`: any, `docs`: [IUserSchema](_models_user_.iuserschema.md)[]): *void*
+▸ (`error`: any, `docs`: [IMusicSchema](_models_music_.imusicschema.md)[]): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `error` | any |
-`docs` | [IUserSchema](_models_user_.iuserschema.md)[] |
+`docs` | [IMusicSchema](_models_music_.imusicschema.md)[] |
 
-**Returns:** *Promise‹[IUserSchema](_models_user_.iuserschema.md)[]›*
+**Returns:** *Promise‹[IMusicSchema](_models_music_.imusicschema.md)[]›*
 
-▸ **insertMany**(`docs`: any[], `options?`: object & ModelOptions, `callback?`: function): *Promise‹[IUserSchema](_models_user_.iuserschema.md)[]›*
+▸ **insertMany**(`docs`: any[], `options?`: object & ModelOptions, `callback?`: function): *Promise‹[IMusicSchema](_models_music_.imusicschema.md)[]›*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[insertMany](_models_playlist_.iplaylist.md#insertmany)*
 
@@ -2268,18 +2316,18 @@ Defined in node_modules/@types/mongoose/index.d.ts:3531
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`error`: any, `docs`: [IUserSchema](_models_user_.iuserschema.md)[]): *void*
+▸ (`error`: any, `docs`: [IMusicSchema](_models_music_.imusicschema.md)[]): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `error` | any |
-`docs` | [IUserSchema](_models_user_.iuserschema.md)[] |
+`docs` | [IMusicSchema](_models_music_.imusicschema.md)[] |
 
-**Returns:** *Promise‹[IUserSchema](_models_user_.iuserschema.md)[]›*
+**Returns:** *Promise‹[IMusicSchema](_models_music_.imusicschema.md)[]›*
 
-▸ **insertMany**(`doc`: any, `callback?`: function): *Promise‹[IUserSchema](_models_user_.iuserschema.md)›*
+▸ **insertMany**(`doc`: any, `callback?`: function): *Promise‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[insertMany](_models_playlist_.iplaylist.md#insertmany)*
 
@@ -2291,18 +2339,18 @@ Defined in node_modules/@types/mongoose/index.d.ts:3532
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`error`: any, `doc`: [IUserSchema](_models_user_.iuserschema.md)): *void*
+▸ (`error`: any, `doc`: [IMusicSchema](_models_music_.imusicschema.md)): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `error` | any |
-`doc` | [IUserSchema](_models_user_.iuserschema.md) |
+`doc` | [IMusicSchema](_models_music_.imusicschema.md) |
 
-**Returns:** *Promise‹[IUserSchema](_models_user_.iuserschema.md)›*
+**Returns:** *Promise‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
-▸ **insertMany**(`doc`: any, `options?`: object & ModelOptions, `callback?`: function): *Promise‹[IUserSchema](_models_user_.iuserschema.md)›*
+▸ **insertMany**(`doc`: any, `options?`: object & ModelOptions, `callback?`: function): *Promise‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[insertMany](_models_playlist_.iplaylist.md#insertmany)*
 
@@ -2316,16 +2364,16 @@ Defined in node_modules/@types/mongoose/index.d.ts:3533
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`error`: any, `doc`: [IUserSchema](_models_user_.iuserschema.md)): *void*
+▸ (`error`: any, `doc`: [IMusicSchema](_models_music_.imusicschema.md)): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `error` | any |
-`doc` | [IUserSchema](_models_user_.iuserschema.md) |
+`doc` | [IMusicSchema](_models_music_.imusicschema.md) |
 
-**Returns:** *Promise‹[IUserSchema](_models_user_.iuserschema.md)›*
+**Returns:** *Promise‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
 ___
 
@@ -2406,7 +2454,7 @@ ___
 
 ###  mapReduce
 
-▸ **mapReduce**‹**Key**, **Value**›(`o`: ModelMapReduceOption‹[IUserSchema](_models_user_.iuserschema.md), Key, Value›, `callback?`: function): *Promise‹any›*
+▸ **mapReduce**‹**Key**, **Value**›(`o`: ModelMapReduceOption‹[IMusicSchema](_models_music_.imusicschema.md), Key, Value›, `callback?`: function): *Promise‹any›*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[mapReduce](_models_playlist_.iplaylist.md#mapreduce)*
 
@@ -2422,7 +2470,7 @@ Executes a mapReduce command.
 
 **Parameters:**
 
-▪ **o**: *ModelMapReduceOption‹[IUserSchema](_models_user_.iuserschema.md), Key, Value›*
+▪ **o**: *ModelMapReduceOption‹[IMusicSchema](_models_music_.imusicschema.md), Key, Value›*
 
 an object specifying map-reduce options
 
@@ -2543,7 +2591,7 @@ ___
 
 ###  populate
 
-▸ **populate**(`docs`: any[], `options`: ModelPopulateOptions | ModelPopulateOptions[], `callback?`: function): *Promise‹[IUserSchema](_models_user_.iuserschema.md)[]›*
+▸ **populate**(`docs`: any[], `options`: ModelPopulateOptions | ModelPopulateOptions[], `callback?`: function): *Promise‹[IMusicSchema](_models_music_.imusicschema.md)[]›*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[populate](_models_playlist_.iplaylist.md#populate)*
 
@@ -2565,16 +2613,16 @@ A hash of key/val (path, options) used for population.
 
 Optional callback, executed upon completion. Receives err and the doc(s).
 
-▸ (`err`: any, `res`: [IUserSchema](_models_user_.iuserschema.md)[]): *void*
+▸ (`err`: any, `res`: [IMusicSchema](_models_music_.imusicschema.md)[]): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IUserSchema](_models_user_.iuserschema.md)[] |
+`res` | [IMusicSchema](_models_music_.imusicschema.md)[] |
 
-**Returns:** *Promise‹[IUserSchema](_models_user_.iuserschema.md)[]›*
+**Returns:** *Promise‹[IMusicSchema](_models_music_.imusicschema.md)[]›*
 
 ▸ **populate**‹**T**›(`docs`: any, `options`: ModelPopulateOptions | ModelPopulateOptions[], `callback?`: function): *Promise‹T›*
 
@@ -2679,7 +2727,7 @@ ___
 
 ###  remove
 
-▸ **remove**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `callback?`: function): *Query‹DeleteWriteOpResultObject["result"] & object› & QueryHelpers*
+▸ **remove**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `callback?`: function): *Query‹DeleteWriteOpResultObject["result"] & object› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[remove](_models_playlist_.iplaylist.md#remove)*
 
@@ -2689,7 +2737,7 @@ Removes documents from the collection.
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
 ▪`Optional`  **callback**: *function*
 
@@ -2751,7 +2799,7 @@ ___
 
 ###  replaceOne
 
-▸ **replaceOne**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `replacement`: any, `callback?`: function): *Query‹any› & QueryHelpers*
+▸ **replaceOne**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `replacement`: any, `callback?`: function): *Query‹any› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[replaceOne](_models_playlist_.iplaylist.md#replaceone)*
 
@@ -2762,7 +2810,7 @@ This function triggers the following middleware: replaceOne
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
 ▪ **replacement**: *any*
 
@@ -2874,7 +2922,7 @@ ___
 
 ###  update
 
-▸ **update**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `doc`: UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `callback?`: function): *Query‹any› & QueryHelpers*
+▸ **update**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `doc`: UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `callback?`: function): *Query‹any› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[update](_models_playlist_.iplaylist.md#update)*
 
@@ -2885,9 +2933,9 @@ All update values are cast to their appropriate SchemaTypes before being sent.
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
-▪ **doc**: *UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **doc**: *UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
 ▪`Optional`  **callback**: *function*
 
@@ -2902,7 +2950,7 @@ Name | Type |
 
 **Returns:** *Query‹any› & QueryHelpers*
 
-▸ **update**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `doc`: UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `options`: ModelUpdateOptions, `callback?`: function): *Query‹any› & QueryHelpers*
+▸ **update**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `doc`: UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `options`: ModelUpdateOptions, `callback?`: function): *Query‹any› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[update](_models_playlist_.iplaylist.md#update)*
 
@@ -2910,9 +2958,9 @@ Defined in node_modules/@types/mongoose/index.d.ts:3585
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
-▪ **doc**: *UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **doc**: *UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
 ▪ **options**: *ModelUpdateOptions*
 
@@ -2933,7 +2981,7 @@ ___
 
 ###  updateMany
 
-▸ **updateMany**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `doc`: UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `callback?`: function): *Query‹any› & QueryHelpers*
+▸ **updateMany**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `doc`: UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `callback?`: function): *Query‹any› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[updateMany](_models_playlist_.iplaylist.md#updatemany)*
 
@@ -2941,9 +2989,9 @@ Defined in node_modules/@types/mongoose/index.d.ts:3591
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
-▪ **doc**: *UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **doc**: *UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
 ▪`Optional`  **callback**: *function*
 
@@ -2958,7 +3006,7 @@ Name | Type |
 
 **Returns:** *Query‹any› & QueryHelpers*
 
-▸ **updateMany**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `doc`: UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `options`: ModelUpdateOptions, `callback?`: function): *Query‹any› & QueryHelpers*
+▸ **updateMany**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `doc`: UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `options`: ModelUpdateOptions, `callback?`: function): *Query‹any› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[updateMany](_models_playlist_.iplaylist.md#updatemany)*
 
@@ -2966,9 +3014,9 @@ Defined in node_modules/@types/mongoose/index.d.ts:3593
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
-▪ **doc**: *UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **doc**: *UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
 ▪ **options**: *ModelUpdateOptions*
 
@@ -2989,7 +3037,7 @@ ___
 
 ###  updateOne
 
-▸ **updateOne**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `doc`: UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `callback?`: function): *Query‹any› & QueryHelpers*
+▸ **updateOne**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `doc`: UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `callback?`: function): *Query‹any› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[updateOne](_models_playlist_.iplaylist.md#updateone)*
 
@@ -2997,9 +3045,9 @@ Defined in node_modules/@types/mongoose/index.d.ts:3587
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
-▪ **doc**: *UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **doc**: *UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
 ▪`Optional`  **callback**: *function*
 
@@ -3014,7 +3062,7 @@ Name | Type |
 
 **Returns:** *Query‹any› & QueryHelpers*
 
-▸ **updateOne**(`conditions`: FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `doc`: UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›, `options`: ModelUpdateOptions, `callback?`: function): *Query‹any› & QueryHelpers*
+▸ **updateOne**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `doc`: UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `options`: ModelUpdateOptions, `callback?`: function): *Query‹any› & QueryHelpers*
 
 *Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[updateOne](_models_playlist_.iplaylist.md#updateone)*
 
@@ -3022,9 +3070,9 @@ Defined in node_modules/@types/mongoose/index.d.ts:3589
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **conditions**: *FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
-▪ **doc**: *UpdateQuery‹[IUserSchema](_models_user_.iuserschema.md)›*
+▪ **doc**: *UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
 ▪ **options**: *ModelUpdateOptions*
 

@@ -53,7 +53,7 @@ Detailed Location Document
 
 • **__v**? : *number*
 
-*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[__v](_models_location_.ilocationschema.md#optional-__v)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[__v](_models_playlist_.iplaylistschema.md#optional-__v)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3636
 
@@ -66,7 +66,7 @@ ___
 
 • **city**: *string*
 
-*Defined in [src/models/Location.ts:38](https://github.com/Xisabla/Korbots/blob/3303bca/server/src/models/Location.ts#L38)*
+*Defined in [src/models/Location.ts:38](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/models/Location.ts#L38)*
 
 City of the Location
 
@@ -76,7 +76,7 @@ ___
 
 • **collection**: *Collection*
 
-*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[collection](_models_location_.ilocationschema.md#collection)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[collection](_models_playlist_.iplaylistschema.md#collection)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3657
 
@@ -88,7 +88,7 @@ ___
 
 • **country**: *string*
 
-*Defined in [src/models/Location.ts:40](https://github.com/Xisabla/Korbots/blob/3303bca/server/src/models/Location.ts#L40)*
+*Defined in [src/models/Location.ts:40](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/models/Location.ts#L40)*
 
 Country of the Location
 
@@ -98,7 +98,7 @@ ___
 
 • **db**: *Connection*
 
-*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[db](_models_location_.ilocationschema.md#db)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[db](_models_playlist_.iplaylistschema.md#db)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3660
 
@@ -110,7 +110,7 @@ ___
 
 • **id**? : *any*
 
-*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[id](_models_location_.ilocationschema.md#optional-id)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[id](_models_playlist_.iplaylistschema.md#optional-id)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:1624
 
@@ -125,7 +125,7 @@ ___
 
 • **latitude**: *number*
 
-*Defined in [src/models/Location.ts:34](https://github.com/Xisabla/Korbots/blob/3303bca/server/src/models/Location.ts#L34)*
+*Defined in [src/models/Location.ts:34](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/models/Location.ts#L34)*
 
 Latitude of the Location
 
@@ -135,7 +135,7 @@ ___
 
 • **longitude**: *number*
 
-*Defined in [src/models/Location.ts:36](https://github.com/Xisabla/Korbots/blob/3303bca/server/src/models/Location.ts#L36)*
+*Defined in [src/models/Location.ts:36](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/models/Location.ts#L36)*
 
 Longitude of the Location
 
@@ -145,7 +145,7 @@ ___
 
 • **schema**: *Schema*
 
-*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[schema](_models_location_.ilocationschema.md#schema)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[schema](_models_playlist_.iplaylistschema.md#schema)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3663
 
@@ -157,7 +157,7 @@ Schema the model uses.
 
 ▸ **$isDeleted**(`isDeleted`: boolean): *void*
 
-*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[$isDeleted](_models_location_.ilocationschema.md#isdeleted)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[$isDeleted](_models_playlist_.iplaylistschema.md#isdeleted)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3612
 
@@ -173,7 +173,7 @@ Name | Type |
 
 ▸ **$isDeleted**(): *boolean*
 
-*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[$isDeleted](_models_location_.ilocationschema.md#isdeleted)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[$isDeleted](_models_playlist_.iplaylistschema.md#isdeleted)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3614
 
@@ -187,7 +187,7 @@ ___
 
 ▸ **addListener**(`event`: string | symbol, `listener`: function): *this*
 
-*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[addListener](_models_location_.ilocationschema.md#addlistener)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[addListener](_models_playlist_.iplaylistschema.md#addlistener)*
 
 Defined in node_modules/@types/node/globals.d.ts:553
 
@@ -213,7 +213,7 @@ ___
 
 ▸ **emit**(`event`: string | symbol, ...`args`: any[]): *boolean*
 
-*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[emit](_models_location_.ilocationschema.md#emit)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[emit](_models_playlist_.iplaylistschema.md#emit)*
 
 Defined in node_modules/@types/node/globals.d.ts:563
 
@@ -232,7 +232,7 @@ ___
 
 ▸ **eventNames**(): *Array‹string | symbol›*
 
-*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[eventNames](_models_location_.ilocationschema.md#eventnames)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[eventNames](_models_playlist_.iplaylistschema.md#eventnames)*
 
 Defined in node_modules/@types/node/globals.d.ts:568
 
@@ -244,7 +244,7 @@ ___
 
 ▸ **getMaxListeners**(): *number*
 
-*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[getMaxListeners](_models_location_.ilocationschema.md#getmaxlisteners)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[getMaxListeners](_models_playlist_.iplaylistschema.md#getmaxlisteners)*
 
 Defined in node_modules/@types/node/globals.d.ts:560
 
@@ -256,7 +256,7 @@ ___
 
 ▸ **increment**(): *this*
 
-*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[increment](_models_location_.ilocationschema.md#increment)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[increment](_models_playlist_.iplaylistschema.md#increment)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3603
 
@@ -270,7 +270,7 @@ ___
 
 ▸ **listenerCount**(`type`: string | symbol): *number*
 
-*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[listenerCount](_models_location_.ilocationschema.md#listenercount)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[listenerCount](_models_playlist_.iplaylistschema.md#listenercount)*
 
 Defined in node_modules/@types/node/globals.d.ts:564
 
@@ -288,7 +288,7 @@ ___
 
 ▸ **listeners**(`event`: string | symbol): *Function[]*
 
-*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[listeners](_models_location_.ilocationschema.md#listeners)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[listeners](_models_playlist_.iplaylistschema.md#listeners)*
 
 Defined in node_modules/@types/node/globals.d.ts:561
 
@@ -304,9 +304,9 @@ ___
 
 ###  model
 
-▸ **model**‹**T**›(`name`: string): *[Model](_models_location_.ilocation.md#model)‹T›*
+▸ **model**‹**T**›(`name`: string): *[Model](_models_playlist_.iplaylist.md#model)‹T›*
 
-*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[model](_models_location_.ilocationschema.md#model)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[model](_models_playlist_.iplaylistschema.md#model)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3609
 
@@ -322,7 +322,7 @@ Name | Type | Description |
 ------ | ------ | ------ |
 `name` | string | model name  |
 
-**Returns:** *[Model](_models_location_.ilocation.md#model)‹T›*
+**Returns:** *[Model](_models_playlist_.iplaylist.md#model)‹T›*
 
 ___
 
@@ -330,7 +330,7 @@ ___
 
 ▸ **off**(`event`: string | symbol, `listener`: function): *this*
 
-*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[off](_models_location_.ilocationschema.md#off)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[off](_models_playlist_.iplaylistschema.md#off)*
 
 Defined in node_modules/@types/node/globals.d.ts:557
 
@@ -356,7 +356,7 @@ ___
 
 ▸ **on**(`event`: string | symbol, `listener`: function): *this*
 
-*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[on](_models_location_.ilocationschema.md#on)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[on](_models_playlist_.iplaylistschema.md#on)*
 
 Defined in node_modules/@types/node/globals.d.ts:554
 
@@ -382,7 +382,7 @@ ___
 
 ▸ **once**(`event`: string | symbol, `listener`: function): *this*
 
-*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[once](_models_location_.ilocationschema.md#once)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[once](_models_playlist_.iplaylistschema.md#once)*
 
 Defined in node_modules/@types/node/globals.d.ts:555
 
@@ -408,7 +408,7 @@ ___
 
 ▸ **prependListener**(`event`: string | symbol, `listener`: function): *this*
 
-*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[prependListener](_models_location_.ilocationschema.md#prependlistener)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[prependListener](_models_playlist_.iplaylistschema.md#prependlistener)*
 
 Defined in node_modules/@types/node/globals.d.ts:566
 
@@ -434,7 +434,7 @@ ___
 
 ▸ **prependOnceListener**(`event`: string | symbol, `listener`: function): *this*
 
-*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[prependOnceListener](_models_location_.ilocationschema.md#prependoncelistener)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[prependOnceListener](_models_playlist_.iplaylistschema.md#prependoncelistener)*
 
 Defined in node_modules/@types/node/globals.d.ts:567
 
@@ -460,7 +460,7 @@ ___
 
 ▸ **rawListeners**(`event`: string | symbol): *Function[]*
 
-*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[rawListeners](_models_location_.ilocationschema.md#rawlisteners)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[rawListeners](_models_playlist_.iplaylistschema.md#rawlisteners)*
 
 Defined in node_modules/@types/node/globals.d.ts:562
 
@@ -478,7 +478,7 @@ ___
 
 ▸ **remove**(`fn?`: function): *Promise‹this›*
 
-*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[remove](_models_location_.ilocationschema.md#remove)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[remove](_models_playlist_.iplaylistschema.md#remove)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3620
 
@@ -507,7 +507,7 @@ ___
 
 ▸ **removeAllListeners**(`event?`: string | symbol): *this*
 
-*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[removeAllListeners](_models_location_.ilocationschema.md#removealllisteners)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[removeAllListeners](_models_playlist_.iplaylistschema.md#removealllisteners)*
 
 Defined in node_modules/@types/node/globals.d.ts:558
 
@@ -525,7 +525,7 @@ ___
 
 ▸ **removeListener**(`event`: string | symbol, `listener`: function): *this*
 
-*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[removeListener](_models_location_.ilocationschema.md#removelistener)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[removeListener](_models_playlist_.iplaylistschema.md#removelistener)*
 
 Defined in node_modules/@types/node/globals.d.ts:556
 
@@ -551,7 +551,7 @@ ___
 
 ▸ **save**(`options?`: SaveOptions, `fn?`: function): *Promise‹this›*
 
-*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[save](_models_location_.ilocationschema.md#save)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[save](_models_playlist_.iplaylistschema.md#save)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3629
 
@@ -580,7 +580,7 @@ Name | Type |
 
 ▸ **save**(`fn?`: function): *Promise‹this›*
 
-*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[save](_models_location_.ilocationschema.md#save)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[save](_models_playlist_.iplaylistschema.md#save)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3630
 
@@ -605,7 +605,7 @@ ___
 
 ▸ **setMaxListeners**(`n`: number): *this*
 
-*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[setMaxListeners](_models_location_.ilocationschema.md#setmaxlisteners)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[setMaxListeners](_models_playlist_.iplaylistschema.md#setmaxlisteners)*
 
 Defined in node_modules/@types/node/globals.d.ts:559
 

@@ -8,7 +8,7 @@
 
 ## Hierarchy
 
-* [Model](_models_location_.ilocation.md#model)‹[ILocationSchema](_models_location_.ilocationschema.md)›
+* [Model](_models_playlist_.iplaylist.md#model)‹[ILocationSchema](_models_location_.ilocationschema.md)›
 
   ↳ **ILocation**
 
@@ -97,7 +97,7 @@
 
 • **new ILocation**(`doc?`: any): *[ILocationSchema](_models_location_.ilocationschema.md)*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[constructor](_models_location_.ilocation.md#constructor)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[constructor](_models_playlist_.iplaylist.md#constructor)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3135
 
@@ -116,7 +116,7 @@ Name | Type | Description |
 
 ###  Model
 
-• **Model**: *[Model](_models_location_.ilocation.md#model)‹any›*
+• **Model**: *[Model](_models_playlist_.iplaylist.md#model)‹any›*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3120
 
@@ -126,7 +126,7 @@ ___
 
 • **base**: *typeof mongoose*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[base](_models_location_.ilocation.md#base)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[base](_models_playlist_.iplaylist.md#base)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3123
 
@@ -138,7 +138,7 @@ ___
 
 • **baseModelName**: *string | undefined*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[baseModelName](_models_location_.ilocation.md#basemodelname)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[baseModelName](_models_playlist_.iplaylist.md#basemodelname)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3129
 
@@ -151,7 +151,7 @@ ___
 
 • **collection**: *Collection*
 
-*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[collection](_models_location_.ilocationschema.md#collection)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[collection](_models_playlist_.iplaylistschema.md#collection)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3657
 
@@ -163,7 +163,7 @@ ___
 
 • **db**: *Connection*
 
-*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[db](_models_location_.ilocationschema.md#db)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[db](_models_playlist_.iplaylistschema.md#db)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3660
 
@@ -175,7 +175,7 @@ ___
 
 • **discriminators**: *object | undefined*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[discriminators](_models_location_.ilocation.md#discriminators)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[discriminators](_models_playlist_.iplaylist.md#discriminators)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3132
 
@@ -187,7 +187,7 @@ ___
 
 • **modelName**: *string*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[modelName](_models_location_.ilocation.md#modelname)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[modelName](_models_playlist_.iplaylist.md#modelname)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3135
 
@@ -199,7 +199,7 @@ ___
 
 • **schema**: *Schema*
 
-*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[schema](_models_location_.ilocationschema.md#schema)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[schema](_models_playlist_.iplaylistschema.md#schema)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3663
 
@@ -211,7 +211,7 @@ Schema the model uses.
 
 ▸ **$where**(`argument`: string | Function): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md), [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[$where](_models_location_.ilocation.md#where)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[$where](_models_playlist_.iplaylist.md#where)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3192
 
@@ -231,7 +231,7 @@ ___
 
 ▸ **addListener**(`event`: string | symbol, `listener`: function): *this*
 
-*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[addListener](_models_location_.ilocationschema.md#addlistener)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[addListener](_models_playlist_.iplaylistschema.md#addlistener)*
 
 Defined in node_modules/@types/node/globals.d.ts:553
 
@@ -257,7 +257,7 @@ ___
 
 ▸ **aggregate**‹**U**›(`aggregations?`: any[]): *Aggregate‹U[]›*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[aggregate](_models_location_.ilocation.md#aggregate)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[aggregate](_models_playlist_.iplaylist.md#aggregate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3200
 
@@ -279,7 +279,7 @@ Name | Type | Description |
 
 ▸ **aggregate**‹**U**›(`aggregations`: any[], `cb`: Function): *Promise‹U[]›*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[aggregate](_models_location_.ilocation.md#aggregate)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[aggregate](_models_playlist_.iplaylist.md#aggregate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3201
 
@@ -302,7 +302,7 @@ ___
 
 ▸ **bulkWrite**(`writes`: any[], `cb?`: function): *Promise‹BulkWriteOpResultObject›*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[bulkWrite](_models_location_.ilocation.md#bulkwrite)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[bulkWrite](_models_playlist_.iplaylist.md#bulkwrite)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3182
 
@@ -335,7 +335,7 @@ Name | Type |
 
 ▸ **bulkWrite**(`writes`: any[], `options?`: CollectionBulkWriteOptions): *Promise‹BulkWriteOpResultObject›*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[bulkWrite](_models_location_.ilocation.md#bulkwrite)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[bulkWrite](_models_playlist_.iplaylist.md#bulkwrite)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3183
 
@@ -350,7 +350,7 @@ Name | Type |
 
 ▸ **bulkWrite**(`writes`: any[], `options`: CollectionBulkWriteOptions, `cb`: function): *void*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[bulkWrite](_models_location_.ilocation.md#bulkwrite)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[bulkWrite](_models_playlist_.iplaylist.md#bulkwrite)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3184
 
@@ -379,7 +379,7 @@ ___
 
 ▸ **count**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `callback?`: function): *Query‹number› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[count](_models_location_.ilocation.md#count)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[count](_models_playlist_.iplaylist.md#count)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3204
 
@@ -408,7 +408,7 @@ ___
 
 ▸ **countDocuments**(`callback?`: function): *Query‹number› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[countDocuments](_models_location_.ilocation.md#countdocuments)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[countDocuments](_models_playlist_.iplaylist.md#countdocuments)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3218
 
@@ -436,7 +436,7 @@ Name | Type |
 
 ▸ **countDocuments**(`criteria`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `callback?`: function): *Query‹number› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[countDocuments](_models_location_.ilocation.md#countdocuments)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[countDocuments](_models_playlist_.iplaylist.md#countdocuments)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3219
 
@@ -463,7 +463,7 @@ ___
 
 ▸ **create**‹**TCreate**›(`doc`: CreateQuery‹TCreate›, `options?`: SaveOptions): *Promise‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[create](_models_location_.ilocation.md#create)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[create](_models_playlist_.iplaylist.md#create)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3239
 
@@ -486,7 +486,7 @@ Name | Type |
 
 ▸ **create**‹**TCreate**›(`doc`: CreateQuery‹TCreate›, `callback?`: function): *Promise‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[create](_models_location_.ilocation.md#create)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[create](_models_playlist_.iplaylist.md#create)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3240
 
@@ -513,7 +513,7 @@ Name | Type |
 
 ▸ **create**‹**TCreate**›(`docs`: CreateQuery‹TCreate›[], `callback?`: function): *Promise‹[ILocationSchema](_models_location_.ilocationschema.md)[]›*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[create](_models_location_.ilocation.md#create)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[create](_models_playlist_.iplaylist.md#create)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3241
 
@@ -540,7 +540,7 @@ Name | Type |
 
 ▸ **create**‹**TCreate**›(`docs`: CreateQuery‹TCreate›[], `options?`: SaveOptions, `callback?`: function): *Promise‹[ILocationSchema](_models_location_.ilocationschema.md)[]›*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[create](_models_location_.ilocation.md#create)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[create](_models_playlist_.iplaylist.md#create)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3242
 
@@ -569,7 +569,7 @@ Name | Type |
 
 ▸ **create**‹**TCreate**›(...`docs`: CreateQuery‹TCreate›[]): *Promise‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[create](_models_location_.ilocation.md#create)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[create](_models_playlist_.iplaylist.md#create)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3243
 
@@ -591,7 +591,7 @@ ___
 
 ▸ **createCollection**(`options?`: CollectionCreateOptions, `cb?`: function): *Promise‹void›*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[createCollection](_models_location_.ilocation.md#createcollection)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[createCollection](_models_playlist_.iplaylist.md#createcollection)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3248
 
@@ -620,7 +620,7 @@ ___
 
 ▸ **createIndexes**(`cb?`: function): *Promise‹void›*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[createIndexes](_models_location_.ilocation.md#createindexes)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[createIndexes](_models_playlist_.iplaylist.md#createindexes)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3306
 
@@ -648,7 +648,7 @@ ___
 
 ▸ **deleteMany**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `callback?`: function): *Query‹DeleteWriteOpResultObject["result"] & object› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[deleteMany](_models_location_.ilocation.md#deletemany)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[deleteMany](_models_playlist_.iplaylist.md#deletemany)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3570
 
@@ -670,7 +670,7 @@ Name | Type |
 
 ▸ **deleteMany**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `options`: ModelOptions, `callback?`: function): *Query‹DeleteWriteOpResultObject["result"] & object› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[deleteMany](_models_location_.ilocation.md#deletemany)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[deleteMany](_models_playlist_.iplaylist.md#deletemany)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3571
 
@@ -698,7 +698,7 @@ ___
 
 ▸ **deleteOne**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `callback?`: function): *Query‹DeleteWriteOpResultObject["result"] & object› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[deleteOne](_models_location_.ilocation.md#deleteone)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[deleteOne](_models_playlist_.iplaylist.md#deleteone)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3568
 
@@ -720,7 +720,7 @@ Name | Type |
 
 ▸ **deleteOne**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `options`: ModelOptions, `callback?`: function): *Query‹DeleteWriteOpResultObject["result"] & object› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[deleteOne](_models_location_.ilocation.md#deleteone)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[deleteOne](_models_playlist_.iplaylist.md#deleteone)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3569
 
@@ -746,9 +746,9 @@ ___
 
 ###  discriminator
 
-▸ **discriminator**‹**U**›(`name`: string, `schema`: Schema, `value?`: string): *[Model](_models_location_.ilocation.md#model)‹U›*
+▸ **discriminator**‹**U**›(`name`: string, `schema`: Schema, `value?`: string): *[Model](_models_playlist_.iplaylist.md#model)‹U›*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[discriminator](_models_location_.ilocation.md#discriminator)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[discriminator](_models_playlist_.iplaylist.md#discriminator)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3256
 
@@ -766,11 +766,11 @@ Name | Type | Description |
 `schema` | Schema | discriminator model schema |
 `value?` | string | the string stored in the `discriminatorKey` property  |
 
-**Returns:** *[Model](_models_location_.ilocation.md#model)‹U›*
+**Returns:** *[Model](_models_playlist_.iplaylist.md#model)‹U›*
 
 ▸ **discriminator**‹**U**, **M**›(`name`: string, `schema`: Schema, `value?`: string): *M*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[discriminator](_models_location_.ilocation.md#discriminator)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[discriminator](_models_playlist_.iplaylist.md#discriminator)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3264
 
@@ -780,7 +780,7 @@ Adds a discriminator type.
 
 ▪ **U**: *Document*
 
-▪ **M**: *[Model](_models_location_.ilocation.md#model)‹U›*
+▪ **M**: *[Model](_models_playlist_.iplaylist.md#model)‹U›*
 
 **Parameters:**
 
@@ -798,7 +798,7 @@ ___
 
 ▸ **distinct**(`field`: string, `callback?`: function): *Query‹any[]› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[distinct](_models_location_.ilocation.md#distinct)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[distinct](_models_playlist_.iplaylist.md#distinct)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3267
 
@@ -823,7 +823,7 @@ Name | Type |
 
 ▸ **distinct**(`field`: string, `conditions`: any, `callback?`: function): *Query‹any[]› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[distinct](_models_location_.ilocation.md#distinct)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[distinct](_models_playlist_.iplaylist.md#distinct)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3268
 
@@ -852,7 +852,7 @@ ___
 
 ▸ **emit**(`event`: string | symbol, ...`args`: any[]): *boolean*
 
-*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[emit](_models_location_.ilocationschema.md#emit)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[emit](_models_playlist_.iplaylistschema.md#emit)*
 
 Defined in node_modules/@types/node/globals.d.ts:563
 
@@ -871,7 +871,7 @@ ___
 
 ▸ **ensureIndexes**(`callback?`: function): *Promise‹void›*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[ensureIndexes](_models_location_.ilocation.md#ensureindexes)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[ensureIndexes](_models_playlist_.iplaylist.md#ensureindexes)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3299
 
@@ -893,7 +893,7 @@ Name | Type |
 
 ▸ **ensureIndexes**(`options`: any, `callback?`: function): *Promise‹void›*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[ensureIndexes](_models_location_.ilocation.md#ensureindexes)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[ensureIndexes](_models_playlist_.iplaylist.md#ensureindexes)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3300
 
@@ -919,7 +919,7 @@ ___
 
 ▸ **estimatedDocumentCount**(`callback?`: function): *Query‹number› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[estimatedDocumentCount](_models_location_.ilocation.md#estimateddocumentcount)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[estimatedDocumentCount](_models_playlist_.iplaylist.md#estimateddocumentcount)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3231
 
@@ -945,7 +945,7 @@ Name | Type |
 
 ▸ **estimatedDocumentCount**(`options`: any, `callback?`: function): *Query‹number› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[estimatedDocumentCount](_models_location_.ilocation.md#estimateddocumentcount)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[estimatedDocumentCount](_models_playlist_.iplaylist.md#estimateddocumentcount)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3232
 
@@ -972,7 +972,7 @@ ___
 
 ▸ **eventNames**(): *Array‹string | symbol›*
 
-*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[eventNames](_models_location_.ilocationschema.md#eventnames)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[eventNames](_models_playlist_.iplaylistschema.md#eventnames)*
 
 Defined in node_modules/@types/node/globals.d.ts:568
 
@@ -984,7 +984,7 @@ ___
 
 ▸ **exists**(`filter`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `callback?`: function): *Promise‹boolean›*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[exists](_models_location_.ilocation.md#exists)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[exists](_models_playlist_.iplaylist.md#exists)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3312
 
@@ -1014,7 +1014,7 @@ ___
 
 ▸ **fetchLocation**(`city`: string, `country?`: string): *Promise‹[MapquestGeocodingAPIResponse](_core_api_igeocoding_.mapquestgeocodingapiresponse.md)›*
 
-*Defined in [src/models/Location.ts:68](https://github.com/Xisabla/Korbots/blob/3303bca/server/src/models/Location.ts#L68)*
+*Defined in [src/models/Location.ts:68](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/models/Location.ts#L68)*
 
 Call the API for the given City and Country
 
@@ -1035,7 +1035,7 @@ ___
 
 ▸ **find**(`callback?`: function): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md)[], [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[find](_models_location_.ilocation.md#find)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[find](_models_playlist_.iplaylist.md#find)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3318
 
@@ -1058,7 +1058,7 @@ Name | Type |
 
 ▸ **find**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `callback?`: function): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md)[], [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[find](_models_location_.ilocation.md#find)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[find](_models_playlist_.iplaylist.md#find)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3319
 
@@ -1081,7 +1081,7 @@ Name | Type |
 
 ▸ **find**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `projection?`: any | null, `callback?`: function): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md)[], [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[find](_models_location_.ilocation.md#find)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[find](_models_playlist_.iplaylist.md#find)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3320
 
@@ -1106,7 +1106,7 @@ Name | Type |
 
 ▸ **find**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `projection?`: any | null, `options?`: object & Omit‹QueryFindOptions, "lean"›, `callback?`: function): *Query‹DocumentDefinition‹[ILocationSchema](_models_location_.ilocationschema.md)›[]› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[find](_models_location_.ilocation.md#find)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[find](_models_playlist_.iplaylist.md#find)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3322
 
@@ -1133,7 +1133,7 @@ Name | Type |
 
 ▸ **find**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `projection?`: any | null, `options?`: QueryFindOptions, `callback?`: function): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md)[], [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[find](_models_location_.ilocation.md#find)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[find](_models_playlist_.iplaylist.md#find)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3324
 
@@ -1164,7 +1164,7 @@ ___
 
 ▸ **findById**(`id`: any | string | number, `callback?`: function): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[findById](_models_location_.ilocation.md#findbyid)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findById](_models_playlist_.iplaylist.md#findbyid)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3333
 
@@ -1192,7 +1192,7 @@ Name | Type |
 
 ▸ **findById**(`id`: any | string | number, `projection`: any, `callback?`: function): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[findById](_models_location_.ilocation.md#findbyid)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findById](_models_playlist_.iplaylist.md#findbyid)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3335
 
@@ -1217,7 +1217,7 @@ Name | Type |
 
 ▸ **findById**(`id`: any | string | number, `projection`: any, `options`: object & Omit‹QueryFindBaseOptions, "lean"›, `callback?`: function): *Query‹DocumentDefinition‹[ILocationSchema](_models_location_.ilocationschema.md)›› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[findById](_models_location_.ilocation.md#findbyid)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findById](_models_playlist_.iplaylist.md#findbyid)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3337
 
@@ -1244,7 +1244,7 @@ Name | Type |
 
 ▸ **findById**(`id`: any | string | number, `projection`: any, `options`: QueryFindBaseOptions, `callback?`: function): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[findById](_models_location_.ilocation.md#findbyid)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findById](_models_playlist_.iplaylist.md#findbyid)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3339
 
@@ -1275,7 +1275,7 @@ ___
 
 ▸ **findByIdAndDelete**(): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[findByIdAndDelete](_models_location_.ilocation.md#findbyidanddelete)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findByIdAndDelete](_models_playlist_.iplaylist.md#findbyidanddelete)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3374
 
@@ -1290,7 +1290,7 @@ Note: same signatures as findByIdAndRemove
 
 ▸ **findByIdAndDelete**(`id`: any | number | string, `callback?`: function): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[findByIdAndDelete](_models_location_.ilocation.md#findbyidanddelete)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findByIdAndDelete](_models_playlist_.iplaylist.md#findbyidanddelete)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3375
 
@@ -1313,7 +1313,7 @@ Name | Type |
 
 ▸ **findByIdAndDelete**(`id`: any | number | string, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[ILocationSchema](_models_location_.ilocationschema.md) | null›› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[findByIdAndDelete](_models_location_.ilocation.md#findbyidanddelete)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findByIdAndDelete](_models_playlist_.iplaylist.md#findbyidanddelete)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3377
 
@@ -1338,7 +1338,7 @@ Name | Type |
 
 ▸ **findByIdAndDelete**(`id`: any | number | string, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[findByIdAndDelete](_models_location_.ilocation.md#findbyidanddelete)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findByIdAndDelete](_models_playlist_.iplaylist.md#findbyidanddelete)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3380
 
@@ -1367,7 +1367,7 @@ ___
 
 ▸ **findByIdAndRemove**(): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[findByIdAndRemove](_models_location_.ilocation.md#findbyidandremove)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findByIdAndRemove](_models_playlist_.iplaylist.md#findbyidandremove)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3355
 
@@ -1385,7 +1385,7 @@ Note: same signatures as findByIdAndDelete
 
 ▸ **findByIdAndRemove**(`id`: any | number | string, `callback?`: function): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[findByIdAndRemove](_models_location_.ilocation.md#findbyidandremove)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findByIdAndRemove](_models_playlist_.iplaylist.md#findbyidandremove)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3356
 
@@ -1408,7 +1408,7 @@ Name | Type |
 
 ▸ **findByIdAndRemove**(`id`: any | number | string, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[ILocationSchema](_models_location_.ilocationschema.md) | null›› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[findByIdAndRemove](_models_location_.ilocation.md#findbyidandremove)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findByIdAndRemove](_models_playlist_.iplaylist.md#findbyidandremove)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3358
 
@@ -1433,7 +1433,7 @@ Name | Type |
 
 ▸ **findByIdAndRemove**(`id`: any | number | string, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[findByIdAndRemove](_models_location_.ilocation.md#findbyidandremove)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findByIdAndRemove](_models_playlist_.iplaylist.md#findbyidandremove)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3361
 
@@ -1462,7 +1462,7 @@ ___
 
 ▸ **findByIdAndUpdate**(): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[findByIdAndUpdate](_models_location_.ilocation.md#findbyidandupdate)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findByIdAndUpdate](_models_playlist_.iplaylist.md#findbyidandupdate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3391
 
@@ -1476,7 +1476,7 @@ https://mongoosejs.com/docs/api.html#mongoose_Mongoose-set
 
 ▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `callback?`: function): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[findByIdAndUpdate](_models_location_.ilocation.md#findbyidandupdate)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findByIdAndUpdate](_models_playlist_.iplaylist.md#findbyidandupdate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3392
 
@@ -1501,7 +1501,7 @@ Name | Type |
 
 ▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `options`: object & object & object & QueryFindOneAndUpdateOptions, `callback?`: function): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md), [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[findByIdAndUpdate](_models_location_.ilocation.md#findbyidandupdate)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findByIdAndUpdate](_models_playlist_.iplaylist.md#findbyidandupdate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3394
 
@@ -1528,7 +1528,7 @@ Name | Type |
 
 ▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `options`: object & QueryFindOneAndUpdateOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[ILocationSchema](_models_location_.ilocationschema.md)›› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[findByIdAndUpdate](_models_location_.ilocation.md#findbyidandupdate)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findByIdAndUpdate](_models_playlist_.iplaylist.md#findbyidandupdate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3397
 
@@ -1555,7 +1555,7 @@ Name | Type |
 
 ▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `options`: object & QueryFindOneAndUpdateOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[ILocationSchema](_models_location_.ilocationschema.md) | null›› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[findByIdAndUpdate](_models_location_.ilocation.md#findbyidandupdate)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findByIdAndUpdate](_models_playlist_.iplaylist.md#findbyidandupdate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3401
 
@@ -1582,7 +1582,7 @@ Name | Type |
 
 ▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `options`: object & Omit‹QueryFindOneAndUpdateOptions, "lean"›, `callback?`: function): *Query‹DocumentDefinition‹[ILocationSchema](_models_location_.ilocationschema.md)›› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[findByIdAndUpdate](_models_location_.ilocation.md#findbyidandupdate)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findByIdAndUpdate](_models_playlist_.iplaylist.md#findbyidandupdate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3405
 
@@ -1609,7 +1609,7 @@ Name | Type |
 
 ▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `options`: QueryFindOneAndUpdateOptions, `callback?`: function): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[findByIdAndUpdate](_models_location_.ilocation.md#findbyidandupdate)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findByIdAndUpdate](_models_playlist_.iplaylist.md#findbyidandupdate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3409
 
@@ -1640,7 +1640,7 @@ ___
 
 ▸ **findLocation**(`city`: string, `country?`: string): *Promise‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
-*Defined in [src/models/Location.ts:60](https://github.com/Xisabla/Korbots/blob/3303bca/server/src/models/Location.ts#L60)*
+*Defined in [src/models/Location.ts:60](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/models/Location.ts#L60)*
 
 Look for a Location in the database
 
@@ -1661,7 +1661,7 @@ ___
 
 ▸ **findOne**(`conditions?`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `callback?`: function): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[findOne](_models_location_.ilocation.md#findone)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOne](_models_playlist_.iplaylist.md#findone)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3418
 
@@ -1687,7 +1687,7 @@ Name | Type |
 
 ▸ **findOne**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `projection`: any, `callback?`: function): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[findOne](_models_location_.ilocation.md#findone)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOne](_models_playlist_.iplaylist.md#findone)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3420
 
@@ -1712,7 +1712,7 @@ Name | Type |
 
 ▸ **findOne**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `projection`: any, `options`: object & Omit‹QueryFindBaseOptions, "lean"›, `callback?`: function): *Query‹DocumentDefinition‹[ILocationSchema](_models_location_.ilocationschema.md)›› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[findOne](_models_location_.ilocation.md#findone)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOne](_models_playlist_.iplaylist.md#findone)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3422
 
@@ -1739,7 +1739,7 @@ Name | Type |
 
 ▸ **findOne**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `projection`: any, `options`: QueryFindBaseOptions, `callback?`: function): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[findOne](_models_location_.ilocation.md#findone)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOne](_models_playlist_.iplaylist.md#findone)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3424
 
@@ -1770,7 +1770,7 @@ ___
 
 ▸ **findOneAndDelete**(): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[findOneAndDelete](_models_location_.ilocation.md#findoneanddelete)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOneAndDelete](_models_playlist_.iplaylist.md#findoneanddelete)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3454
 
@@ -1784,7 +1784,7 @@ Note: same signatures as findOneAndRemove
 
 ▸ **findOneAndDelete**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `callback?`: function): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[findOneAndDelete](_models_location_.ilocation.md#findoneanddelete)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOneAndDelete](_models_playlist_.iplaylist.md#findoneanddelete)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3455
 
@@ -1807,7 +1807,7 @@ Name | Type |
 
 ▸ **findOneAndDelete**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `options`: object & QueryFindOneAndRemoveOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[ILocationSchema](_models_location_.ilocationschema.md) | null›› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[findOneAndDelete](_models_location_.ilocation.md#findoneanddelete)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOneAndDelete](_models_playlist_.iplaylist.md#findoneanddelete)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3457
 
@@ -1833,7 +1833,7 @@ Name | Type |
 
 ▸ **findOneAndDelete**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[findOneAndDelete](_models_location_.ilocation.md#findoneanddelete)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOneAndDelete](_models_playlist_.iplaylist.md#findoneanddelete)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3460
 
@@ -1862,7 +1862,7 @@ ___
 
 ▸ **findOneAndRemove**(): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[findOneAndRemove](_models_location_.ilocation.md#findoneandremove)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOneAndRemove](_models_playlist_.iplaylist.md#findoneandremove)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3438
 
@@ -1879,7 +1879,7 @@ Note: same signatures as findOneAndDelete
 
 ▸ **findOneAndRemove**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `callback?`: function): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[findOneAndRemove](_models_location_.ilocation.md#findoneandremove)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOneAndRemove](_models_playlist_.iplaylist.md#findoneandremove)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3439
 
@@ -1902,7 +1902,7 @@ Name | Type |
 
 ▸ **findOneAndRemove**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `options`: object & QueryFindOneAndRemoveOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[ILocationSchema](_models_location_.ilocationschema.md) | null›› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[findOneAndRemove](_models_location_.ilocation.md#findoneandremove)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOneAndRemove](_models_playlist_.iplaylist.md#findoneandremove)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3441
 
@@ -1928,7 +1928,7 @@ Name | Type |
 
 ▸ **findOneAndRemove**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[findOneAndRemove](_models_location_.ilocation.md#findoneandremove)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOneAndRemove](_models_playlist_.iplaylist.md#findoneandremove)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3444
 
@@ -1957,7 +1957,7 @@ ___
 
 ▸ **findOneAndUpdate**(): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[findOneAndUpdate](_models_location_.ilocation.md#findoneandupdate)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOneAndUpdate](_models_playlist_.iplaylist.md#findoneandupdate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3471
 
@@ -1973,7 +1973,7 @@ https://mongoosejs.com/docs/api.html#mongoose_Mongoose-set
 
 ▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `update`: UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `callback?`: function): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[findOneAndUpdate](_models_location_.ilocation.md#findoneandupdate)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOneAndUpdate](_models_playlist_.iplaylist.md#findoneandupdate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3472
 
@@ -1999,7 +1999,7 @@ Name | Type |
 
 ▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `update`: UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `options`: object & object & QueryFindOneAndUpdateOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[ILocationSchema](_models_location_.ilocationschema.md)›› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[findOneAndUpdate](_models_location_.ilocation.md#findoneandupdate)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOneAndUpdate](_models_playlist_.iplaylist.md#findoneandupdate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3474
 
@@ -2027,7 +2027,7 @@ Name | Type |
 
 ▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `update`: UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `options`: object & QueryFindOneAndUpdateOptions, `callback?`: function): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md), [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[findOneAndUpdate](_models_location_.ilocation.md#findoneandupdate)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOneAndUpdate](_models_playlist_.iplaylist.md#findoneandupdate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3478
 
@@ -2055,7 +2055,7 @@ Name | Type |
 
 ▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `update`: UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `options`: object & QueryFindOneAndUpdateOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[ILocationSchema](_models_location_.ilocationschema.md) | null›› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[findOneAndUpdate](_models_location_.ilocation.md#findoneandupdate)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOneAndUpdate](_models_playlist_.iplaylist.md#findoneandupdate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3481
 
@@ -2083,7 +2083,7 @@ Name | Type |
 
 ▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `update`: UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `options`: object & Omit‹QueryFindOneAndUpdateOptions, "lean"›, `callback?`: function): *Query‹DocumentDefinition‹[ILocationSchema](_models_location_.ilocationschema.md)›› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[findOneAndUpdate](_models_location_.ilocation.md#findoneandupdate)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOneAndUpdate](_models_playlist_.iplaylist.md#findoneandupdate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3485
 
@@ -2111,7 +2111,7 @@ Name | Type |
 
 ▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `update`: UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `options`: QueryFindOneAndUpdateOptions, `callback?`: function): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md) | null, [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[findOneAndUpdate](_models_location_.ilocation.md#findoneandupdate)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOneAndUpdate](_models_playlist_.iplaylist.md#findoneandupdate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3488
 
@@ -2143,7 +2143,7 @@ ___
 
 ▸ **geoSearch**(`conditions`: any, `options`: object, `callback?`: function): *DocumentQuery‹[ILocationSchema](_models_location_.ilocationschema.md)[], [ILocationSchema](_models_location_.ilocationschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[geoSearch](_models_location_.ilocation.md#geosearch)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[geoSearch](_models_playlist_.iplaylist.md#geosearch)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3498
 
@@ -2187,7 +2187,7 @@ ___
 
 ▸ **getCoordinates**(`city`: string, `country?`: string): *Promise‹[Coordinates](_models_location_.coordinates.md)›*
 
-*Defined in [src/models/Location.ts:52](https://github.com/Xisabla/Korbots/blob/3303bca/server/src/models/Location.ts#L52)*
+*Defined in [src/models/Location.ts:52](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/models/Location.ts#L52)*
 
 Get the coordinates of a City
 
@@ -2208,7 +2208,7 @@ ___
 
 ▸ **getMaxListeners**(): *number*
 
-*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[getMaxListeners](_models_location_.ilocationschema.md#getmaxlisteners)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[getMaxListeners](_models_playlist_.iplaylistschema.md#getmaxlisteners)*
 
 Defined in node_modules/@types/node/globals.d.ts:560
 
@@ -2220,7 +2220,7 @@ ___
 
 ▸ **hydrate**(`obj`: any): *[ILocationSchema](_models_location_.ilocationschema.md)*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[hydrate](_models_location_.ilocation.md#hydrate)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[hydrate](_models_playlist_.iplaylist.md#hydrate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3514
 
@@ -2242,7 +2242,7 @@ ___
 
 ▸ **init**(`callback?`: function): *Promise‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[init](_models_location_.ilocation.md#init)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[init](_models_playlist_.iplaylist.md#init)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3543
 
@@ -2274,7 +2274,7 @@ ___
 
 ▸ **insertMany**(`docs`: any[], `callback?`: function): *Promise‹[ILocationSchema](_models_location_.ilocationschema.md)[]›*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[insertMany](_models_location_.ilocation.md#insertmany)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[insertMany](_models_playlist_.iplaylist.md#insertmany)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3530
 
@@ -2305,7 +2305,7 @@ Name | Type |
 
 ▸ **insertMany**(`docs`: any[], `options?`: object & ModelOptions, `callback?`: function): *Promise‹[ILocationSchema](_models_location_.ilocationschema.md)[]›*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[insertMany](_models_location_.ilocation.md#insertmany)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[insertMany](_models_playlist_.iplaylist.md#insertmany)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3531
 
@@ -2330,7 +2330,7 @@ Name | Type |
 
 ▸ **insertMany**(`doc`: any, `callback?`: function): *Promise‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[insertMany](_models_location_.ilocation.md#insertmany)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[insertMany](_models_playlist_.iplaylist.md#insertmany)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3532
 
@@ -2353,7 +2353,7 @@ Name | Type |
 
 ▸ **insertMany**(`doc`: any, `options?`: object & ModelOptions, `callback?`: function): *Promise‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[insertMany](_models_location_.ilocation.md#insertmany)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[insertMany](_models_playlist_.iplaylist.md#insertmany)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3533
 
@@ -2382,7 +2382,7 @@ ___
 
 ▸ **listIndexes**(`callback`: function): *void*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[listIndexes](_models_location_.ilocation.md#listindexes)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[listIndexes](_models_playlist_.iplaylist.md#listindexes)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3291
 
@@ -2409,7 +2409,7 @@ Returns `undefined` if callback is specified, returns a promise if no callback.
 
 ▸ **listIndexes**(): *Promise‹void›*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[listIndexes](_models_location_.ilocation.md#listindexes)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[listIndexes](_models_playlist_.iplaylist.md#listindexes)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3292
 
@@ -2421,7 +2421,7 @@ ___
 
 ▸ **listenerCount**(`type`: string | symbol): *number*
 
-*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[listenerCount](_models_location_.ilocationschema.md#listenercount)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[listenerCount](_models_playlist_.iplaylistschema.md#listenercount)*
 
 Defined in node_modules/@types/node/globals.d.ts:564
 
@@ -2439,7 +2439,7 @@ ___
 
 ▸ **listeners**(`event`: string | symbol): *Function[]*
 
-*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[listeners](_models_location_.ilocationschema.md#listeners)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[listeners](_models_playlist_.iplaylistschema.md#listeners)*
 
 Defined in node_modules/@types/node/globals.d.ts:561
 
@@ -2457,7 +2457,7 @@ ___
 
 ▸ **mapReduce**‹**Key**, **Value**›(`o`: ModelMapReduceOption‹[ILocationSchema](_models_location_.ilocationschema.md), Key, Value›, `callback?`: function): *Promise‹any›*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[mapReduce](_models_location_.ilocation.md#mapreduce)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[mapReduce](_models_playlist_.iplaylist.md#mapreduce)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3550
 
@@ -2492,9 +2492,9 @@ ___
 
 ###  model
 
-▸ **model**‹**U**›(`name`: string): *[Model](_models_location_.ilocation.md#model)‹U›*
+▸ **model**‹**U**›(`name`: string): *[Model](_models_playlist_.iplaylist.md#model)‹U›*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[model](_models_location_.ilocation.md#model)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[model](_models_playlist_.iplaylist.md#model)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3186
 
@@ -2508,7 +2508,7 @@ Name | Type |
 ------ | ------ |
 `name` | string |
 
-**Returns:** *[Model](_models_location_.ilocation.md#model)‹U›*
+**Returns:** *[Model](_models_playlist_.iplaylist.md#model)‹U›*
 
 ___
 
@@ -2516,7 +2516,7 @@ ___
 
 ▸ **off**(`event`: string | symbol, `listener`: function): *this*
 
-*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[off](_models_location_.ilocationschema.md#off)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[off](_models_playlist_.iplaylistschema.md#off)*
 
 Defined in node_modules/@types/node/globals.d.ts:557
 
@@ -2542,7 +2542,7 @@ ___
 
 ▸ **on**(`event`: string | symbol, `listener`: function): *this*
 
-*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[on](_models_location_.ilocationschema.md#on)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[on](_models_playlist_.iplaylistschema.md#on)*
 
 Defined in node_modules/@types/node/globals.d.ts:554
 
@@ -2568,7 +2568,7 @@ ___
 
 ▸ **once**(`event`: string | symbol, `listener`: function): *this*
 
-*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[once](_models_location_.ilocationschema.md#once)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[once](_models_playlist_.iplaylistschema.md#once)*
 
 Defined in node_modules/@types/node/globals.d.ts:555
 
@@ -2594,7 +2594,7 @@ ___
 
 ▸ **populate**(`docs`: any[], `options`: ModelPopulateOptions | ModelPopulateOptions[], `callback?`: function): *Promise‹[ILocationSchema](_models_location_.ilocationschema.md)[]›*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[populate](_models_location_.ilocation.md#populate)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[populate](_models_playlist_.iplaylist.md#populate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3561
 
@@ -2627,7 +2627,7 @@ Name | Type |
 
 ▸ **populate**‹**T**›(`docs`: any, `options`: ModelPopulateOptions | ModelPopulateOptions[], `callback?`: function): *Promise‹T›*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[populate](_models_location_.ilocation.md#populate)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[populate](_models_playlist_.iplaylist.md#populate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3563
 
@@ -2660,7 +2660,7 @@ ___
 
 ▸ **prependListener**(`event`: string | symbol, `listener`: function): *this*
 
-*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[prependListener](_models_location_.ilocationschema.md#prependlistener)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[prependListener](_models_playlist_.iplaylistschema.md#prependlistener)*
 
 Defined in node_modules/@types/node/globals.d.ts:566
 
@@ -2686,7 +2686,7 @@ ___
 
 ▸ **prependOnceListener**(`event`: string | symbol, `listener`: function): *this*
 
-*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[prependOnceListener](_models_location_.ilocationschema.md#prependoncelistener)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[prependOnceListener](_models_playlist_.iplaylistschema.md#prependoncelistener)*
 
 Defined in node_modules/@types/node/globals.d.ts:567
 
@@ -2712,7 +2712,7 @@ ___
 
 ▸ **rawListeners**(`event`: string | symbol): *Function[]*
 
-*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[rawListeners](_models_location_.ilocationschema.md#rawlisteners)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[rawListeners](_models_playlist_.iplaylistschema.md#rawlisteners)*
 
 Defined in node_modules/@types/node/globals.d.ts:562
 
@@ -2730,7 +2730,7 @@ ___
 
 ▸ **remove**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `callback?`: function): *Query‹DeleteWriteOpResultObject["result"] & object› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[remove](_models_location_.ilocation.md#remove)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[remove](_models_playlist_.iplaylist.md#remove)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3567
 
@@ -2758,7 +2758,7 @@ ___
 
 ▸ **removeAllListeners**(`event?`: string | symbol): *this*
 
-*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[removeAllListeners](_models_location_.ilocationschema.md#removealllisteners)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[removeAllListeners](_models_playlist_.iplaylistschema.md#removealllisteners)*
 
 Defined in node_modules/@types/node/globals.d.ts:558
 
@@ -2776,7 +2776,7 @@ ___
 
 ▸ **removeListener**(`event`: string | symbol, `listener`: function): *this*
 
-*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[removeListener](_models_location_.ilocationschema.md#removelistener)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[removeListener](_models_playlist_.iplaylistschema.md#removelistener)*
 
 Defined in node_modules/@types/node/globals.d.ts:556
 
@@ -2802,7 +2802,7 @@ ___
 
 ▸ **replaceOne**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `replacement`: any, `callback?`: function): *Query‹any› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[replaceOne](_models_location_.ilocation.md#replaceone)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[replaceOne](_models_playlist_.iplaylist.md#replaceone)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3577
 
@@ -2834,7 +2834,7 @@ ___
 
 ▸ **setMaxListeners**(`n`: number): *this*
 
-*Inherited from [ILocationSchema](_models_location_.ilocationschema.md).[setMaxListeners](_models_location_.ilocationschema.md#setmaxlisteners)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[setMaxListeners](_models_playlist_.iplaylistschema.md#setmaxlisteners)*
 
 Defined in node_modules/@types/node/globals.d.ts:559
 
@@ -2852,7 +2852,7 @@ ___
 
 ▸ **syncIndexes**(`options`: object | null | undefined, `callback`: function): *void*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[syncIndexes](_models_location_.ilocation.md#syncindexes)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[syncIndexes](_models_playlist_.iplaylist.md#syncindexes)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3280
 
@@ -2885,7 +2885,7 @@ Returns `undefined` if callback is specified, returns a promise if no callback.
 
 ▸ **syncIndexes**(`options?`: object | null): *Promise‹void›*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[syncIndexes](_models_location_.ilocation.md#syncindexes)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[syncIndexes](_models_playlist_.iplaylist.md#syncindexes)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3281
 
@@ -2903,7 +2903,7 @@ ___
 
 ▸ **translateAliases**(`raw`: any): *any*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[translateAliases](_models_location_.ilocation.md#translatealiases)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[translateAliases](_models_playlist_.iplaylist.md#translatealiases)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3171
 
@@ -2925,7 +2925,7 @@ ___
 
 ▸ **update**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `doc`: UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `callback?`: function): *Query‹any› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[update](_models_location_.ilocation.md#update)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[update](_models_playlist_.iplaylist.md#update)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3583
 
@@ -2953,7 +2953,7 @@ Name | Type |
 
 ▸ **update**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `doc`: UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `options`: ModelUpdateOptions, `callback?`: function): *Query‹any› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[update](_models_location_.ilocation.md#update)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[update](_models_playlist_.iplaylist.md#update)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3585
 
@@ -2984,7 +2984,7 @@ ___
 
 ▸ **updateMany**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `doc`: UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `callback?`: function): *Query‹any› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[updateMany](_models_location_.ilocation.md#updatemany)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[updateMany](_models_playlist_.iplaylist.md#updatemany)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3591
 
@@ -3009,7 +3009,7 @@ Name | Type |
 
 ▸ **updateMany**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `doc`: UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `options`: ModelUpdateOptions, `callback?`: function): *Query‹any› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[updateMany](_models_location_.ilocation.md#updatemany)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[updateMany](_models_playlist_.iplaylist.md#updatemany)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3593
 
@@ -3040,7 +3040,7 @@ ___
 
 ▸ **updateOne**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `doc`: UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `callback?`: function): *Query‹any› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[updateOne](_models_location_.ilocation.md#updateone)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[updateOne](_models_playlist_.iplaylist.md#updateone)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3587
 
@@ -3065,7 +3065,7 @@ Name | Type |
 
 ▸ **updateOne**(`conditions`: FilterQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `doc`: UpdateQuery‹[ILocationSchema](_models_location_.ilocationschema.md)›, `options`: ModelUpdateOptions, `callback?`: function): *Query‹any› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[updateOne](_models_location_.ilocation.md#updateone)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[updateOne](_models_playlist_.iplaylist.md#updateone)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3589
 
@@ -3096,7 +3096,7 @@ ___
 
 ▸ **watch**(`pipeline?`: object[], `options?`: ChangeStreamOptions & object): *ChangeStream*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[watch](_models_location_.ilocation.md#watch)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[watch](_models_playlist_.iplaylist.md#watch)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3161
 
@@ -3118,7 +3118,7 @@ ___
 
 ▸ **where**(`path`: string, `val?`: any): *Query‹any› & QueryHelpers*
 
-*Inherited from [ILocation](_models_location_.ilocation.md).[where](_models_location_.ilocation.md#where)*
+*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[where](_models_playlist_.iplaylist.md#where)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3597
 
