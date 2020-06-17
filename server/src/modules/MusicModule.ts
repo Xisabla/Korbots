@@ -14,6 +14,7 @@ import {
 } from '../core/IMusic'
 import { ConversionStatus, YoutubeDownloadStatus } from '../core/IMusic'
 import Module from '../core/Module'
+import { Music } from '../models/Music'
 import { mp4ToMp3 } from '../services/ffmpeg'
 
 const log = debug('module:music')
@@ -127,7 +128,7 @@ export class MusicModule extends Module {
      * @param url URL of the Youtube Video
      * @return A Promise of SearchResult
      */
-    fetchYoutubeInfo(url: string): Promise<SearchResult> {
+    private fetchYoutubeInfo(url: string): Promise<SearchResult> {
         log(`Resolving info for ${url}`)
         return new Promise((resolve, reject) => {
             youtubedl.getInfo(url, function (err, info) {
@@ -137,14 +138,20 @@ export class MusicModule extends Module {
                 }
 
                 log(`Resolved for ${url}`)
-                return resolve({
-                    id: info.id,
-                    title: info.title,
-                    url,
-                    duration: info._duration_raw,
-                    thumbnail: info.thumbnails[0].url,
-                    source: 'youtube'
-                })
+
+                return resolve(
+                    Music.doesExist('youtube', info.id).then((inDatabase) => {
+                        return {
+                            id: info.id,
+                            title: info.title,
+                            url,
+                            duration: info._duration_raw,
+                            thumbnail: info.thumbnails[0].url,
+                            source: 'youtube',
+                            inDatabase
+                        }
+                    })
+                )
             })
         })
     }
@@ -177,8 +184,13 @@ export class MusicModule extends Module {
                 if (data) return Promise.resolve(data as DownloadedMusic)
                 return Promise.reject('Invalid source')
             })
-            // TODO: Create music document from Music model and return it
-            .then(console.log)
+            .then((audio) => {
+                return Music.fromDownloaded(audio).save()
+            })
+            .then((doc) => {
+                // TODO: Emit
+                console.log(doc.toJSON())
+            })
             .catch((err) => socket.emit('music:error', err))
     }
 

@@ -66,6 +66,8 @@ export interface SearchResult {
     duration: number
     /** Source of the song */
     source: string
+    /** True if the music is already in the database */
+    inDatabase: boolean
 }
 
 // ---- Converting -------------------------------
