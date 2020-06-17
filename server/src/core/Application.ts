@@ -407,4 +407,8 @@ export default class Application {
     get tasks(): TaskManager {
         return this._tasks
     }
+
+    get server(): express.Application {
+        return this._app
+    }
 }

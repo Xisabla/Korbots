@@ -32,6 +32,10 @@ export class MusicModule extends Module {
     public register(app: Application): void {
         super.register(app)
 
+        app.server.get('/test', (req, res) => {
+            res.send('Hello World')
+        })
+
         this.youtubeStorage = app.getStorage('youtube')
         this.mp3Storage = app.getStorage('musics')
 
