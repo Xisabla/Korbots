@@ -116,3 +116,5 @@ export const Playlist = model<IPlaylistSchema, IPlaylist>(
     'Playist',
     PlaylistSchema
 )
+
+export const Song = model<ISongSchema>('Song', SongSchema)

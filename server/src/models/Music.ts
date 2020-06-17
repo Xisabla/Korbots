@@ -1,7 +1,7 @@
 import { Document, Model, model, Schema } from 'mongoose'
 
 import { DownloadedMusic } from '../core/IMusic'
-import { IPlaylistSchema, Playlist } from './Playlist'
+import { IPlaylistSchema, Playlist, Song } from './Playlist'
 
 // ---- Schema -----------------------------------
 
@@ -83,11 +83,13 @@ MusicSchema.methods.addToPlaylist = function (
     return Playlist.getOrCreate(playlist).then((playlist) => {
         if (!playlist.songs.find((song) => song.id === this.id)) {
             console.log('add')
-            playlist.songs.push({
-                id: this.id,
-                title: this.title,
-                addingDate: new Date()
-            })
+            playlist.songs.push(
+                new Song({
+                    id: this.id,
+                    title: this.title,
+                    addingDate: new Date()
+                })
+            )
 
             return playlist.save().then(() => playlist)
         }
