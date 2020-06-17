@@ -180,17 +180,21 @@ export class MusicModule extends Module {
 
         // Continue
         music
+            // Check for data type from music Promise
             .then((data) => {
                 if (data) return Promise.resolve(data as DownloadedMusic)
                 return Promise.reject('Invalid source')
             })
+            // Create an entry in the database
             .then((audio) => {
                 return Music.fromDownloaded(audio).save()
             })
-            .then((doc) => {
-                // TODO: Emit
-                console.log(doc.toJSON())
+            // Send it
+            .then((music) => {
+                log(`Music entry created, emitting music:music`)
+                socket.emit('music:music', music)
             })
+            // Emit error on error
             .catch((err) => socket.emit('music:error', err))
     }
 
