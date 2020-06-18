@@ -40,7 +40,7 @@ export interface IMusicSchema extends Document {
      *
      * @param playlist
      */
-    addToPlaylists(playlist: string[]): Promise<IPlaylistSchema>
+    addToPlaylists(playlist: string[]): Promise<IPlaylistSchema[]>
 }
 
 export interface IMusic extends Model<IMusicSchema> {

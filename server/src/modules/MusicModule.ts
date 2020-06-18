@@ -245,7 +245,12 @@ export class MusicModule extends Module {
         log(`Received addToPlaylist event from ${socket.id}`)
         const { id, playlist } = data
         Music.findById(id)
-            .then((doc) => doc.addToPlaylist(playlist))
+            .then((music) =>
+                Promise.all([music.addToPlaylist(playlist), music])
+            )
+            .then(([playlist, music]) => {
+                socket.emit('music:addedToPlaylist', { playlist, music })
+            })
             .catch((err) => socket.emit('music:error', err))
     }
 
@@ -253,7 +258,12 @@ export class MusicModule extends Module {
         log(`Received addToPlaylists event from ${socket.id}`)
         const { id, playlists } = data
         Music.findById(id)
-            .then((doc) => doc.addToPlaylists(playlists))
+            .then((music) =>
+                Promise.all([music.addToPlaylists(playlists), music])
+            )
+            .then(([playlists, music]) => {
+                socket.emit('music:addedToPlaylists', { playlists, music })
+            })
             .catch((err) => socket.emit('music:error', err))
     }
 
