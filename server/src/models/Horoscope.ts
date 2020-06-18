@@ -4,6 +4,7 @@ import fetch from 'node-fetch'
 
 import { IAztroAPIResponse } from '../core/API/IAztro'
 import Application from '../core/Application'
+import { sentences } from '../data/sentencesHoroscope.json'
 
 export const HoroscopeSchema = new Schema(
     {
@@ -11,7 +12,10 @@ export const HoroscopeSchema = new Schema(
         date: { type: Date, required: true },
         luckyNumber: { type: Number, required: true },
         mood: String,
-        description: { type: String, required: true }
+        love: { type: String, required: true },
+        work: { type: String, required: true },
+        family: { type: String, required: true },
+        health: { type: String, required: true }
     },
     { collection: 'horoscope' }
 )
@@ -23,10 +27,13 @@ export interface IHoroscopeSchema extends Document {
     date: Date
     luckyNumber: number
     mood?: string
-    /** horoscope sentence determined from luckyNumber */
-    description: string
+    /** horoscope sentences determined from luckyNumber in 4 categories */
+    love: string
+    work: string
+    family: string
+    health: string
 
-    /** check if it was fetched the right day (today)
+    /** Check if it was fetched the right day (today)
      * @returns true if the difference if bigger than 1 day
      */
     needsUpdate(): boolean
@@ -35,6 +42,11 @@ export interface IHoroscopeSchema extends Document {
      * @returns the update document (save Promise) for today
      */
     updateCurrent(): Promise<IHoroscopeSchema>
+
+    /** Generate the corresponding sentences in the 4 categories depending on the luckyNumber
+     * @returns the complete horoscope Document in a Promise
+     */
+    getSentence(): Promise<IHoroscopeSchema>
 }
 
 export interface IHoroscope extends Model<IHoroscopeSchema> {
@@ -68,7 +80,7 @@ export interface IHoroscope extends Model<IHoroscopeSchema> {
 HoroscopeSchema.methods.needsUpdate = function (): boolean {
     const diff = Math.abs(moment().diff(this.date))
 
-    return diff > 60 * 1000 * 60 * 24
+    return diff > 1 * 1000 * 60 * 60 * 24 // 1 day
 }
 
 HoroscopeSchema.methods.updateCurrent = function (): Promise<IHoroscopeSchema> {
@@ -76,10 +88,27 @@ HoroscopeSchema.methods.updateCurrent = function (): Promise<IHoroscopeSchema> {
         this.date = data.current_date
         this.luckyNumber = data.lucky_number
         this.mood = data.mood
-        this.description = data.description
 
-        return this.save()
+        return this.getSentence()
     })
+}
+
+HoroscopeSchema.methods.getSentence = function (): Promise<IHoroscopeSchema> {
+    let i = 0
+    // find right luckyNumber range
+    while (
+        (this.luckyNumber <= sentences[i].luckyRange.from ||
+            this.luckyNumber >= sentences[i].luckyRange.to) &&
+        i <= 12
+    )
+        i++
+    // update the sentences
+    this.love = sentences[i].love
+    this.work = sentences[i].work
+    this.family = sentences[i].family
+    this.health = sentences[i].health
+
+    return this.save()
 }
 
 // ---- Statics ----------------------------------
@@ -88,12 +117,13 @@ HoroscopeSchema.statics.getCurrent = function (
     sign: string
 ): Promise<IHoroscopeSchema> {
     return Horoscope.findAstro(sign).then((doc) => {
-        if (doc == null) return Horoscope.fromCurrent(sign)
         // create new doc if not in DB
+        if (doc == null) return Horoscope.fromCurrent(sign)
         else {
-            if (doc.needsUpdate()) return doc.updateCurrent()
             // find one so update to current date
-            else return doc // find and already up to date
+            if (doc.needsUpdate()) return doc.updateCurrent()
+            // find and already up to date
+            else return doc
         }
     })
 }
@@ -114,8 +144,11 @@ HoroscopeSchema.statics.fromCurrent = function (
             date: data.current_date,
             luckyNumber: data.lucky_number,
             mood: data.mood,
-            description: data.description // TODO: incorporate our own description generator
-        })
+            love: '', // defined later at getSentence()
+            work: '',
+            family: '',
+            health: ''
+        }).getSentence()
     })
 }
 

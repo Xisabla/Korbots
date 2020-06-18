@@ -161,6 +161,7 @@ export default class Application {
             if (pass) options.pass = pass
             if (dbname) options.dbName = dbname
 
+            console.log(options)
             log('Attempting to connect to mongodb server:', url)
 
             mongoose
