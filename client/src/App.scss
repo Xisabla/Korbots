@@ -184,16 +184,23 @@ nav {
     position: absolute;
     resize: horizontal;
     overflow: hidden;
+    height: 100%;
+}
+
+.module-decorations {
+    height: 10%;
 }
 
 .module-body {
     flex: 1 1 auto;
     min-height: 1px;
-    padding: 1.25rem;
+    padding: 0% 1% 0% 1%;
+    width: 98%;
+    height: 90%;
 }
 
 .module-title {
-    margin-bottom: .75rem;
+    height: 10%;
 }
 
 .dragTarget {

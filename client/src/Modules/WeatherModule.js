@@ -11,8 +11,8 @@ class WeatherModule extends React.Component {
             onMouseUp: props.onMouseUp,
             onload: props.onload,
             style: {
-                width: '400px',
-                height: '400px',
+                width: '540px',
+                height: '610px',
                 paddingBottom: '0%',
                 minWidth: '540px',
                 minHeight: '610px',

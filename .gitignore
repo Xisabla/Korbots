@@ -124,3 +124,6 @@ public/dist
 
 # Documentation
 doc/server
+
+# Local storage
+storage
