@@ -1,5 +1,73 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+.modules {
+	position: relative;
+}
+
+.module {
+    border: 1px solid rgba(0,0,0,.125);
+	border-radius: .25rem;
+    position: absolute;
+    resize: horizontal;
+    overflow: hidden;
+    height: 100%;
+}
+
+.module-decorations {
+    height: 10%;
+}
+
+.module-body {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 0% 1% 0% 1%;
+    width: 98%;
+    height: 90%;
+}
+
+.module-title {
+    height: 10%;
+    color: white;
+}
+
+.dragTarget {
+	border-right: 1px solid rgba(0,0,0,.125);
+	border-bottom: 1px solid rgba(0,0,0,.125);
+	padding: 3px;
+    width: 17px;
+    height: 17px;
+	cursor: move;
+}
+
+.lockTarget {
+    position: absolute;
+	border-right: 1px solid rgba(0,0,0,.125);
+	border-bottom: 1px solid rgba(0,0,0,.125);
+    left: 23px;
+    padding: 3px;
+    width: 17px;
+    height: 17.5px;
+    cursor: pointer;
+}
+
+.closeTarget {
+    position: absolute;
+	border-left: 1px solid rgba(0,0,0,.125);
+	border-bottom: 1px solid rgba(0,0,0,.125);
+    right: 0px;
+    padding: 3px;
+    padding-right: 1px;
+    padding-left: 5px;
+    width: 17px;
+    height: 17.5px;
+    cursor: pointer;
+}
+
+.closeTarget:hover {
+    color: rgb(250, 21, 21);
+}
+
+
 //The next 150 lines concerned the weather module
 #module-weather{
     background: linear-gradient(35deg, #000077, #00bbee);
