@@ -16,7 +16,7 @@ export class HoroscopeModule extends Module {
 
     // ---- Sockets ----------------------------------
 
-    public onSoketJoin(socket: Socket): void {
+    public onSocketJoin(socket: Socket): void {
         super.onSocketJoin(socket)
 
         log(`Socket joined: ${socket.id}`)
@@ -36,7 +36,7 @@ export class HoroscopeModule extends Module {
     private getCurrent(socket: Socket, data: any): void {
         log(`Received horoscope:getCurrent event from ${socket.id}`)
 
-        const sign: string = data.sign
+        const sign: string = data.sign.toLowerCase()
 
         Horoscope.getCurrent(sign)
             .then((doc) => {
@@ -44,7 +44,7 @@ export class HoroscopeModule extends Module {
                 socket.emit('horoscope:currentData', doc.toJSON())
             })
             .catch((err) => {
-                log(`Error in the porcess, responding with horoscope:error`)
+                log(`Error in the process, responding with horoscope:error`)
                 socket.emit('horoscope:error', err)
             })
     }

@@ -94,19 +94,17 @@ HoroscopeSchema.methods.updateCurrent = function (): Promise<IHoroscopeSchema> {
 }
 
 HoroscopeSchema.methods.getSentence = function (): Promise<IHoroscopeSchema> {
-    let i = 0
-    // find right luckyNumber range
-    while (
-        (this.luckyNumber <= sentences[i].luckyRange.from ||
-            this.luckyNumber >= sentences[i].luckyRange.to) &&
-        i <= 12
+    const s = sentences.find(
+        (group) =>
+            this.luckyNumber >= group.luckyRange.from &&
+            this.luckyNumber <= group.luckyRange.to
     )
-        i++
-    // update the sentences
-    this.love = sentences[i].love
-    this.work = sentences[i].work
-    this.family = sentences[i].family
-    this.health = sentences[i].health
+
+    // Update the sentences
+    this.love = s.love
+    this.work = s.work
+    this.family = s.family
+    this.health = s.health
 
     return this.save()
 }
@@ -140,15 +138,18 @@ HoroscopeSchema.statics.fromCurrent = function (
     sign: string
 ): Promise<IHoroscopeSchema> {
     return Horoscope.fetchCurrent(sign).then((data: IAztroAPIResponse) => {
-        return new Horoscope({
+        const horoscope = new Horoscope({
             date: data.current_date,
             luckyNumber: data.lucky_number,
             mood: data.mood,
-            love: '', // defined later at getSentence()
-            work: '',
-            family: '',
-            health: ''
-        }).getSentence()
+            sign,
+            love: 'empty', // defined later at getSentence()
+            work: 'empty',
+            family: 'empty',
+            health: 'empty'
+        })
+
+        return horoscope.save().then((doc) => doc.getSentence())
     })
 }
 
