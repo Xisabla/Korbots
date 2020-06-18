@@ -82,7 +82,6 @@ MusicSchema.methods.addToPlaylist = function (
 ): Promise<IPlaylistSchema> {
     return Playlist.getOrCreate(playlist).then((playlist) => {
         if (!playlist.songs.find((song) => song.id === this.id)) {
-            console.log('add')
             playlist.songs.push(
                 new Song({
                     id: this.id,
@@ -93,8 +92,6 @@ MusicSchema.methods.addToPlaylist = function (
 
             return playlist.save().then(() => playlist)
         }
-
-        console.log('skip')
 
         return playlist
     })
