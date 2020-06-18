@@ -62,7 +62,7 @@ ___
 
 • **addingDate**: *Date*
 
-*Defined in [src/models/Playlist.ts:59](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/models/Playlist.ts#L59)*
+*Defined in [src/models/Playlist.ts:59](https://github.com/Xisabla/Korbots/blob/9379d31/server/src/models/Playlist.ts#L59)*
 
 ___
 
@@ -96,7 +96,7 @@ ___
 
 *Overrides [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[id](_models_playlist_.iplaylistschema.md#optional-id)*
 
-*Defined in [src/models/Playlist.ts:57](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/models/Playlist.ts#L57)*
+*Defined in [src/models/Playlist.ts:57](https://github.com/Xisabla/Korbots/blob/9379d31/server/src/models/Playlist.ts#L57)*
 
 ___
 
@@ -116,7 +116,7 @@ ___
 
 • **title**: *string*
 
-*Defined in [src/models/Playlist.ts:58](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/models/Playlist.ts#L58)*
+*Defined in [src/models/Playlist.ts:58](https://github.com/Xisabla/Korbots/blob/9379d31/server/src/models/Playlist.ts#L58)*
 
 ## Methods
 

@@ -39,7 +39,7 @@ Object that store and allow to manage Tasks
 
 \+ **new TaskManager**(...`tasks`: [Task](_core_task_.task.md)[]): *[TaskManager](_core_taskmanager_.taskmanager.md)*
 
-*Defined in [src/core/TaskManager.ts:13](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/core/TaskManager.ts#L13)*
+*Defined in [src/core/TaskManager.ts:13](https://github.com/Xisabla/Korbots/blob/9379d31/server/src/core/TaskManager.ts#L13)*
 
 Create a TaskManager
 
@@ -57,7 +57,7 @@ Name | Type | Description |
 
 • **_tasks**: *[Task](_core_task_.task.md)[]*
 
-*Defined in [src/core/TaskManager.ts:13](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/core/TaskManager.ts#L13)*
+*Defined in [src/core/TaskManager.ts:13](https://github.com/Xisabla/Korbots/blob/9379d31/server/src/core/TaskManager.ts#L13)*
 
 ## Methods
 
@@ -65,7 +65,7 @@ Name | Type | Description |
 
 ▸ **add**(`task`: [Task](_core_task_.task.md) | [TaskSettings](../interfaces/_core_task_.tasksettings.md)): *number*
 
-*Defined in [src/core/TaskManager.ts:30](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/core/TaskManager.ts#L30)*
+*Defined in [src/core/TaskManager.ts:30](https://github.com/Xisabla/Korbots/blob/9379d31/server/src/core/TaskManager.ts#L30)*
 
 Try to add a task into the store, fail if a task with the same id is already in the store
 
@@ -85,7 +85,7 @@ ___
 
 ▸ **get**(`id`: number): *[Task](_core_task_.task.md)*
 
-*Defined in [src/core/TaskManager.ts:66](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/core/TaskManager.ts#L66)*
+*Defined in [src/core/TaskManager.ts:66](https://github.com/Xisabla/Korbots/blob/9379d31/server/src/core/TaskManager.ts#L66)*
 
 Get a Task from the store by its id
 
@@ -105,7 +105,7 @@ ___
 
 ▸ **getAll**(`origin?`: string): *[Task](_core_task_.task.md)‹›[]*
 
-*Defined in [src/core/TaskManager.ts:75](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/core/TaskManager.ts#L75)*
+*Defined in [src/core/TaskManager.ts:75](https://github.com/Xisabla/Korbots/blob/9379d31/server/src/core/TaskManager.ts#L75)*
 
 Get all Tasks from the store that has the given origin
 
@@ -125,7 +125,7 @@ ___
 
 ▸ **lastCall**(`id`: number): *Moment*
 
-*Defined in [src/core/TaskManager.ts:126](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/core/TaskManager.ts#L126)*
+*Defined in [src/core/TaskManager.ts:126](https://github.com/Xisabla/Korbots/blob/9379d31/server/src/core/TaskManager.ts#L126)*
 
 Get when the action was last called
 
@@ -145,7 +145,7 @@ ___
 
 ▸ **nextCall**(`id`: number): *Moment*
 
-*Defined in [src/core/TaskManager.ts:137](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/core/TaskManager.ts#L137)*
+*Defined in [src/core/TaskManager.ts:137](https://github.com/Xisabla/Korbots/blob/9379d31/server/src/core/TaskManager.ts#L137)*
 
 Get when the action will be next called
 
@@ -165,7 +165,7 @@ ___
 
 ▸ **origin**(`id`: number): *string*
 
-*Defined in [src/core/TaskManager.ts:148](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/core/TaskManager.ts#L148)*
+*Defined in [src/core/TaskManager.ts:148](https://github.com/Xisabla/Korbots/blob/9379d31/server/src/core/TaskManager.ts#L148)*
 
 Get the origin of a Task in the store
 
@@ -185,7 +185,7 @@ ___
 
 ▸ **remove**(`id`: number): *void*
 
-*Defined in [src/core/TaskManager.ts:52](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/core/TaskManager.ts#L52)*
+*Defined in [src/core/TaskManager.ts:52](https://github.com/Xisabla/Korbots/blob/9379d31/server/src/core/TaskManager.ts#L52)*
 
 Stop and remove a task from the store
 
@@ -203,7 +203,7 @@ ___
 
 ▸ **start**(`id`: number): *void*
 
-*Defined in [src/core/TaskManager.ts:87](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/core/TaskManager.ts#L87)*
+*Defined in [src/core/TaskManager.ts:87](https://github.com/Xisabla/Korbots/blob/9379d31/server/src/core/TaskManager.ts#L87)*
 
 Allow the Task to check for the Schedule and run the action
 
@@ -221,7 +221,7 @@ ___
 
 ▸ **startAll**(`origin?`: string): *void*
 
-*Defined in [src/core/TaskManager.ts:107](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/core/TaskManager.ts#L107)*
+*Defined in [src/core/TaskManager.ts:107](https://github.com/Xisabla/Korbots/blob/9379d31/server/src/core/TaskManager.ts#L107)*
 
 Start all the tasks which matches the given origin (empty means all)
 
@@ -239,7 +239,7 @@ ___
 
 ▸ **status**(`id`: number): *boolean*
 
-*Defined in [src/core/TaskManager.ts:159](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/core/TaskManager.ts#L159)*
+*Defined in [src/core/TaskManager.ts:159](https://github.com/Xisabla/Korbots/blob/9379d31/server/src/core/TaskManager.ts#L159)*
 
 Get the status of a Task in the store
 
@@ -259,7 +259,7 @@ ___
 
 ▸ **stop**(`id`: number): *void*
 
-*Defined in [src/core/TaskManager.ts:97](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/core/TaskManager.ts#L97)*
+*Defined in [src/core/TaskManager.ts:97](https://github.com/Xisabla/Korbots/blob/9379d31/server/src/core/TaskManager.ts#L97)*
 
 Disallow the Task to check for the Schedule and run the action
 
@@ -277,7 +277,7 @@ ___
 
 ▸ **stopAll**(`origin?`: string): *void*
 
-*Defined in [src/core/TaskManager.ts:115](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/core/TaskManager.ts#L115)*
+*Defined in [src/core/TaskManager.ts:115](https://github.com/Xisabla/Korbots/blob/9379d31/server/src/core/TaskManager.ts#L115)*
 
 Stop all the tasks which matches the given origin (empty means all)
 

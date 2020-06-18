@@ -26,7 +26,7 @@
     PlaylistSchema
 )
 
-*Defined in [src/models/Playlist.ts:115](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/models/Playlist.ts#L115)*
+*Defined in [src/models/Playlist.ts:115](https://github.com/Xisabla/Korbots/blob/9379d31/server/src/models/Playlist.ts#L115)*
 
 ___
 
@@ -43,7 +43,7 @@ ___
     { collection: 'playlist' }
 )
 
-*Defined in [src/models/Playlist.ts:13](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/models/Playlist.ts#L13)*
+*Defined in [src/models/Playlist.ts:13](https://github.com/Xisabla/Korbots/blob/9379d31/server/src/models/Playlist.ts#L13)*
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 • **Song**: *[Model](../interfaces/_models_playlist_.iplaylist.md#model)‹[ISongSchema](../interfaces/_models_playlist_.isongschema.md)‹›, object›* = model<ISongSchema>('Song', SongSchema)
 
-*Defined in [src/models/Playlist.ts:120](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/models/Playlist.ts#L120)*
+*Defined in [src/models/Playlist.ts:120](https://github.com/Xisabla/Korbots/blob/9379d31/server/src/models/Playlist.ts#L120)*
 
 ___
 
@@ -63,4 +63,4 @@ ___
     addingDate: { type: Date, required: true }
 })
 
-*Defined in [src/models/Playlist.ts:7](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/models/Playlist.ts#L7)*
+*Defined in [src/models/Playlist.ts:7](https://github.com/Xisabla/Korbots/blob/9379d31/server/src/models/Playlist.ts#L7)*

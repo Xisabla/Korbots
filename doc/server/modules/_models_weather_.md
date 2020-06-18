@@ -13,6 +13,7 @@
 
 * [Weather](_models_weather_.md#const-weather)
 * [WeatherSchema](_models_weather_.md#const-weatherschema)
+* [coordinatesQueryOffset](_models_weather_.md#const-coordinatesqueryoffset)
 
 ## Variables
 
@@ -20,7 +21,7 @@
 
 • **Weather**: *[IWeather](../interfaces/_models_weather_.iweather.md)‹›* = model<IWeatherSchema, IWeather>('Weather', WeatherSchema)
 
-*Defined in [src/models/Weather.ts:719](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/models/Weather.ts#L719)*
+*Defined in [src/models/Weather.ts:715](https://github.com/Xisabla/Korbots/blob/9379d31/server/src/models/Weather.ts#L715)*
 
 Weather Model, allow to create, manipulate and save weather entries
 
@@ -66,7 +67,15 @@ ___
     { collection: 'weather' }
 )
 
-*Defined in [src/models/Weather.ts:17](https://github.com/Xisabla/Korbots/blob/57d3739/server/src/models/Weather.ts#L17)*
+*Defined in [src/models/Weather.ts:19](https://github.com/Xisabla/Korbots/blob/9379d31/server/src/models/Weather.ts#L19)*
 
 Mongoose Schema of the Weather Model Document, works in the "weather" collection
 See "Document" inside all the documentation of this file as instance of this Schema
+
+___
+
+### `Const` coordinatesQueryOffset
+
+• **coordinatesQueryOffset**: *0.025* = 0.025
+
+*Defined in [src/models/Weather.ts:11](https://github.com/Xisabla/Korbots/blob/9379d31/server/src/models/Weather.ts#L11)*

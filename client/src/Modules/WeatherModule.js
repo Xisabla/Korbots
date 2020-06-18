@@ -16,8 +16,8 @@ class WeatherModule extends React.Component {
                 width: '540px',
                 height: '610px',
                 paddingBottom: '0%',
-                minWidth: '540px',
-                minHeight: '610px',
+                minWidth: '500px',
+                minHeight: '560px',
                 maxWidth: '800px',
                 maxHeight: '710px',
                 left: '0px',
@@ -162,9 +162,11 @@ class WeatherModule extends React.Component {
                 onMouseUp={(ev) => {
                     onMouseUp(ev, index)
                 }}>
-                <i className="fas fa-arrows-alt dragTarget"></i>
-                <i className="fas fa-lock-open lockTarget"></i>
-                <i className="fas fa-times closeTarget"></i>
+                <div className="module-decorations">
+                    <i className="fas fa-arrows-alt dragTarget"></i>
+                    <i className="fas fa-lock-open lockTarget"></i>
+                    <i className="fas fa-times closeTarget"></i>
+                </div>
                 <div className="module-body">
                     {/* Display the title of the module */}
                     <div className="title-container">
