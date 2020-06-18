@@ -153,7 +153,7 @@ export default class Application {
      * @param name Name of the sub-storage
      * @returns The path to the sub-storage directory
      */
-    public getStorage(name: string) {
+    public getStorage(name = '') {
         const dir = path.join(this._options.storage, name)
 
         if (!fs.existsSync(dir)) {
