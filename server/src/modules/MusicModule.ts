@@ -202,8 +202,8 @@ export class MusicModule extends Module {
 
         // Registering
         const ids: number[] = [
-            // this.registerTask(() => this.checkOrphanMusics())
-            // this.registerTask(() => this.checkNotStoredMusics())
+            // TODO: this.registerTask(() => this.checkOrphanMusics())
+            // TODO: this.registerTask(() => this.checkNotStoredMusics())
         ]
 
         log(`Registered ${ids.length} tasks`)
