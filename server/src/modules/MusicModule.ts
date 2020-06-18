@@ -184,7 +184,7 @@ export class MusicModule extends Module {
         socket.on('music:search', (data) => this.search(socket, data))
         socket.on('music:download', (data) => this.download(socket, data))
 
-        socket.on('music:getPlaylists', () => this.getPlaylistSongs(socket))
+        socket.on('music:getPlaylists', () => this.getPlaylists(socket))
 
         socket.on('music:getPlaylistSongs', (data) =>
             this.getPlaylistSongs(socket, data)
