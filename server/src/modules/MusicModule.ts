@@ -184,6 +184,8 @@ export class MusicModule extends Module {
         socket.on('music:search', (data) => this.search(socket, data))
         socket.on('music:download', (data) => this.download(socket, data))
 
+        socket.on('music:getMusic', (data) => this.getMusic(socket, data))
+
         socket.on('music:getPlaylists', () => this.getPlaylists(socket))
         socket.on('music:getPlaylistSongs', (data) =>
             this.getPlaylistSongs(socket, data)
@@ -217,6 +219,16 @@ export class MusicModule extends Module {
     }
 
     // ---- Methods ----------------------------------
+
+    private getMusic(socket: Socket, data: any): void {
+        const { source, sourceId } = data
+
+        Music.findOneSong(source, sourceId)
+            .then((music) => {
+                socket.emit('music:musicEntry', music)
+            })
+            .catch((err) => socket.emit('music:error', err))
+    }
 
     /**
      * Get all the playlists in the database and send them to the client
