@@ -23,6 +23,6 @@
 
 ▸ **dummyDownloadedVideo**(): *[DownloadedVideo](../interfaces/_core_imusic_.downloadedvideo.md)*
 
-*Defined in [src/core/IMusic.ts:103](https://github.com/Xisabla/Korbots/blob/c465fbe/server/src/core/IMusic.ts#L103)*
+*Defined in [src/core/IMusic.ts:103](https://github.com/Xisabla/Korbots/blob/6eaa780/server/src/core/IMusic.ts#L103)*
 
 **Returns:** *[DownloadedVideo](../interfaces/_core_imusic_.downloadedvideo.md)*

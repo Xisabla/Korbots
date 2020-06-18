@@ -79,7 +79,7 @@ ___
 
 • **creationDate**: *Date*
 
-*Defined in [src/models/Playlist.ts:32](https://github.com/Xisabla/Korbots/blob/c465fbe/server/src/models/Playlist.ts#L32)*
+*Defined in [src/models/Playlist.ts:32](https://github.com/Xisabla/Korbots/blob/6eaa780/server/src/models/Playlist.ts#L32)*
 
 Playlist creation date
 
@@ -101,7 +101,7 @@ ___
 
 • **description**? : *string*
 
-*Defined in [src/models/Playlist.ts:28](https://github.com/Xisabla/Korbots/blob/c465fbe/server/src/models/Playlist.ts#L28)*
+*Defined in [src/models/Playlist.ts:28](https://github.com/Xisabla/Korbots/blob/6eaa780/server/src/models/Playlist.ts#L28)*
 
 Description of the playlist
 
@@ -111,7 +111,7 @@ ___
 
 • **duration**: *number*
 
-*Defined in [src/models/Playlist.ts:30](https://github.com/Xisabla/Korbots/blob/c465fbe/server/src/models/Playlist.ts#L30)*
+*Defined in [src/models/Playlist.ts:30](https://github.com/Xisabla/Korbots/blob/6eaa780/server/src/models/Playlist.ts#L30)*
 
 Total duration of the playlist
 
@@ -136,7 +136,7 @@ ___
 
 • **name**: *string*
 
-*Defined in [src/models/Playlist.ts:26](https://github.com/Xisabla/Korbots/blob/c465fbe/server/src/models/Playlist.ts#L26)*
+*Defined in [src/models/Playlist.ts:26](https://github.com/Xisabla/Korbots/blob/6eaa780/server/src/models/Playlist.ts#L26)*
 
 Name of the playlist
 
@@ -158,7 +158,7 @@ ___
 
 • **songs**: *[ISongSchema](_models_playlist_.isongschema.md)[]*
 
-*Defined in [src/models/Playlist.ts:34](https://github.com/Xisabla/Korbots/blob/c465fbe/server/src/models/Playlist.ts#L34)*
+*Defined in [src/models/Playlist.ts:34](https://github.com/Xisabla/Korbots/blob/6eaa780/server/src/models/Playlist.ts#L34)*
 
 Songs of the playlist
 
@@ -562,7 +562,7 @@ ___
 
 ▸ **removeSong**(`id`: string): *Promise‹[IPlaylistSchema](_models_playlist_.iplaylistschema.md)›*
 
-*Defined in [src/models/Playlist.ts:46](https://github.com/Xisabla/Korbots/blob/c465fbe/server/src/models/Playlist.ts#L46)*
+*Defined in [src/models/Playlist.ts:46](https://github.com/Xisabla/Korbots/blob/6eaa780/server/src/models/Playlist.ts#L46)*
 
 Remove a song from the playlist
 
@@ -582,7 +582,7 @@ ___
 
 ▸ **removeSongSource**(`source`: string, `sourceId`: string): *Promise‹[IPlaylistSchema](_models_playlist_.iplaylistschema.md)›*
 
-*Defined in [src/models/Playlist.ts:53](https://github.com/Xisabla/Korbots/blob/c465fbe/server/src/models/Playlist.ts#L53)*
+*Defined in [src/models/Playlist.ts:53](https://github.com/Xisabla/Korbots/blob/6eaa780/server/src/models/Playlist.ts#L53)*
 
 Remove a song from the playlist
 

@@ -20,7 +20,7 @@
 
 • **Music**: *[IMusic](../interfaces/_models_music_.imusic.md)‹›* = model<IMusicSchema, IMusic>('Music', MusicSchema)
 
-*Defined in [src/models/Music.ts:155](https://github.com/Xisabla/Korbots/blob/c465fbe/server/src/models/Music.ts#L155)*
+*Defined in [src/models/Music.ts:152](https://github.com/Xisabla/Korbots/blob/6eaa780/server/src/models/Music.ts#L152)*
 
 ___
 
@@ -38,4 +38,4 @@ ___
     { collection: 'music' }
 )
 
-*Defined in [src/models/Music.ts:8](https://github.com/Xisabla/Korbots/blob/c465fbe/server/src/models/Music.ts#L8)*
+*Defined in [src/models/Music.ts:8](https://github.com/Xisabla/Korbots/blob/6eaa780/server/src/models/Music.ts#L8)*
