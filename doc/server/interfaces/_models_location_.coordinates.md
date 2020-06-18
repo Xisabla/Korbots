@@ -19,7 +19,7 @@
 
 • **lat**: *number*
 
-*Defined in [src/models/Location.ts:10](https://github.com/Xisabla/Korbots/blob/64f6240/server/src/models/Location.ts#L10)*
+*Defined in [src/models/Location.ts:10](https://github.com/Xisabla/Korbots/blob/c465fbe/server/src/models/Location.ts#L10)*
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 • **lon**: *number*
 
-*Defined in [src/models/Location.ts:11](https://github.com/Xisabla/Korbots/blob/64f6240/server/src/models/Location.ts#L11)*
+*Defined in [src/models/Location.ts:11](https://github.com/Xisabla/Korbots/blob/c465fbe/server/src/models/Location.ts#L11)*
