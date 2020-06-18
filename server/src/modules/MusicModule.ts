@@ -1,4 +1,5 @@
 import debug from 'debug'
+import { Request, Response } from 'express'
 import fs from 'fs'
 import path from 'path'
 import { YouTube } from 'popyt'
@@ -14,7 +15,7 @@ import {
 } from '../core/IMusic'
 import { ConversionStatus, YoutubeDownloadStatus } from '../core/IMusic'
 import Module from '../core/Module'
-import { Music } from '../models/Music'
+import { IMusicSchema, Music } from '../models/Music'
 import { Playlist } from '../models/Playlist'
 import { mp4ToMp3 } from '../services/ffmpeg'
 
@@ -32,16 +33,145 @@ export class MusicModule extends Module {
     public register(app: Application): void {
         super.register(app)
 
-        app.server.get('/test', (req, res) => {
-            res.send('Hello World')
-        })
-
+        // Init internal storage
         this.youtubeStorage = app.getStorage('youtube')
         this.mp3Storage = app.getStorage('musics')
 
+        // YouTube API handler
         this.youtube = new YouTube(Application.getAPIKey('google:youtube'))
 
+        // Deserver audio stream on HTTP GET Request
+        app.server.get('/music/:music', (req, res) =>
+            this.handleHttpMusic(req, res)
+        )
+
         log('Registered')
+    }
+
+    // ---- HTTP Audio Stream ------------------------
+
+    /**
+     * Handle the HTTP GET Request for the music streaming
+     * Try to find the music and stream it, return 400, 404 or 500 on error
+     * @param req HTTP Request
+     * @param res HTTP Response
+     */
+    private handleHttpMusic(req: Request, res: Response) {
+        const musicId = req.params.music
+
+        log(`Received stream request for: ${musicId}`)
+
+        // Look for the music
+        Music.findById(musicId)
+            .then((music) => {
+                if (music) return this.httpAudioStream(req, res, music)
+
+                // No entry in the database, 404
+                log(`Music id not found: ${musicId}`)
+                return this.httpMusicError(
+                    req,
+                    res,
+                    {
+                        message: 'Music id not found'
+                    },
+                    404
+                )
+            })
+            // Return 400 on error, it is not a good ID format
+            .catch((error) => {
+                log(`Something went wrong with musicId: ${musicId}`)
+                return this.httpMusicError(req, res, error, 400)
+            })
+    }
+
+    /**
+     * Stream the Music given
+     * @param req HTTP Request
+     * @param res HTTP Response
+     * @param music Music to stream
+     */
+    private httpAudioStream(req: Request, res: Response, music: IMusicSchema) {
+        const file = path.join(this.app.getStorage(), music.path)
+
+        if (!fs.existsSync(file)) {
+            log(`Audio file not found for music: ${music.id}`)
+            return this.httpMusicError(req, res, {
+                message: 'Music file not found'
+            })
+        }
+
+        const stat = fs.statSync(file)
+        const size = stat.size
+
+        log(`Audio file found for music id: ${music.id}, size: ${size}`)
+
+        if (req.headers.range) {
+            return this.httpAudioStreamRange(req, res, file, size)
+        }
+
+        log(`Direct streaming ${music.id}`)
+        res.writeHead(200, {
+            'Content-Length': size,
+            'Content-Type': 'audio/mpeg'
+        })
+
+        return fs.createReadStream(file).pipe(res)
+    }
+
+    /**
+     * Stream the music file according to the range given by the HTTP Request
+     * @param req HTTP Request
+     * @param res HTTP Response
+     * @param file Music file
+     * @param size Size of the music file
+     */
+    private httpAudioStreamRange(
+        req: Request,
+        res: Response,
+        file: string,
+        size: number
+    ) {
+        const range = req.headers.range
+        const parts = range.replace(/bytes=/, '').split('-')
+
+        const start = parseInt(parts[0], 10)
+        const end = parts[1] ? parseInt(parts[1]) : size - 1
+
+        const chunkSize = end - start + 1
+
+        const stream = fs.createReadStream(file, {
+            start,
+            end
+        })
+
+        res.writeHead(206, {
+            'Content-Range': 'bytes ' + start + '-' + end + '/' + size,
+            'Accept-Ranges': 'bytes',
+            'Content-Length': chunkSize,
+            'Content-Type': 'audio/mpeg'
+        })
+
+        log(`Streaming file split into chunks of ${chunkSize}`)
+
+        return stream.pipe(res)
+    }
+
+    /**
+     * Helper method to given an error the HTTP Response
+     * @param req HTTP Request
+     * @param res HTTP Response
+     * @param error Error object/message
+     * @param statusCode HTTP Status code (default: 500)
+     */
+    private httpMusicError(
+        req: Request,
+        res: Response,
+        error: any,
+        statusCode = 500
+    ) {
+        res.statusCode = statusCode
+        res.json({ error })
+        return res.end()
     }
 
     // ---- Sockets ----------------------------------
