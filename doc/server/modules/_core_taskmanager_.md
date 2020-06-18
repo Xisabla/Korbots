@@ -18,4 +18,4 @@
 
 • **log**: *Debugger* = debug(`task:manager`)
 
-*Defined in [src/core/TaskManager.ts:7](https://github.com/Xisabla/Korbots/blob/6eaa780/server/src/core/TaskManager.ts#L7)*
+*Defined in [src/core/TaskManager.ts:7](https://github.com/Xisabla/Korbots/blob/7261d8b/server/src/core/TaskManager.ts#L7)*
