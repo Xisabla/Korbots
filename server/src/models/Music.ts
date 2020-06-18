@@ -49,7 +49,7 @@ export interface IMusic extends Model<IMusicSchema> {
      * @param audio The DownloadedMusic
      * @returns A Music Document
      */
-    fromDownloaded(audio: DownloadedMusic): IMusicSchema
+    fromDownloaded(audio: DownloadedMusic): Promise<IMusicSchema>
 
     // ---- Getters ----------------------------------
     /**
@@ -112,14 +112,27 @@ MusicSchema.methods.addToPlaylists = function (
 
 MusicSchema.statics.fromDownloaded = function (
     audio: DownloadedMusic
-): IMusicSchema {
-    return new Music({
-        title: audio.title,
-        duration: audio.duration,
-        thumbnail: audio.thumbnail,
-        sourceId: audio.id,
-        source: audio.source,
-        path: `musics/${audio.mp3.filename}`
+): Promise<IMusicSchema> {
+    return Music.findOneSong(audio.source, audio.id).then((doc) => {
+        if (doc) {
+            doc.title = audio.title
+            doc.duration = audio.duration
+            doc.thumbnail = audio.thumbnail
+            doc.path = `musics/${audio.mp3.filename}`
+
+            return doc.save()
+        }
+
+        const m = new Music({
+            title: audio.title,
+            duration: audio.duration,
+            thumbnail: audio.thumbnail,
+            sourceId: audio.id,
+            source: audio.source,
+            path: `musics/${audio.mp3.filename}`
+        })
+
+        return m.save()
     })
 }
 

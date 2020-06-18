@@ -392,7 +392,7 @@ export class MusicModule extends Module {
             })
             // Create an entry in the database
             .then((audio) => {
-                return Music.fromDownloaded(audio).save()
+                return Music.fromDownloaded(audio)
             })
             // Send it
             .then((music) => {
