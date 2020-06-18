@@ -20,7 +20,7 @@
 
 • **audio**: *[DownloadedMusic](_core_imusic_.downloadedmusic.md)*
 
-*Defined in [src/core/IMusic.ts:76](https://github.com/Xisabla/Korbots/blob/c465fbe/server/src/core/IMusic.ts#L76)*
+*Defined in [src/core/IMusic.ts:76](https://github.com/Xisabla/Korbots/blob/6eaa780/server/src/core/IMusic.ts#L76)*
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 • **status**: *object*
 
-*Defined in [src/core/IMusic.ts:78](https://github.com/Xisabla/Korbots/blob/c465fbe/server/src/core/IMusic.ts#L78)*
+*Defined in [src/core/IMusic.ts:78](https://github.com/Xisabla/Korbots/blob/6eaa780/server/src/core/IMusic.ts#L78)*
 
 #### Type declaration:
 
@@ -42,4 +42,4 @@ ___
 
 • **video**: *[DownloadedVideo](_core_imusic_.downloadedvideo.md)*
 
-*Defined in [src/core/IMusic.ts:77](https://github.com/Xisabla/Korbots/blob/c465fbe/server/src/core/IMusic.ts#L77)*
+*Defined in [src/core/IMusic.ts:77](https://github.com/Xisabla/Korbots/blob/6eaa780/server/src/core/IMusic.ts#L77)*

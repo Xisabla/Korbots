@@ -850,7 +850,7 @@ ___
 
 ▸ **doesExists**(`username`: string): *Promise‹boolean›*
 
-*Defined in [src/models/User.ts:19](https://github.com/Xisabla/Korbots/blob/c465fbe/server/src/models/User.ts#L19)*
+*Defined in [src/models/User.ts:19](https://github.com/Xisabla/Korbots/blob/6eaa780/server/src/models/User.ts#L19)*
 
 **Parameters:**
 
