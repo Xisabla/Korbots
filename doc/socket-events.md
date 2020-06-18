@@ -26,3 +26,19 @@
 | music:converting      | server → client | Give to the client the status of Video to Audio conversion                         | [ConversionStatus](server/interface/../interfaces/_core_imusic_.conversionstatus.md) |
 | music:music          | server → client | Give to the client the Music entry                                                  | [IMusicSchema](server/interfaces/_models_music_.imusicschema.md) |
 | music:error          | server → client | Tell to the client that something went wrong                                        | any                                                   |
+
+| Event Name           | Flow direction  | Description                                                                         | Content                                                |
+|----------------------|-----------------|-------------------------------------------------------------------------------------|--------------------------------------------------------|
+| music:getPlaylists   | client → server | Get all playlists in the Database with basic song infos                             | { }                                |
+| music:getPlaylistSongs| client → server | Get all songs from a Playlist (from its id)                                        | { id }                          |
+| music:addToPlaylist  | client → server | Add a Music (from its id) to a Playlist (from its name)                             | { id, playlist }                          |
+| music:addToPlaylists | client → server | Add a Music (from its id) to multiple Playlists (from their name)                   | { id, playlists[] }                          |
+| music:sortPlaylist   | client → server | Get a sorted playlist from its name                                                 | { name, sort: 'name','addingDate','random','unsorted'  }                          |
+| music:playlists      | server → client | Give to the client all the playlists in the database                                | [IPlaylistSchema](server/interfaces/_models_playlist_.iplaylistschema.md)[] |
+| music:playlistSongs  | server → client | Give to the client all the songs of a playlist                                      | { playlist: [IPlaylistSchema](server/interfaces/_models_playlist_.iplaylistschema.md), songs: [IMusicSchema](server/interfaces/_models_music_.imusicschema.md)[] } |
+| music:playlists      | server → client | Give to the client all the playlists in the database                                | [IPlaylistSchema](server/interfaces/_models_playlist_.iplaylistschema.md)[] |
+| music:addedToPlaylist| server → client | Give to the client all the playlists in the database                                | [IPlaylistSchema](server/interfaces/_models_playlist_.iplaylistschema.md)[] |
+| music:addedToPlaylists| server → client | Give to the client all the playlists in the database                                | [IPlaylistSchema](server/interfaces/_models_playlist_.iplaylistschema.md)[] |
+| music:sortedByAddingDate| server → client | Give to the client a sorted by adding date playlist                             | [IPlaylistSchema](server/interfaces/_models_playlist_.iplaylistschema.md)   |
+| music:shuffled      | server → client | Give to the client a shuffled playlist                                              | [IPlaylistSchema](server/interfaces/_models_playlist_.iplaylistschema.md)   |
+| music:unsorted      | server → client | Give to the client an unsorted playlist                                             | [IPlaylistSchema](server/interfaces/_models_playlist_.iplaylistschema.md)   |

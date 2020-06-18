@@ -185,7 +185,6 @@ export class MusicModule extends Module {
         socket.on('music:download', (data) => this.download(socket, data))
 
         socket.on('music:getPlaylists', () => this.getPlaylists(socket))
-
         socket.on('music:getPlaylistSongs', (data) =>
             this.getPlaylistSongs(socket, data)
         )
@@ -219,6 +218,10 @@ export class MusicModule extends Module {
 
     // ---- Methods ----------------------------------
 
+    /**
+     * Get all the playlists in the database and send them to the client
+     * @param socket Client Socket
+     */
     private getPlaylists(socket: Socket): void {
         Playlist.find()
             .then((playlists) => {
@@ -230,6 +233,11 @@ export class MusicModule extends Module {
             .catch((err) => socket.emit('music:error', err))
     }
 
+    /**
+     * Get all the songs of a playlist and send them to the client
+     * @param socket Client Socket
+     * @param data Data containing Playlist id
+     */
     private getPlaylistSongs(socket: Socket, data: any): void {
         const { id } = data
 
@@ -245,6 +253,11 @@ export class MusicModule extends Module {
         })
     }
 
+    /**
+     * Add a song into a playlist and send a report to the client
+     * @param socket Client Socket
+     * @param data Data containing Playlist name and Music id
+     */
     private addToPlaylist(socket: Socket, data: any): void {
         log(`Received addToPlaylist event from ${socket.id}`)
         const { id, playlist } = data
@@ -258,6 +271,11 @@ export class MusicModule extends Module {
             .catch((err) => socket.emit('music:error', err))
     }
 
+    /**
+     * Add a song into some playlists and send a report to the client
+     * @param socket Client Socket
+     * @param data Data containing Playlist names and Music id
+     */
     private addToPlaylists(socket: Socket, data: any): void {
         log(`Received addToPlaylists event from ${socket.id}`)
         const { id, playlists } = data
@@ -271,6 +289,11 @@ export class MusicModule extends Module {
             .catch((err) => socket.emit('music:error', err))
     }
 
+    /**
+     * Get a playlist by it's name with the songs sorted by the wanted method and send them to the client
+     * @param socket Client Socket
+     * @param data Data containing the Playlist name and the sort method
+     */
     private sortPlaylist(socket: Socket, data: any): void {
         const { name, sort } = data
 
