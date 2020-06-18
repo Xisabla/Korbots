@@ -411,4 +411,8 @@ export default class Application {
     get server(): express.Application {
         return this._app
     }
+
+    get public(): string {
+        return this._options.public
+    }
 }
