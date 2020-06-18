@@ -184,33 +184,11 @@ export class MusicModule extends Module {
         socket.on('music:search', (data) => this.search(socket, data))
         socket.on('music:download', (data) => this.download(socket, data))
 
-        socket.on('music:getPlaylists', () => {
-            Playlist.find()
-                .then((playlists) => {
-                    socket.emit(
-                        'music:playlists',
-                        playlists.map((playlist) => playlist.toJSON())
-                    )
-                })
-                .catch((err) => socket.emit('music:error', err))
-        })
+        socket.on('music:getPlaylists', () => this.getPlaylistSongs(socket))
 
-        socket.on('music:getPlaylistSongs', (data) => {
-            const { id } = data
-
-            Playlist.findById(id).then((playlist) => {
-                Promise.all(
-                    playlist.songs.map((song) => Music.findById(song.id))
-                )
-                    .then((songs) =>
-                        socket.emit('music:playlistSongs', {
-                            playlist,
-                            songs: songs.map((song) => song.toJSON())
-                        })
-                    )
-                    .catch((err) => socket.emit('music:error', err))
-            })
-        })
+        socket.on('music:getPlaylistSongs', (data) =>
+            this.getPlaylistSongs(socket, data)
+        )
 
         socket.on('music:addToPlaylist', (data) =>
             this.addToPlaylist(socket, data)
@@ -240,6 +218,32 @@ export class MusicModule extends Module {
     }
 
     // ---- Methods ----------------------------------
+
+    private getPlaylists(socket: Socket): void {
+        Playlist.find()
+            .then((playlists) => {
+                socket.emit(
+                    'music:playlists',
+                    playlists.map((playlist) => playlist.toJSON())
+                )
+            })
+            .catch((err) => socket.emit('music:error', err))
+    }
+
+    private getPlaylistSongs(socket: Socket, data: any): void {
+        const { id } = data
+
+        Playlist.findById(id).then((playlist) => {
+            Promise.all(playlist.songs.map((song) => Music.findById(song.id)))
+                .then((songs) =>
+                    socket.emit('music:playlistSongs', {
+                        playlist,
+                        songs: songs.map((song) => song.toJSON())
+                    })
+                )
+                .catch((err) => socket.emit('music:error', err))
+        })
+    }
 
     private addToPlaylist(socket: Socket, data: any): void {
         log(`Received addToPlaylist event from ${socket.id}`)
