@@ -21,7 +21,7 @@
 |----------------------|-----------------|-------------------------------------------------------------------------------------|--------------------------------------------------------|
 | music:search         | client → server | Ask for the server to search a song from a given source                             | { query, source }                                |
 | music:download       | client → server | Ask for the server to download a song from a given source                           | { url, source }                          |
-| music:searchResult   | server → client | Give to the client the results of song search                                       | [SearchResult](server/interfaces/_core_imusic_.searchresult.md)[] |
+| music:searchResult   | server → client | Give to the client the results of song search                                       | [SearchResult](server/interfaces/_core_imusic_.searchresult.md) |
 | music:downloading | server → client | Give to the client the status of a Video or an Audio download                          | [YoutubeDownloadStatus](server/interfaces/_core_imusic_.youtubedownloadstatus.md) |
 | music:converting      | server → client | Give to the client the status of Video to Audio conversion                         | [ConversionStatus](server/interface/../interfaces/_core_imusic_.conversionstatus.md) |
 | music:music          | server → client | Give to the client the Music entry                                                  | [IMusicSchema](server/interfaces/_models_music_.imusicschema.md) |
