@@ -105,6 +105,7 @@ class WeatherModule extends React.Component {
     /* Function to find the weather thanks to geolocation of the computer */
     getWeatherbyGeolocation() {
         this.setState({ geolocationMode: true })
+        this.setState({ locationMode: false })
         if ('geolocation' in navigator) {
             navigator.geolocation.getCurrentPosition((geo) => {
                 // Execute only if the location is allowed by the user
