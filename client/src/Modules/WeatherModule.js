@@ -24,35 +24,37 @@ class WeatherModule extends React.Component {
             /* Declaration of initial states */
             longitude: 0,
             latitude: 0,
-            localisationMode: false,
+            locationMode: false,
+            geolocationMode: false,
             city: '',
             country: ''
         }
 
         /* Set the context for the functions to be class object */
-        this.getWeatherbyCoord = this.getWeatherbyCoord.bind(this)
+        this.getWeatherbyGeolocation = this.getWeatherbyGeolocation.bind(this)
+        this.getWeatherbyCoord = this.getWeatherbyCoords.bind(this)
         this.getWeatherbyCity = this.getWeatherbyCity.bind(this)
+        this.handleChangeLocationMode = this.handleChangeLocationMode.bind(this)
+        this.handleChangeCityMode = this.handleChangeCityMode.bind(this)
         this.handleChangeLatitude = this.handleChangeLatitude.bind(this)
         this.handleChangeLongitude = this.handleChangeLongitude.bind(this)
-        this.handleChangeLocalisationMode = this.handleChangeLocalisationMode.bind(
-            this
-        )
-        this.handleChangeCityMode = this.handleChangeCityMode.bind(this)
         this.handleChangeCity = this.handleChangeCity.bind(this)
         this.handleChangeCountry = this.handleChangeCountry.bind(this)
 
         /* Data recovery for the current weather */
         this.props.socket.on('weather:currentData', (data) => {
-            this.setState({ data: data })
-            if (!this.state.localisationMode) {
-                const latitude = parseFloat(data.latitude)
-                const longitude = parseFloat(data.longitude)
-                const numberOfDay = 4
-                this.props.socket.emit('weather:getDailyAll', {
-                    latitude,
-                    longitude,
-                    numberOfDay
-                })
+            if (!this.state.error) {
+                this.setState({ data: data })
+                if (!this.state.locationMode) {
+                    const latitude = parseFloat(data.latitude)
+                    const longitude = parseFloat(data.longitude)
+                    const numberOfDay = 4
+                    this.props.socket.emit('weather:getDailyAll', {
+                        latitude,
+                        longitude,
+                        numberOfDay
+                    })
+                }
             }
         })
         /* Data recovery for the weather of the week */
@@ -77,14 +79,16 @@ class WeatherModule extends React.Component {
             this.setState({ longitude: event.target.value })
     }
 
-    /* Function to update the localisation mode value (true) */
-    handleChangeLocalisationMode() {
-        this.setState({ localisationMode: true })
+    /* Function to update the location mode value (true) */
+    handleChangeLocationMode() {
+        this.setState({ locationMode: true })
+        this.setState({ geolocationMode: false })
     }
 
-    /* Function to update the localisation mode value (false) */
+    /* Function to update the location mode value (false) */
     handleChangeCityMode() {
-        this.setState({ localisationMode: false })
+        this.setState({ locationMode: false })
+        this.setState({ geolocationMode: false })
     }
 
     /* Function to update the city value */
@@ -98,8 +102,30 @@ class WeatherModule extends React.Component {
             this.setState({ country: event.target.value })
     }
 
+    /* Function to find the weather thanks to geolocation of the computer */
+    getWeatherbyGeolocation() {
+        this.setState({ geolocationMode: true })
+        if ('geolocation' in navigator) {
+            navigator.geolocation.getCurrentPosition((geo) => {
+                // Execute only if the location is allowed by the user
+                const latitude = parseFloat(geo.coords.latitude)
+                const longitude = parseFloat(geo.coords.longitude)
+                this.props.socket.emit('weather:getCurrent', {
+                    latitude,
+                    longitude
+                })
+                const numberOfDay = 4
+                this.props.socket.emit('weather:getDailyAll', {
+                    latitude,
+                    longitude,
+                    numberOfDay
+                })
+            })
+        }
+    }
+
     /* function to find the weather by the coordinates */
-    getWeatherbyCoord() {
+    getWeatherbyCoords() {
         const latitude = parseFloat(this.state.latitude)
         const longitude = parseFloat(this.state.longitude)
         this.props.socket.emit('weather:getCurrent', { latitude, longitude })
@@ -142,76 +168,85 @@ class WeatherModule extends React.Component {
                         <Titles />
                     </div>
                     <div className="form-container">
-                        {/* Display both options: search by location or by city with buttons*/}
-                        <div className="search_container">
-                            <div className="search">Rechercher par:</div>
+                        {/* Display the 3 options: search by geolocation, by location or by city with buttons*/}
+                        <div className="search-container">
+                            {/* Geolocation get immediately the weather */}
+                            <button
+                                onClick={this.getWeatherbyGeolocation}
+                                type="button">
+                                Géolocalisation
+                            </button>
                             <button
                                 onClick={this.handleChangeCityMode}
                                 type="button">
                                 Ville
                             </button>
                             <button
-                                onClick={this.handleChangeLocalisationMode}
+                                onClick={this.handleChangeLocationMode}
                                 type="button">
                                 Localisation
                             </button>
                         </div>
-                        {/* If the user chooses "localisation" there are 2 inputs: Latitude and Longitude */}
-                        {this.state.localisationMode && (
-                            <form className="row">
-                                <input
-                                    type="number"
-                                    name="latitude"
-                                    placeholder="Latitude..."
-                                    onChange={this.handleChangeLatitude}
-                                    value={this.state.latitude}
-                                    max={90}
-                                    min={-90}
-                                    step={0.01}
-                                />
-                                <input
-                                    type="number"
-                                    name="longitude"
-                                    placeholder="Longitude..."
-                                    onChange={this.handleChangeLongitude}
-                                    value={this.state.longitude}
-                                    max={180}
-                                    min={-180}
-                                    step={0.01}
-                                />
-                                {/* Button to search the result with the 2 parameters entered */}
-                                <button
-                                    onClick={this.getWeatherbyCoord}
-                                    type="button">
-                                    Rechercher
-                                </button>
-                            </form>
-                        )}
-                        {/* If the user chooses "Ville" there are 2 inputs: Ville and Pays */}
-                        {!this.state.localisationMode && (
-                            <form className="row">
-                                <input
-                                    type="text"
-                                    name="city"
-                                    placeholder="Ville..."
-                                    value={this.state.city}
-                                    onChange={this.handleChangeCity}
-                                />
-                                <input
-                                    type="text"
-                                    name="country"
-                                    placeholder="Pays..."
-                                    value={this.state.country}
-                                    onChange={this.handleChangeCountry}
-                                />
-                                {/* Button to search the result with the 2 parameters entered */}
-                                <button
-                                    onClick={this.getWeatherbyCity}
-                                    type="button">
-                                    Rechercher
-                                </button>
-                            </form>
-                        )}
+                        <div className="form-container2">
+                            {/* If the user chooses "localisation" there are 2 inputs: Latitude and Longitude */}
+                            {this.state.locationMode && (
+                                <form className="row">
+                                    <input
+                                        type="number"
+                                        name="latitude"
+                                        placeholder="Latitude..."
+                                        onChange={this.handleChangeLatitude}
+                                        value={this.state.latitude}
+                                        max={90}
+                                        min={-90}
+                                        step={0.01}
+                                    />
+                                    <input
+                                        type="number"
+                                        name="longitude"
+                                        placeholder="Longitude..."
+                                        onChange={this.handleChangeLongitude}
+                                        value={this.state.longitude}
+                                        max={180}
+                                        min={-180}
+                                        step={0.01}
+                                    />
+                                    {/* Button to search the result with the 2 parameters entered */}
+                                    <button
+                                        onClick={this.getWeatherbyCoords}
+                                        type="button">
+                                        Rechercher
+                                    </button>
+                                </form>
+                            )}
+
+                            {/* If the user chooses "Ville" there are 2 inputs: Ville and Pays */}
+                            {!this.state.locationMode &&
+                                !this.state.geolocationMode && (
+                                    <form className="row">
+                                        <input
+                                            type="text"
+                                            name="city"
+                                            placeholder="Ville..."
+                                            value={this.state.city}
+                                            onChange={this.handleChangeCity}
+                                        />
+                                        <input
+                                            type="text"
+                                            name="country"
+                                            placeholder="Pays..."
+                                            value={this.state.country}
+                                            onChange={this.handleChangeCountry}
+                                        />
+                                        {/* Button to search the result with the 2 parameters entered */}
+                                        <button
+                                            onClick={this.getWeatherbyCity}
+                                            type="button">
+                                            Rechercher
+                                        </button>
+                                    </form>
+                                )}
+                        </div>
                     </div>
                     {/* Display the weather and the conditions of the current day with the "Weather" component*/}
                     <div className="weather-container">
@@ -311,9 +346,6 @@ const Weather = (props) => {
                         <span className="weather__value"> {data.wind}m/s </span>
                     </p>
                 )}
-                {data && data.error && (
-                    <p className="weather__error">{data.error}</p>
-                )}
             </div>
         </div>
     )
@@ -341,9 +373,6 @@ const DailyWeather = (props) => {
                         {Math.round(data1.temperature - 273, 15)}°C{' '}
                     </span>
                 )}
-                {data1 && data1.error && (
-                    <p className="weather__error">{data1.error}</p>
-                )}
             </div>
         </div>
     )
@@ -352,7 +381,7 @@ const DailyWeather = (props) => {
 /* WeatherIcon component to display the corresponding icon */
 const WeatherIcon = (props) => {
     return (
-        <span className="weather_icon">
+        <span className="weather__icon">
             {props.weatherIcon && (
                 <img
                     src={`http://openweathermap.org/img/w/${props.weatherIcon}.png`}
@@ -375,6 +404,7 @@ const WeatherDate = (props) => {
     }
 }
 
+/* PropTypes declarations */
 WeatherModule.propTypes = {
     handleChangeLatitude: PropTypes.func,
     handleChangeLongitude: PropTypes.func,
@@ -383,7 +413,35 @@ WeatherModule.propTypes = {
     index: PropTypes.number,
     ref: PropTypes.string,
     onload: PropTypes.func,
-    socket: PropTypes.object
+    socket: PropTypes.object,
+    locationMode: PropTypes.bool,
+    geolocationMode: PropTypes.bool,
+    data: PropTypes.object
+}
+
+Weather.propTypes = {
+    data: PropTypes.object,
+    name: PropTypes.string,
+    city: PropTypes.string,
+    country: PropTypes.string,
+    date: PropTypes.instanceOf(Date),
+    weatherIcon: PropTypes.string,
+    temperature: PropTypes.number,
+    latitude: PropTypes.number,
+    longitude: PropTypes.number,
+    humidity: PropTypes.number,
+    wind: PropTypes.number
+}
+
+DailyWeather.propTypes = {
+    data1: PropTypes.object,
+    date: PropTypes.instanceOf(Date),
+    weatherIcon: PropTypes.string,
+    temperature: PropTypes.number
+}
+
+WeatherIcon.propTypes = {
+    weatherIcon: PropTypes.string
 }
 
 export default WeatherModule
