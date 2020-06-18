@@ -438,6 +438,13 @@ export class MusicModule extends Module {
 
                 // First event, fill info fields
                 dl.on('info', (info: Info) => {
+                    if (
+                        !info ||
+                        !info.thumbnails ||
+                        info.thumbnails.length === 0
+                    )
+                        return reject('Bad URL')
+
                     video.id = info.id
                     video.title = info.title
                     video.thumbnail = info.thumbnails[0].url
