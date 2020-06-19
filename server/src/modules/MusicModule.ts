@@ -213,9 +213,11 @@ export class MusicModule extends Module {
 
     protected registerTasks(): number[] {
         // Schedules
+        const eachHours = '0 0 * * * *'
 
         // Registering
         const ids: number[] = [
+            this.registerTask(() => this.checkOrphanMusics(), eachHours)
             // TODO: this.registerTask(() => this.checkOrphanMusics())
             // TODO: this.registerTask(() => this.checkNotStoredMusics())
         ]
@@ -223,6 +225,14 @@ export class MusicModule extends Module {
         log(`Registered ${ids.length} tasks`)
 
         return ids
+    }
+
+    private checkOrphanMusics(): Promise<any> {
+        return Music.checkOrphan()
+            .then((musics) =>
+                log(`${musics.length} orphan musics removed from the Database`)
+            )
+            .catch((err) => log(`Unable to remove orphan musics: ${err}`))
     }
 
     // ---- Methods ----------------------------------
@@ -440,7 +450,7 @@ export class MusicModule extends Module {
             .then(([playlist, music]) => {
                 log(`Removed music ${music.id} from playlist ${playlist.name}`)
 
-                socket.emit('music:removeFromPlaylist', {
+                socket.emit('music:removedFromPlaylist', {
                     playlist: playlist.toJSON(),
                     music: music.toJSON()
                 })
