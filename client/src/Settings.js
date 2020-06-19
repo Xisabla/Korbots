@@ -28,37 +28,39 @@ class Settings extends React.Component {
                 className="settings"
                 ref={this.state.ref}
                 style={{ display: 'none' }}>
-                <a
-                    href="#"
-                    className="close"
-                    onClick={() => {
-                        close(false)
-                    }}></a>
-                <fieldset>
-                    <legend>
-                        {settings.language === 'french' && ' Paramètres'}
-                        {settings.language === 'english' && ' Settings'}
-                        {settings.language === 'german' && ' Einstellungen'}
-                    </legend>
-                    <label htmlFor="language">
-                        {settings.language === 'french' && 'Langue :'}
-                        {settings.language === 'english' && 'Language :'}
-                        {settings.language === 'german' && 'Sprache :'}
-                    </label>
-                    <br />
-                    <select
-                        name="language"
-                        id="language"
-                        onChange={(ev) => {
-                            settings.language = ev.target.value
-                            this.setState(() => ({ settings: settings }))
-                            update(settings)
-                        }}>
-                        <option value="french">Français</option>
-                        <option value="english">English</option>
-                        <option value="german">Deutsch</option>
-                    </select>
-                </fieldset>
+                <div className="greyBack"></div>
+                <div className="settingsDiv">
+                    <i
+                        className="fas fa-times closeTarget"
+                        onClick={() => {
+                            close(false)
+                        }}></i>
+                    <fieldset>
+                        <legend>
+                            {settings.language === 'french' && ' Paramètres'}
+                            {settings.language === 'english' && ' Settings'}
+                            {settings.language === 'german' && ' Einstellungen'}
+                        </legend>
+                        <label htmlFor="language">
+                            {settings.language === 'french' && 'Langue :'}
+                            {settings.language === 'english' && 'Language :'}
+                            {settings.language === 'german' && 'Sprache :'}
+                        </label>
+                        <br />
+                        <select
+                            name="language"
+                            id="language"
+                            onChange={(ev) => {
+                                settings.language = ev.target.value
+                                this.setState(() => ({ settings: settings }))
+                                update(settings)
+                            }}>
+                            <option value="french">Français</option>
+                            <option value="english">English</option>
+                            <option value="german">Deutsch</option>
+                        </select>
+                    </fieldset>
+                </div>
             </div>
         )
     }
