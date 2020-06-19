@@ -8,7 +8,7 @@
 
 ## Hierarchy
 
-* [Model](_models_playlist_.iplaylist.md#model)‹[IMusicSchema](_models_music_.imusicschema.md)›
+* [Model](_models_horoscope_.ihoroscope.md#model)‹[IMusicSchema](_models_music_.imusicschema.md)›
 
   ↳ **IMusic**
 
@@ -98,7 +98,7 @@
 
 • **new IMusic**(`doc?`: any): *[IMusicSchema](_models_music_.imusicschema.md)*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[constructor](_models_playlist_.iplaylist.md#constructor)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[constructor](_models_horoscope_.ihoroscope.md#constructor)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3135
 
@@ -117,7 +117,7 @@ Name | Type | Description |
 
 ###  Model
 
-• **Model**: *[Model](_models_playlist_.iplaylist.md#model)‹any›*
+• **Model**: *[Model](_models_horoscope_.ihoroscope.md#model)‹any›*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3120
 
@@ -127,7 +127,7 @@ ___
 
 • **base**: *typeof mongoose*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[base](_models_playlist_.iplaylist.md#base)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[base](_models_horoscope_.ihoroscope.md#base)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3123
 
@@ -139,7 +139,7 @@ ___
 
 • **baseModelName**: *string | undefined*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[baseModelName](_models_playlist_.iplaylist.md#basemodelname)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[baseModelName](_models_horoscope_.ihoroscope.md#basemodelname)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3129
 
@@ -152,7 +152,7 @@ ___
 
 • **collection**: *Collection*
 
-*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[collection](_models_playlist_.iplaylistschema.md#collection)*
+*Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[collection](_models_horoscope_.ihoroscopeschema.md#collection)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3657
 
@@ -164,7 +164,7 @@ ___
 
 • **db**: *Connection*
 
-*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[db](_models_playlist_.iplaylistschema.md#db)*
+*Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[db](_models_horoscope_.ihoroscopeschema.md#db)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3660
 
@@ -176,7 +176,7 @@ ___
 
 • **discriminators**: *object | undefined*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[discriminators](_models_playlist_.iplaylist.md#discriminators)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[discriminators](_models_horoscope_.ihoroscope.md#discriminators)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3132
 
@@ -188,7 +188,7 @@ ___
 
 • **modelName**: *string*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[modelName](_models_playlist_.iplaylist.md#modelname)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[modelName](_models_horoscope_.ihoroscope.md#modelname)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3135
 
@@ -200,7 +200,7 @@ ___
 
 • **schema**: *Schema*
 
-*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[schema](_models_playlist_.iplaylistschema.md#schema)*
+*Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[schema](_models_horoscope_.ihoroscopeschema.md#schema)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3663
 
@@ -212,7 +212,7 @@ Schema the model uses.
 
 ▸ **$where**(`argument`: string | Function): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md), [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[$where](_models_playlist_.iplaylist.md#where)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[$where](_models_horoscope_.ihoroscope.md#where)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3192
 
@@ -232,7 +232,7 @@ ___
 
 ▸ **addListener**(`event`: string | symbol, `listener`: function): *this*
 
-*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[addListener](_models_playlist_.iplaylistschema.md#addlistener)*
+*Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[addListener](_models_horoscope_.ihoroscopeschema.md#addlistener)*
 
 Defined in node_modules/@types/node/globals.d.ts:553
 
@@ -258,7 +258,7 @@ ___
 
 ▸ **aggregate**‹**U**›(`aggregations?`: any[]): *Aggregate‹U[]›*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[aggregate](_models_playlist_.iplaylist.md#aggregate)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[aggregate](_models_horoscope_.ihoroscope.md#aggregate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3200
 
@@ -280,7 +280,7 @@ Name | Type | Description |
 
 ▸ **aggregate**‹**U**›(`aggregations`: any[], `cb`: Function): *Promise‹U[]›*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[aggregate](_models_playlist_.iplaylist.md#aggregate)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[aggregate](_models_horoscope_.ihoroscope.md#aggregate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3201
 
@@ -303,7 +303,7 @@ ___
 
 ▸ **bulkWrite**(`writes`: any[], `cb?`: function): *Promise‹BulkWriteOpResultObject›*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[bulkWrite](_models_playlist_.iplaylist.md#bulkwrite)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[bulkWrite](_models_horoscope_.ihoroscope.md#bulkwrite)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3182
 
@@ -336,7 +336,7 @@ Name | Type |
 
 ▸ **bulkWrite**(`writes`: any[], `options?`: CollectionBulkWriteOptions): *Promise‹BulkWriteOpResultObject›*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[bulkWrite](_models_playlist_.iplaylist.md#bulkwrite)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[bulkWrite](_models_horoscope_.ihoroscope.md#bulkwrite)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3183
 
@@ -351,7 +351,7 @@ Name | Type |
 
 ▸ **bulkWrite**(`writes`: any[], `options`: CollectionBulkWriteOptions, `cb`: function): *void*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[bulkWrite](_models_playlist_.iplaylist.md#bulkwrite)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[bulkWrite](_models_horoscope_.ihoroscope.md#bulkwrite)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3184
 
@@ -380,7 +380,7 @@ ___
 
 ▸ **count**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `callback?`: function): *Query‹number› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[count](_models_playlist_.iplaylist.md#count)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[count](_models_horoscope_.ihoroscope.md#count)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3204
 
@@ -409,7 +409,7 @@ ___
 
 ▸ **countDocuments**(`callback?`: function): *Query‹number› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[countDocuments](_models_playlist_.iplaylist.md#countdocuments)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[countDocuments](_models_horoscope_.ihoroscope.md#countdocuments)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3218
 
@@ -437,7 +437,7 @@ Name | Type |
 
 ▸ **countDocuments**(`criteria`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `callback?`: function): *Query‹number› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[countDocuments](_models_playlist_.iplaylist.md#countdocuments)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[countDocuments](_models_horoscope_.ihoroscope.md#countdocuments)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3219
 
@@ -464,7 +464,7 @@ ___
 
 ▸ **create**‹**TCreate**›(`doc`: CreateQuery‹TCreate›, `options?`: SaveOptions): *Promise‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[create](_models_playlist_.iplaylist.md#create)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[create](_models_horoscope_.ihoroscope.md#create)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3239
 
@@ -487,7 +487,7 @@ Name | Type |
 
 ▸ **create**‹**TCreate**›(`doc`: CreateQuery‹TCreate›, `callback?`: function): *Promise‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[create](_models_playlist_.iplaylist.md#create)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[create](_models_horoscope_.ihoroscope.md#create)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3240
 
@@ -514,7 +514,7 @@ Name | Type |
 
 ▸ **create**‹**TCreate**›(`docs`: CreateQuery‹TCreate›[], `callback?`: function): *Promise‹[IMusicSchema](_models_music_.imusicschema.md)[]›*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[create](_models_playlist_.iplaylist.md#create)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[create](_models_horoscope_.ihoroscope.md#create)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3241
 
@@ -541,7 +541,7 @@ Name | Type |
 
 ▸ **create**‹**TCreate**›(`docs`: CreateQuery‹TCreate›[], `options?`: SaveOptions, `callback?`: function): *Promise‹[IMusicSchema](_models_music_.imusicschema.md)[]›*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[create](_models_playlist_.iplaylist.md#create)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[create](_models_horoscope_.ihoroscope.md#create)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3242
 
@@ -570,7 +570,7 @@ Name | Type |
 
 ▸ **create**‹**TCreate**›(...`docs`: CreateQuery‹TCreate›[]): *Promise‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[create](_models_playlist_.iplaylist.md#create)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[create](_models_horoscope_.ihoroscope.md#create)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3243
 
@@ -592,7 +592,7 @@ ___
 
 ▸ **createCollection**(`options?`: CollectionCreateOptions, `cb?`: function): *Promise‹void›*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[createCollection](_models_playlist_.iplaylist.md#createcollection)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[createCollection](_models_horoscope_.ihoroscope.md#createcollection)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3248
 
@@ -621,7 +621,7 @@ ___
 
 ▸ **createIndexes**(`cb?`: function): *Promise‹void›*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[createIndexes](_models_playlist_.iplaylist.md#createindexes)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[createIndexes](_models_horoscope_.ihoroscope.md#createindexes)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3306
 
@@ -649,7 +649,7 @@ ___
 
 ▸ **deleteMany**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `callback?`: function): *Query‹DeleteWriteOpResultObject["result"] & object› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[deleteMany](_models_playlist_.iplaylist.md#deletemany)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[deleteMany](_models_horoscope_.ihoroscope.md#deletemany)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3570
 
@@ -671,7 +671,7 @@ Name | Type |
 
 ▸ **deleteMany**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `options`: ModelOptions, `callback?`: function): *Query‹DeleteWriteOpResultObject["result"] & object› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[deleteMany](_models_playlist_.iplaylist.md#deletemany)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[deleteMany](_models_horoscope_.ihoroscope.md#deletemany)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3571
 
@@ -699,7 +699,7 @@ ___
 
 ▸ **deleteOne**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `callback?`: function): *Query‹DeleteWriteOpResultObject["result"] & object› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[deleteOne](_models_playlist_.iplaylist.md#deleteone)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[deleteOne](_models_horoscope_.ihoroscope.md#deleteone)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3568
 
@@ -721,7 +721,7 @@ Name | Type |
 
 ▸ **deleteOne**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `options`: ModelOptions, `callback?`: function): *Query‹DeleteWriteOpResultObject["result"] & object› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[deleteOne](_models_playlist_.iplaylist.md#deleteone)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[deleteOne](_models_horoscope_.ihoroscope.md#deleteone)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3569
 
@@ -747,9 +747,9 @@ ___
 
 ###  discriminator
 
-▸ **discriminator**‹**U**›(`name`: string, `schema`: Schema, `value?`: string): *[Model](_models_playlist_.iplaylist.md#model)‹U›*
+▸ **discriminator**‹**U**›(`name`: string, `schema`: Schema, `value?`: string): *[Model](_models_horoscope_.ihoroscope.md#model)‹U›*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[discriminator](_models_playlist_.iplaylist.md#discriminator)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[discriminator](_models_horoscope_.ihoroscope.md#discriminator)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3256
 
@@ -767,11 +767,11 @@ Name | Type | Description |
 `schema` | Schema | discriminator model schema |
 `value?` | string | the string stored in the `discriminatorKey` property  |
 
-**Returns:** *[Model](_models_playlist_.iplaylist.md#model)‹U›*
+**Returns:** *[Model](_models_horoscope_.ihoroscope.md#model)‹U›*
 
 ▸ **discriminator**‹**U**, **M**›(`name`: string, `schema`: Schema, `value?`: string): *M*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[discriminator](_models_playlist_.iplaylist.md#discriminator)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[discriminator](_models_horoscope_.ihoroscope.md#discriminator)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3264
 
@@ -781,7 +781,7 @@ Adds a discriminator type.
 
 ▪ **U**: *Document*
 
-▪ **M**: *[Model](_models_playlist_.iplaylist.md#model)‹U›*
+▪ **M**: *[Model](_models_horoscope_.ihoroscope.md#model)‹U›*
 
 **Parameters:**
 
@@ -799,7 +799,7 @@ ___
 
 ▸ **distinct**(`field`: string, `callback?`: function): *Query‹any[]› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[distinct](_models_playlist_.iplaylist.md#distinct)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[distinct](_models_horoscope_.ihoroscope.md#distinct)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3267
 
@@ -824,7 +824,7 @@ Name | Type |
 
 ▸ **distinct**(`field`: string, `conditions`: any, `callback?`: function): *Query‹any[]› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[distinct](_models_playlist_.iplaylist.md#distinct)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[distinct](_models_horoscope_.ihoroscope.md#distinct)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3268
 
@@ -853,7 +853,7 @@ ___
 
 ▸ **doesExist**(`source`: string, `sourceId`: string): *Promise‹boolean›*
 
-*Defined in [src/models/Music.ts:89](https://github.com/Xisabla/Korbots/blob/4bc77ee/server/src/models/Music.ts#L89)*
+*Defined in [src/models/Music.ts:89](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Music.ts#L89)*
 
 Search if a Music exists in the DataBase from it's source and sourceId
 
@@ -874,7 +874,7 @@ ___
 
 ▸ **emit**(`event`: string | symbol, ...`args`: any[]): *boolean*
 
-*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[emit](_models_playlist_.iplaylistschema.md#emit)*
+*Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[emit](_models_horoscope_.ihoroscopeschema.md#emit)*
 
 Defined in node_modules/@types/node/globals.d.ts:563
 
@@ -893,7 +893,7 @@ ___
 
 ▸ **ensureIndexes**(`callback?`: function): *Promise‹void›*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[ensureIndexes](_models_playlist_.iplaylist.md#ensureindexes)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[ensureIndexes](_models_horoscope_.ihoroscope.md#ensureindexes)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3299
 
@@ -915,7 +915,7 @@ Name | Type |
 
 ▸ **ensureIndexes**(`options`: any, `callback?`: function): *Promise‹void›*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[ensureIndexes](_models_playlist_.iplaylist.md#ensureindexes)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[ensureIndexes](_models_horoscope_.ihoroscope.md#ensureindexes)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3300
 
@@ -941,7 +941,7 @@ ___
 
 ▸ **estimatedDocumentCount**(`callback?`: function): *Query‹number› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[estimatedDocumentCount](_models_playlist_.iplaylist.md#estimateddocumentcount)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[estimatedDocumentCount](_models_horoscope_.ihoroscope.md#estimateddocumentcount)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3231
 
@@ -967,7 +967,7 @@ Name | Type |
 
 ▸ **estimatedDocumentCount**(`options`: any, `callback?`: function): *Query‹number› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[estimatedDocumentCount](_models_playlist_.iplaylist.md#estimateddocumentcount)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[estimatedDocumentCount](_models_horoscope_.ihoroscope.md#estimateddocumentcount)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3232
 
@@ -994,7 +994,7 @@ ___
 
 ▸ **eventNames**(): *Array‹string | symbol›*
 
-*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[eventNames](_models_playlist_.iplaylistschema.md#eventnames)*
+*Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[eventNames](_models_horoscope_.ihoroscopeschema.md#eventnames)*
 
 Defined in node_modules/@types/node/globals.d.ts:568
 
@@ -1006,7 +1006,7 @@ ___
 
 ▸ **exists**(`filter`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `callback?`: function): *Promise‹boolean›*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[exists](_models_playlist_.iplaylist.md#exists)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[exists](_models_horoscope_.ihoroscope.md#exists)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3312
 
@@ -1036,7 +1036,7 @@ ___
 
 ▸ **find**(`callback?`: function): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md)[], [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[find](_models_playlist_.iplaylist.md#find)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[find](_models_horoscope_.ihoroscope.md#find)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3318
 
@@ -1059,7 +1059,7 @@ Name | Type |
 
 ▸ **find**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `callback?`: function): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md)[], [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[find](_models_playlist_.iplaylist.md#find)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[find](_models_horoscope_.ihoroscope.md#find)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3319
 
@@ -1082,7 +1082,7 @@ Name | Type |
 
 ▸ **find**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `projection?`: any | null, `callback?`: function): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md)[], [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[find](_models_playlist_.iplaylist.md#find)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[find](_models_horoscope_.ihoroscope.md#find)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3320
 
@@ -1107,7 +1107,7 @@ Name | Type |
 
 ▸ **find**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `projection?`: any | null, `options?`: object & Omit‹QueryFindOptions, "lean"›, `callback?`: function): *Query‹DocumentDefinition‹[IMusicSchema](_models_music_.imusicschema.md)›[]› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[find](_models_playlist_.iplaylist.md#find)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[find](_models_horoscope_.ihoroscope.md#find)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3322
 
@@ -1134,7 +1134,7 @@ Name | Type |
 
 ▸ **find**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `projection?`: any | null, `options?`: QueryFindOptions, `callback?`: function): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md)[], [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[find](_models_playlist_.iplaylist.md#find)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[find](_models_horoscope_.ihoroscope.md#find)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3324
 
@@ -1165,7 +1165,7 @@ ___
 
 ▸ **findById**(`id`: any | string | number, `callback?`: function): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findById](_models_playlist_.iplaylist.md#findbyid)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findById](_models_horoscope_.ihoroscope.md#findbyid)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3333
 
@@ -1193,7 +1193,7 @@ Name | Type |
 
 ▸ **findById**(`id`: any | string | number, `projection`: any, `callback?`: function): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findById](_models_playlist_.iplaylist.md#findbyid)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findById](_models_horoscope_.ihoroscope.md#findbyid)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3335
 
@@ -1218,7 +1218,7 @@ Name | Type |
 
 ▸ **findById**(`id`: any | string | number, `projection`: any, `options`: object & Omit‹QueryFindBaseOptions, "lean"›, `callback?`: function): *Query‹DocumentDefinition‹[IMusicSchema](_models_music_.imusicschema.md)›› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findById](_models_playlist_.iplaylist.md#findbyid)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findById](_models_horoscope_.ihoroscope.md#findbyid)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3337
 
@@ -1245,7 +1245,7 @@ Name | Type |
 
 ▸ **findById**(`id`: any | string | number, `projection`: any, `options`: QueryFindBaseOptions, `callback?`: function): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findById](_models_playlist_.iplaylist.md#findbyid)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findById](_models_horoscope_.ihoroscope.md#findbyid)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3339
 
@@ -1276,7 +1276,7 @@ ___
 
 ▸ **findByIdAndDelete**(): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findByIdAndDelete](_models_playlist_.iplaylist.md#findbyidanddelete)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findByIdAndDelete](_models_horoscope_.ihoroscope.md#findbyidanddelete)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3374
 
@@ -1291,7 +1291,7 @@ Note: same signatures as findByIdAndRemove
 
 ▸ **findByIdAndDelete**(`id`: any | number | string, `callback?`: function): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findByIdAndDelete](_models_playlist_.iplaylist.md#findbyidanddelete)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findByIdAndDelete](_models_horoscope_.ihoroscope.md#findbyidanddelete)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3375
 
@@ -1314,7 +1314,7 @@ Name | Type |
 
 ▸ **findByIdAndDelete**(`id`: any | number | string, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IMusicSchema](_models_music_.imusicschema.md) | null›› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findByIdAndDelete](_models_playlist_.iplaylist.md#findbyidanddelete)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findByIdAndDelete](_models_horoscope_.ihoroscope.md#findbyidanddelete)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3377
 
@@ -1339,7 +1339,7 @@ Name | Type |
 
 ▸ **findByIdAndDelete**(`id`: any | number | string, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findByIdAndDelete](_models_playlist_.iplaylist.md#findbyidanddelete)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findByIdAndDelete](_models_horoscope_.ihoroscope.md#findbyidanddelete)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3380
 
@@ -1368,7 +1368,7 @@ ___
 
 ▸ **findByIdAndRemove**(): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findByIdAndRemove](_models_playlist_.iplaylist.md#findbyidandremove)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findByIdAndRemove](_models_horoscope_.ihoroscope.md#findbyidandremove)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3355
 
@@ -1386,7 +1386,7 @@ Note: same signatures as findByIdAndDelete
 
 ▸ **findByIdAndRemove**(`id`: any | number | string, `callback?`: function): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findByIdAndRemove](_models_playlist_.iplaylist.md#findbyidandremove)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findByIdAndRemove](_models_horoscope_.ihoroscope.md#findbyidandremove)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3356
 
@@ -1409,7 +1409,7 @@ Name | Type |
 
 ▸ **findByIdAndRemove**(`id`: any | number | string, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IMusicSchema](_models_music_.imusicschema.md) | null›› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findByIdAndRemove](_models_playlist_.iplaylist.md#findbyidandremove)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findByIdAndRemove](_models_horoscope_.ihoroscope.md#findbyidandremove)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3358
 
@@ -1434,7 +1434,7 @@ Name | Type |
 
 ▸ **findByIdAndRemove**(`id`: any | number | string, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findByIdAndRemove](_models_playlist_.iplaylist.md#findbyidandremove)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findByIdAndRemove](_models_horoscope_.ihoroscope.md#findbyidandremove)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3361
 
@@ -1463,7 +1463,7 @@ ___
 
 ▸ **findByIdAndUpdate**(): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findByIdAndUpdate](_models_playlist_.iplaylist.md#findbyidandupdate)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findByIdAndUpdate](_models_horoscope_.ihoroscope.md#findbyidandupdate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3391
 
@@ -1477,7 +1477,7 @@ https://mongoosejs.com/docs/api.html#mongoose_Mongoose-set
 
 ▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `callback?`: function): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findByIdAndUpdate](_models_playlist_.iplaylist.md#findbyidandupdate)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findByIdAndUpdate](_models_horoscope_.ihoroscope.md#findbyidandupdate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3392
 
@@ -1502,7 +1502,7 @@ Name | Type |
 
 ▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `options`: object & object & object & QueryFindOneAndUpdateOptions, `callback?`: function): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md), [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findByIdAndUpdate](_models_playlist_.iplaylist.md#findbyidandupdate)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findByIdAndUpdate](_models_horoscope_.ihoroscope.md#findbyidandupdate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3394
 
@@ -1529,7 +1529,7 @@ Name | Type |
 
 ▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `options`: object & QueryFindOneAndUpdateOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IMusicSchema](_models_music_.imusicschema.md)›› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findByIdAndUpdate](_models_playlist_.iplaylist.md#findbyidandupdate)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findByIdAndUpdate](_models_horoscope_.ihoroscope.md#findbyidandupdate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3397
 
@@ -1556,7 +1556,7 @@ Name | Type |
 
 ▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `options`: object & QueryFindOneAndUpdateOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IMusicSchema](_models_music_.imusicschema.md) | null›› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findByIdAndUpdate](_models_playlist_.iplaylist.md#findbyidandupdate)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findByIdAndUpdate](_models_horoscope_.ihoroscope.md#findbyidandupdate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3401
 
@@ -1583,7 +1583,7 @@ Name | Type |
 
 ▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `options`: object & Omit‹QueryFindOneAndUpdateOptions, "lean"›, `callback?`: function): *Query‹DocumentDefinition‹[IMusicSchema](_models_music_.imusicschema.md)›› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findByIdAndUpdate](_models_playlist_.iplaylist.md#findbyidandupdate)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findByIdAndUpdate](_models_horoscope_.ihoroscope.md#findbyidandupdate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3405
 
@@ -1610,7 +1610,7 @@ Name | Type |
 
 ▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `options`: QueryFindOneAndUpdateOptions, `callback?`: function): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findByIdAndUpdate](_models_playlist_.iplaylist.md#findbyidandupdate)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findByIdAndUpdate](_models_horoscope_.ihoroscope.md#findbyidandupdate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3409
 
@@ -1641,7 +1641,7 @@ ___
 
 ▸ **findOne**(`conditions?`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `callback?`: function): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOne](_models_playlist_.iplaylist.md#findone)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOne](_models_horoscope_.ihoroscope.md#findone)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3418
 
@@ -1667,7 +1667,7 @@ Name | Type |
 
 ▸ **findOne**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `projection`: any, `callback?`: function): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOne](_models_playlist_.iplaylist.md#findone)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOne](_models_horoscope_.ihoroscope.md#findone)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3420
 
@@ -1692,7 +1692,7 @@ Name | Type |
 
 ▸ **findOne**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `projection`: any, `options`: object & Omit‹QueryFindBaseOptions, "lean"›, `callback?`: function): *Query‹DocumentDefinition‹[IMusicSchema](_models_music_.imusicschema.md)›› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOne](_models_playlist_.iplaylist.md#findone)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOne](_models_horoscope_.ihoroscope.md#findone)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3422
 
@@ -1719,7 +1719,7 @@ Name | Type |
 
 ▸ **findOne**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `projection`: any, `options`: QueryFindBaseOptions, `callback?`: function): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOne](_models_playlist_.iplaylist.md#findone)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOne](_models_horoscope_.ihoroscope.md#findone)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3424
 
@@ -1750,7 +1750,7 @@ ___
 
 ▸ **findOneAndDelete**(): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOneAndDelete](_models_playlist_.iplaylist.md#findoneanddelete)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOneAndDelete](_models_horoscope_.ihoroscope.md#findoneanddelete)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3454
 
@@ -1764,7 +1764,7 @@ Note: same signatures as findOneAndRemove
 
 ▸ **findOneAndDelete**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `callback?`: function): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOneAndDelete](_models_playlist_.iplaylist.md#findoneanddelete)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOneAndDelete](_models_horoscope_.ihoroscope.md#findoneanddelete)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3455
 
@@ -1787,7 +1787,7 @@ Name | Type |
 
 ▸ **findOneAndDelete**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `options`: object & QueryFindOneAndRemoveOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IMusicSchema](_models_music_.imusicschema.md) | null›› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOneAndDelete](_models_playlist_.iplaylist.md#findoneanddelete)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOneAndDelete](_models_horoscope_.ihoroscope.md#findoneanddelete)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3457
 
@@ -1813,7 +1813,7 @@ Name | Type |
 
 ▸ **findOneAndDelete**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOneAndDelete](_models_playlist_.iplaylist.md#findoneanddelete)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOneAndDelete](_models_horoscope_.ihoroscope.md#findoneanddelete)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3460
 
@@ -1842,7 +1842,7 @@ ___
 
 ▸ **findOneAndRemove**(): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOneAndRemove](_models_playlist_.iplaylist.md#findoneandremove)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOneAndRemove](_models_horoscope_.ihoroscope.md#findoneandremove)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3438
 
@@ -1859,7 +1859,7 @@ Note: same signatures as findOneAndDelete
 
 ▸ **findOneAndRemove**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `callback?`: function): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOneAndRemove](_models_playlist_.iplaylist.md#findoneandremove)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOneAndRemove](_models_horoscope_.ihoroscope.md#findoneandremove)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3439
 
@@ -1882,7 +1882,7 @@ Name | Type |
 
 ▸ **findOneAndRemove**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `options`: object & QueryFindOneAndRemoveOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IMusicSchema](_models_music_.imusicschema.md) | null›› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOneAndRemove](_models_playlist_.iplaylist.md#findoneandremove)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOneAndRemove](_models_horoscope_.ihoroscope.md#findoneandremove)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3441
 
@@ -1908,7 +1908,7 @@ Name | Type |
 
 ▸ **findOneAndRemove**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOneAndRemove](_models_playlist_.iplaylist.md#findoneandremove)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOneAndRemove](_models_horoscope_.ihoroscope.md#findoneandremove)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3444
 
@@ -1937,7 +1937,7 @@ ___
 
 ▸ **findOneAndUpdate**(): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOneAndUpdate](_models_playlist_.iplaylist.md#findoneandupdate)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOneAndUpdate](_models_horoscope_.ihoroscope.md#findoneandupdate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3471
 
@@ -1953,7 +1953,7 @@ https://mongoosejs.com/docs/api.html#mongoose_Mongoose-set
 
 ▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `update`: UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `callback?`: function): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOneAndUpdate](_models_playlist_.iplaylist.md#findoneandupdate)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOneAndUpdate](_models_horoscope_.ihoroscope.md#findoneandupdate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3472
 
@@ -1979,7 +1979,7 @@ Name | Type |
 
 ▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `update`: UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `options`: object & object & QueryFindOneAndUpdateOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IMusicSchema](_models_music_.imusicschema.md)›› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOneAndUpdate](_models_playlist_.iplaylist.md#findoneandupdate)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOneAndUpdate](_models_horoscope_.ihoroscope.md#findoneandupdate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3474
 
@@ -2007,7 +2007,7 @@ Name | Type |
 
 ▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `update`: UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `options`: object & QueryFindOneAndUpdateOptions, `callback?`: function): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md), [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOneAndUpdate](_models_playlist_.iplaylist.md#findoneandupdate)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOneAndUpdate](_models_horoscope_.ihoroscope.md#findoneandupdate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3478
 
@@ -2035,7 +2035,7 @@ Name | Type |
 
 ▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `update`: UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `options`: object & QueryFindOneAndUpdateOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IMusicSchema](_models_music_.imusicschema.md) | null›› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOneAndUpdate](_models_playlist_.iplaylist.md#findoneandupdate)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOneAndUpdate](_models_horoscope_.ihoroscope.md#findoneandupdate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3481
 
@@ -2063,7 +2063,7 @@ Name | Type |
 
 ▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `update`: UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `options`: object & Omit‹QueryFindOneAndUpdateOptions, "lean"›, `callback?`: function): *Query‹DocumentDefinition‹[IMusicSchema](_models_music_.imusicschema.md)›› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOneAndUpdate](_models_playlist_.iplaylist.md#findoneandupdate)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOneAndUpdate](_models_horoscope_.ihoroscope.md#findoneandupdate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3485
 
@@ -2091,7 +2091,7 @@ Name | Type |
 
 ▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `update`: UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `options`: QueryFindOneAndUpdateOptions, `callback?`: function): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md) | null, [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[findOneAndUpdate](_models_playlist_.iplaylist.md#findoneandupdate)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOneAndUpdate](_models_horoscope_.ihoroscope.md#findoneandupdate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3488
 
@@ -2123,7 +2123,7 @@ ___
 
 ▸ **findOneSong**(`source`: string, `sourceId`: string): *Promise‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
-*Defined in [src/models/Music.ts:81](https://github.com/Xisabla/Korbots/blob/4bc77ee/server/src/models/Music.ts#L81)*
+*Defined in [src/models/Music.ts:81](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Music.ts#L81)*
 
 Get the Music Document for the given source and sourceId
 
@@ -2144,7 +2144,7 @@ ___
 
 ▸ **fromDownloaded**(`audio`: [DownloadedMusic](_core_imusic_.downloadedmusic.md)): *Promise‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
-*Defined in [src/models/Music.ts:72](https://github.com/Xisabla/Korbots/blob/4bc77ee/server/src/models/Music.ts#L72)*
+*Defined in [src/models/Music.ts:72](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Music.ts#L72)*
 
 Create a Music Document from a DownloadedMusic
 
@@ -2164,7 +2164,7 @@ ___
 
 ▸ **geoSearch**(`conditions`: any, `options`: object, `callback?`: function): *DocumentQuery‹[IMusicSchema](_models_music_.imusicschema.md)[], [IMusicSchema](_models_music_.imusicschema.md), QueryHelpers› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[geoSearch](_models_playlist_.iplaylist.md#geosearch)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[geoSearch](_models_horoscope_.ihoroscope.md#geosearch)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3498
 
@@ -2208,7 +2208,7 @@ ___
 
 ▸ **getMaxListeners**(): *number*
 
-*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[getMaxListeners](_models_playlist_.iplaylistschema.md#getmaxlisteners)*
+*Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[getMaxListeners](_models_horoscope_.ihoroscopeschema.md#getmaxlisteners)*
 
 Defined in node_modules/@types/node/globals.d.ts:560
 
@@ -2220,7 +2220,7 @@ ___
 
 ▸ **getOrphans**(): *Promise‹[IMusicSchema](_models_music_.imusicschema.md)[]›*
 
-*Defined in [src/models/Music.ts:95](https://github.com/Xisabla/Korbots/blob/4bc77ee/server/src/models/Music.ts#L95)*
+*Defined in [src/models/Music.ts:95](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Music.ts#L95)*
 
 Find all orphans music (music without playlist)
 
@@ -2234,7 +2234,7 @@ ___
 
 ▸ **hydrate**(`obj`: any): *[IMusicSchema](_models_music_.imusicschema.md)*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[hydrate](_models_playlist_.iplaylist.md#hydrate)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[hydrate](_models_horoscope_.ihoroscope.md#hydrate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3514
 
@@ -2256,7 +2256,7 @@ ___
 
 ▸ **init**(`callback?`: function): *Promise‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[init](_models_playlist_.iplaylist.md#init)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[init](_models_horoscope_.ihoroscope.md#init)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3543
 
@@ -2288,7 +2288,7 @@ ___
 
 ▸ **insertMany**(`docs`: any[], `callback?`: function): *Promise‹[IMusicSchema](_models_music_.imusicschema.md)[]›*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[insertMany](_models_playlist_.iplaylist.md#insertmany)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[insertMany](_models_horoscope_.ihoroscope.md#insertmany)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3530
 
@@ -2319,7 +2319,7 @@ Name | Type |
 
 ▸ **insertMany**(`docs`: any[], `options?`: object & ModelOptions, `callback?`: function): *Promise‹[IMusicSchema](_models_music_.imusicschema.md)[]›*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[insertMany](_models_playlist_.iplaylist.md#insertmany)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[insertMany](_models_horoscope_.ihoroscope.md#insertmany)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3531
 
@@ -2344,7 +2344,7 @@ Name | Type |
 
 ▸ **insertMany**(`doc`: any, `callback?`: function): *Promise‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[insertMany](_models_playlist_.iplaylist.md#insertmany)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[insertMany](_models_horoscope_.ihoroscope.md#insertmany)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3532
 
@@ -2367,7 +2367,7 @@ Name | Type |
 
 ▸ **insertMany**(`doc`: any, `options?`: object & ModelOptions, `callback?`: function): *Promise‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[insertMany](_models_playlist_.iplaylist.md#insertmany)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[insertMany](_models_horoscope_.ihoroscope.md#insertmany)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3533
 
@@ -2396,7 +2396,7 @@ ___
 
 ▸ **listIndexes**(`callback`: function): *void*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[listIndexes](_models_playlist_.iplaylist.md#listindexes)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[listIndexes](_models_horoscope_.ihoroscope.md#listindexes)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3291
 
@@ -2423,7 +2423,7 @@ Returns `undefined` if callback is specified, returns a promise if no callback.
 
 ▸ **listIndexes**(): *Promise‹void›*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[listIndexes](_models_playlist_.iplaylist.md#listindexes)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[listIndexes](_models_horoscope_.ihoroscope.md#listindexes)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3292
 
@@ -2435,7 +2435,7 @@ ___
 
 ▸ **listenerCount**(`type`: string | symbol): *number*
 
-*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[listenerCount](_models_playlist_.iplaylistschema.md#listenercount)*
+*Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[listenerCount](_models_horoscope_.ihoroscopeschema.md#listenercount)*
 
 Defined in node_modules/@types/node/globals.d.ts:564
 
@@ -2453,7 +2453,7 @@ ___
 
 ▸ **listeners**(`event`: string | symbol): *Function[]*
 
-*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[listeners](_models_playlist_.iplaylistschema.md#listeners)*
+*Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[listeners](_models_horoscope_.ihoroscopeschema.md#listeners)*
 
 Defined in node_modules/@types/node/globals.d.ts:561
 
@@ -2471,7 +2471,7 @@ ___
 
 ▸ **mapReduce**‹**Key**, **Value**›(`o`: ModelMapReduceOption‹[IMusicSchema](_models_music_.imusicschema.md), Key, Value›, `callback?`: function): *Promise‹any›*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[mapReduce](_models_playlist_.iplaylist.md#mapreduce)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[mapReduce](_models_horoscope_.ihoroscope.md#mapreduce)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3550
 
@@ -2506,9 +2506,9 @@ ___
 
 ###  model
 
-▸ **model**‹**U**›(`name`: string): *[Model](_models_playlist_.iplaylist.md#model)‹U›*
+▸ **model**‹**U**›(`name`: string): *[Model](_models_horoscope_.ihoroscope.md#model)‹U›*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[model](_models_playlist_.iplaylist.md#model)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[model](_models_horoscope_.ihoroscope.md#model)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3186
 
@@ -2522,7 +2522,7 @@ Name | Type |
 ------ | ------ |
 `name` | string |
 
-**Returns:** *[Model](_models_playlist_.iplaylist.md#model)‹U›*
+**Returns:** *[Model](_models_horoscope_.ihoroscope.md#model)‹U›*
 
 ___
 
@@ -2530,7 +2530,7 @@ ___
 
 ▸ **off**(`event`: string | symbol, `listener`: function): *this*
 
-*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[off](_models_playlist_.iplaylistschema.md#off)*
+*Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[off](_models_horoscope_.ihoroscopeschema.md#off)*
 
 Defined in node_modules/@types/node/globals.d.ts:557
 
@@ -2556,7 +2556,7 @@ ___
 
 ▸ **on**(`event`: string | symbol, `listener`: function): *this*
 
-*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[on](_models_playlist_.iplaylistschema.md#on)*
+*Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[on](_models_horoscope_.ihoroscopeschema.md#on)*
 
 Defined in node_modules/@types/node/globals.d.ts:554
 
@@ -2582,7 +2582,7 @@ ___
 
 ▸ **once**(`event`: string | symbol, `listener`: function): *this*
 
-*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[once](_models_playlist_.iplaylistschema.md#once)*
+*Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[once](_models_horoscope_.ihoroscopeschema.md#once)*
 
 Defined in node_modules/@types/node/globals.d.ts:555
 
@@ -2608,7 +2608,7 @@ ___
 
 ▸ **populate**(`docs`: any[], `options`: ModelPopulateOptions | ModelPopulateOptions[], `callback?`: function): *Promise‹[IMusicSchema](_models_music_.imusicschema.md)[]›*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[populate](_models_playlist_.iplaylist.md#populate)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[populate](_models_horoscope_.ihoroscope.md#populate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3561
 
@@ -2641,7 +2641,7 @@ Name | Type |
 
 ▸ **populate**‹**T**›(`docs`: any, `options`: ModelPopulateOptions | ModelPopulateOptions[], `callback?`: function): *Promise‹T›*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[populate](_models_playlist_.iplaylist.md#populate)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[populate](_models_horoscope_.ihoroscope.md#populate)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3563
 
@@ -2674,7 +2674,7 @@ ___
 
 ▸ **prependListener**(`event`: string | symbol, `listener`: function): *this*
 
-*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[prependListener](_models_playlist_.iplaylistschema.md#prependlistener)*
+*Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[prependListener](_models_horoscope_.ihoroscopeschema.md#prependlistener)*
 
 Defined in node_modules/@types/node/globals.d.ts:566
 
@@ -2700,7 +2700,7 @@ ___
 
 ▸ **prependOnceListener**(`event`: string | symbol, `listener`: function): *this*
 
-*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[prependOnceListener](_models_playlist_.iplaylistschema.md#prependoncelistener)*
+*Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[prependOnceListener](_models_horoscope_.ihoroscopeschema.md#prependoncelistener)*
 
 Defined in node_modules/@types/node/globals.d.ts:567
 
@@ -2726,7 +2726,7 @@ ___
 
 ▸ **rawListeners**(`event`: string | symbol): *Function[]*
 
-*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[rawListeners](_models_playlist_.iplaylistschema.md#rawlisteners)*
+*Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[rawListeners](_models_horoscope_.ihoroscopeschema.md#rawlisteners)*
 
 Defined in node_modules/@types/node/globals.d.ts:562
 
@@ -2744,7 +2744,7 @@ ___
 
 ▸ **remove**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `callback?`: function): *Query‹DeleteWriteOpResultObject["result"] & object› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[remove](_models_playlist_.iplaylist.md#remove)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[remove](_models_horoscope_.ihoroscope.md#remove)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3567
 
@@ -2772,7 +2772,7 @@ ___
 
 ▸ **removeAllListeners**(`event?`: string | symbol): *this*
 
-*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[removeAllListeners](_models_playlist_.iplaylistschema.md#removealllisteners)*
+*Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[removeAllListeners](_models_horoscope_.ihoroscopeschema.md#removealllisteners)*
 
 Defined in node_modules/@types/node/globals.d.ts:558
 
@@ -2790,7 +2790,7 @@ ___
 
 ▸ **removeListener**(`event`: string | symbol, `listener`: function): *this*
 
-*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[removeListener](_models_playlist_.iplaylistschema.md#removelistener)*
+*Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[removeListener](_models_horoscope_.ihoroscopeschema.md#removelistener)*
 
 Defined in node_modules/@types/node/globals.d.ts:556
 
@@ -2816,7 +2816,7 @@ ___
 
 ▸ **replaceOne**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `replacement`: any, `callback?`: function): *Query‹any› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[replaceOne](_models_playlist_.iplaylist.md#replaceone)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[replaceOne](_models_horoscope_.ihoroscope.md#replaceone)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3577
 
@@ -2848,7 +2848,7 @@ ___
 
 ▸ **setMaxListeners**(`n`: number): *this*
 
-*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[setMaxListeners](_models_playlist_.iplaylistschema.md#setmaxlisteners)*
+*Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[setMaxListeners](_models_horoscope_.ihoroscopeschema.md#setmaxlisteners)*
 
 Defined in node_modules/@types/node/globals.d.ts:559
 
@@ -2866,7 +2866,7 @@ ___
 
 ▸ **syncIndexes**(`options`: object | null | undefined, `callback`: function): *void*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[syncIndexes](_models_playlist_.iplaylist.md#syncindexes)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[syncIndexes](_models_horoscope_.ihoroscope.md#syncindexes)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3280
 
@@ -2899,7 +2899,7 @@ Returns `undefined` if callback is specified, returns a promise if no callback.
 
 ▸ **syncIndexes**(`options?`: object | null): *Promise‹void›*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[syncIndexes](_models_playlist_.iplaylist.md#syncindexes)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[syncIndexes](_models_horoscope_.ihoroscope.md#syncindexes)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3281
 
@@ -2917,7 +2917,7 @@ ___
 
 ▸ **translateAliases**(`raw`: any): *any*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[translateAliases](_models_playlist_.iplaylist.md#translatealiases)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[translateAliases](_models_horoscope_.ihoroscope.md#translatealiases)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3171
 
@@ -2939,7 +2939,7 @@ ___
 
 ▸ **update**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `doc`: UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `callback?`: function): *Query‹any› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[update](_models_playlist_.iplaylist.md#update)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[update](_models_horoscope_.ihoroscope.md#update)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3583
 
@@ -2967,7 +2967,7 @@ Name | Type |
 
 ▸ **update**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `doc`: UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `options`: ModelUpdateOptions, `callback?`: function): *Query‹any› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[update](_models_playlist_.iplaylist.md#update)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[update](_models_horoscope_.ihoroscope.md#update)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3585
 
@@ -2998,7 +2998,7 @@ ___
 
 ▸ **updateMany**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `doc`: UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `callback?`: function): *Query‹any› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[updateMany](_models_playlist_.iplaylist.md#updatemany)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[updateMany](_models_horoscope_.ihoroscope.md#updatemany)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3591
 
@@ -3023,7 +3023,7 @@ Name | Type |
 
 ▸ **updateMany**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `doc`: UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `options`: ModelUpdateOptions, `callback?`: function): *Query‹any› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[updateMany](_models_playlist_.iplaylist.md#updatemany)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[updateMany](_models_horoscope_.ihoroscope.md#updatemany)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3593
 
@@ -3054,7 +3054,7 @@ ___
 
 ▸ **updateOne**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `doc`: UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `callback?`: function): *Query‹any› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[updateOne](_models_playlist_.iplaylist.md#updateone)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[updateOne](_models_horoscope_.ihoroscope.md#updateone)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3587
 
@@ -3079,7 +3079,7 @@ Name | Type |
 
 ▸ **updateOne**(`conditions`: FilterQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `doc`: UpdateQuery‹[IMusicSchema](_models_music_.imusicschema.md)›, `options`: ModelUpdateOptions, `callback?`: function): *Query‹any› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[updateOne](_models_playlist_.iplaylist.md#updateone)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[updateOne](_models_horoscope_.ihoroscope.md#updateone)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3589
 
@@ -3110,7 +3110,7 @@ ___
 
 ▸ **watch**(`pipeline?`: object[], `options?`: ChangeStreamOptions & object): *ChangeStream*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[watch](_models_playlist_.iplaylist.md#watch)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[watch](_models_horoscope_.ihoroscope.md#watch)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3161
 
@@ -3132,7 +3132,7 @@ ___
 
 ▸ **where**(`path`: string, `val?`: any): *Query‹any› & QueryHelpers*
 
-*Inherited from [IPlaylist](_models_playlist_.iplaylist.md).[where](_models_playlist_.iplaylist.md#where)*
+*Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[where](_models_horoscope_.ihoroscope.md#where)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3597
 

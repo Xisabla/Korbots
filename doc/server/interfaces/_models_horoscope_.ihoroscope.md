@@ -1,6 +1,6 @@
-[korbots-server](../README.md) › ["models/Weather"](../modules/_models_weather_.md) › [IWeather](_models_weather_.iweather.md)
+[korbots-server](../README.md) › ["models/Horoscope"](../modules/_models_horoscope_.md) › [IHoroscope](_models_horoscope_.ihoroscope.md)
 
-# Interface: IWeather ‹**QueryHelpers**›
+# Interface: IHoroscope ‹**QueryHelpers**›
 
 ## Type parameters
 
@@ -8,106 +8,95 @@
 
 ## Hierarchy
 
-* [Model](_models_horoscope_.ihoroscope.md#model)‹[IWeatherSchema](_models_weather_.iweatherschema.md)›
+* [Model](_models_horoscope_.ihoroscope.md#model)‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›
 
-  ↳ **IWeather**
+  ↳ **IHoroscope**
 
 ## Index
 
 ### Events
 
-* [constructor](_models_weather_.iweather.md#constructor)
+* [constructor](_models_horoscope_.ihoroscope.md#constructor)
 
 ### Properties
 
-* [Model](_models_weather_.iweather.md#model)
-* [base](_models_weather_.iweather.md#base)
-* [baseModelName](_models_weather_.iweather.md#basemodelname)
-* [collection](_models_weather_.iweather.md#collection)
-* [db](_models_weather_.iweather.md#db)
-* [discriminators](_models_weather_.iweather.md#discriminators)
-* [modelName](_models_weather_.iweather.md#modelname)
-* [schema](_models_weather_.iweather.md#schema)
+* [Model](_models_horoscope_.ihoroscope.md#model)
+* [base](_models_horoscope_.ihoroscope.md#base)
+* [baseModelName](_models_horoscope_.ihoroscope.md#basemodelname)
+* [collection](_models_horoscope_.ihoroscope.md#collection)
+* [db](_models_horoscope_.ihoroscope.md#db)
+* [discriminators](_models_horoscope_.ihoroscope.md#discriminators)
+* [modelName](_models_horoscope_.ihoroscope.md#modelname)
+* [schema](_models_horoscope_.ihoroscope.md#schema)
 
 ### Methods
 
-* [$where](_models_weather_.iweather.md#where)
-* [addListener](_models_weather_.iweather.md#addlistener)
-* [aggregate](_models_weather_.iweather.md#aggregate)
-* [bulkWrite](_models_weather_.iweather.md#bulkwrite)
-* [count](_models_weather_.iweather.md#count)
-* [countDocuments](_models_weather_.iweather.md#countdocuments)
-* [create](_models_weather_.iweather.md#create)
-* [createCollection](_models_weather_.iweather.md#createcollection)
-* [createIndexes](_models_weather_.iweather.md#createindexes)
-* [deleteMany](_models_weather_.iweather.md#deletemany)
-* [deleteOne](_models_weather_.iweather.md#deleteone)
-* [discriminator](_models_weather_.iweather.md#discriminator)
-* [distinct](_models_weather_.iweather.md#distinct)
-* [emit](_models_weather_.iweather.md#emit)
-* [ensureIndexes](_models_weather_.iweather.md#ensureindexes)
-* [estimatedDocumentCount](_models_weather_.iweather.md#estimateddocumentcount)
-* [eventNames](_models_weather_.iweather.md#eventnames)
-* [exists](_models_weather_.iweather.md#exists)
-* [fetchCurrent](_models_weather_.iweather.md#fetchcurrent)
-* [fetchDaily](_models_weather_.iweather.md#fetchdaily)
-* [find](_models_weather_.iweather.md#find)
-* [findById](_models_weather_.iweather.md#findbyid)
-* [findByIdAndDelete](_models_weather_.iweather.md#findbyidanddelete)
-* [findByIdAndRemove](_models_weather_.iweather.md#findbyidandremove)
-* [findByIdAndUpdate](_models_weather_.iweather.md#findbyidandupdate)
-* [findCurrent](_models_weather_.iweather.md#findcurrent)
-* [findCurrentOne](_models_weather_.iweather.md#findcurrentone)
-* [findDaily](_models_weather_.iweather.md#finddaily)
-* [findDailyAll](_models_weather_.iweather.md#finddailyall)
-* [findDailyOne](_models_weather_.iweather.md#finddailyone)
-* [findOne](_models_weather_.iweather.md#findone)
-* [findOneAndDelete](_models_weather_.iweather.md#findoneanddelete)
-* [findOneAndRemove](_models_weather_.iweather.md#findoneandremove)
-* [findOneAndUpdate](_models_weather_.iweather.md#findoneandupdate)
-* [findOutdatedCurrent](_models_weather_.iweather.md#findoutdatedcurrent)
-* [fromCurrent](_models_weather_.iweather.md#fromcurrent)
-* [fromDaily](_models_weather_.iweather.md#fromdaily)
-* [geoSearch](_models_weather_.iweather.md#geosearch)
-* [getCurrent](_models_weather_.iweather.md#getcurrent)
-* [getDaily](_models_weather_.iweather.md#getdaily)
-* [getDailyAll](_models_weather_.iweather.md#getdailyall)
-* [getMaxListeners](_models_weather_.iweather.md#getmaxlisteners)
-* [hydrate](_models_weather_.iweather.md#hydrate)
-* [init](_models_weather_.iweather.md#init)
-* [insertMany](_models_weather_.iweather.md#insertmany)
-* [listIndexes](_models_weather_.iweather.md#listindexes)
-* [listenerCount](_models_weather_.iweather.md#listenercount)
-* [listeners](_models_weather_.iweather.md#listeners)
-* [mapReduce](_models_weather_.iweather.md#mapreduce)
-* [model](_models_weather_.iweather.md#model)
-* [off](_models_weather_.iweather.md#off)
-* [on](_models_weather_.iweather.md#on)
-* [once](_models_weather_.iweather.md#once)
-* [populate](_models_weather_.iweather.md#populate)
-* [prependListener](_models_weather_.iweather.md#prependlistener)
-* [prependOnceListener](_models_weather_.iweather.md#prependoncelistener)
-* [rawListeners](_models_weather_.iweather.md#rawlisteners)
-* [remove](_models_weather_.iweather.md#remove)
-* [removeAllListeners](_models_weather_.iweather.md#removealllisteners)
-* [removeListener](_models_weather_.iweather.md#removelistener)
-* [removeLowScored](_models_weather_.iweather.md#removelowscored)
-* [removeOld](_models_weather_.iweather.md#removeold)
-* [replaceOne](_models_weather_.iweather.md#replaceone)
-* [setMaxListeners](_models_weather_.iweather.md#setmaxlisteners)
-* [syncIndexes](_models_weather_.iweather.md#syncindexes)
-* [translateAliases](_models_weather_.iweather.md#translatealiases)
-* [update](_models_weather_.iweather.md#update)
-* [updateMany](_models_weather_.iweather.md#updatemany)
-* [updateOne](_models_weather_.iweather.md#updateone)
-* [watch](_models_weather_.iweather.md#watch)
-* [where](_models_weather_.iweather.md#where)
+* [$where](_models_horoscope_.ihoroscope.md#where)
+* [addListener](_models_horoscope_.ihoroscope.md#addlistener)
+* [aggregate](_models_horoscope_.ihoroscope.md#aggregate)
+* [bulkWrite](_models_horoscope_.ihoroscope.md#bulkwrite)
+* [count](_models_horoscope_.ihoroscope.md#count)
+* [countDocuments](_models_horoscope_.ihoroscope.md#countdocuments)
+* [create](_models_horoscope_.ihoroscope.md#create)
+* [createCollection](_models_horoscope_.ihoroscope.md#createcollection)
+* [createIndexes](_models_horoscope_.ihoroscope.md#createindexes)
+* [deleteMany](_models_horoscope_.ihoroscope.md#deletemany)
+* [deleteOne](_models_horoscope_.ihoroscope.md#deleteone)
+* [discriminator](_models_horoscope_.ihoroscope.md#discriminator)
+* [distinct](_models_horoscope_.ihoroscope.md#distinct)
+* [emit](_models_horoscope_.ihoroscope.md#emit)
+* [ensureIndexes](_models_horoscope_.ihoroscope.md#ensureindexes)
+* [estimatedDocumentCount](_models_horoscope_.ihoroscope.md#estimateddocumentcount)
+* [eventNames](_models_horoscope_.ihoroscope.md#eventnames)
+* [exists](_models_horoscope_.ihoroscope.md#exists)
+* [fetchCurrent](_models_horoscope_.ihoroscope.md#fetchcurrent)
+* [find](_models_horoscope_.ihoroscope.md#find)
+* [findAstro](_models_horoscope_.ihoroscope.md#findastro)
+* [findById](_models_horoscope_.ihoroscope.md#findbyid)
+* [findByIdAndDelete](_models_horoscope_.ihoroscope.md#findbyidanddelete)
+* [findByIdAndRemove](_models_horoscope_.ihoroscope.md#findbyidandremove)
+* [findByIdAndUpdate](_models_horoscope_.ihoroscope.md#findbyidandupdate)
+* [findOne](_models_horoscope_.ihoroscope.md#findone)
+* [findOneAndDelete](_models_horoscope_.ihoroscope.md#findoneanddelete)
+* [findOneAndRemove](_models_horoscope_.ihoroscope.md#findoneandremove)
+* [findOneAndUpdate](_models_horoscope_.ihoroscope.md#findoneandupdate)
+* [fromCurrent](_models_horoscope_.ihoroscope.md#fromcurrent)
+* [geoSearch](_models_horoscope_.ihoroscope.md#geosearch)
+* [getCurrent](_models_horoscope_.ihoroscope.md#getcurrent)
+* [getMaxListeners](_models_horoscope_.ihoroscope.md#getmaxlisteners)
+* [hydrate](_models_horoscope_.ihoroscope.md#hydrate)
+* [init](_models_horoscope_.ihoroscope.md#init)
+* [insertMany](_models_horoscope_.ihoroscope.md#insertmany)
+* [listIndexes](_models_horoscope_.ihoroscope.md#listindexes)
+* [listenerCount](_models_horoscope_.ihoroscope.md#listenercount)
+* [listeners](_models_horoscope_.ihoroscope.md#listeners)
+* [mapReduce](_models_horoscope_.ihoroscope.md#mapreduce)
+* [model](_models_horoscope_.ihoroscope.md#model)
+* [off](_models_horoscope_.ihoroscope.md#off)
+* [on](_models_horoscope_.ihoroscope.md#on)
+* [once](_models_horoscope_.ihoroscope.md#once)
+* [populate](_models_horoscope_.ihoroscope.md#populate)
+* [prependListener](_models_horoscope_.ihoroscope.md#prependlistener)
+* [prependOnceListener](_models_horoscope_.ihoroscope.md#prependoncelistener)
+* [rawListeners](_models_horoscope_.ihoroscope.md#rawlisteners)
+* [remove](_models_horoscope_.ihoroscope.md#remove)
+* [removeAllListeners](_models_horoscope_.ihoroscope.md#removealllisteners)
+* [removeListener](_models_horoscope_.ihoroscope.md#removelistener)
+* [replaceOne](_models_horoscope_.ihoroscope.md#replaceone)
+* [setMaxListeners](_models_horoscope_.ihoroscope.md#setmaxlisteners)
+* [syncIndexes](_models_horoscope_.ihoroscope.md#syncindexes)
+* [translateAliases](_models_horoscope_.ihoroscope.md#translatealiases)
+* [update](_models_horoscope_.ihoroscope.md#update)
+* [updateMany](_models_horoscope_.ihoroscope.md#updatemany)
+* [updateOne](_models_horoscope_.ihoroscope.md#updateone)
+* [watch](_models_horoscope_.ihoroscope.md#watch)
+* [where](_models_horoscope_.ihoroscope.md#where)
 
 ## Events
 
 ###  constructor
 
-• **new IWeather**(`doc?`: any): *[IWeatherSchema](_models_weather_.iweatherschema.md)*
+• **new IHoroscope**(`doc?`: any): *[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[constructor](_models_horoscope_.ihoroscope.md#constructor)*
 
@@ -122,7 +111,7 @@ Name | Type | Description |
 ------ | ------ | ------ |
 `doc?` | any | values with which to create the document |
 
-**Returns:** *[IWeatherSchema](_models_weather_.iweatherschema.md)*
+**Returns:** *[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)*
 
 ## Properties
 
@@ -221,7 +210,7 @@ Schema the model uses.
 
 ###  $where
 
-▸ **$where**(`argument`: string | Function): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md), [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+▸ **$where**(`argument`: string | Function): *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[$where](_models_horoscope_.ihoroscope.md#where)*
 
@@ -235,7 +224,7 @@ Name | Type | Description |
 ------ | ------ | ------ |
 `argument` | string &#124; Function | is a javascript string or anonymous function  |
 
-**Returns:** *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md), [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
 ___
 
@@ -389,7 +378,7 @@ ___
 
 ###  count
 
-▸ **count**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `callback?`: function): *Query‹number› & QueryHelpers*
+▸ **count**(`conditions`: FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `callback?`: function): *Query‹number› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[count](_models_horoscope_.ihoroscope.md#count)*
 
@@ -399,7 +388,7 @@ Counts number of matching documents in a database collection.
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪ **conditions**: *FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
 ▪`Optional`  **callback**: *function*
 
@@ -446,7 +435,7 @@ Name | Type |
 
 **Returns:** *Query‹number› & QueryHelpers*
 
-▸ **countDocuments**(`criteria`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `callback?`: function): *Query‹number› & QueryHelpers*
+▸ **countDocuments**(`criteria`: FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `callback?`: function): *Query‹number› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[countDocuments](_models_horoscope_.ihoroscope.md#countdocuments)*
 
@@ -454,7 +443,7 @@ Defined in node_modules/@types/mongoose/index.d.ts:3219
 
 **Parameters:**
 
-▪ **criteria**: *FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪ **criteria**: *FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
 ▪`Optional`  **callback**: *function*
 
@@ -473,7 +462,7 @@ ___
 
 ###  create
 
-▸ **create**‹**TCreate**›(`doc`: CreateQuery‹TCreate›, `options?`: SaveOptions): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▸ **create**‹**TCreate**›(`doc`: CreateQuery‹TCreate›, `options?`: SaveOptions): *Promise‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[create](_models_horoscope_.ihoroscope.md#create)*
 
@@ -494,9 +483,9 @@ Name | Type |
 `doc` | CreateQuery‹TCreate› |
 `options?` | SaveOptions |
 
-**Returns:** *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+**Returns:** *Promise‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
-▸ **create**‹**TCreate**›(`doc`: CreateQuery‹TCreate›, `callback?`: function): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▸ **create**‹**TCreate**›(`doc`: CreateQuery‹TCreate›, `callback?`: function): *Promise‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[create](_models_horoscope_.ihoroscope.md#create)*
 
@@ -512,18 +501,18 @@ Defined in node_modules/@types/mongoose/index.d.ts:3240
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IWeatherSchema](_models_weather_.iweatherschema.md)[]): *void*
+▸ (`err`: any, `res`: [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)[]): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IWeatherSchema](_models_weather_.iweatherschema.md)[] |
+`res` | [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)[] |
 
-**Returns:** *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+**Returns:** *Promise‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
-▸ **create**‹**TCreate**›(`docs`: CreateQuery‹TCreate›[], `callback?`: function): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)[]›*
+▸ **create**‹**TCreate**›(`docs`: CreateQuery‹TCreate›[], `callback?`: function): *Promise‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)[]›*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[create](_models_horoscope_.ihoroscope.md#create)*
 
@@ -539,18 +528,18 @@ Defined in node_modules/@types/mongoose/index.d.ts:3241
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IWeatherSchema](_models_weather_.iweatherschema.md)[]): *void*
+▸ (`err`: any, `res`: [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)[]): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IWeatherSchema](_models_weather_.iweatherschema.md)[] |
+`res` | [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)[] |
 
-**Returns:** *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)[]›*
+**Returns:** *Promise‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)[]›*
 
-▸ **create**‹**TCreate**›(`docs`: CreateQuery‹TCreate›[], `options?`: SaveOptions, `callback?`: function): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)[]›*
+▸ **create**‹**TCreate**›(`docs`: CreateQuery‹TCreate›[], `options?`: SaveOptions, `callback?`: function): *Promise‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)[]›*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[create](_models_horoscope_.ihoroscope.md#create)*
 
@@ -568,18 +557,18 @@ Defined in node_modules/@types/mongoose/index.d.ts:3242
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IWeatherSchema](_models_weather_.iweatherschema.md)[]): *void*
+▸ (`err`: any, `res`: [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)[]): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IWeatherSchema](_models_weather_.iweatherschema.md)[] |
+`res` | [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)[] |
 
-**Returns:** *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)[]›*
+**Returns:** *Promise‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)[]›*
 
-▸ **create**‹**TCreate**›(...`docs`: CreateQuery‹TCreate›[]): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▸ **create**‹**TCreate**›(...`docs`: CreateQuery‹TCreate›[]): *Promise‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[create](_models_horoscope_.ihoroscope.md#create)*
 
@@ -595,7 +584,7 @@ Name | Type |
 ------ | ------ |
 `...docs` | CreateQuery‹TCreate›[] |
 
-**Returns:** *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+**Returns:** *Promise‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
 ___
 
@@ -658,7 +647,7 @@ ___
 
 ###  deleteMany
 
-▸ **deleteMany**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `callback?`: function): *Query‹DeleteWriteOpResultObject["result"] & object› & QueryHelpers*
+▸ **deleteMany**(`conditions`: FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `callback?`: function): *Query‹DeleteWriteOpResultObject["result"] & object› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[deleteMany](_models_horoscope_.ihoroscope.md#deletemany)*
 
@@ -666,7 +655,7 @@ Defined in node_modules/@types/mongoose/index.d.ts:3570
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪ **conditions**: *FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
 ▪`Optional`  **callback**: *function*
 
@@ -680,7 +669,7 @@ Name | Type |
 
 **Returns:** *Query‹DeleteWriteOpResultObject["result"] & object› & QueryHelpers*
 
-▸ **deleteMany**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `options`: ModelOptions, `callback?`: function): *Query‹DeleteWriteOpResultObject["result"] & object› & QueryHelpers*
+▸ **deleteMany**(`conditions`: FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `options`: ModelOptions, `callback?`: function): *Query‹DeleteWriteOpResultObject["result"] & object› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[deleteMany](_models_horoscope_.ihoroscope.md#deletemany)*
 
@@ -688,7 +677,7 @@ Defined in node_modules/@types/mongoose/index.d.ts:3571
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪ **conditions**: *FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
 ▪ **options**: *ModelOptions*
 
@@ -708,7 +697,7 @@ ___
 
 ###  deleteOne
 
-▸ **deleteOne**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `callback?`: function): *Query‹DeleteWriteOpResultObject["result"] & object› & QueryHelpers*
+▸ **deleteOne**(`conditions`: FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `callback?`: function): *Query‹DeleteWriteOpResultObject["result"] & object› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[deleteOne](_models_horoscope_.ihoroscope.md#deleteone)*
 
@@ -716,7 +705,7 @@ Defined in node_modules/@types/mongoose/index.d.ts:3568
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪ **conditions**: *FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
 ▪`Optional`  **callback**: *function*
 
@@ -730,7 +719,7 @@ Name | Type |
 
 **Returns:** *Query‹DeleteWriteOpResultObject["result"] & object› & QueryHelpers*
 
-▸ **deleteOne**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `options`: ModelOptions, `callback?`: function): *Query‹DeleteWriteOpResultObject["result"] & object› & QueryHelpers*
+▸ **deleteOne**(`conditions`: FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `options`: ModelOptions, `callback?`: function): *Query‹DeleteWriteOpResultObject["result"] & object› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[deleteOne](_models_horoscope_.ihoroscope.md#deleteone)*
 
@@ -738,7 +727,7 @@ Defined in node_modules/@types/mongoose/index.d.ts:3569
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪ **conditions**: *FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
 ▪ **options**: *ModelOptions*
 
@@ -994,7 +983,7 @@ ___
 
 ###  exists
 
-▸ **exists**(`filter`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `callback?`: function): *Promise‹boolean›*
+▸ **exists**(`filter`: FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `callback?`: function): *Promise‹boolean›*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[exists](_models_horoscope_.ihoroscope.md#exists)*
 
@@ -1005,7 +994,7 @@ the given `filter`, and false otherwise.
 
 **Parameters:**
 
-▪ **filter**: *FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪ **filter**: *FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
 ▪`Optional`  **callback**: *function*
 
@@ -1024,49 +1013,27 @@ ___
 
 ###  fetchCurrent
 
-▸ **fetchCurrent**(`lat`: number, `lon`: number): *Promise‹[OpenweatherCurrentAPIResponse](_core_api_iopenweather_.openweathercurrentapiresponse.md)›*
+▸ **fetchCurrent**(`sign`: string): *Promise‹[IAztroAPIResponse](_core_api_iaztro_.iaztroapiresponse.md)›*
 
-*Defined in [src/models/Weather.ts:285](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Weather.ts#L285)*
+*Defined in [src/models/Horoscope.ts:75](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Horoscope.ts#L75)*
 
-Run a fetch call to the API to get the Current entry of the given location
-
-**Parameters:**
-
-Name | Type | Description |
------- | ------ | ------ |
-`lat` | number | Latitude of the location |
-`lon` | number | Longitude of the location |
-
-**Returns:** *Promise‹[OpenweatherCurrentAPIResponse](_core_api_iopenweather_.openweathercurrentapiresponse.md)›*
-
-An Object of all the data queried from the API inside a Promise
-
-___
-
-###  fetchDaily
-
-▸ **fetchDaily**(`lat`: number, `lon`: number): *Promise‹[OpenweatherDailyAPIResponse](_core_api_iopenweather_.openweatherdailyapiresponse.md)›*
-
-*Defined in [src/models/Weather.ts:296](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Weather.ts#L296)*
-
-Run a fetch call to the API to get the Daily entries of the given location from today
+Get an API response (json) from Aztro API for today's horoscope
 
 **Parameters:**
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`lat` | number | Latitude of the location |
-`lon` | number | Longitude of the location |
+`sign` | string | (astrological) from user or his input |
 
-**Returns:** *Promise‹[OpenweatherDailyAPIResponse](_core_api_iopenweather_.openweatherdailyapiresponse.md)›*
+**Returns:** *Promise‹[IAztroAPIResponse](_core_api_iaztro_.iaztroapiresponse.md)›*
 
-An Object of all the data queried from the API inside a Promise
+an API response in a Promise
 
 ___
 
 ###  find
 
-▸ **find**(`callback?`: function): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)[], [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+▸ **find**(`callback?`: function): *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)[], [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[find](_models_horoscope_.ihoroscope.md#find)*
 
@@ -1078,18 +1045,18 @@ Finds documents.
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IWeatherSchema](_models_weather_.iweatherschema.md)[]): *void*
+▸ (`err`: any, `res`: [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)[]): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IWeatherSchema](_models_weather_.iweatherschema.md)[] |
+`res` | [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)[] |
 
-**Returns:** *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)[], [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)[], [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **find**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `callback?`: function): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)[], [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+▸ **find**(`conditions`: FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `callback?`: function): *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)[], [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[find](_models_horoscope_.ihoroscope.md#find)*
 
@@ -1097,22 +1064,22 @@ Defined in node_modules/@types/mongoose/index.d.ts:3319
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪ **conditions**: *FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IWeatherSchema](_models_weather_.iweatherschema.md)[]): *void*
+▸ (`err`: any, `res`: [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)[]): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IWeatherSchema](_models_weather_.iweatherschema.md)[] |
+`res` | [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)[] |
 
-**Returns:** *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)[], [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)[], [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **find**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `projection?`: any | null, `callback?`: function): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)[], [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+▸ **find**(`conditions`: FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `projection?`: any | null, `callback?`: function): *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)[], [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[find](_models_horoscope_.ihoroscope.md#find)*
 
@@ -1120,24 +1087,24 @@ Defined in node_modules/@types/mongoose/index.d.ts:3320
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪ **conditions**: *FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
 ▪`Optional`  **projection**: *any | null*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IWeatherSchema](_models_weather_.iweatherschema.md)[]): *void*
+▸ (`err`: any, `res`: [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)[]): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IWeatherSchema](_models_weather_.iweatherschema.md)[] |
+`res` | [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)[] |
 
-**Returns:** *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)[], [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)[], [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **find**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `projection?`: any | null, `options?`: object & Omit‹QueryFindOptions, "lean"›, `callback?`: function): *Query‹DocumentDefinition‹[IWeatherSchema](_models_weather_.iweatherschema.md)›[]› & QueryHelpers*
+▸ **find**(`conditions`: FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `projection?`: any | null, `options?`: object & Omit‹QueryFindOptions, "lean"›, `callback?`: function): *Query‹DocumentDefinition‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›[]› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[find](_models_horoscope_.ihoroscope.md#find)*
 
@@ -1145,7 +1112,7 @@ Defined in node_modules/@types/mongoose/index.d.ts:3322
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪ **conditions**: *FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
 ▪`Optional`  **projection**: *any | null*
 
@@ -1153,18 +1120,18 @@ Defined in node_modules/@types/mongoose/index.d.ts:3322
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IWeatherSchema](_models_weather_.iweatherschema.md)[]): *void*
+▸ (`err`: any, `res`: [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)[]): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IWeatherSchema](_models_weather_.iweatherschema.md)[] |
+`res` | [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)[] |
 
-**Returns:** *Query‹DocumentDefinition‹[IWeatherSchema](_models_weather_.iweatherschema.md)›[]› & QueryHelpers*
+**Returns:** *Query‹DocumentDefinition‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›[]› & QueryHelpers*
 
-▸ **find**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `projection?`: any | null, `options?`: QueryFindOptions, `callback?`: function): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)[], [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+▸ **find**(`conditions`: FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `projection?`: any | null, `options?`: QueryFindOptions, `callback?`: function): *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)[], [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[find](_models_horoscope_.ihoroscope.md#find)*
 
@@ -1172,7 +1139,7 @@ Defined in node_modules/@types/mongoose/index.d.ts:3324
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪ **conditions**: *FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
 ▪`Optional`  **projection**: *any | null*
 
@@ -1180,22 +1147,42 @@ Defined in node_modules/@types/mongoose/index.d.ts:3324
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IWeatherSchema](_models_weather_.iweatherschema.md)[]): *void*
+▸ (`err`: any, `res`: [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)[]): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IWeatherSchema](_models_weather_.iweatherschema.md)[] |
+`res` | [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)[] |
 
-**Returns:** *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)[], [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)[], [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
+
+___
+
+###  findAstro
+
+▸ **findAstro**(`sign`: string): *Promise‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
+
+*Defined in [src/models/Horoscope.ts:63](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Horoscope.ts#L63)*
+
+Search in data base if document for sign already exist
+
+**Parameters:**
+
+Name | Type | Description |
+------ | ------ | ------ |
+`sign` | string | (astrological) of the user or his input |
+
+**Returns:** *Promise‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
+
+the Document for specified sign found in a Promise
 
 ___
 
 ###  findById
 
-▸ **findById**(`id`: any | string | number, `callback?`: function): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+▸ **findById**(`id`: any | string | number, `callback?`: function): *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null, [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findById](_models_horoscope_.ihoroscope.md#findbyid)*
 
@@ -1212,18 +1199,18 @@ value of _id to query by
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IWeatherSchema](_models_weather_.iweatherschema.md) | null): *void*
+▸ (`err`: any, `res`: [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IWeatherSchema](_models_weather_.iweatherschema.md) &#124; null |
+`res` | [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) &#124; null |
 
-**Returns:** *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null, [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findById**(`id`: any | string | number, `projection`: any, `callback?`: function): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+▸ **findById**(`id`: any | string | number, `projection`: any, `callback?`: function): *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null, [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findById](_models_horoscope_.ihoroscope.md#findbyid)*
 
@@ -1237,18 +1224,18 @@ Defined in node_modules/@types/mongoose/index.d.ts:3335
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IWeatherSchema](_models_weather_.iweatherschema.md) | null): *void*
+▸ (`err`: any, `res`: [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IWeatherSchema](_models_weather_.iweatherschema.md) &#124; null |
+`res` | [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) &#124; null |
 
-**Returns:** *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null, [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findById**(`id`: any | string | number, `projection`: any, `options`: object & Omit‹QueryFindBaseOptions, "lean"›, `callback?`: function): *Query‹DocumentDefinition‹[IWeatherSchema](_models_weather_.iweatherschema.md)›› & QueryHelpers*
+▸ **findById**(`id`: any | string | number, `projection`: any, `options`: object & Omit‹QueryFindBaseOptions, "lean"›, `callback?`: function): *Query‹DocumentDefinition‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findById](_models_horoscope_.ihoroscope.md#findbyid)*
 
@@ -1264,18 +1251,18 @@ Defined in node_modules/@types/mongoose/index.d.ts:3337
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IWeatherSchema](_models_weather_.iweatherschema.md) | null): *void*
+▸ (`err`: any, `res`: [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IWeatherSchema](_models_weather_.iweatherschema.md) &#124; null |
+`res` | [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) &#124; null |
 
-**Returns:** *Query‹DocumentDefinition‹[IWeatherSchema](_models_weather_.iweatherschema.md)›› & QueryHelpers*
+**Returns:** *Query‹DocumentDefinition‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›› & QueryHelpers*
 
-▸ **findById**(`id`: any | string | number, `projection`: any, `options`: QueryFindBaseOptions, `callback?`: function): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+▸ **findById**(`id`: any | string | number, `projection`: any, `options`: QueryFindBaseOptions, `callback?`: function): *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null, [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findById](_models_horoscope_.ihoroscope.md#findbyid)*
 
@@ -1291,22 +1278,22 @@ Defined in node_modules/@types/mongoose/index.d.ts:3339
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IWeatherSchema](_models_weather_.iweatherschema.md) | null): *void*
+▸ (`err`: any, `res`: [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IWeatherSchema](_models_weather_.iweatherschema.md) &#124; null |
+`res` | [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) &#124; null |
 
-**Returns:** *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null, [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
 ___
 
 ###  findByIdAndDelete
 
-▸ **findByIdAndDelete**(): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+▸ **findByIdAndDelete**(): *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null, [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findByIdAndDelete](_models_horoscope_.ihoroscope.md#findbyidanddelete)*
 
@@ -1319,9 +1306,9 @@ Executes immediately if callback is passed, else a Query object is returned.
 
 Note: same signatures as findByIdAndRemove
 
-**Returns:** *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null, [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findByIdAndDelete**(`id`: any | number | string, `callback?`: function): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+▸ **findByIdAndDelete**(`id`: any | number | string, `callback?`: function): *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null, [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findByIdAndDelete](_models_horoscope_.ihoroscope.md#findbyidanddelete)*
 
@@ -1333,18 +1320,18 @@ Defined in node_modules/@types/mongoose/index.d.ts:3375
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IWeatherSchema](_models_weather_.iweatherschema.md) | null): *void*
+▸ (`err`: any, `res`: [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IWeatherSchema](_models_weather_.iweatherschema.md) &#124; null |
+`res` | [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) &#124; null |
 
-**Returns:** *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null, [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findByIdAndDelete**(`id`: any | number | string, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null›› & QueryHelpers*
+▸ **findByIdAndDelete**(`id`: any | number | string, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null›› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findByIdAndDelete](_models_horoscope_.ihoroscope.md#findbyidanddelete)*
 
@@ -1358,18 +1345,18 @@ Defined in node_modules/@types/mongoose/index.d.ts:3377
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: FindAndModifyWriteOpResultObject‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null›): *void*
+▸ (`err`: any, `res`: FindAndModifyWriteOpResultObject‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null›): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | FindAndModifyWriteOpResultObject‹[IWeatherSchema](_models_weather_.iweatherschema.md) &#124; null› |
+`res` | FindAndModifyWriteOpResultObject‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) &#124; null› |
 
-**Returns:** *Query‹FindAndModifyWriteOpResultObject‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null›› & QueryHelpers*
+**Returns:** *Query‹FindAndModifyWriteOpResultObject‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null›› & QueryHelpers*
 
-▸ **findByIdAndDelete**(`id`: any | number | string, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+▸ **findByIdAndDelete**(`id`: any | number | string, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null, [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findByIdAndDelete](_models_horoscope_.ihoroscope.md#findbyidanddelete)*
 
@@ -1383,22 +1370,22 @@ Defined in node_modules/@types/mongoose/index.d.ts:3380
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IWeatherSchema](_models_weather_.iweatherschema.md) | null): *void*
+▸ (`err`: any, `res`: [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IWeatherSchema](_models_weather_.iweatherschema.md) &#124; null |
+`res` | [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) &#124; null |
 
-**Returns:** *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null, [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
 ___
 
 ###  findByIdAndRemove
 
-▸ **findByIdAndRemove**(): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+▸ **findByIdAndRemove**(): *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null, [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findByIdAndRemove](_models_horoscope_.ihoroscope.md#findbyidandremove)*
 
@@ -1414,9 +1401,9 @@ https://mongoosejs.com/docs/api.html#mongoose_Mongoose-set
 
 Note: same signatures as findByIdAndDelete
 
-**Returns:** *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null, [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findByIdAndRemove**(`id`: any | number | string, `callback?`: function): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+▸ **findByIdAndRemove**(`id`: any | number | string, `callback?`: function): *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null, [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findByIdAndRemove](_models_horoscope_.ihoroscope.md#findbyidandremove)*
 
@@ -1428,18 +1415,18 @@ Defined in node_modules/@types/mongoose/index.d.ts:3356
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IWeatherSchema](_models_weather_.iweatherschema.md) | null): *void*
+▸ (`err`: any, `res`: [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IWeatherSchema](_models_weather_.iweatherschema.md) &#124; null |
+`res` | [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) &#124; null |
 
-**Returns:** *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null, [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findByIdAndRemove**(`id`: any | number | string, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null›› & QueryHelpers*
+▸ **findByIdAndRemove**(`id`: any | number | string, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null›› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findByIdAndRemove](_models_horoscope_.ihoroscope.md#findbyidandremove)*
 
@@ -1453,18 +1440,18 @@ Defined in node_modules/@types/mongoose/index.d.ts:3358
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: FindAndModifyWriteOpResultObject‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null›): *void*
+▸ (`err`: any, `res`: FindAndModifyWriteOpResultObject‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null›): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | FindAndModifyWriteOpResultObject‹[IWeatherSchema](_models_weather_.iweatherschema.md) &#124; null› |
+`res` | FindAndModifyWriteOpResultObject‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) &#124; null› |
 
-**Returns:** *Query‹FindAndModifyWriteOpResultObject‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null›› & QueryHelpers*
+**Returns:** *Query‹FindAndModifyWriteOpResultObject‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null›› & QueryHelpers*
 
-▸ **findByIdAndRemove**(`id`: any | number | string, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+▸ **findByIdAndRemove**(`id`: any | number | string, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null, [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findByIdAndRemove](_models_horoscope_.ihoroscope.md#findbyidandremove)*
 
@@ -1478,22 +1465,22 @@ Defined in node_modules/@types/mongoose/index.d.ts:3361
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IWeatherSchema](_models_weather_.iweatherschema.md) | null): *void*
+▸ (`err`: any, `res`: [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IWeatherSchema](_models_weather_.iweatherschema.md) &#124; null |
+`res` | [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) &#124; null |
 
-**Returns:** *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null, [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
 ___
 
 ###  findByIdAndUpdate
 
-▸ **findByIdAndUpdate**(): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+▸ **findByIdAndUpdate**(): *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null, [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findByIdAndUpdate](_models_horoscope_.ihoroscope.md#findbyidandupdate)*
 
@@ -1505,9 +1492,9 @@ is equivalent to findOneAndUpdate({ _id: id }, ...).
 If mongoose option 'useFindAndModify': set to false it uses native findOneAndUpdate() rather than deprecated findAndModify().
 https://mongoosejs.com/docs/api.html#mongoose_Mongoose-set
 
-**Returns:** *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null, [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `callback?`: function): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `callback?`: function): *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null, [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findByIdAndUpdate](_models_horoscope_.ihoroscope.md#findbyidandupdate)*
 
@@ -1517,22 +1504,22 @@ Defined in node_modules/@types/mongoose/index.d.ts:3392
 
 ▪ **id**: *any | number | string*
 
-▪ **update**: *UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪ **update**: *UpdateQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IWeatherSchema](_models_weather_.iweatherschema.md) | null): *void*
+▸ (`err`: any, `res`: [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IWeatherSchema](_models_weather_.iweatherschema.md) &#124; null |
+`res` | [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) &#124; null |
 
-**Returns:** *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null, [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `options`: object & object & object & QueryFindOneAndUpdateOptions, `callback?`: function): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md), [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `options`: object & object & object & QueryFindOneAndUpdateOptions, `callback?`: function): *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findByIdAndUpdate](_models_horoscope_.ihoroscope.md#findbyidandupdate)*
 
@@ -1542,24 +1529,24 @@ Defined in node_modules/@types/mongoose/index.d.ts:3394
 
 ▪ **id**: *any | number | string*
 
-▪ **update**: *UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪ **update**: *UpdateQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
 ▪ **options**: *object & object & object & QueryFindOneAndUpdateOptions*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IWeatherSchema](_models_weather_.iweatherschema.md)): *void*
+▸ (`err`: any, `res`: [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IWeatherSchema](_models_weather_.iweatherschema.md) |
+`res` | [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) |
 
-**Returns:** *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md), [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `options`: object & QueryFindOneAndUpdateOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IWeatherSchema](_models_weather_.iweatherschema.md)›› & QueryHelpers*
+▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `options`: object & QueryFindOneAndUpdateOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findByIdAndUpdate](_models_horoscope_.ihoroscope.md#findbyidandupdate)*
 
@@ -1569,24 +1556,24 @@ Defined in node_modules/@types/mongoose/index.d.ts:3397
 
 ▪ **id**: *any | number | string*
 
-▪ **update**: *UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪ **update**: *UpdateQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
 ▪ **options**: *object & QueryFindOneAndUpdateOptions*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: FindAndModifyWriteOpResultObject‹[IWeatherSchema](_models_weather_.iweatherschema.md)›): *void*
+▸ (`err`: any, `res`: FindAndModifyWriteOpResultObject‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | FindAndModifyWriteOpResultObject‹[IWeatherSchema](_models_weather_.iweatherschema.md)› |
+`res` | FindAndModifyWriteOpResultObject‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)› |
 
-**Returns:** *Query‹FindAndModifyWriteOpResultObject‹[IWeatherSchema](_models_weather_.iweatherschema.md)›› & QueryHelpers*
+**Returns:** *Query‹FindAndModifyWriteOpResultObject‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›› & QueryHelpers*
 
-▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `options`: object & QueryFindOneAndUpdateOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null›› & QueryHelpers*
+▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `options`: object & QueryFindOneAndUpdateOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null›› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findByIdAndUpdate](_models_horoscope_.ihoroscope.md#findbyidandupdate)*
 
@@ -1596,24 +1583,24 @@ Defined in node_modules/@types/mongoose/index.d.ts:3401
 
 ▪ **id**: *any | number | string*
 
-▪ **update**: *UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪ **update**: *UpdateQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
 ▪ **options**: *object & QueryFindOneAndUpdateOptions*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: FindAndModifyWriteOpResultObject‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null›): *void*
+▸ (`err`: any, `res`: FindAndModifyWriteOpResultObject‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null›): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | FindAndModifyWriteOpResultObject‹[IWeatherSchema](_models_weather_.iweatherschema.md) &#124; null› |
+`res` | FindAndModifyWriteOpResultObject‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) &#124; null› |
 
-**Returns:** *Query‹FindAndModifyWriteOpResultObject‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null›› & QueryHelpers*
+**Returns:** *Query‹FindAndModifyWriteOpResultObject‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null›› & QueryHelpers*
 
-▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `options`: object & Omit‹QueryFindOneAndUpdateOptions, "lean"›, `callback?`: function): *Query‹DocumentDefinition‹[IWeatherSchema](_models_weather_.iweatherschema.md)›› & QueryHelpers*
+▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `options`: object & Omit‹QueryFindOneAndUpdateOptions, "lean"›, `callback?`: function): *Query‹DocumentDefinition‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findByIdAndUpdate](_models_horoscope_.ihoroscope.md#findbyidandupdate)*
 
@@ -1623,24 +1610,24 @@ Defined in node_modules/@types/mongoose/index.d.ts:3405
 
 ▪ **id**: *any | number | string*
 
-▪ **update**: *UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪ **update**: *UpdateQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
 ▪ **options**: *object & Omit‹QueryFindOneAndUpdateOptions, "lean"›*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: DocumentDefinition‹[IWeatherSchema](_models_weather_.iweatherschema.md)›): *void*
+▸ (`err`: any, `res`: DocumentDefinition‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | DocumentDefinition‹[IWeatherSchema](_models_weather_.iweatherschema.md)› |
+`res` | DocumentDefinition‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)› |
 
-**Returns:** *Query‹DocumentDefinition‹[IWeatherSchema](_models_weather_.iweatherschema.md)›› & QueryHelpers*
+**Returns:** *Query‹DocumentDefinition‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›› & QueryHelpers*
 
-▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `options`: QueryFindOneAndUpdateOptions, `callback?`: function): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+▸ **findByIdAndUpdate**(`id`: any | number | string, `update`: UpdateQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `options`: QueryFindOneAndUpdateOptions, `callback?`: function): *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null, [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findByIdAndUpdate](_models_horoscope_.ihoroscope.md#findbyidandupdate)*
 
@@ -1650,138 +1637,28 @@ Defined in node_modules/@types/mongoose/index.d.ts:3409
 
 ▪ **id**: *any | number | string*
 
-▪ **update**: *UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪ **update**: *UpdateQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
 ▪ **options**: *QueryFindOneAndUpdateOptions*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IWeatherSchema](_models_weather_.iweatherschema.md) | null): *void*
+▸ (`err`: any, `res`: [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IWeatherSchema](_models_weather_.iweatherschema.md) &#124; null |
+`res` | [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) &#124; null |
 
-**Returns:** *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
-
-___
-
-###  findCurrent
-
-▸ **findCurrent**(`lat`: number, `long`: number): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)[]›*
-
-*Defined in [src/models/Weather.ts:211](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Weather.ts#L211)*
-
-Look for Documents inside the Database for the Current weather at a specific location
-Time interval: [now - 30 minutes; now + 2 minutes]
-
-**Parameters:**
-
-Name | Type | Description |
------- | ------ | ------ |
-`lat` | number | Latitude of the location (+/- 0.1 from the API) |
-`long` | number | Longitude of the location (+/- 0.1 from the API) |
-
-**Returns:** *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)[]›*
-
-All of the Documents found inside a Promise
-
-___
-
-###  findCurrentOne
-
-▸ **findCurrentOne**(`lat`: number, `long`: number): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
-
-*Defined in [src/models/Weather.ts:219](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Weather.ts#L219)*
-
-Same as findCurrent but only returns the first entry
-
-**Parameters:**
-
-Name | Type | Description |
------- | ------ | ------ |
-`lat` | number | Latitude of the location (+/- 0.1 from the API) |
-`long` | number | Longitude of the location (+/- 0.1 from the API) |
-
-**Returns:** *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
-
-A Promise of the Document
-
-___
-
-###  findDaily
-
-▸ **findDaily**(`lat`: number, `long`: number, `date`: Date): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)[]›*
-
-*Defined in [src/models/Weather.ts:229](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Weather.ts#L229)*
-
-Look for Documents inside the Database for the Daily weather at a specific location and date
-Time interval: Same day as date
-
-**Parameters:**
-
-Name | Type | Description |
------- | ------ | ------ |
-`lat` | number | Latitude of the location (+/- 0.1 from the API) |
-`long` | number | Longitude of the location (+/- 0.1 from the API) |
-`date` | Date | Day of the weather entry to look for |
-
-**Returns:** *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)[]›*
-
-A Promise of all the Documents (Array)
-
-___
-
-###  findDailyAll
-
-▸ **findDailyAll**(`lat`: number, `lon`: number, `further?`: number): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)[]›*
-
-*Defined in [src/models/Weather.ts:247](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Weather.ts#L247)*
-
-Look for all Daily weather entries for next further days (begin: tomorrow) at the given location
-
-**Parameters:**
-
-Name | Type | Description |
------- | ------ | ------ |
-`lat` | number | Latitude of the location (+/- 0.1 from the API) |
-`lon` | number | - |
-`further?` | number | Number of further days (1 means only tomorrow) (default: 4) |
-
-**Returns:** *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)[]›*
-
-A Promise of an Array of Document
-
-___
-
-###  findDailyOne
-
-▸ **findDailyOne**(`lat`: number, `long`: number, `date`: Date): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
-
-*Defined in [src/models/Weather.ts:238](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Weather.ts#L238)*
-
-Same as findDaily but only returns the first entry
-
-**Parameters:**
-
-Name | Type | Description |
------- | ------ | ------ |
-`lat` | number | Latitude of the location (+/- 0.1 from the API) |
-`long` | number | Longitude of the location (+/- 0.1 from the API) |
-`date` | Date | Day of the weather entry to look for |
-
-**Returns:** *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
-
-A Promise of the Document
+**Returns:** *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null, [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
 ___
 
 ###  findOne
 
-▸ **findOne**(`conditions?`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `callback?`: function): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+▸ **findOne**(`conditions?`: FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `callback?`: function): *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null, [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOne](_models_horoscope_.ihoroscope.md#findone)*
 
@@ -1792,22 +1669,22 @@ The conditions are cast to their respective SchemaTypes before the command is se
 
 **Parameters:**
 
-▪`Optional`  **conditions**: *FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪`Optional`  **conditions**: *FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IWeatherSchema](_models_weather_.iweatherschema.md) | null): *void*
+▸ (`err`: any, `res`: [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IWeatherSchema](_models_weather_.iweatherschema.md) &#124; null |
+`res` | [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) &#124; null |
 
-**Returns:** *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null, [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findOne**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `projection`: any, `callback?`: function): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+▸ **findOne**(`conditions`: FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `projection`: any, `callback?`: function): *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null, [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOne](_models_horoscope_.ihoroscope.md#findone)*
 
@@ -1815,24 +1692,24 @@ Defined in node_modules/@types/mongoose/index.d.ts:3420
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪ **conditions**: *FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
 ▪ **projection**: *any*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IWeatherSchema](_models_weather_.iweatherschema.md) | null): *void*
+▸ (`err`: any, `res`: [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IWeatherSchema](_models_weather_.iweatherschema.md) &#124; null |
+`res` | [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) &#124; null |
 
-**Returns:** *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null, [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findOne**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `projection`: any, `options`: object & Omit‹QueryFindBaseOptions, "lean"›, `callback?`: function): *Query‹DocumentDefinition‹[IWeatherSchema](_models_weather_.iweatherschema.md)›› & QueryHelpers*
+▸ **findOne**(`conditions`: FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `projection`: any, `options`: object & Omit‹QueryFindBaseOptions, "lean"›, `callback?`: function): *Query‹DocumentDefinition‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOne](_models_horoscope_.ihoroscope.md#findone)*
 
@@ -1840,7 +1717,7 @@ Defined in node_modules/@types/mongoose/index.d.ts:3422
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪ **conditions**: *FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
 ▪ **projection**: *any*
 
@@ -1848,18 +1725,18 @@ Defined in node_modules/@types/mongoose/index.d.ts:3422
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IWeatherSchema](_models_weather_.iweatherschema.md) | null): *void*
+▸ (`err`: any, `res`: [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IWeatherSchema](_models_weather_.iweatherschema.md) &#124; null |
+`res` | [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) &#124; null |
 
-**Returns:** *Query‹DocumentDefinition‹[IWeatherSchema](_models_weather_.iweatherschema.md)›› & QueryHelpers*
+**Returns:** *Query‹DocumentDefinition‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›› & QueryHelpers*
 
-▸ **findOne**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `projection`: any, `options`: QueryFindBaseOptions, `callback?`: function): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+▸ **findOne**(`conditions`: FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `projection`: any, `options`: QueryFindBaseOptions, `callback?`: function): *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null, [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOne](_models_horoscope_.ihoroscope.md#findone)*
 
@@ -1867,7 +1744,7 @@ Defined in node_modules/@types/mongoose/index.d.ts:3424
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪ **conditions**: *FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
 ▪ **projection**: *any*
 
@@ -1875,22 +1752,22 @@ Defined in node_modules/@types/mongoose/index.d.ts:3424
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IWeatherSchema](_models_weather_.iweatherschema.md) | null): *void*
+▸ (`err`: any, `res`: [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IWeatherSchema](_models_weather_.iweatherschema.md) &#124; null |
+`res` | [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) &#124; null |
 
-**Returns:** *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null, [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
 ___
 
 ###  findOneAndDelete
 
-▸ **findOneAndDelete**(): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+▸ **findOneAndDelete**(): *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null, [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOneAndDelete](_models_horoscope_.ihoroscope.md#findoneanddelete)*
 
@@ -1902,9 +1779,9 @@ callback. Executes immediately if callback is passed.
 
 Note: same signatures as findOneAndRemove
 
-**Returns:** *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null, [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findOneAndDelete**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `callback?`: function): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+▸ **findOneAndDelete**(`conditions`: FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `callback?`: function): *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null, [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOneAndDelete](_models_horoscope_.ihoroscope.md#findoneanddelete)*
 
@@ -1912,22 +1789,22 @@ Defined in node_modules/@types/mongoose/index.d.ts:3455
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪ **conditions**: *FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IWeatherSchema](_models_weather_.iweatherschema.md) | null): *void*
+▸ (`err`: any, `res`: [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IWeatherSchema](_models_weather_.iweatherschema.md) &#124; null |
+`res` | [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) &#124; null |
 
-**Returns:** *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null, [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findOneAndDelete**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `options`: object & QueryFindOneAndRemoveOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null›› & QueryHelpers*
+▸ **findOneAndDelete**(`conditions`: FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `options`: object & QueryFindOneAndRemoveOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null›› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOneAndDelete](_models_horoscope_.ihoroscope.md#findoneanddelete)*
 
@@ -1935,25 +1812,25 @@ Defined in node_modules/@types/mongoose/index.d.ts:3457
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪ **conditions**: *FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
 ▪ **options**: *object & QueryFindOneAndRemoveOptions*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `doc`: FindAndModifyWriteOpResultObject‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null›, `res`: any): *void*
+▸ (`err`: any, `doc`: FindAndModifyWriteOpResultObject‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null›, `res`: any): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`doc` | FindAndModifyWriteOpResultObject‹[IWeatherSchema](_models_weather_.iweatherschema.md) &#124; null› |
+`doc` | FindAndModifyWriteOpResultObject‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) &#124; null› |
 `res` | any |
 
-**Returns:** *Query‹FindAndModifyWriteOpResultObject‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null›› & QueryHelpers*
+**Returns:** *Query‹FindAndModifyWriteOpResultObject‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null›› & QueryHelpers*
 
-▸ **findOneAndDelete**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+▸ **findOneAndDelete**(`conditions`: FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null, [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOneAndDelete](_models_horoscope_.ihoroscope.md#findoneanddelete)*
 
@@ -1961,28 +1838,28 @@ Defined in node_modules/@types/mongoose/index.d.ts:3460
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪ **conditions**: *FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
 ▪ **options**: *QueryFindOneAndRemoveOptions*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IWeatherSchema](_models_weather_.iweatherschema.md) | null): *void*
+▸ (`err`: any, `res`: [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IWeatherSchema](_models_weather_.iweatherschema.md) &#124; null |
+`res` | [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) &#124; null |
 
-**Returns:** *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null, [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
 ___
 
 ###  findOneAndRemove
 
-▸ **findOneAndRemove**(): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+▸ **findOneAndRemove**(): *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null, [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOneAndRemove](_models_horoscope_.ihoroscope.md#findoneandremove)*
 
@@ -1997,9 +1874,9 @@ https://mongoosejs.com/docs/api.html#mongoose_Mongoose-set
 
 Note: same signatures as findOneAndDelete
 
-**Returns:** *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null, [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findOneAndRemove**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `callback?`: function): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+▸ **findOneAndRemove**(`conditions`: FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `callback?`: function): *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null, [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOneAndRemove](_models_horoscope_.ihoroscope.md#findoneandremove)*
 
@@ -2007,22 +1884,22 @@ Defined in node_modules/@types/mongoose/index.d.ts:3439
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪ **conditions**: *FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IWeatherSchema](_models_weather_.iweatherschema.md) | null): *void*
+▸ (`err`: any, `res`: [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IWeatherSchema](_models_weather_.iweatherschema.md) &#124; null |
+`res` | [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) &#124; null |
 
-**Returns:** *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null, [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findOneAndRemove**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `options`: object & QueryFindOneAndRemoveOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null›› & QueryHelpers*
+▸ **findOneAndRemove**(`conditions`: FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `options`: object & QueryFindOneAndRemoveOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null›› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOneAndRemove](_models_horoscope_.ihoroscope.md#findoneandremove)*
 
@@ -2030,25 +1907,25 @@ Defined in node_modules/@types/mongoose/index.d.ts:3441
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪ **conditions**: *FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
 ▪ **options**: *object & QueryFindOneAndRemoveOptions*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `doc`: FindAndModifyWriteOpResultObject‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null›, `res`: any): *void*
+▸ (`err`: any, `doc`: FindAndModifyWriteOpResultObject‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null›, `res`: any): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`doc` | FindAndModifyWriteOpResultObject‹[IWeatherSchema](_models_weather_.iweatherschema.md) &#124; null› |
+`doc` | FindAndModifyWriteOpResultObject‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) &#124; null› |
 `res` | any |
 
-**Returns:** *Query‹FindAndModifyWriteOpResultObject‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null›› & QueryHelpers*
+**Returns:** *Query‹FindAndModifyWriteOpResultObject‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null›› & QueryHelpers*
 
-▸ **findOneAndRemove**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+▸ **findOneAndRemove**(`conditions`: FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `options`: QueryFindOneAndRemoveOptions, `callback?`: function): *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null, [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOneAndRemove](_models_horoscope_.ihoroscope.md#findoneandremove)*
 
@@ -2056,28 +1933,28 @@ Defined in node_modules/@types/mongoose/index.d.ts:3444
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪ **conditions**: *FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
 ▪ **options**: *QueryFindOneAndRemoveOptions*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `res`: [IWeatherSchema](_models_weather_.iweatherschema.md) | null): *void*
+▸ (`err`: any, `res`: [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IWeatherSchema](_models_weather_.iweatherschema.md) &#124; null |
+`res` | [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) &#124; null |
 
-**Returns:** *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null, [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
 ___
 
 ###  findOneAndUpdate
 
-▸ **findOneAndUpdate**(): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+▸ **findOneAndUpdate**(): *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null, [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOneAndUpdate](_models_horoscope_.ihoroscope.md#findoneandupdate)*
 
@@ -2091,9 +1968,9 @@ if callback is passed else a Query object is returned.
 If mongoose option 'useFindAndModify': set to false it uses native findOneAndUpdate() rather than the deprecated findAndModify().
 https://mongoosejs.com/docs/api.html#mongoose_Mongoose-set
 
-**Returns:** *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null, [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `update`: UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `callback?`: function): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `update`: UpdateQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `callback?`: function): *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null, [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOneAndUpdate](_models_horoscope_.ihoroscope.md#findoneandupdate)*
 
@@ -2101,25 +1978,25 @@ Defined in node_modules/@types/mongoose/index.d.ts:3472
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪ **conditions**: *FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
-▪ **update**: *UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪ **update**: *UpdateQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `doc`: [IWeatherSchema](_models_weather_.iweatherschema.md) | null, `res`: any): *void*
+▸ (`err`: any, `doc`: [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null, `res`: any): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`doc` | [IWeatherSchema](_models_weather_.iweatherschema.md) &#124; null |
+`doc` | [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) &#124; null |
 `res` | any |
 
-**Returns:** *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null, [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `update`: UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `options`: object & object & QueryFindOneAndUpdateOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IWeatherSchema](_models_weather_.iweatherschema.md)›› & QueryHelpers*
+▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `update`: UpdateQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `options`: object & object & QueryFindOneAndUpdateOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOneAndUpdate](_models_horoscope_.ihoroscope.md#findoneandupdate)*
 
@@ -2127,27 +2004,27 @@ Defined in node_modules/@types/mongoose/index.d.ts:3474
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪ **conditions**: *FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
-▪ **update**: *UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪ **update**: *UpdateQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
 ▪ **options**: *object & object & QueryFindOneAndUpdateOptions*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `doc`: FindAndModifyWriteOpResultObject‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `res`: any): *void*
+▸ (`err`: any, `doc`: FindAndModifyWriteOpResultObject‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `res`: any): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`doc` | FindAndModifyWriteOpResultObject‹[IWeatherSchema](_models_weather_.iweatherschema.md)› |
+`doc` | FindAndModifyWriteOpResultObject‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)› |
 `res` | any |
 
-**Returns:** *Query‹FindAndModifyWriteOpResultObject‹[IWeatherSchema](_models_weather_.iweatherschema.md)›› & QueryHelpers*
+**Returns:** *Query‹FindAndModifyWriteOpResultObject‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›› & QueryHelpers*
 
-▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `update`: UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `options`: object & QueryFindOneAndUpdateOptions, `callback?`: function): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md), [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `update`: UpdateQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `options`: object & QueryFindOneAndUpdateOptions, `callback?`: function): *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOneAndUpdate](_models_horoscope_.ihoroscope.md#findoneandupdate)*
 
@@ -2155,27 +2032,27 @@ Defined in node_modules/@types/mongoose/index.d.ts:3478
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪ **conditions**: *FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
-▪ **update**: *UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪ **update**: *UpdateQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
 ▪ **options**: *object & QueryFindOneAndUpdateOptions*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `doc`: [IWeatherSchema](_models_weather_.iweatherschema.md), `res`: any): *void*
+▸ (`err`: any, `doc`: [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), `res`: any): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`doc` | [IWeatherSchema](_models_weather_.iweatherschema.md) |
+`doc` | [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) |
 `res` | any |
 
-**Returns:** *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md), [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
-▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `update`: UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `options`: object & QueryFindOneAndUpdateOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null›› & QueryHelpers*
+▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `update`: UpdateQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `options`: object & QueryFindOneAndUpdateOptions, `callback?`: function): *Query‹FindAndModifyWriteOpResultObject‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null›› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOneAndUpdate](_models_horoscope_.ihoroscope.md#findoneandupdate)*
 
@@ -2183,27 +2060,27 @@ Defined in node_modules/@types/mongoose/index.d.ts:3481
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪ **conditions**: *FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
-▪ **update**: *UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪ **update**: *UpdateQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
 ▪ **options**: *object & QueryFindOneAndUpdateOptions*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `doc`: FindAndModifyWriteOpResultObject‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null›, `res`: any): *void*
+▸ (`err`: any, `doc`: FindAndModifyWriteOpResultObject‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null›, `res`: any): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`doc` | FindAndModifyWriteOpResultObject‹[IWeatherSchema](_models_weather_.iweatherschema.md) &#124; null› |
+`doc` | FindAndModifyWriteOpResultObject‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) &#124; null› |
 `res` | any |
 
-**Returns:** *Query‹FindAndModifyWriteOpResultObject‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null›› & QueryHelpers*
+**Returns:** *Query‹FindAndModifyWriteOpResultObject‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null›› & QueryHelpers*
 
-▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `update`: UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `options`: object & Omit‹QueryFindOneAndUpdateOptions, "lean"›, `callback?`: function): *Query‹DocumentDefinition‹[IWeatherSchema](_models_weather_.iweatherschema.md)›› & QueryHelpers*
+▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `update`: UpdateQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `options`: object & Omit‹QueryFindOneAndUpdateOptions, "lean"›, `callback?`: function): *Query‹DocumentDefinition‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOneAndUpdate](_models_horoscope_.ihoroscope.md#findoneandupdate)*
 
@@ -2211,27 +2088,27 @@ Defined in node_modules/@types/mongoose/index.d.ts:3485
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪ **conditions**: *FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
-▪ **update**: *UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪ **update**: *UpdateQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
 ▪ **options**: *object & Omit‹QueryFindOneAndUpdateOptions, "lean"›*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `doc`: DocumentDefinition‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `res`: any): *void*
+▸ (`err`: any, `doc`: DocumentDefinition‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `res`: any): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`doc` | DocumentDefinition‹[IWeatherSchema](_models_weather_.iweatherschema.md)› |
+`doc` | DocumentDefinition‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)› |
 `res` | any |
 
-**Returns:** *Query‹DocumentDefinition‹[IWeatherSchema](_models_weather_.iweatherschema.md)›› & QueryHelpers*
+**Returns:** *Query‹DocumentDefinition‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›› & QueryHelpers*
 
-▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `update`: UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `options`: QueryFindOneAndUpdateOptions, `callback?`: function): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+▸ **findOneAndUpdate**(`conditions`: FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `update`: UpdateQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `options`: QueryFindOneAndUpdateOptions, `callback?`: function): *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null, [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOneAndUpdate](_models_horoscope_.ihoroscope.md#findoneandupdate)*
 
@@ -2239,87 +2116,51 @@ Defined in node_modules/@types/mongoose/index.d.ts:3488
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪ **conditions**: *FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
-▪ **update**: *UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪ **update**: *UpdateQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
 ▪ **options**: *QueryFindOneAndUpdateOptions*
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`err`: any, `doc`: [IWeatherSchema](_models_weather_.iweatherschema.md) | null, `res`: any): *void*
+▸ (`err`: any, `doc`: [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null, `res`: any): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`doc` | [IWeatherSchema](_models_weather_.iweatherschema.md) &#124; null |
+`doc` | [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) &#124; null |
 `res` | any |
 
-**Returns:** *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md) | null, [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
-
-___
-
-###  findOutdatedCurrent
-
-▸ **findOutdatedCurrent**(): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)[]›*
-
-*Defined in [src/models/Weather.ts:257](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Weather.ts#L257)*
-
-Look for all the Current entries that can be updated
-
-**Returns:** *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)[]›*
-
-A Promise of an Array of Document
+**Returns:** *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) | null, [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
 ___
 
 ###  fromCurrent
 
-▸ **fromCurrent**(`lat`: number, `lon`: number): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▸ **fromCurrent**(`sign`: string): *Promise‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
-*Defined in [src/models/Weather.ts:267](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Weather.ts#L267)*
+*Defined in [src/models/Horoscope.ts:69](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Horoscope.ts#L69)*
 
-Run a fetch call to the API for the Current entry of a location and create a Document for it
-
-**Parameters:**
-
-Name | Type | Description |
------- | ------ | ------ |
-`lat` | number | Latitude of the location |
-`lon` | number | Longitude of the location |
-
-**Returns:** *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
-
-A Promise of a Document
-
-___
-
-###  fromDaily
-
-▸ **fromDaily**(`lat`: number, `long`: number): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)[]›*
-
-*Defined in [src/models/Weather.ts:275](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Weather.ts#L275)*
-
-Run a fetch call to the API for the Daily entries of a location and create a Document for each entry
+fetch from API and create new horoscope document for today's horoscope
 
 **Parameters:**
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`lat` | number | Latitude of the location |
-`long` | number | - |
+`sign` | string | (astrological) of the user or his input |
 
-**Returns:** *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)[]›*
+**Returns:** *Promise‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
-A Promise of a Document Array
+a new horoscope Document in a Promise
 
 ___
 
 ###  geoSearch
 
-▸ **geoSearch**(`conditions`: any, `options`: object, `callback?`: function): *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)[], [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+▸ **geoSearch**(`conditions`: any, `options`: object, `callback?`: function): *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)[], [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[geoSearch](_models_horoscope_.ihoroscope.md#geosearch)*
 
@@ -2348,92 +2189,36 @@ Name | Type | Description |
 
 optional callback
 
-▸ (`err`: any, `res`: [IWeatherSchema](_models_weather_.iweatherschema.md)[]): *void*
+▸ (`err`: any, `res`: [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)[]): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IWeatherSchema](_models_weather_.iweatherschema.md)[] |
+`res` | [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)[] |
 
-**Returns:** *DocumentQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)[], [IWeatherSchema](_models_weather_.iweatherschema.md), QueryHelpers› & QueryHelpers*
+**Returns:** *DocumentQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)[], [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), QueryHelpers› & QueryHelpers*
 
 ___
 
 ###  getCurrent
 
-▸ **getCurrent**(`lat`: number, `lon`: number): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▸ **getCurrent**(`sign`: string): *Promise‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
-*Defined in [src/models/Weather.ts:165](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Weather.ts#L165)*
+*Defined in [src/models/Horoscope.ts:57](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Horoscope.ts#L57)*
 
-Look for existing Document or create a new one for the Current weather at the given location
-Also perform update actions if needed
-
-**Parameters:**
-
-Name | Type | Description |
------- | ------ | ------ |
-`lat` | number | Latitude of the location |
-`lon` | number | Longitude of the location |
-
-**Returns:** *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
-
-A promise of the Document
-
-```typescript
-Weather.getCurrent(51.51, -0.13).then((doc) => {
-     console.log('London temperature:', doc.temperature)
-})
-```
-
-___
-
-###  getDaily
-
-▸ **getDaily**(`lat`: number, `lon`: number, `date`: Date): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
-
-*Defined in [src/models/Weather.ts:181](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Weather.ts#L181)*
-
-Look for existing Document or create a new one for the Daily weather at the given location and date
+Get the current horoscope
 
 **Parameters:**
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`lat` | number | Latitude of the location |
-`lon` | number | Longitude of the location |
-`date` | Date | A promise of the Document  ```typescript const tomorrow = moment().add(1, 'days').toDate()  Weather.getDaily(51.51, -0.13, tomorrow).then((doc) => {      console.log('London temperature tomorrow:', doc.temperature) }) ```  |
+`sign` | string | (astrological) of the user or his input |
 
-**Returns:** *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+**Returns:** *Promise‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
-___
-
-###  getDailyAll
-
-▸ **getDailyAll**(`lat`: number, `lon`: number, `further?`: number): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)[]›*
-
-*Defined in [src/models/Weather.ts:196](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Weather.ts#L196)*
-
-Get all (look for or create if needed) the Daily weather Documents for next further days (begin: tomorrow) at the given location
-
-**Parameters:**
-
-Name | Type | Description |
------- | ------ | ------ |
-`lat` | number | Latitude of the location |
-`lon` | number | Longitude of the location |
-`further?` | number | Number of further days (1 means only tomorrow) (default: 4) |
-
-**Returns:** *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)[]›*
-
-A promise of an Array of the Documents
-
-```typescript
-Weather.getDailyAll(51.51, -0.13).then((docs) => {
-     console.log('London temperature tomorrow:', docs[0].temperature)
-})
-```
+always the updated Document (Promise) either from database or from API call
 
 ___
 
@@ -2451,7 +2236,7 @@ ___
 
 ###  hydrate
 
-▸ **hydrate**(`obj`: any): *[IWeatherSchema](_models_weather_.iweatherschema.md)*
+▸ **hydrate**(`obj`: any): *[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[hydrate](_models_horoscope_.ihoroscope.md#hydrate)*
 
@@ -2467,13 +2252,13 @@ Name | Type |
 ------ | ------ |
 `obj` | any |
 
-**Returns:** *[IWeatherSchema](_models_weather_.iweatherschema.md)*
+**Returns:** *[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)*
 
 ___
 
 ###  init
 
-▸ **init**(`callback?`: function): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▸ **init**(`callback?`: function): *Promise‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[init](_models_horoscope_.ihoroscope.md#init)*
 
@@ -2499,13 +2284,13 @@ Name | Type |
 ------ | ------ |
 `err` | any |
 
-**Returns:** *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+**Returns:** *Promise‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
 ___
 
 ###  insertMany
 
-▸ **insertMany**(`docs`: any[], `callback?`: function): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)[]›*
+▸ **insertMany**(`docs`: any[], `callback?`: function): *Promise‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)[]›*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[insertMany](_models_horoscope_.ihoroscope.md#insertmany)*
 
@@ -2525,18 +2310,18 @@ Documents to insert.
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`error`: any, `docs`: [IWeatherSchema](_models_weather_.iweatherschema.md)[]): *void*
+▸ (`error`: any, `docs`: [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)[]): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `error` | any |
-`docs` | [IWeatherSchema](_models_weather_.iweatherschema.md)[] |
+`docs` | [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)[] |
 
-**Returns:** *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)[]›*
+**Returns:** *Promise‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)[]›*
 
-▸ **insertMany**(`docs`: any[], `options?`: object & ModelOptions, `callback?`: function): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)[]›*
+▸ **insertMany**(`docs`: any[], `options?`: object & ModelOptions, `callback?`: function): *Promise‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)[]›*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[insertMany](_models_horoscope_.ihoroscope.md#insertmany)*
 
@@ -2550,18 +2335,18 @@ Defined in node_modules/@types/mongoose/index.d.ts:3531
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`error`: any, `docs`: [IWeatherSchema](_models_weather_.iweatherschema.md)[]): *void*
+▸ (`error`: any, `docs`: [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)[]): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `error` | any |
-`docs` | [IWeatherSchema](_models_weather_.iweatherschema.md)[] |
+`docs` | [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)[] |
 
-**Returns:** *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)[]›*
+**Returns:** *Promise‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)[]›*
 
-▸ **insertMany**(`doc`: any, `callback?`: function): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▸ **insertMany**(`doc`: any, `callback?`: function): *Promise‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[insertMany](_models_horoscope_.ihoroscope.md#insertmany)*
 
@@ -2573,18 +2358,18 @@ Defined in node_modules/@types/mongoose/index.d.ts:3532
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`error`: any, `doc`: [IWeatherSchema](_models_weather_.iweatherschema.md)): *void*
+▸ (`error`: any, `doc`: [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `error` | any |
-`doc` | [IWeatherSchema](_models_weather_.iweatherschema.md) |
+`doc` | [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) |
 
-**Returns:** *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+**Returns:** *Promise‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
-▸ **insertMany**(`doc`: any, `options?`: object & ModelOptions, `callback?`: function): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▸ **insertMany**(`doc`: any, `options?`: object & ModelOptions, `callback?`: function): *Promise‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[insertMany](_models_horoscope_.ihoroscope.md#insertmany)*
 
@@ -2598,16 +2383,16 @@ Defined in node_modules/@types/mongoose/index.d.ts:3533
 
 ▪`Optional`  **callback**: *function*
 
-▸ (`error`: any, `doc`: [IWeatherSchema](_models_weather_.iweatherschema.md)): *void*
+▸ (`error`: any, `doc`: [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `error` | any |
-`doc` | [IWeatherSchema](_models_weather_.iweatherschema.md) |
+`doc` | [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md) |
 
-**Returns:** *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+**Returns:** *Promise‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
 ___
 
@@ -2688,7 +2473,7 @@ ___
 
 ###  mapReduce
 
-▸ **mapReduce**‹**Key**, **Value**›(`o`: ModelMapReduceOption‹[IWeatherSchema](_models_weather_.iweatherschema.md), Key, Value›, `callback?`: function): *Promise‹any›*
+▸ **mapReduce**‹**Key**, **Value**›(`o`: ModelMapReduceOption‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), Key, Value›, `callback?`: function): *Promise‹any›*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[mapReduce](_models_horoscope_.ihoroscope.md#mapreduce)*
 
@@ -2704,7 +2489,7 @@ Executes a mapReduce command.
 
 **Parameters:**
 
-▪ **o**: *ModelMapReduceOption‹[IWeatherSchema](_models_weather_.iweatherschema.md), Key, Value›*
+▪ **o**: *ModelMapReduceOption‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md), Key, Value›*
 
 an object specifying map-reduce options
 
@@ -2825,7 +2610,7 @@ ___
 
 ###  populate
 
-▸ **populate**(`docs`: any[], `options`: ModelPopulateOptions | ModelPopulateOptions[], `callback?`: function): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)[]›*
+▸ **populate**(`docs`: any[], `options`: ModelPopulateOptions | ModelPopulateOptions[], `callback?`: function): *Promise‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)[]›*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[populate](_models_horoscope_.ihoroscope.md#populate)*
 
@@ -2847,16 +2632,16 @@ A hash of key/val (path, options) used for population.
 
 Optional callback, executed upon completion. Receives err and the doc(s).
 
-▸ (`err`: any, `res`: [IWeatherSchema](_models_weather_.iweatherschema.md)[]): *void*
+▸ (`err`: any, `res`: [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)[]): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `err` | any |
-`res` | [IWeatherSchema](_models_weather_.iweatherschema.md)[] |
+`res` | [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)[] |
 
-**Returns:** *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)[]›*
+**Returns:** *Promise‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)[]›*
 
 ▸ **populate**‹**T**›(`docs`: any, `options`: ModelPopulateOptions | ModelPopulateOptions[], `callback?`: function): *Promise‹T›*
 
@@ -2961,7 +2746,7 @@ ___
 
 ###  remove
 
-▸ **remove**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `callback?`: function): *Query‹DeleteWriteOpResultObject["result"] & object› & QueryHelpers*
+▸ **remove**(`conditions`: FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `callback?`: function): *Query‹DeleteWriteOpResultObject["result"] & object› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[remove](_models_horoscope_.ihoroscope.md#remove)*
 
@@ -2971,7 +2756,7 @@ Removes documents from the collection.
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪ **conditions**: *FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
 ▪`Optional`  **callback**: *function*
 
@@ -3031,33 +2816,9 @@ Name | Type |
 
 ___
 
-###  removeLowScored
-
-▸ **removeLowScored**(): *Promise‹any›*
-
-*Defined in [src/models/Weather.ts:308](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Weather.ts#L308)*
-
-Will remove all Documents with a low updateScore
-
-**Returns:** *Promise‹any›*
-
-___
-
-###  removeOld
-
-▸ **removeOld**(): *Promise‹any›*
-
-*Defined in [src/models/Weather.ts:303](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Weather.ts#L303)*
-
-Will remove all Documents older than 24 hours to avoid useless entries in the Database
-
-**Returns:** *Promise‹any›*
-
-___
-
 ###  replaceOne
 
-▸ **replaceOne**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `replacement`: any, `callback?`: function): *Query‹any› & QueryHelpers*
+▸ **replaceOne**(`conditions`: FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `replacement`: any, `callback?`: function): *Query‹any› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[replaceOne](_models_horoscope_.ihoroscope.md#replaceone)*
 
@@ -3068,7 +2829,7 @@ This function triggers the following middleware: replaceOne
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪ **conditions**: *FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
 ▪ **replacement**: *any*
 
@@ -3180,7 +2941,7 @@ ___
 
 ###  update
 
-▸ **update**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `doc`: UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `callback?`: function): *Query‹any› & QueryHelpers*
+▸ **update**(`conditions`: FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `doc`: UpdateQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `callback?`: function): *Query‹any› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[update](_models_horoscope_.ihoroscope.md#update)*
 
@@ -3191,9 +2952,9 @@ All update values are cast to their appropriate SchemaTypes before being sent.
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪ **conditions**: *FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
-▪ **doc**: *UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪ **doc**: *UpdateQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
 ▪`Optional`  **callback**: *function*
 
@@ -3208,7 +2969,7 @@ Name | Type |
 
 **Returns:** *Query‹any› & QueryHelpers*
 
-▸ **update**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `doc`: UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `options`: ModelUpdateOptions, `callback?`: function): *Query‹any› & QueryHelpers*
+▸ **update**(`conditions`: FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `doc`: UpdateQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `options`: ModelUpdateOptions, `callback?`: function): *Query‹any› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[update](_models_horoscope_.ihoroscope.md#update)*
 
@@ -3216,9 +2977,9 @@ Defined in node_modules/@types/mongoose/index.d.ts:3585
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪ **conditions**: *FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
-▪ **doc**: *UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪ **doc**: *UpdateQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
 ▪ **options**: *ModelUpdateOptions*
 
@@ -3239,7 +3000,7 @@ ___
 
 ###  updateMany
 
-▸ **updateMany**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `doc`: UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `callback?`: function): *Query‹any› & QueryHelpers*
+▸ **updateMany**(`conditions`: FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `doc`: UpdateQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `callback?`: function): *Query‹any› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[updateMany](_models_horoscope_.ihoroscope.md#updatemany)*
 
@@ -3247,9 +3008,9 @@ Defined in node_modules/@types/mongoose/index.d.ts:3591
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪ **conditions**: *FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
-▪ **doc**: *UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪ **doc**: *UpdateQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
 ▪`Optional`  **callback**: *function*
 
@@ -3264,7 +3025,7 @@ Name | Type |
 
 **Returns:** *Query‹any› & QueryHelpers*
 
-▸ **updateMany**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `doc`: UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `options`: ModelUpdateOptions, `callback?`: function): *Query‹any› & QueryHelpers*
+▸ **updateMany**(`conditions`: FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `doc`: UpdateQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `options`: ModelUpdateOptions, `callback?`: function): *Query‹any› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[updateMany](_models_horoscope_.ihoroscope.md#updatemany)*
 
@@ -3272,9 +3033,9 @@ Defined in node_modules/@types/mongoose/index.d.ts:3593
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪ **conditions**: *FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
-▪ **doc**: *UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪ **doc**: *UpdateQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
 ▪ **options**: *ModelUpdateOptions*
 
@@ -3295,7 +3056,7 @@ ___
 
 ###  updateOne
 
-▸ **updateOne**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `doc`: UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `callback?`: function): *Query‹any› & QueryHelpers*
+▸ **updateOne**(`conditions`: FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `doc`: UpdateQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `callback?`: function): *Query‹any› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[updateOne](_models_horoscope_.ihoroscope.md#updateone)*
 
@@ -3303,9 +3064,9 @@ Defined in node_modules/@types/mongoose/index.d.ts:3587
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪ **conditions**: *FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
-▪ **doc**: *UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪ **doc**: *UpdateQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
 ▪`Optional`  **callback**: *function*
 
@@ -3320,7 +3081,7 @@ Name | Type |
 
 **Returns:** *Query‹any› & QueryHelpers*
 
-▸ **updateOne**(`conditions`: FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `doc`: UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›, `options`: ModelUpdateOptions, `callback?`: function): *Query‹any› & QueryHelpers*
+▸ **updateOne**(`conditions`: FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `doc`: UpdateQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›, `options`: ModelUpdateOptions, `callback?`: function): *Query‹any› & QueryHelpers*
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[updateOne](_models_horoscope_.ihoroscope.md#updateone)*
 
@@ -3328,9 +3089,9 @@ Defined in node_modules/@types/mongoose/index.d.ts:3589
 
 **Parameters:**
 
-▪ **conditions**: *FilterQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪ **conditions**: *FilterQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
-▪ **doc**: *UpdateQuery‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▪ **doc**: *UpdateQuery‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
 ▪ **options**: *ModelUpdateOptions*
 

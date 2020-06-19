@@ -1,69 +1,56 @@
-[korbots-server](../README.md) › ["models/Weather"](../modules/_models_weather_.md) › [IWeatherSchema](_models_weather_.iweatherschema.md)
+[korbots-server](../README.md) › ["models/Horoscope"](../modules/_models_horoscope_.md) › [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)
 
-# Interface: IWeatherSchema
-
-Detailed Weather Document (WeatherSchema) interface
+# Interface: IHoroscopeSchema
 
 ## Hierarchy
 
 * Document
 
-  ↳ **IWeatherSchema**
+  ↳ **IHoroscopeSchema**
 
 ## Index
 
 ### Properties
 
-* [__v](_models_weather_.iweatherschema.md#optional-__v)
-* [collection](_models_weather_.iweatherschema.md#collection)
-* [country](_models_weather_.iweatherschema.md#optional-country)
-* [date](_models_weather_.iweatherschema.md#date)
-* [db](_models_weather_.iweatherschema.md#db)
-* [humidity](_models_weather_.iweatherschema.md#humidity)
-* [id](_models_weather_.iweatherschema.md#optional-id)
-* [lastUpdate](_models_weather_.iweatherschema.md#lastupdate)
-* [latitude](_models_weather_.iweatherschema.md#latitude)
-* [longitude](_models_weather_.iweatherschema.md#longitude)
-* [name](_models_weather_.iweatherschema.md#optional-name)
-* [schema](_models_weather_.iweatherschema.md#schema)
-* [temperature](_models_weather_.iweatherschema.md#temperature)
-* [updateScore](_models_weather_.iweatherschema.md#updatescore)
-* [weather](_models_weather_.iweatherschema.md#weather)
-* [weatherDescription](_models_weather_.iweatherschema.md#weatherdescription)
-* [weatherIcon](_models_weather_.iweatherschema.md#weathericon)
-* [wind](_models_weather_.iweatherschema.md#wind)
+* [__v](_models_horoscope_.ihoroscopeschema.md#optional-__v)
+* [collection](_models_horoscope_.ihoroscopeschema.md#collection)
+* [date](_models_horoscope_.ihoroscopeschema.md#date)
+* [db](_models_horoscope_.ihoroscopeschema.md#db)
+* [family](_models_horoscope_.ihoroscopeschema.md#family)
+* [health](_models_horoscope_.ihoroscopeschema.md#health)
+* [id](_models_horoscope_.ihoroscopeschema.md#optional-id)
+* [love](_models_horoscope_.ihoroscopeschema.md#love)
+* [luckyNumber](_models_horoscope_.ihoroscopeschema.md#luckynumber)
+* [mood](_models_horoscope_.ihoroscopeschema.md#optional-mood)
+* [schema](_models_horoscope_.ihoroscopeschema.md#schema)
+* [sign](_models_horoscope_.ihoroscopeschema.md#sign)
+* [work](_models_horoscope_.ihoroscopeschema.md#work)
 
 ### Methods
 
-* [$isDeleted](_models_weather_.iweatherschema.md#isdeleted)
-* [addListener](_models_weather_.iweatherschema.md#addlistener)
-* [checkLocationFieldsUpdate](_models_weather_.iweatherschema.md#checklocationfieldsupdate)
-* [checkUpdate](_models_weather_.iweatherschema.md#checkupdate)
-* [decrementUpdateScore](_models_weather_.iweatherschema.md#decrementupdatescore)
-* [emit](_models_weather_.iweatherschema.md#emit)
-* [eventNames](_models_weather_.iweatherschema.md#eventnames)
-* [getMaxListeners](_models_weather_.iweatherschema.md#getmaxlisteners)
-* [increment](_models_weather_.iweatherschema.md#increment)
-* [incrementUpdateScore](_models_weather_.iweatherschema.md#incrementupdatescore)
-* [listenerCount](_models_weather_.iweatherschema.md#listenercount)
-* [listeners](_models_weather_.iweatherschema.md#listeners)
-* [model](_models_weather_.iweatherschema.md#model)
-* [needsLocationFieldsUpdate](_models_weather_.iweatherschema.md#needslocationfieldsupdate)
-* [needsUpdate](_models_weather_.iweatherschema.md#needsupdate)
-* [off](_models_weather_.iweatherschema.md#off)
-* [on](_models_weather_.iweatherschema.md#on)
-* [once](_models_weather_.iweatherschema.md#once)
-* [prependListener](_models_weather_.iweatherschema.md#prependlistener)
-* [prependOnceListener](_models_weather_.iweatherschema.md#prependoncelistener)
-* [rawListeners](_models_weather_.iweatherschema.md#rawlisteners)
-* [remove](_models_weather_.iweatherschema.md#remove)
-* [removeAllListeners](_models_weather_.iweatherschema.md#removealllisteners)
-* [removeListener](_models_weather_.iweatherschema.md#removelistener)
-* [save](_models_weather_.iweatherschema.md#save)
-* [setMaxListeners](_models_weather_.iweatherschema.md#setmaxlisteners)
-* [updateCurrent](_models_weather_.iweatherschema.md#updatecurrent)
-* [updateDaily](_models_weather_.iweatherschema.md#updatedaily)
-* [updateLocationFields](_models_weather_.iweatherschema.md#updatelocationfields)
+* [$isDeleted](_models_horoscope_.ihoroscopeschema.md#isdeleted)
+* [addListener](_models_horoscope_.ihoroscopeschema.md#addlistener)
+* [emit](_models_horoscope_.ihoroscopeschema.md#emit)
+* [eventNames](_models_horoscope_.ihoroscopeschema.md#eventnames)
+* [getMaxListeners](_models_horoscope_.ihoroscopeschema.md#getmaxlisteners)
+* [getSentence](_models_horoscope_.ihoroscopeschema.md#getsentence)
+* [increment](_models_horoscope_.ihoroscopeschema.md#increment)
+* [listenerCount](_models_horoscope_.ihoroscopeschema.md#listenercount)
+* [listeners](_models_horoscope_.ihoroscopeschema.md#listeners)
+* [model](_models_horoscope_.ihoroscopeschema.md#model)
+* [needsUpdate](_models_horoscope_.ihoroscopeschema.md#needsupdate)
+* [off](_models_horoscope_.ihoroscopeschema.md#off)
+* [on](_models_horoscope_.ihoroscopeschema.md#on)
+* [once](_models_horoscope_.ihoroscopeschema.md#once)
+* [prependListener](_models_horoscope_.ihoroscopeschema.md#prependlistener)
+* [prependOnceListener](_models_horoscope_.ihoroscopeschema.md#prependoncelistener)
+* [rawListeners](_models_horoscope_.ihoroscopeschema.md#rawlisteners)
+* [remove](_models_horoscope_.ihoroscopeschema.md#remove)
+* [removeAllListeners](_models_horoscope_.ihoroscopeschema.md#removealllisteners)
+* [removeListener](_models_horoscope_.ihoroscopeschema.md#removelistener)
+* [save](_models_horoscope_.ihoroscopeschema.md#save)
+* [setMaxListeners](_models_horoscope_.ihoroscopeschema.md#setmaxlisteners)
+* [updateCurrent](_models_horoscope_.ihoroscopeschema.md#updatecurrent)
 
 ## Properties
 
@@ -92,23 +79,13 @@ Collection the model uses.
 
 ___
 
-### `Optional` country
-
-• **country**? : *string*
-
-*Defined in [src/models/Weather.ts:59](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Weather.ts#L59)*
-
-Country of the location
-
-___
-
 ###  date
 
 • **date**: *Date*
 
-*Defined in [src/models/Weather.ts:63](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Weather.ts#L63)*
+*Defined in [src/models/Horoscope.ts:27](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Horoscope.ts#L27)*
 
-Date of the forecast
+day of the horoscope telling
 
 ___
 
@@ -124,13 +101,19 @@ Connection the model uses.
 
 ___
 
-###  humidity
+###  family
 
-• **humidity**: *number*
+• **family**: *string*
 
-*Defined in [src/models/Weather.ts:45](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Weather.ts#L45)*
+*Defined in [src/models/Horoscope.ts:33](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Horoscope.ts#L33)*
 
-Humidity in %
+___
+
+###  health
+
+• **health**: *string*
+
+*Defined in [src/models/Horoscope.ts:34](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Horoscope.ts#L34)*
 
 ___
 
@@ -149,43 +132,29 @@ behaves like any other field on a document and can be assigned any value.
 
 ___
 
-###  lastUpdate
+###  love
 
-• **lastUpdate**: *Date*
+• **love**: *string*
 
-*Defined in [src/models/Weather.ts:65](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Weather.ts#L65)*
+*Defined in [src/models/Horoscope.ts:31](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Horoscope.ts#L31)*
 
-Last update from the internal database
-
-___
-
-###  latitude
-
-• **latitude**: *number*
-
-*Defined in [src/models/Weather.ts:55](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Weather.ts#L55)*
-
-Latitude of the location
+horoscope sentences determined from luckyNumber in 4 categories
 
 ___
 
-###  longitude
+###  luckyNumber
 
-• **longitude**: *number*
+• **luckyNumber**: *number*
 
-*Defined in [src/models/Weather.ts:57](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Weather.ts#L57)*
-
-Longitude of the location
+*Defined in [src/models/Horoscope.ts:28](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Horoscope.ts#L28)*
 
 ___
 
-### `Optional` name
+### `Optional` mood
 
-• **name**? : *string*
+• **mood**? : *string*
 
-*Defined in [src/models/Weather.ts:61](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Weather.ts#L61)*
-
-City name of the location
+*Defined in [src/models/Horoscope.ts:29](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Horoscope.ts#L29)*
 
 ___
 
@@ -201,63 +170,21 @@ Schema the model uses.
 
 ___
 
-###  temperature
+###  sign
 
-• **temperature**: *number*
+• **sign**: *string*
 
-*Defined in [src/models/Weather.ts:43](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Weather.ts#L43)*
+*Defined in [src/models/Horoscope.ts:25](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Horoscope.ts#L25)*
 
-Temperature in Ke
-
-___
-
-###  updateScore
-
-• **updateScore**: *number*
-
-*Defined in [src/models/Weather.ts:67](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Weather.ts#L67)*
-
-Score that increase on update checking, decrease on cron update
+astrological sign
 
 ___
 
-###  weather
+###  work
 
-• **weather**: *string*
+• **work**: *string*
 
-*Defined in [src/models/Weather.ts:49](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Weather.ts#L49)*
-
-Weather short description
-
-___
-
-###  weatherDescription
-
-• **weatherDescription**: *string*
-
-*Defined in [src/models/Weather.ts:51](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Weather.ts#L51)*
-
-Weather complete description
-
-___
-
-###  weatherIcon
-
-• **weatherIcon**: *string*
-
-*Defined in [src/models/Weather.ts:53](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Weather.ts#L53)*
-
-Weahter icon ID from Openweather API
-
-___
-
-###  wind
-
-• **wind**: *number*
-
-*Defined in [src/models/Weather.ts:47](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Weather.ts#L47)*
-
-Wind speed in m/s
+*Defined in [src/models/Horoscope.ts:32](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Horoscope.ts#L32)*
 
 ## Methods
 
@@ -317,68 +244,6 @@ Name | Type |
 
 ___
 
-###  checkLocationFieldsUpdate
-
-▸ **checkLocationFieldsUpdate**(): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
-
-*Defined in [src/models/Weather.ts:126](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Weather.ts#L126)*
-
-Check if the Documents needs to have it's location fields updated and update them if needed (calls updateLocationFields if needsLocationFieldsUpdate returns true)
-
-**Returns:** *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
-
-The updated Document (save Promise) or the same Document as before if no update performed
-
-___
-
-###  checkUpdate
-
-▸ **checkUpdate**(`isDaily?`: boolean): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
-
-*Defined in [src/models/Weather.ts:121](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Weather.ts#L121)*
-
-Check if the the Document needs to be updated and update it if needed (calls updateCurrent/updateDaily if needsUpdate returns true)
-
-**Parameters:**
-
-Name | Type | Description |
------- | ------ | ------ |
-`isDaily?` | boolean | Set on true if the Document is a Daily Forecast |
-
-**Returns:** *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
-
-The updated Document (save Promise) or the same Document as before if no update performed
-
-For a Current entry:
-```typescript
-entry.checkUpdate().then(...)
-```
-
-For a Daily entry:
-```typescript
-entry.checkUpdate(true).then(...)
-```
-
-___
-
-###  decrementUpdateScore
-
-▸ **decrementUpdateScore**(`value?`: number): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
-
-*Defined in [src/models/Weather.ts:75](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Weather.ts#L75)*
-
-Decrement the value of updateScore
-
-**Parameters:**
-
-Name | Type | Description |
------- | ------ | ------ |
-`value?` | number | Value to subtract to the current updateScore(default: 0.2)  |
-
-**Returns:** *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
-
-___
-
 ###  emit
 
 ▸ **emit**(`event`: string | symbol, ...`args`: any[]): *boolean*
@@ -422,6 +287,20 @@ Defined in node_modules/@types/node/globals.d.ts:560
 
 ___
 
+###  getSentence
+
+▸ **getSentence**(): *Promise‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
+
+*Defined in [src/models/Horoscope.ts:49](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Horoscope.ts#L49)*
+
+Generate the corresponding sentences in the 4 categories depending on the luckyNumber
+
+**Returns:** *Promise‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
+
+the complete horoscope Document in a Promise
+
+___
+
 ###  increment
 
 ▸ **increment**(): *this*
@@ -433,24 +312,6 @@ Defined in node_modules/@types/mongoose/index.d.ts:3603
 Signal that we desire an increment of this documents version.
 
 **Returns:** *this*
-
-___
-
-###  incrementUpdateScore
-
-▸ **incrementUpdateScore**(`value?`: number): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
-
-*Defined in [src/models/Weather.ts:81](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Weather.ts#L81)*
-
-Increment the value of updateScore
-
-**Parameters:**
-
-Name | Type | Description |
------- | ------ | ------ |
-`value?` | number | Value to add to the current updateScore (default: 1)  |
-
-**Returns:** *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
 
 ___
 
@@ -514,39 +375,17 @@ Name | Type | Description |
 
 ___
 
-###  needsLocationFieldsUpdate
-
-▸ **needsLocationFieldsUpdate**(): *boolean*
-
-*Defined in [src/models/Weather.ts:105](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Weather.ts#L105)*
-
-**Returns:** *boolean*
-
-True if the current Document name of country fields are empty and needs to be updated
-
-```typescript
-if entry.needsLocationFieldsUpdate() {
-     entry.updateLocationFields().then(...)
-}
-```
-
-___
-
 ###  needsUpdate
 
 ▸ **needsUpdate**(): *boolean*
 
-*Defined in [src/models/Weather.ts:95](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Weather.ts#L95)*
+*Defined in [src/models/Horoscope.ts:39](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Horoscope.ts#L39)*
+
+Check if it was fetched the right day (today)
 
 **Returns:** *boolean*
 
-True if the current Document needs to be updated from the API data
-
-```typescript
-if entry.needsUpdate() {
-     entry.updateCurrent().then(...)
-}
-```
+true if the difference if bigger than 1 day
 
 ___
 
@@ -845,40 +684,12 @@ ___
 
 ###  updateCurrent
 
-▸ **updateCurrent**(): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+▸ **updateCurrent**(): *Promise‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
-*Defined in [src/models/Weather.ts:134](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Weather.ts#L134)*
+*Defined in [src/models/Horoscope.ts:44](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Horoscope.ts#L44)*
 
-Update the main fields of the Document dealing with Current Weather data
+Update by fetching API response
 
-**Returns:** *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+**Returns:** *Promise‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
-The updated Document (save Promise)
-
-___
-
-###  updateDaily
-
-▸ **updateDaily**(): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
-
-*Defined in [src/models/Weather.ts:139](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Weather.ts#L139)*
-
-Update the main fields of the Document dealing with Daily Weather data
-
-**Returns:** *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
-
-The updated Document (save Promise)
-
-___
-
-###  updateLocationFields
-
-▸ **updateLocationFields**(): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
-
-*Defined in [src/models/Weather.ts:144](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Weather.ts#L144)*
-
-Update the location fields of the Document, will look for the name and country fields on a Current Weather API call
-
-**Returns:** *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
-
-The updated Document (save Promise)
+the update document (save Promise) for today
