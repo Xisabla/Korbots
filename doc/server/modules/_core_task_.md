@@ -24,7 +24,7 @@
 
 Ƭ **TaskAction**: *function*
 
-*Defined in [src/core/Task.ts:18](https://github.com/Xisabla/Korbots/blob/4f8bb25/server/src/core/Task.ts#L18)*
+*Defined in [src/core/Task.ts:18](https://github.com/Xisabla/Korbots/blob/a49f4c6/server/src/core/Task.ts#L18)*
 
 #### Type declaration:
 
@@ -36,7 +36,7 @@ ___
 
 Ƭ **TaskAfter**: *function*
 
-*Defined in [src/core/Task.ts:19](https://github.com/Xisabla/Korbots/blob/4f8bb25/server/src/core/Task.ts#L19)*
+*Defined in [src/core/Task.ts:19](https://github.com/Xisabla/Korbots/blob/a49f4c6/server/src/core/Task.ts#L19)*
 
 #### Type declaration:
 
@@ -54,4 +54,4 @@ ___
 
 Ƭ **TaskSchedule**: *string | Date | Moment*
 
-*Defined in [src/core/Task.ts:20](https://github.com/Xisabla/Korbots/blob/4f8bb25/server/src/core/Task.ts#L20)*
+*Defined in [src/core/Task.ts:20](https://github.com/Xisabla/Korbots/blob/a49f4c6/server/src/core/Task.ts#L20)*

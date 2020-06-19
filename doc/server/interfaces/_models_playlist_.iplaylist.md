@@ -2155,7 +2155,7 @@ ___
 
 ▸ **getOrCreate**(`name`: string): *Promise‹[IPlaylistSchema](_models_playlist_.iplaylistschema.md)›*
 
-*Defined in [src/models/Playlist.ts:74](https://github.com/Xisabla/Korbots/blob/4f8bb25/server/src/models/Playlist.ts#L74)*
+*Defined in [src/models/Playlist.ts:74](https://github.com/Xisabla/Korbots/blob/a49f4c6/server/src/models/Playlist.ts#L74)*
 
 Get or create if doesn't exists a Playlist by it's name
 
