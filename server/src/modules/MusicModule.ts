@@ -214,12 +214,12 @@ export class MusicModule extends Module {
     protected registerTasks(): number[] {
         // Schedules
         const eachHours = '0 0 * * * *'
+        // const eachDays = '0 0 0 * * *'
 
         // Registering
         const ids: number[] = [
-            this.registerTask(() => this.checkOrphanMusics(), eachHours)
-            // TODO: this.registerTask(() => this.checkOrphanMusics())
-            // TODO: this.registerTask(() => this.checkNotStoredMusics())
+            this.registerTask(() => this.removeOrphans(), eachHours),
+            this.registerTask(() => this.removeNonStored(), eachHours)
         ]
 
         log(`Registered ${ids.length} tasks`)
@@ -227,12 +227,50 @@ export class MusicModule extends Module {
         return ids
     }
 
-    private checkOrphanMusics(): Promise<any> {
-        return Music.checkOrphan()
-            .then((musics) =>
-                log(`${musics.length} orphan musics removed from the Database`)
+    /**
+     * Remove all orphans music in the database (orphan = is not in any playlist)
+     */
+    private removeOrphans(): Promise<void> {
+        return Music.getOrphans()
+            .then((orphans) => {
+                log(`${orphans.length} orphan musics found, removing...`)
+                return Promise.all(orphans.map((orphan) => orphan.safeRemove()))
+            })
+            .then((removed) =>
+                log(`Successfully removed ${removed.length} orphan musics`)
             )
             .catch((err) => log(`Unable to remove orphan musics: ${err}`))
+    }
+
+    /**
+     * Get musics in the db that are not in the storage and remove their entry in the database
+     *  Also remove them from the playlists
+     */
+    private removeNonStored(): Promise<any> {
+        return this.getNonStored()
+            .then((nonStored) => {
+                log(`${nonStored.length} non stored musics found, removing...`)
+
+                return Promise.all(nonStored.map((music) => music.safeRemove()))
+            })
+            .then((removed) =>
+                log(`Successfully removed ${removed.length} non stored musics`)
+            )
+            .catch((err) => log(`Unable to remove non stored musics: ${err}`))
+    }
+
+    /**
+     * Look for Music in the database that are not in the storage
+     */
+    private getNonStored(): Promise<IMusicSchema[]> {
+        return Music.find().then((musics) => {
+            return musics.filter((music) => {
+                const file = path.join(this.app.getStorage(), music.path)
+                const exists = fs.existsSync(file)
+
+                return !exists
+            })
+        })
     }
 
     // ---- Methods ----------------------------------
