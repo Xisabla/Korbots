@@ -1014,7 +1014,7 @@ ___
 
 ▸ **fetchLocation**(`city`: string, `country?`: string): *Promise‹[MapquestGeocodingAPIResponse](_core_api_igeocoding_.mapquestgeocodingapiresponse.md)›*
 
-*Defined in [src/models/Location.ts:68](https://github.com/Xisabla/Korbots/blob/59ccf47/server/src/models/Location.ts#L68)*
+*Defined in [src/models/Location.ts:68](https://github.com/Xisabla/Korbots/blob/287111c/server/src/models/Location.ts#L68)*
 
 Call the API for the given City and Country
 
@@ -1640,7 +1640,7 @@ ___
 
 ▸ **findLocation**(`city`: string, `country?`: string): *Promise‹[ILocationSchema](_models_location_.ilocationschema.md)›*
 
-*Defined in [src/models/Location.ts:60](https://github.com/Xisabla/Korbots/blob/59ccf47/server/src/models/Location.ts#L60)*
+*Defined in [src/models/Location.ts:60](https://github.com/Xisabla/Korbots/blob/287111c/server/src/models/Location.ts#L60)*
 
 Look for a Location in the database
 
@@ -2187,7 +2187,7 @@ ___
 
 ▸ **getCoordinates**(`city`: string, `country?`: string): *Promise‹[Coordinates](_models_location_.coordinates.md)›*
 
-*Defined in [src/models/Location.ts:52](https://github.com/Xisabla/Korbots/blob/59ccf47/server/src/models/Location.ts#L52)*
+*Defined in [src/models/Location.ts:52](https://github.com/Xisabla/Korbots/blob/287111c/server/src/models/Location.ts#L52)*
 
 Get the coordinates of a City
 
