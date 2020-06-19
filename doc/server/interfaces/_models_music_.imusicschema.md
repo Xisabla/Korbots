@@ -93,7 +93,7 @@ ___
 
 • **duration**: *number*
 
-*Defined in [src/models/Music.ts:24](https://github.com/Xisabla/Korbots/blob/02d848f/server/src/models/Music.ts#L24)*
+*Defined in [src/models/Music.ts:24](https://github.com/Xisabla/Korbots/blob/4f8bb25/server/src/models/Music.ts#L24)*
 
 Duration of the music
 
@@ -118,7 +118,7 @@ ___
 
 • **path**: *string*
 
-*Defined in [src/models/Music.ts:32](https://github.com/Xisabla/Korbots/blob/02d848f/server/src/models/Music.ts#L32)*
+*Defined in [src/models/Music.ts:32](https://github.com/Xisabla/Korbots/blob/4f8bb25/server/src/models/Music.ts#L32)*
 
 Path of the music in the internal storage
 
@@ -140,7 +140,7 @@ ___
 
 • **source**: *string*
 
-*Defined in [src/models/Music.ts:30](https://github.com/Xisabla/Korbots/blob/02d848f/server/src/models/Music.ts#L30)*
+*Defined in [src/models/Music.ts:30](https://github.com/Xisabla/Korbots/blob/4f8bb25/server/src/models/Music.ts#L30)*
 
 Source of the music
 
@@ -150,7 +150,7 @@ ___
 
 • **sourceId**: *string*
 
-*Defined in [src/models/Music.ts:28](https://github.com/Xisabla/Korbots/blob/02d848f/server/src/models/Music.ts#L28)*
+*Defined in [src/models/Music.ts:28](https://github.com/Xisabla/Korbots/blob/4f8bb25/server/src/models/Music.ts#L28)*
 
 ID of the Source of the music
 
@@ -160,7 +160,7 @@ ___
 
 • **thumbnail**: *string*
 
-*Defined in [src/models/Music.ts:26](https://github.com/Xisabla/Korbots/blob/02d848f/server/src/models/Music.ts#L26)*
+*Defined in [src/models/Music.ts:26](https://github.com/Xisabla/Korbots/blob/4f8bb25/server/src/models/Music.ts#L26)*
 
 Thumbnail of the music
 
@@ -170,7 +170,7 @@ ___
 
 • **title**: *string*
 
-*Defined in [src/models/Music.ts:22](https://github.com/Xisabla/Korbots/blob/02d848f/server/src/models/Music.ts#L22)*
+*Defined in [src/models/Music.ts:22](https://github.com/Xisabla/Korbots/blob/4f8bb25/server/src/models/Music.ts#L22)*
 
 Title of the music
 
@@ -236,7 +236,7 @@ ___
 
 ▸ **addToPlaylist**(`playlist`: string): *Promise‹[IPlaylistSchema](_models_playlist_.iplaylistschema.md)›*
 
-*Defined in [src/models/Music.ts:39](https://github.com/Xisabla/Korbots/blob/02d848f/server/src/models/Music.ts#L39)*
+*Defined in [src/models/Music.ts:39](https://github.com/Xisabla/Korbots/blob/4f8bb25/server/src/models/Music.ts#L39)*
 
 Add the music to a playlist
 
@@ -256,7 +256,7 @@ ___
 
 ▸ **addToPlaylists**(`playlist`: string[]): *Promise‹[IPlaylistSchema](_models_playlist_.iplaylistschema.md)[]›*
 
-*Defined in [src/models/Music.ts:45](https://github.com/Xisabla/Korbots/blob/02d848f/server/src/models/Music.ts#L45)*
+*Defined in [src/models/Music.ts:45](https://github.com/Xisabla/Korbots/blob/4f8bb25/server/src/models/Music.ts#L45)*
 
 Add the music to several playlists
 
@@ -319,7 +319,7 @@ ___
 
 ▸ **getPlaylists**(): *Promise‹[IPlaylistSchema](_models_playlist_.iplaylistschema.md)[]›*
 
-*Defined in [src/models/Music.ts:51](https://github.com/Xisabla/Korbots/blob/02d848f/server/src/models/Music.ts#L51)*
+*Defined in [src/models/Music.ts:51](https://github.com/Xisabla/Korbots/blob/4f8bb25/server/src/models/Music.ts#L51)*
 
 Get all parent playlists of the music
 
