@@ -88,15 +88,11 @@ $thumbnailWidth:$thumbnailHeight/9*16;
     padding: 0px 5px 0 5px;
     position: absolute;
     top: $thumbnailHeight - 25px;
-    right: 0px;
+    right: 28px;
     cursor: auto;
 }
 
-.videoLength {
-    right: 28px;
-}
-
-.addToPlaylistTarget {
+.addToPlaylistTarget, .removePlaylistTarget {
     background-color: black;
     transform: scale(1.47, 1.47);
     color: white;
