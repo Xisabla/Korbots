@@ -14,7 +14,8 @@ export const AztroAPI: API = {
     name: 'aztro',
     baseUrl: 'https://aztro.sameerkumar.website',
     envKeyEntry: ''
-  
+}
+
 export const MapquestGeocodingAPI: API = {
     name: 'mapquest:geoconding',
     baseUrl: 'http://open.mapquestapi.com/geocoding/v1/address',

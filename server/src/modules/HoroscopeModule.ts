@@ -26,6 +26,14 @@ export class HoroscopeModule extends Module {
         )
     }
 
+    // ---- Tasks ------------------------------------
+
+    protected registerTasks(): number[] {
+        // Empty cause no tasks here
+
+        return []
+    }
+
     // ---- Methods ----------------------------------
 
     /**
