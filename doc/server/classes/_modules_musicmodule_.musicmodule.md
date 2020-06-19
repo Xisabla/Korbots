@@ -58,7 +58,7 @@
 
 *Inherited from [Module](_core_module_.module.md).[app](_core_module_.module.md#protected-app)*
 
-*Defined in [src/core/Module.ts:16](https://github.com/Xisabla/Korbots/blob/cca6cd1/server/src/core/Module.ts#L16)*
+*Defined in [src/core/Module.ts:16](https://github.com/Xisabla/Korbots/blob/59ccf47/server/src/core/Module.ts#L16)*
 
 Application instance
 
@@ -68,7 +68,7 @@ ___
 
 • **mp3Storage**: *string*
 
-*Defined in [src/modules/MusicModule.ts:29](https://github.com/Xisabla/Korbots/blob/cca6cd1/server/src/modules/MusicModule.ts#L29)*
+*Defined in [src/modules/MusicModule.ts:29](https://github.com/Xisabla/Korbots/blob/59ccf47/server/src/modules/MusicModule.ts#L29)*
 
 Audio songs storage path
 
@@ -80,7 +80,7 @@ ___
 
 *Inherited from [Module](_core_module_.module.md).[sockets](_core_module_.module.md#protected-sockets)*
 
-*Defined in [src/core/Module.ts:18](https://github.com/Xisabla/Korbots/blob/cca6cd1/server/src/core/Module.ts#L18)*
+*Defined in [src/core/Module.ts:18](https://github.com/Xisabla/Korbots/blob/59ccf47/server/src/core/Module.ts#L18)*
 
 Internal sockets store, updated on SocketJoin and on SocketLeave
 
@@ -90,7 +90,7 @@ ___
 
 • **youtube**: *YouTube*
 
-*Defined in [src/modules/MusicModule.ts:26](https://github.com/Xisabla/Korbots/blob/cca6cd1/server/src/modules/MusicModule.ts#L26)*
+*Defined in [src/modules/MusicModule.ts:26](https://github.com/Xisabla/Korbots/blob/59ccf47/server/src/modules/MusicModule.ts#L26)*
 
 Instance of the youtube API Controller
 
@@ -100,7 +100,7 @@ ___
 
 • **youtubeStorage**: *string*
 
-*Defined in [src/modules/MusicModule.ts:31](https://github.com/Xisabla/Korbots/blob/cca6cd1/server/src/modules/MusicModule.ts#L31)*
+*Defined in [src/modules/MusicModule.ts:31](https://github.com/Xisabla/Korbots/blob/59ccf47/server/src/modules/MusicModule.ts#L31)*
 
 Youtube Storage Path (folder for youtube mp4 files)
 
@@ -112,7 +112,7 @@ Youtube Storage Path (folder for youtube mp4 files)
 
 *Overrides [Module](_core_module_.module.md).[name](_core_module_.module.md#name)*
 
-*Defined in [src/modules/MusicModule.ts:767](https://github.com/Xisabla/Korbots/blob/cca6cd1/server/src/modules/MusicModule.ts#L767)*
+*Defined in [src/modules/MusicModule.ts:767](https://github.com/Xisabla/Korbots/blob/59ccf47/server/src/modules/MusicModule.ts#L767)*
 
 **Returns:** *string*
 
@@ -124,7 +124,7 @@ ___
 
 *Overrides [Module](_core_module_.module.md).[waitForDatabase](_core_module_.module.md#waitfordatabase)*
 
-*Defined in [src/modules/MusicModule.ts:772](https://github.com/Xisabla/Korbots/blob/cca6cd1/server/src/modules/MusicModule.ts#L772)*
+*Defined in [src/modules/MusicModule.ts:772](https://github.com/Xisabla/Korbots/blob/59ccf47/server/src/modules/MusicModule.ts#L772)*
 
 **Returns:** *boolean*
 
@@ -134,7 +134,7 @@ ___
 
 ▸ **addToPlaylist**(`socket`: Socket, `data`: any): *any*
 
-*Defined in [src/modules/MusicModule.ts:321](https://github.com/Xisabla/Korbots/blob/cca6cd1/server/src/modules/MusicModule.ts#L321)*
+*Defined in [src/modules/MusicModule.ts:321](https://github.com/Xisabla/Korbots/blob/59ccf47/server/src/modules/MusicModule.ts#L321)*
 
 Add a song into a playlist and send a report to the client
 
@@ -153,7 +153,7 @@ ___
 
 ▸ **addToPlaylists**(`socket`: Socket, `data`: any): *any*
 
-*Defined in [src/modules/MusicModule.ts:355](https://github.com/Xisabla/Korbots/blob/cca6cd1/server/src/modules/MusicModule.ts#L355)*
+*Defined in [src/modules/MusicModule.ts:355](https://github.com/Xisabla/Korbots/blob/59ccf47/server/src/modules/MusicModule.ts#L355)*
 
 Add a song into some playlists and send a report to the client
 
@@ -172,7 +172,7 @@ ___
 
 ▸ **checkOrphanMusics**(): *Promise‹any›*
 
-*Defined in [src/modules/MusicModule.ts:230](https://github.com/Xisabla/Korbots/blob/cca6cd1/server/src/modules/MusicModule.ts#L230)*
+*Defined in [src/modules/MusicModule.ts:230](https://github.com/Xisabla/Korbots/blob/59ccf47/server/src/modules/MusicModule.ts#L230)*
 
 **Returns:** *Promise‹any›*
 
@@ -182,7 +182,7 @@ ___
 
 ▸ **convertVideo**(`socket`: Socket, `video`: [DownloadedVideo](../interfaces/_core_imusic_.downloadedvideo.md), `prefix`: string): *Promise‹[DownloadedMusic](../interfaces/_core_imusic_.downloadedmusic.md)›*
 
-*Defined in [src/modules/MusicModule.ts:725](https://github.com/Xisabla/Korbots/blob/cca6cd1/server/src/modules/MusicModule.ts#L725)*
+*Defined in [src/modules/MusicModule.ts:725](https://github.com/Xisabla/Korbots/blob/59ccf47/server/src/modules/MusicModule.ts#L725)*
 
 Convert a fresh download video into an audio file in the musics storage
 
@@ -204,7 +204,7 @@ ___
 
 ▸ **download**(`socket`: Socket, `data`: any): *any*
 
-*Defined in [src/modules/MusicModule.ts:581](https://github.com/Xisabla/Korbots/blob/cca6cd1/server/src/modules/MusicModule.ts#L581)*
+*Defined in [src/modules/MusicModule.ts:581](https://github.com/Xisabla/Korbots/blob/59ccf47/server/src/modules/MusicModule.ts#L581)*
 
 **Parameters:**
 
@@ -221,7 +221,7 @@ ___
 
 ▸ **downloadYoutube**(`socket`: Socket, `url`: string): *Promise‹[DownloadedVideo](../interfaces/_core_imusic_.downloadedvideo.md)›*
 
-*Defined in [src/modules/MusicModule.ts:629](https://github.com/Xisabla/Korbots/blob/cca6cd1/server/src/modules/MusicModule.ts#L629)*
+*Defined in [src/modules/MusicModule.ts:629](https://github.com/Xisabla/Korbots/blob/59ccf47/server/src/modules/MusicModule.ts#L629)*
 
 Download a video from youtube into the youtube storage
 
@@ -242,7 +242,7 @@ ___
 
 ▸ **fetchYoutubeInfo**(`url`: string): *Promise‹[SearchResult](../interfaces/_core_imusic_.searchresult.md)›*
 
-*Defined in [src/modules/MusicModule.ts:551](https://github.com/Xisabla/Korbots/blob/cca6cd1/server/src/modules/MusicModule.ts#L551)*
+*Defined in [src/modules/MusicModule.ts:551](https://github.com/Xisabla/Korbots/blob/59ccf47/server/src/modules/MusicModule.ts#L551)*
 
 Fetch Youtube data from a Youtube Video url using YoutubeDL
 
@@ -262,7 +262,7 @@ ___
 
 ▸ **getMusic**(`socket`: Socket, `data`: any): *any*
 
-*Defined in [src/modules/MusicModule.ts:245](https://github.com/Xisabla/Korbots/blob/cca6cd1/server/src/modules/MusicModule.ts#L245)*
+*Defined in [src/modules/MusicModule.ts:245](https://github.com/Xisabla/Korbots/blob/59ccf47/server/src/modules/MusicModule.ts#L245)*
 
 Get the Music entry from the source and sourceId and send it to the Client
 
@@ -281,7 +281,7 @@ ___
 
 ▸ **getPlaylistSongs**(`socket`: Socket, `data`: any): *any*
 
-*Defined in [src/modules/MusicModule.ts:292](https://github.com/Xisabla/Korbots/blob/cca6cd1/server/src/modules/MusicModule.ts#L292)*
+*Defined in [src/modules/MusicModule.ts:292](https://github.com/Xisabla/Korbots/blob/59ccf47/server/src/modules/MusicModule.ts#L292)*
 
 Get all the songs of a playlist and send them to the client
 
@@ -300,7 +300,7 @@ ___
 
 ▸ **getPlaylists**(`socket`: Socket): *void*
 
-*Defined in [src/modules/MusicModule.ts:271](https://github.com/Xisabla/Korbots/blob/cca6cd1/server/src/modules/MusicModule.ts#L271)*
+*Defined in [src/modules/MusicModule.ts:271](https://github.com/Xisabla/Korbots/blob/59ccf47/server/src/modules/MusicModule.ts#L271)*
 
 Get all the playlists in the database and send them to the client
 
@@ -318,7 +318,7 @@ ___
 
 ▸ **handleHttpMusic**(`req`: Request, `res`: Response): *void*
 
-*Defined in [src/modules/MusicModule.ts:59](https://github.com/Xisabla/Korbots/blob/cca6cd1/server/src/modules/MusicModule.ts#L59)*
+*Defined in [src/modules/MusicModule.ts:59](https://github.com/Xisabla/Korbots/blob/59ccf47/server/src/modules/MusicModule.ts#L59)*
 
 Handle the HTTP GET Request for the music streaming
 Try to find the music and stream it, return 400, 404 or 500 on error
@@ -338,7 +338,7 @@ ___
 
 ▸ **httpAudioStream**(`req`: Request, `res`: Response, `music`: [IMusicSchema](../interfaces/_models_music_.imusicschema.md)): *void | Response‹any›*
 
-*Defined in [src/modules/MusicModule.ts:93](https://github.com/Xisabla/Korbots/blob/cca6cd1/server/src/modules/MusicModule.ts#L93)*
+*Defined in [src/modules/MusicModule.ts:93](https://github.com/Xisabla/Korbots/blob/59ccf47/server/src/modules/MusicModule.ts#L93)*
 
 Stream the Music given
 
@@ -358,7 +358,7 @@ ___
 
 ▸ **httpAudioStreamRange**(`req`: Request, `res`: Response, `file`: string, `size`: number): *Response‹any›*
 
-*Defined in [src/modules/MusicModule.ts:128](https://github.com/Xisabla/Korbots/blob/cca6cd1/server/src/modules/MusicModule.ts#L128)*
+*Defined in [src/modules/MusicModule.ts:128](https://github.com/Xisabla/Korbots/blob/59ccf47/server/src/modules/MusicModule.ts#L128)*
 
 Stream the music file according to the range given by the HTTP Request
 
@@ -379,7 +379,7 @@ ___
 
 ▸ **httpMusicError**(`req`: Request, `res`: Response, `error`: any, `statusCode`: number): *void*
 
-*Defined in [src/modules/MusicModule.ts:166](https://github.com/Xisabla/Korbots/blob/cca6cd1/server/src/modules/MusicModule.ts#L166)*
+*Defined in [src/modules/MusicModule.ts:166](https://github.com/Xisabla/Korbots/blob/59ccf47/server/src/modules/MusicModule.ts#L166)*
 
 Helper method to given an error the HTTP Response
 
@@ -402,7 +402,7 @@ ___
 
 *Overrides [Module](_core_module_.module.md).[onSocketJoin](_core_module_.module.md#onsocketjoin)*
 
-*Defined in [src/modules/MusicModule.ts:179](https://github.com/Xisabla/Korbots/blob/cca6cd1/server/src/modules/MusicModule.ts#L179)*
+*Defined in [src/modules/MusicModule.ts:179](https://github.com/Xisabla/Korbots/blob/59ccf47/server/src/modules/MusicModule.ts#L179)*
 
 **Parameters:**
 
@@ -420,7 +420,7 @@ ___
 
 *Inherited from [Module](_core_module_.module.md).[onSocketLeave](_core_module_.module.md#onsocketleave)*
 
-*Defined in [src/core/Module.ts:45](https://github.com/Xisabla/Korbots/blob/cca6cd1/server/src/core/Module.ts#L45)*
+*Defined in [src/core/Module.ts:45](https://github.com/Xisabla/Korbots/blob/59ccf47/server/src/core/Module.ts#L45)*
 
 Function called once a Socket is disconnected
 
@@ -440,7 +440,7 @@ ___
 
 *Overrides [Module](_core_module_.module.md).[register](_core_module_.module.md#register)*
 
-*Defined in [src/modules/MusicModule.ts:33](https://github.com/Xisabla/Korbots/blob/cca6cd1/server/src/modules/MusicModule.ts#L33)*
+*Defined in [src/modules/MusicModule.ts:33](https://github.com/Xisabla/Korbots/blob/59ccf47/server/src/modules/MusicModule.ts#L33)*
 
 **Parameters:**
 
@@ -458,7 +458,7 @@ ___
 
 *Inherited from [Module](_core_module_.module.md).[registerTask](_core_module_.module.md#protected-registertask)*
 
-*Defined in [src/core/Module.ts:61](https://github.com/Xisabla/Korbots/blob/cca6cd1/server/src/core/Module.ts#L61)*
+*Defined in [src/core/Module.ts:61](https://github.com/Xisabla/Korbots/blob/59ccf47/server/src/core/Module.ts#L61)*
 
 A shortcut to register a Task into the Task Manager of the Application
 Will fill the field "origin" with the name of the Module
@@ -484,7 +484,7 @@ ___
 
 *Overrides [Module](_core_module_.module.md).[registerTasks](_core_module_.module.md#protected-abstract-registertasks)*
 
-*Defined in [src/modules/MusicModule.ts:214](https://github.com/Xisabla/Korbots/blob/cca6cd1/server/src/modules/MusicModule.ts#L214)*
+*Defined in [src/modules/MusicModule.ts:214](https://github.com/Xisabla/Korbots/blob/59ccf47/server/src/modules/MusicModule.ts#L214)*
 
 **Returns:** *number[]*
 
@@ -494,7 +494,7 @@ ___
 
 ▸ **removeFromPlaylist**(`socket`: Socket, `data`: any): *any*
 
-*Defined in [src/modules/MusicModule.ts:434](https://github.com/Xisabla/Korbots/blob/cca6cd1/server/src/modules/MusicModule.ts#L434)*
+*Defined in [src/modules/MusicModule.ts:434](https://github.com/Xisabla/Korbots/blob/59ccf47/server/src/modules/MusicModule.ts#L434)*
 
 Remove a music from a playlist songs and send back client info
 
@@ -513,7 +513,7 @@ ___
 
 ▸ **removePlaylist**(`socket`: Socket, `data`: any): *any*
 
-*Defined in [src/modules/MusicModule.ts:469](https://github.com/Xisabla/Korbots/blob/cca6cd1/server/src/modules/MusicModule.ts#L469)*
+*Defined in [src/modules/MusicModule.ts:469](https://github.com/Xisabla/Korbots/blob/59ccf47/server/src/modules/MusicModule.ts#L469)*
 
 Remove a playlist and send back data to the client
 
@@ -532,7 +532,7 @@ ___
 
 ▸ **search**(`socket`: Socket, `data`: any): *any*
 
-*Defined in [src/modules/MusicModule.ts:492](https://github.com/Xisabla/Korbots/blob/cca6cd1/server/src/modules/MusicModule.ts#L492)*
+*Defined in [src/modules/MusicModule.ts:492](https://github.com/Xisabla/Korbots/blob/59ccf47/server/src/modules/MusicModule.ts#L492)*
 
 Search for a music/video
 
@@ -551,7 +551,7 @@ ___
 
 ▸ **searchYoutube**(`query`: string, `limit`: number): *Promise‹[SearchResult](../interfaces/_core_imusic_.searchresult.md)[]›*
 
-*Defined in [src/modules/MusicModule.ts:530](https://github.com/Xisabla/Korbots/blob/cca6cd1/server/src/modules/MusicModule.ts#L530)*
+*Defined in [src/modules/MusicModule.ts:530](https://github.com/Xisabla/Korbots/blob/59ccf47/server/src/modules/MusicModule.ts#L530)*
 
 Search for video on Youtube
 
@@ -572,7 +572,7 @@ ___
 
 ▸ **sortPlaylist**(`socket`: Socket, `data`: any): *any*
 
-*Defined in [src/modules/MusicModule.ts:383](https://github.com/Xisabla/Korbots/blob/cca6cd1/server/src/modules/MusicModule.ts#L383)*
+*Defined in [src/modules/MusicModule.ts:383](https://github.com/Xisabla/Korbots/blob/59ccf47/server/src/modules/MusicModule.ts#L383)*
 
 Get a playlist by it's name with the songs sorted by the wanted method and send them to the client
 
