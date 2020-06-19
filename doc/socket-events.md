@@ -39,7 +39,7 @@
 | music:getPlaylistSongs| client → server | Get all songs from a Playlist (from its id)                                        | { id }                          |
 | music:addToPlaylist  | client → server | Add a Music (from its id) to a Playlist (from its name)                             | { id, playlist }                          |
 | music:addToPlaylists | client → server | Add a Music (from its id) to multiple Playlists (from their name)                   | { id, playlists[] }                          |
-| music:removeFromPlaylist| client → server | Remove a Music (from its id) to a Playlist (from its name)                       | { id, playlist }                          |
+| music:removedFromPlaylist| client → server | Remove a Music (from its id) to a Playlist (from its name)                       | { id, playlist }                          |
 | music:removePlaylist | client → server | Remove a Playlist from its name                                                     | { playlist }                          |
 | music:sortPlaylist   | client → server | Get a sorted playlist from its name                                                 | { name, sort: 'name','addingDate','random','unsorted'  }                          |
 | music:playlists      | server → client | Give to the client all the playlists in the database                                | [IPlaylistSchema](server/interfaces/_models_playlist_.iplaylistschema.md)[] |
