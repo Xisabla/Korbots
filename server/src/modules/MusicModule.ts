@@ -445,7 +445,10 @@ export class MusicModule extends Module {
 
         Playlist.getOrCreate(playlist)
             .then((playlist) =>
-                Promise.all([playlist, playlist.removeSong(id)])
+                Promise.all([
+                    playlist,
+                    playlist.removeSong(id).then(() => Music.findById(id))
+                ])
             )
             .then(([playlist, music]) => {
                 log(`Removed music ${music.id} from playlist ${playlist.name}`)
