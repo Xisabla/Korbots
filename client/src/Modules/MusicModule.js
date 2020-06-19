@@ -23,6 +23,7 @@ class MusicModule extends React.Component {
             playlistsRef: React.createRef(),
             playlistRef: React.createRef(),
             progressRef: React.createRef(),
+            audioRef: React.createRef(),
             index: props.index,
             onMouseDown: props.onMouseDown,
             onMouseUp: props.onMouseUp,
@@ -30,6 +31,7 @@ class MusicModule extends React.Component {
             query: '',
             currentSrc: '',
             currentProgress: -1,
+            inPlaylist: false,
             searchResults: [
                 /*{
                     title:
@@ -67,7 +69,6 @@ class MusicModule extends React.Component {
             this.setState(() => ({ currentProgress: result.status.progress }))
         })
         this.props.socket.on('music:music', (result) => {
-            console.log(result)
             this.setProgress(0)
             if (this.state.addingToPlaylist === -1)
                 this.setState(() => ({
@@ -86,17 +87,13 @@ class MusicModule extends React.Component {
         })
 
         this.props.socket.on('music:playlistSongs', (data) => {
-            console.log('data', data)
-            const { playlists, currentPlaylist } = this.state
+            const { playlists, currentPlaylist, inPlaylist } = this.state
             for (let i = 0; i < playlists.length; i++) {
                 if (playlists[i].title === data.playlist.name) {
-                    //let duration = 0
                     for (let j = 0; j < data.songs.length; j++) {
                         playlists[i].playlist[j] = data.songs[j]
                         playlists[i].duration = data.playlist.duration
-                        //duration += data.songs[j].duration
                     }
-                    //playlists[i].duration = duration
                     break
                 }
             }
@@ -107,11 +104,8 @@ class MusicModule extends React.Component {
                     break
                 }
             }
-            if (j !== -1) {
-                setTimeout(() => {
-                    this.playlistTargetClick()
-                    this.handlePlaylistClick(null, j)
-                })
+            if (j !== -1 && inPlaylist) {
+                this.setState(() => ({ currentPlaylist: playlists[j] }))
             }
             this.setState(() => ({
                 playlists: playlists
@@ -119,7 +113,6 @@ class MusicModule extends React.Component {
         })
 
         this.props.socket.on('music:playlists', (data) => {
-            console.log(data)
             let playlists = []
             for (let i = 0; i < data.length; i++) {
                 let playlist = []
@@ -166,12 +159,13 @@ class MusicModule extends React.Component {
         })
 
         this.props.socket.on('music:addedToPlaylist', (data) => {
-            console.log('added', data)
             if (data) this.props.socket.emit('music:getPlaylists')
         })
 
         this.props.socket.on('music:removedPlaylist', (data) => {
-            console.log('removedplaylist', data)
+            const { currentPlaylist } = this.state
+            if (data.name === currentPlaylist)
+                this.setState(() => ({ currentPlaylist: { playlist: [] } }))
             if (data) this.props.socket.emit('music:getPlaylists')
         })
         this.props.socket.on('music:removedFromPlaylist', (data) => {
@@ -183,6 +177,26 @@ class MusicModule extends React.Component {
         this.props.socket.emit('music:getPlaylists')
         this.handleChangeQuery = this.handleChangeQuery.bind(this)
         this.getResults = this.getResults.bind(this)
+    }
+
+    nextSong = () => {
+        const { currentPlaylist, currentSrc } = this.state
+        for (let i = 0; i < currentPlaylist.playlist.length; i++) {
+            if (
+                'http://localhost:3000/music/' +
+                    currentPlaylist.playlist[i]._id ===
+                currentSrc
+            ) {
+                i++
+                if (i >= currentPlaylist.playlist.length) i = 0
+                this.setState(() => ({
+                    currentSrc:
+                        'http://localhost:3000/music/' +
+                        currentPlaylist.playlist[i]._id
+                }))
+                break
+            }
+        }
     }
 
     setProgress(percent) {
@@ -206,6 +220,7 @@ class MusicModule extends React.Component {
             searchResultsRef.current.style.display = 'flex'
             playlistRef.current.style.display = 'none'
         }
+        this.setState(() => ({ inPlaylist: false }))
     }
 
     handlePlaylistClick = (ev, index) => {
@@ -215,7 +230,6 @@ class MusicModule extends React.Component {
             playlistRef,
             playlists
         } = this.state
-        console.log(playlists[index])
         if (ev && ev.target.className.includes('removePlaylistTarget')) {
             this.props.socket.emit('music:removePlaylist', {
                 playlist: playlists[index].title
@@ -226,7 +240,8 @@ class MusicModule extends React.Component {
         playlistsRef.current.style.display = 'none'
         playlistRef.current.style.display = 'flex'
         this.setState(() => ({
-            currentPlaylist: playlists[index]
+            currentPlaylist: playlists[index],
+            inPlaylist: true
         }))
     }
 
@@ -237,7 +252,6 @@ class MusicModule extends React.Component {
                 id: currentPlaylist.playlist[index]._id,
                 playlist: currentPlaylist.title
             })
-            console.log(currentPlaylist, index)
             return
         }
         this.setState(() => ({
@@ -260,15 +274,12 @@ class MusicModule extends React.Component {
             if (titles.includes(val)) {
                 for (let i = 0; i < playlists.length; i++) {
                     if (playlists[i].title.toLowerCase() === val) {
-                        console.log(searchResults[index])
-                        console.log(playlists[i])
                         this.setState(() => ({ addingToPlaylist: i }))
                     }
                 }
             } else this.setState(() => ({ addingToPlaylist: val }))
         }
 
-        console.log(searchResults[index])
         if (!searchResults[index].inDatabase) {
             this.props.socket.emit('music:download', {
                 url: searchResults[index].url,
@@ -313,10 +324,9 @@ class MusicModule extends React.Component {
             currentPlaylist,
             searchResults,
             currentSrc,
-            currentProgress
+            currentProgress,
+            audioRef
         } = this.state
-        //if (currentProgress >= 1) this.setState(() => ({ currentProgress: -1 }))
-        //console.log('progress', currentProgress)
         return (
             <div
                 ref={ref}
@@ -345,7 +355,14 @@ class MusicModule extends React.Component {
                             Music Player
                         </text>
                     </svg>
-                    <audio controls autoPlay src={currentSrc}></audio>
+                    <audio
+                        controls
+                        autoPlay
+                        src={currentSrc}
+                        onEnded={() => {
+                            this.nextSong()
+                        }}
+                        ref={audioRef}></audio>
                     <svg className="progress-ring" height="40" width="40">
                         <circle
                             ref={progressRef}
