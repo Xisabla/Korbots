@@ -217,8 +217,7 @@ export class MusicModule extends Module {
 
         // Registering
         const ids: number[] = [
-            this.registerTask(() => this.checkOrphanMusics(), eachHours)
-            // TODO: this.registerTask(() => this.checkOrphanMusics())
+            this.registerTask(() => this.removeOrphans(), eachHours)
             // TODO: this.registerTask(() => this.checkNotStoredMusics())
         ]
 
@@ -227,10 +226,17 @@ export class MusicModule extends Module {
         return ids
     }
 
-    private checkOrphanMusics(): Promise<any> {
-        return Music.checkOrphan()
-            .then((musics) =>
-                log(`${musics.length} orphan musics removed from the Database`)
+    /**
+     * Remove all orphans music in the database (orphan = is not in any playlist)
+     */
+    private removeOrphans(): Promise<any> {
+        return Music.getOrphans()
+            .then((orphans) => {
+                log(`${orphans.length} orphan musics found, removing...`)
+                return Promise.all(orphans.map((orphan) => orphan.remove()))
+            })
+            .then((removed) =>
+                log(`Successfully removed ${removed.length} orphan musics`)
             )
             .catch((err) => log(`Unable to remove orphan musics: ${err}`))
     }

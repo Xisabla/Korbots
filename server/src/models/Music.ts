@@ -49,6 +49,12 @@ export interface IMusicSchema extends Document {
      * @returns A Promise of the playlists
      */
     getPlaylists(): Promise<IPlaylistSchema[]>
+
+    /**
+     * Check if the Music is at least in one playlist
+     * @return A Promise: true if it has no playlist, false otherwise
+     */
+    isOrphan(): Promise<boolean>
 }
 
 export interface IMusic extends Model<IMusicSchema> {
@@ -67,6 +73,7 @@ export interface IMusic extends Model<IMusicSchema> {
      * @returns A Promise of the Music Document queried
      */
     findOneSong(source: string, sourceId: string): Promise<IMusicSchema>
+
     /**
      * Search if a Music exists in the DataBase from it's source and sourceId
      * @param source Name of the source (eg: Youtube)
@@ -75,12 +82,16 @@ export interface IMusic extends Model<IMusicSchema> {
      */
     doesExist(source: string, sourceId: string): Promise<boolean>
 
+    /**
+     * Find all orphans music (music without playlist)
+     * @returns A Promise with the Array of all orphan musics
+     */
+    getOrphans(): Promise<IMusicSchema[]>
+
     // ---- Actions ----------------------------------
     // TODO: For a Task: Check for all entries in the DB if the storage exists, remove the Music from the DB and playlists if
     //  the file doesn't exist
     // checkStorage(): Promise<any>
-    // TODO: For a Task: Check for all entries if it belongs in a playlist, if not delete it and delete storage
-    checkOrphan(): Promise<IMusicSchema[]>
 }
 
 // ---- Methods : Music ---------------------
@@ -122,6 +133,12 @@ MusicSchema.methods.getPlaylists = function (): Promise<IPlaylistSchema[]> {
                 ? true
                 : false
         })
+    )
+}
+
+MusicSchema.methods.isOrphan = function (): Promise<boolean> {
+    return this.getPlaylists().then(
+        (playlists: IPlaylistSchema[]) => playlists.length > 0
     )
 }
 
@@ -167,23 +184,14 @@ MusicSchema.statics.doesExist = function (
     return Music.findOneSong(source, sourceId).then((doc) => doc !== null)
 }
 
-MusicSchema.statics.checkOrphan = function (): Promise<IMusicSchema[]> {
-    return Music.find()
-        .then((musics) =>
-            Promise.all(
-                musics.map((music) =>
-                    Promise.all([
-                        music,
-                        music
-                            .getPlaylists()
-                            .then((playlists) => playlists.length)
-                    ])
-                )
-            )
+MusicSchema.statics.getOrphans = function (): Promise<IMusicSchema[]> {
+    return Music.find().then((musics) => {
+        return Promise.all(
+            musics.map((music) => Promise.all([music, music.isOrphan()]))
         )
-        .then((musics) => musics.filter((music) => music[1] < 1))
-        .then((musics) => musics.map((music) => music[0]))
-        .then((musics) => Promise.all(musics.map((music) => music.remove())))
+            .then((musics) => musics.filter((music) => music[1]))
+            .then((musics) => musics.map((music) => music[0]))
+    })
 }
 
 // ---- Models ------------------------------
