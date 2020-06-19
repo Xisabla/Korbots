@@ -19,7 +19,7 @@
 
 • **log**: *Debugger* = debug('service:ffmpeg')
 
-*Defined in [src/services/ffmpeg.ts:5](https://github.com/Xisabla/Korbots/blob/bc4c991/server/src/services/ffmpeg.ts#L5)*
+*Defined in [src/services/ffmpeg.ts:5](https://github.com/Xisabla/Korbots/blob/4216c83/server/src/services/ffmpeg.ts#L5)*
 
 ## Functions
 
@@ -27,7 +27,7 @@
 
 ▸ **ffmpeg**(`args`: string[]): *Promise‹void›*
 
-*Defined in [src/services/ffmpeg.ts:7](https://github.com/Xisabla/Korbots/blob/bc4c991/server/src/services/ffmpeg.ts#L7)*
+*Defined in [src/services/ffmpeg.ts:7](https://github.com/Xisabla/Korbots/blob/4216c83/server/src/services/ffmpeg.ts#L7)*
 
 **Parameters:**
 
@@ -43,7 +43,7 @@ ___
 
 ▸ **mp4ToMp3**(`input`: string, `output`: string): *Promise‹string›*
 
-*Defined in [src/services/ffmpeg.ts:19](https://github.com/Xisabla/Korbots/blob/bc4c991/server/src/services/ffmpeg.ts#L19)*
+*Defined in [src/services/ffmpeg.ts:19](https://github.com/Xisabla/Korbots/blob/4216c83/server/src/services/ffmpeg.ts#L19)*
 
 **Parameters:**
 
