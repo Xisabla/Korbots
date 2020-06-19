@@ -1015,7 +1015,7 @@ ___
 
 ▸ **fetchCurrent**(`sign`: string): *Promise‹[IAztroAPIResponse](_core_api_iaztro_.iaztroapiresponse.md)›*
 
-*Defined in [src/models/Horoscope.ts:75](https://github.com/Xisabla/Korbots/blob/f723afa/server/src/models/Horoscope.ts#L75)*
+*Defined in [src/models/Horoscope.ts:75](https://github.com/Xisabla/Korbots/blob/bc4c991/server/src/models/Horoscope.ts#L75)*
 
 Get an API response (json) from Aztro API for today's horoscope
 
@@ -1164,7 +1164,7 @@ ___
 
 ▸ **findAstro**(`sign`: string): *Promise‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
-*Defined in [src/models/Horoscope.ts:63](https://github.com/Xisabla/Korbots/blob/f723afa/server/src/models/Horoscope.ts#L63)*
+*Defined in [src/models/Horoscope.ts:63](https://github.com/Xisabla/Korbots/blob/bc4c991/server/src/models/Horoscope.ts#L63)*
 
 Search in data base if document for sign already exist
 
@@ -2142,7 +2142,7 @@ ___
 
 ▸ **fromCurrent**(`sign`: string): *Promise‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
-*Defined in [src/models/Horoscope.ts:69](https://github.com/Xisabla/Korbots/blob/f723afa/server/src/models/Horoscope.ts#L69)*
+*Defined in [src/models/Horoscope.ts:69](https://github.com/Xisabla/Korbots/blob/bc4c991/server/src/models/Horoscope.ts#L69)*
 
 fetch from API and create new horoscope document for today's horoscope
 
@@ -2206,7 +2206,7 @@ ___
 
 ▸ **getCurrent**(`sign`: string): *Promise‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
-*Defined in [src/models/Horoscope.ts:57](https://github.com/Xisabla/Korbots/blob/f723afa/server/src/models/Horoscope.ts#L57)*
+*Defined in [src/models/Horoscope.ts:57](https://github.com/Xisabla/Korbots/blob/bc4c991/server/src/models/Horoscope.ts#L57)*
 
 Get the current horoscope
 
