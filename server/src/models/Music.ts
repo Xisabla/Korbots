@@ -32,15 +32,23 @@ export interface IMusicSchema extends Document {
     path: string
 
     /**
-     *
+     * Add the music to a playlist
      * @param playlist
+     * @returns A Promise of the playlist
      */
     addToPlaylist(playlist: string): Promise<IPlaylistSchema>
     /**
-     *
+     * Add the music to several playlists
      * @param playlist
+     * @returns A Promise of the playlists
      */
     addToPlaylists(playlist: string[]): Promise<IPlaylistSchema[]>
+
+    /**
+     * Get all parent playlists of the music
+     * @returns A Promise of the playlists
+     */
+    getPlaylists(): Promise<IPlaylistSchema[]>
 }
 
 export interface IMusic extends Model<IMusicSchema> {
@@ -72,7 +80,7 @@ export interface IMusic extends Model<IMusicSchema> {
     //  the file doesn't exist
     // checkStorage(): Promise<any>
     // TODO: For a Task: Check for all entries if it belongs in a playlist, if not delete it and delete storage
-    // checkOrphan(): Promise<any>
+    checkOrphan(): Promise<IMusicSchema[]>
 }
 
 // ---- Methods : Music ---------------------
@@ -105,6 +113,14 @@ MusicSchema.methods.addToPlaylists = function (
     return Promise.all(
         playlists.map((playlist) => this.addToPlaylist(playlist))
     )
+}
+
+MusicSchema.methods.getPlaylists = function (): Promise<IPlaylistSchema[]> {
+    return Playlist.find().then((playlists) => {
+        playlists.filter((playlist) => {
+            playlist.songs.find((songs) => songs.id === this.id)
+        })
+    })
 }
 
 // ---- Statics : Music ---------------------
@@ -147,6 +163,12 @@ MusicSchema.statics.doesExist = function (
     sourceId: string
 ): Promise<boolean> {
     return Music.findOneSong(source, sourceId).then((doc) => doc !== null)
+}
+
+MusicSchema.statics.checkOrphan = function (): Promise<IMusicSchema[]> {
+    // return Music.find().then((musics) => Promise.all(musics.map((music) => P))
+
+    return Music.find().then((musics) => musics)
 }
 
 // ---- Models ------------------------------

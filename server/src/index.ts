@@ -2,6 +2,7 @@ import path from 'path'
 
 import * as APIs from './config/API'
 import Application from './core/Application'
+import { Music } from './models/Music'
 import { MusicModule } from './modules/MusicModule'
 import { WeatherModule } from './modules/WeatherModule'
 
@@ -21,3 +22,5 @@ app.registerModule(new WeatherModule())
 app.registerModule(new MusicModule())
 
 app.run()
+
+Music.checkOrphan().then(console.log)
