@@ -47,7 +47,7 @@ A Task will perform an action at a given Schedule (cron/date/moment)
 
 \+ **new Task**(`settings`: [TaskSettings](../interfaces/_core_task_.tasksettings.md)): *[Task](_core_task_.task.md)*
 
-*Defined in [src/core/Task.ts:46](https://github.com/Xisabla/Korbots/blob/287111c/server/src/core/Task.ts#L46)*
+*Defined in [src/core/Task.ts:46](https://github.com/Xisabla/Korbots/blob/4bc77ee/server/src/core/Task.ts#L46)*
 
 Create a new Task with the given settings, may not autostart by default
 
@@ -65,7 +65,7 @@ Name | Type | Description |
 
 • **_action**: *[TaskAction](../modules/_core_task_.md#taskaction)*
 
-*Defined in [src/core/Task.ts:35](https://github.com/Xisabla/Korbots/blob/287111c/server/src/core/Task.ts#L35)*
+*Defined in [src/core/Task.ts:35](https://github.com/Xisabla/Korbots/blob/4bc77ee/server/src/core/Task.ts#L35)*
 
 Action to run on job trigger
 
@@ -75,7 +75,7 @@ ___
 
 • **_after**? : *[TaskAfter](../modules/_core_task_.md#taskafter)*
 
-*Defined in [src/core/Task.ts:37](https://github.com/Xisabla/Korbots/blob/287111c/server/src/core/Task.ts#L37)*
+*Defined in [src/core/Task.ts:37](https://github.com/Xisabla/Korbots/blob/4bc77ee/server/src/core/Task.ts#L37)*
 
 Function to run after the action
 
@@ -85,7 +85,7 @@ ___
 
 • **_id**: *number*
 
-*Defined in [src/core/Task.ts:27](https://github.com/Xisabla/Korbots/blob/287111c/server/src/core/Task.ts#L27)*
+*Defined in [src/core/Task.ts:27](https://github.com/Xisabla/Korbots/blob/4bc77ee/server/src/core/Task.ts#L27)*
 
 Task uniq ID
 
@@ -95,7 +95,7 @@ ___
 
 • **_job**: *CronJob*
 
-*Defined in [src/core/Task.ts:33](https://github.com/Xisabla/Korbots/blob/287111c/server/src/core/Task.ts#L33)*
+*Defined in [src/core/Task.ts:33](https://github.com/Xisabla/Korbots/blob/4bc77ee/server/src/core/Task.ts#L33)*
 
 Internal job (CronJob) that will trigger the action
 
@@ -105,7 +105,7 @@ ___
 
 • **_lastCall**: *Moment | null*
 
-*Defined in [src/core/Task.ts:43](https://github.com/Xisabla/Korbots/blob/287111c/server/src/core/Task.ts#L43)*
+*Defined in [src/core/Task.ts:43](https://github.com/Xisabla/Korbots/blob/4bc77ee/server/src/core/Task.ts#L43)*
 
 Moment of the last run() call
 
@@ -115,7 +115,7 @@ ___
 
 • **_log**: *Debugger*
 
-*Defined in [src/core/Task.ts:40](https://github.com/Xisabla/Korbots/blob/287111c/server/src/core/Task.ts#L40)*
+*Defined in [src/core/Task.ts:40](https://github.com/Xisabla/Korbots/blob/4bc77ee/server/src/core/Task.ts#L40)*
 
 Class internal logger
 
@@ -125,7 +125,7 @@ ___
 
 • **_origin**: *string*
 
-*Defined in [src/core/Task.ts:30](https://github.com/Xisabla/Korbots/blob/287111c/server/src/core/Task.ts#L30)*
+*Defined in [src/core/Task.ts:30](https://github.com/Xisabla/Korbots/blob/4bc77ee/server/src/core/Task.ts#L30)*
 
 Where does the task come from, will allow to select all task related to a same origin
 
@@ -135,7 +135,7 @@ ___
 
 ▪ **idCnt**: *number* = 0
 
-*Defined in [src/core/Task.ts:46](https://github.com/Xisabla/Korbots/blob/287111c/server/src/core/Task.ts#L46)*
+*Defined in [src/core/Task.ts:46](https://github.com/Xisabla/Korbots/blob/4bc77ee/server/src/core/Task.ts#L46)*
 
 Task ID Counter, used to generate and increment ID of new tasks
 
@@ -145,7 +145,7 @@ Task ID Counter, used to generate and increment ID of new tasks
 
 • **get id**(): *number*
 
-*Defined in [src/core/Task.ts:122](https://github.com/Xisabla/Korbots/blob/287111c/server/src/core/Task.ts#L122)*
+*Defined in [src/core/Task.ts:122](https://github.com/Xisabla/Korbots/blob/4bc77ee/server/src/core/Task.ts#L122)*
 
 Get the ID of the Task
 
@@ -157,7 +157,7 @@ ___
 
 • **get lastCall**(): *Moment*
 
-*Defined in [src/core/Task.ts:143](https://github.com/Xisabla/Korbots/blob/287111c/server/src/core/Task.ts#L143)*
+*Defined in [src/core/Task.ts:143](https://github.com/Xisabla/Korbots/blob/4bc77ee/server/src/core/Task.ts#L143)*
 
 Get the last call Moment of "run"
 
@@ -169,7 +169,7 @@ ___
 
 • **get log**(): *Debugger*
 
-*Defined in [src/core/Task.ts:129](https://github.com/Xisabla/Korbots/blob/287111c/server/src/core/Task.ts#L129)*
+*Defined in [src/core/Task.ts:129](https://github.com/Xisabla/Korbots/blob/4bc77ee/server/src/core/Task.ts#L129)*
 
 Get the task logger
 
@@ -181,7 +181,7 @@ ___
 
 • **get nextCall**(): *Moment*
 
-*Defined in [src/core/Task.ts:150](https://github.com/Xisabla/Korbots/blob/287111c/server/src/core/Task.ts#L150)*
+*Defined in [src/core/Task.ts:150](https://github.com/Xisabla/Korbots/blob/4bc77ee/server/src/core/Task.ts#L150)*
 
 Get the next call Moment of "run"
 
@@ -193,7 +193,7 @@ ___
 
 • **get origin**(): *string*
 
-*Defined in [src/core/Task.ts:136](https://github.com/Xisabla/Korbots/blob/287111c/server/src/core/Task.ts#L136)*
+*Defined in [src/core/Task.ts:136](https://github.com/Xisabla/Korbots/blob/4bc77ee/server/src/core/Task.ts#L136)*
 
 Get the origin of the Task
 
@@ -205,7 +205,7 @@ ___
 
 • **get running**(): *boolean*
 
-*Defined in [src/core/Task.ts:157](https://github.com/Xisabla/Korbots/blob/287111c/server/src/core/Task.ts#L157)*
+*Defined in [src/core/Task.ts:157](https://github.com/Xisabla/Korbots/blob/4bc77ee/server/src/core/Task.ts#L157)*
 
 See if the CronJob is running (not stopped)
 
@@ -217,7 +217,7 @@ See if the CronJob is running (not stopped)
 
 ▸ **getId**(): *number*
 
-*Defined in [src/core/Task.ts:166](https://github.com/Xisabla/Korbots/blob/287111c/server/src/core/Task.ts#L166)*
+*Defined in [src/core/Task.ts:166](https://github.com/Xisabla/Korbots/blob/4bc77ee/server/src/core/Task.ts#L166)*
 
 Generate an ID and increment internal ID Counter
 
@@ -229,7 +229,7 @@ ___
 
 ▸ **run**(): *void*
 
-*Defined in [src/core/Task.ts:101](https://github.com/Xisabla/Korbots/blob/287111c/server/src/core/Task.ts#L101)*
+*Defined in [src/core/Task.ts:101](https://github.com/Xisabla/Korbots/blob/4bc77ee/server/src/core/Task.ts#L101)*
 
 Run the action, also triggers the onComplete method if exists
 Will console.error on action.catch()
@@ -242,7 +242,7 @@ ___
 
 ▸ **start**(): *void*
 
-*Defined in [src/core/Task.ts:82](https://github.com/Xisabla/Korbots/blob/287111c/server/src/core/Task.ts#L82)*
+*Defined in [src/core/Task.ts:82](https://github.com/Xisabla/Korbots/blob/4bc77ee/server/src/core/Task.ts#L82)*
 
 Start the CronJob, will begin to perform action on given Schedule
 
@@ -254,7 +254,7 @@ ___
 
 ▸ **stop**(): *void*
 
-*Defined in [src/core/Task.ts:90](https://github.com/Xisabla/Korbots/blob/287111c/server/src/core/Task.ts#L90)*
+*Defined in [src/core/Task.ts:90](https://github.com/Xisabla/Korbots/blob/4bc77ee/server/src/core/Task.ts#L90)*
 
 Stop the CronJob for running future actions
 

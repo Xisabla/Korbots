@@ -35,7 +35,6 @@
 * [addListener](_models_music_.imusic.md#addlistener)
 * [aggregate](_models_music_.imusic.md#aggregate)
 * [bulkWrite](_models_music_.imusic.md#bulkwrite)
-* [checkOrphan](_models_music_.imusic.md#checkorphan)
 * [count](_models_music_.imusic.md#count)
 * [countDocuments](_models_music_.imusic.md#countdocuments)
 * [create](_models_music_.imusic.md#create)
@@ -64,6 +63,7 @@
 * [fromDownloaded](_models_music_.imusic.md#fromdownloaded)
 * [geoSearch](_models_music_.imusic.md#geosearch)
 * [getMaxListeners](_models_music_.imusic.md#getmaxlisteners)
+* [getOrphans](_models_music_.imusic.md#getorphans)
 * [hydrate](_models_music_.imusic.md#hydrate)
 * [init](_models_music_.imusic.md#init)
 * [insertMany](_models_music_.imusic.md#insertmany)
@@ -373,16 +373,6 @@ Name | Type |
 `res` | BulkWriteOpResultObject |
 
 **Returns:** *void*
-
-___
-
-###  checkOrphan
-
-▸ **checkOrphan**(): *Promise‹[IMusicSchema](_models_music_.imusicschema.md)[]›*
-
-*Defined in [src/models/Music.ts:83](https://github.com/Xisabla/Korbots/blob/287111c/server/src/models/Music.ts#L83)*
-
-**Returns:** *Promise‹[IMusicSchema](_models_music_.imusicschema.md)[]›*
 
 ___
 
@@ -863,7 +853,7 @@ ___
 
 ▸ **doesExist**(`source`: string, `sourceId`: string): *Promise‹boolean›*
 
-*Defined in [src/models/Music.ts:76](https://github.com/Xisabla/Korbots/blob/287111c/server/src/models/Music.ts#L76)*
+*Defined in [src/models/Music.ts:89](https://github.com/Xisabla/Korbots/blob/4bc77ee/server/src/models/Music.ts#L89)*
 
 Search if a Music exists in the DataBase from it's source and sourceId
 
@@ -2133,7 +2123,7 @@ ___
 
 ▸ **findOneSong**(`source`: string, `sourceId`: string): *Promise‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
-*Defined in [src/models/Music.ts:69](https://github.com/Xisabla/Korbots/blob/287111c/server/src/models/Music.ts#L69)*
+*Defined in [src/models/Music.ts:81](https://github.com/Xisabla/Korbots/blob/4bc77ee/server/src/models/Music.ts#L81)*
 
 Get the Music Document for the given source and sourceId
 
@@ -2154,7 +2144,7 @@ ___
 
 ▸ **fromDownloaded**(`audio`: [DownloadedMusic](_core_imusic_.downloadedmusic.md)): *Promise‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
-*Defined in [src/models/Music.ts:60](https://github.com/Xisabla/Korbots/blob/287111c/server/src/models/Music.ts#L60)*
+*Defined in [src/models/Music.ts:72](https://github.com/Xisabla/Korbots/blob/4bc77ee/server/src/models/Music.ts#L72)*
 
 Create a Music Document from a DownloadedMusic
 
@@ -2223,6 +2213,20 @@ ___
 Defined in node_modules/@types/node/globals.d.ts:560
 
 **Returns:** *number*
+
+___
+
+###  getOrphans
+
+▸ **getOrphans**(): *Promise‹[IMusicSchema](_models_music_.imusicschema.md)[]›*
+
+*Defined in [src/models/Music.ts:95](https://github.com/Xisabla/Korbots/blob/4bc77ee/server/src/models/Music.ts#L95)*
+
+Find all orphans music (music without playlist)
+
+**Returns:** *Promise‹[IMusicSchema](_models_music_.imusicschema.md)[]›*
+
+A Promise with the Array of all orphan musics
 
 ___
 
