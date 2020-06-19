@@ -45,7 +45,7 @@ export class HoroscopeModule extends Module {
         log(`Received horoscope:getCurrent event from ${socket.id}`)
 
         const sign: string = data.sign.toLowerCase()
-
+        
         Horoscope.getCurrent(sign)
             .then((doc) => {
                 log(`Entry found, responding with horoscope:currentData`)

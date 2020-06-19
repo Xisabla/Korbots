@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 
-import { CovidModule, MusicModule, WeatherModule } from './Modules'
+import { HoroscopeModule, MusicModule, WeatherModule } from './Modules'
 
 const LeftBar = ({ settingsOnClick, settings, onAddModule, modulesUpdate }) => (
     <div className="col-2 border-right">
@@ -17,9 +17,10 @@ const LeftBar = ({ settingsOnClick, settings, onAddModule, modulesUpdate }) => (
             <li
                 className="list-group-item"
                 onClick={() => {
-                    onAddModule(CovidModule)
+                    onAddModule(HoroscopeModule)
+                    //fas fa-hat-wizard
                 }}>
-                <i className="fas fa-chart-area"></i> Covid-19 News
+                <i className="fas fa-dice-d20"></i> Horoscope
             </li>
             <li
                 className="list-group-item"

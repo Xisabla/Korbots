@@ -1,5 +1,5 @@
-import CovidModule from './Modules/CovidModule'
+import HoroscopeModule from './Modules/HoroscopeModule'
 import MusicModule from './Modules/MusicModule'
 import WeatherModule from './Modules/WeatherModule'
 
-export { CovidModule, WeatherModule, MusicModule }
+export { WeatherModule, MusicModule, HoroscopeModule }
