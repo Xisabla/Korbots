@@ -22,6 +22,7 @@ class MusicModule extends React.Component {
             searchResultsRef: React.createRef(),
             playlistsRef: React.createRef(),
             playlistRef: React.createRef(),
+            progressRef: React.createRef(),
             index: props.index,
             onMouseDown: props.onMouseDown,
             onMouseUp: props.onMouseUp,
@@ -29,77 +30,18 @@ class MusicModule extends React.Component {
             query: '',
             currentSrc: '',
             currentProgress: -1,
-            searchResults: [],
-            playlists: [
-                {
-                    title: 'Ma playlist',
-                    length: '2:35:23',
-                    playlist: [
-                        {
-                            title:
-                                '[LSDLP] Bob Lennon - Dragon Ball Z - Betting - 03/06/20 - Partie [1/2]',
-                            length: '1:02:13',
-                            thumbnail:
-                                'https://i.ytimg.com/an_webp/IP7v7NI50IQ/mqdefault_6s.webp?du=3000&sqp=CLz2ovcF&rs=AOn4CLAkkZkZpYeQsipy-RD-L7S_3owNaw'
-                        },
-                        {
-                            title:
-                                '[LSDLP] Bob Lennon - Dragon Ball Z - Betting - 03/06/20 - Partie [1/2]',
-                            length: '1:02:13',
-                            thumbnail:
-                                'https://i.ytimg.com/an_webp/IP7v7NI50IQ/mqdefault_6s.webp?du=3000&sqp=CLz2ovcF&rs=AOn4CLAkkZkZpYeQsipy-RD-L7S_3owNaw'
-                        },
-                        {
-                            title:
-                                '[LSDLP] Bob Lennon - Dragon Ball Z - Betting - 03/06/20 - Partie [1/2]',
-                            length: '1:02:13',
-                            thumbnail:
-                                'https://i.ytimg.com/an_webp/IP7v7NI50IQ/mqdefault_6s.webp?du=3000&sqp=CLz2ovcF&rs=AOn4CLAkkZkZpYeQsipy-RD-L7S_3owNaw'
-                        },
-                        {
-                            title:
-                                '[LSDLP] Bob Lennon - Dragon Ball Z - Betting - 03/06/20 - Partie [1/2]',
-                            length: '1:02:13',
-                            thumbnail:
-                                'https://i.ytimg.com/an_webp/IP7v7NI50IQ/mqdefault_6s.webp?du=3000&sqp=CLz2ovcF&rs=AOn4CLAkkZkZpYeQsipy-RD-L7S_3owNaw'
-                        },
-                        {
-                            title:
-                                '[LSDLP] Bob Lennon - Dragon Ball Z - Betting - 03/06/20 - Partie [1/2]',
-                            length: '1:02:13',
-                            thumbnail:
-                                'https://i.ytimg.com/an_webp/IP7v7NI50IQ/mqdefault_6s.webp?du=3000&sqp=CLz2ovcF&rs=AOn4CLAkkZkZpYeQsipy-RD-L7S_3owNaw'
-                        }
-                    ]
-                },
-                {
-                    title: 'Ma deuxième playlist',
-                    length: '3:42:03',
-                    playlist: [
-                        {
-                            title:
-                                '[LSDLP] Bob Lennon - Dragon Ball Z - Betting - 03/06/20 - Partie [1/2]',
-                            length: '1:02:13',
-                            thumbnail:
-                                'https://i.ytimg.com/an_webp/IP7v7NI50IQ/mqdefault_6s.webp?du=3000&sqp=CLz2ovcF&rs=AOn4CLAkkZkZpYeQsipy-RD-L7S_3owNaw'
-                        }
-                    ]
-                },
-                {
-                    title: 'Ma playliste',
-                    length: '23:17',
-                    playlist: [
-                        {
-                            title:
-                                '[LSDLP] Bob Lennon - Dragon Ball Z - Betting - 03/06/20 - Partie [1/2]',
-                            length: '1:02:13',
-                            thumbnail:
-                                'https://i.ytimg.com/an_webp/IP7v7NI50IQ/mqdefault_6s.webp?du=3000&sqp=CLz2ovcF&rs=AOn4CLAkkZkZpYeQsipy-RD-L7S_3owNaw'
-                        }
-                    ]
-                }
+            searchResults: [
+                /*{
+                    title:
+                        '[TEST] Bob Lennon - Dragon Ball Z - Betting - 03/06/20 - Partie [1/2]',
+                    duration: 3673,
+                    thumbnail:
+                        'https://i.ytimg.com/an_webp/IP7v7NI50IQ/mqdefault_6s.webp?du=3000&sqp=CLz2ovcF&rs=AOn4CLAkkZkZpYeQsipy-RD-L7S_3owNaw'
+                }*/
             ],
+            playlists: [],
             currentPlaylist: { playlist: [] },
+            addingToPlaylist: -1,
             style: {
                 width: '500px',
                 height: '450px',
@@ -113,24 +55,140 @@ class MusicModule extends React.Component {
             }
         }
 
+        this.props.socket.on('music:error', (data) => {
+            console.log('Error:', data)
+        })
+
         this.props.socket.on('music:searchResult', (result) => {
             this.setState(() => ({ searchResults: result }))
         })
         this.props.socket.on('music:downloading', (result) => {
-            console.log(result)
+            this.setProgress(result.status.progress)
             this.setState(() => ({ currentProgress: result.status.progress }))
         })
         this.props.socket.on('music:music', (result) => {
             console.log(result)
-            /*this.setState(() => ({
-                currentSrc:
-                    'file:///D:/VisualStudioProjects/NodejsProjects/Korbots/server/storage' +
-                    result.path
-            }))*/
+            this.setProgress(0)
+            if (this.state.addingToPlaylist === -1)
+                this.setState(() => ({
+                    currentProgress: -1,
+                    currentSrc: 'http://localhost:3000/music/' + result._id
+                }))
+            else {
+                this.props.socket.emit('music:getMusic', {
+                    source: 'youtube',
+                    sourceId: result.sourceId
+                })
+                this.setState(() => ({
+                    currentProgress: -1
+                }))
+            }
         })
 
+        this.props.socket.on('music:playlistSongs', (data) => {
+            console.log('data', data)
+            const { playlists, currentPlaylist } = this.state
+            for (let i = 0; i < playlists.length; i++) {
+                if (playlists[i].title === data.playlist.name) {
+                    //let duration = 0
+                    for (let j = 0; j < data.songs.length; j++) {
+                        playlists[i].playlist[j] = data.songs[j]
+                        playlists[i].duration = data.playlist.duration
+                        //duration += data.songs[j].duration
+                    }
+                    //playlists[i].duration = duration
+                    break
+                }
+            }
+            let j = -1
+            for (let i = 0; i < playlists.length; i++) {
+                if (playlists[i].title === currentPlaylist.title) {
+                    j = i
+                    break
+                }
+            }
+            if (j !== -1) {
+                setTimeout(() => {
+                    this.playlistTargetClick()
+                    this.handlePlaylistClick(null, j)
+                })
+            }
+            this.setState(() => ({
+                playlists: playlists
+            }))
+        })
+
+        this.props.socket.on('music:playlists', (data) => {
+            console.log(data)
+            let playlists = []
+            for (let i = 0; i < data.length; i++) {
+                let playlist = []
+                for (let j = 0; j < data[i].songs.length; j++) {
+                    playlist.push({
+                        id: data[i].songs[j].id,
+                        title: data[i].songs[j].title
+                    })
+                }
+                playlists.push({
+                    title: data[i].name,
+                    id: data[i]._id,
+                    duration: 0,
+                    playlist: playlist
+                })
+            }
+            this.setState(() => ({ playlists: playlists }))
+            for (let i = 0; i < playlists.length; i++) {
+                this.props.socket.emit('music:getPlaylistSongs', {
+                    id: playlists[i].id
+                })
+            }
+        })
+
+        this.props.socket.on('music:musicEntry', (data) => {
+            const { playlists } = this.state
+            if (this.state.addingToPlaylist !== -1) {
+                if (typeof this.state.addingToPlaylist !== 'string')
+                    this.props.socket.emit('music:addToPlaylist', {
+                        id: data._id,
+                        playlist: playlists[this.state.addingToPlaylist].title
+                    })
+                else
+                    this.props.socket.emit('music:addToPlaylist', {
+                        id: data._id,
+                        playlist: this.state.addingToPlaylist
+                    })
+                this.setState(() => ({ addingToPlaylist: -1 }))
+            } else {
+                this.setState(() => ({
+                    currentSrc: 'http://localhost:3000/music/' + data._id
+                }))
+            }
+        })
+
+        this.props.socket.on('music:addedToPlaylist', (data) => {
+            console.log('added', data)
+            if (data) this.props.socket.emit('music:getPlaylists')
+        })
+
+        this.props.socket.on('music:removedPlaylist', (data) => {
+            console.log('removedplaylist', data)
+            if (data) this.props.socket.emit('music:getPlaylists')
+        })
+        this.props.socket.on('music:removedFromPlaylist', (data) => {
+            if (data) {
+                this.props.socket.emit('music:getPlaylists')
+            }
+        })
+
+        this.props.socket.emit('music:getPlaylists')
         this.handleChangeQuery = this.handleChangeQuery.bind(this)
         this.getResults = this.getResults.bind(this)
+    }
+
+    setProgress(percent) {
+        const { progressRef } = this.state
+        const offset = 18 * 2 * Math.PI - percent * 18 * 2 * Math.PI
+        progressRef.current.style.strokeDashoffset = offset
     }
 
     componentDidMount() {
@@ -150,25 +208,78 @@ class MusicModule extends React.Component {
         }
     }
 
-    handlePlaylistClick = (index) => {
+    handlePlaylistClick = (ev, index) => {
         const {
             searchResultsRef,
             playlistsRef,
             playlistRef,
             playlists
         } = this.state
+        console.log(playlists[index])
+        if (ev && ev.target.className.includes('removePlaylistTarget')) {
+            this.props.socket.emit('music:removePlaylist', {
+                playlist: playlists[index].title
+            })
+            return
+        }
         searchResultsRef.current.style.display = 'none'
         playlistsRef.current.style.display = 'none'
         playlistRef.current.style.display = 'flex'
-        this.setState(() => ({ currentPlaylist: playlists[index] }))
+        this.setState(() => ({
+            currentPlaylist: playlists[index]
+        }))
     }
 
-    handleResultClick = (index) => {
-        const { searchResults } = this.state
-        this.props.socket.emit('music:download', {
-            url: searchResults[index].url,
-            source: 'youtube'
-        })
+    handlePlaylistResultClick = (ev, index) => {
+        const { currentPlaylist } = this.state
+        if (ev.target.className.includes('removePlaylistTarget')) {
+            this.props.socket.emit('music:removeFromPlaylist', {
+                id: currentPlaylist.playlist[index]._id,
+                playlist: currentPlaylist.title
+            })
+            console.log(currentPlaylist, index)
+            return
+        }
+        this.setState(() => ({
+            currentSrc:
+                'http://localhost:3000/music/' +
+                currentPlaylist.playlist[index]._id
+        }))
+    }
+
+    handleResultClick = (ev, index) => {
+        const { searchResults, playlists } = this.state
+        if (ev.target.className.includes('addToPlaylistTarget')) {
+            let promptVal = 'Choisissez une playlist :'
+            let titles = []
+            for (let i = 0; i < playlists.length; i++) {
+                promptVal += `\n- ${playlists[i].title}`
+                titles.push(playlists[i].title.toLowerCase())
+            }
+            let val = window.prompt(promptVal).toLowerCase()
+            if (titles.includes(val)) {
+                for (let i = 0; i < playlists.length; i++) {
+                    if (playlists[i].title.toLowerCase() === val) {
+                        console.log(searchResults[index])
+                        console.log(playlists[i])
+                        this.setState(() => ({ addingToPlaylist: i }))
+                    }
+                }
+            } else this.setState(() => ({ addingToPlaylist: val }))
+        }
+
+        console.log(searchResults[index])
+        if (!searchResults[index].inDatabase) {
+            this.props.socket.emit('music:download', {
+                url: searchResults[index].url,
+                source: 'youtube'
+            })
+        } else {
+            this.props.socket.emit('music:getMusic', {
+                source: 'youtube',
+                sourceId: searchResults[index].id
+            })
+        }
     }
 
     handleChangeQuery(event) {
@@ -198,13 +309,14 @@ class MusicModule extends React.Component {
             searchResultsRef,
             playlistsRef,
             playlistRef,
+            progressRef,
             currentPlaylist,
             searchResults,
             currentSrc,
             currentProgress
         } = this.state
-        if (currentProgress >= 1) this.setState(() => ({ currentProgress: -1 }))
-        console.log('progress', currentProgress)
+        //if (currentProgress >= 1) this.setState(() => ({ currentProgress: -1 }))
+        //console.log('progress', currentProgress)
         return (
             <div
                 ref={ref}
@@ -234,8 +346,26 @@ class MusicModule extends React.Component {
                         </text>
                     </svg>
                     <audio controls autoPlay src={currentSrc}></audio>
+                    <svg className="progress-ring" height="40" width="40">
+                        <circle
+                            ref={progressRef}
+                            className="progress-ring__circle"
+                            strokeWidth="1"
+                            stroke="black"
+                            fill="transparent"
+                            r="18"
+                            cx="20"
+                            cy="20"
+                            style={{
+                                strokeDasharray: `${18 * 2 * Math.PI} ${
+                                    18 * 2 * Math.PI
+                                }`,
+                                strokeDashoffset: `${18 * 2 * Math.PI}`
+                            }}
+                        />
+                    </svg>
                     <span className="progress">
-                        {currentProgress >= 0 && currentProgress < 1
+                        {currentProgress >= 0 && currentProgress < 0.99
                             ? (currentProgress * 100).toFixed(1) + '%'
                             : ''}
                     </span>
@@ -262,19 +392,19 @@ class MusicModule extends React.Component {
                     }
                     <div className="searchResults" ref={searchResultsRef}>
                         {/*<SearchResult
-                            index={index}
-                            title={
-                                '[LSDLP] Bob Lennon - Dragon Ball Z - Betting - 03/06/20 - Partie [1/2]'
-                            }
-                            length={794}
-                            thumbnail="https://i.ytimg.com/an_webp/IP7v7NI50IQ/mqdefault_6s.webp?du=3000&sqp=CLz2ovcF&rs=AOn4CLAkkZkZpYeQsipy-RD-L7S_3owNaw"
-                        onClick={this.handleResultClick}></SearchResult>*/}
+                                index={index}
+                                title={
+                                    '[LSDLP] Bob Lennon - Dragon Ball Z - Betting - 03/06/20 - Partie [1/2]'
+                                }
+                                length={794}
+                                thumbnail="https://i.ytimg.com/an_webp/IP7v7NI50IQ/mqdefault_6s.webp?du=3000&sqp=CLz2ovcF&rs=AOn4CLAkkZkZpYeQsipy-RD-L7S_3owNaw"
+                                onClick={this.handleResultClick}></SearchResult>*/}
                         {searchResults.map((result, index) => (
                             <SearchResult
                                 key={index}
                                 index={index}
                                 title={result.title}
-                                length={result.duration}
+                                duration={result.duration}
                                 thumbnail={result.thumbnail}
                                 onClick={this.handleResultClick}></SearchResult>
                         ))}
@@ -297,12 +427,15 @@ class MusicModule extends React.Component {
                             {currentPlaylist.title}
                         </div>
                         {currentPlaylist.playlist.map((result, index) => (
-                            <SearchResult
+                            <PlaylistResult
                                 key={index}
                                 index={index}
                                 title={result.title}
-                                length={result.length}
-                                thumbnail={result.thumbnail}></SearchResult>
+                                duration={result.duration}
+                                thumbnail={result.thumbnail}
+                                onClick={
+                                    this.handlePlaylistResultClick
+                                }></PlaylistResult>
                         ))}
                     </div>
                 </div>
@@ -319,25 +452,51 @@ MusicModule.propTypes = {
     socket: PropTypes.object
 }
 
-const SearchResult = ({ title, length, thumbnail, onClick, index }) => (
+const SearchResult = ({ title, duration, thumbnail, onClick, index }) => (
     <div
         className="searchResult"
-        onClick={() => {
-            onClick(index)
+        onClick={(ev) => {
+            onClick(ev, index)
         }}>
         <div>
             <img
                 className="thumbnail"
                 src={thumbnail}
                 alt={`[Thumbnail] ${thumbnail}`}></img>
-            <div className="videoLength">{formatDate(length)}</div>
+            <div className="videoLength">{formatDate(duration)}</div>
+            <i className="fas fa-plus-square addToPlaylistTarget"></i>
         </div>
         <div className="videoTitle">{title} </div>
     </div>
 )
 SearchResult.propTypes = {
     title: PropTypes.string,
-    length: PropTypes.number,
+    duration: PropTypes.number,
+    thumbnail: PropTypes.string,
+    onClick: PropTypes.func,
+    index: PropTypes.number
+}
+
+const PlaylistResult = ({ title, duration, thumbnail, onClick, index }) => (
+    <div
+        className="searchResult"
+        onClick={(ev) => {
+            onClick(ev, index)
+        }}>
+        <div>
+            <img
+                className="thumbnail"
+                src={thumbnail}
+                alt={`[Thumbnail] ${thumbnail}`}></img>
+            <div className="playlistLength">{formatDate(duration)}</div>
+            <i className="fas fa-minus-square removePlaylistTarget"></i>
+        </div>
+        <div className="videoTitle">{title} </div>
+    </div>
+)
+PlaylistResult.propTypes = {
+    title: PropTypes.string,
+    duration: PropTypes.number,
     thumbnail: PropTypes.string,
     onClick: PropTypes.func,
     index: PropTypes.number
@@ -349,18 +508,22 @@ const Playlists = ({ playlists, onClick }) => (
             <div
                 key={index}
                 className="playlistResult"
-                onClick={() => {
-                    onClick(index)
+                onClick={(ev) => {
+                    onClick(ev, index)
                 }}>
                 <div>
                     <i className="far fa-play-circle"></i>
                     <img
                         className="thumbnailPlaylist"
-                        src={playlist.playlist[0].thumbnail}
-                        alt={`[Thumbnail] ${playlist.playlist[0].thumbnail}`}></img>
+                        src={
+                            playlist.playlist.length &&
+                            playlist.playlist[0].thumbnail
+                        }
+                        alt={`[Thumbnail]`}></img>
                     <div className="playlistLength">
-                        {formatDate(playlist.length)}
+                        {formatDate(playlist.duration)}
                     </div>
+                    <i className="fas fa-minus-square removePlaylistTarget"></i>
                 </div>
                 <div className="playlistTitle">{playlist.title} </div>
             </div>

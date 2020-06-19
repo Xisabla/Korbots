@@ -35,6 +35,7 @@
 * [addListener](_models_music_.imusic.md#addlistener)
 * [aggregate](_models_music_.imusic.md#aggregate)
 * [bulkWrite](_models_music_.imusic.md#bulkwrite)
+* [checkOrphan](_models_music_.imusic.md#checkorphan)
 * [count](_models_music_.imusic.md#count)
 * [countDocuments](_models_music_.imusic.md#countdocuments)
 * [create](_models_music_.imusic.md#create)
@@ -372,6 +373,16 @@ Name | Type |
 `res` | BulkWriteOpResultObject |
 
 **Returns:** *void*
+
+___
+
+###  checkOrphan
+
+▸ **checkOrphan**(): *Promise‹[IMusicSchema](_models_music_.imusicschema.md)[]›*
+
+*Defined in [src/models/Music.ts:83](https://github.com/Xisabla/Korbots/blob/25e7373/server/src/models/Music.ts#L83)*
+
+**Returns:** *Promise‹[IMusicSchema](_models_music_.imusicschema.md)[]›*
 
 ___
 
@@ -852,7 +863,7 @@ ___
 
 ▸ **doesExist**(`source`: string, `sourceId`: string): *Promise‹boolean›*
 
-*Defined in [src/models/Music.ts:68](https://github.com/Xisabla/Korbots/blob/9379d31/server/src/models/Music.ts#L68)*
+*Defined in [src/models/Music.ts:76](https://github.com/Xisabla/Korbots/blob/25e7373/server/src/models/Music.ts#L76)*
 
 Search if a Music exists in the DataBase from it's source and sourceId
 
@@ -2122,7 +2133,7 @@ ___
 
 ▸ **findOneSong**(`source`: string, `sourceId`: string): *Promise‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
-*Defined in [src/models/Music.ts:61](https://github.com/Xisabla/Korbots/blob/9379d31/server/src/models/Music.ts#L61)*
+*Defined in [src/models/Music.ts:69](https://github.com/Xisabla/Korbots/blob/25e7373/server/src/models/Music.ts#L69)*
 
 Get the Music Document for the given source and sourceId
 
@@ -2143,7 +2154,7 @@ ___
 
 ▸ **fromDownloaded**(`audio`: [DownloadedMusic](_core_imusic_.downloadedmusic.md)): *Promise‹[IMusicSchema](_models_music_.imusicschema.md)›*
 
-*Defined in [src/models/Music.ts:52](https://github.com/Xisabla/Korbots/blob/9379d31/server/src/models/Music.ts#L52)*
+*Defined in [src/models/Music.ts:60](https://github.com/Xisabla/Korbots/blob/25e7373/server/src/models/Music.ts#L60)*
 
 Create a Music Document from a DownloadedMusic
 

@@ -21,6 +21,7 @@
 
 audio {
     height: 10%;
+    width: 90%;
     background-color: black;
 }
 
@@ -43,7 +44,7 @@ audio {
     top: 0px;
     z-index: 1000;
     background-color: #ffbb11;
-    border-radius: 0px 0px 50px 50px;
+    border-radius: 0px 0px 0px 0px;
     text-align: center;
     letter-spacing: 1px;
     font-weight: 300;
@@ -87,7 +88,23 @@ $thumbnailWidth:$thumbnailHeight/9*16;
     padding: 0px 5px 0 5px;
     position: absolute;
     top: $thumbnailHeight - 25px;
-    right: 0px;
+    right: 28px;
+    cursor: auto;
+}
+
+.addToPlaylistTarget, .removePlaylistTarget {
+    background-color: black;
+    transform: scale(1.47, 1.47);
+    color: white;
+    width: fit-content;
+    height: 17px;
+    width: 17px;
+    padding: 0.7px 0px 0px 2px;
+    position: absolute;
+    top: $thumbnailHeight - 21px;
+    right: 5px;
+    cursor: pointer;
+    z-index: 20;
 }
 
 .playlistTarget {
@@ -101,4 +118,19 @@ $thumbnailWidth:$thumbnailHeight/9*16;
     cursor: pointer;
     transform: scale(-1,1);
     vertical-align: middle;
+}
+
+.progress-ring__circle {
+    transition: 0.35s stroke-dashoffset;
+    // axis compensation
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    position: absolute;
+}
+
+.progress {
+    font-size: 0.8em;
+    position: absolute;
+    top: 94px;
+    right: 17px;
 }

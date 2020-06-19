@@ -300,21 +300,23 @@ class App extends Component {
         //Computes
         if (rearrange) {
             //order from left to right
-            /*let leftData = []
+            let leftData = []
             let order = []
             for (let i = 0; i < rects.length; i++) {
                 leftData.push(rects[i].left)
             }
             let pastLeft = [...leftData]
-            leftData.sort((a, b) => a > b)
+            leftData.sort((a, b) => a < b)
             for (let i = 0; i < pastLeft.length; i++) {
                 for (let j = 0; j < leftData.length; j++) {
                     if (!order.includes(j) && leftData[j] == pastLeft[i])
                         order.push(j)
                 }
-            }*/
-            for (let i = 0; i < rects.length; i++) {
-                for (let j = 0; j < rects.length; j++) {
+            }
+            for (let x = 0; x < rects.length; x++) {
+                let i = order[x]
+                for (let y = 0; y < rects.length; y++) {
+                    let j = order[y]
                     if (i !== j) {
                         while (
                             (!this.isOver(rects[i], rects[j]) ||

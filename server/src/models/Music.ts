@@ -32,15 +32,23 @@ export interface IMusicSchema extends Document {
     path: string
 
     /**
-     *
+     * Add the music to a playlist
      * @param playlist
+     * @returns A Promise of the playlist
      */
     addToPlaylist(playlist: string): Promise<IPlaylistSchema>
     /**
-     *
+     * Add the music to several playlists
      * @param playlist
+     * @returns A Promise of the playlists
      */
-    addToPlaylists(playlist: string[]): Promise<IPlaylistSchema>
+    addToPlaylists(playlist: string[]): Promise<IPlaylistSchema[]>
+
+    /**
+     * Get all parent playlists of the music
+     * @returns A Promise of the playlists
+     */
+    getPlaylists(): Promise<IPlaylistSchema[]>
 }
 
 export interface IMusic extends Model<IMusicSchema> {
@@ -72,7 +80,7 @@ export interface IMusic extends Model<IMusicSchema> {
     //  the file doesn't exist
     // checkStorage(): Promise<any>
     // TODO: For a Task: Check for all entries if it belongs in a playlist, if not delete it and delete storage
-    // checkOrphan(): Promise<any>
+    checkOrphan(): Promise<IMusicSchema[]>
 }
 
 // ---- Methods : Music ---------------------
@@ -82,7 +90,6 @@ MusicSchema.methods.addToPlaylist = function (
 ): Promise<IPlaylistSchema> {
     return Playlist.getOrCreate(playlist).then((playlist) => {
         if (!playlist.songs.find((song) => song.id === this.id)) {
-            console.log('add')
             playlist.songs.push(
                 new Song({
                     id: this.id,
@@ -91,10 +98,10 @@ MusicSchema.methods.addToPlaylist = function (
                 })
             )
 
-            return playlist.save().then(() => playlist)
+            return playlist
+                .save()
+                .then((playlist: IPlaylistSchema) => playlist.computeDuration())
         }
-
-        console.log('skip')
 
         return playlist
     })
@@ -105,6 +112,16 @@ MusicSchema.methods.addToPlaylists = function (
 ): Promise<IPlaylistSchema[]> {
     return Promise.all(
         playlists.map((playlist) => this.addToPlaylist(playlist))
+    )
+}
+
+MusicSchema.methods.getPlaylists = function (): Promise<IPlaylistSchema[]> {
+    return Playlist.find().then((playlists) =>
+        playlists.filter((playlist) => {
+            return playlist.songs.find((song) => song.id === this.id)
+                ? true
+                : false
+        })
     )
 }
 
@@ -148,6 +165,25 @@ MusicSchema.statics.doesExist = function (
     sourceId: string
 ): Promise<boolean> {
     return Music.findOneSong(source, sourceId).then((doc) => doc !== null)
+}
+
+MusicSchema.statics.checkOrphan = function (): Promise<IMusicSchema[]> {
+    return Music.find()
+        .then((musics) =>
+            Promise.all(
+                musics.map((music) =>
+                    Promise.all([
+                        music,
+                        music
+                            .getPlaylists()
+                            .then((playlists) => playlists.length)
+                    ])
+                )
+            )
+        )
+        .then((musics) => musics.filter((music) => music[1] < 1))
+        .then((musics) => musics.map((music) => music[0]))
+        .then((musics) => Promise.all(musics.map((music) => music.remove())))
 }
 
 // ---- Models ------------------------------

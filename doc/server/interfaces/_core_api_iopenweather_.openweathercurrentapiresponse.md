@@ -34,7 +34,7 @@ Content of a Current Response from OpenWeather API
 
 • **base**: *string*
 
-*Defined in [src/core/API/IOpenWeather.ts:29](https://github.com/Xisabla/Korbots/blob/9379d31/server/src/core/API/IOpenWeather.ts#L29)*
+*Defined in [src/core/API/IOpenWeather.ts:29](https://github.com/Xisabla/Korbots/blob/25e7373/server/src/core/API/IOpenWeather.ts#L29)*
 
 Internal parameter
 
@@ -44,7 +44,7 @@ ___
 
 • **cloud**: *object*
 
-*Defined in [src/core/API/IOpenWeather.ts:59](https://github.com/Xisabla/Korbots/blob/9379d31/server/src/core/API/IOpenWeather.ts#L59)*
+*Defined in [src/core/API/IOpenWeather.ts:59](https://github.com/Xisabla/Korbots/blob/25e7373/server/src/core/API/IOpenWeather.ts#L59)*
 
 #### Type declaration:
 
@@ -56,7 +56,7 @@ ___
 
 • **cod**: *number*
 
-*Defined in [src/core/API/IOpenWeather.ts:98](https://github.com/Xisabla/Korbots/blob/9379d31/server/src/core/API/IOpenWeather.ts#L98)*
+*Defined in [src/core/API/IOpenWeather.ts:98](https://github.com/Xisabla/Korbots/blob/25e7373/server/src/core/API/IOpenWeather.ts#L98)*
 
 Internal parameter
 
@@ -66,7 +66,7 @@ ___
 
 • **coord**: *object*
 
-*Defined in [src/core/API/IOpenWeather.ts:20](https://github.com/Xisabla/Korbots/blob/9379d31/server/src/core/API/IOpenWeather.ts#L20)*
+*Defined in [src/core/API/IOpenWeather.ts:20](https://github.com/Xisabla/Korbots/blob/25e7373/server/src/core/API/IOpenWeather.ts#L20)*
 
 Coordinates of the location
 
@@ -82,7 +82,7 @@ ___
 
 • **dt**: *number*
 
-*Defined in [src/core/API/IOpenWeather.ts:76](https://github.com/Xisabla/Korbots/blob/9379d31/server/src/core/API/IOpenWeather.ts#L76)*
+*Defined in [src/core/API/IOpenWeather.ts:76](https://github.com/Xisabla/Korbots/blob/25e7373/server/src/core/API/IOpenWeather.ts#L76)*
 
 Time of the forecasted data, unix UTC
 
@@ -92,7 +92,7 @@ ___
 
 • **id**: *number*
 
-*Defined in [src/core/API/IOpenWeather.ts:94](https://github.com/Xisabla/Korbots/blob/9379d31/server/src/core/API/IOpenWeather.ts#L94)*
+*Defined in [src/core/API/IOpenWeather.ts:94](https://github.com/Xisabla/Korbots/blob/25e7373/server/src/core/API/IOpenWeather.ts#L94)*
 
 City ID
 
@@ -102,7 +102,7 @@ ___
 
 • **main**: *object*
 
-*Defined in [src/core/API/IOpenWeather.ts:31](https://github.com/Xisabla/Korbots/blob/9379d31/server/src/core/API/IOpenWeather.ts#L31)*
+*Defined in [src/core/API/IOpenWeather.ts:31](https://github.com/Xisabla/Korbots/blob/25e7373/server/src/core/API/IOpenWeather.ts#L31)*
 
 Main data
 
@@ -130,7 +130,7 @@ ___
 
 • **name**: *string*
 
-*Defined in [src/core/API/IOpenWeather.ts:96](https://github.com/Xisabla/Korbots/blob/9379d31/server/src/core/API/IOpenWeather.ts#L96)*
+*Defined in [src/core/API/IOpenWeather.ts:96](https://github.com/Xisabla/Korbots/blob/25e7373/server/src/core/API/IOpenWeather.ts#L96)*
 
 City name
 
@@ -140,7 +140,7 @@ ___
 
 • **rain**? : *object*
 
-*Defined in [src/core/API/IOpenWeather.ts:63](https://github.com/Xisabla/Korbots/blob/9379d31/server/src/core/API/IOpenWeather.ts#L63)*
+*Defined in [src/core/API/IOpenWeather.ts:63](https://github.com/Xisabla/Korbots/blob/25e7373/server/src/core/API/IOpenWeather.ts#L63)*
 
 #### Type declaration:
 
@@ -154,7 +154,7 @@ ___
 
 • **snow**? : *object*
 
-*Defined in [src/core/API/IOpenWeather.ts:69](https://github.com/Xisabla/Korbots/blob/9379d31/server/src/core/API/IOpenWeather.ts#L69)*
+*Defined in [src/core/API/IOpenWeather.ts:69](https://github.com/Xisabla/Korbots/blob/25e7373/server/src/core/API/IOpenWeather.ts#L69)*
 
 #### Type declaration:
 
@@ -168,7 +168,7 @@ ___
 
 • **sys**: *object*
 
-*Defined in [src/core/API/IOpenWeather.ts:77](https://github.com/Xisabla/Korbots/blob/9379d31/server/src/core/API/IOpenWeather.ts#L77)*
+*Defined in [src/core/API/IOpenWeather.ts:77](https://github.com/Xisabla/Korbots/blob/25e7373/server/src/core/API/IOpenWeather.ts#L77)*
 
 #### Type declaration:
 
@@ -190,7 +190,7 @@ ___
 
 • **timezone**: *number*
 
-*Defined in [src/core/API/IOpenWeather.ts:92](https://github.com/Xisabla/Korbots/blob/9379d31/server/src/core/API/IOpenWeather.ts#L92)*
+*Defined in [src/core/API/IOpenWeather.ts:92](https://github.com/Xisabla/Korbots/blob/25e7373/server/src/core/API/IOpenWeather.ts#L92)*
 
 Shift in seconds from UTC
 
@@ -200,7 +200,7 @@ ___
 
 • **visibility**? : *number*
 
-*Defined in [src/core/API/IOpenWeather.ts:50](https://github.com/Xisabla/Korbots/blob/9379d31/server/src/core/API/IOpenWeather.ts#L50)*
+*Defined in [src/core/API/IOpenWeather.ts:50](https://github.com/Xisabla/Korbots/blob/25e7373/server/src/core/API/IOpenWeather.ts#L50)*
 
 Visibility in %
 
@@ -210,7 +210,7 @@ ___
 
 • **weather**: *[OpenweatherAPIWeatherStatus](_core_api_iopenweather_.openweatherapiweatherstatus.md)[]*
 
-*Defined in [src/core/API/IOpenWeather.ts:27](https://github.com/Xisabla/Korbots/blob/9379d31/server/src/core/API/IOpenWeather.ts#L27)*
+*Defined in [src/core/API/IOpenWeather.ts:27](https://github.com/Xisabla/Korbots/blob/25e7373/server/src/core/API/IOpenWeather.ts#L27)*
 
 Weather status
 
@@ -220,7 +220,7 @@ ___
 
 • **wind**: *object*
 
-*Defined in [src/core/API/IOpenWeather.ts:51](https://github.com/Xisabla/Korbots/blob/9379d31/server/src/core/API/IOpenWeather.ts#L51)*
+*Defined in [src/core/API/IOpenWeather.ts:51](https://github.com/Xisabla/Korbots/blob/25e7373/server/src/core/API/IOpenWeather.ts#L51)*
 
 #### Type declaration:
 

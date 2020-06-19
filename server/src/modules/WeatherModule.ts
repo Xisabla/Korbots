@@ -156,6 +156,9 @@ export class WeatherModule extends Module {
         })
     }
 
+    /**
+     * Task method, update all the weather entries from the database
+     */
     private updateCurrentEntries(): Promise<any> {
         // Get outdated
         return (

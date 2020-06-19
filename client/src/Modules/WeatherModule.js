@@ -128,7 +128,7 @@ class WeatherModule extends React.Component {
     }
 
     /* function to find the weather by the coordinates */
-    getWeatherbyCoords() {
+    getWeatherbyCoord(ev) {
         const latitude = parseFloat(this.state.latitude)
         const longitude = parseFloat(this.state.longitude)
         this.props.socket.emit('weather:getCurrent', { latitude, longitude })
@@ -138,14 +138,16 @@ class WeatherModule extends React.Component {
             longitude,
             numberOfDay
         })
+        ev.preventDefault()
     }
 
     /* Function to find the weather by the city name */
-    getWeatherbyCity() {
+    getWeatherbyCity(ev) {
         this.props.socket.emit(
             'weather:getCurrent',
             this.state.city + ',' + this.state.country
         )
+        ev.preventDefault()
     }
 
     render() {
