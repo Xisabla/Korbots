@@ -200,6 +200,13 @@ export class MusicModule extends Module {
         socket.on('music:sortPlaylist', (data) =>
             this.sortPlaylist(socket, data)
         )
+
+        socket.on('music:removeFromPlaylist', (data) =>
+            this.removeFromPlaylist(socket, data)
+        )
+        socket.on('music:removePlaylist', (data) =>
+            this.removePlaylist(socket, data)
+        )
     }
 
     // ---- Tasks ------------------------------------
@@ -220,12 +227,29 @@ export class MusicModule extends Module {
 
     // ---- Methods ----------------------------------
 
-    private getMusic(socket: Socket, data: any): void {
+    /**
+     * Get the Music entry from the source and sourceId and send it to the Client
+     * @param socket Client Socket
+     * @param data Data containing the source and sourceId of the music
+     */
+    private getMusic(socket: Socket, data: any): any {
         const { source, sourceId } = data
+
+        if (
+            !source ||
+            !sourceId ||
+            !(typeof source === 'string') ||
+            !(typeof sourceId === 'string')
+        ) {
+            return socket.emit('music:error', 'Invalid fields')
+        }
+
+        log(`Getting info of ${sourceId} from source ${source}`)
 
         Music.findOneSong(source, sourceId)
             .then((music) => {
-                socket.emit('music:musicEntry', music)
+                log(`Got info, responding with music:musicEntry`)
+                socket.emit('music:musicEntry', music.toJSON())
             })
             .catch((err) => socket.emit('music:error', err))
     }
@@ -235,8 +259,13 @@ export class MusicModule extends Module {
      * @param socket Client Socket
      */
     private getPlaylists(socket: Socket): void {
+        log(`Getting all playlists`)
+
         Playlist.find()
             .then((playlists) => {
+                log(
+                    `Got playlists (${playlists.length}), responding with music:playlists`
+                )
                 socket.emit(
                     'music:playlists',
                     playlists.map((playlist) => playlist.toJSON())
@@ -250,17 +279,26 @@ export class MusicModule extends Module {
      * @param socket Client Socket
      * @param data Data containing Playlist id
      */
-    private getPlaylistSongs(socket: Socket, data: any): void {
+    private getPlaylistSongs(socket: Socket, data: any): any {
         const { id } = data
+
+        if (!id || !(typeof id === 'string')) {
+            return socket.emit('music:error', 'Invalid fields')
+        }
+
+        log(`Getting playlist song from ${id}`)
 
         Playlist.findById(id).then((playlist) => {
             Promise.all(playlist.songs.map((song) => Music.findById(song.id)))
-                .then((songs) =>
-                    socket.emit('music:playlistSongs', {
-                        playlist,
+                .then((songs) => {
+                    log(
+                        `Got ${songs.length} songs, responding with music:PlaylistSongs`
+                    )
+                    return socket.emit('music:playlistSongs', {
+                        playlist: playlist.toJSON(),
                         songs: songs.map((song) => song.toJSON())
                     })
-                )
+                })
                 .catch((err) => socket.emit('music:error', err))
         })
     }
@@ -270,15 +308,31 @@ export class MusicModule extends Module {
      * @param socket Client Socket
      * @param data Data containing Playlist name and Music id
      */
-    private addToPlaylist(socket: Socket, data: any): void {
-        log(`Received addToPlaylist event from ${socket.id}`)
+    private addToPlaylist(socket: Socket, data: any): any {
         const { id, playlist } = data
+
+        if (
+            !id ||
+            !playlist ||
+            !(typeof id === 'string') ||
+            !(typeof playlist === 'string')
+        ) {
+            return socket.emit('music:error', 'Invalid fields')
+        }
+
+        log(`Received addToPlaylist event from ${socket.id}`)
+
         Music.findById(id)
             .then((music) =>
                 Promise.all([music.addToPlaylist(playlist), music])
             )
             .then(([playlist, music]) => {
-                socket.emit('music:addedToPlaylist', { playlist, music })
+                log(`Added ${music.id} song to playlist ${playlist.name}`)
+
+                socket.emit('music:addedToPlaylist', {
+                    playlist: playlist.toJSON(),
+                    music: music.toJSON()
+                })
             })
             .catch((err) => socket.emit('music:error', err))
     }
@@ -288,15 +342,25 @@ export class MusicModule extends Module {
      * @param socket Client Socket
      * @param data Data containing Playlist names and Music id
      */
-    private addToPlaylists(socket: Socket, data: any): void {
-        log(`Received addToPlaylists event from ${socket.id}`)
+    private addToPlaylists(socket: Socket, data: any): any {
         const { id, playlists } = data
+
+        if (!id || !(typeof id === 'string')) {
+            return socket.emit('music:error', 'Invalid fields')
+        }
+
+        log(`Received addToPlaylists event from ${socket.id}`)
+
         Music.findById(id)
             .then((music) =>
                 Promise.all([music.addToPlaylists(playlists), music])
             )
             .then(([playlists, music]) => {
-                socket.emit('music:addedToPlaylists', { playlists, music })
+                log(`Added song ${music.id} to ${playlists.length} playlists`)
+                socket.emit('music:addedToPlaylists', {
+                    playlists: playlists.map((playlist) => playlist.toJSON()),
+                    music: music.toJSON()
+                })
             })
             .catch((err) => socket.emit('music:error', err))
     }
@@ -306,8 +370,16 @@ export class MusicModule extends Module {
      * @param socket Client Socket
      * @param data Data containing the Playlist name and the sort method
      */
-    private sortPlaylist(socket: Socket, data: any): void {
+    private sortPlaylist(socket: Socket, data: any): any {
         const { name, sort } = data
+
+        if (
+            !name ||
+            !sort ||
+            !(typeof name === 'string') ||
+            !(typeof sort === 'string')
+        )
+            return socket.emit('music:error', 'Invalid fields')
 
         log(`Received sort by ${sort} event from ${socket.id}`)
 
@@ -341,6 +413,60 @@ export class MusicModule extends Module {
                 // return the unsorted playlist if no order specified ('' or anything else)
                 socket.emit('music:unsorted', playlist)
             })
+            .catch((err) => socket.emit('music:error', err))
+    }
+
+    /**
+     * Remove a music from a playlist songs and send back client info
+     * @param socket Client Socket
+     * @param data Data containing the id of the music and the playlist name
+     */
+    private removeFromPlaylist(socket: Socket, data: any): any {
+        const { id, playlist } = data
+
+        if (
+            !id ||
+            !playlist ||
+            !(typeof id === 'string') ||
+            !(typeof playlist === 'string')
+        ) {
+            return socket.emit('music:error', 'Invalid fields')
+        }
+
+        Playlist.getOrCreate(playlist)
+            .then((playlist) =>
+                Promise.all([playlist, playlist.removeSong(id)])
+            )
+            .then(([playlist, music]) => {
+                log(`Removed music ${music.id} from playlist ${playlist.name}`)
+
+                socket.emit('music:removeFromPlaylist', {
+                    playlist: playlist.toJSON(),
+                    music: music.toJSON()
+                })
+            })
+            .catch((err) => socket.emit('music:error', err))
+    }
+
+    /**
+     * Remove a playlist and send back data to the client
+     * @param socket Client Socket
+     * @param data Data containing the playlist name
+     */
+    private removePlaylist(socket: Socket, data: any): any {
+        const { playlist } = data
+
+        if (!playlist || !(typeof playlist === 'string')) {
+            return socket.emit('music:error', 'Invalid fields')
+        }
+
+        Playlist.getOrCreate(playlist)
+            .then((playlist) => playlist.remove())
+            .then((playlist) => {
+                log(`Removed playlist: ${playlist.name}`)
+                socket.emit('music:removedPlaylist', playlist.toJSON())
+            }
+            )
             .catch((err) => socket.emit('music:error', err))
     }
 
