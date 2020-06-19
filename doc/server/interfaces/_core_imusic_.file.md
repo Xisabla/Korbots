@@ -21,7 +21,7 @@ Global interface for a File
 
 • **filename**: *string*
 
-*Defined in [src/core/IMusic.ts:7](https://github.com/Xisabla/Korbots/blob/6040ffa/server/src/core/IMusic.ts#L7)*
+*Defined in [src/core/IMusic.ts:7](https://github.com/Xisabla/Korbots/blob/929890c/server/src/core/IMusic.ts#L7)*
 
 ___
 
@@ -29,4 +29,4 @@ ___
 
 • **filepath**: *string*
 
-*Defined in [src/core/IMusic.ts:8](https://github.com/Xisabla/Korbots/blob/6040ffa/server/src/core/IMusic.ts#L8)*
+*Defined in [src/core/IMusic.ts:8](https://github.com/Xisabla/Korbots/blob/929890c/server/src/core/IMusic.ts#L8)*

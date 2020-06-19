@@ -33,6 +33,7 @@
 * [emit](_models_music_.imusicschema.md#emit)
 * [eventNames](_models_music_.imusicschema.md#eventnames)
 * [getMaxListeners](_models_music_.imusicschema.md#getmaxlisteners)
+* [getPlaylists](_models_music_.imusicschema.md#getplaylists)
 * [increment](_models_music_.imusicschema.md#increment)
 * [listenerCount](_models_music_.imusicschema.md#listenercount)
 * [listeners](_models_music_.imusicschema.md#listeners)
@@ -92,7 +93,7 @@ ___
 
 • **duration**: *number*
 
-*Defined in [src/models/Music.ts:24](https://github.com/Xisabla/Korbots/blob/6040ffa/server/src/models/Music.ts#L24)*
+*Defined in [src/models/Music.ts:24](https://github.com/Xisabla/Korbots/blob/929890c/server/src/models/Music.ts#L24)*
 
 Duration of the music
 
@@ -117,7 +118,7 @@ ___
 
 • **path**: *string*
 
-*Defined in [src/models/Music.ts:32](https://github.com/Xisabla/Korbots/blob/6040ffa/server/src/models/Music.ts#L32)*
+*Defined in [src/models/Music.ts:32](https://github.com/Xisabla/Korbots/blob/929890c/server/src/models/Music.ts#L32)*
 
 Path of the music in the internal storage
 
@@ -139,7 +140,7 @@ ___
 
 • **source**: *string*
 
-*Defined in [src/models/Music.ts:30](https://github.com/Xisabla/Korbots/blob/6040ffa/server/src/models/Music.ts#L30)*
+*Defined in [src/models/Music.ts:30](https://github.com/Xisabla/Korbots/blob/929890c/server/src/models/Music.ts#L30)*
 
 Source of the music
 
@@ -149,7 +150,7 @@ ___
 
 • **sourceId**: *string*
 
-*Defined in [src/models/Music.ts:28](https://github.com/Xisabla/Korbots/blob/6040ffa/server/src/models/Music.ts#L28)*
+*Defined in [src/models/Music.ts:28](https://github.com/Xisabla/Korbots/blob/929890c/server/src/models/Music.ts#L28)*
 
 ID of the Source of the music
 
@@ -159,7 +160,7 @@ ___
 
 • **thumbnail**: *string*
 
-*Defined in [src/models/Music.ts:26](https://github.com/Xisabla/Korbots/blob/6040ffa/server/src/models/Music.ts#L26)*
+*Defined in [src/models/Music.ts:26](https://github.com/Xisabla/Korbots/blob/929890c/server/src/models/Music.ts#L26)*
 
 Thumbnail of the music
 
@@ -169,7 +170,7 @@ ___
 
 • **title**: *string*
 
-*Defined in [src/models/Music.ts:22](https://github.com/Xisabla/Korbots/blob/6040ffa/server/src/models/Music.ts#L22)*
+*Defined in [src/models/Music.ts:22](https://github.com/Xisabla/Korbots/blob/929890c/server/src/models/Music.ts#L22)*
 
 Title of the music
 
@@ -235,15 +236,19 @@ ___
 
 ▸ **addToPlaylist**(`playlist`: string): *Promise‹[IPlaylistSchema](_models_playlist_.iplaylistschema.md)›*
 
-*Defined in [src/models/Music.ts:38](https://github.com/Xisabla/Korbots/blob/6040ffa/server/src/models/Music.ts#L38)*
+*Defined in [src/models/Music.ts:39](https://github.com/Xisabla/Korbots/blob/929890c/server/src/models/Music.ts#L39)*
+
+Add the music to a playlist
 
 **Parameters:**
 
-Name | Type | Description |
------- | ------ | ------ |
-`playlist` | string |   |
+Name | Type |
+------ | ------ |
+`playlist` | string |
 
 **Returns:** *Promise‹[IPlaylistSchema](_models_playlist_.iplaylistschema.md)›*
+
+A Promise of the playlist
 
 ___
 
@@ -251,15 +256,19 @@ ___
 
 ▸ **addToPlaylists**(`playlist`: string[]): *Promise‹[IPlaylistSchema](_models_playlist_.iplaylistschema.md)[]›*
 
-*Defined in [src/models/Music.ts:43](https://github.com/Xisabla/Korbots/blob/6040ffa/server/src/models/Music.ts#L43)*
+*Defined in [src/models/Music.ts:45](https://github.com/Xisabla/Korbots/blob/929890c/server/src/models/Music.ts#L45)*
+
+Add the music to several playlists
 
 **Parameters:**
 
-Name | Type | Description |
------- | ------ | ------ |
-`playlist` | string[] |   |
+Name | Type |
+------ | ------ |
+`playlist` | string[] |
 
 **Returns:** *Promise‹[IPlaylistSchema](_models_playlist_.iplaylistschema.md)[]›*
+
+A Promise of the playlists
 
 ___
 
@@ -303,6 +312,20 @@ ___
 Defined in node_modules/@types/node/globals.d.ts:560
 
 **Returns:** *number*
+
+___
+
+###  getPlaylists
+
+▸ **getPlaylists**(): *Promise‹[IPlaylistSchema](_models_playlist_.iplaylistschema.md)[]›*
+
+*Defined in [src/models/Music.ts:51](https://github.com/Xisabla/Korbots/blob/929890c/server/src/models/Music.ts#L51)*
+
+Get all parent playlists of the music
+
+**Returns:** *Promise‹[IPlaylistSchema](_models_playlist_.iplaylistschema.md)[]›*
+
+A Promise of the playlists
 
 ___
 

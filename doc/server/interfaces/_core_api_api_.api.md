@@ -24,7 +24,7 @@ Interface of API
 
 • **baseUrl**: *string*
 
-*Defined in [src/core/API/API.ts:6](https://github.com/Xisabla/Korbots/blob/6040ffa/server/src/core/API/API.ts#L6)*
+*Defined in [src/core/API/API.ts:6](https://github.com/Xisabla/Korbots/blob/929890c/server/src/core/API/API.ts#L6)*
 
 Base url of the API for fetching
 
@@ -34,7 +34,7 @@ ___
 
 • **envKeyEntry**: *string*
 
-*Defined in [src/core/API/API.ts:8](https://github.com/Xisabla/Korbots/blob/6040ffa/server/src/core/API/API.ts#L8)*
+*Defined in [src/core/API/API.ts:8](https://github.com/Xisabla/Korbots/blob/929890c/server/src/core/API/API.ts#L8)*
 
 The entry of the api key inside the .env file eg: API_KEY_OPENWEATHER
 
@@ -44,6 +44,6 @@ ___
 
 • **name**: *string*
 
-*Defined in [src/core/API/API.ts:4](https://github.com/Xisabla/Korbots/blob/6040ffa/server/src/core/API/API.ts#L4)*
+*Defined in [src/core/API/API.ts:4](https://github.com/Xisabla/Korbots/blob/929890c/server/src/core/API/API.ts#L4)*
 
 The name of the API, required to store it into the Application API Store

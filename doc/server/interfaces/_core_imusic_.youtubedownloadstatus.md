@@ -21,7 +21,7 @@ Information about the current download status for a video from Youtube
 
 • **status**: *object*
 
-*Defined in [src/core/IMusic.ts:91](https://github.com/Xisabla/Korbots/blob/6040ffa/server/src/core/IMusic.ts#L91)*
+*Defined in [src/core/IMusic.ts:91](https://github.com/Xisabla/Korbots/blob/929890c/server/src/core/IMusic.ts#L91)*
 
 #### Type declaration:
 
@@ -37,4 +37,4 @@ ___
 
 • **video**: *[DownloadedVideo](_core_imusic_.downloadedvideo.md)*
 
-*Defined in [src/core/IMusic.ts:90](https://github.com/Xisabla/Korbots/blob/6040ffa/server/src/core/IMusic.ts#L90)*
+*Defined in [src/core/IMusic.ts:90](https://github.com/Xisabla/Korbots/blob/929890c/server/src/core/IMusic.ts#L90)*
