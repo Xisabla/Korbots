@@ -21,7 +21,7 @@ Content of an Error Response from Openweather API
 
 • **cod**: *string*
 
-*Defined in [src/core/API/IOpenWeather.ts:8](https://github.com/Xisabla/Korbots/blob/929890c/server/src/core/API/IOpenWeather.ts#L8)*
+*Defined in [src/core/API/IOpenWeather.ts:8](https://github.com/Xisabla/Korbots/blob/02d848f/server/src/core/API/IOpenWeather.ts#L8)*
 
 Error code
 
@@ -31,6 +31,6 @@ ___
 
 • **message**: *string*
 
-*Defined in [src/core/API/IOpenWeather.ts:10](https://github.com/Xisabla/Korbots/blob/929890c/server/src/core/API/IOpenWeather.ts#L10)*
+*Defined in [src/core/API/IOpenWeather.ts:10](https://github.com/Xisabla/Korbots/blob/02d848f/server/src/core/API/IOpenWeather.ts#L10)*
 
 Error details
