@@ -214,12 +214,13 @@ export class MusicModule extends Module {
     protected registerTasks(): number[] {
         // Schedules
         const eachHours = '0 0 * * * *'
-        // const eachDays = '0 0 0 * * *'
+        const eachDays = '0 0 0 * * *'
 
         // Registering
         const ids: number[] = [
             this.registerTask(() => this.removeOrphans(), eachHours),
-            this.registerTask(() => this.removeNonStored(), eachHours)
+            this.registerTask(() => this.removeNonStored(), eachHours),
+            this.registerTask(() => this.removeUnregistered(), eachDays)
         ]
 
         log(`Registered ${ids.length} tasks`)
@@ -271,6 +272,48 @@ export class MusicModule extends Module {
                 return !exists
             })
         })
+    }
+
+    /**
+     * Look for files in the storage that are not in the database, then remove them (they are very useless)
+     * @returns A Promise of the done job
+     */
+    private removeUnregistered(): Promise<any> {
+        log(`Looking for unregistered files...`)
+
+        const files = fs.readdirSync(this.mp3Storage)
+        const storages = files.map((file) => path.join('musics', file))
+
+        return Promise.all(
+            storages.map((storage) =>
+                Promise.all([storage, Music.findOne({ path: storage })])
+            )
+        )
+            .then((musics) => musics.filter((music) => music[1] === null))
+            .then((musics) => {
+                log(`${musics.length} unregistered files found, removing...`)
+                return musics.map((music) =>
+                    path.join(this.app.getStorage(), music[0])
+                )
+            })
+            .then((files) =>
+                files.map((file) => {
+                    try {
+                        fs.unlinkSync(file)
+                        return true
+                    } catch (err) {
+                        return false
+                    }
+                })
+            )
+            .then((results) =>
+                log(
+                    `Successfully removed ${
+                        results.filter((r) => r).length
+                    } unregistered files`
+                )
+            )
+            .catch((err) => log(`Unable to remove unregistered files: ${err}`))
     }
 
     // ---- Methods ----------------------------------
