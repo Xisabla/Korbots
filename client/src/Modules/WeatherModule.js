@@ -34,7 +34,7 @@ class WeatherModule extends React.Component {
 
         /* Set the context for the functions to be class object */
         this.getWeatherbyGeolocation = this.getWeatherbyGeolocation.bind(this)
-        this.getWeatherbyCoord = this.getWeatherbyCoords.bind(this)
+        this.getWeatherbyCoords = this.getWeatherbyCoords.bind(this)
         this.getWeatherbyCity = this.getWeatherbyCity.bind(this)
         this.handleChangeLocationMode = this.handleChangeLocationMode.bind(this)
         this.handleChangeCityMode = this.handleChangeCityMode.bind(this)
