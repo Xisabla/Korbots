@@ -128,7 +128,7 @@ class WeatherModule extends React.Component {
     }
 
     /* function to find the weather by the coordinates */
-    getWeatherbyCoord(ev) {
+    getWeatherbyCoords(ev) {
         const latitude = parseFloat(this.state.latitude)
         const longitude = parseFloat(this.state.longitude)
         this.props.socket.emit('weather:getCurrent', { latitude, longitude })
@@ -221,7 +221,7 @@ class WeatherModule extends React.Component {
                                     {/* Button to search the result with the 2 parameters entered */}
                                     <button
                                         onClick={this.getWeatherbyCoords}
-                                        type="button">
+                                        type="submit">
                                         Rechercher
                                     </button>
                                 </form>
@@ -248,7 +248,7 @@ class WeatherModule extends React.Component {
                                         {/* Button to search the result with the 2 parameters entered */}
                                         <button
                                             onClick={this.getWeatherbyCity}
-                                            type="button">
+                                            type="submit">
                                             Rechercher
                                         </button>
                                     </form>
