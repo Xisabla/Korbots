@@ -73,7 +73,7 @@ class MusicModule extends React.Component {
             if (this.state.addingToPlaylist === -1)
                 this.setState(() => ({
                     currentProgress: -1,
-                    currentSrc: 'http://localhost:3000/music/' + result._id
+                    currentSrc: window.location.origin + '/music/' + result._id
                 }))
             else {
                 this.props.socket.emit('music:getMusic', {
@@ -153,7 +153,7 @@ class MusicModule extends React.Component {
                 this.setState(() => ({ addingToPlaylist: -1 }))
             } else {
                 this.setState(() => ({
-                    currentSrc: 'http://localhost:3000/music/' + data._id
+                    currentSrc: window.location.origin + '/music/' + data._id
                 }))
             }
         })
@@ -183,7 +183,8 @@ class MusicModule extends React.Component {
         const { currentPlaylist, currentSrc } = this.state
         for (let i = 0; i < currentPlaylist.playlist.length; i++) {
             if (
-                'http://localhost:3000/music/' +
+                window.location.origin +
+                    '/music/' +
                     currentPlaylist.playlist[i]._id ===
                 currentSrc
             ) {
@@ -191,7 +192,8 @@ class MusicModule extends React.Component {
                 if (i >= currentPlaylist.playlist.length) i = 0
                 this.setState(() => ({
                     currentSrc:
-                        'http://localhost:3000/music/' +
+                        window.location.origin +
+                        '/music/' +
                         currentPlaylist.playlist[i]._id
                 }))
                 break
@@ -256,7 +258,8 @@ class MusicModule extends React.Component {
         }
         this.setState(() => ({
             currentSrc:
-                'http://localhost:3000/music/' +
+                window.location.origin +
+                '/music/' +
                 currentPlaylist.playlist[index]._id
         }))
     }
