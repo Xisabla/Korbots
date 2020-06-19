@@ -18,4 +18,4 @@
 
 • **log**: *Debugger* = debug('module:music')
 
-*Defined in [src/modules/MusicModule.ts:22](https://github.com/Xisabla/Korbots/blob/929890c/server/src/modules/MusicModule.ts#L22)*
+*Defined in [src/modules/MusicModule.ts:22](https://github.com/Xisabla/Korbots/blob/02d848f/server/src/modules/MusicModule.ts#L22)*
