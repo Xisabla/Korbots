@@ -90,7 +90,9 @@ MusicSchema.methods.addToPlaylist = function (
                 })
             )
 
-            return playlist.save().then(() => playlist)
+            return playlist
+                .save()
+                .then((playlist: IPlaylistSchema) => playlist.computeDuration())
         }
 
         return playlist

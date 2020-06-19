@@ -1,6 +1,6 @@
 import { Document, Model, model, Schema } from 'mongoose'
 
-import { Music } from './Music'
+import { IMusicSchema, Music } from './Music'
 
 // ---- Schema -----------------------------------
 
@@ -35,8 +35,10 @@ export interface IPlaylistSchema extends Document {
 
     // ---- Methods ----------------------------------
 
-    // TODO: compute the total duration of the playlist
-    // computeDuration(): Promise<IPlaylistSchema>
+    /**
+     * Compute the total duration of the playlist
+     */
+    computeDuration(): Promise<IPlaylistSchema>
 
     /**
      * Remove a song from the playlist
@@ -74,6 +76,22 @@ export interface IPlaylist extends Model<IPlaylistSchema> {
 
 // ---- Methods : Playlist ------------------
 
+PlaylistSchema.methods.computeDuration = function (): Promise<IPlaylistSchema> {
+    const p: Promise<number[]> = Promise.all(
+        this.songs.map((song: IMusicSchema) =>
+            Music.findById(song.id).then((music) => music.duration)
+        )
+    )
+
+    return p
+        .then((durations: number[]) => durations.reduce((a, b) => a + b))
+        .then((duration) => {
+            this.duration = duration
+
+            return this.save()
+        })
+}
+
 PlaylistSchema.methods.removeSong = function (
     id: string
 ): Promise<IPlaylistSchema> {
@@ -83,7 +101,9 @@ PlaylistSchema.methods.removeSong = function (
 
     this.songs = songs
 
-    return this.save()
+    return this.save().then((playlist: IPlaylistSchema) =>
+        playlist.computeDuration()
+    )
 }
 
 PlaylistSchema.methods.removeSongSource = function (

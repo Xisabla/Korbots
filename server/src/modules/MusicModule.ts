@@ -465,8 +465,7 @@ export class MusicModule extends Module {
             .then((playlist) => {
                 log(`Removed playlist: ${playlist.name}`)
                 socket.emit('music:removedPlaylist', playlist.toJSON())
-            }
-            )
+            })
             .catch((err) => socket.emit('music:error', err))
     }
 
