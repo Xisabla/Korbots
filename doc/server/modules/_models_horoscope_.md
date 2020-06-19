@@ -23,7 +23,7 @@
     HoroscopeSchema
 )
 
-*Defined in [src/models/Horoscope.ts:167](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Horoscope.ts#L167)*
+*Defined in [src/models/Horoscope.ts:167](https://github.com/Xisabla/Korbots/blob/f723afa/server/src/models/Horoscope.ts#L167)*
 
 ___
 
@@ -43,4 +43,4 @@ ___
     { collection: 'horoscope' }
 )
 
-*Defined in [src/models/Horoscope.ts:9](https://github.com/Xisabla/Korbots/blob/76dbc29/server/src/models/Horoscope.ts#L9)*
+*Defined in [src/models/Horoscope.ts:9](https://github.com/Xisabla/Korbots/blob/f723afa/server/src/models/Horoscope.ts#L9)*
