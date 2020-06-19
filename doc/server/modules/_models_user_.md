@@ -20,7 +20,7 @@
 
 • **User**: *[IUser](../interfaces/_models_user_.iuser.md)‹›* = model<IUserSchema, IUser>('User', UserSchema)
 
-*Defined in [src/models/User.ts:26](https://github.com/Xisabla/Korbots/blob/7261d8b/server/src/models/User.ts#L26)*
+*Defined in [src/models/User.ts:26](https://github.com/Xisabla/Korbots/blob/256fa13/server/src/models/User.ts#L26)*
 
 ___
 
@@ -35,4 +35,4 @@ ___
     { collection: 'users-socket' }
 )
 
-*Defined in [src/models/User.ts:3](https://github.com/Xisabla/Korbots/blob/7261d8b/server/src/models/User.ts#L3)*
+*Defined in [src/models/User.ts:3](https://github.com/Xisabla/Korbots/blob/256fa13/server/src/models/User.ts#L3)*

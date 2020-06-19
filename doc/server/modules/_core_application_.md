@@ -23,4 +23,4 @@
 
 • **log**: *Debugger* = debug('core:Application')
 
-*Defined in [src/core/Application.ts:14](https://github.com/Xisabla/Korbots/blob/7261d8b/server/src/core/Application.ts#L14)*
+*Defined in [src/core/Application.ts:14](https://github.com/Xisabla/Korbots/blob/256fa13/server/src/core/Application.ts#L14)*

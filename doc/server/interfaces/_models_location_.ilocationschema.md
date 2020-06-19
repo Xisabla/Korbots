@@ -66,7 +66,7 @@ ___
 
 • **city**: *string*
 
-*Defined in [src/models/Location.ts:38](https://github.com/Xisabla/Korbots/blob/7261d8b/server/src/models/Location.ts#L38)*
+*Defined in [src/models/Location.ts:38](https://github.com/Xisabla/Korbots/blob/256fa13/server/src/models/Location.ts#L38)*
 
 City of the Location
 
@@ -88,7 +88,7 @@ ___
 
 • **country**: *string*
 
-*Defined in [src/models/Location.ts:40](https://github.com/Xisabla/Korbots/blob/7261d8b/server/src/models/Location.ts#L40)*
+*Defined in [src/models/Location.ts:40](https://github.com/Xisabla/Korbots/blob/256fa13/server/src/models/Location.ts#L40)*
 
 Country of the Location
 
@@ -125,7 +125,7 @@ ___
 
 • **latitude**: *number*
 
-*Defined in [src/models/Location.ts:34](https://github.com/Xisabla/Korbots/blob/7261d8b/server/src/models/Location.ts#L34)*
+*Defined in [src/models/Location.ts:34](https://github.com/Xisabla/Korbots/blob/256fa13/server/src/models/Location.ts#L34)*
 
 Latitude of the Location
 
@@ -135,7 +135,7 @@ ___
 
 • **longitude**: *number*
 
-*Defined in [src/models/Location.ts:36](https://github.com/Xisabla/Korbots/blob/7261d8b/server/src/models/Location.ts#L36)*
+*Defined in [src/models/Location.ts:36](https://github.com/Xisabla/Korbots/blob/256fa13/server/src/models/Location.ts#L36)*
 
 Longitude of the Location
 

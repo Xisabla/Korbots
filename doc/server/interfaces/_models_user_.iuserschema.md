@@ -75,7 +75,7 @@ ___
 
 • **connected**? : *boolean*
 
-*Defined in [src/models/User.ts:14](https://github.com/Xisabla/Korbots/blob/7261d8b/server/src/models/User.ts#L14)*
+*Defined in [src/models/User.ts:14](https://github.com/Xisabla/Korbots/blob/256fa13/server/src/models/User.ts#L14)*
 
 ___
 
@@ -122,7 +122,7 @@ ___
 
 • **socketId**? : *string*
 
-*Defined in [src/models/User.ts:15](https://github.com/Xisabla/Korbots/blob/7261d8b/server/src/models/User.ts#L15)*
+*Defined in [src/models/User.ts:15](https://github.com/Xisabla/Korbots/blob/256fa13/server/src/models/User.ts#L15)*
 
 ___
 
@@ -130,7 +130,7 @@ ___
 
 • **username**: *string*
 
-*Defined in [src/models/User.ts:13](https://github.com/Xisabla/Korbots/blob/7261d8b/server/src/models/User.ts#L13)*
+*Defined in [src/models/User.ts:13](https://github.com/Xisabla/Korbots/blob/256fa13/server/src/models/User.ts#L13)*
 
 ## Methods
 
