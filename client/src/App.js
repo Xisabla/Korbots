@@ -87,20 +87,22 @@ class App extends Component {
             input.grabbing = true
         } else if (ev.target.className.includes('lockTarget')) {
             input.modulesLocked = this.state.modulesLocked
-            input.modulesLocked[index] = !input.modulesLocked[index]
+            input.modulesLocked[input.holding] = !input.modulesLocked[
+                input.holding
+            ]
             ev.target.className = `fas fa-lock${
-                input.modulesLocked[index] ? '' : '-open'
+                input.modulesLocked[input.holding] ? '' : '-open'
             } lockTarget`
-            input.holding = input.modulesLocked[index]
-                ? index
-                : index == 0 && input.modulesLocked.length > 1
+            input.holding = input.modulesLocked[input.holding]
+                ? input.holding
+                : input.holding == 0 && input.modulesLocked.length > 1
                 ? 1
                 : 0
         } else if (ev.target.className.includes('closeTarget')) {
             this.handleRemoveModule(index)
             //input.holding = -1
             setTimeout(() => {
-                this.updateModules()
+                this.updateModules(true)
                 this.setState(() => ({ holding: -1 }))
             })
         }
@@ -124,18 +126,138 @@ class App extends Component {
     keepBetween(value, min, max) {
         return value < min ? min : value > max ? max : value
     }
+
+    /**
+     * Check if at least two rectangles are overlapping
+     * @param {Array<{top:number, bottom: number, left:number, right:number}>} rects
+     */
+    hasOverlaps(rects) {
+        const { modulesRefs } = this.state
+        for (let i = 0; i < rects.length; i++) {
+            for (let j = 0; j < rects.length; j++) {
+                if (j !== i) {
+                    if (
+                        this.isOver(rects[i], rects[j]) &&
+                        modulesRefs[i].current.style.display !== 'none' &&
+                        modulesRefs[j].current.style.display !== 'none'
+                    )
+                        return true
+                }
+            }
+        }
+        return false
+    }
+
+    /**
+     * Generate a vector to avoid overlapping
+     * @param {Array<{top:number, bottom: number, left:number, right:number}>} rects
+     * @param {number} i
+     * @returns A 2d vector
+     */
+    generateOverlapVector(rects, i) {
+        const { pixelStep, modulesLocked, modulesRefs, holding } = this.state
+        let vect = { x: 0, y: 0 }
+        if (modulesRefs[i].current.style.display === 'none') return vect
+        for (let j = 0; j < rects.length; j++) {
+            if (j !== i) {
+                if (this.isOver(rects[i], rects[j])) {
+                    if (
+                        !modulesLocked[i] ||
+                        i == holding ||
+                        (modulesLocked[i] && modulesLocked[j])
+                    ) {
+                        if (
+                            rects[i].left === rects[j].left &&
+                            rects[i].right === rects[j].right
+                        ) {
+                            //x axis
+                            vect.x += i * pixelStep
+                        } else if (rects[i].left === rects[j].left) {
+                            if (
+                                rects[i].right < rects[j].right &&
+                                rects[i].left - pixelStep >= 0
+                            )
+                                vect.x -= pixelStep
+                            else vect.x += pixelStep
+                        } else if (rects[i].right == rects[j].right) {
+                            if (rects[i].left > rects[j].left)
+                                vect.x += pixelStep
+                            else if (rects[i].left - pixelStep >= 0)
+                                vect.x -= pixelStep
+                        } else if (
+                            rects[i].left <= rects[j].left ||
+                            rects[i].right <=
+                                rects[j].left +
+                                    (rects[j].right - rects[j].left) / 2
+                        ) {
+                            if (rects[i].left - pixelStep >= 0)
+                                vect.x -= pixelStep
+                        } else if (
+                            rects[i].right >= rects[j].right ||
+                            rects[i].left >
+                                rects[j].left +
+                                    (rects[j].right - rects[j].left) / 2
+                        ) {
+                            vect.x += pixelStep
+                        } else {
+                            vect.x += pixelStep
+                        }
+                        //y axis
+                        /*if (
+                        rects[i].top === rects[j].top &&
+                        rects[i].bottom === rects[j].bottom
+                        ) {
+                            vect.y += i * pixelStep
+                        } else if (rects[i].top === rects[j].top) {
+                            if (
+                                rects[i].bottom < rects[j].bottom &&
+                                rects[i].top - pixelStep >= 0
+                            )
+                                vect.y -= pixelStep
+                            else vect.y += pixelStep
+                        } else if (rects[i].bottom == rects[j].bottom) {
+                            if (rects[i].top > rects[j].top) vect.y += pixelStep
+                            else if (rects[i].top - pixelStep >= 0)
+                                vect.y -= pixelStep
+                        } else if (
+                            rects[i].top <= rects[j].top ||
+                            rects[i].bottom <=
+                                rects[j].top + (rects[j].bottom - rects[j].top) / 2
+                        ) {
+                            if (rects[i].top - pixelStep >= 0) vect.y -= pixelStep
+                        } else if (
+                            rects[i].bottom >= rects[j].bottom ||
+                            rects[i].top >
+                                rects[j].top + (rects[j].bottom - rects[j].top) / 2
+                        ) {
+                            vect.y += pixelStep
+                        } else {
+                            vect.y += pixelStep
+                        }*/
+                    } else return undefined
+                }
+            }
+        }
+        return vect
+    }
+
     /**
      * Prevent the modules from overlapping while dragging or resizing
+     * @param {boolean} rearrange
      */
-    updateModules = () => {
-        const {
+    updateModules = (rearrange) => {
+        let {
             modulesRefs,
             pixelStep,
             holding,
             modulesRatios,
             modulesLocked
         } = this.state
+        if (rearrange && modulesRefs.length) {
+            holding = 0
+        }
         if (holding === -1) return
+
         let rects = []
         for (let i = 0; i < modulesRefs.length; i++) {
             rects.push({
@@ -175,88 +297,84 @@ class App extends Component {
         rects[holding].right = rects[holding].left + itemWidth
         rects[holding].bottom = rects[holding].top + itemHeight
 
-        for (let i = 0; i < modulesRefs.length; i++) {
-            for (let j = 0; j < modulesRefs.length; j++) {
-                if (i !== j && j !== holding) {
-                    while (
-                        (!this.isOver(rects[i], rects[j]) ||
-                            modulesRefs[j].current.style.display === 'none' ||
-                            modulesRefs[i].current.style.display === 'none') &&
-                        rects[j].top > 0 &&
-                        !modulesLocked[j]
-                    ) {
-                        //put every module as close as possible to the top
-                        rects[j].top -= pixelStep
-                        rects[j].bottom -= pixelStep
-                        if (rects[j].top < 0) {
-                            rects[j].top = 0
-                            rects[j].bottom += pixelStep + rects[j].top
-                        }
-                    }
-                    while (
-                        (!this.isOver(rects[i], rects[j]) ||
-                            modulesRefs[j].current.style.display === 'none' ||
-                            modulesRefs[i].current.style.display === 'none') &&
-                        rects[j].left > 0 &&
-                        !modulesLocked[j]
-                    ) {
-                        //put every module as close as possible to the left
-                        rects[j].left -= pixelStep
-                        rects[j].right -= pixelStep
-                        if (rects[j].left < 0) {
-                            rects[j].left = 0
-                            rects[j].right += pixelStep + rects[j].left
-                        }
-                    }
-                    while (
-                        this.isOver(rects[i], rects[j]) &&
-                        modulesRefs[j].current.style.display !== 'none' &&
-                        modulesRefs[i].current.style.display !== 'none'
-                    ) {
-                        //TODO : More cases
-                        if (rects[i].right > rects[j].right) {
-                            //i overlaps j on the right
-                            if (
-                                ((!modulesLocked[j] && !modulesLocked[i]) ||
-                                    modulesLocked[i]) &&
-                                rects[j].left - pixelStep >= 0 //i is more or equally locked and possiblity to push j on the left
-                            ) {
-                                //then push j on the left
-                                rects[j].left -= pixelStep
-                                rects[j].right -= pixelStep
-                                //console.log(1)
-                            } else {
-                                //else keep i where it is on the x axis
-                                rects[i].left += pixelStep
-                                rects[i].right += pixelStep
-                                //console.log(2)
+        //Computes
+        if (rearrange) {
+            //order from left to right
+            let leftData = []
+            let order = []
+            for (let i = 0; i < rects.length; i++) {
+                leftData.push(rects[i].left)
+            }
+            let pastLeft = [...leftData]
+            leftData.sort((a, b) => a < b)
+            for (let i = 0; i < pastLeft.length; i++) {
+                for (let j = 0; j < leftData.length; j++) {
+                    if (!order.includes(j) && leftData[j] == pastLeft[i])
+                        order.push(j)
+                }
+            }
+            for (let x = 0; x < rects.length; x++) {
+                let i = order[x]
+                for (let y = 0; y < rects.length; y++) {
+                    let j = order[y]
+                    if (i !== j) {
+                        while (
+                            (!this.isOver(rects[i], rects[j]) ||
+                                modulesRefs[j].current.style.display ===
+                                    'none' ||
+                                modulesRefs[i].current.style.display ===
+                                    'none') &&
+                            rects[j].top > 0 &&
+                            !modulesLocked[j]
+                        ) {
+                            //put every module as close as possible to the top
+                            rects[j].top -= pixelStep
+                            rects[j].bottom -= pixelStep
+                            if (rects[j].top < 0) {
+                                rects[j].top = 0
+                                rects[j].bottom += pixelStep + rects[j].top
                             }
-                        } else if (rects[i].right >= rects[j].left) {
-                            //i overlaps j on the left
-                            if (
-                                (!modulesLocked[j] && !modulesLocked[i]) ||
-                                modulesLocked[i] //i is more or equally locked
-                            ) {
-                                //then push j on the right
-                                rects[j].left += pixelStep
-                                rects[j].right += pixelStep
-                            } else if (
-                                modulesLocked[j] &&
-                                rects[j].left - itemWidth >= 0 //j is more locked and i can be pushed on the left
-                            ) {
-                                //then keep i where it is on the x axis
-                                rects[i].left -= pixelStep
-                                rects[i].right -= pixelStep
-                            } else {
-                                //else push i on the right
-                                rects[i].left += pixelStep
-                                rects[i].right += pixelStep
+                        }
+                        while (
+                            (!this.isOver(rects[i], rects[j]) ||
+                                modulesRefs[j].current.style.display ===
+                                    'none' ||
+                                modulesRefs[i].current.style.display ===
+                                    'none') &&
+                            rects[j].left > 0 &&
+                            !modulesLocked[j]
+                        ) {
+                            //put every module as close as possible to the left
+                            rects[j].left -= pixelStep
+                            rects[j].right -= pixelStep
+                            if (rects[j].left < 0) {
+                                rects[j].left = 0
+                                rects[j].right += pixelStep + rects[j].left
                             }
-                            //console.log(3)
                         }
                     }
                 }
             }
+        }
+        let security = 1000
+        while (this.hasOverlaps(rects) && security > 0) {
+            //for (let x = 0; x < 100; x++) {
+            let overlapsVectors = []
+            for (let i = 0; i < rects.length; i++) {
+                let v = this.generateOverlapVector(rects, i)
+                if (v) overlapsVectors.push(v)
+                else {
+                    overlapsVectors.push({ x: 0, y: 0 })
+                    security = 0
+                }
+            }
+            for (let i = 0; i < overlapsVectors.length; i++) {
+                rects[i].left += overlapsVectors[i].x
+                rects[i].right += overlapsVectors[i].x
+                rects[i].top += overlapsVectors[i].y
+                rects[i].bottom += overlapsVectors[i].y
+            }
+            security--
         }
 
         for (let i = 0; i < modulesRefs.length; i++) {
@@ -276,7 +394,7 @@ class App extends Component {
         const { holding } = this.state
         if (holding === -1) return
         this.updateModules()
-        console.log(holding)
+        //console.log(holding)
         this.setState(() => ({
             holding: -1,
             grabbing: false
@@ -369,7 +487,7 @@ class App extends Component {
             for (i = 0; i < modules.length; i++) {
                 if (modules[i] === Module) {
                     if (modulesRefs[i].current.style.display === 'none')
-                        modulesRefs[i].current.style.display = 'initial'
+                        modulesRefs[i].current.style.display = 'block'
                     else {
                         alert('Module already loaded !')
                     }
@@ -427,7 +545,7 @@ class App extends Component {
             <div
                 onMouseMove={(ev) => this.moveModule(ev)}
                 onMouseUp={() => {
-                    this.setState({ grabbing: false })
+                    this.setState({ grabbing: false, holding: -1 })
                 }}>
                 <Settings
                     onload={(ref) => {
@@ -445,6 +563,7 @@ class App extends Component {
                             settingsOnClick={this.settingsOnClick}
                             settings={settings}
                             onAddModule={this.handleAddModule}
+                            modulesUpdate={this.updateModules}
                         />
                         <div className="col-10">
                             <div className="display-4 font-italic font-weight-light text-center my-2">

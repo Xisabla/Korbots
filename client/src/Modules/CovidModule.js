@@ -46,7 +46,9 @@ class CovidModule extends React.Component {
                 <i className="fas fa-lock-open lockTarget"></i>
                 <i className="fas fa-times closeTarget"></i>
                 <div className="module-body">
-                    <svg viewBox="0 0 400 15" className="module-title">
+                    <svg
+                        viewBox="0 -20 900 50"
+                        className="module-title title-container__title">
                         <text x="0" y="15">
                             COVID-19 Info
                         </text>

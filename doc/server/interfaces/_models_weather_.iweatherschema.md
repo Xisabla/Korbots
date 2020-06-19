@@ -27,8 +27,10 @@ Detailed Weather Document (WeatherSchema) interface
 * [name](_models_weather_.iweatherschema.md#optional-name)
 * [schema](_models_weather_.iweatherschema.md#schema)
 * [temperature](_models_weather_.iweatherschema.md#temperature)
+* [updateScore](_models_weather_.iweatherschema.md#updatescore)
 * [weather](_models_weather_.iweatherschema.md#weather)
 * [weatherDescription](_models_weather_.iweatherschema.md#weatherdescription)
+* [weatherIcon](_models_weather_.iweatherschema.md#weathericon)
 * [wind](_models_weather_.iweatherschema.md#wind)
 
 ### Methods
@@ -37,10 +39,12 @@ Detailed Weather Document (WeatherSchema) interface
 * [addListener](_models_weather_.iweatherschema.md#addlistener)
 * [checkLocationFieldsUpdate](_models_weather_.iweatherschema.md#checklocationfieldsupdate)
 * [checkUpdate](_models_weather_.iweatherschema.md#checkupdate)
+* [decrementUpdateScore](_models_weather_.iweatherschema.md#decrementupdatescore)
 * [emit](_models_weather_.iweatherschema.md#emit)
 * [eventNames](_models_weather_.iweatherschema.md#eventnames)
 * [getMaxListeners](_models_weather_.iweatherschema.md#getmaxlisteners)
 * [increment](_models_weather_.iweatherschema.md#increment)
+* [incrementUpdateScore](_models_weather_.iweatherschema.md#incrementupdatescore)
 * [listenerCount](_models_weather_.iweatherschema.md#listenercount)
 * [listeners](_models_weather_.iweatherschema.md#listeners)
 * [model](_models_weather_.iweatherschema.md#model)
@@ -67,7 +71,7 @@ Detailed Weather Document (WeatherSchema) interface
 
 • **__v**? : *number*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[__v](_models_weather_.iweatherschema.md#optional-__v)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[__v](_models_playlist_.iplaylistschema.md#optional-__v)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3636
 
@@ -80,7 +84,7 @@ ___
 
 • **collection**: *Collection*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[collection](_models_weather_.iweatherschema.md#collection)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[collection](_models_playlist_.iplaylistschema.md#collection)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3657
 
@@ -92,7 +96,7 @@ ___
 
 • **country**? : *string*
 
-*Defined in [src/models/Weather.ts:69](https://github.com/Xisabla/Korbots/blob/e566151/server/src/models/Weather.ts#L69)*
+*Defined in [src/models/Weather.ts:59](https://github.com/Xisabla/Korbots/blob/4bc77ee/server/src/models/Weather.ts#L59)*
 
 Country of the location
 
@@ -102,7 +106,7 @@ ___
 
 • **date**: *Date*
 
-*Defined in [src/models/Weather.ts:73](https://github.com/Xisabla/Korbots/blob/e566151/server/src/models/Weather.ts#L73)*
+*Defined in [src/models/Weather.ts:63](https://github.com/Xisabla/Korbots/blob/4bc77ee/server/src/models/Weather.ts#L63)*
 
 Date of the forecast
 
@@ -112,7 +116,7 @@ ___
 
 • **db**: *Connection*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[db](_models_weather_.iweatherschema.md#db)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[db](_models_playlist_.iplaylistschema.md#db)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3660
 
@@ -124,7 +128,7 @@ ___
 
 • **humidity**: *number*
 
-*Defined in [src/models/Weather.ts:57](https://github.com/Xisabla/Korbots/blob/e566151/server/src/models/Weather.ts#L57)*
+*Defined in [src/models/Weather.ts:45](https://github.com/Xisabla/Korbots/blob/4bc77ee/server/src/models/Weather.ts#L45)*
 
 Humidity in %
 
@@ -134,7 +138,7 @@ ___
 
 • **id**? : *any*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[id](_models_weather_.iweatherschema.md#optional-id)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[id](_models_playlist_.iplaylistschema.md#optional-id)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:1624
 
@@ -149,7 +153,7 @@ ___
 
 • **lastUpdate**: *Date*
 
-*Defined in [src/models/Weather.ts:75](https://github.com/Xisabla/Korbots/blob/e566151/server/src/models/Weather.ts#L75)*
+*Defined in [src/models/Weather.ts:65](https://github.com/Xisabla/Korbots/blob/4bc77ee/server/src/models/Weather.ts#L65)*
 
 Last update from the internal database
 
@@ -159,7 +163,7 @@ ___
 
 • **latitude**: *number*
 
-*Defined in [src/models/Weather.ts:65](https://github.com/Xisabla/Korbots/blob/e566151/server/src/models/Weather.ts#L65)*
+*Defined in [src/models/Weather.ts:55](https://github.com/Xisabla/Korbots/blob/4bc77ee/server/src/models/Weather.ts#L55)*
 
 Latitude of the location
 
@@ -169,7 +173,7 @@ ___
 
 • **longitude**: *number*
 
-*Defined in [src/models/Weather.ts:67](https://github.com/Xisabla/Korbots/blob/e566151/server/src/models/Weather.ts#L67)*
+*Defined in [src/models/Weather.ts:57](https://github.com/Xisabla/Korbots/blob/4bc77ee/server/src/models/Weather.ts#L57)*
 
 Longitude of the location
 
@@ -179,7 +183,7 @@ ___
 
 • **name**? : *string*
 
-*Defined in [src/models/Weather.ts:71](https://github.com/Xisabla/Korbots/blob/e566151/server/src/models/Weather.ts#L71)*
+*Defined in [src/models/Weather.ts:61](https://github.com/Xisabla/Korbots/blob/4bc77ee/server/src/models/Weather.ts#L61)*
 
 City name of the location
 
@@ -189,7 +193,7 @@ ___
 
 • **schema**: *Schema*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[schema](_models_weather_.iweatherschema.md#schema)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[schema](_models_playlist_.iplaylistschema.md#schema)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3663
 
@@ -201,9 +205,19 @@ ___
 
 • **temperature**: *number*
 
-*Defined in [src/models/Weather.ts:55](https://github.com/Xisabla/Korbots/blob/e566151/server/src/models/Weather.ts#L55)*
+*Defined in [src/models/Weather.ts:43](https://github.com/Xisabla/Korbots/blob/4bc77ee/server/src/models/Weather.ts#L43)*
 
 Temperature in Ke
+
+___
+
+###  updateScore
+
+• **updateScore**: *number*
+
+*Defined in [src/models/Weather.ts:67](https://github.com/Xisabla/Korbots/blob/4bc77ee/server/src/models/Weather.ts#L67)*
+
+Score that increase on update checking, decrease on cron update
 
 ___
 
@@ -211,7 +225,7 @@ ___
 
 • **weather**: *string*
 
-*Defined in [src/models/Weather.ts:61](https://github.com/Xisabla/Korbots/blob/e566151/server/src/models/Weather.ts#L61)*
+*Defined in [src/models/Weather.ts:49](https://github.com/Xisabla/Korbots/blob/4bc77ee/server/src/models/Weather.ts#L49)*
 
 Weather short description
 
@@ -221,9 +235,19 @@ ___
 
 • **weatherDescription**: *string*
 
-*Defined in [src/models/Weather.ts:63](https://github.com/Xisabla/Korbots/blob/e566151/server/src/models/Weather.ts#L63)*
+*Defined in [src/models/Weather.ts:51](https://github.com/Xisabla/Korbots/blob/4bc77ee/server/src/models/Weather.ts#L51)*
 
 Weather complete description
+
+___
+
+###  weatherIcon
+
+• **weatherIcon**: *string*
+
+*Defined in [src/models/Weather.ts:53](https://github.com/Xisabla/Korbots/blob/4bc77ee/server/src/models/Weather.ts#L53)*
+
+Weahter icon ID from Openweather API
 
 ___
 
@@ -231,7 +255,7 @@ ___
 
 • **wind**: *number*
 
-*Defined in [src/models/Weather.ts:59](https://github.com/Xisabla/Korbots/blob/e566151/server/src/models/Weather.ts#L59)*
+*Defined in [src/models/Weather.ts:47](https://github.com/Xisabla/Korbots/blob/4bc77ee/server/src/models/Weather.ts#L47)*
 
 Wind speed in m/s
 
@@ -241,7 +265,7 @@ Wind speed in m/s
 
 ▸ **$isDeleted**(`isDeleted`: boolean): *void*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[$isDeleted](_models_weather_.iweatherschema.md#isdeleted)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[$isDeleted](_models_playlist_.iplaylistschema.md#isdeleted)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3612
 
@@ -257,7 +281,7 @@ Name | Type |
 
 ▸ **$isDeleted**(): *boolean*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[$isDeleted](_models_weather_.iweatherschema.md#isdeleted)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[$isDeleted](_models_playlist_.iplaylistschema.md#isdeleted)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3614
 
@@ -271,7 +295,7 @@ ___
 
 ▸ **addListener**(`event`: string | symbol, `listener`: function): *this*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[addListener](_models_weather_.iweatherschema.md#addlistener)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[addListener](_models_playlist_.iplaylistschema.md#addlistener)*
 
 Defined in node_modules/@types/node/globals.d.ts:553
 
@@ -297,7 +321,7 @@ ___
 
 ▸ **checkLocationFieldsUpdate**(): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
 
-*Defined in [src/models/Weather.ts:120](https://github.com/Xisabla/Korbots/blob/e566151/server/src/models/Weather.ts#L120)*
+*Defined in [src/models/Weather.ts:126](https://github.com/Xisabla/Korbots/blob/4bc77ee/server/src/models/Weather.ts#L126)*
 
 Check if the Documents needs to have it's location fields updated and update them if needed (calls updateLocationFields if needsLocationFieldsUpdate returns true)
 
@@ -311,7 +335,7 @@ ___
 
 ▸ **checkUpdate**(`isDaily?`: boolean): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
 
-*Defined in [src/models/Weather.ts:115](https://github.com/Xisabla/Korbots/blob/e566151/server/src/models/Weather.ts#L115)*
+*Defined in [src/models/Weather.ts:121](https://github.com/Xisabla/Korbots/blob/4bc77ee/server/src/models/Weather.ts#L121)*
 
 Check if the the Document needs to be updated and update it if needed (calls updateCurrent/updateDaily if needsUpdate returns true)
 
@@ -337,11 +361,29 @@ entry.checkUpdate(true).then(...)
 
 ___
 
+###  decrementUpdateScore
+
+▸ **decrementUpdateScore**(`value?`: number): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+
+*Defined in [src/models/Weather.ts:75](https://github.com/Xisabla/Korbots/blob/4bc77ee/server/src/models/Weather.ts#L75)*
+
+Decrement the value of updateScore
+
+**Parameters:**
+
+Name | Type | Description |
+------ | ------ | ------ |
+`value?` | number | Value to subtract to the current updateScore(default: 0.2)  |
+
+**Returns:** *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+
+___
+
 ###  emit
 
 ▸ **emit**(`event`: string | symbol, ...`args`: any[]): *boolean*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[emit](_models_weather_.iweatherschema.md#emit)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[emit](_models_playlist_.iplaylistschema.md#emit)*
 
 Defined in node_modules/@types/node/globals.d.ts:563
 
@@ -360,7 +402,7 @@ ___
 
 ▸ **eventNames**(): *Array‹string | symbol›*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[eventNames](_models_weather_.iweatherschema.md#eventnames)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[eventNames](_models_playlist_.iplaylistschema.md#eventnames)*
 
 Defined in node_modules/@types/node/globals.d.ts:568
 
@@ -372,7 +414,7 @@ ___
 
 ▸ **getMaxListeners**(): *number*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[getMaxListeners](_models_weather_.iweatherschema.md#getmaxlisteners)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[getMaxListeners](_models_playlist_.iplaylistschema.md#getmaxlisteners)*
 
 Defined in node_modules/@types/node/globals.d.ts:560
 
@@ -384,7 +426,7 @@ ___
 
 ▸ **increment**(): *this*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[increment](_models_weather_.iweatherschema.md#increment)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[increment](_models_playlist_.iplaylistschema.md#increment)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3603
 
@@ -394,11 +436,29 @@ Signal that we desire an increment of this documents version.
 
 ___
 
+###  incrementUpdateScore
+
+▸ **incrementUpdateScore**(`value?`: number): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+
+*Defined in [src/models/Weather.ts:81](https://github.com/Xisabla/Korbots/blob/4bc77ee/server/src/models/Weather.ts#L81)*
+
+Increment the value of updateScore
+
+**Parameters:**
+
+Name | Type | Description |
+------ | ------ | ------ |
+`value?` | number | Value to add to the current updateScore (default: 1)  |
+
+**Returns:** *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
+
+___
+
 ###  listenerCount
 
 ▸ **listenerCount**(`type`: string | symbol): *number*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[listenerCount](_models_weather_.iweatherschema.md#listenercount)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[listenerCount](_models_playlist_.iplaylistschema.md#listenercount)*
 
 Defined in node_modules/@types/node/globals.d.ts:564
 
@@ -416,7 +476,7 @@ ___
 
 ▸ **listeners**(`event`: string | symbol): *Function[]*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[listeners](_models_weather_.iweatherschema.md#listeners)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[listeners](_models_playlist_.iplaylistschema.md#listeners)*
 
 Defined in node_modules/@types/node/globals.d.ts:561
 
@@ -432,9 +492,9 @@ ___
 
 ###  model
 
-▸ **model**‹**T**›(`name`: string): *[Model](_models_weather_.iweather.md#model)‹T›*
+▸ **model**‹**T**›(`name`: string): *[Model](_models_playlist_.iplaylist.md#model)‹T›*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[model](_models_weather_.iweatherschema.md#model)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[model](_models_playlist_.iplaylistschema.md#model)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3609
 
@@ -450,7 +510,7 @@ Name | Type | Description |
 ------ | ------ | ------ |
 `name` | string | model name  |
 
-**Returns:** *[Model](_models_weather_.iweather.md#model)‹T›*
+**Returns:** *[Model](_models_playlist_.iplaylist.md#model)‹T›*
 
 ___
 
@@ -458,7 +518,7 @@ ___
 
 ▸ **needsLocationFieldsUpdate**(): *boolean*
 
-*Defined in [src/models/Weather.ts:99](https://github.com/Xisabla/Korbots/blob/e566151/server/src/models/Weather.ts#L99)*
+*Defined in [src/models/Weather.ts:105](https://github.com/Xisabla/Korbots/blob/4bc77ee/server/src/models/Weather.ts#L105)*
 
 **Returns:** *boolean*
 
@@ -476,7 +536,7 @@ ___
 
 ▸ **needsUpdate**(): *boolean*
 
-*Defined in [src/models/Weather.ts:89](https://github.com/Xisabla/Korbots/blob/e566151/server/src/models/Weather.ts#L89)*
+*Defined in [src/models/Weather.ts:95](https://github.com/Xisabla/Korbots/blob/4bc77ee/server/src/models/Weather.ts#L95)*
 
 **Returns:** *boolean*
 
@@ -494,7 +554,7 @@ ___
 
 ▸ **off**(`event`: string | symbol, `listener`: function): *this*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[off](_models_weather_.iweatherschema.md#off)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[off](_models_playlist_.iplaylistschema.md#off)*
 
 Defined in node_modules/@types/node/globals.d.ts:557
 
@@ -520,7 +580,7 @@ ___
 
 ▸ **on**(`event`: string | symbol, `listener`: function): *this*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[on](_models_weather_.iweatherschema.md#on)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[on](_models_playlist_.iplaylistschema.md#on)*
 
 Defined in node_modules/@types/node/globals.d.ts:554
 
@@ -546,7 +606,7 @@ ___
 
 ▸ **once**(`event`: string | symbol, `listener`: function): *this*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[once](_models_weather_.iweatherschema.md#once)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[once](_models_playlist_.iplaylistschema.md#once)*
 
 Defined in node_modules/@types/node/globals.d.ts:555
 
@@ -572,7 +632,7 @@ ___
 
 ▸ **prependListener**(`event`: string | symbol, `listener`: function): *this*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[prependListener](_models_weather_.iweatherschema.md#prependlistener)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[prependListener](_models_playlist_.iplaylistschema.md#prependlistener)*
 
 Defined in node_modules/@types/node/globals.d.ts:566
 
@@ -598,7 +658,7 @@ ___
 
 ▸ **prependOnceListener**(`event`: string | symbol, `listener`: function): *this*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[prependOnceListener](_models_weather_.iweatherschema.md#prependoncelistener)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[prependOnceListener](_models_playlist_.iplaylistschema.md#prependoncelistener)*
 
 Defined in node_modules/@types/node/globals.d.ts:567
 
@@ -624,7 +684,7 @@ ___
 
 ▸ **rawListeners**(`event`: string | symbol): *Function[]*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[rawListeners](_models_weather_.iweatherschema.md#rawlisteners)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[rawListeners](_models_playlist_.iplaylistschema.md#rawlisteners)*
 
 Defined in node_modules/@types/node/globals.d.ts:562
 
@@ -642,7 +702,7 @@ ___
 
 ▸ **remove**(`fn?`: function): *Promise‹this›*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[remove](_models_weather_.iweatherschema.md#remove)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[remove](_models_playlist_.iplaylistschema.md#remove)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3620
 
@@ -671,7 +731,7 @@ ___
 
 ▸ **removeAllListeners**(`event?`: string | symbol): *this*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[removeAllListeners](_models_weather_.iweatherschema.md#removealllisteners)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[removeAllListeners](_models_playlist_.iplaylistschema.md#removealllisteners)*
 
 Defined in node_modules/@types/node/globals.d.ts:558
 
@@ -689,7 +749,7 @@ ___
 
 ▸ **removeListener**(`event`: string | symbol, `listener`: function): *this*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[removeListener](_models_weather_.iweatherschema.md#removelistener)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[removeListener](_models_playlist_.iplaylistschema.md#removelistener)*
 
 Defined in node_modules/@types/node/globals.d.ts:556
 
@@ -715,7 +775,7 @@ ___
 
 ▸ **save**(`options?`: SaveOptions, `fn?`: function): *Promise‹this›*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[save](_models_weather_.iweatherschema.md#save)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[save](_models_playlist_.iplaylistschema.md#save)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3629
 
@@ -744,7 +804,7 @@ Name | Type |
 
 ▸ **save**(`fn?`: function): *Promise‹this›*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[save](_models_weather_.iweatherschema.md#save)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[save](_models_playlist_.iplaylistschema.md#save)*
 
 Defined in node_modules/@types/mongoose/index.d.ts:3630
 
@@ -769,7 +829,7 @@ ___
 
 ▸ **setMaxListeners**(`n`: number): *this*
 
-*Inherited from [IWeatherSchema](_models_weather_.iweatherschema.md).[setMaxListeners](_models_weather_.iweatherschema.md#setmaxlisteners)*
+*Inherited from [IPlaylistSchema](_models_playlist_.iplaylistschema.md).[setMaxListeners](_models_playlist_.iplaylistschema.md#setmaxlisteners)*
 
 Defined in node_modules/@types/node/globals.d.ts:559
 
@@ -787,7 +847,7 @@ ___
 
 ▸ **updateCurrent**(): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
 
-*Defined in [src/models/Weather.ts:128](https://github.com/Xisabla/Korbots/blob/e566151/server/src/models/Weather.ts#L128)*
+*Defined in [src/models/Weather.ts:134](https://github.com/Xisabla/Korbots/blob/4bc77ee/server/src/models/Weather.ts#L134)*
 
 Update the main fields of the Document dealing with Current Weather data
 
@@ -801,7 +861,7 @@ ___
 
 ▸ **updateDaily**(): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
 
-*Defined in [src/models/Weather.ts:133](https://github.com/Xisabla/Korbots/blob/e566151/server/src/models/Weather.ts#L133)*
+*Defined in [src/models/Weather.ts:139](https://github.com/Xisabla/Korbots/blob/4bc77ee/server/src/models/Weather.ts#L139)*
 
 Update the main fields of the Document dealing with Daily Weather data
 
@@ -815,7 +875,7 @@ ___
 
 ▸ **updateLocationFields**(): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
 
-*Defined in [src/models/Weather.ts:138](https://github.com/Xisabla/Korbots/blob/e566151/server/src/models/Weather.ts#L138)*
+*Defined in [src/models/Weather.ts:144](https://github.com/Xisabla/Korbots/blob/4bc77ee/server/src/models/Weather.ts#L144)*
 
 Update the location fields of the Document, will look for the name and country fields on a Current Weather API call
 

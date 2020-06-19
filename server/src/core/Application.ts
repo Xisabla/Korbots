@@ -1,6 +1,7 @@
 import debug from 'debug'
 import { config } from 'dotenv'
 import express from 'express'
+import * as fs from 'fs'
 import http from 'http'
 import mongoose, { Mongoose } from 'mongoose'
 import { ConnectionOptions } from 'mongoose'
@@ -8,6 +9,7 @@ import path from 'path'
 import socketIO, { Socket } from 'socket.io'
 
 import Module from './Module'
+import TaskManager from './TaskManager'
 
 const log = debug('core:Application')
 
@@ -18,6 +20,8 @@ export interface ApplicationOptions {
     server?: string
     /** Public path of the server (absolute please), default: path.join(server, 'public') */
     public?: string
+    /** Storage directory for server files */
+    storage?: string
     /** Port on which the server will listen */
     port?: number
     /** If set on true, will look un into .env file to load important configuration */
@@ -65,6 +69,8 @@ export default class Application {
     private _modules: Module[]
     /** Socket store */
     private _sockets: Socket[]
+    /** Tasks store */
+    private _tasks: TaskManager
     /** API store */
     public static apis: APIwk[]
 
@@ -86,6 +92,7 @@ export default class Application {
         this._options = {
             server,
             public: path.join(server, 'public'),
+            storage: path.join(__dirname, 'storage'),
             port: 3000
         }
 
@@ -98,6 +105,7 @@ export default class Application {
         if (options.useEnv) this.loadEnv()
 
         // Initialize server and data
+        this.checkStorage()
         this.init()
 
         // Fix event handlers scope
@@ -113,6 +121,7 @@ export default class Application {
 
         this._modules = []
         this._sockets = []
+        this._tasks = new TaskManager()
         if (!Application.apis) Application.apis = []
 
         this._app = express()
@@ -135,6 +144,42 @@ export default class Application {
             this._options.mongo.pass = process.env.MONGO_PASS
         if (process.env.MONGO_DB)
             this._options.mongo.dbname = process.env.MONGO_DB
+    }
+
+    // ---- Storage ----------------------------------
+
+    /**
+     * Get the path to the sub-storage directory for the given name, create directory if needed
+     * @param name Name of the sub-storage
+     * @returns The path to the sub-storage directory
+     */
+    public getStorage(name = '') {
+        const dir = path.join(this._options.storage, name)
+
+        if (!fs.existsSync(dir)) {
+            fs.mkdirSync(dir, { recursive: true })
+
+            log(`Sub storage created: ${dir}`)
+        }
+
+        return dir
+    }
+
+    /**
+     * Check for existing storage folder
+     */
+    private checkStorage() {
+        const { storage } = this._options
+
+        if (fs.existsSync(storage)) {
+            log(`Use storage: ${storage}`)
+        } else {
+            fs.mkdirSync(storage, {
+                recursive: true
+            })
+
+            log(`Storage created: ${storage}`)
+        }
     }
 
     // ---- Database ---------------------------------
@@ -351,7 +396,19 @@ export default class Application {
 
     // ---- Getters ----------------------------------
 
+    get io(): SocketIO.Server {
+        return this._io
+    }
+
     get sockets(): Socket[] {
         return this._sockets
+    }
+
+    get tasks(): TaskManager {
+        return this._tasks
+    }
+
+    get server(): express.Application {
+        return this._app
     }
 }
