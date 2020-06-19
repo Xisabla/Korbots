@@ -8,10 +8,7 @@ import App from './App'
 // NOTE: Will show errors while not running with the real server, that's why it is commented at the moment
 const socket = io()
 
-socket.on('connected', (id) => {
-    if (id === socket.id) console.log('Socket connected')
-})
-
+// TODO: Remove this in prod
 window.socket = socket
 
 // App Rendering

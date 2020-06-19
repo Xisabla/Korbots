@@ -2,9 +2,10 @@ import './App.scss'
 
 import { PropTypes } from 'prop-types'
 import React, { Component } from 'react'
+import Favicon from 'react-favicon'
 
+import favicon from './favicon.png'
 import LeftBar from './LeftBar'
-//import { CovidModule, WeatherModule } from './Modules'
 import Settings from './Settings'
 
 class App extends Component {
@@ -547,6 +548,7 @@ class App extends Component {
                 onMouseUp={() => {
                     this.setState({ grabbing: false, holding: -1 })
                 }}>
+                <Favicon url={favicon} />
                 <Settings
                     onload={(ref) => {
                         this.setState(() => ({ settingsRef: ref }))
