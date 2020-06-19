@@ -116,11 +116,13 @@ MusicSchema.methods.addToPlaylists = function (
 }
 
 MusicSchema.methods.getPlaylists = function (): Promise<IPlaylistSchema[]> {
-    return Playlist.find().then((playlists) => {
+    return Playlist.find().then((playlists) =>
         playlists.filter((playlist) => {
-            playlist.songs.find((songs) => songs.id === this.id)
+            return playlist.songs.find((song) => song.id === this.id)
+                ? true
+                : false
         })
-    })
+    )
 }
 
 // ---- Statics : Music ---------------------
@@ -166,9 +168,22 @@ MusicSchema.statics.doesExist = function (
 }
 
 MusicSchema.statics.checkOrphan = function (): Promise<IMusicSchema[]> {
-    // return Music.find().then((musics) => Promise.all(musics.map((music) => P))
-
-    return Music.find().then((musics) => musics)
+    return Music.find()
+        .then((musics) =>
+            Promise.all(
+                musics.map((music) =>
+                    Promise.all([
+                        music,
+                        music
+                            .getPlaylists()
+                            .then((playlists) => playlists.length)
+                    ])
+                )
+            )
+        )
+        .then((musics) => musics.filter((music) => music[1] < 1))
+        .then((musics) => musics.map((music) => music[0]))
+        .then((musics) => Promise.all(musics.map((music) => music.remove())))
 }
 
 // ---- Models ------------------------------
