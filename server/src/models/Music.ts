@@ -93,11 +93,6 @@ export interface IMusic extends Model<IMusicSchema> {
      * @returns A Promise with the Array of all orphan musics
      */
     getOrphans(): Promise<IMusicSchema[]>
-
-    // ---- Actions ----------------------------------
-    // TODO: For a Task: Check for all entries in the DB if the storage exists, remove the Music from the DB and playlists if
-    //  the file doesn't exist
-    // checkStorage(): Promise<any>
 }
 
 // ---- Methods : Music ---------------------
@@ -151,7 +146,6 @@ MusicSchema.methods.isOrphan = function (): Promise<boolean> {
 MusicSchema.methods.safeRemove = function (): Promise<IMusicSchema> {
     return this.getPlaylists()
         .then((playlists: IPlaylistSchema[]) => {
-            console.log(playlists)
             return Promise.all(
                 playlists.map((playlist) => playlist.removeSong(this.id))
             )
