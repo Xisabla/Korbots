@@ -1,3 +1,4 @@
+import { duration } from 'moment'
 import { Document, Model, model, Schema } from 'mongoose'
 
 import { IMusicSchema, Music } from './Music'
@@ -83,13 +84,19 @@ PlaylistSchema.methods.computeDuration = function (): Promise<IPlaylistSchema> {
         )
     )
 
-    return p
-        .then((durations: number[]) => durations.reduce((a, b) => a + b))
-        .then((duration) => {
-            this.duration = duration
+    if (this.songs.length == 0) {
+        this.duration = 0
 
-            return this.save()
-        })
+        return this.save()
+    } else {
+        return p
+            .then((durations: number[]) => durations.reduce((a, b) => a + b))
+            .then((duration) => {
+                this.duration = duration
+
+                return this.save()
+            })
+    }
 }
 
 PlaylistSchema.methods.removeSong = function (
