@@ -83,7 +83,7 @@ ___
 
 • **date**: *Date*
 
-*Defined in [src/models/Horoscope.ts:27](https://github.com/Xisabla/Korbots/blob/7fbbf5f/server/src/models/Horoscope.ts#L27)*
+*Defined in [src/models/Horoscope.ts:27](https://github.com/Xisabla/Korbots/blob/abf6d68/server/src/models/Horoscope.ts#L27)*
 
 day of the horoscope telling
 
@@ -105,7 +105,7 @@ ___
 
 • **family**: *string*
 
-*Defined in [src/models/Horoscope.ts:33](https://github.com/Xisabla/Korbots/blob/7fbbf5f/server/src/models/Horoscope.ts#L33)*
+*Defined in [src/models/Horoscope.ts:33](https://github.com/Xisabla/Korbots/blob/abf6d68/server/src/models/Horoscope.ts#L33)*
 
 ___
 
@@ -113,7 +113,7 @@ ___
 
 • **health**: *string*
 
-*Defined in [src/models/Horoscope.ts:34](https://github.com/Xisabla/Korbots/blob/7fbbf5f/server/src/models/Horoscope.ts#L34)*
+*Defined in [src/models/Horoscope.ts:34](https://github.com/Xisabla/Korbots/blob/abf6d68/server/src/models/Horoscope.ts#L34)*
 
 ___
 
@@ -136,7 +136,7 @@ ___
 
 • **love**: *string*
 
-*Defined in [src/models/Horoscope.ts:31](https://github.com/Xisabla/Korbots/blob/7fbbf5f/server/src/models/Horoscope.ts#L31)*
+*Defined in [src/models/Horoscope.ts:31](https://github.com/Xisabla/Korbots/blob/abf6d68/server/src/models/Horoscope.ts#L31)*
 
 horoscope sentences determined from luckyNumber in 4 categories
 
@@ -146,7 +146,7 @@ ___
 
 • **luckyNumber**: *number*
 
-*Defined in [src/models/Horoscope.ts:28](https://github.com/Xisabla/Korbots/blob/7fbbf5f/server/src/models/Horoscope.ts#L28)*
+*Defined in [src/models/Horoscope.ts:28](https://github.com/Xisabla/Korbots/blob/abf6d68/server/src/models/Horoscope.ts#L28)*
 
 ___
 
@@ -154,7 +154,7 @@ ___
 
 • **mood**? : *string*
 
-*Defined in [src/models/Horoscope.ts:29](https://github.com/Xisabla/Korbots/blob/7fbbf5f/server/src/models/Horoscope.ts#L29)*
+*Defined in [src/models/Horoscope.ts:29](https://github.com/Xisabla/Korbots/blob/abf6d68/server/src/models/Horoscope.ts#L29)*
 
 ___
 
@@ -174,7 +174,7 @@ ___
 
 • **sign**: *string*
 
-*Defined in [src/models/Horoscope.ts:25](https://github.com/Xisabla/Korbots/blob/7fbbf5f/server/src/models/Horoscope.ts#L25)*
+*Defined in [src/models/Horoscope.ts:25](https://github.com/Xisabla/Korbots/blob/abf6d68/server/src/models/Horoscope.ts#L25)*
 
 astrological sign
 
@@ -184,7 +184,7 @@ ___
 
 • **work**: *string*
 
-*Defined in [src/models/Horoscope.ts:32](https://github.com/Xisabla/Korbots/blob/7fbbf5f/server/src/models/Horoscope.ts#L32)*
+*Defined in [src/models/Horoscope.ts:32](https://github.com/Xisabla/Korbots/blob/abf6d68/server/src/models/Horoscope.ts#L32)*
 
 ## Methods
 
@@ -291,7 +291,7 @@ ___
 
 ▸ **getSentence**(): *Promise‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
-*Defined in [src/models/Horoscope.ts:49](https://github.com/Xisabla/Korbots/blob/7fbbf5f/server/src/models/Horoscope.ts#L49)*
+*Defined in [src/models/Horoscope.ts:49](https://github.com/Xisabla/Korbots/blob/abf6d68/server/src/models/Horoscope.ts#L49)*
 
 Generate the corresponding sentences in the 4 categories depending on the luckyNumber
 
@@ -379,7 +379,7 @@ ___
 
 ▸ **needsUpdate**(): *boolean*
 
-*Defined in [src/models/Horoscope.ts:39](https://github.com/Xisabla/Korbots/blob/7fbbf5f/server/src/models/Horoscope.ts#L39)*
+*Defined in [src/models/Horoscope.ts:39](https://github.com/Xisabla/Korbots/blob/abf6d68/server/src/models/Horoscope.ts#L39)*
 
 Check if it was fetched the right day (today)
 
@@ -686,7 +686,7 @@ ___
 
 ▸ **updateCurrent**(): *Promise‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
-*Defined in [src/models/Horoscope.ts:44](https://github.com/Xisabla/Korbots/blob/7fbbf5f/server/src/models/Horoscope.ts#L44)*
+*Defined in [src/models/Horoscope.ts:44](https://github.com/Xisabla/Korbots/blob/abf6d68/server/src/models/Horoscope.ts#L44)*
 
 Update by fetching API response
 

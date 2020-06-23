@@ -37,7 +37,7 @@
 
 *Inherited from [Module](_core_module_.module.md).[app](_core_module_.module.md#protected-app)*
 
-*Defined in [src/core/Module.ts:16](https://github.com/Xisabla/Korbots/blob/7fbbf5f/server/src/core/Module.ts#L16)*
+*Defined in [src/core/Module.ts:16](https://github.com/Xisabla/Korbots/blob/abf6d68/server/src/core/Module.ts#L16)*
 
 Application instance
 
@@ -49,7 +49,7 @@ ___
 
 *Inherited from [Module](_core_module_.module.md).[sockets](_core_module_.module.md#protected-sockets)*
 
-*Defined in [src/core/Module.ts:18](https://github.com/Xisabla/Korbots/blob/7fbbf5f/server/src/core/Module.ts#L18)*
+*Defined in [src/core/Module.ts:18](https://github.com/Xisabla/Korbots/blob/abf6d68/server/src/core/Module.ts#L18)*
 
 Internal sockets store, updated on SocketJoin and on SocketLeave
 
@@ -61,7 +61,7 @@ Internal sockets store, updated on SocketJoin and on SocketLeave
 
 *Overrides [Module](_core_module_.module.md).[name](_core_module_.module.md#name)*
 
-*Defined in [src/modules/HoroscopeModule.ts:62](https://github.com/Xisabla/Korbots/blob/7fbbf5f/server/src/modules/HoroscopeModule.ts#L62)*
+*Defined in [src/modules/HoroscopeModule.ts:62](https://github.com/Xisabla/Korbots/blob/abf6d68/server/src/modules/HoroscopeModule.ts#L62)*
 
 **Returns:** *string*
 
@@ -73,7 +73,7 @@ ___
 
 *Overrides [Module](_core_module_.module.md).[waitForDatabase](_core_module_.module.md#waitfordatabase)*
 
-*Defined in [src/modules/HoroscopeModule.ts:67](https://github.com/Xisabla/Korbots/blob/7fbbf5f/server/src/modules/HoroscopeModule.ts#L67)*
+*Defined in [src/modules/HoroscopeModule.ts:67](https://github.com/Xisabla/Korbots/blob/abf6d68/server/src/modules/HoroscopeModule.ts#L67)*
 
 **Returns:** *boolean*
 
@@ -83,7 +83,7 @@ ___
 
 ▸ **getCurrent**(`socket`: Socket, `data`: any): *void*
 
-*Defined in [src/modules/HoroscopeModule.ts:44](https://github.com/Xisabla/Korbots/blob/7fbbf5f/server/src/modules/HoroscopeModule.ts#L44)*
+*Defined in [src/modules/HoroscopeModule.ts:44](https://github.com/Xisabla/Korbots/blob/abf6d68/server/src/modules/HoroscopeModule.ts#L44)*
 
 Get the Current entry from Horoscope according to the data provided by the Socket, then send one event to the Socket
 
@@ -104,7 +104,7 @@ ___
 
 *Overrides [Module](_core_module_.module.md).[onSocketJoin](_core_module_.module.md#onsocketjoin)*
 
-*Defined in [src/modules/HoroscopeModule.ts:19](https://github.com/Xisabla/Korbots/blob/7fbbf5f/server/src/modules/HoroscopeModule.ts#L19)*
+*Defined in [src/modules/HoroscopeModule.ts:19](https://github.com/Xisabla/Korbots/blob/abf6d68/server/src/modules/HoroscopeModule.ts#L19)*
 
 **Parameters:**
 
@@ -122,7 +122,7 @@ ___
 
 *Inherited from [Module](_core_module_.module.md).[onSocketLeave](_core_module_.module.md#onsocketleave)*
 
-*Defined in [src/core/Module.ts:45](https://github.com/Xisabla/Korbots/blob/7fbbf5f/server/src/core/Module.ts#L45)*
+*Defined in [src/core/Module.ts:45](https://github.com/Xisabla/Korbots/blob/abf6d68/server/src/core/Module.ts#L45)*
 
 Function called once a Socket is disconnected
 
@@ -142,7 +142,7 @@ ___
 
 *Overrides [Module](_core_module_.module.md).[register](_core_module_.module.md#register)*
 
-*Defined in [src/modules/HoroscopeModule.ts:11](https://github.com/Xisabla/Korbots/blob/7fbbf5f/server/src/modules/HoroscopeModule.ts#L11)*
+*Defined in [src/modules/HoroscopeModule.ts:11](https://github.com/Xisabla/Korbots/blob/abf6d68/server/src/modules/HoroscopeModule.ts#L11)*
 
 **Parameters:**
 
@@ -160,7 +160,7 @@ ___
 
 *Inherited from [Module](_core_module_.module.md).[registerTask](_core_module_.module.md#protected-registertask)*
 
-*Defined in [src/core/Module.ts:61](https://github.com/Xisabla/Korbots/blob/7fbbf5f/server/src/core/Module.ts#L61)*
+*Defined in [src/core/Module.ts:61](https://github.com/Xisabla/Korbots/blob/abf6d68/server/src/core/Module.ts#L61)*
 
 A shortcut to register a Task into the Task Manager of the Application
 Will fill the field "origin" with the name of the Module
@@ -186,6 +186,6 @@ ___
 
 *Overrides [Module](_core_module_.module.md).[registerTasks](_core_module_.module.md#protected-abstract-registertasks)*
 
-*Defined in [src/modules/HoroscopeModule.ts:31](https://github.com/Xisabla/Korbots/blob/7fbbf5f/server/src/modules/HoroscopeModule.ts#L31)*
+*Defined in [src/modules/HoroscopeModule.ts:31](https://github.com/Xisabla/Korbots/blob/abf6d68/server/src/modules/HoroscopeModule.ts#L31)*
 
 **Returns:** *number[]*
