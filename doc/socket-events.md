@@ -51,3 +51,11 @@
 | music:sortedByAddingDate| server → client | Give to the client a sorted by adding date playlist                             | [IPlaylistSchema](server/interfaces/_models_playlist_.iplaylistschema.md)   |
 | music:shuffled      | server → client | Give to the client a shuffled playlist                                              | [IPlaylistSchema](server/interfaces/_models_playlist_.iplaylistschema.md)   |
 | music:unsorted      | server → client | Give to the client an unsorted playlist                                             | [IPlaylistSchema](server/interfaces/_models_playlist_.iplaylistschema.md)   |
+
+## [Horoscope Module](server/classes/__modules_horoscopemodule_.horoscopemodule.md)
+
+| Event Name           | Flow direction  | Description                                                                         | Content                                                |
+|----------------------|-----------------|-------------------------------------------------------------------------------------|--------------------------------------------------------|
+| horoscope:getCurrent   | client → server | Ask for the server to get the Current horoscope information                           | { sign }                                |
+| horoscope:currentData | server → client | Ask for the server to get the Daily weather information for a given day             | [IHoroscopeSchema](server/interfaces/_models_horoscope_.ihoroscopeschema.md)                          |
+| horoscope:error      | server → client | Tell to the client that something went wrong                                        |  any |
