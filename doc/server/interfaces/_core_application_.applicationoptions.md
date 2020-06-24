@@ -23,7 +23,7 @@
 
 • **mongo**? : *[DatabaseConfiguration](_core_application_.databaseconfiguration.md)*
 
-*Defined in [src/core/Application.ts:30](https://github.com/Xisabla/Korbots/blob/815b9f1/server/src/core/Application.ts#L30)*
+*Defined in [src/core/Application.ts:30](https://github.com/Xisabla/Korbots/blob/4164195/server/src/core/Application.ts#L30)*
 
 mongoose connection base configuration
 
@@ -33,7 +33,7 @@ ___
 
 • **port**? : *number*
 
-*Defined in [src/core/Application.ts:26](https://github.com/Xisabla/Korbots/blob/815b9f1/server/src/core/Application.ts#L26)*
+*Defined in [src/core/Application.ts:26](https://github.com/Xisabla/Korbots/blob/4164195/server/src/core/Application.ts#L26)*
 
 Port on which the server will listen
 
@@ -43,7 +43,7 @@ ___
 
 • **public**? : *string*
 
-*Defined in [src/core/Application.ts:22](https://github.com/Xisabla/Korbots/blob/815b9f1/server/src/core/Application.ts#L22)*
+*Defined in [src/core/Application.ts:22](https://github.com/Xisabla/Korbots/blob/4164195/server/src/core/Application.ts#L22)*
 
 Public path of the server (absolute please), default: path.join(server, 'public')
 
@@ -53,7 +53,7 @@ ___
 
 • **server**? : *string*
 
-*Defined in [src/core/Application.ts:20](https://github.com/Xisabla/Korbots/blob/815b9f1/server/src/core/Application.ts#L20)*
+*Defined in [src/core/Application.ts:20](https://github.com/Xisabla/Korbots/blob/4164195/server/src/core/Application.ts#L20)*
 
 Absolute path to the folder containing server statics files
 
@@ -63,7 +63,7 @@ ___
 
 • **storage**? : *string*
 
-*Defined in [src/core/Application.ts:24](https://github.com/Xisabla/Korbots/blob/815b9f1/server/src/core/Application.ts#L24)*
+*Defined in [src/core/Application.ts:24](https://github.com/Xisabla/Korbots/blob/4164195/server/src/core/Application.ts#L24)*
 
 Storage directory for server files
 
@@ -73,6 +73,6 @@ ___
 
 • **useEnv**? : *boolean*
 
-*Defined in [src/core/Application.ts:28](https://github.com/Xisabla/Korbots/blob/815b9f1/server/src/core/Application.ts#L28)*
+*Defined in [src/core/Application.ts:28](https://github.com/Xisabla/Korbots/blob/4164195/server/src/core/Application.ts#L28)*
 
 If set on true, will look un into .env file to load important configuration

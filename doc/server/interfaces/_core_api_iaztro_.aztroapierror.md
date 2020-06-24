@@ -21,7 +21,7 @@ Content of an Error Response from Aztro API
 
 • **cod**: *string*
 
-*Defined in [src/core/API/IAztro.ts:8](https://github.com/Xisabla/Korbots/blob/815b9f1/server/src/core/API/IAztro.ts#L8)*
+*Defined in [src/core/API/IAztro.ts:8](https://github.com/Xisabla/Korbots/blob/4164195/server/src/core/API/IAztro.ts#L8)*
 
 Error code
 
@@ -31,6 +31,6 @@ ___
 
 • **message**: *string*
 
-*Defined in [src/core/API/IAztro.ts:10](https://github.com/Xisabla/Korbots/blob/815b9f1/server/src/core/API/IAztro.ts#L10)*
+*Defined in [src/core/API/IAztro.ts:10](https://github.com/Xisabla/Korbots/blob/4164195/server/src/core/API/IAztro.ts#L10)*
 
 Error details

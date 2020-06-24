@@ -24,7 +24,7 @@
     LocationSchema
 )
 
-*Defined in [src/models/Location.ts:127](https://github.com/Xisabla/Korbots/blob/815b9f1/server/src/models/Location.ts#L127)*
+*Defined in [src/models/Location.ts:127](https://github.com/Xisabla/Korbots/blob/4164195/server/src/models/Location.ts#L127)*
 
 ___
 
@@ -40,6 +40,6 @@ ___
     { collection: 'location' }
 )
 
-*Defined in [src/models/Location.ts:19](https://github.com/Xisabla/Korbots/blob/815b9f1/server/src/models/Location.ts#L19)*
+*Defined in [src/models/Location.ts:19](https://github.com/Xisabla/Korbots/blob/4164195/server/src/models/Location.ts#L19)*
 
 Mongoose Document of the Location Model
