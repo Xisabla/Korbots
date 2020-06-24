@@ -4,7 +4,7 @@
 
 [Korbots](https://github.com/Xisabla/Korbots/) (initially called *MyPage*) is school project written in Node.js, which has as propose to offer a personnal page to the user using APIs to fetch information all around the web and perform post-processing operations.
 
-![korbots-preview](https://i.imgur.com/7VPdGtv.png)
+![korbots-preview](https://i.imgur.com/MKSFCOP.png)
 
 ## Requirements
 
