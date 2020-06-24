@@ -47,7 +47,7 @@ Check the [build workflow details](#build-workflow) and the [running commands de
 ## Contributors
 
 - BAJEUX Oregane
-- BUCAMP Charles
+- BUCAMP Paul
 - DALMAS Eugenie
 - DEFOORT Nicolas
 - DELEFORGE Charles
