@@ -18,4 +18,4 @@
 
 • **log**: *Debugger* = debug('module:horoscope')
 
-*Defined in [src/modules/HoroscopeModule.ts:8](https://github.com/Xisabla/Korbots/blob/4164195/server/src/modules/HoroscopeModule.ts#L8)*
+*Defined in [src/modules/HoroscopeModule.ts:8](https://github.com/Xisabla/Korbots/blob/6e5e234/server/src/modules/HoroscopeModule.ts#L8)*
