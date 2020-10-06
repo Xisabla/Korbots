@@ -49,7 +49,7 @@
     "ffmpeg-static": "^4.2.6",
     "moment": "^2.27.0",
     "mongoose": "^5.9.25",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "popyt": "^4.1.0",
     "socket.io": "^2.3.0",
     "youtube-dl": "^3.0.2"
