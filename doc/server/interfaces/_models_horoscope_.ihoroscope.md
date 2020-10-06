@@ -100,7 +100,7 @@
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[constructor](_models_horoscope_.ihoroscope.md#constructor)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3135
+Defined in node_modules/@types/mongoose/index.d.ts:3177
 
 Model constructor
 Provides the interface to MongoDB collections as well as creates document instances.
@@ -119,7 +119,7 @@ Name | Type | Description |
 
 • **Model**: *[Model](_models_horoscope_.ihoroscope.md#model)‹any›*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3120
+Defined in node_modules/@types/mongoose/index.d.ts:3162
 
 ___
 
@@ -129,7 +129,7 @@ ___
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[base](_models_horoscope_.ihoroscope.md#base)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3123
+Defined in node_modules/@types/mongoose/index.d.ts:3165
 
 Base Mongoose instance the model uses.
 
@@ -141,7 +141,7 @@ ___
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[baseModelName](_models_horoscope_.ihoroscope.md#basemodelname)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3129
+Defined in node_modules/@types/mongoose/index.d.ts:3171
 
 If this is a discriminator model, baseModelName is the
 name of the base model.
@@ -154,7 +154,7 @@ ___
 
 *Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[collection](_models_horoscope_.ihoroscopeschema.md#collection)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3657
+Defined in node_modules/@types/mongoose/index.d.ts:3705
 
 Collection the model uses.
 
@@ -166,7 +166,7 @@ ___
 
 *Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[db](_models_horoscope_.ihoroscopeschema.md#db)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3660
+Defined in node_modules/@types/mongoose/index.d.ts:3708
 
 Connection the model uses.
 
@@ -178,7 +178,7 @@ ___
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[discriminators](_models_horoscope_.ihoroscope.md#discriminators)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3132
+Defined in node_modules/@types/mongoose/index.d.ts:3174
 
 Registered discriminators for this model.
 
@@ -190,7 +190,7 @@ ___
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[modelName](_models_horoscope_.ihoroscope.md#modelname)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3135
+Defined in node_modules/@types/mongoose/index.d.ts:3177
 
 The name of the model
 
@@ -202,7 +202,7 @@ ___
 
 *Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[schema](_models_horoscope_.ihoroscopeschema.md#schema)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3663
+Defined in node_modules/@types/mongoose/index.d.ts:3711
 
 Schema the model uses.
 
@@ -214,7 +214,7 @@ Schema the model uses.
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[$where](_models_horoscope_.ihoroscope.md#where)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3192
+Defined in node_modules/@types/mongoose/index.d.ts:3234
 
 Creates a Query and specifies a $where condition.
 
@@ -234,7 +234,7 @@ ___
 
 *Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[addListener](_models_horoscope_.ihoroscopeschema.md#addlistener)*
 
-Defined in node_modules/@types/node/globals.d.ts:553
+Defined in node_modules/@types/node/globals.d.ts:550
 
 **Parameters:**
 
@@ -260,7 +260,7 @@ ___
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[aggregate](_models_horoscope_.ihoroscope.md#aggregate)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3200
+Defined in node_modules/@types/mongoose/index.d.ts:3242
 
 Performs aggregations on the models collection.
 If a callback is passed, the aggregate is executed and a Promise is returned.
@@ -282,7 +282,7 @@ Name | Type | Description |
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[aggregate](_models_horoscope_.ihoroscope.md#aggregate)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3201
+Defined in node_modules/@types/mongoose/index.d.ts:3243
 
 **Type parameters:**
 
@@ -305,7 +305,7 @@ ___
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[bulkWrite](_models_horoscope_.ihoroscope.md#bulkwrite)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3182
+Defined in node_modules/@types/mongoose/index.d.ts:3224
 
 Sends multiple insertOne, updateOne, updateMany, replaceOne, deleteOne, and/or deleteMany operations to the MongoDB server in one command. This is faster than sending multiple independent operations (like) if you use create()) because with bulkWrite() there is only one round trip to MongoDB.
 Mongoose will perform casting on all operations you provide.
@@ -338,7 +338,7 @@ Name | Type |
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[bulkWrite](_models_horoscope_.ihoroscope.md#bulkwrite)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3183
+Defined in node_modules/@types/mongoose/index.d.ts:3225
 
 **Parameters:**
 
@@ -353,7 +353,7 @@ Name | Type |
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[bulkWrite](_models_horoscope_.ihoroscope.md#bulkwrite)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3184
+Defined in node_modules/@types/mongoose/index.d.ts:3226
 
 **Parameters:**
 
@@ -382,7 +382,7 @@ ___
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[count](_models_horoscope_.ihoroscope.md#count)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3204
+Defined in node_modules/@types/mongoose/index.d.ts:3246
 
 Counts number of matching documents in a database collection.
 
@@ -411,7 +411,7 @@ ___
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[countDocuments](_models_horoscope_.ihoroscope.md#countdocuments)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3218
+Defined in node_modules/@types/mongoose/index.d.ts:3260
 
 Counts number of documents matching `criteria` in a database collection.
 
@@ -439,7 +439,7 @@ Name | Type |
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[countDocuments](_models_horoscope_.ihoroscope.md#countdocuments)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3219
+Defined in node_modules/@types/mongoose/index.d.ts:3261
 
 **Parameters:**
 
@@ -466,7 +466,7 @@ ___
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[create](_models_horoscope_.ihoroscope.md#create)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3239
+Defined in node_modules/@types/mongoose/index.d.ts:3281
 
 Shortcut for saving one or more documents to the database. MyModel.create(docs)
 does new MyModel(doc).save() for every doc in docs.
@@ -489,7 +489,7 @@ Name | Type |
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[create](_models_horoscope_.ihoroscope.md#create)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3240
+Defined in node_modules/@types/mongoose/index.d.ts:3282
 
 **Type parameters:**
 
@@ -516,7 +516,7 @@ Name | Type |
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[create](_models_horoscope_.ihoroscope.md#create)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3241
+Defined in node_modules/@types/mongoose/index.d.ts:3283
 
 **Type parameters:**
 
@@ -543,7 +543,7 @@ Name | Type |
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[create](_models_horoscope_.ihoroscope.md#create)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3242
+Defined in node_modules/@types/mongoose/index.d.ts:3284
 
 **Type parameters:**
 
@@ -572,7 +572,7 @@ Name | Type |
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[create](_models_horoscope_.ihoroscope.md#create)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3243
+Defined in node_modules/@types/mongoose/index.d.ts:3285
 
 **Type parameters:**
 
@@ -594,7 +594,7 @@ ___
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[createCollection](_models_horoscope_.ihoroscope.md#createcollection)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3248
+Defined in node_modules/@types/mongoose/index.d.ts:3290
 
 Create the collection for this model. By default, if no indexes are specified, mongoose will not create the
 collection for the model until any documents are created. Use this method to create the collection explicitly.
@@ -623,7 +623,7 @@ ___
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[createIndexes](_models_horoscope_.ihoroscope.md#createindexes)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3306
+Defined in node_modules/@types/mongoose/index.d.ts:3348
 
 Similar to ensureIndexes(), except for it uses the createIndex function. The ensureIndex() function checks to see if an index with that name already exists, and, if not, does not attempt to create the index. createIndex() bypasses this check.
 
@@ -651,7 +651,7 @@ ___
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[deleteMany](_models_horoscope_.ihoroscope.md#deletemany)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3570
+Defined in node_modules/@types/mongoose/index.d.ts:3612
 
 **Parameters:**
 
@@ -673,7 +673,7 @@ Name | Type |
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[deleteMany](_models_horoscope_.ihoroscope.md#deletemany)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3571
+Defined in node_modules/@types/mongoose/index.d.ts:3613
 
 **Parameters:**
 
@@ -701,7 +701,7 @@ ___
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[deleteOne](_models_horoscope_.ihoroscope.md#deleteone)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3568
+Defined in node_modules/@types/mongoose/index.d.ts:3610
 
 **Parameters:**
 
@@ -723,7 +723,7 @@ Name | Type |
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[deleteOne](_models_horoscope_.ihoroscope.md#deleteone)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3569
+Defined in node_modules/@types/mongoose/index.d.ts:3611
 
 **Parameters:**
 
@@ -751,7 +751,7 @@ ___
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[discriminator](_models_horoscope_.ihoroscope.md#discriminator)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3256
+Defined in node_modules/@types/mongoose/index.d.ts:3298
 
 Adds a discriminator type.
 
@@ -773,7 +773,7 @@ Name | Type | Description |
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[discriminator](_models_horoscope_.ihoroscope.md#discriminator)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3264
+Defined in node_modules/@types/mongoose/index.d.ts:3306
 
 Adds a discriminator type.
 
@@ -801,7 +801,7 @@ ___
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[distinct](_models_horoscope_.ihoroscope.md#distinct)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3267
+Defined in node_modules/@types/mongoose/index.d.ts:3309
 
 Creates a Query for a distinct operation. Passing a callback immediately executes the query.
 
@@ -826,7 +826,7 @@ Name | Type |
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[distinct](_models_horoscope_.ihoroscope.md#distinct)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3268
+Defined in node_modules/@types/mongoose/index.d.ts:3310
 
 **Parameters:**
 
@@ -855,7 +855,7 @@ ___
 
 *Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[emit](_models_horoscope_.ihoroscopeschema.md#emit)*
 
-Defined in node_modules/@types/node/globals.d.ts:563
+Defined in node_modules/@types/node/globals.d.ts:560
 
 **Parameters:**
 
@@ -874,7 +874,7 @@ ___
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[ensureIndexes](_models_horoscope_.ihoroscope.md#ensureindexes)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3299
+Defined in node_modules/@types/mongoose/index.d.ts:3341
 
 Sends ensureIndex commands to mongo for each index declared in the schema.
 
@@ -896,7 +896,7 @@ Name | Type |
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[ensureIndexes](_models_horoscope_.ihoroscope.md#ensureindexes)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3300
+Defined in node_modules/@types/mongoose/index.d.ts:3342
 
 **Parameters:**
 
@@ -922,7 +922,7 @@ ___
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[estimatedDocumentCount](_models_horoscope_.ihoroscope.md#estimateddocumentcount)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3231
+Defined in node_modules/@types/mongoose/index.d.ts:3273
 
 Estimates the number of documents in the MongoDB collection. Faster than
 using `countDocuments()` for large collections because
@@ -948,7 +948,7 @@ Name | Type |
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[estimatedDocumentCount](_models_horoscope_.ihoroscope.md#estimateddocumentcount)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3232
+Defined in node_modules/@types/mongoose/index.d.ts:3274
 
 **Parameters:**
 
@@ -975,7 +975,7 @@ ___
 
 *Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[eventNames](_models_horoscope_.ihoroscopeschema.md#eventnames)*
 
-Defined in node_modules/@types/node/globals.d.ts:568
+Defined in node_modules/@types/node/globals.d.ts:565
 
 **Returns:** *Array‹string | symbol›*
 
@@ -987,7 +987,7 @@ ___
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[exists](_models_horoscope_.ihoroscope.md#exists)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3312
+Defined in node_modules/@types/mongoose/index.d.ts:3354
 
 Returns true if at least one document exists in the database that matches
 the given `filter`, and false otherwise.
@@ -1015,7 +1015,7 @@ ___
 
 ▸ **fetchCurrent**(`sign`: string): *Promise‹[IAztroAPIResponse](_core_api_iaztro_.iaztroapiresponse.md)›*
 
-*Defined in [src/models/Horoscope.ts:75](https://github.com/Xisabla/Korbots/blob/4164195/server/src/models/Horoscope.ts#L75)*
+*Defined in [src/models/Horoscope.ts:75](https://github.com/Xisabla/Korbots/blob/6e5e234/server/src/models/Horoscope.ts#L75)*
 
 Get an API response (json) from Aztro API for today's horoscope
 
@@ -1037,7 +1037,7 @@ ___
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[find](_models_horoscope_.ihoroscope.md#find)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3318
+Defined in node_modules/@types/mongoose/index.d.ts:3360
 
 Finds documents.
 
@@ -1060,7 +1060,7 @@ Name | Type |
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[find](_models_horoscope_.ihoroscope.md#find)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3319
+Defined in node_modules/@types/mongoose/index.d.ts:3361
 
 **Parameters:**
 
@@ -1083,7 +1083,7 @@ Name | Type |
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[find](_models_horoscope_.ihoroscope.md#find)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3320
+Defined in node_modules/@types/mongoose/index.d.ts:3362
 
 **Parameters:**
 
@@ -1108,7 +1108,7 @@ Name | Type |
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[find](_models_horoscope_.ihoroscope.md#find)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3322
+Defined in node_modules/@types/mongoose/index.d.ts:3364
 
 **Parameters:**
 
@@ -1135,7 +1135,7 @@ Name | Type |
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[find](_models_horoscope_.ihoroscope.md#find)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3324
+Defined in node_modules/@types/mongoose/index.d.ts:3366
 
 **Parameters:**
 
@@ -1164,7 +1164,7 @@ ___
 
 ▸ **findAstro**(`sign`: string): *Promise‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
-*Defined in [src/models/Horoscope.ts:63](https://github.com/Xisabla/Korbots/blob/4164195/server/src/models/Horoscope.ts#L63)*
+*Defined in [src/models/Horoscope.ts:63](https://github.com/Xisabla/Korbots/blob/6e5e234/server/src/models/Horoscope.ts#L63)*
 
 Search in data base if document for sign already exist
 
@@ -1186,7 +1186,7 @@ ___
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findById](_models_horoscope_.ihoroscope.md#findbyid)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3333
+Defined in node_modules/@types/mongoose/index.d.ts:3375
 
 Finds a single document by its _id field. findById(id) is almost*
 equivalent to findOne({ _id: id }). findById() triggers findOne hooks.
@@ -1214,7 +1214,7 @@ Name | Type |
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findById](_models_horoscope_.ihoroscope.md#findbyid)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3335
+Defined in node_modules/@types/mongoose/index.d.ts:3377
 
 **Parameters:**
 
@@ -1239,7 +1239,7 @@ Name | Type |
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findById](_models_horoscope_.ihoroscope.md#findbyid)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3337
+Defined in node_modules/@types/mongoose/index.d.ts:3379
 
 **Parameters:**
 
@@ -1266,7 +1266,7 @@ Name | Type |
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findById](_models_horoscope_.ihoroscope.md#findbyid)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3339
+Defined in node_modules/@types/mongoose/index.d.ts:3381
 
 **Parameters:**
 
@@ -1297,7 +1297,7 @@ ___
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findByIdAndDelete](_models_horoscope_.ihoroscope.md#findbyidanddelete)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3374
+Defined in node_modules/@types/mongoose/index.d.ts:3416
 
 Issue a mongodb findOneAndDelete command by a document's _id field.
 findByIdAndDelete(id, ...) is equivalent to findByIdAndDelete({ _id: id }, ...).
@@ -1312,7 +1312,7 @@ Note: same signatures as findByIdAndRemove
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findByIdAndDelete](_models_horoscope_.ihoroscope.md#findbyidanddelete)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3375
+Defined in node_modules/@types/mongoose/index.d.ts:3417
 
 **Parameters:**
 
@@ -1335,7 +1335,7 @@ Name | Type |
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findByIdAndDelete](_models_horoscope_.ihoroscope.md#findbyidanddelete)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3377
+Defined in node_modules/@types/mongoose/index.d.ts:3419
 
 **Parameters:**
 
@@ -1360,7 +1360,7 @@ Name | Type |
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findByIdAndDelete](_models_horoscope_.ihoroscope.md#findbyidanddelete)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3380
+Defined in node_modules/@types/mongoose/index.d.ts:3422
 
 **Parameters:**
 
@@ -1389,7 +1389,7 @@ ___
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findByIdAndRemove](_models_horoscope_.ihoroscope.md#findbyidandremove)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3355
+Defined in node_modules/@types/mongoose/index.d.ts:3397
 
 Issue a mongodb findAndModify remove command by a document's _id field.
 findByIdAndRemove(id, ...) is equivalent to findOneAndRemove({ _id: id }, ...).
@@ -1407,7 +1407,7 @@ Note: same signatures as findByIdAndDelete
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findByIdAndRemove](_models_horoscope_.ihoroscope.md#findbyidandremove)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3356
+Defined in node_modules/@types/mongoose/index.d.ts:3398
 
 **Parameters:**
 
@@ -1430,7 +1430,7 @@ Name | Type |
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findByIdAndRemove](_models_horoscope_.ihoroscope.md#findbyidandremove)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3358
+Defined in node_modules/@types/mongoose/index.d.ts:3400
 
 **Parameters:**
 
@@ -1455,7 +1455,7 @@ Name | Type |
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findByIdAndRemove](_models_horoscope_.ihoroscope.md#findbyidandremove)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3361
+Defined in node_modules/@types/mongoose/index.d.ts:3403
 
 **Parameters:**
 
@@ -1484,7 +1484,7 @@ ___
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findByIdAndUpdate](_models_horoscope_.ihoroscope.md#findbyidandupdate)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3391
+Defined in node_modules/@types/mongoose/index.d.ts:3433
 
 Issues a mongodb findAndModify update command by a document's _id field. findByIdAndUpdate(id, ...)
 is equivalent to findOneAndUpdate({ _id: id }, ...).
@@ -1498,7 +1498,7 @@ https://mongoosejs.com/docs/api.html#mongoose_Mongoose-set
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findByIdAndUpdate](_models_horoscope_.ihoroscope.md#findbyidandupdate)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3392
+Defined in node_modules/@types/mongoose/index.d.ts:3434
 
 **Parameters:**
 
@@ -1523,7 +1523,7 @@ Name | Type |
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findByIdAndUpdate](_models_horoscope_.ihoroscope.md#findbyidandupdate)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3394
+Defined in node_modules/@types/mongoose/index.d.ts:3436
 
 **Parameters:**
 
@@ -1550,7 +1550,7 @@ Name | Type |
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findByIdAndUpdate](_models_horoscope_.ihoroscope.md#findbyidandupdate)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3397
+Defined in node_modules/@types/mongoose/index.d.ts:3439
 
 **Parameters:**
 
@@ -1577,7 +1577,7 @@ Name | Type |
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findByIdAndUpdate](_models_horoscope_.ihoroscope.md#findbyidandupdate)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3401
+Defined in node_modules/@types/mongoose/index.d.ts:3443
 
 **Parameters:**
 
@@ -1604,7 +1604,7 @@ Name | Type |
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findByIdAndUpdate](_models_horoscope_.ihoroscope.md#findbyidandupdate)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3405
+Defined in node_modules/@types/mongoose/index.d.ts:3447
 
 **Parameters:**
 
@@ -1631,7 +1631,7 @@ Name | Type |
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findByIdAndUpdate](_models_horoscope_.ihoroscope.md#findbyidandupdate)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3409
+Defined in node_modules/@types/mongoose/index.d.ts:3451
 
 **Parameters:**
 
@@ -1662,7 +1662,7 @@ ___
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOne](_models_horoscope_.ihoroscope.md#findone)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3418
+Defined in node_modules/@types/mongoose/index.d.ts:3460
 
 Finds one document.
 The conditions are cast to their respective SchemaTypes before the command is sent.
@@ -1688,7 +1688,7 @@ Name | Type |
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOne](_models_horoscope_.ihoroscope.md#findone)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3420
+Defined in node_modules/@types/mongoose/index.d.ts:3462
 
 **Parameters:**
 
@@ -1713,7 +1713,7 @@ Name | Type |
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOne](_models_horoscope_.ihoroscope.md#findone)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3422
+Defined in node_modules/@types/mongoose/index.d.ts:3464
 
 **Parameters:**
 
@@ -1740,7 +1740,7 @@ Name | Type |
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOne](_models_horoscope_.ihoroscope.md#findone)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3424
+Defined in node_modules/@types/mongoose/index.d.ts:3466
 
 **Parameters:**
 
@@ -1771,7 +1771,7 @@ ___
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOneAndDelete](_models_horoscope_.ihoroscope.md#findoneanddelete)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3454
+Defined in node_modules/@types/mongoose/index.d.ts:3496
 
 Issues a mongodb findOneAndDelete command.
 Finds a matching document, removes it, passing the found document (if any) to the
@@ -1785,7 +1785,7 @@ Note: same signatures as findOneAndRemove
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOneAndDelete](_models_horoscope_.ihoroscope.md#findoneanddelete)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3455
+Defined in node_modules/@types/mongoose/index.d.ts:3497
 
 **Parameters:**
 
@@ -1808,7 +1808,7 @@ Name | Type |
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOneAndDelete](_models_horoscope_.ihoroscope.md#findoneanddelete)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3457
+Defined in node_modules/@types/mongoose/index.d.ts:3499
 
 **Parameters:**
 
@@ -1834,7 +1834,7 @@ Name | Type |
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOneAndDelete](_models_horoscope_.ihoroscope.md#findoneanddelete)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3460
+Defined in node_modules/@types/mongoose/index.d.ts:3502
 
 **Parameters:**
 
@@ -1863,7 +1863,7 @@ ___
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOneAndRemove](_models_horoscope_.ihoroscope.md#findoneandremove)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3438
+Defined in node_modules/@types/mongoose/index.d.ts:3480
 
 Issue a mongodb findAndModify remove command.
 Finds a matching document, removes it, passing the found document (if any) to the callback.
@@ -1880,7 +1880,7 @@ Note: same signatures as findOneAndDelete
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOneAndRemove](_models_horoscope_.ihoroscope.md#findoneandremove)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3439
+Defined in node_modules/@types/mongoose/index.d.ts:3481
 
 **Parameters:**
 
@@ -1903,7 +1903,7 @@ Name | Type |
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOneAndRemove](_models_horoscope_.ihoroscope.md#findoneandremove)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3441
+Defined in node_modules/@types/mongoose/index.d.ts:3483
 
 **Parameters:**
 
@@ -1929,7 +1929,7 @@ Name | Type |
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOneAndRemove](_models_horoscope_.ihoroscope.md#findoneandremove)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3444
+Defined in node_modules/@types/mongoose/index.d.ts:3486
 
 **Parameters:**
 
@@ -1958,7 +1958,7 @@ ___
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOneAndUpdate](_models_horoscope_.ihoroscope.md#findoneandupdate)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3471
+Defined in node_modules/@types/mongoose/index.d.ts:3513
 
 Issues a mongodb findAndModify update command.
 Finds a matching document, updates it according to the update arg, passing any options,
@@ -1974,7 +1974,7 @@ https://mongoosejs.com/docs/api.html#mongoose_Mongoose-set
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOneAndUpdate](_models_horoscope_.ihoroscope.md#findoneandupdate)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3472
+Defined in node_modules/@types/mongoose/index.d.ts:3514
 
 **Parameters:**
 
@@ -2000,7 +2000,7 @@ Name | Type |
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOneAndUpdate](_models_horoscope_.ihoroscope.md#findoneandupdate)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3474
+Defined in node_modules/@types/mongoose/index.d.ts:3516
 
 **Parameters:**
 
@@ -2028,7 +2028,7 @@ Name | Type |
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOneAndUpdate](_models_horoscope_.ihoroscope.md#findoneandupdate)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3478
+Defined in node_modules/@types/mongoose/index.d.ts:3520
 
 **Parameters:**
 
@@ -2056,7 +2056,7 @@ Name | Type |
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOneAndUpdate](_models_horoscope_.ihoroscope.md#findoneandupdate)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3481
+Defined in node_modules/@types/mongoose/index.d.ts:3523
 
 **Parameters:**
 
@@ -2084,7 +2084,7 @@ Name | Type |
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOneAndUpdate](_models_horoscope_.ihoroscope.md#findoneandupdate)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3485
+Defined in node_modules/@types/mongoose/index.d.ts:3527
 
 **Parameters:**
 
@@ -2112,7 +2112,7 @@ Name | Type |
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[findOneAndUpdate](_models_horoscope_.ihoroscope.md#findoneandupdate)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3488
+Defined in node_modules/@types/mongoose/index.d.ts:3530
 
 **Parameters:**
 
@@ -2142,7 +2142,7 @@ ___
 
 ▸ **fromCurrent**(`sign`: string): *Promise‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
-*Defined in [src/models/Horoscope.ts:69](https://github.com/Xisabla/Korbots/blob/4164195/server/src/models/Horoscope.ts#L69)*
+*Defined in [src/models/Horoscope.ts:69](https://github.com/Xisabla/Korbots/blob/6e5e234/server/src/models/Horoscope.ts#L69)*
 
 fetch from API and create new horoscope document for today's horoscope
 
@@ -2164,7 +2164,7 @@ ___
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[geoSearch](_models_horoscope_.ihoroscope.md#geosearch)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3498
+Defined in node_modules/@types/mongoose/index.d.ts:3540
 
 Implements $geoSearch functionality for Mongoose
 
@@ -2206,7 +2206,7 @@ ___
 
 ▸ **getCurrent**(`sign`: string): *Promise‹[IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md)›*
 
-*Defined in [src/models/Horoscope.ts:57](https://github.com/Xisabla/Korbots/blob/4164195/server/src/models/Horoscope.ts#L57)*
+*Defined in [src/models/Horoscope.ts:57](https://github.com/Xisabla/Korbots/blob/6e5e234/server/src/models/Horoscope.ts#L57)*
 
 Get the current horoscope
 
@@ -2228,7 +2228,7 @@ ___
 
 *Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[getMaxListeners](_models_horoscope_.ihoroscopeschema.md#getmaxlisteners)*
 
-Defined in node_modules/@types/node/globals.d.ts:560
+Defined in node_modules/@types/node/globals.d.ts:557
 
 **Returns:** *number*
 
@@ -2240,7 +2240,7 @@ ___
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[hydrate](_models_horoscope_.ihoroscope.md#hydrate)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3514
+Defined in node_modules/@types/mongoose/index.d.ts:3556
 
 Shortcut for creating a new Document from existing raw data,
 pre-saved in the DB. The document returned has no paths marked
@@ -2262,7 +2262,7 @@ ___
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[init](_models_horoscope_.ihoroscope.md#init)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3543
+Defined in node_modules/@types/mongoose/index.d.ts:3585
 
 Performs any async initialization of this model against MongoDB.
 This function is called automatically, so you don't need to call it.
@@ -2294,7 +2294,7 @@ ___
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[insertMany](_models_horoscope_.ihoroscope.md#insertmany)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3530
+Defined in node_modules/@types/mongoose/index.d.ts:3572
 
 Shortcut for validating an array of documents and inserting them into
 MongoDB if they're all valid. This function is faster than .create()
@@ -2325,7 +2325,7 @@ Name | Type |
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[insertMany](_models_horoscope_.ihoroscope.md#insertmany)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3531
+Defined in node_modules/@types/mongoose/index.d.ts:3573
 
 **Parameters:**
 
@@ -2350,7 +2350,7 @@ Name | Type |
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[insertMany](_models_horoscope_.ihoroscope.md#insertmany)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3532
+Defined in node_modules/@types/mongoose/index.d.ts:3574
 
 **Parameters:**
 
@@ -2373,7 +2373,7 @@ Name | Type |
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[insertMany](_models_horoscope_.ihoroscope.md#insertmany)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3533
+Defined in node_modules/@types/mongoose/index.d.ts:3575
 
 **Parameters:**
 
@@ -2402,7 +2402,7 @@ ___
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[listIndexes](_models_horoscope_.ihoroscope.md#listindexes)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3291
+Defined in node_modules/@types/mongoose/index.d.ts:3333
 
 Lists the indexes currently defined in MongoDB. This may or may not be
 the same as the indexes defined in your schema depending on whether you
@@ -2429,7 +2429,7 @@ Returns `undefined` if callback is specified, returns a promise if no callback.
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[listIndexes](_models_horoscope_.ihoroscope.md#listindexes)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3292
+Defined in node_modules/@types/mongoose/index.d.ts:3334
 
 **Returns:** *Promise‹void›*
 
@@ -2441,7 +2441,7 @@ ___
 
 *Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[listenerCount](_models_horoscope_.ihoroscopeschema.md#listenercount)*
 
-Defined in node_modules/@types/node/globals.d.ts:564
+Defined in node_modules/@types/node/globals.d.ts:561
 
 **Parameters:**
 
@@ -2459,7 +2459,7 @@ ___
 
 *Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[listeners](_models_horoscope_.ihoroscopeschema.md#listeners)*
 
-Defined in node_modules/@types/node/globals.d.ts:561
+Defined in node_modules/@types/node/globals.d.ts:558
 
 **Parameters:**
 
@@ -2477,7 +2477,7 @@ ___
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[mapReduce](_models_horoscope_.ihoroscope.md#mapreduce)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3550
+Defined in node_modules/@types/mongoose/index.d.ts:3592
 
 Executes a mapReduce command.
 
@@ -2514,7 +2514,7 @@ ___
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[model](_models_horoscope_.ihoroscope.md#model)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3186
+Defined in node_modules/@types/mongoose/index.d.ts:3228
 
 **Type parameters:**
 
@@ -2536,7 +2536,7 @@ ___
 
 *Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[off](_models_horoscope_.ihoroscopeschema.md#off)*
 
-Defined in node_modules/@types/node/globals.d.ts:557
+Defined in node_modules/@types/node/globals.d.ts:554
 
 **Parameters:**
 
@@ -2562,7 +2562,7 @@ ___
 
 *Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[on](_models_horoscope_.ihoroscopeschema.md#on)*
 
-Defined in node_modules/@types/node/globals.d.ts:554
+Defined in node_modules/@types/node/globals.d.ts:551
 
 **Parameters:**
 
@@ -2588,7 +2588,7 @@ ___
 
 *Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[once](_models_horoscope_.ihoroscopeschema.md#once)*
 
-Defined in node_modules/@types/node/globals.d.ts:555
+Defined in node_modules/@types/node/globals.d.ts:552
 
 **Parameters:**
 
@@ -2614,7 +2614,7 @@ ___
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[populate](_models_horoscope_.ihoroscope.md#populate)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3561
+Defined in node_modules/@types/mongoose/index.d.ts:3603
 
 Populates document references.
 
@@ -2647,7 +2647,7 @@ Name | Type |
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[populate](_models_horoscope_.ihoroscope.md#populate)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3563
+Defined in node_modules/@types/mongoose/index.d.ts:3605
 
 **Type parameters:**
 
@@ -2680,7 +2680,7 @@ ___
 
 *Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[prependListener](_models_horoscope_.ihoroscopeschema.md#prependlistener)*
 
-Defined in node_modules/@types/node/globals.d.ts:566
+Defined in node_modules/@types/node/globals.d.ts:563
 
 **Parameters:**
 
@@ -2706,7 +2706,7 @@ ___
 
 *Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[prependOnceListener](_models_horoscope_.ihoroscopeschema.md#prependoncelistener)*
 
-Defined in node_modules/@types/node/globals.d.ts:567
+Defined in node_modules/@types/node/globals.d.ts:564
 
 **Parameters:**
 
@@ -2732,7 +2732,7 @@ ___
 
 *Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[rawListeners](_models_horoscope_.ihoroscopeschema.md#rawlisteners)*
 
-Defined in node_modules/@types/node/globals.d.ts:562
+Defined in node_modules/@types/node/globals.d.ts:559
 
 **Parameters:**
 
@@ -2750,7 +2750,7 @@ ___
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[remove](_models_horoscope_.ihoroscope.md#remove)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3567
+Defined in node_modules/@types/mongoose/index.d.ts:3609
 
 Removes documents from the collection.
 
@@ -2778,7 +2778,7 @@ ___
 
 *Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[removeAllListeners](_models_horoscope_.ihoroscopeschema.md#removealllisteners)*
 
-Defined in node_modules/@types/node/globals.d.ts:558
+Defined in node_modules/@types/node/globals.d.ts:555
 
 **Parameters:**
 
@@ -2796,7 +2796,7 @@ ___
 
 *Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[removeListener](_models_horoscope_.ihoroscopeschema.md#removelistener)*
 
-Defined in node_modules/@types/node/globals.d.ts:556
+Defined in node_modules/@types/node/globals.d.ts:553
 
 **Parameters:**
 
@@ -2822,7 +2822,7 @@ ___
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[replaceOne](_models_horoscope_.ihoroscope.md#replaceone)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3577
+Defined in node_modules/@types/mongoose/index.d.ts:3619
 
 Same as update(), except MongoDB replace the existing document with the given document (no atomic operators like $set).
 This function triggers the following middleware: replaceOne
@@ -2854,7 +2854,7 @@ ___
 
 *Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[setMaxListeners](_models_horoscope_.ihoroscopeschema.md#setmaxlisteners)*
 
-Defined in node_modules/@types/node/globals.d.ts:559
+Defined in node_modules/@types/node/globals.d.ts:556
 
 **Parameters:**
 
@@ -2872,7 +2872,7 @@ ___
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[syncIndexes](_models_horoscope_.ihoroscope.md#syncindexes)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3280
+Defined in node_modules/@types/mongoose/index.d.ts:3322
 
 Makes the indexes in MongoDB match the indexes defined in this model's
 schema. This function will drop any indexes that are not defined in
@@ -2905,7 +2905,7 @@ Returns `undefined` if callback is specified, returns a promise if no callback.
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[syncIndexes](_models_horoscope_.ihoroscope.md#syncindexes)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3281
+Defined in node_modules/@types/mongoose/index.d.ts:3323
 
 **Parameters:**
 
@@ -2923,7 +2923,7 @@ ___
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[translateAliases](_models_horoscope_.ihoroscope.md#translatealiases)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3171
+Defined in node_modules/@types/mongoose/index.d.ts:3213
 
 Translate any aliases fields/conditions so the final query or document object is pure
 
@@ -2945,7 +2945,7 @@ ___
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[update](_models_horoscope_.ihoroscope.md#update)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3583
+Defined in node_modules/@types/mongoose/index.d.ts:3625
 
 Updates documents in the database without returning them.
 All update values are cast to their appropriate SchemaTypes before being sent.
@@ -2973,7 +2973,7 @@ Name | Type |
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[update](_models_horoscope_.ihoroscope.md#update)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3585
+Defined in node_modules/@types/mongoose/index.d.ts:3627
 
 **Parameters:**
 
@@ -3004,7 +3004,7 @@ ___
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[updateMany](_models_horoscope_.ihoroscope.md#updatemany)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3591
+Defined in node_modules/@types/mongoose/index.d.ts:3633
 
 **Parameters:**
 
@@ -3029,7 +3029,7 @@ Name | Type |
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[updateMany](_models_horoscope_.ihoroscope.md#updatemany)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3593
+Defined in node_modules/@types/mongoose/index.d.ts:3635
 
 **Parameters:**
 
@@ -3060,7 +3060,7 @@ ___
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[updateOne](_models_horoscope_.ihoroscope.md#updateone)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3587
+Defined in node_modules/@types/mongoose/index.d.ts:3629
 
 **Parameters:**
 
@@ -3085,7 +3085,7 @@ Name | Type |
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[updateOne](_models_horoscope_.ihoroscope.md#updateone)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3589
+Defined in node_modules/@types/mongoose/index.d.ts:3631
 
 **Parameters:**
 
@@ -3116,7 +3116,7 @@ ___
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[watch](_models_horoscope_.ihoroscope.md#watch)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3161
+Defined in node_modules/@types/mongoose/index.d.ts:3203
 
 Requires a replica set running MongoDB >= 3.6.0. Watches the underlying collection for changes using MongoDB change streams.
 This function does not trigger any middleware. In particular, it does not trigger aggregate middleware.
@@ -3138,7 +3138,7 @@ ___
 
 *Inherited from [IHoroscope](_models_horoscope_.ihoroscope.md).[where](_models_horoscope_.ihoroscope.md#where)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3597
+Defined in node_modules/@types/mongoose/index.d.ts:3639
 
 Creates a Query, applies the passed conditions, and returns the Query.
 
