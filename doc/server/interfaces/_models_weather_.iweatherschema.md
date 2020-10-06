@@ -40,6 +40,7 @@ Detailed Weather Document (WeatherSchema) interface
 * [checkLocationFieldsUpdate](_models_weather_.iweatherschema.md#checklocationfieldsupdate)
 * [checkUpdate](_models_weather_.iweatherschema.md#checkupdate)
 * [decrementUpdateScore](_models_weather_.iweatherschema.md#decrementupdatescore)
+* [deleteOne](_models_weather_.iweatherschema.md#deleteone)
 * [emit](_models_weather_.iweatherschema.md#emit)
 * [eventNames](_models_weather_.iweatherschema.md#eventnames)
 * [getMaxListeners](_models_weather_.iweatherschema.md#getmaxlisteners)
@@ -73,7 +74,7 @@ Detailed Weather Document (WeatherSchema) interface
 
 *Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[__v](_models_horoscope_.ihoroscopeschema.md#optional-__v)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3636
+Defined in node_modules/@types/mongoose/index.d.ts:3684
 
 Version using default version key. See http://mongoosejs.com/docs/guide.html#versionKey
 If you're using another key, you will have to access it using []: doc[_myVersionKey]
@@ -86,7 +87,7 @@ ___
 
 *Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[collection](_models_horoscope_.ihoroscopeschema.md#collection)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3657
+Defined in node_modules/@types/mongoose/index.d.ts:3705
 
 Collection the model uses.
 
@@ -96,7 +97,7 @@ ___
 
 • **country**? : *string*
 
-*Defined in [src/models/Weather.ts:59](https://github.com/Xisabla/Korbots/blob/4164195/server/src/models/Weather.ts#L59)*
+*Defined in [src/models/Weather.ts:59](https://github.com/Xisabla/Korbots/blob/177cb32/server/src/models/Weather.ts#L59)*
 
 Country of the location
 
@@ -106,7 +107,7 @@ ___
 
 • **date**: *Date*
 
-*Defined in [src/models/Weather.ts:63](https://github.com/Xisabla/Korbots/blob/4164195/server/src/models/Weather.ts#L63)*
+*Defined in [src/models/Weather.ts:63](https://github.com/Xisabla/Korbots/blob/177cb32/server/src/models/Weather.ts#L63)*
 
 Date of the forecast
 
@@ -118,7 +119,7 @@ ___
 
 *Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[db](_models_horoscope_.ihoroscopeschema.md#db)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3660
+Defined in node_modules/@types/mongoose/index.d.ts:3708
 
 Connection the model uses.
 
@@ -128,7 +129,7 @@ ___
 
 • **humidity**: *number*
 
-*Defined in [src/models/Weather.ts:45](https://github.com/Xisabla/Korbots/blob/4164195/server/src/models/Weather.ts#L45)*
+*Defined in [src/models/Weather.ts:45](https://github.com/Xisabla/Korbots/blob/177cb32/server/src/models/Weather.ts#L45)*
 
 Humidity in %
 
@@ -140,7 +141,7 @@ ___
 
 *Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[id](_models_horoscope_.ihoroscopeschema.md#optional-id)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:1624
+Defined in node_modules/@types/mongoose/index.d.ts:1655
 
 Virtual getter that by default returns the document's _id field cast to a string,
 or in the case of ObjectIds, its hexString. This id getter may be disabled by
@@ -153,7 +154,7 @@ ___
 
 • **lastUpdate**: *Date*
 
-*Defined in [src/models/Weather.ts:65](https://github.com/Xisabla/Korbots/blob/4164195/server/src/models/Weather.ts#L65)*
+*Defined in [src/models/Weather.ts:65](https://github.com/Xisabla/Korbots/blob/177cb32/server/src/models/Weather.ts#L65)*
 
 Last update from the internal database
 
@@ -163,7 +164,7 @@ ___
 
 • **latitude**: *number*
 
-*Defined in [src/models/Weather.ts:55](https://github.com/Xisabla/Korbots/blob/4164195/server/src/models/Weather.ts#L55)*
+*Defined in [src/models/Weather.ts:55](https://github.com/Xisabla/Korbots/blob/177cb32/server/src/models/Weather.ts#L55)*
 
 Latitude of the location
 
@@ -173,7 +174,7 @@ ___
 
 • **longitude**: *number*
 
-*Defined in [src/models/Weather.ts:57](https://github.com/Xisabla/Korbots/blob/4164195/server/src/models/Weather.ts#L57)*
+*Defined in [src/models/Weather.ts:57](https://github.com/Xisabla/Korbots/blob/177cb32/server/src/models/Weather.ts#L57)*
 
 Longitude of the location
 
@@ -183,7 +184,7 @@ ___
 
 • **name**? : *string*
 
-*Defined in [src/models/Weather.ts:61](https://github.com/Xisabla/Korbots/blob/4164195/server/src/models/Weather.ts#L61)*
+*Defined in [src/models/Weather.ts:61](https://github.com/Xisabla/Korbots/blob/177cb32/server/src/models/Weather.ts#L61)*
 
 City name of the location
 
@@ -195,7 +196,7 @@ ___
 
 *Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[schema](_models_horoscope_.ihoroscopeschema.md#schema)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3663
+Defined in node_modules/@types/mongoose/index.d.ts:3711
 
 Schema the model uses.
 
@@ -205,7 +206,7 @@ ___
 
 • **temperature**: *number*
 
-*Defined in [src/models/Weather.ts:43](https://github.com/Xisabla/Korbots/blob/4164195/server/src/models/Weather.ts#L43)*
+*Defined in [src/models/Weather.ts:43](https://github.com/Xisabla/Korbots/blob/177cb32/server/src/models/Weather.ts#L43)*
 
 Temperature in Ke
 
@@ -215,7 +216,7 @@ ___
 
 • **updateScore**: *number*
 
-*Defined in [src/models/Weather.ts:67](https://github.com/Xisabla/Korbots/blob/4164195/server/src/models/Weather.ts#L67)*
+*Defined in [src/models/Weather.ts:67](https://github.com/Xisabla/Korbots/blob/177cb32/server/src/models/Weather.ts#L67)*
 
 Score that increase on update checking, decrease on cron update
 
@@ -225,7 +226,7 @@ ___
 
 • **weather**: *string*
 
-*Defined in [src/models/Weather.ts:49](https://github.com/Xisabla/Korbots/blob/4164195/server/src/models/Weather.ts#L49)*
+*Defined in [src/models/Weather.ts:49](https://github.com/Xisabla/Korbots/blob/177cb32/server/src/models/Weather.ts#L49)*
 
 Weather short description
 
@@ -235,7 +236,7 @@ ___
 
 • **weatherDescription**: *string*
 
-*Defined in [src/models/Weather.ts:51](https://github.com/Xisabla/Korbots/blob/4164195/server/src/models/Weather.ts#L51)*
+*Defined in [src/models/Weather.ts:51](https://github.com/Xisabla/Korbots/blob/177cb32/server/src/models/Weather.ts#L51)*
 
 Weather complete description
 
@@ -245,7 +246,7 @@ ___
 
 • **weatherIcon**: *string*
 
-*Defined in [src/models/Weather.ts:53](https://github.com/Xisabla/Korbots/blob/4164195/server/src/models/Weather.ts#L53)*
+*Defined in [src/models/Weather.ts:53](https://github.com/Xisabla/Korbots/blob/177cb32/server/src/models/Weather.ts#L53)*
 
 Weahter icon ID from Openweather API
 
@@ -255,7 +256,7 @@ ___
 
 • **wind**: *number*
 
-*Defined in [src/models/Weather.ts:47](https://github.com/Xisabla/Korbots/blob/4164195/server/src/models/Weather.ts#L47)*
+*Defined in [src/models/Weather.ts:47](https://github.com/Xisabla/Korbots/blob/177cb32/server/src/models/Weather.ts#L47)*
 
 Wind speed in m/s
 
@@ -267,7 +268,7 @@ Wind speed in m/s
 
 *Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[$isDeleted](_models_horoscope_.ihoroscopeschema.md#isdeleted)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3612
+Defined in node_modules/@types/mongoose/index.d.ts:3654
 
 Override whether mongoose thinks this doc is deleted or not
 
@@ -283,7 +284,7 @@ Name | Type |
 
 *Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[$isDeleted](_models_horoscope_.ihoroscopeschema.md#isdeleted)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3614
+Defined in node_modules/@types/mongoose/index.d.ts:3656
 
 whether mongoose thinks this doc is deleted.
 
@@ -297,7 +298,7 @@ ___
 
 *Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[addListener](_models_horoscope_.ihoroscopeschema.md#addlistener)*
 
-Defined in node_modules/@types/node/globals.d.ts:553
+Defined in node_modules/@types/node/globals.d.ts:550
 
 **Parameters:**
 
@@ -321,7 +322,7 @@ ___
 
 ▸ **checkLocationFieldsUpdate**(): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
 
-*Defined in [src/models/Weather.ts:126](https://github.com/Xisabla/Korbots/blob/4164195/server/src/models/Weather.ts#L126)*
+*Defined in [src/models/Weather.ts:126](https://github.com/Xisabla/Korbots/blob/177cb32/server/src/models/Weather.ts#L126)*
 
 Check if the Documents needs to have it's location fields updated and update them if needed (calls updateLocationFields if needsLocationFieldsUpdate returns true)
 
@@ -335,7 +336,7 @@ ___
 
 ▸ **checkUpdate**(`isDaily?`: boolean): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
 
-*Defined in [src/models/Weather.ts:121](https://github.com/Xisabla/Korbots/blob/4164195/server/src/models/Weather.ts#L121)*
+*Defined in [src/models/Weather.ts:121](https://github.com/Xisabla/Korbots/blob/177cb32/server/src/models/Weather.ts#L121)*
 
 Check if the the Document needs to be updated and update it if needed (calls updateCurrent/updateDaily if needsUpdate returns true)
 
@@ -365,7 +366,7 @@ ___
 
 ▸ **decrementUpdateScore**(`value?`: number): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
 
-*Defined in [src/models/Weather.ts:75](https://github.com/Xisabla/Korbots/blob/4164195/server/src/models/Weather.ts#L75)*
+*Defined in [src/models/Weather.ts:75](https://github.com/Xisabla/Korbots/blob/177cb32/server/src/models/Weather.ts#L75)*
 
 Decrement the value of updateScore
 
@@ -379,13 +380,42 @@ Name | Type | Description |
 
 ___
 
+###  deleteOne
+
+▸ **deleteOne**(`fn?`: function): *Promise‹this›*
+
+*Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[deleteOne](_models_horoscope_.ihoroscopeschema.md#deleteone)*
+
+Defined in node_modules/@types/mongoose/index.d.ts:3668
+
+Deletes the document from the db.
+
+**Parameters:**
+
+▪`Optional`  **fn**: *function*
+
+optional callback
+
+▸ (`err`: any, `product`: this): *void*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`err` | any |
+`product` | this |
+
+**Returns:** *Promise‹this›*
+
+___
+
 ###  emit
 
 ▸ **emit**(`event`: string | symbol, ...`args`: any[]): *boolean*
 
 *Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[emit](_models_horoscope_.ihoroscopeschema.md#emit)*
 
-Defined in node_modules/@types/node/globals.d.ts:563
+Defined in node_modules/@types/node/globals.d.ts:560
 
 **Parameters:**
 
@@ -404,7 +434,7 @@ ___
 
 *Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[eventNames](_models_horoscope_.ihoroscopeschema.md#eventnames)*
 
-Defined in node_modules/@types/node/globals.d.ts:568
+Defined in node_modules/@types/node/globals.d.ts:565
 
 **Returns:** *Array‹string | symbol›*
 
@@ -416,7 +446,7 @@ ___
 
 *Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[getMaxListeners](_models_horoscope_.ihoroscopeschema.md#getmaxlisteners)*
 
-Defined in node_modules/@types/node/globals.d.ts:560
+Defined in node_modules/@types/node/globals.d.ts:557
 
 **Returns:** *number*
 
@@ -428,7 +458,7 @@ ___
 
 *Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[increment](_models_horoscope_.ihoroscopeschema.md#increment)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3603
+Defined in node_modules/@types/mongoose/index.d.ts:3645
 
 Signal that we desire an increment of this documents version.
 
@@ -440,7 +470,7 @@ ___
 
 ▸ **incrementUpdateScore**(`value?`: number): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
 
-*Defined in [src/models/Weather.ts:81](https://github.com/Xisabla/Korbots/blob/4164195/server/src/models/Weather.ts#L81)*
+*Defined in [src/models/Weather.ts:81](https://github.com/Xisabla/Korbots/blob/177cb32/server/src/models/Weather.ts#L81)*
 
 Increment the value of updateScore
 
@@ -460,7 +490,7 @@ ___
 
 *Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[listenerCount](_models_horoscope_.ihoroscopeschema.md#listenercount)*
 
-Defined in node_modules/@types/node/globals.d.ts:564
+Defined in node_modules/@types/node/globals.d.ts:561
 
 **Parameters:**
 
@@ -478,7 +508,7 @@ ___
 
 *Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[listeners](_models_horoscope_.ihoroscopeschema.md#listeners)*
 
-Defined in node_modules/@types/node/globals.d.ts:561
+Defined in node_modules/@types/node/globals.d.ts:558
 
 **Parameters:**
 
@@ -496,7 +526,7 @@ ___
 
 *Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[model](_models_horoscope_.ihoroscopeschema.md#model)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3609
+Defined in node_modules/@types/mongoose/index.d.ts:3651
 
 Returns another Model instance.
 
@@ -518,7 +548,7 @@ ___
 
 ▸ **needsLocationFieldsUpdate**(): *boolean*
 
-*Defined in [src/models/Weather.ts:105](https://github.com/Xisabla/Korbots/blob/4164195/server/src/models/Weather.ts#L105)*
+*Defined in [src/models/Weather.ts:105](https://github.com/Xisabla/Korbots/blob/177cb32/server/src/models/Weather.ts#L105)*
 
 **Returns:** *boolean*
 
@@ -536,7 +566,7 @@ ___
 
 ▸ **needsUpdate**(): *boolean*
 
-*Defined in [src/models/Weather.ts:95](https://github.com/Xisabla/Korbots/blob/4164195/server/src/models/Weather.ts#L95)*
+*Defined in [src/models/Weather.ts:95](https://github.com/Xisabla/Korbots/blob/177cb32/server/src/models/Weather.ts#L95)*
 
 **Returns:** *boolean*
 
@@ -556,7 +586,7 @@ ___
 
 *Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[off](_models_horoscope_.ihoroscopeschema.md#off)*
 
-Defined in node_modules/@types/node/globals.d.ts:557
+Defined in node_modules/@types/node/globals.d.ts:554
 
 **Parameters:**
 
@@ -582,7 +612,7 @@ ___
 
 *Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[on](_models_horoscope_.ihoroscopeschema.md#on)*
 
-Defined in node_modules/@types/node/globals.d.ts:554
+Defined in node_modules/@types/node/globals.d.ts:551
 
 **Parameters:**
 
@@ -608,7 +638,7 @@ ___
 
 *Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[once](_models_horoscope_.ihoroscopeschema.md#once)*
 
-Defined in node_modules/@types/node/globals.d.ts:555
+Defined in node_modules/@types/node/globals.d.ts:552
 
 **Parameters:**
 
@@ -634,7 +664,7 @@ ___
 
 *Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[prependListener](_models_horoscope_.ihoroscopeschema.md#prependlistener)*
 
-Defined in node_modules/@types/node/globals.d.ts:566
+Defined in node_modules/@types/node/globals.d.ts:563
 
 **Parameters:**
 
@@ -660,7 +690,7 @@ ___
 
 *Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[prependOnceListener](_models_horoscope_.ihoroscopeschema.md#prependoncelistener)*
 
-Defined in node_modules/@types/node/globals.d.ts:567
+Defined in node_modules/@types/node/globals.d.ts:564
 
 **Parameters:**
 
@@ -686,7 +716,7 @@ ___
 
 *Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[rawListeners](_models_horoscope_.ihoroscopeschema.md#rawlisteners)*
 
-Defined in node_modules/@types/node/globals.d.ts:562
+Defined in node_modules/@types/node/globals.d.ts:559
 
 **Parameters:**
 
@@ -704,7 +734,7 @@ ___
 
 *Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[remove](_models_horoscope_.ihoroscopeschema.md#remove)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3620
+Defined in node_modules/@types/mongoose/index.d.ts:3662
 
 Removes this document from the db.
 
@@ -733,7 +763,7 @@ ___
 
 *Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[removeAllListeners](_models_horoscope_.ihoroscopeschema.md#removealllisteners)*
 
-Defined in node_modules/@types/node/globals.d.ts:558
+Defined in node_modules/@types/node/globals.d.ts:555
 
 **Parameters:**
 
@@ -751,7 +781,7 @@ ___
 
 *Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[removeListener](_models_horoscope_.ihoroscopeschema.md#removelistener)*
 
-Defined in node_modules/@types/node/globals.d.ts:556
+Defined in node_modules/@types/node/globals.d.ts:553
 
 **Parameters:**
 
@@ -777,7 +807,7 @@ ___
 
 *Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[save](_models_horoscope_.ihoroscopeschema.md#save)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3629
+Defined in node_modules/@types/mongoose/index.d.ts:3677
 
 Saves this document.
 
@@ -806,7 +836,7 @@ Name | Type |
 
 *Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[save](_models_horoscope_.ihoroscopeschema.md#save)*
 
-Defined in node_modules/@types/mongoose/index.d.ts:3630
+Defined in node_modules/@types/mongoose/index.d.ts:3678
 
 **Parameters:**
 
@@ -831,7 +861,7 @@ ___
 
 *Inherited from [IHoroscopeSchema](_models_horoscope_.ihoroscopeschema.md).[setMaxListeners](_models_horoscope_.ihoroscopeschema.md#setmaxlisteners)*
 
-Defined in node_modules/@types/node/globals.d.ts:559
+Defined in node_modules/@types/node/globals.d.ts:556
 
 **Parameters:**
 
@@ -847,7 +877,7 @@ ___
 
 ▸ **updateCurrent**(): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
 
-*Defined in [src/models/Weather.ts:134](https://github.com/Xisabla/Korbots/blob/4164195/server/src/models/Weather.ts#L134)*
+*Defined in [src/models/Weather.ts:134](https://github.com/Xisabla/Korbots/blob/177cb32/server/src/models/Weather.ts#L134)*
 
 Update the main fields of the Document dealing with Current Weather data
 
@@ -861,7 +891,7 @@ ___
 
 ▸ **updateDaily**(): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
 
-*Defined in [src/models/Weather.ts:139](https://github.com/Xisabla/Korbots/blob/4164195/server/src/models/Weather.ts#L139)*
+*Defined in [src/models/Weather.ts:139](https://github.com/Xisabla/Korbots/blob/177cb32/server/src/models/Weather.ts#L139)*
 
 Update the main fields of the Document dealing with Daily Weather data
 
@@ -875,7 +905,7 @@ ___
 
 ▸ **updateLocationFields**(): *Promise‹[IWeatherSchema](_models_weather_.iweatherschema.md)›*
 
-*Defined in [src/models/Weather.ts:144](https://github.com/Xisabla/Korbots/blob/4164195/server/src/models/Weather.ts#L144)*
+*Defined in [src/models/Weather.ts:144](https://github.com/Xisabla/Korbots/blob/177cb32/server/src/models/Weather.ts#L144)*
 
 Update the location fields of the Document, will look for the name and country fields on a Current Weather API call
 
